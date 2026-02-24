@@ -1,5 +1,5 @@
-@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix ns3: <https://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -10,9 +10,9 @@ ns3:Obs_d18O_1176 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
         <http://www.w3.org/ns/ldp#Resource>,
         sosa:Observation,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
-    ns2:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    ns1:unit <http://qudt.org/vocab/unit/PERMILLE> ;
     void:inDataset ns3:geo-lod ;
-    ns1:P7_took_place_at ns3:EpicaDomeC_Site ;
+    ns2:P7_took_place_at ns3:EpicaDomeC_Site ;
     prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.961024> ;
     sosa:hasFeatureOfInterest ns3:EpicaDomeC_IceCore ;
     sosa:hasSimpleResult 0.643 ;
