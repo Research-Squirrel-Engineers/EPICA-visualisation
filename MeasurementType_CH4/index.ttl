@@ -1,0 +1,10 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/MeasurementType_CH4> a <http://w3id.org/geo-lod/MeasurementType>,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Methane (CH₄) measurement"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:comment "Indicates that this observation is a CH₄ concentration measurement from trapped air bubbles in the ice core."@en .
+

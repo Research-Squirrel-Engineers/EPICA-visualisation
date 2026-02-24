@@ -2,10 +2,10 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/geo-lod/geo-lod_atDepth_m> a void:Dataset,
+<http://w3id.org/geo-lod/geo-lod_atDepth_m> a void:Dataset,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: atDepth_m"@en ;
-    void:property <https://w3id.org/geo-lod/atDepth_m> ;
+    void:property <http://w3id.org/geo-lod/atDepth_m> ;
     void:triples 2114 .
 

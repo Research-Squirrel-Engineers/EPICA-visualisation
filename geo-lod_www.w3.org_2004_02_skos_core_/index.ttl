@@ -4,12 +4,12 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/geo-lod/geo-lod_www.w3.org_2004_02_skos_core_> a void:Linkset,
+<http://w3id.org/geo-lod/geo-lod_www.w3.org_2004_02_skos_core_> a void:Linkset,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Linkset: geo-lod - skos:"@en ;
     void:linkPredicate rdf:type ;
     void:objectsTarget skos: ;
-    void:subjectsTarget <https://w3id.org/geo-lod/geo-lod> ;
-    void:triples 9 .
+    void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
+    void:triples 10 .
 

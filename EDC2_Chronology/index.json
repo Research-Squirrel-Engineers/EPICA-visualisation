@@ -1,1 +1,1 @@
-{"http://rdfs.org/ns/void#inDataset": ["https://w3id.org/geo-lod/geo-lod"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation"], "http://www.w3.org/2000/01/rdf-schema#label": ["EDC2 ice core chronology (Schwander et al. 2001)"]}
+{"http://rdfs.org/ns/void#inDataset": ["http://w3id.org/geo-lod/geo-lod"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation"], "http://www.w3.org/2000/01/rdf-schema#label": ["EDC2 ice core chronology (Schwander et al. 2001)"]}

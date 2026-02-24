@@ -2,10 +2,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<https://w3id.org/geo-lod/E27_Site_collection> a geo:FeatureCollection,
+<http://w3id.org/geo-lod/E27_Site_collection> a geo:FeatureCollection,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "E27_Site Instances Collection"@en ;
-    void:inDataset <https://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <https://w3id.org/geo-lod/EpicaDomeC_Site> .
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:member <http://w3id.org/geo-lod/EpicaDomeC_Site> .
 

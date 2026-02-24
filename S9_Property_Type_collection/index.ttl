@@ -2,11 +2,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<https://w3id.org/geo-lod/S9_Property_Type_collection> a skos:Collection,
+<http://w3id.org/geo-lod/S9_Property_Type_collection> a skos:Collection,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "S9_Property_Type Instances Collection"@en ;
-    void:inDataset <https://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <https://w3id.org/geo-lod/CH4Concentration>,
-        <https://w3id.org/geo-lod/Delta18O> .
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:member <http://w3id.org/geo-lod/CH4Concentration>,
+        <http://w3id.org/geo-lod/Delta18O> .
 

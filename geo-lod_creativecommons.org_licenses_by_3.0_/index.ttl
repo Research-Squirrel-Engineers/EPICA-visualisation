@@ -3,12 +3,12 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/geo-lod/geo-lod_creativecommons.org_licenses_by_3.0_> a void:Linkset,
+<http://w3id.org/geo-lod/geo-lod_creativecommons.org_licenses_by_3.0_> a void:Linkset,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Linkset: geo-lod - 3.0"@en ;
     void:linkPredicate dcterms:license ;
     void:objectsTarget <https://creativecommons.org/licenses/by/3.0/> ;
-    void:subjectsTarget <https://w3id.org/geo-lod/geo-lod> ;
+    void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
     void:triples 4 .
 

@@ -3,13 +3,13 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<https://w3id.org/geo-lod/EpicaDomeC_IceCore> a ns1:E22_Human-Made_Object,
+<http://w3id.org/geo-lod/EpicaDomeC_IceCore> a ns1:E22_Human-Made_Object,
         <http://www.w3.org/ns/ldp#Resource>,
         sosa:Sample,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "EPICA Dome C Ice Core"@en ;
-    void:inDataset <https://w3id.org/geo-lod/geo-lod> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
     ns1:P2_has_type "Ice Core"@en ;
-    ns1:P53_has_former_or_current_location <https://w3id.org/geo-lod/EpicaDomeC_Site> ;
-    sosa:isSampleOf <https://w3id.org/geo-lod/EpicaDomeC_Site> .
+    ns1:P53_has_former_or_current_location <http://w3id.org/geo-lod/EpicaDomeC_Site> ;
+    sosa:isSampleOf <http://w3id.org/geo-lod/EpicaDomeC_Site> .
 

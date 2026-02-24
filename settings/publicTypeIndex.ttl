@@ -60,6 +60,10 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#EpicaDomeC_Site_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#FeatureCollection>,
         <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#GeometryCollection>,
+        <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#MeasurementType>,
+        <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#MeasurementType_CH4>,
+        <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#MeasurementType_collection>,
+        <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#MeasurementType_d18O>,
         <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#Obs_CH4_0000_suniv0_>,
         <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#Obs_CH4_0000_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#Obs_CH4_0001_suniv0_>,
@@ -4429,6 +4433,18 @@ sosa:Sample a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#GeometryCollection> ns1:forClass geo:SpatialObjectCollection ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//GeometryCollection> .
+
+<https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#MeasurementType> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//MeasurementType> .
+
+<https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#MeasurementType_CH4> ns1:forClass <http://w3id.org/geo-lod/MeasurementType> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//MeasurementType_CH4> .
+
+<https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#MeasurementType_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//MeasurementType_collection> .
+
+<https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#MeasurementType_d18O> ns1:forClass <http://w3id.org/geo-lod/MeasurementType> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//MeasurementType_d18O> .
 
 <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//settings/publicTypeIndex.ttl#Obs_CH4_0000_suniv0_> ns1:forClass <http://www.ics.forth.gr/isl/CRMsci/S4_Observation> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//Obs_CH4_0000_suniv0_> .
@@ -17181,6 +17197,8 @@ sosa:Sample a owl:Class .
     ns1:instance <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//nonns_PANGAEA.961024.html> .
 
 dcterms:BibliographicResource a owl:Class .
+
+<http://w3id.org/geo-lod/MeasurementType> a owl:Class .
 
 <http://www.ics.forth.gr/isl/CRMsci/S9_Property_Type> a owl:Class .
 

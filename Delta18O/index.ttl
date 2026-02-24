@@ -3,11 +3,11 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<https://w3id.org/geo-lod/Delta18O> a <http://www.ics.forth.gr/isl/CRMsci/S9_Property_Type>,
+<http://w3id.org/geo-lod/Delta18O> a <http://www.ics.forth.gr/isl/CRMsci/S9_Property_Type>,
         <http://www.w3.org/ns/ldp#Resource>,
         sosa:ObservableProperty,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Stable water isotope ratio (δ¹⁸O)"@en ;
     ns1:unit <http://qudt.org/vocab/unit/PERMILLE> ;
-    void:inDataset <https://w3id.org/geo-lod/geo-lod> .
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> .
 

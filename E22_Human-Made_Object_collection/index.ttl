@@ -2,10 +2,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<https://w3id.org/geo-lod/E22_Human-Made_Object_collection> a skos:Collection,
+<http://w3id.org/geo-lod/E22_Human-Made_Object_collection> a skos:Collection,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "E22_Human-Made_Object Instances Collection"@en ;
-    void:inDataset <https://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <https://w3id.org/geo-lod/EpicaDomeC_IceCore> .
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:member <http://w3id.org/geo-lod/EpicaDomeC_IceCore> .
 

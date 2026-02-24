@@ -1,9 +1,9 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<https://w3id.org/geo-lod/EpicaDomeC_Geometry> a <http://www.opengis.net/ont/sf#Point>,
+<http://w3id.org/geo-lod/EpicaDomeC_Geometry> a <http://www.opengis.net/ont/sf#Point>,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
-    void:inDataset <https://w3id.org/geo-lod/geo-lod> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
     geo:asWKT "POINT(123.35 -75.1)"^^geo:wktLiteral .
 

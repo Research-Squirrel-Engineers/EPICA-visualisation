@@ -2,10 +2,10 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/geo-lod/geo-lod_label> a void:Dataset,
+<http://w3id.org/geo-lod/geo-lod_label> a void:Dataset,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: label"@en ;
     void:property rdfs:label ;
-    void:triples 24 .
+    void:triples 2141 .
 

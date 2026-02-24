@@ -1,9 +1,9 @@
 @prefix ns1: <http://purl.org/vocommons/voaf#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/geo-lod/voaf_geo-lod_occ> a ns1:DatasetOccurrence,
+<http://w3id.org/geo-lod/voaf_geo-lod_occ> a ns1:DatasetOccurrence,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Occurrences of vocabulary http://purl.org/vocommons/voaf# in geo-lod" ;
-    ns1:inDataset <https://w3id.org/geo-lod/geo-lod> .
+    ns1:inDataset <http://w3id.org/geo-lod/geo-lod> .
 

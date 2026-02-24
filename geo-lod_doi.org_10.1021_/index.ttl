@@ -3,12 +3,12 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/geo-lod/geo-lod_doi.org_10.1021_> a void:Linkset,
+<http://w3id.org/geo-lod/geo-lod_doi.org_10.1021_> a void:Linkset,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Linkset: geo-lod - 10.1021"@en ;
     void:linkPredicate dcterms:references ;
     void:objectsTarget <https://doi.org/10.1021/> ;
-    void:subjectsTarget <https://w3id.org/geo-lod/geo-lod> ;
+    void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
     void:triples 1 .
 
