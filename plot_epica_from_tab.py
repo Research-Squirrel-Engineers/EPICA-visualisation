@@ -233,22 +233,6 @@ def draw_mis_bands(ax, y_min_ka, y_max_ka):
 
         ax.axhspan(age_top, age_bot, facecolor=color, alpha=1.0, zorder=0)
 
-        if dashed:
-            ax_trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
-            x_rect = [0, 1, 1, 0, 0]
-            y_rect = [age_top, age_top, age_bot, age_bot, age_top]
-            ax.plot(
-                x_rect,
-                y_rect,
-                transform=ax_trans,
-                color=label_color,
-                linewidth=0.8,
-                linestyle="--",
-                alpha=0.6,
-                zorder=1,
-                clip_on=True,
-            )
-
         y_label = (visible_top + visible_bot) / 2.0
         ax.text(
             0.99,
@@ -277,6 +261,7 @@ def create_plot(
     x_padding=0.05,
     invert_y=True,
     show_mis=False,
+    gap_line=None,
 ):
     """
     Erstellt einen standardisierten EPICA-Plot.
@@ -293,6 +278,7 @@ def create_plot(
     x_padding     : float     – relativer X-Puffer (falls keine manuellen Ticks)
     invert_y      : bool       – Y-Achse invertieren (Tiefe nimmt nach unten zu)
     show_mis      : bool       – MIS-Bänder und Labels einzeichnen (nur für Age-Plots)
+    gap_line      : tuple|None – (x1, y1, x2, y2) Gestrichelte Verbindungslinie für Datenlücken
     """
     fig = plt.figure(figsize=FIGURE_SIZE, dpi=DPI)
     ax = fig.add_subplot(111)
@@ -310,6 +296,20 @@ def create_plot(
         draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max)
 
     ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR, zorder=2)
+
+    # Gestrichelte Verbindungslinie für Datenlücken
+    # gap_line = (x1, y1, x2, y2): verbindet letzten Punkt vor mit erstem Punkt nach der Lücke
+    if gap_line is not None:
+        x1, y1, x2, y2 = gap_line
+        ax.plot(
+            [x1, x2],
+            [y1, y2],
+            linewidth=LINE_WIDTH,
+            color=LINE_COLOR,
+            linestyle=(0, (5, 4)),
+            dashes=(5, 4),
+            zorder=2,
+        )
 
     ax.yaxis.set_major_locator(MultipleLocator(y_major_interval))
     ax.yaxis.set_minor_locator(MultipleLocator(y_minor_interval))
@@ -426,6 +426,9 @@ def main():
             "y_minor": AGE_MINOR_TICK_INTERVAL,
             "x_ticks": CH4_TICKS,
             "show_mis": True,
+            # Gestrichelte Verbindungslinie über Datenlücke MIS 8-10 (243–374 ka)
+            # x=CH4-Wert, y=Age; Grenzpunkte direkt aus den Daten
+            "gap_line": (505.7, 214.19, 484.9, 391.85),
         },
         {
             "x": df_d18o["d18o"],
@@ -460,6 +463,7 @@ def main():
             y_minor_interval=cfg["y_minor"],
             x_ticks=cfg.get("x_ticks"),
             show_mis=cfg.get("show_mis", False),
+            gap_line=cfg.get("gap_line", None),
         )
 
     print("\n" + "=" * 60)
