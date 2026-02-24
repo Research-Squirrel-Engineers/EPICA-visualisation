@@ -494,7 +494,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g = Graph()
 
     # ── Namespaces ────────────────────────────────────────────────────────
-    GEOLOD = Namespace("https://w3id.org/geo-lod/")
+    GEOLOD = Namespace("http://w3id.org/geo-lod/")
     SOSA = Namespace("http://www.w3.org/ns/sosa/")
     SSN = Namespace("http://www.w3.org/ns/ssn/")
     GEO = Namespace("http://www.opengis.net/ont/geosparql#")
@@ -814,6 +814,43 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         (smooth_sg, DCT.references, URIRef("https://doi.org/10.1021/ac60214a047"))
     )  # Savitzky & Golay 1964
 
+    # ── Measurement Types ─────────────────────────────────────────────────────
+    mtype_ch4 = GEOLOD["MeasurementType_CH4"]
+    g.add((mtype_ch4, RDF.type, GEOLOD["MeasurementType"]))
+    g.add((mtype_ch4, RDFS.label, Literal("Methane (CH₄) measurement", lang="en")))
+    g.add(
+        (
+            mtype_ch4,
+            RDFS.comment,
+            Literal(
+                "Indicates that this observation is a CH₄ concentration measurement "
+                "from trapped air bubbles in the ice core.",
+                lang="en",
+            ),
+        )
+    )
+
+    mtype_d18o = GEOLOD["MeasurementType_d18O"]
+    g.add((mtype_d18o, RDF.type, GEOLOD["MeasurementType"]))
+    g.add(
+        (
+            mtype_d18o,
+            RDFS.label,
+            Literal("δ¹⁸O stable water isotope measurement", lang="en"),
+        )
+    )
+    g.add(
+        (
+            mtype_d18o,
+            RDFS.comment,
+            Literal(
+                "Indicates that this observation is a stable water isotope ratio "
+                "(δ¹⁸O) measurement from the ice matrix.",
+                lang="en",
+            ),
+        )
+    )
+
     # ── CH4-Observationen ────────────────────────────────────────────────
     print("  Schreibe CH4-Observationen …")
     df_ch4_valid = df_ch4.dropna(subset=["ch4", "age_edc2_ka", "depth_m"]).reset_index(
@@ -833,6 +870,15 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
 
     for i, row in df_ch4_valid.iterrows():
         obs = GEOLOD[f"Obs_CH4_{i:04d}"]
+        age_label = round(float(row["age_edc2_ka"]), 1)
+        g.add(
+            (
+                obs,
+                RDFS.label,
+                Literal(f"CH₄ observation {i:04d} ({age_label} ka BP)", lang="en"),
+            )
+        )
+        g.add((obs, GEOLOD["measurementType"], mtype_ch4))
         g.add((obs, RDF.type, SOSA["Observation"]))
         g.add((obs, RDF.type, CRMSCI["S4_Observation"]))
         g.add((obs, SOSA["hasFeatureOfInterest"], core))
@@ -900,6 +946,15 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
 
     for i, row in df_d18o_valid.iterrows():
         obs = GEOLOD[f"Obs_d18O_{i:04d}"]
+        age_label_d = round(float(row["age_ka"]), 1)
+        g.add(
+            (
+                obs,
+                RDFS.label,
+                Literal(f"δ¹⁸O observation {i:04d} ({age_label_d} ka BP)", lang="en"),
+            )
+        )
+        g.add((obs, GEOLOD["measurementType"], mtype_d18o))
         g.add((obs, RDF.type, SOSA["Observation"]))
         g.add((obs, RDF.type, CRMSCI["S4_Observation"]))
         g.add((obs, SOSA["hasFeatureOfInterest"], core))
@@ -973,7 +1028,7 @@ def export_ontology():
 @prefix unit:    <http://qudt.org/vocab/unit/> .
 @prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix crmsci:  <http://www.ics.forth.gr/isl/CRMsci/> .
-@prefix geolod:   <https://w3id.org/geo-lod/> .
+@prefix geolod:   <http://w3id.org/geo-lod/> .
 
 # ============================================================================
 # EPICA Dome C Ice Core – OWL Ontology
@@ -990,7 +1045,7 @@ geolod:
     dct:creator         "Derived from ELSAinteractive++ methodology (Diensberg 2020)"@en ;
     dct:license         <https://creativecommons.org/licenses/by/4.0/> ;
     dct:created         "{_dt.now().strftime("%Y-%m-%d")}"^^xsd:date ;
-    owl:versionIRI      <https://w3id.org/geo-lod/1.0> ;
+    owl:versionIRI      <http://w3id.org/geo-lod/1.0> ;
     owl:versionInfo     "1.0.0" ;
     rdfs:seeAlso        <http://www.w3.org/ns/sosa/> ;
     rdfs:seeAlso        <http://www.cidoc-crm.org/cidoc-crm/> ;
@@ -1152,6 +1207,12 @@ geolod:SavitzkyGolayFilter
 
 # ── Provenienz ────────────────────────────────────────────────────────────────
 
+geolod:MeasurementType
+    a owl:Class ;
+    rdfs:subClassOf     crmsci:S9_Property_Type ;
+    rdfs:label          "Measurement Type"@en ;
+    rdfs:comment        "A controlled vocabulary term classifying the kind of measurement performed in an ice core observation (e.g. CH4 concentration, delta18O isotope ratio)."@en .
+
 geolod:DataSource
     a owl:Class ;
     rdfs:subClassOf     prov:Entity ;
@@ -1193,6 +1254,13 @@ geolod:smoothingMethod_savgol
     rdfs:domain         geolod:IceCoreObservation ;
     rdfs:range          geolod:SavitzkyGolayFilter ;
     rdfs:label          "smoothing method (Savitzky-Golay)"@en .
+
+geolod:measurementType
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          geolod:MeasurementType ;
+    rdfs:label          "measurement type"@en ;
+    rdfs:comment        "Links an observation to its measurement type (e.g. CH4 or delta18O)."@en .
 
 geolod:extractedFrom
     a owl:ObjectProperty ;
@@ -1300,6 +1368,16 @@ geolod:Delta18O
     a geolod:Delta18OProperty , owl:NamedIndividual ;
     rdfs:label          "Stable water isotope ratio (d18O)"@en ;
     qudt:unit           unit:PERMILLE .
+
+geolod:MeasurementType_CH4
+    a geolod:MeasurementType , owl:NamedIndividual ;
+    rdfs:label          "Methane (CH4) measurement"@en ;
+    rdfs:comment        "Indicates a CH4 concentration measurement from trapped air bubbles."@en .
+
+geolod:MeasurementType_d18O
+    a geolod:MeasurementType , owl:NamedIndividual ;
+    rdfs:label          "delta18O stable water isotope measurement"@en ;
+    rdfs:comment        "Indicates a stable water isotope ratio (delta18O) measurement from ice matrix."@en .
 
 geolod:EDC2_Chronology
     a geolod:IceCoreChronology , owl:NamedIndividual ;
@@ -1535,15 +1613,13 @@ unit:M
 
 def export_mermaid():
     """
-    Generates two Mermaid diagrams from the geolod ontology model
-    and saves them to the RDF output directory:
+    Generates two Mermaid diagrams and saves them to RDF_DIR:
       epica_diagram1_taxonomy.mermaid  -  Class hierarchy (subClassOf)
       epica_diagram2_instance.mermaid  -  Instance model with properties & literals
     Smoothing parameters are read from the global configuration constants.
     """
     os.makedirs(RDF_DIR, exist_ok=True)
 
-    # ── Diagram 1: Class Taxonomy ─────────────────────────────────────────────
     d1 = """flowchart LR
 
     subgraph EXT["External Ontologies"]
@@ -1620,13 +1696,18 @@ def export_mermaid():
             GL_Campaign["DrillingCampaign"]
         end
 
-        subgraph GL_PROP_GRP["Observable Property"]
+        subgraph GL_PROP_GRP["Observable Property & Measurement Type"]
             direction LR
             GL_ObsProp["ObservableProperty"]
             GL_CH4Prop["CH4ConcentrationProperty"]
             GL_D18OProp["Delta18OProperty"]
+            GL_MType["MeasurementType"]
+            GL_MTypeCH4["MeasurementType_CH4"]
+            GL_MTypeD18O["MeasurementType_d18O"]
             GL_ObsProp -->|subClassOf| GL_CH4Prop
             GL_ObsProp -->|subClassOf| GL_D18OProp
+            GL_MType  -->|subClassOf| GL_MTypeCH4
+            GL_MType  -->|subClassOf| GL_MTypeD18O
         end
 
         subgraph GL_METH_GRP["Chronology & Smoothing"]
@@ -1657,6 +1738,7 @@ def export_mermaid():
     CS1  -->|subClassOf| GL_Campaign
     SP   -->|subClassOf| GL_ObsProp
     CS9  -->|subClassOf| GL_ObsProp
+    CS9  -->|subClassOf| GL_MType
     CS6  -->|subClassOf| GL_Chron
     CS6  -->|subClassOf| GL_Smooth
     PE   -->|subClassOf| GL_Source
@@ -1693,109 +1775,157 @@ def export_mermaid():
     style GF    fill:#457b9d,color:#fff,stroke:#2c5f7a
     style PE    fill:#e76f51,color:#fff,stroke:#c45c3e
     style DB    fill:#6c757d,color:#fff,stroke:#495057
-    style GL_Catalog  fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_Dataset  fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_CH4DS    fill:#40916c,color:#fff,stroke:#2d6a4f
-    style GL_D18ODS   fill:#40916c,color:#fff,stroke:#2d6a4f
-    style GL_Obs      fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_CH4Obs   fill:#40916c,color:#fff,stroke:#2d6a4f
-    style GL_D18OObs  fill:#40916c,color:#fff,stroke:#2d6a4f
-    style GL_Core     fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_Site     fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_Campaign fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_ObsProp  fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_CH4Prop  fill:#40916c,color:#fff,stroke:#2d6a4f
-    style GL_D18OProp fill:#40916c,color:#fff,stroke:#2d6a4f
-    style GL_Chron    fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_Smooth   fill:#2d6a4f,color:#fff,stroke:#1b4332
-    style GL_Median   fill:#40916c,color:#fff,stroke:#2d6a4f
-    style GL_SG       fill:#40916c,color:#fff,stroke:#2d6a4f
-    style GL_Source   fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Catalog   fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Dataset   fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_CH4DS     fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_D18ODS    fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_Obs       fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_CH4Obs    fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_D18OObs   fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_Core      fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Site      fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Campaign  fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_ObsProp   fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_CH4Prop   fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_D18OProp  fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_MType     fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_MTypeCH4  fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_MTypeD18O fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_Chron     fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Smooth    fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Median    fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_SG        fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_Source    fill:#2d6a4f,color:#fff,stroke:#1b4332
 """
 
-    # ── Diagram 2: Instance Model (uses f-string for dynamic params) ──────────
-    d2 = (
-        "flowchart LR\n\n"
-        '    CATALOG["PalaeoclimateDataCatalogue\ngeolod:EPICA_DomeC_Catalog"]\n'
-        '    DATASET["IceCoreDataset\ngeolod:EPICA_DomeC_Dataset"]\n'
-        '    OBS["IceCoreObservation\ngeolod:Obs_CH4_0001 ...\ngeolod:Obs_d18O_0001 ..."]\n'
-        '    CORE["IceCore\ngeolod:EpicaDomeC_IceCore"]\n'
-        '    SITE["DrillingSite\ngeolod:EpicaDomeC_Site"]\n'
-        '    CAMPAIGN["DrillingCampaign\nEPICA Dome C 1996-2004"]\n'
-        '    PROP_CH4["CH4ConcentrationProperty\ngeolod:CH4Concentration"]\n'
-        '    PROP_D18O["Delta18OProperty\ngeolod:Delta18O"]\n'
-        '    CHRON_EDC2["IceCoreChronology\ngeolod:EDC2_Chronology"]\n'
-        '    CHRON_AICC["IceCoreChronology\ngeolod:AICC2023_Chronology"]\n'
-        f'    MEDIAN["RollingMedianFilter\ngeolod:RollingMedian_w{ROLLING_WINDOW}"]\n'
-        f'    SG["SavitzkyGolayFilter\ngeolod:SavitzkyGolay_w{SG_WINDOW}_p{SG_POLYORDER}"]\n'
-        '    SOURCE_CH4["DataSource\nPANGAEA 472484\nSpahni and Stocker 2006"]\n'
-        '    SOURCE_D18O["DataSource\nPANGAEA 961024\nBouchet et al. 2023"]\n'
-        '    GEOM["sf:Point\ngeolod:EpicaDomeC_Geometry"]\n'
-        "    LDEPTH((atDepth_m\nxsd:decimal))\n"
-        "    LAGE((ageKaBP\nxsd:decimal))\n"
-        "    LVAL((measuredValue\nxsd:decimal))\n"
-        "    LMEDIAN((smoothedValue\nrollingMedian\nxsd:decimal))\n"
-        "    LSG((smoothedValue\nsavgol\nxsd:decimal))\n"
-        f"    LWINMED((windowSize={ROLLING_WINDOW}\nxsd:integer))\n"
-        f"    LWINSG((windowSize={SG_WINDOW}\nxsd:integer))\n"
-        f"    LPOLY((polyOrder={SG_POLYORDER}\nxsd:integer))\n"
-        "    LWKT((asWKT\ngeo:wktLiteral\nPOINT 123.35 -75.1))\n"
-        "    LPPB((unit PPB\nppbv))\n"
-        "    LPRM((unit PERMILLE\npermille))\n"
-        "    CATALOG -->|dcat:dataset| DATASET\n"
-        "    DATASET -->|hasObservation| OBS\n"
-        "    DATASET -->|hasDrillingCampaign| CAMPAIGN\n"
-        "    OBS -->|hasFeatureOfInterest| CORE\n"
-        "    OBS -->|observedProperty| PROP_CH4\n"
-        "    OBS -->|observedProperty| PROP_D18O\n"
-        "    OBS -->|ageChronology| CHRON_EDC2\n"
-        "    OBS -->|ageChronology| CHRON_AICC\n"
-        "    OBS -->|smoothingMethod median| MEDIAN\n"
-        "    OBS -->|smoothingMethod savgol| SG\n"
-        "    OBS -->|wasDerivedFrom| SOURCE_CH4\n"
-        "    OBS -->|wasDerivedFrom| SOURCE_D18O\n"
-        "    OBS -.->|atDepth_m| LDEPTH\n"
-        "    OBS -.->|ageKaBP| LAGE\n"
-        "    OBS -.->|measuredValue| LVAL\n"
-        "    OBS -.->|smoothedValue median| LMEDIAN\n"
-        "    OBS -.->|smoothedValue savgol| LSG\n"
-        "    PROP_CH4  -.->|qudt:unit| LPPB\n"
-        "    PROP_D18O -.->|qudt:unit| LPRM\n"
-        "    MEDIAN -.->|windowSize| LWINMED\n"
-        "    SG     -.->|windowSize| LWINSG\n"
-        "    SG     -.->|polyOrder| LPOLY\n"
-        "    CORE     -->|extractedFrom| SITE\n"
-        "    CAMPAIGN -->|tookPlaceAt| SITE\n"
-        "    CAMPAIGN -->|removedSample| CORE\n"
-        "    SITE     -->|geo:hasGeometry| GEOM\n"
-        "    GEOM     -.->|geo:asWKT| LWKT\n"
-        "    style CATALOG     fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
-        "    style DATASET     fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
-        "    style OBS         fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
-        "    style CORE        fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
-        "    style SITE        fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
-        "    style CAMPAIGN    fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
-        "    style PROP_CH4    fill:#40916c,color:#fff,stroke:#2d6a4f\n"
-        "    style PROP_D18O   fill:#40916c,color:#fff,stroke:#2d6a4f\n"
-        "    style CHRON_EDC2  fill:#40916c,color:#fff,stroke:#2d6a4f\n"
-        "    style CHRON_AICC  fill:#40916c,color:#fff,stroke:#2d6a4f\n"
-        "    style MEDIAN      fill:#40916c,color:#fff,stroke:#2d6a4f\n"
-        "    style SG          fill:#40916c,color:#fff,stroke:#2d6a4f\n"
-        "    style SOURCE_CH4  fill:#40916c,color:#fff,stroke:#2d6a4f\n"
-        "    style SOURCE_D18O fill:#40916c,color:#fff,stroke:#2d6a4f\n"
-        "    style GEOM        fill:#457b9d,color:#fff,stroke:#2c5f7a\n"
-        "    style LDEPTH  fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LAGE    fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LVAL    fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LMEDIAN fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LSG     fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LWINMED fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LWINSG  fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LPOLY   fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LWKT    fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LPPB    fill:#f4e04d,color:#333,stroke:#c9b400\n"
-        "    style LPRM    fill:#f4e04d,color:#333,stroke:#c9b400\n"
-    )
+    # Instance diagram uses f-string for dynamic smoothing params
+    rw = ROLLING_WINDOW
+    sw = SG_WINDOW
+    sp = SG_POLYORDER
+    d2 = f"""flowchart LR
+
+    CATALOG["PalaeoclimateDataCatalogue
+    geolod:EPICA_DomeC_Catalog"]
+    DATASET["IceCoreDataset
+    geolod:EPICA_DomeC_Dataset"]
+    OBS["IceCoreObservation
+    geolod:Obs_CH4_0001 ...
+    geolod:Obs_d18O_0001 ..."]
+    CORE["IceCore
+    geolod:EpicaDomeC_IceCore"]
+    SITE["DrillingSite
+    geolod:EpicaDomeC_Site"]
+    CAMPAIGN["DrillingCampaign
+    EPICA Dome C 1996-2004"]
+    PROP_CH4["CH4ConcentrationProperty
+    geolod:CH4Concentration"]
+    PROP_D18O["Delta18OProperty
+    geolod:Delta18O"]
+    MTYPE_CH4["MeasurementType
+    geolod:MeasurementType_CH4"]
+    MTYPE_D18O["MeasurementType
+    geolod:MeasurementType_d18O"]
+    CHRON_EDC2["IceCoreChronology
+    geolod:EDC2_Chronology"]
+    CHRON_AICC["IceCoreChronology
+    geolod:AICC2023_Chronology"]
+    MEDIAN["RollingMedianFilter
+    geolod:RollingMedian_w{rw}"]
+    SG["SavitzkyGolayFilter
+    geolod:SavitzkyGolay_w{sw}_p{sp}"]
+    SOURCE_CH4["DataSource
+    PANGAEA 472484
+    Spahni and Stocker 2006"]
+    SOURCE_D18O["DataSource
+    PANGAEA 961024
+    Bouchet et al. 2023"]
+    GEOM["sf:Point
+    geolod:EpicaDomeC_Geometry"]
+    LDEPTH((atDepth_m
+    xsd:decimal))
+    LAGE((ageKaBP
+    xsd:decimal))
+    LVAL((measuredValue
+    xsd:decimal))
+    LMEDIAN((smoothedValue
+    rollingMedian
+    xsd:decimal))
+    LSG((smoothedValue
+    savgol
+    xsd:decimal))
+    LWINMED((windowSize={rw}
+    xsd:integer))
+    LWINSG((windowSize={sw}
+    xsd:integer))
+    LPOLY((polyOrder={sp}
+    xsd:integer))
+    LWKT((asWKT
+    geo:wktLiteral
+    POINT 123.35 -75.1))
+    LPPB((unit PPB
+    ppbv))
+    LPRM((unit PERMILLE
+    permille))
+
+    CATALOG -->|dcat:dataset| DATASET
+    DATASET -->|hasObservation| OBS
+    DATASET -->|hasDrillingCampaign| CAMPAIGN
+    OBS -->|hasFeatureOfInterest| CORE
+    OBS -->|observedProperty| PROP_CH4
+    OBS -->|observedProperty| PROP_D18O
+    OBS -->|measurementType| MTYPE_CH4
+    OBS -->|measurementType| MTYPE_D18O
+    OBS -->|ageChronology| CHRON_EDC2
+    OBS -->|ageChronology| CHRON_AICC
+    OBS -->|smoothingMethod median| MEDIAN
+    OBS -->|smoothingMethod savgol| SG
+    OBS -->|wasDerivedFrom| SOURCE_CH4
+    OBS -->|wasDerivedFrom| SOURCE_D18O
+    OBS -.->|atDepth_m| LDEPTH
+    OBS -.->|ageKaBP| LAGE
+    OBS -.->|measuredValue| LVAL
+    OBS -.->|smoothedValue median| LMEDIAN
+    OBS -.->|smoothedValue savgol| LSG
+    PROP_CH4  -.->|qudt:unit| LPPB
+    PROP_D18O -.->|qudt:unit| LPRM
+    MEDIAN -.->|windowSize| LWINMED
+    SG     -.->|windowSize| LWINSG
+    SG     -.->|polyOrder| LPOLY
+    CORE     -->|extractedFrom| SITE
+    CAMPAIGN -->|tookPlaceAt| SITE
+    CAMPAIGN -->|removedSample| CORE
+    SITE     -->|geo:hasGeometry| GEOM
+    GEOM     -.->|geo:asWKT| LWKT
+
+    style CATALOG     fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style DATASET     fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style OBS         fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style CORE        fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style SITE        fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style CAMPAIGN    fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style PROP_CH4    fill:#40916c,color:#fff,stroke:#2d6a4f
+    style PROP_D18O   fill:#40916c,color:#fff,stroke:#2d6a4f
+    style MTYPE_CH4   fill:#40916c,color:#fff,stroke:#2d6a4f
+    style MTYPE_D18O  fill:#40916c,color:#fff,stroke:#2d6a4f
+    style CHRON_EDC2  fill:#40916c,color:#fff,stroke:#2d6a4f
+    style CHRON_AICC  fill:#40916c,color:#fff,stroke:#2d6a4f
+    style MEDIAN      fill:#40916c,color:#fff,stroke:#2d6a4f
+    style SG          fill:#40916c,color:#fff,stroke:#2d6a4f
+    style SOURCE_CH4  fill:#40916c,color:#fff,stroke:#2d6a4f
+    style SOURCE_D18O fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GEOM        fill:#457b9d,color:#fff,stroke:#2c5f7a
+    style LDEPTH  fill:#f4e04d,color:#333,stroke:#c9b400
+    style LAGE    fill:#f4e04d,color:#333,stroke:#c9b400
+    style LVAL    fill:#f4e04d,color:#333,stroke:#c9b400
+    style LMEDIAN fill:#f4e04d,color:#333,stroke:#c9b400
+    style LSG     fill:#f4e04d,color:#333,stroke:#c9b400
+    style LWINMED fill:#f4e04d,color:#333,stroke:#c9b400
+    style LWINSG  fill:#f4e04d,color:#333,stroke:#c9b400
+    style LPOLY   fill:#f4e04d,color:#333,stroke:#c9b400
+    style LWKT    fill:#f4e04d,color:#333,stroke:#c9b400
+    style LPPB    fill:#f4e04d,color:#333,stroke:#c9b400
+    style LPRM    fill:#f4e04d,color:#333,stroke:#c9b400
+"""
 
     p1 = os.path.join(RDF_DIR, "epica_diagram1_taxonomy.mermaid")
     p2 = os.path.join(RDF_DIR, "epica_diagram2_instance.mermaid")
@@ -1803,8 +1933,8 @@ def export_mermaid():
         fh.write(d1)
     with open(p2, "w", encoding="utf-8") as fh:
         fh.write(d2)
-    print(f"  ✓ Mermaid Taxonomy: {p1}")
-    print(f"  ✓ Mermaid Instance: {p2}")
+    print(f"  \u2713 Mermaid Taxonomy: {p1}")
+    print(f"  \u2713 Mermaid Instance: {p2}")
 
 
 def export_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame):
@@ -2055,7 +2185,7 @@ def main():
         print("\n" + "─" * 60)
         print("OWL-Ontologie …")
         print("─" * 60)
-        export_ontology()
+        export_ontology()  # calls export_mermaid() internally
 
     print("\n" + "=" * 60)
     print(f"Fertig! Alle {len(plots)} Plots wurden in '{OUTPUT_DIR}/' gespeichert.")

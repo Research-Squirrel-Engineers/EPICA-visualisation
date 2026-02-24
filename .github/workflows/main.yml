@@ -21,7 +21,7 @@ jobs:
       version: v018
       rdffilepath: rdf/epica_dome_c.ttl
       docpath: docs
-      prefixns: https://w3id.org/geo-lod/
+      prefixns: http://w3id.org/geo-lod/
       prefixnsshort: geo-lod
       indexpages: true
       createcollections: true
@@ -30,7 +30,7 @@ jobs:
       ghpages: true
       metadatatable: true
       createnonNSPages: true
-      logourl: https://raw.githubusercontent.com/Research-Squirrel-Engineers/osm2lod/main/osm2lod_logo.png
+      logourl: https://raw.githubusercontent.com/Research-Squirrel-Engineers/EPICA-SISAL-FAIRification/main/logo.png
       templatedir: https://github.com/Research-Squirrel-Engineers/unicorn-ontdoc-template-squirrels/archive/refs/tags/scrat.1.zip
       ogcapifeatures: false
       datasettitle: geo-lod

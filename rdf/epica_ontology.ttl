@@ -12,7 +12,7 @@
 @prefix unit:    <http://qudt.org/vocab/unit/> .
 @prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix crmsci:  <http://www.ics.forth.gr/isl/CRMsci/> .
-@prefix geolod:   <https://w3id.org/geo-lod/> .
+@prefix geolod:   <http://w3id.org/geo-lod/> .
 
 # ============================================================================
 # EPICA Dome C Ice Core – OWL Ontology
@@ -29,7 +29,7 @@ geolod:
     dct:creator         "Derived from ELSAinteractive++ methodology (Diensberg 2020)"@en ;
     dct:license         <https://creativecommons.org/licenses/by/4.0/> ;
     dct:created         "2026-02-24"^^xsd:date ;
-    owl:versionIRI      <https://w3id.org/geo-lod/1.0> ;
+    owl:versionIRI      <http://w3id.org/geo-lod/1.0> ;
     owl:versionInfo     "1.0.0" ;
     rdfs:seeAlso        <http://www.w3.org/ns/sosa/> ;
     rdfs:seeAlso        <http://www.cidoc-crm.org/cidoc-crm/> ;
@@ -191,6 +191,12 @@ geolod:SavitzkyGolayFilter
 
 # ── Provenienz ────────────────────────────────────────────────────────────────
 
+geolod:MeasurementType
+    a owl:Class ;
+    rdfs:subClassOf     crmsci:S9_Property_Type ;
+    rdfs:label          "Measurement Type"@en ;
+    rdfs:comment        "A controlled vocabulary term classifying the kind of measurement performed in an ice core observation (e.g. CH4 concentration, delta18O isotope ratio)."@en .
+
 geolod:DataSource
     a owl:Class ;
     rdfs:subClassOf     prov:Entity ;
@@ -232,6 +238,13 @@ geolod:smoothingMethod_savgol
     rdfs:domain         geolod:IceCoreObservation ;
     rdfs:range          geolod:SavitzkyGolayFilter ;
     rdfs:label          "smoothing method (Savitzky-Golay)"@en .
+
+geolod:measurementType
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          geolod:MeasurementType ;
+    rdfs:label          "measurement type"@en ;
+    rdfs:comment        "Links an observation to its measurement type (e.g. CH4 or delta18O)."@en .
 
 geolod:extractedFrom
     a owl:ObjectProperty ;
@@ -339,6 +352,16 @@ geolod:Delta18O
     a geolod:Delta18OProperty , owl:NamedIndividual ;
     rdfs:label          "Stable water isotope ratio (d18O)"@en ;
     qudt:unit           unit:PERMILLE .
+
+geolod:MeasurementType_CH4
+    a geolod:MeasurementType , owl:NamedIndividual ;
+    rdfs:label          "Methane (CH4) measurement"@en ;
+    rdfs:comment        "Indicates a CH4 concentration measurement from trapped air bubbles."@en .
+
+geolod:MeasurementType_d18O
+    a geolod:MeasurementType , owl:NamedIndividual ;
+    rdfs:label          "delta18O stable water isotope measurement"@en ;
+    rdfs:comment        "Indicates a stable water isotope ratio (delta18O) measurement from ice matrix."@en .
 
 geolod:EDC2_Chronology
     a geolod:IceCoreChronology , owl:NamedIndividual ;
