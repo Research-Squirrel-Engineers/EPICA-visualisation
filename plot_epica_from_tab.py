@@ -41,33 +41,41 @@ LABEL_PAD = 12
 # Format: (age_top_ka, age_bottom_ka, label, farbe)
 # Warmzeiten (ungerade MIS) = hellblau, Kaltzeiten (gerade MIS) = kein Hintergrund
 # ──────────────────────────────────────────────
-MIS_COLOR_WARM = "#fddbc7"  # helles Rot/Orange für Interglaziale (ungerade) = warm
-MIS_COLOR_COLD = "#d6e8f7"  # helles Blau für Glaziale (gerade) = kalt
+MIS_COLOR_WARM = "#fddbc7"  # Rot/Orange        – volles Interglazial
+MIS_COLOR_INTERSTADIAL = "#fef0e6"  # blasses Rötlich   – Interstadial (MIS 3)
+MIS_COLOR_COLD = "#d6e8f7"  # Blau              – Glazial
 
-# Grenzen nach LR04 (ka BP). Jede Zeile: (Beginn oben=jung, Ende unten=alt, Label)
-# Abdeckung: 0 – 814 ka BP → passt für CH4 (0–649) und d18O (102–806)
+# MIS-Typ:
+#   "warm"       = volles Interglazial   → Rot/Orange, durchgehend
+#   "inter"      = Interstadial          → blasses Rötlich, durchgehend (MIS 3)
+#   "cold"       = Glazial               → Blau, durchgehend
+#   "warm_nodata"= Interglazial, keine CH4-Messdaten → Rot/Orange, gestrichelter Rand
+#   "cold_nodata"= Glazial, keine CH4-Messdaten      → Blau, gestrichelter Rand
+#
+# Grenzen: LR04 (Lisiecki & Raymo 2005), außer:
+#   - MIS 13/14-Grenze bei 527 ka (statt LR04 533 ka) → CH4-Minimum in EDC
+#   - MIS 14/15-Grenze bei 545 ka (statt LR04 563 ka) → CH4-Anstieg in EDC
+#   - MIS 8/9/10 (243–374 ka): keine CH4-Daten in EDC-Tab-Datei → "no_data"
 MIS_INTERVALS = [
-    # age_top, age_bottom, label
-    (0, 14, "MIS 1", True),
-    (14, 29, "MIS 2", False),
-    (29, 57, "MIS 3", True),
-    (57, 71, "MIS 4", False),
-    (71, 130, "MIS 5", True),
-    (130, 191, "MIS 6", False),
-    (191, 243, "MIS 7", True),
-    (243, 300, "MIS 8", False),
-    (300, 337, "MIS 9", True),
-    (337, 374, "MIS 10", False),
-    (374, 424, "MIS 11", True),
-    (424, 478, "MIS 12", False),
-    (478, 533, "MIS 13", True),
-    (533, 563, "MIS 14", False),
-    (563, 621, "MIS 15", True),
-    (621, 676, "MIS 16", False),
-    (676, 712, "MIS 17", True),
-    (712, 761, "MIS 18", False),
-    (761, 790, "MIS 19", True),
-    (790, 814, "MIS 20", False),
+    (0, 14, "MIS 1", "warm"),
+    (14, 29, "MIS 2", "cold"),
+    (29, 57, "MIS 3", "inter"),  # Interstadial, kein volles Interglazial
+    (57, 71, "MIS 4", "cold"),
+    (71, 130, "MIS 5", "warm"),
+    (130, 191, "MIS 6", "cold"),
+    (191, 243, "MIS 7", "warm"),
+    (243, 300, "MIS 8", "cold_nodata"),  # keine EDC CH4-Daten
+    (300, 337, "MIS 9", "warm_nodata"),  # keine EDC CH4-Daten
+    (337, 374, "MIS 10", "cold_nodata"),  # keine EDC CH4-Daten
+    (374, 424, "MIS 11", "warm"),
+    (424, 527, "MIS 12", "cold"),  # Grenze bei 527 ka (CH4-Minimum EDC)
+    (527, 545, "MIS 13", "warm"),  # Grenze bei 545 ka (CH4-Anstieg EDC)
+    (545, 621, "MIS 15", "warm"),  # MIS 14 durch Anpassung entfallen
+    (621, 676, "MIS 16", "cold"),
+    (676, 712, "MIS 17", "warm"),
+    (712, 761, "MIS 18", "cold"),
+    (761, 790, "MIS 19", "warm"),
+    (790, 814, "MIS 20", "cold"),
 ]
 
 
@@ -193,30 +201,54 @@ def load_d18o_tab(filepath):
 def draw_mis_bands(ax, y_min_ka, y_max_ka):
     """
     Zeichnet MIS-Farbstreifen auf der Y-Achse (ka BP).
-    Nur Warmzeiten (is_warm=True) bekommen einen hellblauen Hintergrund.
-    Die MIS-Labels werden rechts an den Plot geschrieben.
 
-    ax        : matplotlib Axes
-    y_min_ka  : untere Grenze der sichtbaren Y-Achse (ka BP, = älterer Wert)
-    y_max_ka  : obere Grenze der sichtbaren Y-Achse (ka BP, = jüngerer Wert)
+    Typen:
+      "warm"        → Rot/Orange, durchgehend (volles Interglazial)
+      "inter"       → blasses Rötlich, durchgehend (Interstadial, z.B. MIS 3)
+      "cold"        → Blau, durchgehend (Glazial)
+      "warm_nodata" → Rot/Orange, gestrichelter Rahmen (keine Messdaten)
+      "cold_nodata" → Blau, gestrichelter Rahmen (keine Messdaten)
     """
     mis_trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
 
-    for age_top, age_bot, label, is_warm in MIS_INTERVALS:
-        # Nur zeichnen wenn Überlappung mit sichtbarem Bereich
-        visible_top = max(age_top, min(y_min_ka, y_max_ka))
-        visible_bot = min(age_bot, max(y_min_ka, y_max_ka))
+    type_config = {
+        "warm": (MIS_COLOR_WARM, "#8b1a00", False),
+        "inter": (MIS_COLOR_INTERSTADIAL, "#8b1a00", False),
+        "cold": (MIS_COLOR_COLD, "#003f6b", False),
+        "warm_nodata": (MIS_COLOR_WARM, "#8b1a00", True),
+        "cold_nodata": (MIS_COLOR_COLD, "#003f6b", True),
+    }
+
+    for age_top, age_bot, label, mis_type in MIS_INTERVALS:
+        y_lo = min(y_min_ka, y_max_ka)
+        y_hi = max(y_min_ka, y_max_ka)
+        visible_top = max(age_top, y_lo)
+        visible_bot = min(age_bot, y_hi)
         if visible_top >= visible_bot:
             continue
 
-        # Farbband für Warm- und Kaltzeiten
-        color = MIS_COLOR_WARM if is_warm else MIS_COLOR_COLD
+        color, label_color, dashed = type_config.get(
+            mis_type, (MIS_COLOR_COLD, "#003f6b", False)
+        )
+
         ax.axhspan(age_top, age_bot, facecolor=color, alpha=1.0, zorder=0)
 
-        # Label-Farbe: dunkelrot für warm, dunkelblau für kalt
-        label_color = "#8b1a00" if is_warm else "#003f6b"
+        if dashed:
+            ax_trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
+            x_rect = [0, 1, 1, 0, 0]
+            y_rect = [age_top, age_top, age_bot, age_bot, age_top]
+            ax.plot(
+                x_rect,
+                y_rect,
+                transform=ax_trans,
+                color=label_color,
+                linewidth=0.8,
+                linestyle="--",
+                alpha=0.6,
+                zorder=1,
+                clip_on=True,
+            )
 
-        # Label in der Mitte des sichtbaren Bereichs
         y_label = (visible_top + visible_bot) / 2.0
         ax.text(
             0.99,
@@ -228,7 +260,7 @@ def draw_mis_bands(ax, y_min_ka, y_max_ka):
             fontsize=FONT_SIZE_MIS,
             fontweight="bold",
             color=label_color,
-            zorder=1,
+            zorder=2,
         )
 
 
