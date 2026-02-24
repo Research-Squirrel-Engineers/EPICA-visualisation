@@ -5,13 +5,26 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FuncFormatter, FixedLocator
 import matplotlib.transforms as transforms
 from scipy.signal import savgol_filter
+from datetime import datetime
+
+try:
+    from rdflib import Graph, Namespace, URIRef, Literal, BNode
+    from rdflib.namespace import RDF, RDFS, OWL, XSD, DCTERMS, PROV
+
+    DCAT = Namespace("http://www.w3.org/ns/dcat#")
+    RDF_AVAILABLE = True
+except ImportError:
+    RDF_AVAILABLE = False
+    print("⚠  rdflib nicht installiert – RDF-Export übersprungen. (pip install rdflib)")
 
 # Arbeitsverzeichnis auf Ordner des Skripts setzen
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # Output-Ordner erstellen
 OUTPUT_DIR = "plots"
+RDF_DIR = "rdf"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(RDF_DIR, exist_ok=True)
 
 # ──────────────────────────────────────────────
 # Gemeinsame Plot-Einstellungen
@@ -435,6 +448,530 @@ def create_plot(
 # Hauptprogramm
 # ──────────────────────────────────────────────
 
+# ============================================================================
+# RDF / LINKED DATA EXPORT
+# ============================================================================
+# Ontologien:
+#   SOSA/SSN  – W3C Sensor & Observation (Messdaten)
+#   PROV-O    – W3C Provenance (Datenherkunft, PANGAEA-DOI)
+#   GeoSPARQL – OGC Geometrie / Standort
+#   CIDOC-CRM – ISO 21127, Kulturerbe-Ereignisse (Feldkampagne, Probenahme)
+#   CRMsci    – CRM-Erweiterung für naturwiss. Beobachtungen
+#   QUDT      – Einheiten (ppbv, ‰, m, ka BP)
+#   Dublin Core – Metadaten (Titel, Autoren, Lizenz)
+# ============================================================================
+
+
+def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
+    """
+    Erstellt einen RDF-Graph mit allen EPICA-Daten.
+
+    Modell (je Datenpunkt):
+      epica:Obs_CH4_{i}  a  sosa:Observation, crmsci:S4_Observation ;
+          sosa:hasFeatureOfInterest  epica:EpicaDomeC_IceCore ;
+          sosa:observedProperty      epica:CH4Concentration ;
+          sosa:madeBySensor          epica:GasChromatograph ;
+          sosa:resultTime            <age als xsd:decimal, ka BP> ;
+          sosa:hasSimpleResult       <CH4-Wert als qudt:PPB> ;
+          epica:atDepth              <Tiefe in m> ;
+          epica:smoothedValue_median <Rolling-Median-Wert> ;
+          epica:smoothedValue_savgol <SG-Wert> ;
+          epica:smoothingWindow      11 ;
+          epica:smoothingPolyorder   2 ;
+          prov:wasDerivedFrom        <PANGAEA DOI> ;
+          crm:P7_took_place_at       epica:EpicaDomeC_Site .
+
+    Parameters
+    ----------
+    df_ch4  : DataFrame mit Spalten depth_m, age_edc2_ka, ch4
+    df_d18o : DataFrame mit Spalten depth_m, age_ka, d18o
+
+    Returns
+    -------
+    rdflib.Graph
+    """
+    g = Graph()
+
+    # ── Namespaces ────────────────────────────────────────────────────────
+    EPICA = Namespace("https://purl.org/epica/")
+    SOSA = Namespace("http://www.w3.org/ns/sosa/")
+    SSN = Namespace("http://www.w3.org/ns/ssn/")
+    GEO = Namespace("http://www.opengis.net/ont/geosparql#")
+    SF = Namespace("http://www.opengis.net/ont/sf#")
+    QUDT = Namespace("http://qudt.org/schema/qudt/")
+    UNIT = Namespace("http://qudt.org/vocab/unit/")
+    CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+    CRMSCI = Namespace("http://www.ics.forth.gr/isl/CRMsci/")
+    DCT = DCTERMS
+
+    g.bind("epica", EPICA)
+    g.bind("sosa", SOSA)
+    g.bind("ssn", SSN)
+    g.bind("geo", GEO)
+    g.bind("sf", SF)
+    g.bind("qudt", QUDT)
+    g.bind("unit", UNIT)
+    g.bind("crm", CRM)
+    g.bind("crmsci", CRMSCI)
+    g.bind("dct", DCT)
+    g.bind("dcat", DCAT)
+    g.bind("prov", PROV)
+    g.bind("xsd", XSD)
+
+    # ── Metadaten: Datensatz-Beschreibung ─────────────────────────────────
+    dataset = EPICA["EPICA_DomeC_Dataset"]
+    g.add((dataset, RDF.type, DCAT["Dataset"]))
+    g.add(
+        (
+            dataset,
+            DCT.title,
+            Literal("EPICA Dome C Ice Core – CH₄ and δ¹⁸O Records", lang="en"),
+        )
+    )
+    g.add(
+        (
+            dataset,
+            DCT.description,
+            Literal(
+                "Methane (CH4) and stable water isotope (δ18O) measurements from the EPICA Dome C ice core, "
+                "East Antarctica, covering the last ~800,000 years (ca. 8 glacial cycles).",
+                lang="en",
+            ),
+        )
+    )
+    g.add(
+        (dataset, DCT.license, URIRef("https://creativecommons.org/licenses/by/3.0/"))
+    )
+    g.add(
+        (
+            dataset,
+            DCT.publisher,
+            Literal("PANGAEA – Data Publisher for Earth & Environmental Science"),
+        )
+    )
+    g.add(
+        (
+            dataset,
+            DCT.created,
+            Literal(datetime.now().strftime("%Y-%m-%d"), datatype=XSD.date),
+        )
+    )
+
+    # CH4-Quelle
+    src_ch4 = URIRef("https://doi.org/10.1594/PANGAEA.472484")
+    g.add((src_ch4, RDF.type, DCT.BibliographicResource))
+    g.add(
+        (
+            src_ch4,
+            DCT.title,
+            Literal("EPICA Dome C Methane Record (Spahni & Stocker 2006)", lang="en"),
+        )
+    )
+    g.add((src_ch4, DCT.creator, Literal("Spahni, R.; Stocker, T.F.")))
+    g.add((src_ch4, DCT.date, Literal("2006", datatype=XSD.gYear)))
+    g.add((dataset, DCT.source, src_ch4))
+
+    # d18O-Quelle
+    src_d18o = URIRef("https://doi.org/10.1594/PANGAEA.961024")
+    g.add((src_d18o, RDF.type, DCT.BibliographicResource))
+    g.add(
+        (
+            src_d18o,
+            DCT.title,
+            Literal(
+                "EPICA Dome C δ18O Record on AICC2023 (Bouchet et al. 2023)", lang="en"
+            ),
+        )
+    )
+    g.add((src_d18o, DCT.creator, Literal("Bouchet, M. et al.")))
+    g.add((src_d18o, DCT.date, Literal("2023", datatype=XSD.gYear)))
+    g.add((dataset, DCT.source, src_d18o))
+
+    # ── DCAT Catalog ─────────────────────────────────────────────────────
+    # dcat:Catalog fasst alle Datasets zusammen (Einstiegspunkt für Linked Data)
+    catalog = EPICA["EPICA_DomeC_Catalog"]
+    g.add((catalog, RDF.type, DCAT["Catalog"]))
+    g.add(
+        (
+            catalog,
+            RDFS.label,
+            Literal("EPICA Dome C Ice Core – Linked Data Catalogue", lang="en"),
+        )
+    )
+    g.add(
+        (
+            catalog,
+            DCT.title,
+            Literal("EPICA Dome C Ice Core – Linked Data Catalogue", lang="en"),
+        )
+    )
+    g.add(
+        (
+            catalog,
+            DCT.description,
+            Literal(
+                "DCAT catalogue aggregating palaeoclimate observation datasets from the EPICA Dome C "
+                "ice core, East Antarctica. Includes CH₄ and δ¹⁸O records with raw and smoothed values, "
+                "full provenance, site geometry and chronology metadata.",
+                lang="en",
+            ),
+        )
+    )
+    g.add(
+        (
+            catalog,
+            DCT.publisher,
+            Literal("PANGAEA – Data Publisher for Earth & Environmental Science"),
+        )
+    )
+    g.add(
+        (catalog, DCT.license, URIRef("https://creativecommons.org/licenses/by/3.0/"))
+    )
+    g.add(
+        (
+            catalog,
+            DCT.created,
+            Literal(datetime.now().strftime("%Y-%m-%d"), datatype=XSD.date),
+        )
+    )
+    g.add((catalog, DCAT["dataset"], dataset))
+
+    # CH4 und d18O als separate dcat:Dataset innerhalb des Katalogs
+    ds_ch4 = EPICA["EPICA_DomeC_CH4_Dataset"]
+    g.add((ds_ch4, RDF.type, DCAT["Dataset"]))
+    g.add(
+        (ds_ch4, DCT.title, Literal("EPICA Dome C – Methane (CH₄) Record", lang="en"))
+    )
+    g.add(
+        (
+            ds_ch4,
+            DCT.description,
+            Literal(
+                "CH₄ concentration measurements from the EPICA Dome C ice core "
+                "on the EDC2 chronology (0–649 ka BP, 736 data points).",
+                lang="en",
+            ),
+        )
+    )
+    g.add((ds_ch4, DCT.source, src_ch4))
+    g.add((ds_ch4, DCT.license, URIRef("https://creativecommons.org/licenses/by/3.0/")))
+    g.add((ds_ch4, DCAT["distribution"], src_ch4))
+    g.add((catalog, DCAT["dataset"], ds_ch4))
+
+    ds_d18o = EPICA["EPICA_DomeC_d18O_Dataset"]
+    g.add((ds_d18o, RDF.type, DCAT["Dataset"]))
+    g.add(
+        (
+            ds_d18o,
+            DCT.title,
+            Literal("EPICA Dome C – Stable Water Isotope (δ¹⁸O) Record", lang="en"),
+        )
+    )
+    g.add(
+        (
+            ds_d18o,
+            DCT.description,
+            Literal(
+                "δ¹⁸O measurements from the EPICA Dome C ice core "
+                "on the AICC2023 chronology (102–806 ka BP, 1378 data points).",
+                lang="en",
+            ),
+        )
+    )
+    g.add((ds_d18o, DCT.source, src_d18o))
+    g.add(
+        (ds_d18o, DCT.license, URIRef("https://creativecommons.org/licenses/by/3.0/"))
+    )
+    g.add((ds_d18o, DCAT["distribution"], src_d18o))
+    g.add((catalog, DCAT["dataset"], ds_d18o))
+
+    # Observations den jeweiligen Datasets zuordnen
+    # (wird später beim Loop gesetzt via epica:ch4Dataset / epica:d18oDataset)
+    # Referenzen für spätere Verlinkung im Graph speichern
+    g.__epica_catalog__ = catalog
+    g.__epica_ds_ch4__ = ds_ch4
+    g.__epica_ds_d18o__ = ds_d18o
+
+    # ── Standort: EPICA Dome C (GeoSPARQL + CIDOC-CRM) ───────────────────
+    site = EPICA["EpicaDomeC_Site"]
+    g.add((site, RDF.type, CRM["E53_Place"]))
+    g.add((site, RDF.type, CRM["E27_Site"]))
+    g.add((site, RDFS.label, Literal("EPICA Dome C, East Antarctica", lang="en")))
+    g.add(
+        (
+            site,
+            CRM["P87_is_identified_by"],
+            Literal("75°06'S, 123°21'E", datatype=XSD.string),
+        )
+    )
+
+    geom = EPICA["EpicaDomeC_Geometry"]
+    g.add((geom, RDF.type, URIRef(str(SF) + "Point")))
+    g.add(
+        (geom, GEO["asWKT"], Literal("POINT(123.35 -75.1)", datatype=GEO["wktLiteral"]))
+    )
+    g.add((site, GEO["hasGeometry"], geom))
+
+    # ── Eiskern: Probe (SOSA Sample + CIDOC-CRM E22_Human-Made_Object) ───
+    core = EPICA["EpicaDomeC_IceCore"]
+    g.add((core, RDF.type, SOSA["Sample"]))
+    g.add((core, RDF.type, CRM["E22_Human-Made_Object"]))  # Bohrkern als Artefakt
+    g.add((core, RDFS.label, Literal("EPICA Dome C Ice Core", lang="en")))
+    g.add((core, SOSA["isSampleOf"], site))
+    g.add((core, CRM["P53_has_former_or_current_location"], site))
+    g.add((core, CRM["P2_has_type"], Literal("Ice Core", lang="en")))
+
+    # ── Feldkampagne (CIDOC-CRM E7_Activity + CRMsci S1_Matter_Removal) ─
+    campaign = EPICA["EPICA_DomeCampaign_1996_2004"]
+    g.add((campaign, RDF.type, CRM["E7_Activity"]))
+    g.add((campaign, RDF.type, CRMSCI["S1_Matter_Removal"]))
+    g.add(
+        (
+            campaign,
+            RDFS.label,
+            Literal("EPICA Dome C drilling campaign 1996–2004", lang="en"),
+        )
+    )
+    g.add((campaign, CRM["P7_took_place_at"], site))
+    g.add(
+        (campaign, CRM["P4_has_time-span"], Literal("1996/2004", datatype=XSD.string))
+    )
+    g.add((campaign, CRMSCI["O1_removed"], core))
+
+    # ── Observed Properties ───────────────────────────────────────────────
+    prop_ch4 = EPICA["CH4Concentration"]
+    g.add((prop_ch4, RDF.type, SOSA["ObservableProperty"]))
+    g.add((prop_ch4, RDF.type, CRMSCI["S9_Property_Type"]))
+    g.add((prop_ch4, RDFS.label, Literal("Methane concentration (CH₄)", lang="en")))
+    g.add((prop_ch4, QUDT["unit"], UNIT["PPB"]))
+
+    prop_d18o = EPICA["Delta18O"]
+    g.add((prop_d18o, RDF.type, SOSA["ObservableProperty"]))
+    g.add((prop_d18o, RDF.type, CRMSCI["S9_Property_Type"]))
+    g.add(
+        (prop_d18o, RDFS.label, Literal("Stable water isotope ratio (δ¹⁸O)", lang="en"))
+    )
+    g.add((prop_d18o, QUDT["unit"], UNIT["PERMILLE"]))
+
+    # ── Chronologien (als Named Individuals dokumentiert) ─────────────────
+    chron_edc2 = EPICA["EDC2_Chronology"]
+    g.add((chron_edc2, RDF.type, CRMSCI["S6_Data_Evaluation"]))
+    g.add(
+        (
+            chron_edc2,
+            RDFS.label,
+            Literal("EDC2 ice core chronology (Schwander et al. 2001)", lang="en"),
+        )
+    )
+
+    chron_aicc = EPICA["AICC2023_Chronology"]
+    g.add((chron_aicc, RDF.type, CRMSCI["S6_Data_Evaluation"]))
+    g.add(
+        (
+            chron_aicc,
+            RDFS.label,
+            Literal("AICC2023 ice core chronology (Bouchet et al. 2023)", lang="en"),
+        )
+    )
+
+    # ── Glättungs-Parameter als Named Individuals ─────────────────────────
+    smooth_median = EPICA[f"RollingMedian_w{ROLLING_WINDOW}"]
+    g.add((smooth_median, RDF.type, CRMSCI["S6_Data_Evaluation"]))
+    g.add(
+        (
+            smooth_median,
+            RDFS.label,
+            Literal(f"Rolling median filter, window={ROLLING_WINDOW} pts", lang="en"),
+        )
+    )
+    g.add(
+        (
+            smooth_median,
+            EPICA["windowSize"],
+            Literal(ROLLING_WINDOW, datatype=XSD.integer),
+        )
+    )
+    g.add(
+        (smooth_median, DCT.references, URIRef("https://doi.org/10.1145/1968.1969"))
+    )  # Tukey 1977
+
+    smooth_sg = EPICA[f"SavitzkyGolay_w{SG_WINDOW}_p{SG_POLYORDER}"]
+    g.add((smooth_sg, RDF.type, CRMSCI["S6_Data_Evaluation"]))
+    g.add(
+        (
+            smooth_sg,
+            RDFS.label,
+            Literal(
+                f"Savitzky-Golay filter, window={SG_WINDOW} pts, polyorder={SG_POLYORDER}",
+                lang="en",
+            ),
+        )
+    )
+    g.add((smooth_sg, EPICA["windowSize"], Literal(SG_WINDOW, datatype=XSD.integer)))
+    g.add((smooth_sg, EPICA["polyOrder"], Literal(SG_POLYORDER, datatype=XSD.integer)))
+    g.add(
+        (smooth_sg, DCT.references, URIRef("https://doi.org/10.1021/ac60214a047"))
+    )  # Savitzky & Golay 1964
+
+    # ── CH4-Observationen ────────────────────────────────────────────────
+    print("  Schreibe CH4-Observationen …")
+    df_ch4_valid = df_ch4.dropna(subset=["ch4", "age_edc2_ka", "depth_m"]).reset_index(
+        drop=True
+    )
+
+    # Glättungswerte vorausberechnen
+    ch4_smooth_median = (
+        pd.Series(df_ch4_valid["ch4"].values)
+        .rolling(window=ROLLING_WINDOW, center=True, min_periods=1)
+        .median()
+        .values
+    )
+    ch4_smooth_sg = savgol_filter(
+        df_ch4_valid["ch4"].values, window_length=SG_WINDOW, polyorder=SG_POLYORDER
+    )
+
+    for i, row in df_ch4_valid.iterrows():
+        obs = EPICA[f"Obs_CH4_{i:04d}"]
+        g.add((obs, RDF.type, SOSA["Observation"]))
+        g.add((obs, RDF.type, CRMSCI["S4_Observation"]))
+        g.add((obs, SOSA["hasFeatureOfInterest"], core))
+        g.add((obs, SOSA["observedProperty"], prop_ch4))
+        g.add(
+            (
+                obs,
+                SOSA["hasSimpleResult"],
+                Literal(round(float(row["ch4"]), 2), datatype=XSD.decimal),
+            )
+        )
+        g.add(
+            (
+                obs,
+                SOSA["resultTime"],
+                Literal(round(float(row["age_edc2_ka"]), 4), datatype=XSD.decimal),
+            )
+        )
+        g.add(
+            (
+                obs,
+                EPICA["atDepth_m"],
+                Literal(round(float(row["depth_m"]), 2), datatype=XSD.decimal),
+            )
+        )
+        g.add((obs, EPICA["ageChronology"], chron_edc2))
+        g.add((obs, QUDT["unit"], UNIT["PPB"]))
+        # Geglättete Werte mit Tag zur Methode
+        g.add(
+            (
+                obs,
+                EPICA["smoothedValue_rollingMedian"],
+                Literal(round(float(ch4_smooth_median[i]), 2), datatype=XSD.decimal),
+            )
+        )
+        g.add(
+            (
+                obs,
+                EPICA["smoothedValue_savgol"],
+                Literal(round(float(ch4_smooth_sg[i]), 2), datatype=XSD.decimal),
+            )
+        )
+        g.add((obs, EPICA["smoothingMethod_median"], smooth_median))
+        g.add((obs, EPICA["smoothingMethod_savgol"], smooth_sg))
+        g.add((obs, PROV.wasDerivedFrom, src_ch4))
+        g.add((obs, CRM["P7_took_place_at"], site))
+        g.add((dataset, EPICA["hasObservation"], obs))
+        g.add((ds_ch4, DCAT["record"], obs))
+
+    # ── d18O-Observationen ───────────────────────────────────────────────
+    print("  Schreibe δ¹⁸O-Observationen …")
+    df_d18o_valid = df_d18o.dropna(subset=["d18o", "age_ka", "depth_m"]).reset_index(
+        drop=True
+    )
+
+    d18o_smooth_median = (
+        pd.Series(df_d18o_valid["d18o"].values)
+        .rolling(window=ROLLING_WINDOW, center=True, min_periods=1)
+        .median()
+        .values
+    )
+    d18o_smooth_sg = savgol_filter(
+        df_d18o_valid["d18o"].values, window_length=SG_WINDOW, polyorder=SG_POLYORDER
+    )
+
+    for i, row in df_d18o_valid.iterrows():
+        obs = EPICA[f"Obs_d18O_{i:04d}"]
+        g.add((obs, RDF.type, SOSA["Observation"]))
+        g.add((obs, RDF.type, CRMSCI["S4_Observation"]))
+        g.add((obs, SOSA["hasFeatureOfInterest"], core))
+        g.add((obs, SOSA["observedProperty"], prop_d18o))
+        g.add(
+            (
+                obs,
+                SOSA["hasSimpleResult"],
+                Literal(round(float(row["d18o"]), 5), datatype=XSD.decimal),
+            )
+        )
+        g.add(
+            (
+                obs,
+                SOSA["resultTime"],
+                Literal(round(float(row["age_ka"]), 4), datatype=XSD.decimal),
+            )
+        )
+        g.add(
+            (
+                obs,
+                EPICA["atDepth_m"],
+                Literal(round(float(row["depth_m"]), 2), datatype=XSD.decimal),
+            )
+        )
+        g.add((obs, EPICA["ageChronology"], chron_aicc))
+        g.add((obs, QUDT["unit"], UNIT["PERMILLE"]))
+        g.add(
+            (
+                obs,
+                EPICA["smoothedValue_rollingMedian"],
+                Literal(round(float(d18o_smooth_median[i]), 5), datatype=XSD.decimal),
+            )
+        )
+        g.add(
+            (
+                obs,
+                EPICA["smoothedValue_savgol"],
+                Literal(round(float(d18o_smooth_sg[i]), 5), datatype=XSD.decimal),
+            )
+        )
+        g.add((obs, EPICA["smoothingMethod_median"], smooth_median))
+        g.add((obs, EPICA["smoothingMethod_savgol"], smooth_sg))
+        g.add((obs, PROV.wasDerivedFrom, src_d18o))
+        g.add((obs, CRM["P7_took_place_at"], site))
+        g.add((dataset, EPICA["hasObservation"], obs))
+        g.add((ds_d18o, DCAT["record"], obs))
+
+    return g
+
+
+def export_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame):
+    """Baut den RDF-Graph und speichert ihn als Turtle (.ttl) und JSON-LD."""
+    if not RDF_AVAILABLE:
+        return
+
+    print("\n" + "─" * 60)
+    print("RDF-Export …")
+    print("─" * 60)
+
+    g = build_epica_rdf(df_ch4, df_d18o)
+
+    ttl_path = os.path.join(RDF_DIR, "epica_dome_c.ttl")
+    jsonld_path = os.path.join(RDF_DIR, "epica_dome_c.jsonld")
+
+    g.serialize(destination=ttl_path, format="turtle")
+    g.serialize(destination=jsonld_path, format="json-ld", indent=2)
+
+    triples = len(g)
+    print(f"  ✓ {triples:,} Triples geschrieben")
+    print(f"  ✓ Turtle:  {ttl_path}")
+    print(f"  ✓ JSON-LD: {jsonld_path}")
+
 
 def main():
     print("=" * 60)
@@ -652,6 +1189,9 @@ def main():
             rolling_window=cfg.get("rolling_window", None),
             use_savgol=cfg.get("use_savgol", False),
         )
+
+    # RDF Export
+    export_rdf(df_ch4, df_d18o)
 
     print("\n" + "=" * 60)
     print(f"Fertig! Alle {len(plots)} Plots wurden in '{OUTPUT_DIR}/' gespeichert.")
