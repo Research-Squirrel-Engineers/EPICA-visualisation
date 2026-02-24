@@ -1,1 +1,3 @@
-# EPICA-visualisation
+# EPICA-SISAL-FAIRification
+
+![Squilly Logo](logo.png)
