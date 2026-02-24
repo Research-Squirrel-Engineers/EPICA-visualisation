@@ -1530,6 +1530,281 @@ unit:M
     with open(owl_path, "w", encoding="utf-8") as fh:
         fh.write(owl_ttl)
     print(f"  ✓ OWL-Ontologie: {owl_path}")
+    export_mermaid()
+
+
+def export_mermaid():
+    """
+    Generates two Mermaid diagrams from the geolod ontology model
+    and saves them to the RDF output directory:
+      epica_diagram1_taxonomy.mermaid  -  Class hierarchy (subClassOf)
+      epica_diagram2_instance.mermaid  -  Instance model with properties & literals
+    Smoothing parameters are read from the global configuration constants.
+    """
+    os.makedirs(RDF_DIR, exist_ok=True)
+
+    # ── Diagram 1: Class Taxonomy ─────────────────────────────────────────────
+    d1 = """flowchart LR
+
+    subgraph EXT["External Ontologies"]
+        direction TB
+
+        subgraph DCAT["DCAT"]
+            direction TB
+            DC["dcat:Catalog"]
+            DD["dcat:Dataset"]
+        end
+
+        subgraph SOSA["SOSA / SSN"]
+            direction TB
+            SO["sosa:Observation"]
+            SS["sosa:Sample"]
+            SP["sosa:ObservableProperty"]
+        end
+
+        subgraph CRM["CIDOC-CRM"]
+            direction TB
+            CE7["crm:E7_Activity"]
+            CE22["crm:E22_Human-Made_Object"]
+            CE53["crm:E53_Place"]
+            CE27["crm:E27_Site"]
+        end
+
+        subgraph CRMSCI["CRMsci"]
+            direction TB
+            CS1["crmsci:S1_Matter_Removal"]
+            CS4["crmsci:S4_Observation"]
+            CS6["crmsci:S6_Data_Evaluation"]
+            CS9["crmsci:S9_Property_Type"]
+        end
+
+        subgraph GEO["GeoSPARQL"]
+            GF["geo:Feature"]
+        end
+
+        subgraph PROV["PROV-O"]
+            PE["prov:Entity"]
+        end
+
+        subgraph DCT["Dublin Core"]
+            DB["dct:BibliographicResource"]
+        end
+    end
+
+    subgraph GEOLOD["geolod"]
+        direction TB
+
+        subgraph GL_CAT_GRP["Catalogue & Dataset"]
+            direction LR
+            GL_Catalog["PalaeoclimateDataCatalogue"]
+            GL_Dataset["IceCoreDataset"]
+            GL_CH4DS["CH4Dataset"]
+            GL_D18ODS["Delta18ODataset"]
+            GL_Dataset -->|subClassOf| GL_CH4DS
+            GL_Dataset -->|subClassOf| GL_D18ODS
+        end
+
+        subgraph GL_OBS_GRP["Observation"]
+            direction LR
+            GL_Obs["IceCoreObservation"]
+            GL_CH4Obs["CH4Observation"]
+            GL_D18OObs["Delta18OObservation"]
+            GL_Obs -->|subClassOf| GL_CH4Obs
+            GL_Obs -->|subClassOf| GL_D18OObs
+        end
+
+        subgraph GL_SITE_GRP["Sample & Site"]
+            direction LR
+            GL_Core["IceCore"]
+            GL_Site["DrillingSite"]
+            GL_Campaign["DrillingCampaign"]
+        end
+
+        subgraph GL_PROP_GRP["Observable Property"]
+            direction LR
+            GL_ObsProp["ObservableProperty"]
+            GL_CH4Prop["CH4ConcentrationProperty"]
+            GL_D18OProp["Delta18OProperty"]
+            GL_ObsProp -->|subClassOf| GL_CH4Prop
+            GL_ObsProp -->|subClassOf| GL_D18OProp
+        end
+
+        subgraph GL_METH_GRP["Chronology & Smoothing"]
+            direction LR
+            GL_Chron["IceCoreChronology"]
+            GL_Smooth["SmoothingMethod"]
+            GL_Median["RollingMedianFilter"]
+            GL_SG["SavitzkyGolayFilter"]
+            GL_Smooth -->|subClassOf| GL_Median
+            GL_Smooth -->|subClassOf| GL_SG
+        end
+
+        subgraph GL_PROV_GRP["Provenance"]
+            GL_Source["DataSource"]
+        end
+    end
+
+    DC   -->|subClassOf| GL_Catalog
+    DD   -->|subClassOf| GL_Dataset
+    SO   -->|subClassOf| GL_Obs
+    CS4  -->|subClassOf| GL_Obs
+    SS   -->|subClassOf| GL_Core
+    CE22 -->|subClassOf| GL_Core
+    CE53 -->|subClassOf| GL_Site
+    CE27 -->|subClassOf| GL_Site
+    GF   -->|subClassOf| GL_Site
+    CE7  -->|subClassOf| GL_Campaign
+    CS1  -->|subClassOf| GL_Campaign
+    SP   -->|subClassOf| GL_ObsProp
+    CS9  -->|subClassOf| GL_ObsProp
+    CS6  -->|subClassOf| GL_Chron
+    CS6  -->|subClassOf| GL_Smooth
+    PE   -->|subClassOf| GL_Source
+    DB   -->|subClassOf| GL_Source
+
+    style EXT         fill:#fafafa,stroke:#999,color:#333
+    style DCAT        fill:#f3e8ff,stroke:#6a0572,color:#333
+    style SOSA        fill:#e8f0fb,stroke:#1d3557,color:#333
+    style CRM         fill:#fde8e8,stroke:#9b2226,color:#333
+    style CRMSCI      fill:#fde8e8,stroke:#e63946,color:#333
+    style GEO         fill:#e8f1f7,stroke:#457b9d,color:#333
+    style PROV        fill:#fef0e8,stroke:#e76f51,color:#333
+    style DCT         fill:#f0f0f0,stroke:#6c757d,color:#333
+    style GEOLOD      fill:#e8f5ee,stroke:#2d6a4f,color:#333
+    style GL_CAT_GRP  fill:#d8f0e4,stroke:#2d6a4f,color:#333
+    style GL_OBS_GRP  fill:#d8f0e4,stroke:#2d6a4f,color:#333
+    style GL_SITE_GRP fill:#d8f0e4,stroke:#2d6a4f,color:#333
+    style GL_PROP_GRP fill:#d8f0e4,stroke:#2d6a4f,color:#333
+    style GL_METH_GRP fill:#d8f0e4,stroke:#2d6a4f,color:#333
+    style GL_PROV_GRP fill:#d8f0e4,stroke:#2d6a4f,color:#333
+    style DC    fill:#6a0572,color:#fff,stroke:#4a0350
+    style DD    fill:#6a0572,color:#fff,stroke:#4a0350
+    style SO    fill:#1d3557,color:#fff,stroke:#0d2137
+    style SS    fill:#1d3557,color:#fff,stroke:#0d2137
+    style SP    fill:#1d3557,color:#fff,stroke:#0d2137
+    style CE7   fill:#9b2226,color:#fff,stroke:#7a1a1d
+    style CE22  fill:#9b2226,color:#fff,stroke:#7a1a1d
+    style CE53  fill:#9b2226,color:#fff,stroke:#7a1a1d
+    style CE27  fill:#9b2226,color:#fff,stroke:#7a1a1d
+    style CS1   fill:#e63946,color:#fff,stroke:#c1121f
+    style CS4   fill:#e63946,color:#fff,stroke:#c1121f
+    style CS6   fill:#e63946,color:#fff,stroke:#c1121f
+    style CS9   fill:#e63946,color:#fff,stroke:#c1121f
+    style GF    fill:#457b9d,color:#fff,stroke:#2c5f7a
+    style PE    fill:#e76f51,color:#fff,stroke:#c45c3e
+    style DB    fill:#6c757d,color:#fff,stroke:#495057
+    style GL_Catalog  fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Dataset  fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_CH4DS    fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_D18ODS   fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_Obs      fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_CH4Obs   fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_D18OObs  fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_Core     fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Site     fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Campaign fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_ObsProp  fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_CH4Prop  fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_D18OProp fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_Chron    fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Smooth   fill:#2d6a4f,color:#fff,stroke:#1b4332
+    style GL_Median   fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_SG       fill:#40916c,color:#fff,stroke:#2d6a4f
+    style GL_Source   fill:#2d6a4f,color:#fff,stroke:#1b4332
+"""
+
+    # ── Diagram 2: Instance Model (uses f-string for dynamic params) ──────────
+    d2 = (
+        "flowchart LR\n\n"
+        '    CATALOG["PalaeoclimateDataCatalogue\ngeolod:EPICA_DomeC_Catalog"]\n'
+        '    DATASET["IceCoreDataset\ngeolod:EPICA_DomeC_Dataset"]\n'
+        '    OBS["IceCoreObservation\ngeolod:Obs_CH4_0001 ...\ngeolod:Obs_d18O_0001 ..."]\n'
+        '    CORE["IceCore\ngeolod:EpicaDomeC_IceCore"]\n'
+        '    SITE["DrillingSite\ngeolod:EpicaDomeC_Site"]\n'
+        '    CAMPAIGN["DrillingCampaign\nEPICA Dome C 1996-2004"]\n'
+        '    PROP_CH4["CH4ConcentrationProperty\ngeolod:CH4Concentration"]\n'
+        '    PROP_D18O["Delta18OProperty\ngeolod:Delta18O"]\n'
+        '    CHRON_EDC2["IceCoreChronology\ngeolod:EDC2_Chronology"]\n'
+        '    CHRON_AICC["IceCoreChronology\ngeolod:AICC2023_Chronology"]\n'
+        f'    MEDIAN["RollingMedianFilter\ngeolod:RollingMedian_w{ROLLING_WINDOW}"]\n'
+        f'    SG["SavitzkyGolayFilter\ngeolod:SavitzkyGolay_w{SG_WINDOW}_p{SG_POLYORDER}"]\n'
+        '    SOURCE_CH4["DataSource\nPANGAEA 472484\nSpahni and Stocker 2006"]\n'
+        '    SOURCE_D18O["DataSource\nPANGAEA 961024\nBouchet et al. 2023"]\n'
+        '    GEOM["sf:Point\ngeolod:EpicaDomeC_Geometry"]\n'
+        "    LDEPTH((atDepth_m\nxsd:decimal))\n"
+        "    LAGE((ageKaBP\nxsd:decimal))\n"
+        "    LVAL((measuredValue\nxsd:decimal))\n"
+        "    LMEDIAN((smoothedValue\nrollingMedian\nxsd:decimal))\n"
+        "    LSG((smoothedValue\nsavgol\nxsd:decimal))\n"
+        f"    LWINMED((windowSize={ROLLING_WINDOW}\nxsd:integer))\n"
+        f"    LWINSG((windowSize={SG_WINDOW}\nxsd:integer))\n"
+        f"    LPOLY((polyOrder={SG_POLYORDER}\nxsd:integer))\n"
+        "    LWKT((asWKT\ngeo:wktLiteral\nPOINT 123.35 -75.1))\n"
+        "    LPPB((unit PPB\nppbv))\n"
+        "    LPRM((unit PERMILLE\npermille))\n"
+        "    CATALOG -->|dcat:dataset| DATASET\n"
+        "    DATASET -->|hasObservation| OBS\n"
+        "    DATASET -->|hasDrillingCampaign| CAMPAIGN\n"
+        "    OBS -->|hasFeatureOfInterest| CORE\n"
+        "    OBS -->|observedProperty| PROP_CH4\n"
+        "    OBS -->|observedProperty| PROP_D18O\n"
+        "    OBS -->|ageChronology| CHRON_EDC2\n"
+        "    OBS -->|ageChronology| CHRON_AICC\n"
+        "    OBS -->|smoothingMethod median| MEDIAN\n"
+        "    OBS -->|smoothingMethod savgol| SG\n"
+        "    OBS -->|wasDerivedFrom| SOURCE_CH4\n"
+        "    OBS -->|wasDerivedFrom| SOURCE_D18O\n"
+        "    OBS -.->|atDepth_m| LDEPTH\n"
+        "    OBS -.->|ageKaBP| LAGE\n"
+        "    OBS -.->|measuredValue| LVAL\n"
+        "    OBS -.->|smoothedValue median| LMEDIAN\n"
+        "    OBS -.->|smoothedValue savgol| LSG\n"
+        "    PROP_CH4  -.->|qudt:unit| LPPB\n"
+        "    PROP_D18O -.->|qudt:unit| LPRM\n"
+        "    MEDIAN -.->|windowSize| LWINMED\n"
+        "    SG     -.->|windowSize| LWINSG\n"
+        "    SG     -.->|polyOrder| LPOLY\n"
+        "    CORE     -->|extractedFrom| SITE\n"
+        "    CAMPAIGN -->|tookPlaceAt| SITE\n"
+        "    CAMPAIGN -->|removedSample| CORE\n"
+        "    SITE     -->|geo:hasGeometry| GEOM\n"
+        "    GEOM     -.->|geo:asWKT| LWKT\n"
+        "    style CATALOG     fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
+        "    style DATASET     fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
+        "    style OBS         fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
+        "    style CORE        fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
+        "    style SITE        fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
+        "    style CAMPAIGN    fill:#2d6a4f,color:#fff,stroke:#1b4332\n"
+        "    style PROP_CH4    fill:#40916c,color:#fff,stroke:#2d6a4f\n"
+        "    style PROP_D18O   fill:#40916c,color:#fff,stroke:#2d6a4f\n"
+        "    style CHRON_EDC2  fill:#40916c,color:#fff,stroke:#2d6a4f\n"
+        "    style CHRON_AICC  fill:#40916c,color:#fff,stroke:#2d6a4f\n"
+        "    style MEDIAN      fill:#40916c,color:#fff,stroke:#2d6a4f\n"
+        "    style SG          fill:#40916c,color:#fff,stroke:#2d6a4f\n"
+        "    style SOURCE_CH4  fill:#40916c,color:#fff,stroke:#2d6a4f\n"
+        "    style SOURCE_D18O fill:#40916c,color:#fff,stroke:#2d6a4f\n"
+        "    style GEOM        fill:#457b9d,color:#fff,stroke:#2c5f7a\n"
+        "    style LDEPTH  fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LAGE    fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LVAL    fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LMEDIAN fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LSG     fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LWINMED fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LWINSG  fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LPOLY   fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LWKT    fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LPPB    fill:#f4e04d,color:#333,stroke:#c9b400\n"
+        "    style LPRM    fill:#f4e04d,color:#333,stroke:#c9b400\n"
+    )
+
+    p1 = os.path.join(RDF_DIR, "epica_diagram1_taxonomy.mermaid")
+    p2 = os.path.join(RDF_DIR, "epica_diagram2_instance.mermaid")
+    with open(p1, "w", encoding="utf-8") as fh:
+        fh.write(d1)
+    with open(p2, "w", encoding="utf-8") as fh:
+        fh.write(d2)
+    print(f"  ✓ Mermaid Taxonomy: {p1}")
+    print(f"  ✓ Mermaid Instance: {p2}")
 
 
 def export_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame):
