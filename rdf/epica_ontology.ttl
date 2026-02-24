@@ -1,0 +1,382 @@
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix sosa:    <http://www.w3.org/ns/sosa/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
+@prefix sf:      <http://www.opengis.net/ont/sf#> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix unit:    <http://qudt.org/vocab/unit/> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmsci:  <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix geolod:   <https://w3id.org/geo-lod/> .
+
+# ============================================================================
+# EPICA Dome C Ice Core – OWL Ontology
+# Generiert von: plot_epica_from_tab.py
+# Datum: 2026-02-24
+# Parameter: ROLLING_WINDOW=11, SG_WINDOW=11, SG_POLYORDER=2
+# ============================================================================
+
+geolod:
+    a owl:Ontology ;
+    rdfs:label          "EPICA Dome C Ice Core Ontology"@en ;
+    dct:title           "EPICA Dome C Ice Core Ontology"@en ;
+    dct:description     "OWL ontology for palaeoclimatic ice core observations from EPICA Dome C, East Antarctica. Covers CH4 and d18O measurements, smoothing methods, site geometry, drilling campaign and data provenance."@en ;
+    dct:creator         "Derived from ELSAinteractive++ methodology (Diensberg 2020)"@en ;
+    dct:license         <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:created         "2026-02-24"^^xsd:date ;
+    owl:versionIRI      <https://w3id.org/geo-lod/1.0> ;
+    owl:versionInfo     "1.0.0" ;
+    rdfs:seeAlso        <http://www.w3.org/ns/sosa/> ;
+    rdfs:seeAlso        <http://www.cidoc-crm.org/cidoc-crm/> ;
+    rdfs:seeAlso        <http://www.ics.forth.gr/isl/CRMsci/> .
+
+# ── Katalog & Dataset ────────────────────────────────────────────────────────
+
+geolod:PalaeoclimateDataCatalogue
+    a owl:Class ;
+    rdfs:subClassOf     dcat:Catalog ;
+    rdfs:label          "Palaeoclimate Data Catalogue"@en ;
+    rdfs:comment        "A DCAT catalogue aggregating one or more palaeoclimate ice core datasets."@en .
+
+geolod:IceCoreDataset
+    a owl:Class ;
+    rdfs:subClassOf     dcat:Dataset ;
+    rdfs:label          "Ice Core Dataset"@en ;
+    rdfs:comment        "A dataset derived from measurements on an ice core."@en .
+
+geolod:CH4Dataset
+    a owl:Class ;
+    rdfs:subClassOf     geolod:IceCoreDataset ;
+    rdfs:label          "Methane (CH4) Ice Core Dataset"@en ;
+    rdfs:comment        "Dataset containing methane concentration observations from an ice core."@en .
+
+geolod:Delta18ODataset
+    a owl:Class ;
+    rdfs:subClassOf     geolod:IceCoreDataset ;
+    rdfs:label          "Stable Water Isotope (d18O) Ice Core Dataset"@en ;
+    rdfs:comment        "Dataset containing stable water isotope (d18O) observations from an ice core."@en .
+
+# ── Observation ───────────────────────────────────────────────────────────────
+
+geolod:IceCoreObservation
+    a owl:Class ;
+    rdfs:subClassOf     sosa:Observation ;
+    rdfs:subClassOf     crmsci:S4_Observation ;
+    rdfs:label          "Ice Core Observation"@en ;
+    rdfs:comment        "A single measurement on an ice core sample, characterised by depth, age and measured value."@en ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      sosa:hasFeatureOfInterest ;
+        owl:someValuesFrom  geolod:IceCore
+    ] ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      sosa:observedProperty ;
+        owl:someValuesFrom  geolod:ObservableProperty
+    ] ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      prov:wasDerivedFrom ;
+        owl:someValuesFrom  geolod:DataSource
+    ] .
+
+geolod:CH4Observation
+    a owl:Class ;
+    rdfs:subClassOf     geolod:IceCoreObservation ;
+    rdfs:label          "CH4 Observation"@en ;
+    rdfs:comment        "An observation of methane concentration (CH4) in ppbv from an ice core."@en .
+
+geolod:Delta18OObservation
+    a owl:Class ;
+    rdfs:subClassOf     geolod:IceCoreObservation ;
+    rdfs:label          "d18O Observation"@en ;
+    rdfs:comment        "An observation of the stable water isotope ratio (d18O) in permille SMOW from an ice core."@en .
+
+# ── Probe & Standort ──────────────────────────────────────────────────────────
+
+geolod:IceCore
+    a owl:Class ;
+    rdfs:subClassOf     sosa:Sample ;
+    rdfs:subClassOf     crm:E22_Human-Made_Object ;
+    rdfs:label          "Ice Core"@en ;
+    rdfs:comment        "A cylindrical ice sample extracted by drilling from a glacier or ice sheet."@en ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      geolod:extractedFrom ;
+        owl:someValuesFrom  geolod:DrillingSite
+    ] .
+
+geolod:DrillingSite
+    a owl:Class ;
+    rdfs:subClassOf     crm:E53_Place ;
+    rdfs:subClassOf     crm:E27_Site ;
+    rdfs:subClassOf     geo:Feature ;
+    rdfs:label          "Ice Core Drilling Site"@en ;
+    rdfs:comment        "The geographical location where an ice core was drilled."@en .
+
+# ── Feldkampagne ──────────────────────────────────────────────────────────────
+
+geolod:DrillingCampaign
+    a owl:Class ;
+    rdfs:subClassOf     crm:E7_Activity ;
+    rdfs:subClassOf     crmsci:S1_Matter_Removal ;
+    rdfs:label          "Drilling Campaign"@en ;
+    rdfs:comment        "A scientific field campaign during which an ice core was drilled."@en ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      geolod:tookPlaceAt ;
+        owl:someValuesFrom  geolod:DrillingSite
+    ] ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      geolod:removedSample ;
+        owl:someValuesFrom  geolod:IceCore
+    ] .
+
+# ── Observable Properties ─────────────────────────────────────────────────────
+
+geolod:ObservableProperty
+    a owl:Class ;
+    rdfs:subClassOf     sosa:ObservableProperty ;
+    rdfs:subClassOf     crmsci:S9_Property_Type ;
+    rdfs:label          "Observable Property"@en ;
+    rdfs:comment        "A measurable physical or chemical property of an ice core sample."@en .
+
+geolod:CH4ConcentrationProperty
+    a owl:Class ;
+    rdfs:subClassOf     geolod:ObservableProperty ;
+    rdfs:label          "Methane Concentration Property"@en ;
+    rdfs:comment        "CH4 concentration in ppbv, measured from air bubbles trapped in ice."@en .
+
+geolod:Delta18OProperty
+    a owl:Class ;
+    rdfs:subClassOf     geolod:ObservableProperty ;
+    rdfs:label          "d18O Isotope Ratio Property"@en ;
+    rdfs:comment        "Stable water isotope ratio (d18O) in permille SMOW. Used as palaeotemperature proxy."@en .
+
+# ── Chronologien ──────────────────────────────────────────────────────────────
+
+geolod:IceCoreChronology
+    a owl:Class ;
+    rdfs:subClassOf     crmsci:S6_Data_Evaluation ;
+    rdfs:label          "Ice Core Chronology"@en ;
+    rdfs:comment        "A depth-age model assigning calendar ages to depths in an ice core (e.g. EDC2, AICC2023)."@en .
+
+# ── Glättungsmethoden ─────────────────────────────────────────────────────────
+
+geolod:SmoothingMethod
+    a owl:Class ;
+    rdfs:subClassOf     crmsci:S6_Data_Evaluation ;
+    rdfs:label          "Smoothing Method"@en ;
+    rdfs:comment        "A computational method applied to a time series to reduce noise."@en .
+
+geolod:RollingMedianFilter
+    a owl:Class ;
+    rdfs:subClassOf     geolod:SmoothingMethod ;
+    rdfs:label          "Rolling Median Filter"@en ;
+    rdfs:comment        "Replaces each point with the median of a symmetric window of neighbours. Robust against outliers (Tukey 1977)."@en ;
+    rdfs:seeAlso        <https://doi.org/10.1145/1968.1969> .
+
+geolod:SavitzkyGolayFilter
+    a owl:Class ;
+    rdfs:subClassOf     geolod:SmoothingMethod ;
+    rdfs:label          "Savitzky-Golay Filter"@en ;
+    rdfs:comment        "Polynomial least-squares smoothing filter. Preserves peak shape better than simple moving average (Savitzky & Golay 1964)."@en ;
+    rdfs:seeAlso        <https://doi.org/10.1021/ac60214a047> .
+
+# ── Provenienz ────────────────────────────────────────────────────────────────
+
+geolod:DataSource
+    a owl:Class ;
+    rdfs:subClassOf     prov:Entity ;
+    rdfs:subClassOf     dct:BibliographicResource ;
+    rdfs:label          "Data Source"@en ;
+    rdfs:comment        "A citable data source (e.g. PANGAEA dataset) from which observations were derived."@en .
+
+# ============================================================================
+# OBJECT PROPERTIES
+# ============================================================================
+
+geolod:hasObservation
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreDataset ;
+    rdfs:range          geolod:IceCoreObservation ;
+    rdfs:label          "has observation"@en .
+
+geolod:hasDrillingCampaign
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreDataset ;
+    rdfs:range          geolod:DrillingCampaign ;
+    rdfs:label          "has drilling campaign"@en .
+
+geolod:ageChronology
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          geolod:IceCoreChronology ;
+    rdfs:label          "age chronology"@en ;
+    rdfs:comment        "The chronology used to assign a calendar age to this observation."@en .
+
+geolod:smoothingMethod_median
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          geolod:RollingMedianFilter ;
+    rdfs:label          "smoothing method (rolling median)"@en .
+
+geolod:smoothingMethod_savgol
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          geolod:SavitzkyGolayFilter ;
+    rdfs:label          "smoothing method (Savitzky-Golay)"@en .
+
+geolod:extractedFrom
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf  sosa:isSampleOf ;
+    rdfs:domain         geolod:IceCore ;
+    rdfs:range          geolod:DrillingSite ;
+    rdfs:label          "extracted from"@en .
+
+geolod:tookPlaceAt
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf  crm:P7_took_place_at ;
+    rdfs:domain         geolod:DrillingCampaign ;
+    rdfs:range          geolod:DrillingSite ;
+    rdfs:label          "took place at"@en .
+
+geolod:removedSample
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf  crmsci:O1_removed ;
+    rdfs:domain         geolod:DrillingCampaign ;
+    rdfs:range          geolod:IceCore ;
+    rdfs:label          "removed sample"@en .
+
+# ============================================================================
+# DATATYPE PROPERTIES
+# ============================================================================
+
+geolod:atDepth_m
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "at depth (m)"@en ;
+    qudt:unit           unit:M .
+
+geolod:ageKaBP
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "age (ka BP)"@en ;
+    rdfs:comment        "Calendar age in kiloyears before present (1950 CE)."@en .
+
+geolod:measuredValue
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "measured value"@en .
+
+geolod:smoothedValue_rollingMedian
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "smoothed value (rolling median)"@en ;
+    rdfs:comment        "Value after rolling median filter (window=11 pts)."@en .
+
+geolod:smoothedValue_savgol
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "smoothed value (Savitzky-Golay)"@en ;
+    rdfs:comment        "Value after Savitzky-Golay filter (window=11 pts, polyorder=2)."@en .
+
+geolod:windowSize
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:SmoothingMethod ;
+    rdfs:range          xsd:integer ;
+    rdfs:label          "window size (pts)"@en .
+
+geolod:polyOrder
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:SavitzkyGolayFilter ;
+    rdfs:range          xsd:integer ;
+    rdfs:label          "polynomial order"@en .
+
+# ============================================================================
+# NAMED INDIVIDUALS
+# ============================================================================
+
+geolod:EpicaDomeC_Site
+    a geolod:DrillingSite , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C, East Antarctica"@en ;
+    crm:P87_is_identified_by  "75 deg 06 S, 123 deg 21 E"^^xsd:string ;
+    geo:hasGeometry     geolod:EpicaDomeC_Geometry .
+
+geolod:EpicaDomeC_Geometry
+    a sf:Point , owl:NamedIndividual ;
+    geo:asWKT           "POINT(123.35 -75.1)"^^geo:wktLiteral .
+
+geolod:EpicaDomeC_IceCore
+    a geolod:IceCore , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C Ice Core"@en ;
+    geolod:extractedFrom geolod:EpicaDomeC_Site .
+
+geolod:EPICA_DrillingCampaign_1996_2004
+    a geolod:DrillingCampaign , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C drilling campaign 1996-2004"@en ;
+    geolod:tookPlaceAt   geolod:EpicaDomeC_Site ;
+    geolod:removedSample geolod:EpicaDomeC_IceCore ;
+    crm:P4_has_time-span  "1996/2004"^^xsd:string .
+
+geolod:CH4Concentration
+    a geolod:CH4ConcentrationProperty , owl:NamedIndividual ;
+    rdfs:label          "Methane concentration (CH4)"@en ;
+    qudt:unit           unit:PPB .
+
+geolod:Delta18O
+    a geolod:Delta18OProperty , owl:NamedIndividual ;
+    rdfs:label          "Stable water isotope ratio (d18O)"@en ;
+    qudt:unit           unit:PERMILLE .
+
+geolod:EDC2_Chronology
+    a geolod:IceCoreChronology , owl:NamedIndividual ;
+    rdfs:label          "EDC2 ice core chronology"@en ;
+    dct:description     "Depth-age model for EPICA Dome C (Schwander et al. 2001). Applied to CH4 record."@en ;
+    dct:references      <https://doi.org/10.1029/2000JD900754> .
+
+geolod:AICC2023_Chronology
+    a geolod:IceCoreChronology , owl:NamedIndividual ;
+    rdfs:label          "AICC2023 ice core chronology"@en ;
+    dct:description     "Antarctic Ice Core Chronology 2023 (Bouchet et al. 2023). Applied to d18O record."@en ;
+    dct:references      <https://doi.org/10.5194/cp-19-2257-2023> .
+
+geolod:RollingMedian_w11
+    a geolod:RollingMedianFilter , owl:NamedIndividual ;
+    rdfs:label          "Rolling median filter, window = 11 pts"@en ;
+    geolod:windowSize    11 ;
+    dct:references      <https://doi.org/10.1145/1968.1969> .
+
+geolod:SavitzkyGolay_w11_p2
+    a geolod:SavitzkyGolayFilter , owl:NamedIndividual ;
+    rdfs:label          "Savitzky-Golay filter, window = 11 pts, polyorder = 2"@en ;
+    geolod:windowSize    11 ;
+    geolod:polyOrder     2 ;
+    dct:references      <https://doi.org/10.1021/ac60214a047> .
+
+geolod:PANGAEA_CH4_Source
+    a geolod:DataSource , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C Methane Record - PANGAEA"@en ;
+    dct:title           "EPICA Dome C Methane Record (Spahni & Stocker 2006)"@en ;
+    dct:creator         "Spahni, R.; Stocker, T.F." ;
+    dct:date            "2006"^^xsd:gYear ;
+    owl:sameAs          <https://doi.org/10.1594/PANGAEA.472484> .
+
+geolod:PANGAEA_d18O_Source
+    a geolod:DataSource , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C d18O Record - PANGAEA"@en ;
+    dct:title           "EPICA Dome C d18O Record on AICC2023 (Bouchet et al. 2023)"@en ;
+    dct:creator         "Bouchet, M. et al." ;
+    dct:date            "2023"^^xsd:gYear ;
+    owl:sameAs          <https://doi.org/10.1594/PANGAEA.961024> .

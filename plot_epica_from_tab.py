@@ -21,8 +21,9 @@ except ImportError:
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # Output-Ordner erstellen
-OUTPUT_DIR = "plots"
-RDF_DIR = "rdf"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "plots")
+RDF_DIR = os.path.join(SCRIPT_DIR, "rdf")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(RDF_DIR, exist_ok=True)
 
@@ -467,19 +468,19 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     Erstellt einen RDF-Graph mit allen EPICA-Daten.
 
     Modell (je Datenpunkt):
-      epica:Obs_CH4_{i}  a  sosa:Observation, crmsci:S4_Observation ;
-          sosa:hasFeatureOfInterest  epica:EpicaDomeC_IceCore ;
-          sosa:observedProperty      epica:CH4Concentration ;
-          sosa:madeBySensor          epica:GasChromatograph ;
+      geolod:Obs_CH4_{i}  a  sosa:Observation, crmsci:S4_Observation ;
+          sosa:hasFeatureOfInterest  geolod:EpicaDomeC_IceCore ;
+          sosa:observedProperty      geolod:CH4Concentration ;
+          sosa:madeBySensor          geolod:GasChromatograph ;
           sosa:resultTime            <age als xsd:decimal, ka BP> ;
           sosa:hasSimpleResult       <CH4-Wert als qudt:PPB> ;
-          epica:atDepth              <Tiefe in m> ;
-          epica:smoothedValue_median <Rolling-Median-Wert> ;
-          epica:smoothedValue_savgol <SG-Wert> ;
-          epica:smoothingWindow      11 ;
-          epica:smoothingPolyorder   2 ;
+          geolod:atDepth              <Tiefe in m> ;
+          geolod:smoothedValue_median <Rolling-Median-Wert> ;
+          geolod:smoothedValue_savgol <SG-Wert> ;
+          geolod:smoothingWindow      11 ;
+          geolod:smoothingPolyorder   2 ;
           prov:wasDerivedFrom        <PANGAEA DOI> ;
-          crm:P7_took_place_at       epica:EpicaDomeC_Site .
+          crm:P7_took_place_at       geolod:EpicaDomeC_Site .
 
     Parameters
     ----------
@@ -493,7 +494,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g = Graph()
 
     # ── Namespaces ────────────────────────────────────────────────────────
-    EPICA = Namespace("https://purl.org/epica/")
+    GEOLOD = Namespace("https://w3id.org/geo-lod/")
     SOSA = Namespace("http://www.w3.org/ns/sosa/")
     SSN = Namespace("http://www.w3.org/ns/ssn/")
     GEO = Namespace("http://www.opengis.net/ont/geosparql#")
@@ -504,7 +505,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     CRMSCI = Namespace("http://www.ics.forth.gr/isl/CRMsci/")
     DCT = DCTERMS
 
-    g.bind("epica", EPICA)
+    g.bind("geolod", GEOLOD)
     g.bind("sosa", SOSA)
     g.bind("ssn", SSN)
     g.bind("geo", GEO)
@@ -519,7 +520,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.bind("xsd", XSD)
 
     # ── Metadaten: Datensatz-Beschreibung ─────────────────────────────────
-    dataset = EPICA["EPICA_DomeC_Dataset"]
+    dataset = GEOLOD["EPICA_DomeC_Dataset"]
     g.add((dataset, RDF.type, DCAT["Dataset"]))
     g.add(
         (
@@ -589,7 +590,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
 
     # ── DCAT Catalog ─────────────────────────────────────────────────────
     # dcat:Catalog fasst alle Datasets zusammen (Einstiegspunkt für Linked Data)
-    catalog = EPICA["EPICA_DomeC_Catalog"]
+    catalog = GEOLOD["EPICA_DomeC_Catalog"]
     g.add((catalog, RDF.type, DCAT["Catalog"]))
     g.add(
         (
@@ -637,7 +638,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((catalog, DCAT["dataset"], dataset))
 
     # CH4 und d18O als separate dcat:Dataset innerhalb des Katalogs
-    ds_ch4 = EPICA["EPICA_DomeC_CH4_Dataset"]
+    ds_ch4 = GEOLOD["EPICA_DomeC_CH4_Dataset"]
     g.add((ds_ch4, RDF.type, DCAT["Dataset"]))
     g.add(
         (ds_ch4, DCT.title, Literal("EPICA Dome C – Methane (CH₄) Record", lang="en"))
@@ -658,7 +659,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((ds_ch4, DCAT["distribution"], src_ch4))
     g.add((catalog, DCAT["dataset"], ds_ch4))
 
-    ds_d18o = EPICA["EPICA_DomeC_d18O_Dataset"]
+    ds_d18o = GEOLOD["EPICA_DomeC_d18O_Dataset"]
     g.add((ds_d18o, RDF.type, DCAT["Dataset"]))
     g.add(
         (
@@ -686,14 +687,14 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((catalog, DCAT["dataset"], ds_d18o))
 
     # Observations den jeweiligen Datasets zuordnen
-    # (wird später beim Loop gesetzt via epica:ch4Dataset / epica:d18oDataset)
+    # (wird später beim Loop gesetzt via geolod:ch4Dataset / geolod:d18oDataset)
     # Referenzen für spätere Verlinkung im Graph speichern
     g.__epica_catalog__ = catalog
     g.__epica_ds_ch4__ = ds_ch4
     g.__epica_ds_d18o__ = ds_d18o
 
     # ── Standort: EPICA Dome C (GeoSPARQL + CIDOC-CRM) ───────────────────
-    site = EPICA["EpicaDomeC_Site"]
+    site = GEOLOD["EpicaDomeC_Site"]
     g.add((site, RDF.type, CRM["E53_Place"]))
     g.add((site, RDF.type, CRM["E27_Site"]))
     g.add((site, RDFS.label, Literal("EPICA Dome C, East Antarctica", lang="en")))
@@ -705,7 +706,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         )
     )
 
-    geom = EPICA["EpicaDomeC_Geometry"]
+    geom = GEOLOD["EpicaDomeC_Geometry"]
     g.add((geom, RDF.type, URIRef(str(SF) + "Point")))
     g.add(
         (geom, GEO["asWKT"], Literal("POINT(123.35 -75.1)", datatype=GEO["wktLiteral"]))
@@ -713,7 +714,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((site, GEO["hasGeometry"], geom))
 
     # ── Eiskern: Probe (SOSA Sample + CIDOC-CRM E22_Human-Made_Object) ───
-    core = EPICA["EpicaDomeC_IceCore"]
+    core = GEOLOD["EpicaDomeC_IceCore"]
     g.add((core, RDF.type, SOSA["Sample"]))
     g.add((core, RDF.type, CRM["E22_Human-Made_Object"]))  # Bohrkern als Artefakt
     g.add((core, RDFS.label, Literal("EPICA Dome C Ice Core", lang="en")))
@@ -722,7 +723,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((core, CRM["P2_has_type"], Literal("Ice Core", lang="en")))
 
     # ── Feldkampagne (CIDOC-CRM E7_Activity + CRMsci S1_Matter_Removal) ─
-    campaign = EPICA["EPICA_DomeCampaign_1996_2004"]
+    campaign = GEOLOD["EPICA_DomeCampaign_1996_2004"]
     g.add((campaign, RDF.type, CRM["E7_Activity"]))
     g.add((campaign, RDF.type, CRMSCI["S1_Matter_Removal"]))
     g.add(
@@ -739,13 +740,13 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((campaign, CRMSCI["O1_removed"], core))
 
     # ── Observed Properties ───────────────────────────────────────────────
-    prop_ch4 = EPICA["CH4Concentration"]
+    prop_ch4 = GEOLOD["CH4Concentration"]
     g.add((prop_ch4, RDF.type, SOSA["ObservableProperty"]))
     g.add((prop_ch4, RDF.type, CRMSCI["S9_Property_Type"]))
     g.add((prop_ch4, RDFS.label, Literal("Methane concentration (CH₄)", lang="en")))
     g.add((prop_ch4, QUDT["unit"], UNIT["PPB"]))
 
-    prop_d18o = EPICA["Delta18O"]
+    prop_d18o = GEOLOD["Delta18O"]
     g.add((prop_d18o, RDF.type, SOSA["ObservableProperty"]))
     g.add((prop_d18o, RDF.type, CRMSCI["S9_Property_Type"]))
     g.add(
@@ -754,7 +755,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((prop_d18o, QUDT["unit"], UNIT["PERMILLE"]))
 
     # ── Chronologien (als Named Individuals dokumentiert) ─────────────────
-    chron_edc2 = EPICA["EDC2_Chronology"]
+    chron_edc2 = GEOLOD["EDC2_Chronology"]
     g.add((chron_edc2, RDF.type, CRMSCI["S6_Data_Evaluation"]))
     g.add(
         (
@@ -764,7 +765,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         )
     )
 
-    chron_aicc = EPICA["AICC2023_Chronology"]
+    chron_aicc = GEOLOD["AICC2023_Chronology"]
     g.add((chron_aicc, RDF.type, CRMSCI["S6_Data_Evaluation"]))
     g.add(
         (
@@ -775,7 +776,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     )
 
     # ── Glättungs-Parameter als Named Individuals ─────────────────────────
-    smooth_median = EPICA[f"RollingMedian_w{ROLLING_WINDOW}"]
+    smooth_median = GEOLOD[f"RollingMedian_w{ROLLING_WINDOW}"]
     g.add((smooth_median, RDF.type, CRMSCI["S6_Data_Evaluation"]))
     g.add(
         (
@@ -787,7 +788,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add(
         (
             smooth_median,
-            EPICA["windowSize"],
+            GEOLOD["windowSize"],
             Literal(ROLLING_WINDOW, datatype=XSD.integer),
         )
     )
@@ -795,7 +796,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         (smooth_median, DCT.references, URIRef("https://doi.org/10.1145/1968.1969"))
     )  # Tukey 1977
 
-    smooth_sg = EPICA[f"SavitzkyGolay_w{SG_WINDOW}_p{SG_POLYORDER}"]
+    smooth_sg = GEOLOD[f"SavitzkyGolay_w{SG_WINDOW}_p{SG_POLYORDER}"]
     g.add((smooth_sg, RDF.type, CRMSCI["S6_Data_Evaluation"]))
     g.add(
         (
@@ -807,8 +808,8 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
             ),
         )
     )
-    g.add((smooth_sg, EPICA["windowSize"], Literal(SG_WINDOW, datatype=XSD.integer)))
-    g.add((smooth_sg, EPICA["polyOrder"], Literal(SG_POLYORDER, datatype=XSD.integer)))
+    g.add((smooth_sg, GEOLOD["windowSize"], Literal(SG_WINDOW, datatype=XSD.integer)))
+    g.add((smooth_sg, GEOLOD["polyOrder"], Literal(SG_POLYORDER, datatype=XSD.integer)))
     g.add(
         (smooth_sg, DCT.references, URIRef("https://doi.org/10.1021/ac60214a047"))
     )  # Savitzky & Golay 1964
@@ -831,7 +832,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     )
 
     for i, row in df_ch4_valid.iterrows():
-        obs = EPICA[f"Obs_CH4_{i:04d}"]
+        obs = GEOLOD[f"Obs_CH4_{i:04d}"]
         g.add((obs, RDF.type, SOSA["Observation"]))
         g.add((obs, RDF.type, CRMSCI["S4_Observation"]))
         g.add((obs, SOSA["hasFeatureOfInterest"], core))
@@ -853,32 +854,32 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         g.add(
             (
                 obs,
-                EPICA["atDepth_m"],
+                GEOLOD["atDepth_m"],
                 Literal(round(float(row["depth_m"]), 2), datatype=XSD.decimal),
             )
         )
-        g.add((obs, EPICA["ageChronology"], chron_edc2))
+        g.add((obs, GEOLOD["ageChronology"], chron_edc2))
         g.add((obs, QUDT["unit"], UNIT["PPB"]))
         # Geglättete Werte mit Tag zur Methode
         g.add(
             (
                 obs,
-                EPICA["smoothedValue_rollingMedian"],
+                GEOLOD["smoothedValue_rollingMedian"],
                 Literal(round(float(ch4_smooth_median[i]), 2), datatype=XSD.decimal),
             )
         )
         g.add(
             (
                 obs,
-                EPICA["smoothedValue_savgol"],
+                GEOLOD["smoothedValue_savgol"],
                 Literal(round(float(ch4_smooth_sg[i]), 2), datatype=XSD.decimal),
             )
         )
-        g.add((obs, EPICA["smoothingMethod_median"], smooth_median))
-        g.add((obs, EPICA["smoothingMethod_savgol"], smooth_sg))
+        g.add((obs, GEOLOD["smoothingMethod_median"], smooth_median))
+        g.add((obs, GEOLOD["smoothingMethod_savgol"], smooth_sg))
         g.add((obs, PROV.wasDerivedFrom, src_ch4))
         g.add((obs, CRM["P7_took_place_at"], site))
-        g.add((dataset, EPICA["hasObservation"], obs))
+        g.add((dataset, GEOLOD["hasObservation"], obs))
         g.add((ds_ch4, DCAT["record"], obs))
 
     # ── d18O-Observationen ───────────────────────────────────────────────
@@ -898,7 +899,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     )
 
     for i, row in df_d18o_valid.iterrows():
-        obs = EPICA[f"Obs_d18O_{i:04d}"]
+        obs = GEOLOD[f"Obs_d18O_{i:04d}"]
         g.add((obs, RDF.type, SOSA["Observation"]))
         g.add((obs, RDF.type, CRMSCI["S4_Observation"]))
         g.add((obs, SOSA["hasFeatureOfInterest"], core))
@@ -920,34 +921,433 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         g.add(
             (
                 obs,
-                EPICA["atDepth_m"],
+                GEOLOD["atDepth_m"],
                 Literal(round(float(row["depth_m"]), 2), datatype=XSD.decimal),
             )
         )
-        g.add((obs, EPICA["ageChronology"], chron_aicc))
+        g.add((obs, GEOLOD["ageChronology"], chron_aicc))
         g.add((obs, QUDT["unit"], UNIT["PERMILLE"]))
         g.add(
             (
                 obs,
-                EPICA["smoothedValue_rollingMedian"],
+                GEOLOD["smoothedValue_rollingMedian"],
                 Literal(round(float(d18o_smooth_median[i]), 5), datatype=XSD.decimal),
             )
         )
         g.add(
             (
                 obs,
-                EPICA["smoothedValue_savgol"],
+                GEOLOD["smoothedValue_savgol"],
                 Literal(round(float(d18o_smooth_sg[i]), 5), datatype=XSD.decimal),
             )
         )
-        g.add((obs, EPICA["smoothingMethod_median"], smooth_median))
-        g.add((obs, EPICA["smoothingMethod_savgol"], smooth_sg))
+        g.add((obs, GEOLOD["smoothingMethod_median"], smooth_median))
+        g.add((obs, GEOLOD["smoothingMethod_savgol"], smooth_sg))
         g.add((obs, PROV.wasDerivedFrom, src_d18o))
         g.add((obs, CRM["P7_took_place_at"], site))
-        g.add((dataset, EPICA["hasObservation"], obs))
+        g.add((dataset, GEOLOD["hasObservation"], obs))
         g.add((ds_d18o, DCAT["record"], obs))
 
     return g
+
+
+def export_ontology():
+    """
+    Schreibt die EPICA OWL-Ontologie als Turtle-Datei.
+    Glättungsparameter (ROLLING_WINDOW, SG_WINDOW, SG_POLYORDER) werden
+    zur Laufzeit in die Named Individuals eingesetzt.
+    """
+    from datetime import datetime as _dt
+
+    owl_ttl = f"""@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix sosa:    <http://www.w3.org/ns/sosa/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
+@prefix sf:      <http://www.opengis.net/ont/sf#> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix unit:    <http://qudt.org/vocab/unit/> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmsci:  <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix geolod:   <https://w3id.org/geo-lod/> .
+
+# ============================================================================
+# EPICA Dome C Ice Core – OWL Ontology
+# Generiert von: plot_epica_from_tab.py
+# Datum: {_dt.now().strftime("%Y-%m-%d")}
+# Parameter: ROLLING_WINDOW={ROLLING_WINDOW}, SG_WINDOW={SG_WINDOW}, SG_POLYORDER={SG_POLYORDER}
+# ============================================================================
+
+geolod:
+    a owl:Ontology ;
+    rdfs:label          "EPICA Dome C Ice Core Ontology"@en ;
+    dct:title           "EPICA Dome C Ice Core Ontology"@en ;
+    dct:description     "OWL ontology for palaeoclimatic ice core observations from EPICA Dome C, East Antarctica. Covers CH4 and d18O measurements, smoothing methods, site geometry, drilling campaign and data provenance."@en ;
+    dct:creator         "Derived from ELSAinteractive++ methodology (Diensberg 2020)"@en ;
+    dct:license         <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:created         "{_dt.now().strftime("%Y-%m-%d")}"^^xsd:date ;
+    owl:versionIRI      <https://w3id.org/geo-lod/1.0> ;
+    owl:versionInfo     "1.0.0" ;
+    rdfs:seeAlso        <http://www.w3.org/ns/sosa/> ;
+    rdfs:seeAlso        <http://www.cidoc-crm.org/cidoc-crm/> ;
+    rdfs:seeAlso        <http://www.ics.forth.gr/isl/CRMsci/> .
+
+# ── Katalog & Dataset ────────────────────────────────────────────────────────
+
+geolod:PalaeoclimateDataCatalogue
+    a owl:Class ;
+    rdfs:subClassOf     dcat:Catalog ;
+    rdfs:label          "Palaeoclimate Data Catalogue"@en ;
+    rdfs:comment        "A DCAT catalogue aggregating one or more palaeoclimate ice core datasets."@en .
+
+geolod:IceCoreDataset
+    a owl:Class ;
+    rdfs:subClassOf     dcat:Dataset ;
+    rdfs:label          "Ice Core Dataset"@en ;
+    rdfs:comment        "A dataset derived from measurements on an ice core."@en .
+
+geolod:CH4Dataset
+    a owl:Class ;
+    rdfs:subClassOf     geolod:IceCoreDataset ;
+    rdfs:label          "Methane (CH4) Ice Core Dataset"@en ;
+    rdfs:comment        "Dataset containing methane concentration observations from an ice core."@en .
+
+geolod:Delta18ODataset
+    a owl:Class ;
+    rdfs:subClassOf     geolod:IceCoreDataset ;
+    rdfs:label          "Stable Water Isotope (d18O) Ice Core Dataset"@en ;
+    rdfs:comment        "Dataset containing stable water isotope (d18O) observations from an ice core."@en .
+
+# ── Observation ───────────────────────────────────────────────────────────────
+
+geolod:IceCoreObservation
+    a owl:Class ;
+    rdfs:subClassOf     sosa:Observation ;
+    rdfs:subClassOf     crmsci:S4_Observation ;
+    rdfs:label          "Ice Core Observation"@en ;
+    rdfs:comment        "A single measurement on an ice core sample, characterised by depth, age and measured value."@en ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      sosa:hasFeatureOfInterest ;
+        owl:someValuesFrom  geolod:IceCore
+    ] ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      sosa:observedProperty ;
+        owl:someValuesFrom  geolod:ObservableProperty
+    ] ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      prov:wasDerivedFrom ;
+        owl:someValuesFrom  geolod:DataSource
+    ] .
+
+geolod:CH4Observation
+    a owl:Class ;
+    rdfs:subClassOf     geolod:IceCoreObservation ;
+    rdfs:label          "CH4 Observation"@en ;
+    rdfs:comment        "An observation of methane concentration (CH4) in ppbv from an ice core."@en .
+
+geolod:Delta18OObservation
+    a owl:Class ;
+    rdfs:subClassOf     geolod:IceCoreObservation ;
+    rdfs:label          "d18O Observation"@en ;
+    rdfs:comment        "An observation of the stable water isotope ratio (d18O) in permille SMOW from an ice core."@en .
+
+# ── Probe & Standort ──────────────────────────────────────────────────────────
+
+geolod:IceCore
+    a owl:Class ;
+    rdfs:subClassOf     sosa:Sample ;
+    rdfs:subClassOf     crm:E22_Human-Made_Object ;
+    rdfs:label          "Ice Core"@en ;
+    rdfs:comment        "A cylindrical ice sample extracted by drilling from a glacier or ice sheet."@en ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      geolod:extractedFrom ;
+        owl:someValuesFrom  geolod:DrillingSite
+    ] .
+
+geolod:DrillingSite
+    a owl:Class ;
+    rdfs:subClassOf     crm:E53_Place ;
+    rdfs:subClassOf     crm:E27_Site ;
+    rdfs:subClassOf     geo:Feature ;
+    rdfs:label          "Ice Core Drilling Site"@en ;
+    rdfs:comment        "The geographical location where an ice core was drilled."@en .
+
+# ── Feldkampagne ──────────────────────────────────────────────────────────────
+
+geolod:DrillingCampaign
+    a owl:Class ;
+    rdfs:subClassOf     crm:E7_Activity ;
+    rdfs:subClassOf     crmsci:S1_Matter_Removal ;
+    rdfs:label          "Drilling Campaign"@en ;
+    rdfs:comment        "A scientific field campaign during which an ice core was drilled."@en ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      geolod:tookPlaceAt ;
+        owl:someValuesFrom  geolod:DrillingSite
+    ] ;
+    rdfs:subClassOf     [
+        a owl:Restriction ;
+        owl:onProperty      geolod:removedSample ;
+        owl:someValuesFrom  geolod:IceCore
+    ] .
+
+# ── Observable Properties ─────────────────────────────────────────────────────
+
+geolod:ObservableProperty
+    a owl:Class ;
+    rdfs:subClassOf     sosa:ObservableProperty ;
+    rdfs:subClassOf     crmsci:S9_Property_Type ;
+    rdfs:label          "Observable Property"@en ;
+    rdfs:comment        "A measurable physical or chemical property of an ice core sample."@en .
+
+geolod:CH4ConcentrationProperty
+    a owl:Class ;
+    rdfs:subClassOf     geolod:ObservableProperty ;
+    rdfs:label          "Methane Concentration Property"@en ;
+    rdfs:comment        "CH4 concentration in ppbv, measured from air bubbles trapped in ice."@en .
+
+geolod:Delta18OProperty
+    a owl:Class ;
+    rdfs:subClassOf     geolod:ObservableProperty ;
+    rdfs:label          "d18O Isotope Ratio Property"@en ;
+    rdfs:comment        "Stable water isotope ratio (d18O) in permille SMOW. Used as palaeotemperature proxy."@en .
+
+# ── Chronologien ──────────────────────────────────────────────────────────────
+
+geolod:IceCoreChronology
+    a owl:Class ;
+    rdfs:subClassOf     crmsci:S6_Data_Evaluation ;
+    rdfs:label          "Ice Core Chronology"@en ;
+    rdfs:comment        "A depth-age model assigning calendar ages to depths in an ice core (e.g. EDC2, AICC2023)."@en .
+
+# ── Glättungsmethoden ─────────────────────────────────────────────────────────
+
+geolod:SmoothingMethod
+    a owl:Class ;
+    rdfs:subClassOf     crmsci:S6_Data_Evaluation ;
+    rdfs:label          "Smoothing Method"@en ;
+    rdfs:comment        "A computational method applied to a time series to reduce noise."@en .
+
+geolod:RollingMedianFilter
+    a owl:Class ;
+    rdfs:subClassOf     geolod:SmoothingMethod ;
+    rdfs:label          "Rolling Median Filter"@en ;
+    rdfs:comment        "Replaces each point with the median of a symmetric window of neighbours. Robust against outliers (Tukey 1977)."@en ;
+    rdfs:seeAlso        <https://doi.org/10.1145/1968.1969> .
+
+geolod:SavitzkyGolayFilter
+    a owl:Class ;
+    rdfs:subClassOf     geolod:SmoothingMethod ;
+    rdfs:label          "Savitzky-Golay Filter"@en ;
+    rdfs:comment        "Polynomial least-squares smoothing filter. Preserves peak shape better than simple moving average (Savitzky & Golay 1964)."@en ;
+    rdfs:seeAlso        <https://doi.org/10.1021/ac60214a047> .
+
+# ── Provenienz ────────────────────────────────────────────────────────────────
+
+geolod:DataSource
+    a owl:Class ;
+    rdfs:subClassOf     prov:Entity ;
+    rdfs:subClassOf     dct:BibliographicResource ;
+    rdfs:label          "Data Source"@en ;
+    rdfs:comment        "A citable data source (e.g. PANGAEA dataset) from which observations were derived."@en .
+
+# ============================================================================
+# OBJECT PROPERTIES
+# ============================================================================
+
+geolod:hasObservation
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreDataset ;
+    rdfs:range          geolod:IceCoreObservation ;
+    rdfs:label          "has observation"@en .
+
+geolod:hasDrillingCampaign
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreDataset ;
+    rdfs:range          geolod:DrillingCampaign ;
+    rdfs:label          "has drilling campaign"@en .
+
+geolod:ageChronology
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          geolod:IceCoreChronology ;
+    rdfs:label          "age chronology"@en ;
+    rdfs:comment        "The chronology used to assign a calendar age to this observation."@en .
+
+geolod:smoothingMethod_median
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          geolod:RollingMedianFilter ;
+    rdfs:label          "smoothing method (rolling median)"@en .
+
+geolod:smoothingMethod_savgol
+    a owl:ObjectProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          geolod:SavitzkyGolayFilter ;
+    rdfs:label          "smoothing method (Savitzky-Golay)"@en .
+
+geolod:extractedFrom
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf  sosa:isSampleOf ;
+    rdfs:domain         geolod:IceCore ;
+    rdfs:range          geolod:DrillingSite ;
+    rdfs:label          "extracted from"@en .
+
+geolod:tookPlaceAt
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf  crm:P7_took_place_at ;
+    rdfs:domain         geolod:DrillingCampaign ;
+    rdfs:range          geolod:DrillingSite ;
+    rdfs:label          "took place at"@en .
+
+geolod:removedSample
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf  crmsci:O1_removed ;
+    rdfs:domain         geolod:DrillingCampaign ;
+    rdfs:range          geolod:IceCore ;
+    rdfs:label          "removed sample"@en .
+
+# ============================================================================
+# DATATYPE PROPERTIES
+# ============================================================================
+
+geolod:atDepth_m
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "at depth (m)"@en ;
+    qudt:unit           unit:M .
+
+geolod:ageKaBP
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "age (ka BP)"@en ;
+    rdfs:comment        "Calendar age in kiloyears before present (1950 CE)."@en .
+
+geolod:measuredValue
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "measured value"@en .
+
+geolod:smoothedValue_rollingMedian
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "smoothed value (rolling median)"@en ;
+    rdfs:comment        "Value after rolling median filter (window={ROLLING_WINDOW} pts)."@en .
+
+geolod:smoothedValue_savgol
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:IceCoreObservation ;
+    rdfs:range          xsd:decimal ;
+    rdfs:label          "smoothed value (Savitzky-Golay)"@en ;
+    rdfs:comment        "Value after Savitzky-Golay filter (window={SG_WINDOW} pts, polyorder={SG_POLYORDER})."@en .
+
+geolod:windowSize
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:SmoothingMethod ;
+    rdfs:range          xsd:integer ;
+    rdfs:label          "window size (pts)"@en .
+
+geolod:polyOrder
+    a owl:DatatypeProperty ;
+    rdfs:domain         geolod:SavitzkyGolayFilter ;
+    rdfs:range          xsd:integer ;
+    rdfs:label          "polynomial order"@en .
+
+# ============================================================================
+# NAMED INDIVIDUALS
+# ============================================================================
+
+geolod:EpicaDomeC_Site
+    a geolod:DrillingSite , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C, East Antarctica"@en ;
+    crm:P87_is_identified_by  "75 deg 06 S, 123 deg 21 E"^^xsd:string ;
+    geo:hasGeometry     geolod:EpicaDomeC_Geometry .
+
+geolod:EpicaDomeC_Geometry
+    a sf:Point , owl:NamedIndividual ;
+    geo:asWKT           "POINT(123.35 -75.1)"^^geo:wktLiteral .
+
+geolod:EpicaDomeC_IceCore
+    a geolod:IceCore , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C Ice Core"@en ;
+    geolod:extractedFrom geolod:EpicaDomeC_Site .
+
+geolod:EPICA_DrillingCampaign_1996_2004
+    a geolod:DrillingCampaign , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C drilling campaign 1996-2004"@en ;
+    geolod:tookPlaceAt   geolod:EpicaDomeC_Site ;
+    geolod:removedSample geolod:EpicaDomeC_IceCore ;
+    crm:P4_has_time-span  "1996/2004"^^xsd:string .
+
+geolod:CH4Concentration
+    a geolod:CH4ConcentrationProperty , owl:NamedIndividual ;
+    rdfs:label          "Methane concentration (CH4)"@en ;
+    qudt:unit           unit:PPB .
+
+geolod:Delta18O
+    a geolod:Delta18OProperty , owl:NamedIndividual ;
+    rdfs:label          "Stable water isotope ratio (d18O)"@en ;
+    qudt:unit           unit:PERMILLE .
+
+geolod:EDC2_Chronology
+    a geolod:IceCoreChronology , owl:NamedIndividual ;
+    rdfs:label          "EDC2 ice core chronology"@en ;
+    dct:description     "Depth-age model for EPICA Dome C (Schwander et al. 2001). Applied to CH4 record."@en ;
+    dct:references      <https://doi.org/10.1029/2000JD900754> .
+
+geolod:AICC2023_Chronology
+    a geolod:IceCoreChronology , owl:NamedIndividual ;
+    rdfs:label          "AICC2023 ice core chronology"@en ;
+    dct:description     "Antarctic Ice Core Chronology 2023 (Bouchet et al. 2023). Applied to d18O record."@en ;
+    dct:references      <https://doi.org/10.5194/cp-19-2257-2023> .
+
+geolod:RollingMedian_w{ROLLING_WINDOW}
+    a geolod:RollingMedianFilter , owl:NamedIndividual ;
+    rdfs:label          "Rolling median filter, window = {ROLLING_WINDOW} pts"@en ;
+    geolod:windowSize    {ROLLING_WINDOW} ;
+    dct:references      <https://doi.org/10.1145/1968.1969> .
+
+geolod:SavitzkyGolay_w{SG_WINDOW}_p{SG_POLYORDER}
+    a geolod:SavitzkyGolayFilter , owl:NamedIndividual ;
+    rdfs:label          "Savitzky-Golay filter, window = {SG_WINDOW} pts, polyorder = {SG_POLYORDER}"@en ;
+    geolod:windowSize    {SG_WINDOW} ;
+    geolod:polyOrder     {SG_POLYORDER} ;
+    dct:references      <https://doi.org/10.1021/ac60214a047> .
+
+geolod:PANGAEA_CH4_Source
+    a geolod:DataSource , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C Methane Record - PANGAEA"@en ;
+    dct:title           "EPICA Dome C Methane Record (Spahni & Stocker 2006)"@en ;
+    dct:creator         "Spahni, R.; Stocker, T.F." ;
+    dct:date            "2006"^^xsd:gYear ;
+    owl:sameAs          <https://doi.org/10.1594/PANGAEA.472484> .
+
+geolod:PANGAEA_d18O_Source
+    a geolod:DataSource , owl:NamedIndividual ;
+    rdfs:label          "EPICA Dome C d18O Record - PANGAEA"@en ;
+    dct:title           "EPICA Dome C d18O Record on AICC2023 (Bouchet et al. 2023)"@en ;
+    dct:creator         "Bouchet, M. et al." ;
+    dct:date            "2023"^^xsd:gYear ;
+    owl:sameAs          <https://doi.org/10.1594/PANGAEA.961024> .
+"""
+
+    os.makedirs(RDF_DIR, exist_ok=True)
+    owl_path = os.path.join(RDF_DIR, "epica_ontology.ttl")
+    with open(owl_path, "w", encoding="utf-8") as fh:
+        fh.write(owl_ttl)
+    print(f"  ✓ OWL-Ontologie: {owl_path}")
 
 
 def export_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame):
@@ -971,6 +1371,7 @@ def export_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame):
     print(f"  ✓ {triples:,} Triples geschrieben")
     print(f"  ✓ Turtle:  {ttl_path}")
     print(f"  ✓ JSON-LD: {jsonld_path}")
+    export_ontology()
 
 
 def main():
@@ -1190,8 +1591,14 @@ def main():
             use_savgol=cfg.get("use_savgol", False),
         )
 
-    # RDF Export
+    # RDF Export (Daten als Turtle + JSON-LD, benötigt rdflib)
     export_rdf(df_ch4, df_d18o)
+    # OWL-Ontologie (kein rdflib nötig – wird immer geschrieben)
+    if not RDF_AVAILABLE:
+        print("\n" + "─" * 60)
+        print("OWL-Ontologie …")
+        print("─" * 60)
+        export_ontology()
 
     print("\n" + "=" * 60)
     print(f"Fertig! Alle {len(plots)} Plots wurden in '{OUTPUT_DIR}/' gespeichert.")
