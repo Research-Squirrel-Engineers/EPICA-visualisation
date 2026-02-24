@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FuncFormatter, FixedLocator
 import matplotlib.transforms as transforms
+from scipy.signal import savgol_filter
 
 # Arbeitsverzeichnis auf Ordner des Skripts setzen
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -33,7 +34,14 @@ AGE_MINOR_TICK_INTERVAL = 20  # alle 20 ka ein kleiner Tick
 FONT_SIZE_LABEL = 30
 FONT_SIZE_TICK = 26
 TITLE_FONTSIZE = 30
-FONT_SIZE_MIS = 16  # MIS-Label-Größe
+FONT_SIZE_MIS = 16
+
+# Glättung
+ROLLING_WINDOW = 11  # Rolling Median: Fenstergröße in Datenpunkten (~10 ka bei CH4)
+SG_WINDOW = 11  # Savitzky-Golay: Fensterbreite (ungerade, ~10 ka bei CH4)
+SG_POLYORDER = 2  # Savitzky-Golay: Polynomgrad (2 = glatt, klassisch)
+LINE_COLOR_FADED = "#aaaaaa"  # Originallinie im geglätteten Plot
+LINE_WIDTH_SMOOTH = 1.5  # Geglättete Linie etwas dicker   # MIS-Label-Größe
 LABEL_PAD = 12
 
 # ──────────────────────────────────────────────
@@ -262,6 +270,8 @@ def create_plot(
     invert_y=True,
     show_mis=False,
     gap_line=None,
+    rolling_window=None,
+    use_savgol=False,
 ):
     """
     Erstellt einen standardisierten EPICA-Plot.
@@ -279,6 +289,10 @@ def create_plot(
     invert_y      : bool       – Y-Achse invertieren (Tiefe nimmt nach unten zu)
     show_mis      : bool       – MIS-Bänder und Labels einzeichnen (nur für Age-Plots)
     gap_line      : tuple|None – (x1, y1, x2, y2) Gestrichelte Verbindungslinie für Datenlücken
+    rolling_window: int|None   – Fenstergröße Rolling Median (None = keine Glättung)
+    use_savgol    : bool       – Savitzky-Golay Filter statt Rolling Median
+                                 (SG_WINDOW, SG_POLYORDER aus Konfiguration)
+                                 Bei True: Original grau, geglättet schwarz
     """
     fig = plt.figure(figsize=FIGURE_SIZE, dpi=DPI)
     ax = fig.add_subplot(111)
@@ -295,7 +309,40 @@ def create_plot(
     if show_mis:
         draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max)
 
-    ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR, zorder=2)
+    if use_savgol:
+        # Original grau im Hintergrund
+        ax.plot(
+            x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
+        )
+        # Savitzky-Golay geglättet schwarz im Vordergrund
+        smooth = savgol_filter(
+            x_values.values, window_length=SG_WINDOW, polyorder=SG_POLYORDER
+        )
+        ax.plot(
+            smooth, y_values, linewidth=LINE_WIDTH_SMOOTH, color=LINE_COLOR, zorder=3
+        )
+    elif rolling_window is not None:
+        # Original grau im Hintergrund
+        ax.plot(
+            x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
+        )
+        # Rolling Median geglättet schwarz im Vordergrund
+        import pandas as _pd
+
+        smooth = (
+            _pd.Series(x_values.values)
+            .rolling(window=rolling_window, center=True, min_periods=1)
+            .median()
+        )
+        ax.plot(
+            smooth.values,
+            y_values,
+            linewidth=LINE_WIDTH_SMOOTH,
+            color=LINE_COLOR,
+            zorder=3,
+        )
+    else:
+        ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR, zorder=2)
 
     # Gestrichelte Verbindungslinie für Datenlücken
     # gap_line = (x1, y1, x2, y2): verbindet letzten Punkt vor mit erstem Punkt nach der Lücke
@@ -342,16 +389,32 @@ def create_plot(
         ylabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD, fontweight="bold"
     )
 
-    # Titel
-    ax.text(
-        0.5,
-        1.045,
+    # Glättungs-Untertitel
+    if use_savgol:
+        subtitle = f"Savitzky-Golay filter  |  window = {SG_WINDOW} pts  |  polyorder = {SG_POLYORDER}"
+    elif rolling_window is not None:
+        subtitle = f"Rolling median filter  |  window = {rolling_window} pts"
+    else:
+        subtitle = "unsmoothed"
+
+    # Titel oben (fett)
+    ax.set_title(
         title_text,
-        transform=ax.transAxes,
-        ha="center",
-        va="bottom",
         fontsize=TITLE_FONTSIZE,
         fontweight="bold",
+        pad=8,
+    )
+    # Untertitel UNTERHALB des X-Achsen-Labels (negative y in figure-koordinaten)
+    # Wir nutzen ax.annotate mit xycoords='axes fraction' und negativem y
+    ax.annotate(
+        subtitle,
+        xy=(0.5, -0.01),
+        xycoords="axes fraction",
+        ha="center",
+        va="top",
+        fontsize=TITLE_FONTSIZE * 0.55,
+        fontstyle="italic",
+        color="#777777",
     )
 
     ax.tick_params(axis="x", labelsize=FONT_SIZE_TICK)
@@ -442,6 +505,128 @@ def main():
             "x_ticks": D18O_TICKS,
             "show_mis": True,
         },
+        # ── Geglättet: Nach Tiefe (m) ───────────────
+        {
+            "x": df_ch4["ch4"],
+            "y": df_ch4["depth_m"],
+            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
+            "ylabel": "Depth [m]",
+            "title": "EPICA – CH₄",
+            "filename": os.path.join(
+                OUTPUT_DIR, f"ch4_vs_depth_full_smooth{ROLLING_WINDOW}"
+            ),
+            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
+            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
+            "x_ticks": CH4_TICKS,
+            "rolling_window": ROLLING_WINDOW,
+        },
+        {
+            "x": df_d18o["d18o"],
+            "y": df_d18o["depth_m"],
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+            "ylabel": "Depth [m]",
+            "title": "EPICA – δ¹⁸O",
+            "filename": os.path.join(
+                OUTPUT_DIR, f"d18o_vs_depth_full_smooth{ROLLING_WINDOW}"
+            ),
+            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
+            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
+            "x_ticks": D18O_TICKS,
+            "rolling_window": ROLLING_WINDOW,
+        },
+        # ── Geglättet: Nach Age (ka BP) ──────────────
+        {
+            "x": df_ch4["ch4"],
+            "y": df_ch4["age_edc2_ka"],
+            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
+            "ylabel": "Age [ka BP]",
+            "title": "EPICA – CH₄",
+            "filename": os.path.join(
+                OUTPUT_DIR, f"ch4_vs_age_ka_full_smooth{ROLLING_WINDOW}"
+            ),
+            "y_major": AGE_MAJOR_TICK_INTERVAL,
+            "y_minor": AGE_MINOR_TICK_INTERVAL,
+            "x_ticks": CH4_TICKS,
+            "show_mis": True,
+            "gap_line": (505.7, 214.19, 484.9, 391.85),
+            "rolling_window": ROLLING_WINDOW,
+        },
+        {
+            "x": df_d18o["d18o"],
+            "y": df_d18o["age_ka"],
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+            "ylabel": "Age [ka BP]",
+            "title": "EPICA – δ¹⁸O",
+            "filename": os.path.join(
+                OUTPUT_DIR, f"d18o_vs_age_ka_full_smooth{ROLLING_WINDOW}"
+            ),
+            "y_major": AGE_MAJOR_TICK_INTERVAL,
+            "y_minor": AGE_MINOR_TICK_INTERVAL,
+            "x_ticks": D18O_TICKS,
+            "show_mis": True,
+            "rolling_window": ROLLING_WINDOW,
+        },
+        # ── Savitzky-Golay: Nach Tiefe (m) ───────────
+        {
+            "x": df_ch4["ch4"],
+            "y": df_ch4["depth_m"],
+            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
+            "ylabel": "Depth [m]",
+            "title": "EPICA – CH₄",
+            "filename": os.path.join(
+                OUTPUT_DIR, f"ch4_vs_depth_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
+            ),
+            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
+            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
+            "x_ticks": CH4_TICKS,
+            "use_savgol": True,
+        },
+        {
+            "x": df_d18o["d18o"],
+            "y": df_d18o["depth_m"],
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+            "ylabel": "Depth [m]",
+            "title": "EPICA – δ¹⁸O",
+            "filename": os.path.join(
+                OUTPUT_DIR, f"d18o_vs_depth_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
+            ),
+            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
+            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
+            "x_ticks": D18O_TICKS,
+            "use_savgol": True,
+        },
+        # ── Savitzky-Golay: Nach Age (ka BP) ─────────
+        {
+            "x": df_ch4["ch4"],
+            "y": df_ch4["age_edc2_ka"],
+            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
+            "ylabel": "Age [ka BP]",
+            "title": "EPICA – CH₄",
+            "filename": os.path.join(
+                OUTPUT_DIR, f"ch4_vs_age_ka_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
+            ),
+            "y_major": AGE_MAJOR_TICK_INTERVAL,
+            "y_minor": AGE_MINOR_TICK_INTERVAL,
+            "x_ticks": CH4_TICKS,
+            "show_mis": True,
+            "gap_line": (505.7, 214.19, 484.9, 391.85),
+            "use_savgol": True,
+        },
+        {
+            "x": df_d18o["d18o"],
+            "y": df_d18o["age_ka"],
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+            "ylabel": "Age [ka BP]",
+            "title": "EPICA – δ¹⁸O",
+            "filename": os.path.join(
+                OUTPUT_DIR, f"d18o_vs_age_ka_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
+            ),
+            "y_major": AGE_MAJOR_TICK_INTERVAL,
+            "y_minor": AGE_MINOR_TICK_INTERVAL,
+            "x_ticks": D18O_TICKS,
+            "show_mis": True,
+            "use_savgol": True,
+        },
     ]
 
     print("\n" + "─" * 60)
@@ -464,6 +649,8 @@ def main():
             x_ticks=cfg.get("x_ticks"),
             show_mis=cfg.get("show_mis", False),
             gap_line=cfg.get("gap_line", None),
+            rolling_window=cfg.get("rolling_window", None),
+            use_savgol=cfg.get("use_savgol", False),
         )
 
     print("\n" + "=" * 60)
