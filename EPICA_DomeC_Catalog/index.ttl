@@ -1,0 +1,20 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geo-lod/EPICA_DomeC_Catalog> a dcat:Catalog,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "EPICA Dome C Ice Core – Linked Data Catalogue"@en ;
+    dcterms:created "2026-02-24"^^xsd:date ;
+    dcterms:description "DCAT catalogue aggregating palaeoclimate observation datasets from the EPICA Dome C ice core, East Antarctica. Includes CH₄ and δ¹⁸O records with raw and smoothed values, full provenance, site geometry and chronology metadata."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:publisher "PANGAEA – Data Publisher for Earth & Environmental Science" ;
+    dcterms:title "EPICA Dome C Ice Core – Linked Data Catalogue"@en ;
+    void:inDataset <https://w3id.org/geo-lod/geo-lod> ;
+    dcat:dataset <https://w3id.org/geo-lod/EPICA_DomeC_CH4_Dataset>,
+        <https://w3id.org/geo-lod/EPICA_DomeC_Dataset>,
+        <https://w3id.org/geo-lod/EPICA_DomeC_d18O_Dataset> .
+

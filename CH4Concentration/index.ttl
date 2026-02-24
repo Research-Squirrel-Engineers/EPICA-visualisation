@@ -1,0 +1,13 @@
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<https://w3id.org/geo-lod/CH4Concentration> a <http://www.ics.forth.gr/isl/CRMsci/S9_Property_Type>,
+        <http://www.w3.org/ns/ldp#Resource>,
+        sosa:ObservableProperty,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Methane concentration (CH₄)"@en ;
+    ns1:unit <http://qudt.org/vocab/unit/PPB> ;
+    void:inDataset <https://w3id.org/geo-lod/geo-lod> .
+

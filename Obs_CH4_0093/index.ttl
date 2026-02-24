@@ -1,0 +1,27 @@
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns2: <https://w3id.org/geo-lod/> .
+@prefix ns3: <http://qudt.org/schema/qudt/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:Obs_CH4_0093 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
+        <http://www.w3.org/ns/ldp#Resource>,
+        sosa:Observation,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    ns3:unit <http://qudt.org/vocab/unit/PPB> ;
+    void:inDataset ns2:geo-lod ;
+    ns1:P7_took_place_at ns2:EpicaDomeC_Site ;
+    prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.472484> ;
+    sosa:hasFeatureOfInterest ns2:EpicaDomeC_IceCore ;
+    sosa:hasSimpleResult 614.0 ;
+    sosa:observedProperty ns2:CH4Concentration ;
+    sosa:resultTime 8.211 ;
+    ns2:ageChronology ns2:EDC2_Chronology ;
+    ns2:atDepth_m 323.31 ;
+    ns2:smoothedValue_rollingMedian 614.0 ;
+    ns2:smoothedValue_savgol 608.71 ;
+    ns2:smoothingMethod_median ns2:RollingMedian_w11 ;
+    ns2:smoothingMethod_savgol ns2:SavitzkyGolay_w11_p2 .
+

@@ -1,0 +1,27 @@
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <https://w3id.org/geo-lod/> .
+@prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:Obs_d18O_1316 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
+        <http://www.w3.org/ns/ldp#Resource>,
+        sosa:Observation,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    ns1:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    void:inDataset ns2:geo-lod ;
+    ns3:P7_took_place_at ns2:EpicaDomeC_Site ;
+    prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.961024> ;
+    sosa:hasFeatureOfInterest ns2:EpicaDomeC_IceCore ;
+    sosa:hasSimpleResult 0.2825 ;
+    sosa:observedProperty ns2:Delta18O ;
+    sosa:resultTime 730.366 ;
+    ns2:ageChronology ns2:AICC2023_Chronology ;
+    ns2:atDepth_m 3135.14 ;
+    ns2:smoothedValue_rollingMedian 0.2836 ;
+    ns2:smoothedValue_savgol 0.27883 ;
+    ns2:smoothingMethod_median ns2:RollingMedian_w11 ;
+    ns2:smoothingMethod_savgol ns2:SavitzkyGolay_w11_p2 .
+

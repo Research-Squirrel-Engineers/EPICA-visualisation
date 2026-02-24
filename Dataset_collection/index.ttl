@@ -1,0 +1,13 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<https://w3id.org/geo-lod/Dataset_collection> a dcat:Catalog,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Dataset Instances Collection"@en ;
+    void:inDataset <https://w3id.org/geo-lod/geo-lod> ;
+    dcat:dataset <https://w3id.org/geo-lod/EPICA_DomeC_CH4_Dataset>,
+        <https://w3id.org/geo-lod/EPICA_DomeC_Dataset>,
+        <https://w3id.org/geo-lod/EPICA_DomeC_d18O_Dataset> .
+

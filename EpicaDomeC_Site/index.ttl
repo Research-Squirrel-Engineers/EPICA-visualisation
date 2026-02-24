@@ -1,0 +1,15 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geo-lod/EpicaDomeC_Site> a ns1:E27_Site,
+        ns1:E53_Place,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "EPICA Dome C, East Antarctica"@en ;
+    void:inDataset <https://w3id.org/geo-lod/geo-lod> ;
+    ns1:P87_is_identified_by "75°06'S, 123°21'E"^^xsd:string ;
+    geo:hasGeometry <https://w3id.org/geo-lod/EpicaDomeC_Geometry> .
+

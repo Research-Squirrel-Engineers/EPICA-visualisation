@@ -1,0 +1,169 @@
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <http://ldf.fi/void-ext#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wgs: <https://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geo-lod/geo-lod> a void:Dataset,
+        <http://www.w3.org/ns/adms#Asset>,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "geo-lod"@en ;
+    ns1:averageLiteralLength 0 ;
+    ns1:averageObjectIRILength 31 ;
+    ns1:averagePropertyIRILength 40 ;
+    ns1:averageSubjectIRILength 37 ;
+    ns1:datatypes 0 ;
+    ns1:distinctBlankNodes 0 ;
+    ns1:distinctIRIReferences 12481 ;
+    ns1:distinctLiterals 0 ;
+    ns1:distinctRDFNodes 12481 ;
+    ns1:languages 0 ;
+    ns1:propertyClasses 0 ;
+    dc:language <http://www.lexvo.org/page/iso639-1/en> ;
+    dcterms:modified "2026-02-24T21:38:17"^^xsd:dateTime ;
+    dcterms:subject <http://dbpedia.org/resource/Location>,
+        <http://dbpedia.org/resource/OGC_GeoSPARQL>,
+        <http://dbpedia.org/resource/Time>,
+        <http://www.wikidata.org/entity/Q121810372>,
+        foaf:Person ;
+    dcterms:title "geo-lod"@en ;
+    vann:preferredNamespacePrefix "geo-lod"^^xsd:string ;
+    vann:preferredNamespaceUri "https://w3id.org/geo-lod/"^^xsd:anyURI ;
+    void:classPartition <https://w3id.org/geo-lod/geo-lod_BibliographicResource>,
+        <https://w3id.org/geo-lod/geo-lod_Catalog>,
+        <https://w3id.org/geo-lod/geo-lod_Collection>,
+        <https://w3id.org/geo-lod/geo-lod_Dataset>,
+        <https://w3id.org/geo-lod/geo-lod_E22_Human-Made_Object>,
+        <https://w3id.org/geo-lod/geo-lod_E27_Site>,
+        <https://w3id.org/geo-lod/geo-lod_E53_Place>,
+        <https://w3id.org/geo-lod/geo-lod_E7_Activity>,
+        <https://w3id.org/geo-lod/geo-lod_FeatureCollection>,
+        <https://w3id.org/geo-lod/geo-lod_GeometryCollection>,
+        <https://w3id.org/geo-lod/geo-lod_ObservableProperty>,
+        <https://w3id.org/geo-lod/geo-lod_Observation>,
+        <https://w3id.org/geo-lod/geo-lod_ObservationCollection>,
+        <https://w3id.org/geo-lod/geo-lod_Point>,
+        <https://w3id.org/geo-lod/geo-lod_S1_Matter_Removal>,
+        <https://w3id.org/geo-lod/geo-lod_S4_Observation>,
+        <https://w3id.org/geo-lod/geo-lod_S6_Data_Evaluation>,
+        <https://w3id.org/geo-lod/geo-lod_S9_Property_Type>,
+        <https://w3id.org/geo-lod/geo-lod_Sample>,
+        <https://w3id.org/geo-lod/geo-lod_SpatialObjectCollection> ;
+    void:classes 20 ;
+    void:dataDump <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//index.ttl> ;
+    void:distinctObjects 10292 ;
+    void:distinctSubjects 2149 ;
+    void:entities 2143 ;
+    void:feature <http://www.w3.org/ns/formats/RDFa>,
+        <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 40 ;
+    void:propertyPartition <https://w3id.org/geo-lod/geo-lod_O1_removed>,
+        <https://w3id.org/geo-lod/geo-lod_P2_has_type>,
+        <https://w3id.org/geo-lod/geo-lod_P4_has_time-span>,
+        <https://w3id.org/geo-lod/geo-lod_P53_has_former_or_current_location>,
+        <https://w3id.org/geo-lod/geo-lod_P7_took_place_at>,
+        <https://w3id.org/geo-lod/geo-lod_P87_is_identified_by>,
+        <https://w3id.org/geo-lod/geo-lod_ageChronology>,
+        <https://w3id.org/geo-lod/geo-lod_asWKT>,
+        <https://w3id.org/geo-lod/geo-lod_atDepth_m>,
+        <https://w3id.org/geo-lod/geo-lod_created>,
+        <https://w3id.org/geo-lod/geo-lod_creator>,
+        <https://w3id.org/geo-lod/geo-lod_dataset>,
+        <https://w3id.org/geo-lod/geo-lod_date>,
+        <https://w3id.org/geo-lod/geo-lod_description>,
+        <https://w3id.org/geo-lod/geo-lod_distribution>,
+        <https://w3id.org/geo-lod/geo-lod_hasFeatureOfInterest>,
+        <https://w3id.org/geo-lod/geo-lod_hasGeometry>,
+        <https://w3id.org/geo-lod/geo-lod_hasObservation>,
+        <https://w3id.org/geo-lod/geo-lod_hasSimpleResult>,
+        <https://w3id.org/geo-lod/geo-lod_isSampleOf>,
+        <https://w3id.org/geo-lod/geo-lod_label>,
+        <https://w3id.org/geo-lod/geo-lod_license>,
+        <https://w3id.org/geo-lod/geo-lod_member>,
+        <https://w3id.org/geo-lod/geo-lod_observedProperty>,
+        <https://w3id.org/geo-lod/geo-lod_polyOrder>,
+        <https://w3id.org/geo-lod/geo-lod_publisher>,
+        <https://w3id.org/geo-lod/geo-lod_record>,
+        <https://w3id.org/geo-lod/geo-lod_references>,
+        <https://w3id.org/geo-lod/geo-lod_resultTime>,
+        <https://w3id.org/geo-lod/geo-lod_smoothedValue_rollingMedian>,
+        <https://w3id.org/geo-lod/geo-lod_smoothedValue_savgol>,
+        <https://w3id.org/geo-lod/geo-lod_smoothingMethod_median>,
+        <https://w3id.org/geo-lod/geo-lod_smoothingMethod_savgol>,
+        <https://w3id.org/geo-lod/geo-lod_source>,
+        <https://w3id.org/geo-lod/geo-lod_subClassOf>,
+        <https://w3id.org/geo-lod/geo-lod_title>,
+        <https://w3id.org/geo-lod/geo-lod_type>,
+        <https://w3id.org/geo-lod/geo-lod_unit>,
+        <https://w3id.org/geo-lod/geo-lod_wasDerivedFrom>,
+        <https://w3id.org/geo-lod/geo-lod_windowSize> ;
+    void:triples 42438 ;
+    void:uriSpace "https://w3id.org/geo-lod/"^^xsd:string ;
+    void:vocabulary ns1:,
+        dcam:,
+        dcmitype:,
+        dc:,
+        dcterms:,
+        qb:,
+        vann:,
+        <http://purl.org/vocommons/voaf#>,
+        void:,
+        doap:,
+        geo:,
+        rdf:,
+        rdfs:,
+        xsd:,
+        owl:,
+        skos:,
+        time:,
+        xml:,
+        <http://www.w3.org/ns/adms#>,
+        csvw:,
+        dcat:,
+        prof:,
+        odrl:,
+        org:,
+        prov:,
+        sh:,
+        sosa:,
+        ssn:,
+        foaf:,
+        brick:,
+        schema:,
+        wgs: ;
+    dcat:distribution <https://w3id.org/geo-lod/geo-lod_dist_ttl> ;
+    dcat:keyword "Location"@en,
+        "OGC GeoSPARQL"@en,
+        "Person"@en,
+        "Q121810372"@en,
+        "Time"@en ;
+    dcat:landingPage <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification/> ;
+    foaf:homepage <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification/> ;
+    foaf:page <https://Research-Squirrel-Engineers.github.io/EPICA-SISAL-FAIRification//index.html> .
+

@@ -1,0 +1,14 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/geo-lod/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:RollingMedian_w11 a <http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation>,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Rolling median filter, window=11 pts"@en ;
+    dcterms:references <https://doi.org/10.1145/1968.1969> ;
+    void:inDataset ns1:geo-lod ;
+    ns1:windowSize 11 .
+
