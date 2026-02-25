@@ -7,7 +7,7 @@
 ns1:EPICA_DomeC_Dataset a dcat:Dataset,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
-    dcterms:created "2026-02-24"^^xsd:date ;
+    dcterms:created "2026-02-25"^^xsd:date ;
     dcterms:description "Methane (CH4) and stable water isotope (δ18O) measurements from the EPICA Dome C ice core, East Antarctica, covering the last ~800,000 years (ca. 8 glacial cycles)."@en ;
     dcterms:license <https://creativecommons.org/licenses/by/3.0/> ;
     dcterms:publisher "PANGAEA – Data Publisher for Earth & Environmental Science" ;
