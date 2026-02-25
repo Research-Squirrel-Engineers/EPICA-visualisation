@@ -3,19 +3,44 @@
 # Basiert auf: plot_epica_from_tab.py
 
 import os
+import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FuncFormatter, FixedLocator
 import matplotlib.transforms as transforms
 from scipy.signal import savgol_filter
 
+
+class Tee:
+    """Schreibt gleichzeitig auf stdout und in eine Datei."""
+
+    def __init__(self, filepath):
+        self.file = open(filepath, "w", encoding="utf-8")
+        self.stdout = sys.stdout
+        sys.stdout = self
+
+    def write(self, data):
+        self.stdout.write(data)
+        self.file.write(data)
+
+    def flush(self):
+        self.stdout.flush()
+        self.file.flush()
+
+    def close(self):
+        sys.stdout = self.stdout
+        self.file.close()
+
+
 # Arbeitsverzeichnis auf Ordner des Skripts setzen
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # Output-Ordner erstellen
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(SCRIPT_DIR, "plots_sisal")
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "plots")
+REPORT_DIR = os.path.join(SCRIPT_DIR, "report")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(REPORT_DIR, exist_ok=True)
 
 # ──────────────────────────────────────────────
 # Gemeinsame Plot-Einstellungen
@@ -28,8 +53,8 @@ GRID_COLOR = "#cccccc"
 GRID_WIDTH = 1
 
 # Y-Achsen-Ticks (Age in ka BP)
-AGE_MAJOR_TICK_INTERVAL = 20    # alle 20 ka ein dicker Tick
-AGE_MINOR_TICK_INTERVAL = 5     # alle 5 ka ein kleiner Tick
+AGE_MAJOR_TICK_INTERVAL = 20  # alle 20 ka ein dicker Tick
+AGE_MINOR_TICK_INTERVAL = 5  # alle 5 ka ein kleiner Tick
 
 FONT_SIZE_LABEL = 26
 FONT_SIZE_TICK = 22
@@ -52,15 +77,15 @@ MIS_COLOR_INTERSTADIAL = "#fef0e6"
 MIS_COLOR_COLD = "#d6e8f7"
 
 MIS_INTERVALS = [
-    (0,   14,  "MIS 1",  "warm"),
-    (14,  29,  "MIS 2",  "cold"),
-    (29,  57,  "MIS 3",  "inter"),
-    (57,  71,  "MIS 4",  "cold"),
-    (71,  130, "MIS 5",  "warm"),
-    (130, 191, "MIS 6",  "cold"),
-    (191, 243, "MIS 7",  "warm"),
-    (243, 300, "MIS 8",  "cold"),
-    (300, 337, "MIS 9",  "warm"),
+    (0, 14, "MIS 1", "warm"),
+    (14, 29, "MIS 2", "cold"),
+    (29, 57, "MIS 3", "inter"),
+    (57, 71, "MIS 4", "cold"),
+    (71, 130, "MIS 5", "warm"),
+    (130, 191, "MIS 6", "cold"),
+    (191, 243, "MIS 7", "warm"),
+    (243, 300, "MIS 8", "cold"),
+    (300, 337, "MIS 9", "warm"),
     (337, 374, "MIS 10", "cold"),
     (374, 424, "MIS 11", "warm"),
     (424, 533, "MIS 12", "cold"),
@@ -69,6 +94,7 @@ MIS_INTERVALS = [
 # ──────────────────────────────────────────────
 # SISAL CSV laden
 # ──────────────────────────────────────────────
+
 
 def load_sisal_csv(filepath):
     """
@@ -79,23 +105,27 @@ def load_sisal_csv(filepath):
     """
     df = pd.read_csv(filepath)
 
-    df["age_bp"]         = pd.to_numeric(df["age_bp"],         errors="coerce")
-    df["d18o_permille"]  = pd.to_numeric(df["d18o_permille"],  errors="coerce")
-    df["d13c_permille"]  = pd.to_numeric(df["d13c_permille"],  errors="coerce")
+    df["age_bp"] = pd.to_numeric(df["age_bp"], errors="coerce")
+    df["d18o_permille"] = pd.to_numeric(df["d18o_permille"], errors="coerce")
+    df["d13c_permille"] = pd.to_numeric(df["d13c_permille"], errors="coerce")
 
     df["age_ka"] = df["age_bp"] / 1000.0  # in ka BP umrechnen
 
     df = df.dropna(subset=["age_ka"]).sort_values("age_ka").reset_index(drop=True)
 
-    site_name   = df["site_name"].iloc[0]
-    entity_ids  = df["entity_id"].nunique()
+    site_name = df["site_name"].iloc[0]
+    entity_ids = df["entity_id"].nunique()
     print(f"  Geladen: {site_name}")
     print(f"  Datenpunkte: {len(df)}, Entities: {entity_ids}")
     print(f"  Age: {df['age_ka'].min():.1f} – {df['age_ka'].max():.1f} ka BP")
     if df["d18o_permille"].notna().any():
-        print(f"  d18O: {df['d18o_permille'].min():.2f} – {df['d18o_permille'].max():.2f} ‰")
+        print(
+            f"  d18O: {df['d18o_permille'].min():.2f} – {df['d18o_permille'].max():.2f} ‰"
+        )
     if df["d13c_permille"].notna().any():
-        print(f"  d13C: {df['d13c_permille'].min():.2f} – {df['d13c_permille'].max():.2f} ‰")
+        print(
+            f"  d13C: {df['d13c_permille'].min():.2f} – {df['d13c_permille'].max():.2f} ‰"
+        )
 
     return df
 
@@ -104,13 +134,14 @@ def load_sisal_csv(filepath):
 # MIS-Bänder
 # ──────────────────────────────────────────────
 
+
 def draw_mis_bands(ax, y_min_ka, y_max_ka):
     mis_trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
 
     type_config = {
-        "warm":  (MIS_COLOR_WARM,         "#8b1a00", False),
+        "warm": (MIS_COLOR_WARM, "#8b1a00", False),
         "inter": (MIS_COLOR_INTERSTADIAL, "#8b1a00", False),
-        "cold":  (MIS_COLOR_COLD,         "#003f6b", False),
+        "cold": (MIS_COLOR_COLD, "#003f6b", False),
     }
 
     for age_top, age_bot, label, mis_type in MIS_INTERVALS:
@@ -121,22 +152,30 @@ def draw_mis_bands(ax, y_min_ka, y_max_ka):
         if visible_top >= visible_bot:
             continue
 
-        color, label_color, _ = type_config.get(mis_type, (MIS_COLOR_COLD, "#003f6b", False))
+        color, label_color, _ = type_config.get(
+            mis_type, (MIS_COLOR_COLD, "#003f6b", False)
+        )
         ax.axhspan(age_top, age_bot, facecolor=color, alpha=1.0, zorder=0)
 
         y_label = (visible_top + visible_bot) / 2.0
         ax.text(
-            0.99, y_label, label,
+            0.99,
+            y_label,
+            label,
             transform=mis_trans,
-            ha="right", va="center",
-            fontsize=FONT_SIZE_MIS, fontweight="bold",
-            color=label_color, zorder=2,
+            ha="right",
+            va="center",
+            fontsize=FONT_SIZE_MIS,
+            fontweight="bold",
+            color=label_color,
+            zorder=2,
         )
 
 
 # ──────────────────────────────────────────────
 # Generische Plot-Funktion (wie EPICA)
 # ──────────────────────────────────────────────
+
 
 def create_plot(
     x_values,
@@ -168,17 +207,31 @@ def create_plot(
         draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max)
 
     if use_savgol:
-        ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2)
-        smooth = savgol_filter(x_values.values, window_length=SG_WINDOW, polyorder=SG_POLYORDER)
-        ax.plot(smooth, y_values, linewidth=LINE_WIDTH_SMOOTH, color=LINE_COLOR, zorder=3)
+        ax.plot(
+            x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
+        )
+        smooth = savgol_filter(
+            x_values.values, window_length=SG_WINDOW, polyorder=SG_POLYORDER
+        )
+        ax.plot(
+            smooth, y_values, linewidth=LINE_WIDTH_SMOOTH, color=LINE_COLOR, zorder=3
+        )
     elif rolling_window is not None:
-        ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2)
+        ax.plot(
+            x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
+        )
         smooth = (
             pd.Series(x_values.values)
             .rolling(window=rolling_window, center=True, min_periods=1)
             .median()
         )
-        ax.plot(smooth.values, y_values, linewidth=LINE_WIDTH_SMOOTH, color=LINE_COLOR, zorder=3)
+        ax.plot(
+            smooth.values,
+            y_values,
+            linewidth=LINE_WIDTH_SMOOTH,
+            color=LINE_COLOR,
+            zorder=3,
+        )
     else:
         ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR, zorder=2)
 
@@ -207,7 +260,9 @@ def create_plot(
     ax.xaxis.set_major_formatter(FuncFormatter(lambda val, pos: f"{val:.1f}"))
 
     ax.set_xlabel(xlabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD)
-    ax.set_ylabel(ylabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD, fontweight="bold")
+    ax.set_ylabel(
+        ylabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD, fontweight="bold"
+    )
 
     # Glättungs-Untertitel
     if use_savgol:
@@ -220,10 +275,13 @@ def create_plot(
     ax.set_title(title_text, fontsize=TITLE_FONTSIZE, fontweight="bold", pad=8)
     ax.annotate(
         subtitle,
-        xy=(0.5, -0.01), xycoords="axes fraction",
-        ha="center", va="top",
+        xy=(0.5, -0.01),
+        xycoords="axes fraction",
+        ha="center",
+        va="top",
         fontsize=TITLE_FONTSIZE * 0.55,
-        fontstyle="italic", color="#777777",
+        fontstyle="italic",
+        color="#777777",
     )
 
     ax.tick_params(axis="x", labelsize=FONT_SIZE_TICK)
@@ -243,6 +301,7 @@ def create_plot(
 # Hilfsfunktion: Plots für eine Höhle erzeugen
 # ──────────────────────────────────────────────
 
+
 def generate_cave_plots(df, site_name, site_slug, d18o_ticks=None, d13c_ticks=None):
     """
     Erzeugt 6 Plots pro Höhle:
@@ -261,46 +320,53 @@ def generate_cave_plots(df, site_name, site_slug, d18o_ticks=None, d13c_ticks=No
 
     # ── d18O ────────────────────────────────────────────────────────────
     for sm_label, sm_kwargs in [
-        ("unsmoothed",   {}),
+        ("unsmoothed", {}),
         (f"smooth{ROLLING_WINDOW}", {"rolling_window": ROLLING_WINDOW}),
         (f"savgol{SG_WINDOW}p{SG_POLYORDER}", {"use_savgol": True}),
     ]:
         if df_d18o.empty:
             print(f"  ⚠  Keine d18O-Daten für {site_name}, übersprungen.")
             break
-        plots.append({
-            "x":      df_d18o["d18o_permille"],
-            "y":      df_d18o["age_ka"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
-            "ylabel": "Age [ka BP]",
-            "title":  f"SISAL – {site_name}",
-            "filename": os.path.join(OUTPUT_DIR, f"{site_slug}_d18o_age_{sm_label}"),
-            "x_ticks": d18o_ticks,
-            "show_mis": True,
-            **sm_kwargs,
-        })
+        plots.append(
+            {
+                "x": df_d18o["d18o_permille"],
+                "y": df_d18o["age_ka"],
+                "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+                "ylabel": "Age [ka BP]",
+                "title": f"SISAL – {site_name}",
+                "filename": os.path.join(
+                    OUTPUT_DIR, f"{site_slug}_d18o_age_{sm_label}"
+                ),
+                "x_ticks": d18o_ticks,
+                "show_mis": True,
+                **sm_kwargs,
+            }
+        )
 
     # ── d13C ────────────────────────────────────────────────────────────
     if d13c_ticks is None or df_d13c.empty:
         print(f"  ⚠  Keine d13C-Daten für {site_name} – übersprungen.")
     else:
         for sm_label, sm_kwargs in [
-            ("unsmoothed",   {}),
+            ("unsmoothed", {}),
             (f"smooth{ROLLING_WINDOW}", {"rolling_window": ROLLING_WINDOW}),
             (f"savgol{SG_WINDOW}p{SG_POLYORDER}", {"use_savgol": True}),
         ]:
-            plots.append({
-                "x":      df_d13c["d13c_permille"],
-                "y":      df_d13c["age_ka"],
-                "xlabel": r"$\boldsymbol{\delta}^{\mathbf{13}}\mathbf{C}\ \mathbf{[‰]}$",
-                "ylabel": "Age [ka BP]",
-                "title":  f"SISAL – {site_name}",
-                "filename": os.path.join(OUTPUT_DIR, f"{site_slug}_d13c_age_{sm_label}"),
-                "x_ticks": d13c_ticks,
-                "show_mis": True,
-                **sm_kwargs,
-            })
-
+            plots.append(
+                {
+                    "x": df_d13c["d13c_permille"],
+                    "y": df_d13c["age_ka"],
+                    "xlabel": r"$\boldsymbol{\delta}^{\mathbf{13}}\mathbf{C}\ \mathbf{[‰]}$",
+                    "ylabel": "Age [ka BP]",
+                    "title": f"SISAL – {site_name}",
+                    "filename": os.path.join(
+                        OUTPUT_DIR, f"{site_slug}_d13c_age_{sm_label}"
+                    ),
+                    "x_ticks": d13c_ticks,
+                    "show_mis": True,
+                    **sm_kwargs,
+                }
+            )
 
     print(f"\n  Erstelle {len(plots)} Plots für {site_name} …")
     for cfg in plots:
@@ -325,7 +391,13 @@ def generate_cave_plots(df, site_name, site_slug, d18o_ticks=None, d13c_ticks=No
 # Hauptprogramm
 # ──────────────────────────────────────────────
 
+
 def main():
+    from datetime import datetime
+
+    report_path = os.path.join(REPORT_DIR, "report.txt")
+    tee = Tee(report_path)
+
     print("=" * 60)
     print("SISAL Speleothem – Plot Generator")
     print("=" * 60)
@@ -334,26 +406,26 @@ def main():
     # Passe die Pfade ggf. an (relativ zum Skript-Ordner)
     SISAL_FILES = [
         {
-            "path":      "v_data_144_botuvera.csv",
-            "slug":      "144_botuvera",
+            "path": "v_data_144_botuvera.csv",
+            "slug": "144_botuvera",
             "d18o_ticks": [-6, -5, -4, -3, -2, -1],
             "d13c_ticks": [-10, -9, -8, -7, -6, -5, -4, -3],
         },
         {
-            "path":      "v_data_145_corchia.csv",
-            "slug":      "145_corchia",
+            "path": "v_data_145_corchia.csv",
+            "slug": "145_corchia",
             "d18o_ticks": [-6, -5, -4, -3],
             "d13c_ticks": [-3, -2, -1, 0, 1, 2, 3, 4],
         },
         {
-            "path":      "v_data_140_sanbao.csv",
-            "slug":      "140_sanbao",
+            "path": "v_data_140_sanbao.csv",
+            "slug": "140_sanbao",
             "d18o_ticks": [-10, -9, -8, -7, -6, -5, -4],
-            "d13c_ticks": None,   # keine d13C-Daten in SISAL für Sanbao
+            "d13c_ticks": None,  # keine d13C-Daten in SISAL für Sanbao
         },
         {
-            "path":      "v_data_275_buracagloriosa.csv",
-            "slug":      "275_buracagloriosa",
+            "path": "v_data_275_buracagloriosa.csv",
+            "slug": "275_buracagloriosa",
             "d18o_ticks": [-6, -5, -4, -3, -2, -1, 0],
             "d13c_ticks": [-10, -8, -6, -4, -2, 0],
         },
@@ -389,6 +461,8 @@ def main():
     print(f"Fertig! Plots gespeichert in '{OUTPUT_DIR}/'")
     print(f"Gesamt: {total_plots} Plots")
     print("=" * 60)
+    print(f"Report gespeichert: {report_path}")
+    tee.close()
 
 
 if __name__ == "__main__":
