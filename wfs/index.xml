@@ -38,15 +38,15 @@
         </ows:OperationsMetadata>
         <wfs:FeatureTypeList>
                 <wfs:FeatureType>
-                    <wfs:Name>E53_Place_collection</wfs:Name>
-                    <wfs:Title>E53_Place_collection</wfs:Title>
-                    <wfs:Abstract>FeatureCollection E53_Place_collection</wfs:Abstract>
-                    <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
-
-                <wfs:FeatureType>
                     <wfs:Name>E27_Site_collection</wfs:Name>
                     <wfs:Title>E27_Site_collection</wfs:Title>
                     <wfs:Abstract>FeatureCollection E27_Site_collection</wfs:Abstract>
+                    <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
+
+                <wfs:FeatureType>
+                    <wfs:Name>E53_Place_collection</wfs:Name>
+                    <wfs:Title>E53_Place_collection</wfs:Title>
+                    <wfs:Abstract>FeatureCollection E53_Place_collection</wfs:Abstract>
                     <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
 </wfs:FeatureTypeList>
             <ogc:Filter_Capabilities></ogc:Filter_Capabilities>
