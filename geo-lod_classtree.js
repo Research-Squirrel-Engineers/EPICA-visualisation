@@ -75,21 +75,6 @@ var tree={
             }
           },
           "to": {
-            "http://rdfs.org/ns/void#inDataset": {
-              "instancecount": 2,
-              "http://www.w3.org/ns/adms#Asset": 2,
-              "http://rdfs.org/ns/void#Dataset": 2
-            },
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-              "instancecount": 2
-            },
-            "http://www.w3.org/2000/01/rdf-schema#label": {
-              "instancecount": 2
-            },
-            "http://www.w3.org/ns/dcat#dataset": {
-              "instancecount": 6,
-              "http://www.w3.org/ns/dcat#Dataset": 6
-            },
             "http://purl.org/dc/terms/created": {
               "instancecount": 1
             },
@@ -104,6 +89,21 @@ var tree={
             },
             "http://purl.org/dc/terms/title": {
               "instancecount": 1
+            },
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 2,
+              "http://www.w3.org/ns/adms#Asset": 2,
+              "http://rdfs.org/ns/void#Dataset": 2
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 2
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 2
+            },
+            "http://www.w3.org/ns/dcat#dataset": {
+              "instancecount": 6,
+              "http://www.w3.org/ns/dcat#Dataset": 6
             }
           }
         }
@@ -129,14 +129,14 @@ var tree={
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "instancecount": 15,
-              "http://www.w3.org/ns/dcat#Catalog": 1,
               "http://www.cidoc-crm.org/cidoc-crm/E7_Activity": 2,
               "http://www.ics.forth.gr/isl/CRMsci/S1_Matter_Removal": 2,
               "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object": 2,
               "http://www.w3.org/ns/sosa/Sample": 2,
+              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 4,
+              "http://www.w3.org/ns/dcat#Catalog": 1,
               "http://www.ics.forth.gr/isl/CRMsci/S9_Property_Type": 4,
               "http://www.w3.org/ns/sosa/ObservableProperty": 4,
-              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 4,
               "http://w3id.org/geo-lod/MeasurementType": 2
             },
             "http://www.w3.org/ns/dcat#dataset": {
@@ -42859,42 +42859,42 @@ var tree={
         "text": "S6_Data_Evaluation (crmsci:S6_Data_Evaluation) [4]",
         "data": {
           "from": {
-            "http://w3id.org/geo-lod/ageChronology": {
+            "http://w3id.org/geo-lod/smoothingMethod_savgol": {
               "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
               "http://www.w3.org/ns/sosa/Observation": 2114
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "http://www.w3.org/2004/02/skos/core#Collection": 4
             },
-            "http://w3id.org/geo-lod/smoothingMethod_savgol": {
+            "http://w3id.org/geo-lod/smoothingMethod_median": {
               "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
               "http://www.w3.org/ns/sosa/Observation": 2114
             },
-            "http://w3id.org/geo-lod/smoothingMethod_median": {
+            "http://w3id.org/geo-lod/ageChronology": {
               "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
               "http://www.w3.org/ns/sosa/Observation": 2114
             }
           },
           "to": {
+            "http://purl.org/dc/terms/references": {
+              "instancecount": 2
+            },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 4,
               "http://www.w3.org/ns/adms#Asset": 4,
               "http://rdfs.org/ns/void#Dataset": 4
-            },
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-              "instancecount": 4
-            },
-            "http://www.w3.org/2000/01/rdf-schema#label": {
-              "instancecount": 4
-            },
-            "http://purl.org/dc/terms/references": {
-              "instancecount": 2
             },
             "http://w3id.org/geo-lod/polyOrder": {
               "instancecount": 1
             },
             "http://w3id.org/geo-lod/windowSize": {
               "instancecount": 2
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 4
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 4
             }
           }
         }
