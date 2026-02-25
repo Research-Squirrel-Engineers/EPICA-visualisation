@@ -129,14 +129,14 @@ var tree={
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "instancecount": 15,
+              "http://www.w3.org/ns/dcat#Catalog": 1,
               "http://www.cidoc-crm.org/cidoc-crm/E7_Activity": 2,
               "http://www.ics.forth.gr/isl/CRMsci/S1_Matter_Removal": 2,
-              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 4,
               "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object": 2,
               "http://www.w3.org/ns/sosa/Sample": 2,
               "http://www.ics.forth.gr/isl/CRMsci/S9_Property_Type": 4,
               "http://www.w3.org/ns/sosa/ObservableProperty": 4,
-              "http://www.w3.org/ns/dcat#Catalog": 1,
+              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 4,
               "http://w3id.org/geo-lod/MeasurementType": 2
             },
             "http://www.w3.org/ns/dcat#dataset": {
