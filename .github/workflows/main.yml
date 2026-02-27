@@ -19,7 +19,7 @@ jobs:
     uses: sparqlunicorn/sparqlunicornGoesGIS-ontdoc/.github/workflows/udoc.yml@main
     with:
       version: v018
-      rdffilepath: EPICA/rdf/epica_dome_c.ttl SISAL/rdf/sisal_all_data.ttl
+      rdffilepath: EPICA/rdf/epica_dome_c.ttl SISAL/rdf/sisal_sites.ttl SISAL/rdf/sisal_145_corchia_data.ttl
       docpath: docs
       prefixns: http://w3id.org/geo-lod/
       prefixnsshort: geo-lod

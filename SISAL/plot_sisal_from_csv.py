@@ -671,6 +671,7 @@ def build_sisal_rdf(
     SOSA = Namespace("http://www.w3.org/ns/sosa/")
     GEO = Namespace("http://www.opengis.net/ont/geosparql#")
     SF = Namespace("http://www.opengis.net/ont/sf#")
+    CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
     QUDT = Namespace("http://qudt.org/schema/qudt/")
     UNIT = Namespace("http://qudt.org/vocab/unit/")
 
@@ -678,6 +679,8 @@ def build_sisal_rdf(
     g.bind("geolod", GEOLOD)
     g.bind("sosa", SOSA)
     g.bind("geo", GEO)
+    g.bind("sf", SF)
+    g.bind("crm", CRM)
     g.bind("qudt", QUDT)
     g.bind("unit", UNIT)
     g.bind("prov", PROV)
@@ -689,31 +692,33 @@ def build_sisal_rdf(
     # ── DataSource (PROV) – wird referenziert, ist in Ontologie definiert ─────
     src = GEOLOD["SISALv3_DataSource"]
 
-    # ── Cave ──────────────────────────────────────────────────────────────────
+    # ── Cave (GeoSPARQL + CIDOC-CRM, mirrors EPICA DrillingSite pattern) ─────
     site_id_val = int(df["site_id"].iloc[0])
     cave = GEOLOD[f"Cave_{site_slug}"]
     g.add((cave, RDF.type, GEOLOD["Cave"]))
+    g.add((cave, RDF.type, CRM["E53_Place"]))
+    g.add((cave, RDF.type, CRM["E27_Site"]))
     g.add((cave, RDFS.label, Literal(site_name, lang="en")))
     g.add((cave, GEOLOD["siteId"], Literal(site_id_val, datatype=XSD.integer)))
 
-    # Geometrie (WKT Point) wenn Koordinaten vorhanden
+    # Geometry (WKT Point) if coordinates available
     if "latitude" in df.columns and "longitude" in df.columns:
         lat = df["latitude"].iloc[0]
         lon = df["longitude"].iloc[0]
         if pd.notna(lat) and pd.notna(lon):
             geom = GEOLOD[f"Cave_{site_slug}_Geometry"]
-            g.add((geom, RDF.type, URIRef(str(SF) + "Point")))
+            g.add((geom, RDF.type, SF["Point"]))
             g.add(
                 (
                     geom,
-                    URIRef(str(GEO) + "asWKT"),
+                    GEO["asWKT"],
                     Literal(
                         f"POINT({float(lon):.6f} {float(lat):.6f})",
-                        datatype=URIRef(str(GEO) + "wktLiteral"),
+                        datatype=GEO["wktLiteral"],
                     ),
                 )
             )
-            g.add((cave, URIRef(str(GEO) + "hasGeometry"), geom))
+            g.add((cave, GEO["hasGeometry"], geom))
 
     # ── Smoothing instances ───────────────────────────────────────────────────
     smooth_median = GEOLOD[f"RollingMedian_w{ROLLING_WINDOW}"]
@@ -985,10 +990,13 @@ def build_sisal_sites_rdf(df_sites: "pd.DataFrame") -> "Graph | None":
     GEOLOD = Namespace("http://w3id.org/geo-lod/")
     GEO = Namespace("http://www.opengis.net/ont/geosparql#")
     SF = Namespace("http://www.opengis.net/ont/sf#")
+    CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 
     g = Graph()
     g.bind("geolod", GEOLOD)
     g.bind("geo", GEO)
+    g.bind("sf", SF)
+    g.bind("crm", CRM)
     g.bind("prov", PROV)
     g.bind("rdfs", RDFS)
     g.bind("xsd", XSD)
@@ -1005,6 +1013,8 @@ def build_sisal_sites_rdf(df_sites: "pd.DataFrame") -> "Graph | None":
         cave = GEOLOD[f"Cave_{slug}"]
 
         g.add((cave, RDF.type, GEOLOD["Cave"]))
+        g.add((cave, RDF.type, CRM["E53_Place"]))
+        g.add((cave, RDF.type, CRM["E27_Site"]))
         g.add((cave, RDFS.label, Literal(site_name, lang="en")))
         g.add((cave, GEOLOD["siteId"], Literal(site_id, datatype=XSD.integer)))
         g.add(
@@ -1025,15 +1035,9 @@ def build_sisal_sites_rdf(df_sites: "pd.DataFrame") -> "Graph | None":
 
         # Geometry: WKT from CSV is already GeoSPARQL-compliant (lon lat)
         geom = GEOLOD[f"Cave_{slug}_Geometry"]
-        g.add((geom, RDF.type, URIRef(str(SF) + "Point")))
-        g.add(
-            (
-                geom,
-                URIRef(str(GEO) + "asWKT"),
-                Literal(wkt, datatype=URIRef(str(GEO) + "wktLiteral")),
-            )
-        )
-        g.add((cave, URIRef(str(GEO) + "hasGeometry"), geom))
+        g.add((geom, RDF.type, SF["Point"]))
+        g.add((geom, GEO["asWKT"], Literal(wkt, datatype=GEO["wktLiteral"])))
+        g.add((cave, GEO["hasGeometry"], geom))
 
     print(f"  RDF sites: {len(df_sites)} caves · {len(g):,} triples")
     return g
@@ -1069,6 +1073,8 @@ def export_sisal_rdf(
     combined.bind("geolod", GEOLOD)
     combined.bind("sosa", Namespace("http://www.w3.org/ns/sosa/"))
     combined.bind("geo", Namespace("http://www.opengis.net/ont/geosparql#"))
+    combined.bind("sf", Namespace("http://www.opengis.net/ont/sf#"))
+    combined.bind("crm", Namespace("http://www.cidoc-crm.org/cidoc-crm/"))
     combined.bind("prov", PROV)
     combined.bind("dct", DCTERMS)
     combined.bind("rdfs", RDFS)

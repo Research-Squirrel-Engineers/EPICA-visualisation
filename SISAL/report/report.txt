@@ -122,26 +122,26 @@ RDF Export  (geo-lod SISAL Ontology + data)
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_ontology.ttl
 
   Building sites graph …
-  RDF sites: 305 caves · 2,745 triples
+  RDF sites: 305 caves · 3,355 triples
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_sites.ttl
 
   Botuverá cave  (144_botuvera)
-  RDF: 907 d18O obs · 907 d13C obs · 21,795 triples
+  RDF: 907 d18O obs · 907 d13C obs · 21,797 triples
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_144_botuvera_data.ttl
 
   Antro del Corchia  (145_corchia)
-  RDF: 1,234 d18O obs · 1,234 d13C obs · 29,651 triples
+  RDF: 1,234 d18O obs · 1,234 d13C obs · 29,653 triples
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_145_corchia_data.ttl
 
   Sanbao cave  (140_sanbao)
-  RDF: 5,832 d18O obs · 0 d13C obs · 70,075 triples
+  RDF: 5,832 d18O obs · 0 d13C obs · 70,077 triples
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_140_sanbao_data.ttl
 
   Buraca Gloriosa  (275_buracagloriosa)
-  RDF: 1,137 d18O obs · 1,137 d13C obs · 27,327 triples
+  RDF: 1,137 d18O obs · 1,137 d13C obs · 27,329 triples
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_275_buracagloriosa_data.ttl
 
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_all_data.ttl  (151,554 triples total)
+  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_all_data.ttl  (152,172 triples total)
 
 ============================================================
 Done! Plots saved to 'c:\git\EPICA-SISAL-FAIRification\SISAL\plots/'

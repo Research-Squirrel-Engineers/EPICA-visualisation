@@ -1,3 +1,4 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix geolod: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -29566,7 +29567,9 @@ geolod:Obs_d18O_275_buracagloriosa_e587_01136 a geolod:Delta18OSpeleothemObserva
     sosa:hasFeatureOfInterest geolod:Speleothem_275_buracagloriosa_e587 ;
     sosa:observedProperty geolod:Delta18O_Speleothem .
 
-geolod:Cave_275_buracagloriosa a geolod:Cave ;
+geolod:Cave_275_buracagloriosa a geolod:Cave,
+        crm:E27_Site,
+        crm:E53_Place ;
     rdfs:label "Buraca Gloriosa"@en ;
     geolod:siteId 275 .
 

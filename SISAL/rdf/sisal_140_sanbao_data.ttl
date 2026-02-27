@@ -1,3 +1,4 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix geolod: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -75826,7 +75827,9 @@ geolod:Obs_d18O_140_sanbao_e846_05831 a geolod:Delta18OSpeleothemObservation ;
     sosa:hasFeatureOfInterest geolod:Speleothem_140_sanbao_e846 ;
     sosa:observedProperty geolod:Delta18O_Speleothem .
 
-geolod:Cave_140_sanbao a geolod:Cave ;
+geolod:Cave_140_sanbao a geolod:Cave,
+        crm:E27_Site,
+        crm:E53_Place ;
     rdfs:label "Sanbao cave"@en ;
     geolod:siteId 140 .
 

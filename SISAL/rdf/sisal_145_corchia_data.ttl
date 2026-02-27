@@ -1,3 +1,4 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix geolod: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -32088,7 +32089,9 @@ geolod:Obs_d18O_145_corchia_e670_01233 a geolod:Delta18OSpeleothemObservation ;
     sosa:hasFeatureOfInterest geolod:Speleothem_145_corchia_e670 ;
     sosa:observedProperty geolod:Delta18O_Speleothem .
 
-geolod:Cave_145_corchia a geolod:Cave ;
+geolod:Cave_145_corchia a geolod:Cave,
+        crm:E27_Site,
+        crm:E53_Place ;
     rdfs:label "Antro del Corchia"@en ;
     geolod:siteId 145 .
 
