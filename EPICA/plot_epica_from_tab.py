@@ -16,7 +16,7 @@ try:
     RDF_AVAILABLE = True
 except ImportError:
     RDF_AVAILABLE = False
-    print("⚠  rdflib nicht installiert – RDF-Export übersprungen. (pip install rdflib)")
+    print("⚠  rdflib not installed – RDF export skipped. (pip install rdflib)")
 
 
 class Tee:
@@ -75,12 +75,12 @@ FONT_SIZE_TICK = 26
 TITLE_FONTSIZE = 30
 FONT_SIZE_MIS = 16
 
-# Glättung
-ROLLING_WINDOW = 11  # Rolling Median: Fenstergröße in Datenpunkten (~10 ka bei CH4)
-SG_WINDOW = 11  # Savitzky-Golay: Fensterbreite (ungerade, ~10 ka bei CH4)
-SG_POLYORDER = 2  # Savitzky-Golay: Polynomgrad (2 = glatt, klassisch)
-LINE_COLOR_FADED = "#aaaaaa"  # Originallinie im geglätteten Plot
-LINE_WIDTH_SMOOTH = 1.5  # Geglättete Linie etwas dicker   # MIS-Label-Größe
+# Smoothing
+ROLLING_WINDOW = 11  # Rolling median: window size in data points (~10 ka for CH4)
+SG_WINDOW = 11  # Savitzky-Golay: window length (odd, ~10 ka for CH4)
+SG_POLYORDER = 2  # Savitzky-Golay: polynomial order (2 = smooth, classic)
+LINE_COLOR_FADED = "#aaaaaa"  # original line in smoothed plot
+LINE_WIDTH_SMOOTH = 1.5  # smoothed line slightly thicker   # MIS label size
 LABEL_PAD = 12
 
 # ──────────────────────────────────────────────
@@ -88,16 +88,16 @@ LABEL_PAD = 12
 # Format: (age_top_ka, age_bottom_ka, label, farbe)
 # Warmzeiten (ungerade MIS) = hellblau, Kaltzeiten (gerade MIS) = kein Hintergrund
 # ──────────────────────────────────────────────
-MIS_COLOR_WARM = "#fddbc7"  # Rot/Orange        – volles Interglazial
-MIS_COLOR_INTERSTADIAL = "#fef0e6"  # blasses Rötlich   – Interstadial (MIS 3)
-MIS_COLOR_COLD = "#d6e8f7"  # Blau              – Glazial
+MIS_COLOR_WARM = "#fddbc7"  # red/orange       – full interglacial
+MIS_COLOR_INTERSTADIAL = "#fef0e6"  # pale reddish  – interstadial (MIS 3)
+MIS_COLOR_COLD = "#d6e8f7"  # blue             – glacial
 
-# MIS-Typ:
-#   "warm"       = volles Interglazial   → Rot/Orange, durchgehend
-#   "inter"      = Interstadial          → blasses Rötlich, durchgehend (MIS 3)
-#   "cold"       = Glazial               → Blau, durchgehend
-#   "warm_nodata"= Interglazial, keine CH4-Messdaten → Rot/Orange, gestrichelter Rand
-#   "cold_nodata"= Glazial, keine CH4-Messdaten      → Blau, gestrichelter Rand
+# MIS type:
+#   "warm"       = full interglacial   → red/orange, solid
+#   "inter"      = interstadial        → pale reddish, solid (MIS 3)
+#   "cold"       = glacial             → blue, solid
+#   "warm_nodata"= interglacial, no CH4 data → red/orange, dashed border
+#   "cold_nodata"= glacial, no CH4 data      → blue, dashed border
 #
 # Grenzen: LR04 (Lisiecki & Raymo 2005), außer:
 #   - MIS 13/14-Grenze bei 527 ka (statt LR04 533 ka) → CH4-Minimum in EDC
@@ -132,7 +132,7 @@ MIS_INTERVALS = [
 
 
 def skip_header_lines(filepath):
-    """Gibt die Anzahl der Kommentar-/Headerzeilen zurück (alles vor der Daten-Headerzeile)."""
+    """Returns the number of comment/header lines (everything before the data header line)."""
     with open(filepath, encoding="utf-8") as f:
         for i, line in enumerate(f):
             if line.startswith("/*") or line.startswith(" ") or line.strip() == "":
@@ -149,11 +149,11 @@ def load_ch4_tab(filepath):
         0: Depth ice/snow [m]
         1: Depth ref [m]
         2: Gas age [ka BP]  (EDC1 timescale)
-        3: Gas age [ka BP]  (EDC2 timescale)  ← wir nehmen EDC2 (konsistent mit altem CSV)
+        3: Gas age [ka BP]  (EDC2 timescale)  ← we use EDC2 (consistent with original CSV)
         4: CH4 [ppbv]
         5: CH4 std dev [±]
     """
-    # Alle Zeilen nach dem /* ... */ Block überspringen
+    # Skip all lines before the /* ... */ header block
     rows = []
     header_passed = False
     with open(filepath, encoding="utf-8") as f:
@@ -166,7 +166,7 @@ def load_ch4_tab(filepath):
             stripped = line.strip()
             if stripped == "":
                 continue
-            # Erste Zeile nach Block = Spaltenüberschriften → überspringen
+            # First line after block = column headers → skip
             if stripped.startswith("Depth ice/snow"):
                 continue
             rows.append(stripped.split("\t"))
@@ -188,8 +188,8 @@ def load_ch4_tab(filepath):
     df = df.dropna(subset=["depth_m", "ch4"])
     df = df.sort_values("depth_m").reset_index(drop=True)
 
-    print(f"  CH4 geladen: {len(df)} Datenpunkte")
-    print(f"  Tiefe: {df['depth_m'].min():.1f} – {df['depth_m'].max():.1f} m")
+    print(f"  CH4 loaded: {len(df)} data points")
+    print(f"  Depth: {df['depth_m'].min():.1f} – {df['depth_m'].max():.1f} m")
     print(
         f"  Age (EDC2, ka BP): {df['age_edc2_ka'].min():.1f} – {df['age_edc2_ka'].max():.1f}"
     )
@@ -232,8 +232,8 @@ def load_d18o_tab(filepath):
     df = df.dropna(subset=["depth_m", "d18o"])
     df = df.sort_values("depth_m").reset_index(drop=True)
 
-    print(f"  d18O geladen: {len(df)} Datenpunkte")
-    print(f"  Tiefe: {df['depth_m'].min():.1f} – {df['depth_m'].max():.1f} m")
+    print(f"  d18O loaded: {len(df)} data points")
+    print(f"  Depth: {df['depth_m'].min():.1f} – {df['depth_m'].max():.1f} m")
     print(f"  Age (ka BP): {df['age_ka'].min():.1f} – {df['age_ka'].max():.1f}")
     print(f"  d18O: {df['d18o'].min():.4f} – {df['d18o'].max():.4f} ‰")
 
@@ -241,20 +241,20 @@ def load_d18o_tab(filepath):
 
 
 # ──────────────────────────────────────────────
-# Plot-Funktion (generisch für beide Achsentypen)
+# Plot function (generic for both axis types)
 # ──────────────────────────────────────────────
 
 
 def draw_mis_bands(ax, y_min_ka, y_max_ka):
     """
-    Zeichnet MIS-Farbstreifen auf der Y-Achse (ka BP).
+    Draws MIS colour bands on the Y-axis (ka BP).
 
-    Typen:
-      "warm"        → Rot/Orange, durchgehend (volles Interglazial)
-      "inter"       → blasses Rötlich, durchgehend (Interstadial, z.B. MIS 3)
-      "cold"        → Blau, durchgehend (Glazial)
-      "warm_nodata" → Rot/Orange, gestrichelter Rahmen (keine Messdaten)
-      "cold_nodata" → Blau, gestrichelter Rahmen (keine Messdaten)
+    Types:
+      "warm"        → red/orange, solid (full interglacial)
+      "inter"       → pale reddish, solid (interstadial, e.g. MIS 3)
+      "cold"        → blue, solid (glacial)
+      "warm_nodata" → red/orange, dashed border (no measurement data)
+      "cold_nodata" → blue, dashed border (no measurement data)
     """
     mis_trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
 
@@ -313,30 +313,30 @@ def create_plot(
     use_savgol=False,
 ):
     """
-    Erstellt einen standardisierten EPICA-Plot.
+    Creates a standardised EPICA plot.
 
-    x_values      : pd.Series  – die auf der X-Achse dargestellte Messgröße
-    y_values      : pd.Series  – die auf der Y-Achse dargestellte Tiefe/Zeit
-    xlabel        : str        – X-Achsen-Label (LaTeX ok)
-    ylabel        : str        – Y-Achsen-Label
-    title_text    : str        – Titel über dem Plot
-    output_filename: str       – vollständiger Pfad ohne Extension
-    y_major_interval: float   – Haupttick-Abstand Y
-    y_minor_interval: float   – Nebentick-Abstand Y
-    x_ticks       : list|None – manuelle X-Ticks
-    x_padding     : float     – relativer X-Puffer (falls keine manuellen Ticks)
-    invert_y      : bool       – Y-Achse invertieren (Tiefe nimmt nach unten zu)
-    show_mis      : bool       – MIS-Bänder und Labels einzeichnen (nur für Age-Plots)
-    gap_line      : tuple|None – (x1, y1, x2, y2) Gestrichelte Verbindungslinie für Datenlücken
-    rolling_window: int|None   – Fenstergröße Rolling Median (None = keine Glättung)
-    use_savgol    : bool       – Savitzky-Golay Filter statt Rolling Median
-                                 (SG_WINDOW, SG_POLYORDER aus Konfiguration)
-                                 Bei True: Original grau, geglättet schwarz
+    x_values       : pd.Series  – the measurement quantity shown on the X-axis
+    y_values       : pd.Series  – the depth / time shown on the Y-axis
+    xlabel         : str        – X-axis label (LaTeX ok)
+    ylabel         : str        – Y-axis label
+    title_text     : str        – title above the plot
+    output_filename: str        – full path without file extension
+    y_major_interval: float    – major tick spacing Y
+    y_minor_interval: float    – minor tick spacing Y
+    x_ticks        : list|None – manual X-tick positions
+    x_padding      : float     – relative X padding (if no manual ticks)
+    invert_y       : bool      – invert Y-axis (depth increases downward)
+    show_mis       : bool      – draw MIS bands and labels (age plots only)
+    gap_line       : tuple|None – (x1, y1, x2, y2) dashed line bridging data gaps
+    rolling_window : int|None  – window size for rolling median (None = no smoothing)
+    use_savgol     : bool      – use Savitzky-Golay filter instead of rolling median
+                                 (SG_WINDOW, SG_POLYORDER from config)
+                                 If True: original line grey, smoothed line black
     """
     fig = plt.figure(figsize=FIGURE_SIZE, dpi=DPI)
     ax = fig.add_subplot(111)
 
-    # Y-Achse zuerst setzen (vor MIS-Bändern)
+    # Set Y-axis first (before MIS bands)
     y_min, y_max = y_values.min(), y_values.max()
     if invert_y:
         ax.set_ylim(y_max, y_min)
@@ -344,7 +344,7 @@ def create_plot(
         ax.set_ylim(y_min, y_max)
     ax.margins(y=0)
 
-    # MIS-Bänder im Hintergrund (zorder=0)
+    # MIS bands in background (zorder=0)
     if show_mis:
         draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max)
 
@@ -353,7 +353,7 @@ def create_plot(
         ax.plot(
             x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
         )
-        # Savitzky-Golay geglättet schwarz im Vordergrund
+        # Savitzky-Golay smoothed in black in foreground
         smooth = savgol_filter(
             x_values.values, window_length=SG_WINDOW, polyorder=SG_POLYORDER
         )
@@ -365,7 +365,7 @@ def create_plot(
         ax.plot(
             x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
         )
-        # Rolling Median geglättet schwarz im Vordergrund
+        # Rolling median smoothed in black in foreground
         import pandas as _pd
 
         smooth = (
@@ -383,8 +383,8 @@ def create_plot(
     else:
         ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR, zorder=2)
 
-    # Gestrichelte Verbindungslinie für Datenlücken
-    # gap_line = (x1, y1, x2, y2): verbindet letzten Punkt vor mit erstem Punkt nach der Lücke
+    # Dashed connecting line for data gaps
+    # gap_line = (x1, y1, x2, y2): connects last point before gap to first point after
     if gap_line is not None:
         x1, y1, x2, y2 = gap_line
         ax.plot(
@@ -428,7 +428,7 @@ def create_plot(
         ylabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD, fontweight="bold"
     )
 
-    # Glättungs-Untertitel
+    # Smoothing subtitle
     if use_savgol:
         subtitle = f"Savitzky-Golay filter  |  window = {SG_WINDOW} pts  |  polyorder = {SG_POLYORDER}"
     elif rolling_window is not None:
@@ -466,8 +466,8 @@ def create_plot(
     plt.savefig(svg_path, bbox_inches="tight")
     plt.close()
 
-    print(f"  ✓ Gespeichert: {jpg_path}")
-    print(f"  ✓ Gespeichert: {svg_path}")
+    print(f"  ✓ Saved: {jpg_path}")
+    print(f"  ✓ Saved: {svg_path}")
 
 
 # ──────────────────────────────────────────────
@@ -482,9 +482,9 @@ def create_plot(
 #   PROV-O    – W3C Provenance (Datenherkunft, PANGAEA-DOI)
 #   GeoSPARQL – OGC Geometrie / Standort
 #   CIDOC-CRM – ISO 21127, Kulturerbe-Ereignisse (Feldkampagne, Probenahme)
-#   CRMsci    – CRM-Erweiterung für naturwiss. Beobachtungen
-#   QUDT      – Einheiten (ppbv, ‰, m, ka BP)
-#   Dublin Core – Metadaten (Titel, Autoren, Lizenz)
+#   CRMsci    – CRM extension for natural-science observations
+#   QUDT      – units (ppbv, ‰, m, ka BP)
+#   Dublin Core – metadata (title, authors, licence)
 # ============================================================================
 
 
@@ -614,7 +614,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((dataset, DCT.source, src_d18o))
 
     # ── DCAT Catalog ─────────────────────────────────────────────────────
-    # dcat:Catalog fasst alle Datasets zusammen (Einstiegspunkt für Linked Data)
+    # dcat:Catalog groups all datasets (entry point for Linked Data)
     catalog = GEOLOD["EPICA_DomeC_Catalog"]
     g.add((catalog, RDF.type, DCAT["Catalog"]))
     g.add(
@@ -711,9 +711,9 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     g.add((ds_d18o, DCAT["distribution"], src_d18o))
     g.add((catalog, DCAT["dataset"], ds_d18o))
 
-    # Observations den jeweiligen Datasets zuordnen
-    # (wird später beim Loop gesetzt via geolod:ch4Dataset / geolod:d18oDataset)
-    # Referenzen für spätere Verlinkung im Graph speichern
+    # Observations will be linked to their respective datasets in the loop
+    # (set later via geolod:ch4Dataset / geolod:d18oDataset)
+    # Store references for later graph linking
     g.__epica_catalog__ = catalog
     g.__epica_ds_ch4__ = ds_ch4
     g.__epica_ds_d18o__ = ds_d18o
@@ -800,7 +800,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         )
     )
 
-    # ── Glättungs-Parameter als Named Individuals ─────────────────────────
+    # ── Smoothing parameters as named individuals ──────────────────────────
     smooth_median = GEOLOD[f"RollingMedian_w{ROLLING_WINDOW}"]
     g.add((smooth_median, RDF.type, CRMSCI["S6_Data_Evaluation"]))
     g.add(
@@ -877,12 +877,12 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
     )
 
     # ── CH4-Observationen ────────────────────────────────────────────────
-    print("  Schreibe CH4-Observationen …")
+    print("  Writing CH4 observations …")
     df_ch4_valid = df_ch4.dropna(subset=["ch4", "age_edc2_ka", "depth_m"]).reset_index(
         drop=True
     )
 
-    # Glättungswerte vorausberechnen
+    # Pre-calculate smoothed values
     ch4_smooth_median = (
         pd.Series(df_ch4_valid["ch4"].values)
         .rolling(window=ROLLING_WINDOW, center=True, min_periods=1)
@@ -931,7 +931,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         )
         g.add((obs, GEOLOD["ageChronology"], chron_edc2))
         g.add((obs, QUDT["unit"], UNIT["PPB"]))
-        # Geglättete Werte mit Tag zur Methode
+        # Smoothed values tagged with method
         g.add(
             (
                 obs,
@@ -954,7 +954,7 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
         g.add((ds_ch4, DCAT["record"], obs))
 
     # ── d18O-Observationen ───────────────────────────────────────────────
-    print("  Schreibe δ¹⁸O-Observationen …")
+    print("  Writing δ¹⁸O observations …")
     df_d18o_valid = df_d18o.dropna(subset=["d18o", "age_ka", "depth_m"]).reset_index(
         drop=True
     )
@@ -1033,9 +1033,9 @@ def build_epica_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame) -> "Graph":
 
 def export_ontology():
     """
-    Schreibt die EPICA OWL-Ontologie als Turtle-Datei.
-    Glättungsparameter (ROLLING_WINDOW, SG_WINDOW, SG_POLYORDER) werden
-    zur Laufzeit in die Named Individuals eingesetzt.
+    Writes the EPICA OWL ontology as a Turtle file.
+    Smoothing parameters (ROLLING_WINDOW, SG_WINDOW, SG_POLYORDER) are
+    interpolated into the named individuals at runtime.
     """
     from datetime import datetime as _dt
 
@@ -1208,7 +1208,7 @@ geolod:IceCoreChronology
     rdfs:label          "Ice Core Chronology"@en ;
     rdfs:comment        "A depth-age model assigning calendar ages to depths in an ice core (e.g. EDC2, AICC2023)."@en .
 
-# ── Glättungsmethoden ─────────────────────────────────────────────────────────
+# ── Smoothing methods ─────────────────────────────────────────────────────────
 
 geolod:SmoothingMethod
     a owl:Class ;
@@ -1445,8 +1445,8 @@ geolod:PANGAEA_d18O_Source
     dct:date            "2023"^^xsd:gYear ;
     owl:sameAs          <https://doi.org/10.1594/PANGAEA.961024> .
 # ============================================================================
-# LABELS FÜR EXTERNE KLASSEN UND PROPERTIES
-# (damit Protégé auch für importierte Terme Labels anzeigt)
+# LABELS FOR EXTERNAL CLASSES AND PROPERTIES
+# (so that Protégé also displays labels for imported terms)
 # ============================================================================
 
 # ── DCAT ─────────────────────────────────────────────────────────────────────
@@ -1632,7 +1632,7 @@ unit:M
     owl_path = os.path.join(RDF_DIR, "epica_ontology.ttl")
     with open(owl_path, "w", encoding="utf-8") as fh:
         fh.write(owl_ttl)
-    print(f"  ✓ OWL-Ontologie: {owl_path}")
+    print(f"  ✓ OWL ontology: {owl_path}")
     export_mermaid()
 
 
@@ -1963,26 +1963,23 @@ def export_mermaid():
 
 
 def export_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame):
-    """Baut den RDF-Graph und speichert ihn als Turtle (.ttl) und JSON-LD."""
+    """Builds the RDF graph and serialises it as Turtle (.ttl)."""
     if not RDF_AVAILABLE:
         return
 
     print("\n" + "─" * 60)
-    print("RDF-Export …")
+    print("RDF Export …")
     print("─" * 60)
 
     g = build_epica_rdf(df_ch4, df_d18o)
 
     ttl_path = os.path.join(RDF_DIR, "epica_dome_c.ttl")
-    jsonld_path = os.path.join(RDF_DIR, "epica_dome_c.jsonld")
 
     g.serialize(destination=ttl_path, format="turtle")
-    g.serialize(destination=jsonld_path, format="json-ld", indent=2)
 
     triples = len(g)
-    print(f"  ✓ {triples:,} Triples geschrieben")
+    print(f"  ✓ {triples:,} triples written")
     print(f"  ✓ Turtle:  {ttl_path}")
-    print(f"  ✓ JSON-LD: {jsonld_path}")
     export_ontology()
 
 
@@ -1991,14 +1988,14 @@ def main():
     tee = Tee(report_path)
 
     print("=" * 60)
-    print("EPICA Dome C – Plot Generator (TAB-Dateien, komplett)")
+    print("EPICA Dome C – Plot Generator (TAB files, complete)")
     print("=" * 60)
 
     # ── Daten laden ──────────────────────────────
-    print("\n[1/2] Lade CH4 Tab-Datei …")
+    print("\n[1/2] Loading CH4 TAB file …")
     df_ch4 = load_ch4_tab("EDC_CH4.tab")
 
-    print("\n[2/2] Lade d18O Tab-Datei …")
+    print("\n[2/2] Loading d18O TAB file …")
     df_d18o = load_d18o_tab("EPICA_Dome_C_d18O.tab")
 
     # ── Plot-Konfigurationen ──────────────────────
@@ -2042,8 +2039,8 @@ def main():
             "y_minor": AGE_MINOR_TICK_INTERVAL,
             "x_ticks": CH4_TICKS,
             "show_mis": True,
-            # Gestrichelte Verbindungslinie über Datenlücke MIS 8-10 (243–374 ka)
-            # x=CH4-Wert, y=Age; Grenzpunkte direkt aus den Daten
+            # Dashed connecting line across data gap MIS 8-10 (243–374 ka)
+            # x=CH4 value, y=Age; boundary points taken directly from data
             "gap_line": (505.7, 214.19, 484.9, 391.85),
         },
         {
@@ -2058,7 +2055,7 @@ def main():
             "x_ticks": D18O_TICKS,
             "show_mis": True,
         },
-        # ── Geglättet: Nach Tiefe (m) ───────────────
+        # ── Smoothed: by depth (m) ──────────────────
         {
             "x": df_ch4["ch4"],
             "y": df_ch4["depth_m"],
@@ -2087,7 +2084,7 @@ def main():
             "x_ticks": D18O_TICKS,
             "rolling_window": ROLLING_WINDOW,
         },
-        # ── Geglättet: Nach Age (ka BP) ──────────────
+        # ── Smoothed: by age (ka BP) ─────────────────
         {
             "x": df_ch4["ch4"],
             "y": df_ch4["age_edc2_ka"],
@@ -2183,12 +2180,12 @@ def main():
     ]
 
     print("\n" + "─" * 60)
-    print("Erstelle Plots …")
+    print("Generating plots …")
     print("─" * 60)
 
     for i, cfg in enumerate(plots, 1):
         print(f"\n[{i}/{len(plots)}] {cfg['title']} – Y: {cfg['ylabel']}")
-        # Nur Zeilen mit gültigen Y-Werten (age kann NaN sein für einzelne Punkte)
+        # Only rows with valid Y values (age can be NaN for individual points)
         mask = cfg["y"].notna() & cfg["x"].notna()
         create_plot(
             x_values=cfg["x"][mask],
@@ -2206,18 +2203,18 @@ def main():
             use_savgol=cfg.get("use_savgol", False),
         )
 
-    # RDF Export (Daten als Turtle + JSON-LD, benötigt rdflib)
+    # RDF Export (data as Turtle, requires rdflib)
     export_rdf(df_ch4, df_d18o)
-    # OWL-Ontologie (kein rdflib nötig – wird immer geschrieben)
+    # OWL Ontology (no rdflib required – always written)
     if not RDF_AVAILABLE:
         print("\n" + "─" * 60)
-        print("OWL-Ontologie …")
+        print("OWL Ontology …")
         print("─" * 60)
         export_ontology()  # calls export_mermaid() internally
 
     print("\n" + "=" * 60)
-    print(f"Fertig! Alle {len(plots)} Plots wurden in '{OUTPUT_DIR}/' gespeichert.")
-    print(f"Report gespeichert: {report_path}")
+    print(f"Done! All {len(plots)} plots saved to '{OUTPUT_DIR}/'.")
+    print(f"Report saved: {report_path}")
     print("=" * 60)
     tee.close()
 

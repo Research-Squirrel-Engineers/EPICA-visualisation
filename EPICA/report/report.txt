@@ -1,84 +1,83 @@
 ============================================================
-EPICA Dome C – Plot Generator (TAB-Dateien, komplett)
+EPICA Dome C – Plot Generator (TAB files, complete)
 ============================================================
 
-[1/2] Lade CH4 Tab-Datei …
-  CH4 geladen: 736 Datenpunkte
-  Tiefe: 99.3 – 3059.1 m
+[1/2] Loading CH4 TAB file …
+  CH4 loaded: 736 data points
+  Depth: 99.3 – 3059.1 m
   Age (EDC2, ka BP): 0.0 – 648.7
   CH4: 343.5 – 907.0 ppbv
 
-[2/2] Lade d18O Tab-Datei …
-  d18O geladen: 1378 Datenpunkte
-  Tiefe: 1410.8 – 3191.1 m
+[2/2] Loading d18O TAB file …
+  d18O loaded: 1378 data points
+  Depth: 1410.8 – 3191.1 m
   Age (ka BP): 101.7 – 805.8
   d18O: -0.4759 – 1.4573 ‰
 
 ────────────────────────────────────────────────────────────
-Erstelle Plots …
+Generating plots …
 ────────────────────────────────────────────────────────────
 
 [1/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full.svg
 
 [2/12] EPICA – δ¹⁸O – Y: Depth [m]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full.svg
 
 [3/12] EPICA – CH₄ – Y: Age [ka BP]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full.svg
 
 [4/12] EPICA – δ¹⁸O – Y: Age [ka BP]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full.svg
 
 [5/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_smooth11.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_smooth11.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_smooth11.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_smooth11.svg
 
 [6/12] EPICA – δ¹⁸O – Y: Depth [m]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_smooth11.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_smooth11.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_smooth11.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_smooth11.svg
 
 [7/12] EPICA – CH₄ – Y: Age [ka BP]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_smooth11.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_smooth11.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg
 
 [8/12] EPICA – δ¹⁸O – Y: Age [ka BP]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_smooth11.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_smooth11.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg
 
 [9/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_savgol11p2.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_savgol11p2.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg
 
 [10/12] EPICA – δ¹⁸O – Y: Depth [m]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_savgol11p2.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_savgol11p2.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg
 
 [11/12] EPICA – CH₄ – Y: Age [ka BP]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg
 
 [12/12] EPICA – δ¹⁸O – Y: Age [ka BP]
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.jpg
-  ✓ Gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.jpg
+  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg
 
 ────────────────────────────────────────────────────────────
-RDF-Export …
+RDF Export …
 ────────────────────────────────────────────────────────────
-  Schreibe CH4-Observationen …
-  Schreibe δ¹⁸O-Observationen …
-  ✓ 40,250 Triples geschrieben
+  Writing CH4 observations …
+  Writing δ¹⁸O observations …
+  ✓ 40,250 triples written
   ✓ Turtle:  c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_dome_c.ttl
-  ✓ JSON-LD: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_dome_c.jsonld
-  ✓ OWL-Ontologie: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_ontology.ttl
+  ✓ OWL ontology: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_ontology.ttl
   ✓ Mermaid Taxonomy: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_diagram1_taxonomy.mermaid
   ✓ Mermaid Instance: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_diagram2_instance.mermaid
 
 ============================================================
-Fertig! Alle 12 Plots wurden in 'c:\git\EPICA-SISAL-FAIRification\EPICA\plots/' gespeichert.
-Report gespeichert: c:\git\EPICA-SISAL-FAIRification\EPICA\report\report.txt
+Done! All 12 plots saved to 'c:\git\EPICA-SISAL-FAIRification\EPICA\plots/'.
+Report saved: c:\git\EPICA-SISAL-FAIRification\EPICA\report\report.txt
 ============================================================

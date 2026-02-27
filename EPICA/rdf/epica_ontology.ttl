@@ -17,7 +17,7 @@
 # ============================================================================
 # EPICA Dome C Ice Core – OWL Ontology
 # Generiert von: plot_epica_from_tab.py
-# Datum: 2026-02-25
+# Datum: 2026-02-27
 # Parameter: ROLLING_WINDOW=11, SG_WINDOW=11, SG_POLYORDER=2
 # ============================================================================
 
@@ -28,7 +28,7 @@ geolod:
     dct:description     "OWL ontology for palaeoclimatic ice core observations from EPICA Dome C, East Antarctica. Covers CH4 and d18O measurements, smoothing methods, site geometry, drilling campaign and data provenance."@en ;
     dct:creator         "Derived from ELSAinteractive++ methodology (Diensberg 2020)"@en ;
     dct:license         <https://creativecommons.org/licenses/by/4.0/> ;
-    dct:created         "2026-02-25"^^xsd:date ;
+    dct:created         "2026-02-27"^^xsd:date ;
     owl:versionIRI      <http://w3id.org/geo-lod/1.0> ;
     owl:versionInfo     "1.0.0" ;
     rdfs:seeAlso        <http://www.w3.org/ns/sosa/> ;
@@ -167,7 +167,7 @@ geolod:IceCoreChronology
     rdfs:label          "Ice Core Chronology"@en ;
     rdfs:comment        "A depth-age model assigning calendar ages to depths in an ice core (e.g. EDC2, AICC2023)."@en .
 
-# ── Glättungsmethoden ─────────────────────────────────────────────────────────
+# ── Smoothing methods ─────────────────────────────────────────────────────────
 
 geolod:SmoothingMethod
     a owl:Class ;
@@ -404,8 +404,8 @@ geolod:PANGAEA_d18O_Source
     dct:date            "2023"^^xsd:gYear ;
     owl:sameAs          <https://doi.org/10.1594/PANGAEA.961024> .
 # ============================================================================
-# LABELS FÜR EXTERNE KLASSEN UND PROPERTIES
-# (damit Protégé auch für importierte Terme Labels anzeigt)
+# LABELS FOR EXTERNAL CLASSES AND PROPERTIES
+# (so that Protégé also displays labels for imported terms)
 # ============================================================================
 
 # ── DCAT ─────────────────────────────────────────────────────────────────────
