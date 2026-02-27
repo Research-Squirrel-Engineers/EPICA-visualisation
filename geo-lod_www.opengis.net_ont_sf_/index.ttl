@@ -10,5 +10,6 @@
     void:linkPredicate rdf:type ;
     void:objectsTarget <http://www.opengis.net/ont/sf#> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 1 .
+    void:triples 1,
+        305 .
 

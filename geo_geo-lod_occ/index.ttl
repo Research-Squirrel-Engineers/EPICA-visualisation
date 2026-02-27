@@ -7,5 +7,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Occurrences of vocabulary http://www.opengis.net/ont/geosparql# in geo-lod" ;
     ns1:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    ns1:occurrences 6 .
+    ns1:occurrences 2,
+        6 .
 

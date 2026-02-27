@@ -1,0 +1,18 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <http://w3id.org/geo-lod/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:Cave_site_0161 a ns1:Cave,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Aurora cave"@en ;
+    void:inDataset ns1:geo-lod ;
+    ns1:countD13CSamples 124 ;
+    ns1:countD18OSamples 124 ;
+    ns1:siteId 161 ;
+    geo:hasGeometry ns1:Cave_site_0161_Geometry ;
+    prov:wasDerivedFrom ns1:SISALv3_DataSource .
+

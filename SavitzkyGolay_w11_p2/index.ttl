@@ -4,7 +4,8 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:SavitzkyGolay_w11_p2 a <http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation>,
+ns1:SavitzkyGolay_w11_p2 a ns1:SavitzkyGolayFilter,
+        <http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation>,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Savitzky-Golay filter, window=11 pts, polyorder=2"@en ;

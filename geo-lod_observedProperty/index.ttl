@@ -8,5 +8,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: observedProperty"@en ;
     void:property sosa:observedProperty ;
-    void:triples 2114 .
+    void:triples 2114,
+        12388 .
 

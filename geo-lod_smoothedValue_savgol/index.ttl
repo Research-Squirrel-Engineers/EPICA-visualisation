@@ -7,5 +7,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: smoothedValue_savgol"@en ;
     void:property <http://w3id.org/geo-lod/smoothedValue_savgol> ;
-    void:triples 2114 .
+    void:triples 2114,
+        12388 .
 

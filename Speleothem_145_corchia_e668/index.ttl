@@ -1,0 +1,13 @@
+@prefix ns1: <http://w3id.org/geo-lod/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:Speleothem_145_corchia_e668 a ns1:Speleothem,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Antro del Corchia – CC-28_2018"@en ;
+    void:inDataset ns1:geo-lod ;
+    ns1:collectedFrom ns1:Cave_145_corchia ;
+    ns1:entityId 668 .
+

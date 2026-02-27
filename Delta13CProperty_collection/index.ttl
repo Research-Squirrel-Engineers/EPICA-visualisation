@@ -1,0 +1,11 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/Delta13CProperty_collection> a skos:Collection,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Delta13CProperty Instances Collection"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:member <http://w3id.org/geo-lod/Delta13C_Speleothem> .
+

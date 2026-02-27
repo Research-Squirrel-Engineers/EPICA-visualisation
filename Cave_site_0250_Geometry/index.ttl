@@ -1,0 +1,9 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/Cave_site_0250_Geometry> a <http://www.opengis.net/ont/sf#Point>,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    geo:asWKT "POINT(105.43 33.82)"^^geo:wktLiteral .
+

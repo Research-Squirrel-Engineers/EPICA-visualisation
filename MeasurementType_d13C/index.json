@@ -1,0 +1,1 @@
+{"http://rdfs.org/ns/void#inDataset": ["http://w3id.org/geo-lod/geo-lod"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://w3id.org/geo-lod/MeasurementType"], "http://www.w3.org/2000/01/rdf-schema#label": ["delta-13C Measurement"]}

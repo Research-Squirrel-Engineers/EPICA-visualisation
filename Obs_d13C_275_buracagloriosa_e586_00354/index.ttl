@@ -1,0 +1,22 @@
+@prefix ns1: <http://w3id.org/geo-lod/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:Obs_d13C_275_buracagloriosa_e586_00354 a ns1:Delta13CSpeleothemObservation,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    void:inDataset ns1:geo-lod ;
+    ns1:ageChronologySpeleothem ns1:UThChronology_275_buracagloriosa ;
+    ns1:ageKaBP 103.2644 ;
+    ns1:measuredValue -2.5392 ;
+    ns1:measurementType ns1:MeasurementType_d13C ;
+    ns1:smoothedValue_rollingMedian -1.8248 ;
+    ns1:smoothedValue_savgol -2.0121 ;
+    ns1:smoothingMethod_median ns1:RollingMedian_w11 ;
+    ns1:smoothingMethod_savgol ns1:SavitzkyGolay_w11_p2 ;
+    prov:wasDerivedFrom ns1:SISALv3_DataSource ;
+    sosa:hasFeatureOfInterest ns1:Speleothem_275_buracagloriosa_e586 ;
+    sosa:observedProperty ns1:Delta13C_Speleothem .
+

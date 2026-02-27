@@ -1,6 +1,6 @@
-@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix ns2: <http://w3id.org/geo-lod/> .
-@prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns3: <http://qudt.org/schema/qudt/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -12,7 +12,7 @@ ns2:Obs_d18O_0782 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
         sosa:Observation,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "δ¹⁸O observation 0782 (338.1 ka BP)"@en ;
-    ns1:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    ns3:unit <http://qudt.org/vocab/unit/PERMILLE> ;
     void:inDataset ns2:geo-lod ;
     ns2:ageChronology ns2:AICC2023_Chronology ;
     ns2:atDepth_m 2599.85 ;
@@ -21,7 +21,7 @@ ns2:Obs_d18O_0782 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
     ns2:smoothedValue_savgol 1.1295 ;
     ns2:smoothingMethod_median ns2:RollingMedian_w11 ;
     ns2:smoothingMethod_savgol ns2:SavitzkyGolay_w11_p2 ;
-    ns3:P7_took_place_at ns2:EpicaDomeC_Site ;
+    ns1:P7_took_place_at ns2:EpicaDomeC_Site ;
     prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.961024> ;
     sosa:hasFeatureOfInterest ns2:EpicaDomeC_IceCore ;
     sosa:hasSimpleResult 1.1563 ;
