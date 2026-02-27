@@ -38,7 +38,7 @@ var search={
   "Bukit Assam cave": "http://w3id.org/geo-lod/Cave_site_0116",
   "Bulgarian Orlova Chuka cave": "http://w3id.org/geo-lod/Cave_site_0263",
   "Bunker cave": "http://w3id.org/geo-lod/Cave_site_0117",
-  "Buraca Gloriosa": "http://w3id.org/geo-lod/Cave_275_buracagloriosa",
+  "Buraca Gloriosa": "http://w3id.org/geo-lod/Cave_site_0275",
   "Buraca Gloriosa \u2013 BG41": "http://w3id.org/geo-lod/Speleothem_275_buracagloriosa_e583",
   "Buraca Gloriosa \u2013 BG611": "http://w3id.org/geo-lod/Speleothem_275_buracagloriosa_e586",
   "Buraca Gloriosa \u2013 BG66": "http://w3id.org/geo-lod/Speleothem_275_buracagloriosa_e584",
