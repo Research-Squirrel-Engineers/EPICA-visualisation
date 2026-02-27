@@ -7,8 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "UThChronology Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/UThChronology_140_sanbao>,
-        <http://w3id.org/geo-lod/UThChronology_144_botuvera>,
-        <http://w3id.org/geo-lod/UThChronology_145_corchia>,
-        <http://w3id.org/geo-lod/UThChronology_275_buracagloriosa> .
+    rdfs:member <http://w3id.org/geo-lod/UThChronology_145_corchia> .
 

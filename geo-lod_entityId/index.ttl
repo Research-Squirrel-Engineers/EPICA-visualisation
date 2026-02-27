@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: entityId"@en ;
     void:property <http://w3id.org/geo-lod/entityId> ;
-    void:triples 29 .
+    void:triples 4 .
 

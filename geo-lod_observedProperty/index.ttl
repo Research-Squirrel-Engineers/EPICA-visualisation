@@ -9,5 +9,5 @@
     rdfs:label "Property Partition: observedProperty"@en ;
     void:property sosa:observedProperty ;
     void:triples 2114,
-        12388 .
+        2468 .
 

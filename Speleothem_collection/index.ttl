@@ -7,33 +7,8 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Speleothem Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/Speleothem_140_sanbao_e295>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e296>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e297>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e298>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e299>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e300>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e304>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e482>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e484>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e485>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e486>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e488>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e489>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e491>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e492>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e493>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e494>,
-        <http://w3id.org/geo-lod/Speleothem_140_sanbao_e846>,
-        <http://w3id.org/geo-lod/Speleothem_144_botuvera_e311>,
-        <http://w3id.org/geo-lod/Speleothem_144_botuvera_e312>,
-        <http://w3id.org/geo-lod/Speleothem_145_corchia_e665>,
+    rdfs:member <http://w3id.org/geo-lod/Speleothem_145_corchia_e665>,
         <http://w3id.org/geo-lod/Speleothem_145_corchia_e667>,
         <http://w3id.org/geo-lod/Speleothem_145_corchia_e668>,
-        <http://w3id.org/geo-lod/Speleothem_145_corchia_e670>,
-        <http://w3id.org/geo-lod/Speleothem_275_buracagloriosa_e583>,
-        <http://w3id.org/geo-lod/Speleothem_275_buracagloriosa_e584>,
-        <http://w3id.org/geo-lod/Speleothem_275_buracagloriosa_e585>,
-        <http://w3id.org/geo-lod/Speleothem_275_buracagloriosa_e586>,
-        <http://w3id.org/geo-lod/Speleothem_275_buracagloriosa_e587> .
+        <http://w3id.org/geo-lod/Speleothem_145_corchia_e670> .
 

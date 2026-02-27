@@ -11,6 +11,6 @@
     void:linkPredicate rdf:type ;
     void:objectsTarget geo: ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 1,
-        3 .
+    void:triples 3,
+        4 .
 

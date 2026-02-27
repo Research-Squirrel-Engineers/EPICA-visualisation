@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: ageKaBP"@en ;
     void:property <http://w3id.org/geo-lod/ageKaBP> ;
-    void:triples 12388 .
+    void:triples 2468 .
 

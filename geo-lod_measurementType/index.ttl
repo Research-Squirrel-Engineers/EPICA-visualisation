@@ -8,5 +8,5 @@
     rdfs:label "Property Partition: measurementType"@en ;
     void:property <http://w3id.org/geo-lod/measurementType> ;
     void:triples 2114,
-        12388 .
+        2468 .
 

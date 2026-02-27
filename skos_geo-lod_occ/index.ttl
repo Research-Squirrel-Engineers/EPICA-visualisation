@@ -7,5 +7,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Occurrences of vocabulary http://www.w3.org/2004/02/skos/core# in geo-lod" ;
     ns1:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    ns1:occurrences 20 .
+    ns1:occurrences 20,
+        24 .
 

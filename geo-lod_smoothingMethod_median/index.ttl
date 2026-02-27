@@ -8,5 +8,5 @@
     rdfs:label "Property Partition: smoothingMethod_median"@en ;
     void:property <http://w3id.org/geo-lod/smoothingMethod_median> ;
     void:triples 2114,
-        12388 .
+        2468 .
 
