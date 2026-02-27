@@ -1,0 +1,185 @@
+flowchart LR
+
+    subgraph EXT["External Ontologies"]
+        direction TB
+
+        subgraph GEO_ONT["GeoSPARQL"]
+            direction TB
+            GF["geo:Feature"]
+            GFC["geo:FeatureCollection"]
+            GG["geo:Geometry"]
+        end
+
+        subgraph SF_ONT["Simple Features"]
+            SFP["sf:Point"]
+        end
+
+        subgraph CRM_GRP["CIDOC-CRM"]
+            direction TB
+            CE53["crm:E53_Place"]
+            CE27["crm:E27_Site"]
+            CE22["crm:E22_Human-Made_Object"]
+            CE7["crm:E7_Activity"]
+        end
+
+        subgraph CRMSCI_GRP["CRMsci"]
+            direction TB
+            CS4["crmsci:S4_Observation"]
+            CS6["crmsci:S6_Data_Evaluation"]
+            CS9["crmsci:S9_Property_Type"]
+            CS1["crmsci:S1_Matter_Removal"]
+        end
+
+        subgraph SOSA_GRP["SOSA / SSN"]
+            direction TB
+            SO["sosa:Observation"]
+            SS["sosa:Sample"]
+            SP["sosa:ObservableProperty"]
+        end
+
+        subgraph PROV_GRP["PROV-O"]
+            PE["prov:Entity"]
+        end
+
+        SFP -->|subClassOf| GG
+        GFC -.->|rdfs:member| GF
+    end
+
+    subgraph CORE["geo-lod Core  (geo_lod_core.ttl)"]
+        direction TB
+
+        subgraph C_LOC["Locations"]
+            SL["SamplingLocation"]
+            SL -->|subClassOf| GF
+            SL -->|subClassOf| CE53
+            SL -->|subClassOf| CE27
+        end
+
+        subgraph C_SAMP["Samples"]
+            PS["PalaeoclimateSample"]
+            PS -->|subClassOf| SS
+        end
+
+        subgraph C_OBS["Observations"]
+            PO["PalaeoclimateObservation"]
+            PO -->|subClassOf| CS4
+            PO -->|subClassOf| SO
+        end
+
+        subgraph C_PROP["Observable Properties"]
+            OP["ObservableProperty"]
+            D18OP["Delta18OProperty"]
+            OP -->|subClassOf| SP
+            OP -->|subClassOf| CS9
+            D18OP -->|subClassOf| OP
+        end
+
+        subgraph C_CHRON["Chronology"]
+            CH["Chronology"]
+        end
+
+        subgraph C_SMOOTH["Smoothing"]
+            SM["SmoothingMethod"]
+            RM["RollingMedianFilter"]
+            SG["SavitzkyGolayFilter"]
+            SM -->|subClassOf| CS6
+            RM -->|subClassOf| SM
+            SG -->|subClassOf| SM
+        end
+
+        subgraph C_MTYPE["Measurement Type"]
+            MT["MeasurementType"]
+            MT -->|subClassOf| CS6
+        end
+
+        subgraph C_DS["Data Source"]
+            DS["DataSource"]
+            DS -->|subClassOf| PE
+        end
+    end
+
+    subgraph EPICA["geo-lod EPICA Extension  (epica_ontology.ttl)"]
+        direction TB
+
+        subgraph EP_LOC["Ice Core Location"]
+            DRSITE["DrillingSite"]
+            DRSITE -->|subClassOf| SL
+        end
+
+        subgraph EP_SAMP["Ice Core Sample"]
+            IC["IceCore"]
+            IC -->|subClassOf| PS
+            IC -->|subClassOf| CE22
+        end
+
+        subgraph EP_OBS["Ice Core Observations"]
+            ICO["IceCoreObservation"]
+            CH4O["CH4Observation"]
+            D18OO["Delta18OObservation"]
+            ICO -->|subClassOf| PO
+            CH4O -->|subClassOf| ICO
+            D18OO -->|subClassOf| ICO
+        end
+
+        subgraph EP_PROP["Ice Core Properties"]
+            CH4P["CH4ConcentrationProperty"]
+            CH4P -->|subClassOf| OP
+        end
+
+        subgraph EP_CHRON["Ice Core Chronology"]
+            ICC["IceCoreChronology"]
+            ICC -->|subClassOf| CH
+        end
+
+        subgraph EP_DATA["Catalogue & Dataset"]
+            PCC["PalaeoclimateDataCatalogue"]
+            ICD["IceCoreDataset"]
+            CH4D["CH4Dataset"]
+            D18OD["Delta18ODataset"]
+            CH4D -->|subClassOf| ICD
+            D18OD -->|subClassOf| ICD
+        end
+
+        subgraph EP_CAMP["Campaign"]
+            DC["DrillingCampaign"]
+            DC -->|subClassOf| CE7
+        end
+    end
+
+    subgraph SISAL["geo-lod SISAL Extension  (sisal_ontology.ttl)"]
+        direction TB
+
+        subgraph SI_LOC["Speleothem Location"]
+            CAVE["Cave"]
+            CAVE -->|subClassOf| SL
+        end
+
+        subgraph SI_SAMP["Speleothem Sample"]
+            SPEL["Speleothem"]
+            SPEL -->|subClassOf| PS
+        end
+
+        subgraph SI_EVT["Sampling Event"]
+            SSE["SpeleothemSamplingEvent"]
+            SSE -->|subClassOf| CS1
+        end
+
+        subgraph SI_OBS["Speleothem Observations"]
+            SPO["SpeleothemObservation"]
+            D18OS["Delta18OSpeleothemObservation"]
+            D13CS["Delta13CSpeleothemObservation"]
+            SPO -->|subClassOf| PO
+            D18OS -->|subClassOf| SPO
+            D13CS -->|subClassOf| SPO
+        end
+
+        subgraph SI_PROP["Speleothem Properties"]
+            D13CP["Delta13CProperty"]
+            D13CP -->|subClassOf| OP
+        end
+
+        subgraph SI_CHRON["U-Th Chronology"]
+            UTHC["UThChronology"]
+            UTHC -->|subClassOf| CH
+        end
+    end
