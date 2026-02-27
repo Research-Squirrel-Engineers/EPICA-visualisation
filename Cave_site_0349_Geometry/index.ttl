@@ -5,5 +5,5 @@
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    geo:asWKT "POINT(72.35 40.39)"^^geo:wktLiteral .
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(72.35 40.39)"^^geo:wktLiteral .
 

@@ -6,8 +6,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ns1:Cave_site_0112 a ns1:Cave,
-        <http://www.cidoc-crm.org/cidoc-crm/E27_Site>,
-        <http://www.cidoc-crm.org/cidoc-crm/E53_Place>,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Xinya cave"@en ;

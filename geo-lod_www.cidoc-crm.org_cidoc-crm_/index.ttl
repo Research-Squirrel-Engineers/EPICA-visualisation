@@ -10,7 +10,5 @@
     void:linkPredicate rdf:type ;
     void:objectsTarget <http://www.cidoc-crm.org/cidoc-crm/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 2,
-        4,
-        610 .
+    void:triples 4 .
 

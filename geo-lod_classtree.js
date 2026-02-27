@@ -12399,8 +12399,8 @@ var tree={
               "instancecount": 1234,
               "http://rdfs.org/ns/void#Dataset": 1234,
               "http://www.w3.org/ns/adms#Asset": 1234,
-              "http://www.w3.org/ns/ldp#Resource": 913,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 913
+              "http://www.w3.org/ns/ldp#Resource": 526,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 526
             },
             "http://w3id.org/geo-lod/ageChronologySpeleothem": {
               "instancecount": 1234,
@@ -12425,16 +12425,16 @@ var tree={
             "http://w3id.org/geo-lod/smoothingMethod_median": {
               "instancecount": 1234,
               "http://w3id.org/geo-lod/RollingMedianFilter": 1234,
-              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 769,
-              "http://www.w3.org/ns/ldp#Resource": 769,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 769
+              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 993,
+              "http://www.w3.org/ns/ldp#Resource": 993,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 993
             },
             "http://w3id.org/geo-lod/smoothingMethod_savgol": {
               "instancecount": 1234,
               "http://w3id.org/geo-lod/SavitzkyGolayFilter": 1234,
-              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 124,
-              "http://www.w3.org/ns/ldp#Resource": 124,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 124
+              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 1050,
+              "http://www.w3.org/ns/ldp#Resource": 1050,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1050
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 1234
@@ -24810,8 +24810,8 @@ var tree={
               "instancecount": 1234,
               "http://rdfs.org/ns/void#Dataset": 1234,
               "http://www.w3.org/ns/adms#Asset": 1234,
-              "http://www.w3.org/ns/ldp#Resource": 906,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 906
+              "http://www.w3.org/ns/ldp#Resource": 531,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 531
             },
             "http://w3id.org/geo-lod/ageChronologySpeleothem": {
               "instancecount": 1234,
@@ -24826,8 +24826,8 @@ var tree={
             "http://w3id.org/geo-lod/measurementType": {
               "instancecount": 1234,
               "http://w3id.org/geo-lod/MeasurementType": 1234,
-              "http://www.w3.org/ns/ldp#Resource": 189,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 189
+              "http://www.w3.org/ns/ldp#Resource": 841,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 841
             },
             "http://w3id.org/geo-lod/smoothedValue_rollingMedian": {
               "instancecount": 1234
@@ -24838,16 +24838,16 @@ var tree={
             "http://w3id.org/geo-lod/smoothingMethod_median": {
               "instancecount": 1234,
               "http://w3id.org/geo-lod/RollingMedianFilter": 1234,
-              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 768,
-              "http://www.w3.org/ns/ldp#Resource": 768,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 768
+              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 972,
+              "http://www.w3.org/ns/ldp#Resource": 972,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 972
             },
             "http://w3id.org/geo-lod/smoothingMethod_savgol": {
               "instancecount": 1234,
               "http://w3id.org/geo-lod/SavitzkyGolayFilter": 1234,
-              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 118,
-              "http://www.w3.org/ns/ldp#Resource": 118,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 118
+              "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 1027,
+              "http://www.w3.org/ns/ldp#Resource": 1027,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1027
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 1234
@@ -24867,7 +24867,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_145_corchia_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_145_corchia",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "instance",
         "text": "Antro del Corchia (geolod:Cave_145_corchia)",
@@ -24883,54 +24883,12 @@ var tree={
         "instancecount": 1,
         "text": "Cave (geolod:Cave) [306]",
         "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_145_corchia_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "instance",
-        "text": "Antro del Corchia (geolod:Cave_145_corchia)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "parent": "#",
-        "type": "halfgeoclass",
-        "instancecount": 1,
-        "text": "E27_Site (crm:E27_Site) [307]",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_145_corchia_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "instance",
-        "text": "Antro del Corchia (geolod:Cave_145_corchia)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "parent": "#",
-        "type": "halfgeoclass",
-        "instancecount": 1,
-        "text": "E53_Place (crm:E53_Place) [307]",
-        "data": {
           "from": {
             "http://w3id.org/geo-lod/collectedFrom": {
               "http://w3id.org/geo-lod/Speleothem": 4
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
-              "http://www.w3.org/2004/02/skos/core#Collection": 3,
+              "http://www.w3.org/2004/02/skos/core#Collection": 1,
               "http://www.opengis.net/ont/geosparql#FeatureCollection": 1,
               "http://www.w3.org/ns/ldp#Resource": 1,
               "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
@@ -24948,7 +24906,7 @@ var tree={
               "instancecount": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-              "instancecount": 3
+              "instancecount": 1
             },
             "http://www.w3.org/2000/01/rdf-schema#label": {
               "instancecount": 1
@@ -25017,14 +24975,12 @@ var tree={
               "instancecount": 4,
               "http://rdfs.org/ns/void#Dataset": 4,
               "http://www.w3.org/ns/adms#Asset": 4,
-              "http://www.w3.org/ns/ldp#Resource": 2,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 2
+              "http://www.w3.org/ns/ldp#Resource": 3,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3
             },
             "http://w3id.org/geo-lod/collectedFrom": {
               "instancecount": 4,
-              "http://w3id.org/geo-lod/Cave": 4,
-              "http://www.cidoc-crm.org/cidoc-crm/E27_Site": 4,
-              "http://www.cidoc-crm.org/cidoc-crm/E53_Place": 4
+              "http://w3id.org/geo-lod/Cave": 4
             },
             "http://w3id.org/geo-lod/entityId": {
               "instancecount": 4
@@ -25067,9 +25023,7 @@ var tree={
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
               "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://www.w3.org/ns/ldp#Resource": 1,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 1
@@ -25162,9 +25116,7 @@ var tree={
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 2,
               "http://rdfs.org/ns/void#Dataset": 2,
-              "http://www.w3.org/ns/adms#Asset": 2,
-              "http://www.w3.org/ns/ldp#Resource": 2,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 2
+              "http://www.w3.org/ns/adms#Asset": 2
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 4
@@ -25211,9 +25163,7 @@ var tree={
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
               "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://www.w3.org/ns/ldp#Resource": 1,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://w3id.org/geo-lod/windowSize": {
               "instancecount": 1
@@ -25260,9 +25210,7 @@ var tree={
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
               "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://www.w3.org/ns/ldp#Resource": 1,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://w3id.org/geo-lod/polyOrder": {
               "instancecount": 1
@@ -25309,9 +25257,7 @@ var tree={
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
               "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://www.w3.org/ns/ldp#Resource": 1,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 1
@@ -25350,26 +25296,6 @@ var tree={
         "parent": "http://www.w3.org/2004/02/skos/core#Collection",
         "type": "instance",
         "text": "Cave Instances Collection (geolod:Cave_collection)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/E27_Site_collection",
-        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
-        "type": "instance",
-        "text": "E27_Site Instances Collection (geolod:E27_Site_collection)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/E53_Place_collection",
-        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
-        "type": "instance",
-        "text": "E53_Place Instances Collection (geolod:E53_Place_collection)",
         "data": {
           "from": {},
           "to": {}
@@ -25449,47 +25375,98 @@ var tree={
         "id": "http://www.w3.org/2004/02/skos/core#Collection",
         "parent": "#",
         "type": "collectionclass",
-        "instancecount": 12,
-        "text": "Collection (skos:Collection) [21]",
+        "instancecount": 10,
+        "text": "Collection (skos:Collection) [20]",
         "data": {
           "from": {},
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
-              "instancecount": 12,
-              "http://rdfs.org/ns/void#Dataset": 12,
-              "http://www.w3.org/ns/adms#Asset": 12,
-              "http://www.w3.org/ns/ldp#Resource": 9,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 9
+              "instancecount": 10,
+              "http://rdfs.org/ns/void#Dataset": 10,
+              "http://www.w3.org/ns/adms#Asset": 10,
+              "http://www.w3.org/ns/ldp#Resource": 6,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 6
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-              "instancecount": 23
+              "instancecount": 15
             },
             "http://www.w3.org/2000/01/rdf-schema#label": {
-              "instancecount": 12
+              "instancecount": 10
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
-              "instancecount": 3400,
-              "http://w3id.org/geo-lod/Cave": 3,
-              "http://www.cidoc-crm.org/cidoc-crm/E27_Site": 3,
-              "http://www.cidoc-crm.org/cidoc-crm/E53_Place": 3,
-              "http://w3id.org/geo-lod/Delta18OProperty": 1,
-              "http://w3id.org/geo-lod/Speleothem": 4,
+              "instancecount": 2786,
+              "http://w3id.org/geo-lod/Cave": 1,
               "http://w3id.org/geo-lod/UThChronology": 1,
+              "http://w3id.org/geo-lod/Delta18OSpeleothemObservation": 1234,
+              "http://w3id.org/geo-lod/Delta18OProperty": 1,
+              "http://w3id.org/geo-lod/MeasurementType": 2,
+              "http://www.w3.org/ns/ldp#Resource": 3,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3,
               "http://w3id.org/geo-lod/Delta13CProperty": 1,
               "http://w3id.org/geo-lod/RollingMedianFilter": 1,
               "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation": 2,
-              "http://www.w3.org/ns/ldp#Resource": 3,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3,
+              "http://w3id.org/geo-lod/Speleothem": 4,
               "http://w3id.org/geo-lod/Delta13CSpeleothemObservation": 1234,
-              "http://w3id.org/geo-lod/Delta18OSpeleothemObservation": 1234,
-              "http://w3id.org/geo-lod/SavitzkyGolayFilter": 1,
-              "http://w3id.org/geo-lod/MeasurementType": 2
+              "http://w3id.org/geo-lod/SavitzkyGolayFilter": 1
             }
           }
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0001_suniv0_",
+        "id": "http://w3id.org/geo-lod/SISAL_Cave_Collection",
+        "parent": "http://www.opengis.net/ont/geosparql#FeatureCollection",
+        "type": "featurecollection",
+        "text": "SISAL Cave Sites Collection (geolod:SISAL_Cave_Collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://www.opengis.net/ont/geosparql#FeatureCollection",
+        "parent": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
+        "instancecount": 2,
+        "type": "collectionclass",
+        "text": " (gsp:FeatureCollection) [4]",
+        "data": {
+          "from": {
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 1
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 2,
+              "http://rdfs.org/ns/void#Dataset": 2,
+              "http://www.w3.org/ns/adms#Asset": 2,
+              "http://www.w3.org/ns/ldp#Resource": 2,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 2
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 2
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 2
+            },
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "instancecount": 610,
+              "http://w3id.org/geo-lod/Cave": 610
+            }
+          }
+        }
+      },
+      {
+        "id": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
+        "parent": "#",
+        "type": "collectionclass",
+        "text": "SpatialObjectCollection (gsp:SpatialObjectCollection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/Cave_site_0001",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Bittoo cave (geolod:Cave_site_0001)",
@@ -25499,7 +25476,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0002_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0002",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kesang cave (geolod:Cave_site_0002)",
@@ -25509,7 +25486,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0003_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0003",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Paraiso cave (geolod:Cave_site_0003)",
@@ -25519,7 +25496,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0004_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0004",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Villars cave (geolod:Cave_site_0004)",
@@ -25529,7 +25506,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0005_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0005",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Yangkou cave (geolod:Cave_site_0005)",
@@ -25539,7 +25516,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0006_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0006",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Hulu cave (geolod:Cave_site_0006)",
@@ -25549,7 +25526,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0007_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0007",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cold Air cave (geolod:Cave_site_0007)",
@@ -25559,7 +25536,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0008_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0008",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lancaster Hole (geolod:Cave_site_0008)",
@@ -25569,7 +25546,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0009_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0009",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Tonnel\u2019naya cave (geolod:Cave_site_0009)",
@@ -25579,7 +25556,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0010_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0010",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Jaragu\u00e1 cave (geolod:Cave_site_0010)",
@@ -25589,7 +25566,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0011_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0011",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Jeita cave (geolod:Cave_site_0011)",
@@ -25599,7 +25576,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0012_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0012",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Mawmluh cave (geolod:Cave_site_0012)",
@@ -25609,7 +25586,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0013_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0013",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Ball Gown cave (geolod:Cave_site_0013)",
@@ -25619,7 +25596,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0014_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0014",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lehman caves (geolod:Cave_site_0014)",
@@ -25629,7 +25606,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0015_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0015",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Baschg cave (geolod:Cave_site_0015)",
@@ -25639,7 +25616,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0016_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0016",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Han-sur-Lesse cave (geolod:Cave_site_0016)",
@@ -25649,7 +25626,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0017_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0017",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Huangye cave (geolod:Cave_site_0017)",
@@ -25659,7 +25636,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0019_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0019",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kanaan cave (geolod:Cave_site_0019)",
@@ -25669,7 +25646,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0020_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0020",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Secret cave (geolod:Cave_site_0020)",
@@ -25679,7 +25656,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0023_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0023",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lapa grande cave (geolod:Cave_site_0023)",
@@ -25689,7 +25666,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0024_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0024",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lapa sem fim cave (geolod:Cave_site_0024)",
@@ -25699,7 +25676,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0025_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0025",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Palestina cave (geolod:Cave_site_0025)",
@@ -25709,7 +25686,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0026_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0026",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Okshola cave (geolod:Cave_site_0026)",
@@ -25719,7 +25696,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0027_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0027",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Tamboril cave (geolod:Cave_site_0027)",
@@ -25729,7 +25706,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0028_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0028",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Valmiki cave  (geolod:Cave_site_0028)",
@@ -25739,7 +25716,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0029_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0029",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Mairs cave (geolod:Cave_site_0029)",
@@ -25749,7 +25726,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0031_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0031",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Abaliget cave (geolod:Cave_site_0031)",
@@ -25759,7 +25736,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0032_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0032",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Anjokipoty (geolod:Cave_site_0032)",
@@ -25769,7 +25746,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0034_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0034",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cueva del Diablo (geolod:Cave_site_0034)",
@@ -25779,7 +25756,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0035_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0035",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Curupira cave (geolod:Cave_site_0035)",
@@ -25789,7 +25766,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0036_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0036",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Dayu cave (geolod:Cave_site_0036)",
@@ -25799,7 +25776,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0038_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0038",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Diva cave (geolod:Cave_site_0038)",
@@ -25809,7 +25786,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0039_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0039",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Dongge cave (geolod:Cave_site_0039)",
@@ -25819,7 +25796,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0040_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0040",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Excentrica cave (geolod:Cave_site_0040)",
@@ -25829,7 +25806,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0042_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0042",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Ifoulki cave (geolod:Cave_site_0042)",
@@ -25839,7 +25816,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0045_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0045",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kulishu cave (geolod:Cave_site_0045)",
@@ -25849,7 +25826,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0046_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0046",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Labyrintgrottan cave (geolod:Cave_site_0046)",
@@ -25859,7 +25836,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0047_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0047",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Larshullet cave (geolod:Cave_site_0047)",
@@ -25869,7 +25846,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0048_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0048",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Leviathan cave (geolod:Cave_site_0048)",
@@ -25879,7 +25856,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0049_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0049",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "McLean's cave (geolod:Cave_site_0049)",
@@ -25889,7 +25866,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0053_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0053",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pippikin Pot cave (geolod:Cave_site_0053)",
@@ -25899,7 +25876,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0054_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0054",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Sahiya cave (geolod:Cave_site_0054)",
@@ -25909,7 +25886,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0055_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0055",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Sieben Hengste cave (geolod:Cave_site_0055)",
@@ -25919,7 +25896,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0056_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0056",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Skala Marion cave (geolod:Cave_site_0056)",
@@ -25929,7 +25906,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0057_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0057",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Soylegrotta cave (geolod:Cave_site_0057)",
@@ -25939,7 +25916,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0058_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0058",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Spannagel cave (geolod:Cave_site_0058)",
@@ -25949,7 +25926,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0059_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0059",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Suozi cave (geolod:Cave_site_0059)",
@@ -25959,7 +25936,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0060_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0060",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Taurius cave (geolod:Cave_site_0060)",
@@ -25969,7 +25946,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0061_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0061",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Timta cave (geolod:Cave_site_0061)",
@@ -25979,7 +25956,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0062_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0062",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Torrinha cave (geolod:Cave_site_0062)",
@@ -25989,7 +25966,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0063_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0063",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Tzabnah cave (geolod:Cave_site_0063)",
@@ -25999,7 +25976,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0064_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0064",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wah Shikhar cave (geolod:Cave_site_0064)",
@@ -26009,7 +25986,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0065_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0065",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Whiterock cave (geolod:Cave_site_0065)",
@@ -26019,7 +25996,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0066_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0066",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "White Scar cave (geolod:Cave_site_0066)",
@@ -26029,7 +26006,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0067_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0067",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Clearwater/Wind caves connection (geolod:Cave_site_0067)",
@@ -26039,7 +26016,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0069_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0069",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Xinglong cave (geolod:Cave_site_0069)",
@@ -26049,7 +26026,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0070_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0070",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Abaco Island cave (geolod:Cave_site_0070)",
@@ -26059,7 +26036,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0071_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0071",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Baradla cave (geolod:Cave_site_0071)",
@@ -26069,7 +26046,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0072_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0072",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Ascunsa cave (geolod:Cave_site_0072)",
@@ -26079,7 +26056,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0073_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0073",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Bourgeois\u2013Delaunay cave (geolod:Cave_site_0073)",
@@ -26089,7 +26066,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0074_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0074",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cango cave (geolod:Cave_site_0074)",
@@ -26099,7 +26076,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0077_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0077",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Chauvet cave (geolod:Cave_site_0077)",
@@ -26109,7 +26086,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0078_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0078",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Chilibrillo cave (geolod:Cave_site_0078)",
@@ -26119,7 +26096,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0079_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0079",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Dim cave (geolod:Cave_site_0079)",
@@ -26129,7 +26106,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0080_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0080",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Furong cave (geolod:Cave_site_0080)",
@@ -26139,7 +26116,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0081_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0081",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Gueldaman cave (geolod:Cave_site_0081)",
@@ -26149,7 +26126,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0082_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0082",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Hollywood cave (geolod:Cave_site_0082)",
@@ -26159,7 +26136,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0083_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0083",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "La Mine cave (geolod:Cave_site_0083)",
@@ -26169,7 +26146,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0084_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0084",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Le\u00e1ny cave (geolod:Cave_site_0084)",
@@ -26179,7 +26156,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0085_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0085",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Macal Chasm (geolod:Cave_site_0085)",
@@ -26189,7 +26166,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0086_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0086",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Modric cave (geolod:Cave_site_0086)",
@@ -26199,7 +26176,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0087_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0087",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pindal cave (geolod:Cave_site_0087)",
@@ -26209,7 +26186,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0090_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0090",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Tri\u00f3 cave (geolod:Cave_site_0090)",
@@ -26219,7 +26196,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0091_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0091",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Ursilor cave (geolod:Cave_site_0091)",
@@ -26229,7 +26206,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0094_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0094",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Anjohibe (geolod:Cave_site_0094)",
@@ -26239,7 +26216,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0095_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0095",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Brown's cave (geolod:Cave_site_0095)",
@@ -26249,7 +26226,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0097_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0097",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Bue Marino cave (geolod:Cave_site_0097)",
@@ -26259,7 +26236,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0098_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0098",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Crag cave (geolod:Cave_site_0098)",
@@ -26269,7 +26246,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0099_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0099",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Dante cave (geolod:Cave_site_0099)",
@@ -26279,7 +26256,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0100_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0100",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Katerloch cave (geolod:Cave_site_0100)",
@@ -26289,7 +26266,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0101_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0101",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Klapferloch cave (geolod:Cave_site_0101)",
@@ -26299,7 +26276,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0102_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0102",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Korallgrottan cave (geolod:Cave_site_0102)",
@@ -26309,7 +26286,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0103_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0103",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lapa Doce cave (geolod:Cave_site_0103)",
@@ -26319,7 +26296,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0104_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0104",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Liang Luar (geolod:Cave_site_0104)",
@@ -26329,7 +26306,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0105_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0105",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Schneckenloch cave (geolod:Cave_site_0105)",
@@ -26339,7 +26316,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0106_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0106",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Seso cave (geolod:Cave_site_0106)",
@@ -26349,7 +26326,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0107_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0107",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Yok Balum cave (geolod:Cave_site_0107)",
@@ -26359,7 +26336,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0108_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0108",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Clamouse cave (geolod:Cave_site_0108)",
@@ -26369,7 +26346,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0109_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0109",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Molinos cave (geolod:Cave_site_0109)",
@@ -26379,7 +26356,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0111_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0111",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Rainha cave (geolod:Cave_site_0111)",
@@ -26389,7 +26366,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0112_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0112",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Xinya cave (geolod:Cave_site_0112)",
@@ -26399,7 +26376,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0113_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0113",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Paix\u00e3o cave (geolod:Cave_site_0113)",
@@ -26409,7 +26386,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0115_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0115",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "H\u00f6lloch im Mahdtal (geolod:Cave_site_0115)",
@@ -26419,7 +26396,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0116_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0116",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Bukit Assam cave (geolod:Cave_site_0116)",
@@ -26429,7 +26406,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0117_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0117",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Bunker cave (geolod:Cave_site_0117)",
@@ -26439,7 +26416,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0118_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0118",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Clearwater cave (geolod:Cave_site_0118)",
@@ -26449,7 +26426,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0120_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0120",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Ejulve cave (geolod:Cave_site_0120)",
@@ -26459,7 +26436,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0121_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0121",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Entrische Kirche cave (geolod:Cave_site_0121)",
@@ -26469,7 +26446,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0122_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0122",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Heshang cave (geolod:Cave_site_0122)",
@@ -26479,7 +26456,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0123_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0123",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Milchbach cave (geolod:Cave_site_0123)",
@@ -26489,7 +26466,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0127_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0127",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Xiaobailong cave (geolod:Cave_site_0127)",
@@ -26499,7 +26476,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0128_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0128",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Buckeye creek (geolod:Cave_site_0128)",
@@ -26509,7 +26486,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0129_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0129",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Grotta di Carburangeli (geolod:Cave_site_0129)",
@@ -26519,7 +26496,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0130_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0130",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Dandak cave (geolod:Cave_site_0130)",
@@ -26529,7 +26506,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0132_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0132",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kleegruben cave (geolod:Cave_site_0132)",
@@ -26539,7 +26516,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0133_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0133",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Buca della Renella (geolod:Cave_site_0133)",
@@ -26549,7 +26526,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0134_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0134",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cave of the Bells (geolod:Cave_site_0134)",
@@ -26559,7 +26536,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0135_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0135",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Grotte de Piste (geolod:Cave_site_0135)",
@@ -26569,7 +26546,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0136_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0136",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Juxtlahuaca cave (geolod:Cave_site_0136)",
@@ -26579,7 +26556,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0137_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0137",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kinderlinskaya cave (geolod:Cave_site_0137)",
@@ -26589,7 +26566,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0138_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0138",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Moomi cave (geolod:Cave_site_0138)",
@@ -26599,7 +26576,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0139_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0139",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Oregon caves national monument (geolod:Cave_site_0139)",
@@ -26609,7 +26586,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0140_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0140",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Sanbao cave (geolod:Cave_site_0140)",
@@ -26619,7 +26596,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0141_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0141",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Sofular cave (geolod:Cave_site_0141)",
@@ -26629,7 +26606,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0142_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0142",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Tianmen (geolod:Cave_site_0142)",
@@ -26639,7 +26616,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0144_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0144",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Botuver\u00e1 cave (geolod:Cave_site_0144)",
@@ -26649,7 +26626,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0145_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0145",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Antro del Corchia (geolod:Cave_site_0145)",
@@ -26659,7 +26636,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0146_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0146",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Gunung-buda cave (snail shell cave) (geolod:Cave_site_0146)",
@@ -26669,7 +26646,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0147_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0147",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Fort Stanton cave (geolod:Cave_site_0147)",
@@ -26679,7 +26656,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0149_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0149",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Arch cave (geolod:Cave_site_0149)",
@@ -26689,7 +26666,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0151_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0151",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Guillotine cave (geolod:Cave_site_0151)",
@@ -26699,7 +26676,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0152_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0152",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Hoti cave (geolod:Cave_site_0152)",
@@ -26709,7 +26686,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0154_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0154",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Jiuxian cave (geolod:Cave_site_0154)",
@@ -26719,7 +26696,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0155_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0155",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "KNI-51 (geolod:Cave_site_0155)",
@@ -26729,7 +26706,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0156_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0156",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Mavri Trypa cave (geolod:Cave_site_0156)",
@@ -26739,7 +26716,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0157_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0157",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Munagamanu cave (geolod:Cave_site_0157)",
@@ -26749,7 +26726,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0158_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0158",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Nettlebed cave (geolod:Cave_site_0158)",
@@ -26759,7 +26736,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0160_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0160",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Soreq cave (geolod:Cave_site_0160)",
@@ -26769,7 +26746,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0161_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0161",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Aurora cave (geolod:Cave_site_0161)",
@@ -26779,7 +26756,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0162_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0162",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Calcite cave (Mt Luxmore, Fiordland) (geolod:Cave_site_0162)",
@@ -26789,7 +26766,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0163_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0163",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Gardener's Gut (geolod:Cave_site_0163)",
@@ -26799,7 +26776,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0164_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0164",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Max's cave (geolod:Cave_site_0164)",
@@ -26809,7 +26786,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0165_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0165",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Ruakuri cave (geolod:Cave_site_0165)",
@@ -26819,7 +26796,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0166_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0166",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Te Reinga cave (geolod:Cave_site_0166)",
@@ -26829,7 +26806,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0167_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0167",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Waiau cave (geolod:Cave_site_0167)",
@@ -26839,7 +26816,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0168_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0168",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wazpretti cave (geolod:Cave_site_0168)",
@@ -26849,7 +26826,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0169_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0169",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Doubtful Xanadu (geolod:Cave_site_0169)",
@@ -26859,7 +26836,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0172_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0172",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wolkberg cave (geolod:Cave_site_0172)",
@@ -26869,7 +26846,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0173_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0173",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Perdida cave (geolod:Cave_site_0173)",
@@ -26879,7 +26856,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0174_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0174",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Zhuliuping cave (geolod:Cave_site_0174)",
@@ -26889,7 +26866,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0175_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0175",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Yaoba Don cave (geolod:Cave_site_0175)",
@@ -26899,7 +26876,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0177_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0177",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Santo Tomas cave (geolod:Cave_site_0177)",
@@ -26909,7 +26886,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0178_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0178",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Yamen cave (geolod:Cave_site_0178)",
@@ -26919,7 +26896,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0181_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0181",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Forestry cave (geolod:Cave_site_0181)",
@@ -26929,7 +26906,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0182_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0182",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kotumsar cave (geolod:Cave_site_0182)",
@@ -26939,7 +26916,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0183_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0183",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Dos Anas cave (geolod:Cave_site_0183)",
@@ -26949,7 +26926,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0185_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0185",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Beatus cave (geolod:Cave_site_0185)",
@@ -26959,7 +26936,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0186_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0186",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Bribin cave (geolod:Cave_site_0186)",
@@ -26969,7 +26946,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0187_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0187",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cesare Battisti cave (geolod:Cave_site_0187)",
@@ -26979,7 +26956,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0189_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0189",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Chen Ha cave (geolod:Cave_site_0189)",
@@ -26989,7 +26966,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0190_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0190",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cold Water cave (geolod:Cave_site_0190)",
@@ -26999,7 +26976,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0191_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0191",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Devil's Icebox cave (geolod:Cave_site_0191)",
@@ -27009,7 +26986,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0192_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0192",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "El Condor cave (geolod:Cave_site_0192)",
@@ -27019,7 +26996,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0193_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0193",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Frasassi cave system - Grotta Grande del Vento (geolod:Cave_site_0193)",
@@ -27029,7 +27006,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0195_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0195",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Harrison's cave (geolod:Cave_site_0195)",
@@ -27039,7 +27016,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0196_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0196",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Karaca cave (geolod:Cave_site_0196)",
@@ -27049,7 +27026,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0197_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0197",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Klaus Cramer cave (geolod:Cave_site_0197)",
@@ -27059,7 +27036,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0198_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0198",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lianhua cave, Hunan (geolod:Cave_site_0198)",
@@ -27069,7 +27046,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0199_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0199",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lynds cave (geolod:Cave_site_0199)",
@@ -27079,7 +27056,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0200_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0200",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Minnetonka cave (geolod:Cave_site_0200)",
@@ -27089,7 +27066,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0202_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0202",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Piani Eterni karst system (geolod:Cave_site_0202)",
@@ -27099,7 +27076,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0203_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0203",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Poleva cave (geolod:Cave_site_0203)",
@@ -27109,7 +27086,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0204_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0204",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Xibalba cave (geolod:Cave_site_0204)",
@@ -27119,7 +27096,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0205_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0205",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "S\u00e3o Bernardo cave (geolod:Cave_site_0205)",
@@ -27129,7 +27106,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0206_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0206",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "S\u00e3o Matheus cave (geolod:Cave_site_0206)",
@@ -27139,7 +27116,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0207_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0207",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Shatuca cave (geolod:Cave_site_0207)",
@@ -27149,7 +27126,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0208_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0208",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Tangga cave (geolod:Cave_site_0208)",
@@ -27159,7 +27136,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0209_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0209",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Uluu-Too cave (geolod:Cave_site_0209)",
@@ -27169,7 +27146,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0210_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0210",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "White moon cave (geolod:Cave_site_0210)",
@@ -27179,7 +27156,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0211_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0211",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Xiangshui cave (geolod:Cave_site_0211)",
@@ -27189,7 +27166,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0213_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0213",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Tausoare cave (geolod:Cave_site_0213)",
@@ -27199,7 +27176,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0214_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0214",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cave C126 (geolod:Cave_site_0214)",
@@ -27209,7 +27186,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0215_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0215",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Chaara cave (geolod:Cave_site_0215)",
@@ -27219,7 +27196,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0216_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0216",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Dark cave (geolod:Cave_site_0216)",
@@ -27229,7 +27206,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0219_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0219",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Shennong cave (geolod:Cave_site_0219)",
@@ -27239,7 +27216,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0221_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0221",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "La Vierge cave (geolod:Cave_site_0221)",
@@ -27249,7 +27226,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0222_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0222",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Patate cave (geolod:Cave_site_0222)",
@@ -27259,7 +27236,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0223_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0223",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wanxiang cave (geolod:Cave_site_0223)",
@@ -27269,7 +27246,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0224_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0224",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Xianglong cave (geolod:Cave_site_0224)",
@@ -27279,7 +27256,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0225_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0225",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Chiflonkhakha cave (geolod:Cave_site_0225)",
@@ -27289,7 +27266,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0226_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0226",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cueva del Diamante (geolod:Cave_site_0226)",
@@ -27299,7 +27276,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0230_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0230",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Marota cave (geolod:Cave_site_0230)",
@@ -27309,7 +27286,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0231_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0231",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pacupahuain cave (geolod:Cave_site_0231)",
@@ -27319,7 +27296,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0232_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0232",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Rio Secreto cave system (geolod:Cave_site_0232)",
@@ -27329,7 +27306,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0233_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0233",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Robinson cave (geolod:Cave_site_0233)",
@@ -27339,7 +27316,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0234_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0234",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Santana cave (geolod:Cave_site_0234)",
@@ -27349,7 +27326,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0235_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0235",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cueva del Tigre Perdido (geolod:Cave_site_0235)",
@@ -27359,7 +27336,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0236_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0236",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Toca da Boa Vista (geolod:Cave_site_0236)",
@@ -27369,7 +27346,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0237_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0237",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Umajalanta cave (geolod:Cave_site_0237)",
@@ -27379,7 +27356,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0239_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0239",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Baluk cave (geolod:Cave_site_0239)",
@@ -27389,7 +27366,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0241_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0241",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Gempa bumi cave (geolod:Cave_site_0241)",
@@ -27399,7 +27376,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0242_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0242",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Haozhu cave (geolod:Cave_site_0242)",
@@ -27409,7 +27386,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0243_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0243",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kailash cave (geolod:Cave_site_0243)",
@@ -27419,7 +27396,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0244_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0244",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lianhua cave, Shanxi (geolod:Cave_site_0244)",
@@ -27429,7 +27406,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0245_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0245",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Nakarallu cave (geolod:Cave_site_0245)",
@@ -27439,7 +27416,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0246_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0246",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Palawan cave (geolod:Cave_site_0246)",
@@ -27449,7 +27426,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0248_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0248",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Shenqi cave (geolod:Cave_site_0248)",
@@ -27459,7 +27436,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0249_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0249",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Shigao cave (geolod:Cave_site_0249)",
@@ -27469,7 +27446,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0250_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0250",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wuya cave (geolod:Cave_site_0250)",
@@ -27479,7 +27456,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0252_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0252",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Andriamaniloke (geolod:Cave_site_0252)",
@@ -27489,7 +27466,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0253_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0253",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Hoq cave (geolod:Cave_site_0253)",
@@ -27499,7 +27476,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0254_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0254",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "PP29 (geolod:Cave_site_0254)",
@@ -27509,7 +27486,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0255_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0255",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Mitoho (geolod:Cave_site_0255)",
@@ -27519,7 +27496,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0256_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0256",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lithophagus cave (geolod:Cave_site_0256)",
@@ -27529,7 +27506,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0258_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0258",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "B7 cave (geolod:Cave_site_0258)",
@@ -27539,7 +27516,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0259_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0259",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cobre cave (geolod:Cave_site_0259)",
@@ -27549,7 +27526,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0260_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0260",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Crovassa Azzurra (geolod:Cave_site_0260)",
@@ -27559,7 +27536,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0262_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0262",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Ble\u00dfberg cave (geolod:Cave_site_0262)",
@@ -27569,7 +27546,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0263_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0263",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Bulgarian Orlova Chuka cave (geolod:Cave_site_0263)",
@@ -27579,7 +27556,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0264_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0264",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Stra\u0161na pe\u0107 cave (geolod:Cave_site_0264)",
@@ -27589,7 +27566,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0265_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0265",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Coves de Campanet (geolod:Cave_site_0265)",
@@ -27599,7 +27576,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0266_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0266",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cueva Victoria (geolod:Cave_site_0266)",
@@ -27609,7 +27586,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0267_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0267",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Gruta do Casal da Lebre (geolod:Cave_site_0267)",
@@ -27619,7 +27596,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0268_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0268",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pere Noel cave (geolod:Cave_site_0268)",
@@ -27629,7 +27606,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0269_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0269",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Gejkar cave (geolod:Cave_site_0269)",
@@ -27639,7 +27616,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0270_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0270",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Gol-E-Zard cave (geolod:Cave_site_0270)",
@@ -27649,7 +27626,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0271_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0271",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Jersey cave (geolod:Cave_site_0271)",
@@ -27659,7 +27636,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0272_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0272",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Metro cave (geolod:Cave_site_0272)",
@@ -27669,7 +27646,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0273_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0273",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Crystal cave (geolod:Cave_site_0273)",
@@ -27679,7 +27656,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0274_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0274",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Terciopelo cave (geolod:Cave_site_0274)",
@@ -27689,7 +27666,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0275_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0275",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Buraca Gloriosa (geolod:Cave_site_0275)",
@@ -27699,7 +27676,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0277_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0277",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Huagapo cave (geolod:Cave_site_0277)",
@@ -27709,7 +27686,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0278_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0278",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pink Panther cave (geolod:Cave_site_0278)",
@@ -27719,7 +27696,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0279_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0279",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Staircase cave (geolod:Cave_site_0279)",
@@ -27729,7 +27706,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0280_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0280",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Atta cave (geolod:Cave_site_0280)",
@@ -27739,7 +27716,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0281_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0281",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Venado cave (geolod:Cave_site_0281)",
@@ -27749,7 +27726,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0282_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0282",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wadi Sannur cave (geolod:Cave_site_0282)",
@@ -27759,7 +27736,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0283_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0283",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Babylon cave (geolod:Cave_site_0283)",
@@ -27769,7 +27746,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0284_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0284",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Creighton`s cave (geolod:Cave_site_0284)",
@@ -27779,7 +27756,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0285_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0285",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Disbelief cave (geolod:Cave_site_0285)",
@@ -27789,7 +27766,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0286_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0286",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "La Garma cave (geolod:Cave_site_0286)",
@@ -27799,7 +27776,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0287_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0287",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Twin Forks cave (geolod:Cave_site_0287)",
@@ -27809,7 +27786,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0288_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0288",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wet Neck cave (geolod:Cave_site_0288)",
@@ -27819,7 +27796,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0289_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0289",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Gassel Tropfsteinh\u00f6hle (geolod:Cave_site_0289)",
@@ -27829,7 +27806,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0290_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0290",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Grete-Ruth Shaft (geolod:Cave_site_0290)",
@@ -27839,7 +27816,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0292_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0292",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Limnon cave (geolod:Cave_site_0292)",
@@ -27849,7 +27826,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0293_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0293",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Tham Doun Mai (geolod:Cave_site_0293)",
@@ -27859,7 +27836,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0294_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0294",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Palco cave (geolod:Cave_site_0294)",
@@ -27869,7 +27846,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0295_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0295",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Qadisha cave (geolod:Cave_site_0295)",
@@ -27879,7 +27856,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0296_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0296",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Amir Timur cave (geolod:Cave_site_0296)",
@@ -27889,7 +27866,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0297_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0297",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "B\u00e0sura cave (geolod:Cave_site_0297)",
@@ -27899,7 +27876,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0298_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0298",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Belum cave (geolod:Cave_site_0298)",
@@ -27909,7 +27886,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0299_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0299",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Calabrez (geolod:Cave_site_0299)",
@@ -27919,7 +27896,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0300_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0300",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Careys cave (geolod:Cave_site_0300)",
@@ -27929,7 +27906,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0301_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0301",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cathedral cave (geolod:Cave_site_0301)",
@@ -27939,7 +27916,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0303_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0303",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Crystal cave, Australia (geolod:Cave_site_0303)",
@@ -27949,7 +27926,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0304_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0304",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cueva Bonita (geolod:Cave_site_0304)",
@@ -27959,7 +27936,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0305_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0305",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cueva Rosa (geolod:Cave_site_0305)",
@@ -27969,7 +27946,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0306_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0306",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Cu\u00edca cave (geolod:Cave_site_0306)",
@@ -27979,7 +27956,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0307_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0307",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Efflux cave (geolod:Cave_site_0307)",
@@ -27989,7 +27966,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0308_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0308",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "GD8 (geolod:Cave_site_0308)",
@@ -27999,7 +27976,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0310_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0310",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Golgotha cave (geolod:Cave_site_0310)",
@@ -28009,7 +27986,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0312_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0312",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Heifeng cave (geolod:Cave_site_0312)",
@@ -28019,7 +27996,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0313_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0313",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Herbstlabyrinth cave (geolod:Cave_site_0313)",
@@ -28029,7 +28006,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0314_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0314",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Herolds Bay cave (geolod:Cave_site_0314)",
@@ -28039,7 +28016,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0315_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0315",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Huangchao cave (geolod:Cave_site_0315)",
@@ -28049,7 +28026,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0316_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0316",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "H\u00fcttenbl\u00e4serschachth\u00f6hle (geolod:Cave_site_0316)",
@@ -28059,7 +28036,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0317_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0317",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Jiangjun cave (geolod:Cave_site_0317)",
@@ -28069,7 +28046,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0318_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0318",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Jinfo cave (geolod:Cave_site_0318)",
@@ -28079,7 +28056,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0319_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0319",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Jiulong cave (geolod:Cave_site_0319)",
@@ -28089,7 +28066,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0320_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0320",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Katalekhor (geolod:Cave_site_0320)",
@@ -28099,7 +28076,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0321_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0321",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Klang (geolod:Cave_site_0321)",
@@ -28109,7 +28086,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0323_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0323",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kyok-Tash cave (geolod:Cave_site_0323)",
@@ -28119,7 +28096,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0324_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0324",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "La Vallina (geolod:Cave_site_0324)",
@@ -28129,7 +28106,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0325_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0325",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Larga cave (geolod:Cave_site_0325)",
@@ -28139,7 +28116,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0326_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0326",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Linzhu cave (geolod:Cave_site_0326)",
@@ -28149,7 +28126,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0327_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0327",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Manita pe\u0107 cave (geolod:Cave_site_0327)",
@@ -28159,7 +28136,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0328_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0328",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Mata Virgem cave (geolod:Cave_site_0328)",
@@ -28169,7 +28146,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0329_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0329",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Matupi cave (geolod:Cave_site_0329)",
@@ -28179,7 +28156,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0330_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0330",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Meravelles cave (geolod:Cave_site_0330)",
@@ -28189,7 +28166,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0332_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0332",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Murada (geolod:Cave_site_0332)",
@@ -28199,7 +28176,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0333_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0333",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Neotektonik cave (geolod:Cave_site_0333)",
@@ -28209,7 +28186,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0334_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0334",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Nova\u00a0Grgosova\u00a0cave (geolod:Cave_site_0334)",
@@ -28219,7 +28196,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0335_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0335",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Ostolo cave (geolod:Cave_site_0335)",
@@ -28229,7 +28206,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0336_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0336",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pentadactylos (geolod:Cave_site_0336)",
@@ -28239,7 +28216,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0337_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0337",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pir Ghar cave (geolod:Cave_site_0337)",
@@ -28249,7 +28226,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0338_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0338",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Coves del pirata (geolod:Cave_site_0338)",
@@ -28259,7 +28236,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0339_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0339",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pozzo Cuc\u00f9 cave (geolod:Cave_site_0339)",
@@ -28269,7 +28246,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0340_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0340",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Qujia cave (geolod:Cave_site_0340)",
@@ -28279,7 +28256,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0341_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0341",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Rey Marcos (geolod:Cave_site_0341)",
@@ -28289,7 +28266,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0342_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0342",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Sa balma des quart\u00f3 cave (geolod:Cave_site_0342)",
@@ -28299,7 +28276,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0343_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0343",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Sant'Angelo cave (geolod:Cave_site_0343)",
@@ -28309,7 +28286,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0344_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0344",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Sarma cave (geolod:Cave_site_0344)",
@@ -28319,7 +28296,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0345_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0345",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Schratten cave (geolod:Cave_site_0345)",
@@ -28329,7 +28306,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0346_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0346",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Shijiangjun cave (geolod:Cave_site_0346)",
@@ -28339,7 +28316,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0347_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0347",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Shizi cave (geolod:Cave_site_0347)",
@@ -28349,7 +28326,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0348_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0348",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Sudwala cave (geolod:Cave_site_0348)",
@@ -28359,7 +28336,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0349_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0349",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Talisman cave (geolod:Cave_site_0349)",
@@ -28369,7 +28346,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0350_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0350",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Toca da Barriguda (geolod:Cave_site_0350)",
@@ -28379,7 +28356,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0351_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0351",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Trapi\u00e1 cave (geolod:Cave_site_0351)",
@@ -28389,7 +28366,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0352_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0352",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "War Eagle (geolod:Cave_site_0352)",
@@ -28399,7 +28376,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0353_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0353",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wintimdouine (geolod:Cave_site_0353)",
@@ -28409,7 +28386,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0354_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0354",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Wulu cave (geolod:Cave_site_0354)",
@@ -28419,7 +28396,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0355_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0355",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Xiniu cave (geolod:Cave_site_0355)",
@@ -28429,7 +28406,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0356_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0356",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Yangzi cave (geolod:Cave_site_0356)",
@@ -28439,7 +28416,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0357_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0357",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Yonderup cave (geolod:Cave_site_0357)",
@@ -28449,7 +28426,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0358_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0358",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Zhangjia cave (geolod:Cave_site_0358)",
@@ -28459,7 +28436,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0359_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0359",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Zoolithen cave (geolod:Cave_site_0359)",
@@ -28469,7 +28446,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0360_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0360",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Bigonda cave (geolod:Cave_site_0360)",
@@ -28479,7 +28456,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0361_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0361",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Kocain cave (geolod:Cave_site_0361)",
@@ -28489,7 +28466,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0362_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0362",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Labyrinth cave (geolod:Cave_site_0362)",
@@ -28499,7 +28476,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0363_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0363",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Lake Shasta cave (geolod:Cave_site_0363)",
@@ -28509,7 +28486,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0364_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0364",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Naharon (geolod:Cave_site_0364)",
@@ -28519,7 +28496,7 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0365_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0365",
         "parent": "http://w3id.org/geo-lod/Cave",
         "type": "geoinstance",
         "text": "Pot au Feu (geolod:Cave_site_0365)",
@@ -28529,6108 +28506,8 @@ var tree={
         }
       },
       {
-        "id": "http://w3id.org/geo-lod/Cave_site_0366_suniv0_",
+        "id": "http://w3id.org/geo-lod/Cave_site_0366",
         "parent": "http://w3id.org/geo-lod/Cave",
-        "type": "geoinstance",
-        "text": "Savi cave (geolod:Cave_site_0366)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0001_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Bittoo cave (geolod:Cave_site_0001)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0002_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kesang cave (geolod:Cave_site_0002)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0003_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Paraiso cave (geolod:Cave_site_0003)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0004_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Villars cave (geolod:Cave_site_0004)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0005_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Yangkou cave (geolod:Cave_site_0005)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0006_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Hulu cave (geolod:Cave_site_0006)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0007_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cold Air cave (geolod:Cave_site_0007)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0008_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lancaster Hole (geolod:Cave_site_0008)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0009_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Tonnel\u2019naya cave (geolod:Cave_site_0009)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0010_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Jaragu\u00e1 cave (geolod:Cave_site_0010)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0011_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Jeita cave (geolod:Cave_site_0011)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0012_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Mawmluh cave (geolod:Cave_site_0012)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0013_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Ball Gown cave (geolod:Cave_site_0013)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0014_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lehman caves (geolod:Cave_site_0014)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0015_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Baschg cave (geolod:Cave_site_0015)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0016_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Han-sur-Lesse cave (geolod:Cave_site_0016)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0017_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Huangye cave (geolod:Cave_site_0017)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0019_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kanaan cave (geolod:Cave_site_0019)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0020_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Secret cave (geolod:Cave_site_0020)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0023_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lapa grande cave (geolod:Cave_site_0023)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0024_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lapa sem fim cave (geolod:Cave_site_0024)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0025_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Palestina cave (geolod:Cave_site_0025)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0026_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Okshola cave (geolod:Cave_site_0026)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0027_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Tamboril cave (geolod:Cave_site_0027)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0028_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Valmiki cave  (geolod:Cave_site_0028)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0029_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Mairs cave (geolod:Cave_site_0029)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0031_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Abaliget cave (geolod:Cave_site_0031)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0032_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Anjokipoty (geolod:Cave_site_0032)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0034_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cueva del Diablo (geolod:Cave_site_0034)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0035_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Curupira cave (geolod:Cave_site_0035)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0036_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Dayu cave (geolod:Cave_site_0036)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0038_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Diva cave (geolod:Cave_site_0038)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0039_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Dongge cave (geolod:Cave_site_0039)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0040_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Excentrica cave (geolod:Cave_site_0040)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0042_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Ifoulki cave (geolod:Cave_site_0042)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0045_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kulishu cave (geolod:Cave_site_0045)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0046_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Labyrintgrottan cave (geolod:Cave_site_0046)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0047_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Larshullet cave (geolod:Cave_site_0047)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0048_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Leviathan cave (geolod:Cave_site_0048)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0049_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "McLean's cave (geolod:Cave_site_0049)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0053_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pippikin Pot cave (geolod:Cave_site_0053)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0054_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Sahiya cave (geolod:Cave_site_0054)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0055_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Sieben Hengste cave (geolod:Cave_site_0055)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0056_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Skala Marion cave (geolod:Cave_site_0056)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0057_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Soylegrotta cave (geolod:Cave_site_0057)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0058_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Spannagel cave (geolod:Cave_site_0058)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0059_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Suozi cave (geolod:Cave_site_0059)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0060_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Taurius cave (geolod:Cave_site_0060)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0061_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Timta cave (geolod:Cave_site_0061)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0062_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Torrinha cave (geolod:Cave_site_0062)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0063_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Tzabnah cave (geolod:Cave_site_0063)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0064_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wah Shikhar cave (geolod:Cave_site_0064)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0065_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Whiterock cave (geolod:Cave_site_0065)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0066_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "White Scar cave (geolod:Cave_site_0066)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0067_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Clearwater/Wind caves connection (geolod:Cave_site_0067)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0069_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Xinglong cave (geolod:Cave_site_0069)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0070_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Abaco Island cave (geolod:Cave_site_0070)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0071_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Baradla cave (geolod:Cave_site_0071)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0072_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Ascunsa cave (geolod:Cave_site_0072)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0073_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Bourgeois\u2013Delaunay cave (geolod:Cave_site_0073)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0074_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cango cave (geolod:Cave_site_0074)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0077_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Chauvet cave (geolod:Cave_site_0077)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0078_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Chilibrillo cave (geolod:Cave_site_0078)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0079_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Dim cave (geolod:Cave_site_0079)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0080_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Furong cave (geolod:Cave_site_0080)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0081_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Gueldaman cave (geolod:Cave_site_0081)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0082_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Hollywood cave (geolod:Cave_site_0082)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0083_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "La Mine cave (geolod:Cave_site_0083)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0084_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Le\u00e1ny cave (geolod:Cave_site_0084)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0085_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Macal Chasm (geolod:Cave_site_0085)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0086_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Modric cave (geolod:Cave_site_0086)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0087_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pindal cave (geolod:Cave_site_0087)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0090_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Tri\u00f3 cave (geolod:Cave_site_0090)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0091_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Ursilor cave (geolod:Cave_site_0091)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0094_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Anjohibe (geolod:Cave_site_0094)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0095_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Brown's cave (geolod:Cave_site_0095)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0097_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Bue Marino cave (geolod:Cave_site_0097)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0098_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Crag cave (geolod:Cave_site_0098)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0099_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Dante cave (geolod:Cave_site_0099)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0100_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Katerloch cave (geolod:Cave_site_0100)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0101_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Klapferloch cave (geolod:Cave_site_0101)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0102_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Korallgrottan cave (geolod:Cave_site_0102)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0103_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lapa Doce cave (geolod:Cave_site_0103)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0104_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Liang Luar (geolod:Cave_site_0104)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0105_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Schneckenloch cave (geolod:Cave_site_0105)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0106_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Seso cave (geolod:Cave_site_0106)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0107_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Yok Balum cave (geolod:Cave_site_0107)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0108_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Clamouse cave (geolod:Cave_site_0108)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0109_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Molinos cave (geolod:Cave_site_0109)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0111_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Rainha cave (geolod:Cave_site_0111)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0112_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Xinya cave (geolod:Cave_site_0112)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0113_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Paix\u00e3o cave (geolod:Cave_site_0113)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0115_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "H\u00f6lloch im Mahdtal (geolod:Cave_site_0115)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0116_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Bukit Assam cave (geolod:Cave_site_0116)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0117_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Bunker cave (geolod:Cave_site_0117)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0118_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Clearwater cave (geolod:Cave_site_0118)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0120_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Ejulve cave (geolod:Cave_site_0120)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0121_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Entrische Kirche cave (geolod:Cave_site_0121)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0122_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Heshang cave (geolod:Cave_site_0122)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0123_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Milchbach cave (geolod:Cave_site_0123)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0127_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Xiaobailong cave (geolod:Cave_site_0127)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0128_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Buckeye creek (geolod:Cave_site_0128)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0129_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Grotta di Carburangeli (geolod:Cave_site_0129)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0130_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Dandak cave (geolod:Cave_site_0130)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0132_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kleegruben cave (geolod:Cave_site_0132)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0133_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Buca della Renella (geolod:Cave_site_0133)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0134_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cave of the Bells (geolod:Cave_site_0134)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0135_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Grotte de Piste (geolod:Cave_site_0135)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0136_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Juxtlahuaca cave (geolod:Cave_site_0136)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0137_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kinderlinskaya cave (geolod:Cave_site_0137)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0138_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Moomi cave (geolod:Cave_site_0138)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0139_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Oregon caves national monument (geolod:Cave_site_0139)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0140_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Sanbao cave (geolod:Cave_site_0140)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0141_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Sofular cave (geolod:Cave_site_0141)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0142_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Tianmen (geolod:Cave_site_0142)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0144_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Botuver\u00e1 cave (geolod:Cave_site_0144)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0145_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Antro del Corchia (geolod:Cave_site_0145)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0146_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Gunung-buda cave (snail shell cave) (geolod:Cave_site_0146)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0147_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Fort Stanton cave (geolod:Cave_site_0147)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0149_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Arch cave (geolod:Cave_site_0149)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0151_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Guillotine cave (geolod:Cave_site_0151)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0152_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Hoti cave (geolod:Cave_site_0152)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0154_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Jiuxian cave (geolod:Cave_site_0154)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0155_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "KNI-51 (geolod:Cave_site_0155)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0156_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Mavri Trypa cave (geolod:Cave_site_0156)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0157_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Munagamanu cave (geolod:Cave_site_0157)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0158_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Nettlebed cave (geolod:Cave_site_0158)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0160_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Soreq cave (geolod:Cave_site_0160)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0161_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Aurora cave (geolod:Cave_site_0161)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0162_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Calcite cave (Mt Luxmore, Fiordland) (geolod:Cave_site_0162)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0163_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Gardener's Gut (geolod:Cave_site_0163)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0164_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Max's cave (geolod:Cave_site_0164)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0165_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Ruakuri cave (geolod:Cave_site_0165)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0166_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Te Reinga cave (geolod:Cave_site_0166)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0167_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Waiau cave (geolod:Cave_site_0167)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0168_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wazpretti cave (geolod:Cave_site_0168)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0169_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Doubtful Xanadu (geolod:Cave_site_0169)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0172_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wolkberg cave (geolod:Cave_site_0172)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0173_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Perdida cave (geolod:Cave_site_0173)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0174_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Zhuliuping cave (geolod:Cave_site_0174)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0175_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Yaoba Don cave (geolod:Cave_site_0175)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0177_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Santo Tomas cave (geolod:Cave_site_0177)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0178_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Yamen cave (geolod:Cave_site_0178)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0181_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Forestry cave (geolod:Cave_site_0181)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0182_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kotumsar cave (geolod:Cave_site_0182)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0183_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Dos Anas cave (geolod:Cave_site_0183)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0185_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Beatus cave (geolod:Cave_site_0185)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0186_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Bribin cave (geolod:Cave_site_0186)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0187_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cesare Battisti cave (geolod:Cave_site_0187)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0189_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Chen Ha cave (geolod:Cave_site_0189)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0190_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cold Water cave (geolod:Cave_site_0190)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0191_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Devil's Icebox cave (geolod:Cave_site_0191)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0192_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "El Condor cave (geolod:Cave_site_0192)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0193_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Frasassi cave system - Grotta Grande del Vento (geolod:Cave_site_0193)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0195_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Harrison's cave (geolod:Cave_site_0195)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0196_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Karaca cave (geolod:Cave_site_0196)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0197_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Klaus Cramer cave (geolod:Cave_site_0197)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0198_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lianhua cave, Hunan (geolod:Cave_site_0198)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0199_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lynds cave (geolod:Cave_site_0199)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0200_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Minnetonka cave (geolod:Cave_site_0200)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0202_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Piani Eterni karst system (geolod:Cave_site_0202)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0203_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Poleva cave (geolod:Cave_site_0203)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0204_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Xibalba cave (geolod:Cave_site_0204)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0205_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "S\u00e3o Bernardo cave (geolod:Cave_site_0205)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0206_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "S\u00e3o Matheus cave (geolod:Cave_site_0206)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0207_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Shatuca cave (geolod:Cave_site_0207)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0208_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Tangga cave (geolod:Cave_site_0208)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0209_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Uluu-Too cave (geolod:Cave_site_0209)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0210_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "White moon cave (geolod:Cave_site_0210)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0211_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Xiangshui cave (geolod:Cave_site_0211)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0213_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Tausoare cave (geolod:Cave_site_0213)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0214_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cave C126 (geolod:Cave_site_0214)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0215_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Chaara cave (geolod:Cave_site_0215)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0216_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Dark cave (geolod:Cave_site_0216)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0219_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Shennong cave (geolod:Cave_site_0219)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0221_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "La Vierge cave (geolod:Cave_site_0221)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0222_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Patate cave (geolod:Cave_site_0222)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0223_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wanxiang cave (geolod:Cave_site_0223)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0224_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Xianglong cave (geolod:Cave_site_0224)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0225_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Chiflonkhakha cave (geolod:Cave_site_0225)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0226_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cueva del Diamante (geolod:Cave_site_0226)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0230_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Marota cave (geolod:Cave_site_0230)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0231_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pacupahuain cave (geolod:Cave_site_0231)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0232_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Rio Secreto cave system (geolod:Cave_site_0232)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0233_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Robinson cave (geolod:Cave_site_0233)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0234_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Santana cave (geolod:Cave_site_0234)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0235_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cueva del Tigre Perdido (geolod:Cave_site_0235)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0236_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Toca da Boa Vista (geolod:Cave_site_0236)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0237_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Umajalanta cave (geolod:Cave_site_0237)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0239_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Baluk cave (geolod:Cave_site_0239)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0241_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Gempa bumi cave (geolod:Cave_site_0241)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0242_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Haozhu cave (geolod:Cave_site_0242)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0243_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kailash cave (geolod:Cave_site_0243)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0244_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lianhua cave, Shanxi (geolod:Cave_site_0244)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0245_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Nakarallu cave (geolod:Cave_site_0245)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0246_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Palawan cave (geolod:Cave_site_0246)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0248_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Shenqi cave (geolod:Cave_site_0248)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0249_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Shigao cave (geolod:Cave_site_0249)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0250_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wuya cave (geolod:Cave_site_0250)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0252_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Andriamaniloke (geolod:Cave_site_0252)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0253_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Hoq cave (geolod:Cave_site_0253)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0254_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "PP29 (geolod:Cave_site_0254)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0255_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Mitoho (geolod:Cave_site_0255)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0256_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lithophagus cave (geolod:Cave_site_0256)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0258_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "B7 cave (geolod:Cave_site_0258)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0259_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cobre cave (geolod:Cave_site_0259)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0260_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Crovassa Azzurra (geolod:Cave_site_0260)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0262_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Ble\u00dfberg cave (geolod:Cave_site_0262)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0263_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Bulgarian Orlova Chuka cave (geolod:Cave_site_0263)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0264_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Stra\u0161na pe\u0107 cave (geolod:Cave_site_0264)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0265_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Coves de Campanet (geolod:Cave_site_0265)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0266_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cueva Victoria (geolod:Cave_site_0266)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0267_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Gruta do Casal da Lebre (geolod:Cave_site_0267)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0268_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pere Noel cave (geolod:Cave_site_0268)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0269_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Gejkar cave (geolod:Cave_site_0269)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0270_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Gol-E-Zard cave (geolod:Cave_site_0270)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0271_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Jersey cave (geolod:Cave_site_0271)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0272_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Metro cave (geolod:Cave_site_0272)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0273_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Crystal cave (geolod:Cave_site_0273)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0274_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Terciopelo cave (geolod:Cave_site_0274)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0275_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Buraca Gloriosa (geolod:Cave_site_0275)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0277_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Huagapo cave (geolod:Cave_site_0277)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0278_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pink Panther cave (geolod:Cave_site_0278)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0279_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Staircase cave (geolod:Cave_site_0279)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0280_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Atta cave (geolod:Cave_site_0280)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0281_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Venado cave (geolod:Cave_site_0281)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0282_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wadi Sannur cave (geolod:Cave_site_0282)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0283_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Babylon cave (geolod:Cave_site_0283)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0284_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Creighton`s cave (geolod:Cave_site_0284)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0285_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Disbelief cave (geolod:Cave_site_0285)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0286_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "La Garma cave (geolod:Cave_site_0286)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0287_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Twin Forks cave (geolod:Cave_site_0287)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0288_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wet Neck cave (geolod:Cave_site_0288)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0289_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Gassel Tropfsteinh\u00f6hle (geolod:Cave_site_0289)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0290_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Grete-Ruth Shaft (geolod:Cave_site_0290)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0292_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Limnon cave (geolod:Cave_site_0292)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0293_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Tham Doun Mai (geolod:Cave_site_0293)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0294_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Palco cave (geolod:Cave_site_0294)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0295_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Qadisha cave (geolod:Cave_site_0295)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0296_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Amir Timur cave (geolod:Cave_site_0296)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0297_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "B\u00e0sura cave (geolod:Cave_site_0297)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0298_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Belum cave (geolod:Cave_site_0298)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0299_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Calabrez (geolod:Cave_site_0299)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0300_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Careys cave (geolod:Cave_site_0300)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0301_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cathedral cave (geolod:Cave_site_0301)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0303_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Crystal cave, Australia (geolod:Cave_site_0303)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0304_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cueva Bonita (geolod:Cave_site_0304)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0305_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cueva Rosa (geolod:Cave_site_0305)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0306_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Cu\u00edca cave (geolod:Cave_site_0306)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0307_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Efflux cave (geolod:Cave_site_0307)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0308_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "GD8 (geolod:Cave_site_0308)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0310_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Golgotha cave (geolod:Cave_site_0310)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0312_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Heifeng cave (geolod:Cave_site_0312)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0313_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Herbstlabyrinth cave (geolod:Cave_site_0313)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0314_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Herolds Bay cave (geolod:Cave_site_0314)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0315_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Huangchao cave (geolod:Cave_site_0315)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0316_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "H\u00fcttenbl\u00e4serschachth\u00f6hle (geolod:Cave_site_0316)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0317_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Jiangjun cave (geolod:Cave_site_0317)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0318_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Jinfo cave (geolod:Cave_site_0318)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0319_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Jiulong cave (geolod:Cave_site_0319)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0320_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Katalekhor (geolod:Cave_site_0320)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0321_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Klang (geolod:Cave_site_0321)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0323_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kyok-Tash cave (geolod:Cave_site_0323)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0324_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "La Vallina (geolod:Cave_site_0324)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0325_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Larga cave (geolod:Cave_site_0325)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0326_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Linzhu cave (geolod:Cave_site_0326)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0327_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Manita pe\u0107 cave (geolod:Cave_site_0327)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0328_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Mata Virgem cave (geolod:Cave_site_0328)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0329_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Matupi cave (geolod:Cave_site_0329)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0330_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Meravelles cave (geolod:Cave_site_0330)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0332_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Murada (geolod:Cave_site_0332)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0333_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Neotektonik cave (geolod:Cave_site_0333)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0334_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Nova\u00a0Grgosova\u00a0cave (geolod:Cave_site_0334)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0335_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Ostolo cave (geolod:Cave_site_0335)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0336_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pentadactylos (geolod:Cave_site_0336)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0337_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pir Ghar cave (geolod:Cave_site_0337)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0338_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Coves del pirata (geolod:Cave_site_0338)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0339_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pozzo Cuc\u00f9 cave (geolod:Cave_site_0339)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0340_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Qujia cave (geolod:Cave_site_0340)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0341_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Rey Marcos (geolod:Cave_site_0341)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0342_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Sa balma des quart\u00f3 cave (geolod:Cave_site_0342)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0343_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Sant'Angelo cave (geolod:Cave_site_0343)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0344_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Sarma cave (geolod:Cave_site_0344)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0345_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Schratten cave (geolod:Cave_site_0345)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0346_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Shijiangjun cave (geolod:Cave_site_0346)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0347_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Shizi cave (geolod:Cave_site_0347)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0348_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Sudwala cave (geolod:Cave_site_0348)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0349_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Talisman cave (geolod:Cave_site_0349)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0350_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Toca da Barriguda (geolod:Cave_site_0350)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0351_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Trapi\u00e1 cave (geolod:Cave_site_0351)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0352_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "War Eagle (geolod:Cave_site_0352)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0353_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wintimdouine (geolod:Cave_site_0353)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0354_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Wulu cave (geolod:Cave_site_0354)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0355_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Xiniu cave (geolod:Cave_site_0355)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0356_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Yangzi cave (geolod:Cave_site_0356)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0357_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Yonderup cave (geolod:Cave_site_0357)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0358_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Zhangjia cave (geolod:Cave_site_0358)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0359_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Zoolithen cave (geolod:Cave_site_0359)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0360_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Bigonda cave (geolod:Cave_site_0360)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0361_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Kocain cave (geolod:Cave_site_0361)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0362_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Labyrinth cave (geolod:Cave_site_0362)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0363_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Lake Shasta cave (geolod:Cave_site_0363)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0364_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Naharon (geolod:Cave_site_0364)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0365_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Pot au Feu (geolod:Cave_site_0365)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0366_suniv1_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
-        "type": "geoinstance",
-        "text": "Savi cave (geolod:Cave_site_0366)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0001_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Bittoo cave (geolod:Cave_site_0001)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0002_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kesang cave (geolod:Cave_site_0002)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0003_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Paraiso cave (geolod:Cave_site_0003)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0004_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Villars cave (geolod:Cave_site_0004)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0005_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Yangkou cave (geolod:Cave_site_0005)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0006_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Hulu cave (geolod:Cave_site_0006)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0007_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cold Air cave (geolod:Cave_site_0007)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0008_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lancaster Hole (geolod:Cave_site_0008)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0009_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Tonnel\u2019naya cave (geolod:Cave_site_0009)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0010_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Jaragu\u00e1 cave (geolod:Cave_site_0010)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0011_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Jeita cave (geolod:Cave_site_0011)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0012_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Mawmluh cave (geolod:Cave_site_0012)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0013_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Ball Gown cave (geolod:Cave_site_0013)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0014_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lehman caves (geolod:Cave_site_0014)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0015_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Baschg cave (geolod:Cave_site_0015)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0016_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Han-sur-Lesse cave (geolod:Cave_site_0016)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0017_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Huangye cave (geolod:Cave_site_0017)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0019_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kanaan cave (geolod:Cave_site_0019)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0020_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Secret cave (geolod:Cave_site_0020)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0023_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lapa grande cave (geolod:Cave_site_0023)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0024_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lapa sem fim cave (geolod:Cave_site_0024)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0025_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Palestina cave (geolod:Cave_site_0025)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0026_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Okshola cave (geolod:Cave_site_0026)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0027_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Tamboril cave (geolod:Cave_site_0027)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0028_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Valmiki cave  (geolod:Cave_site_0028)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0029_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Mairs cave (geolod:Cave_site_0029)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0031_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Abaliget cave (geolod:Cave_site_0031)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0032_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Anjokipoty (geolod:Cave_site_0032)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0034_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cueva del Diablo (geolod:Cave_site_0034)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0035_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Curupira cave (geolod:Cave_site_0035)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0036_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Dayu cave (geolod:Cave_site_0036)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0038_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Diva cave (geolod:Cave_site_0038)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0039_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Dongge cave (geolod:Cave_site_0039)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0040_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Excentrica cave (geolod:Cave_site_0040)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0042_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Ifoulki cave (geolod:Cave_site_0042)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0045_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kulishu cave (geolod:Cave_site_0045)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0046_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Labyrintgrottan cave (geolod:Cave_site_0046)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0047_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Larshullet cave (geolod:Cave_site_0047)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0048_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Leviathan cave (geolod:Cave_site_0048)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0049_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "McLean's cave (geolod:Cave_site_0049)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0053_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pippikin Pot cave (geolod:Cave_site_0053)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0054_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Sahiya cave (geolod:Cave_site_0054)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0055_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Sieben Hengste cave (geolod:Cave_site_0055)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0056_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Skala Marion cave (geolod:Cave_site_0056)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0057_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Soylegrotta cave (geolod:Cave_site_0057)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0058_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Spannagel cave (geolod:Cave_site_0058)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0059_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Suozi cave (geolod:Cave_site_0059)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0060_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Taurius cave (geolod:Cave_site_0060)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0061_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Timta cave (geolod:Cave_site_0061)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0062_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Torrinha cave (geolod:Cave_site_0062)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0063_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Tzabnah cave (geolod:Cave_site_0063)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0064_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wah Shikhar cave (geolod:Cave_site_0064)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0065_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Whiterock cave (geolod:Cave_site_0065)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0066_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "White Scar cave (geolod:Cave_site_0066)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0067_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Clearwater/Wind caves connection (geolod:Cave_site_0067)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0069_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Xinglong cave (geolod:Cave_site_0069)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0070_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Abaco Island cave (geolod:Cave_site_0070)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0071_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Baradla cave (geolod:Cave_site_0071)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0072_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Ascunsa cave (geolod:Cave_site_0072)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0073_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Bourgeois\u2013Delaunay cave (geolod:Cave_site_0073)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0074_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cango cave (geolod:Cave_site_0074)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0077_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Chauvet cave (geolod:Cave_site_0077)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0078_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Chilibrillo cave (geolod:Cave_site_0078)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0079_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Dim cave (geolod:Cave_site_0079)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0080_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Furong cave (geolod:Cave_site_0080)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0081_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Gueldaman cave (geolod:Cave_site_0081)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0082_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Hollywood cave (geolod:Cave_site_0082)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0083_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "La Mine cave (geolod:Cave_site_0083)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0084_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Le\u00e1ny cave (geolod:Cave_site_0084)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0085_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Macal Chasm (geolod:Cave_site_0085)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0086_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Modric cave (geolod:Cave_site_0086)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0087_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pindal cave (geolod:Cave_site_0087)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0090_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Tri\u00f3 cave (geolod:Cave_site_0090)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0091_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Ursilor cave (geolod:Cave_site_0091)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0094_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Anjohibe (geolod:Cave_site_0094)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0095_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Brown's cave (geolod:Cave_site_0095)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0097_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Bue Marino cave (geolod:Cave_site_0097)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0098_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Crag cave (geolod:Cave_site_0098)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0099_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Dante cave (geolod:Cave_site_0099)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0100_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Katerloch cave (geolod:Cave_site_0100)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0101_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Klapferloch cave (geolod:Cave_site_0101)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0102_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Korallgrottan cave (geolod:Cave_site_0102)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0103_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lapa Doce cave (geolod:Cave_site_0103)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0104_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Liang Luar (geolod:Cave_site_0104)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0105_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Schneckenloch cave (geolod:Cave_site_0105)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0106_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Seso cave (geolod:Cave_site_0106)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0107_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Yok Balum cave (geolod:Cave_site_0107)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0108_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Clamouse cave (geolod:Cave_site_0108)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0109_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Molinos cave (geolod:Cave_site_0109)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0111_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Rainha cave (geolod:Cave_site_0111)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0112_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Xinya cave (geolod:Cave_site_0112)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0113_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Paix\u00e3o cave (geolod:Cave_site_0113)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0115_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "H\u00f6lloch im Mahdtal (geolod:Cave_site_0115)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0116_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Bukit Assam cave (geolod:Cave_site_0116)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0117_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Bunker cave (geolod:Cave_site_0117)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0118_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Clearwater cave (geolod:Cave_site_0118)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0120_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Ejulve cave (geolod:Cave_site_0120)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0121_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Entrische Kirche cave (geolod:Cave_site_0121)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0122_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Heshang cave (geolod:Cave_site_0122)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0123_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Milchbach cave (geolod:Cave_site_0123)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0127_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Xiaobailong cave (geolod:Cave_site_0127)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0128_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Buckeye creek (geolod:Cave_site_0128)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0129_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Grotta di Carburangeli (geolod:Cave_site_0129)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0130_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Dandak cave (geolod:Cave_site_0130)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0132_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kleegruben cave (geolod:Cave_site_0132)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0133_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Buca della Renella (geolod:Cave_site_0133)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0134_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cave of the Bells (geolod:Cave_site_0134)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0135_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Grotte de Piste (geolod:Cave_site_0135)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0136_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Juxtlahuaca cave (geolod:Cave_site_0136)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0137_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kinderlinskaya cave (geolod:Cave_site_0137)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0138_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Moomi cave (geolod:Cave_site_0138)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0139_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Oregon caves national monument (geolod:Cave_site_0139)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0140_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Sanbao cave (geolod:Cave_site_0140)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0141_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Sofular cave (geolod:Cave_site_0141)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0142_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Tianmen (geolod:Cave_site_0142)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0144_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Botuver\u00e1 cave (geolod:Cave_site_0144)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0145_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Antro del Corchia (geolod:Cave_site_0145)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0146_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Gunung-buda cave (snail shell cave) (geolod:Cave_site_0146)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0147_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Fort Stanton cave (geolod:Cave_site_0147)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0149_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Arch cave (geolod:Cave_site_0149)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0151_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Guillotine cave (geolod:Cave_site_0151)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0152_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Hoti cave (geolod:Cave_site_0152)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0154_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Jiuxian cave (geolod:Cave_site_0154)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0155_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "KNI-51 (geolod:Cave_site_0155)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0156_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Mavri Trypa cave (geolod:Cave_site_0156)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0157_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Munagamanu cave (geolod:Cave_site_0157)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0158_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Nettlebed cave (geolod:Cave_site_0158)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0160_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Soreq cave (geolod:Cave_site_0160)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0161_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Aurora cave (geolod:Cave_site_0161)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0162_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Calcite cave (Mt Luxmore, Fiordland) (geolod:Cave_site_0162)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0163_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Gardener's Gut (geolod:Cave_site_0163)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0164_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Max's cave (geolod:Cave_site_0164)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0165_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Ruakuri cave (geolod:Cave_site_0165)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0166_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Te Reinga cave (geolod:Cave_site_0166)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0167_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Waiau cave (geolod:Cave_site_0167)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0168_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wazpretti cave (geolod:Cave_site_0168)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0169_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Doubtful Xanadu (geolod:Cave_site_0169)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0172_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wolkberg cave (geolod:Cave_site_0172)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0173_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Perdida cave (geolod:Cave_site_0173)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0174_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Zhuliuping cave (geolod:Cave_site_0174)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0175_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Yaoba Don cave (geolod:Cave_site_0175)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0177_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Santo Tomas cave (geolod:Cave_site_0177)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0178_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Yamen cave (geolod:Cave_site_0178)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0181_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Forestry cave (geolod:Cave_site_0181)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0182_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kotumsar cave (geolod:Cave_site_0182)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0183_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Dos Anas cave (geolod:Cave_site_0183)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0185_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Beatus cave (geolod:Cave_site_0185)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0186_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Bribin cave (geolod:Cave_site_0186)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0187_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cesare Battisti cave (geolod:Cave_site_0187)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0189_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Chen Ha cave (geolod:Cave_site_0189)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0190_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cold Water cave (geolod:Cave_site_0190)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0191_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Devil's Icebox cave (geolod:Cave_site_0191)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0192_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "El Condor cave (geolod:Cave_site_0192)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0193_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Frasassi cave system - Grotta Grande del Vento (geolod:Cave_site_0193)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0195_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Harrison's cave (geolod:Cave_site_0195)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0196_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Karaca cave (geolod:Cave_site_0196)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0197_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Klaus Cramer cave (geolod:Cave_site_0197)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0198_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lianhua cave, Hunan (geolod:Cave_site_0198)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0199_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lynds cave (geolod:Cave_site_0199)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0200_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Minnetonka cave (geolod:Cave_site_0200)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0202_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Piani Eterni karst system (geolod:Cave_site_0202)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0203_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Poleva cave (geolod:Cave_site_0203)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0204_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Xibalba cave (geolod:Cave_site_0204)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0205_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "S\u00e3o Bernardo cave (geolod:Cave_site_0205)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0206_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "S\u00e3o Matheus cave (geolod:Cave_site_0206)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0207_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Shatuca cave (geolod:Cave_site_0207)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0208_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Tangga cave (geolod:Cave_site_0208)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0209_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Uluu-Too cave (geolod:Cave_site_0209)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0210_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "White moon cave (geolod:Cave_site_0210)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0211_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Xiangshui cave (geolod:Cave_site_0211)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0213_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Tausoare cave (geolod:Cave_site_0213)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0214_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cave C126 (geolod:Cave_site_0214)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0215_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Chaara cave (geolod:Cave_site_0215)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0216_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Dark cave (geolod:Cave_site_0216)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0219_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Shennong cave (geolod:Cave_site_0219)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0221_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "La Vierge cave (geolod:Cave_site_0221)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0222_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Patate cave (geolod:Cave_site_0222)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0223_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wanxiang cave (geolod:Cave_site_0223)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0224_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Xianglong cave (geolod:Cave_site_0224)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0225_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Chiflonkhakha cave (geolod:Cave_site_0225)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0226_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cueva del Diamante (geolod:Cave_site_0226)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0230_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Marota cave (geolod:Cave_site_0230)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0231_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pacupahuain cave (geolod:Cave_site_0231)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0232_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Rio Secreto cave system (geolod:Cave_site_0232)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0233_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Robinson cave (geolod:Cave_site_0233)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0234_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Santana cave (geolod:Cave_site_0234)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0235_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cueva del Tigre Perdido (geolod:Cave_site_0235)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0236_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Toca da Boa Vista (geolod:Cave_site_0236)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0237_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Umajalanta cave (geolod:Cave_site_0237)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0239_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Baluk cave (geolod:Cave_site_0239)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0241_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Gempa bumi cave (geolod:Cave_site_0241)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0242_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Haozhu cave (geolod:Cave_site_0242)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0243_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kailash cave (geolod:Cave_site_0243)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0244_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lianhua cave, Shanxi (geolod:Cave_site_0244)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0245_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Nakarallu cave (geolod:Cave_site_0245)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0246_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Palawan cave (geolod:Cave_site_0246)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0248_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Shenqi cave (geolod:Cave_site_0248)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0249_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Shigao cave (geolod:Cave_site_0249)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0250_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wuya cave (geolod:Cave_site_0250)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0252_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Andriamaniloke (geolod:Cave_site_0252)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0253_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Hoq cave (geolod:Cave_site_0253)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0254_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "PP29 (geolod:Cave_site_0254)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0255_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Mitoho (geolod:Cave_site_0255)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0256_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lithophagus cave (geolod:Cave_site_0256)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0258_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "B7 cave (geolod:Cave_site_0258)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0259_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cobre cave (geolod:Cave_site_0259)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0260_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Crovassa Azzurra (geolod:Cave_site_0260)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0262_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Ble\u00dfberg cave (geolod:Cave_site_0262)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0263_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Bulgarian Orlova Chuka cave (geolod:Cave_site_0263)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0264_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Stra\u0161na pe\u0107 cave (geolod:Cave_site_0264)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0265_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Coves de Campanet (geolod:Cave_site_0265)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0266_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cueva Victoria (geolod:Cave_site_0266)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0267_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Gruta do Casal da Lebre (geolod:Cave_site_0267)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0268_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pere Noel cave (geolod:Cave_site_0268)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0269_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Gejkar cave (geolod:Cave_site_0269)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0270_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Gol-E-Zard cave (geolod:Cave_site_0270)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0271_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Jersey cave (geolod:Cave_site_0271)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0272_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Metro cave (geolod:Cave_site_0272)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0273_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Crystal cave (geolod:Cave_site_0273)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0274_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Terciopelo cave (geolod:Cave_site_0274)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0275_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Buraca Gloriosa (geolod:Cave_site_0275)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0277_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Huagapo cave (geolod:Cave_site_0277)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0278_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pink Panther cave (geolod:Cave_site_0278)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0279_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Staircase cave (geolod:Cave_site_0279)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0280_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Atta cave (geolod:Cave_site_0280)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0281_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Venado cave (geolod:Cave_site_0281)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0282_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wadi Sannur cave (geolod:Cave_site_0282)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0283_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Babylon cave (geolod:Cave_site_0283)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0284_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Creighton`s cave (geolod:Cave_site_0284)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0285_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Disbelief cave (geolod:Cave_site_0285)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0286_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "La Garma cave (geolod:Cave_site_0286)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0287_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Twin Forks cave (geolod:Cave_site_0287)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0288_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wet Neck cave (geolod:Cave_site_0288)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0289_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Gassel Tropfsteinh\u00f6hle (geolod:Cave_site_0289)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0290_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Grete-Ruth Shaft (geolod:Cave_site_0290)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0292_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Limnon cave (geolod:Cave_site_0292)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0293_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Tham Doun Mai (geolod:Cave_site_0293)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0294_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Palco cave (geolod:Cave_site_0294)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0295_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Qadisha cave (geolod:Cave_site_0295)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0296_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Amir Timur cave (geolod:Cave_site_0296)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0297_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "B\u00e0sura cave (geolod:Cave_site_0297)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0298_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Belum cave (geolod:Cave_site_0298)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0299_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Calabrez (geolod:Cave_site_0299)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0300_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Careys cave (geolod:Cave_site_0300)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0301_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cathedral cave (geolod:Cave_site_0301)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0303_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Crystal cave, Australia (geolod:Cave_site_0303)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0304_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cueva Bonita (geolod:Cave_site_0304)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0305_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cueva Rosa (geolod:Cave_site_0305)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0306_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Cu\u00edca cave (geolod:Cave_site_0306)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0307_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Efflux cave (geolod:Cave_site_0307)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0308_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "GD8 (geolod:Cave_site_0308)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0310_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Golgotha cave (geolod:Cave_site_0310)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0312_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Heifeng cave (geolod:Cave_site_0312)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0313_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Herbstlabyrinth cave (geolod:Cave_site_0313)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0314_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Herolds Bay cave (geolod:Cave_site_0314)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0315_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Huangchao cave (geolod:Cave_site_0315)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0316_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "H\u00fcttenbl\u00e4serschachth\u00f6hle (geolod:Cave_site_0316)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0317_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Jiangjun cave (geolod:Cave_site_0317)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0318_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Jinfo cave (geolod:Cave_site_0318)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0319_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Jiulong cave (geolod:Cave_site_0319)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0320_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Katalekhor (geolod:Cave_site_0320)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0321_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Klang (geolod:Cave_site_0321)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0323_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kyok-Tash cave (geolod:Cave_site_0323)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0324_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "La Vallina (geolod:Cave_site_0324)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0325_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Larga cave (geolod:Cave_site_0325)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0326_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Linzhu cave (geolod:Cave_site_0326)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0327_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Manita pe\u0107 cave (geolod:Cave_site_0327)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0328_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Mata Virgem cave (geolod:Cave_site_0328)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0329_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Matupi cave (geolod:Cave_site_0329)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0330_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Meravelles cave (geolod:Cave_site_0330)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0332_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Murada (geolod:Cave_site_0332)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0333_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Neotektonik cave (geolod:Cave_site_0333)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0334_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Nova\u00a0Grgosova\u00a0cave (geolod:Cave_site_0334)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0335_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Ostolo cave (geolod:Cave_site_0335)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0336_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pentadactylos (geolod:Cave_site_0336)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0337_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pir Ghar cave (geolod:Cave_site_0337)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0338_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Coves del pirata (geolod:Cave_site_0338)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0339_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pozzo Cuc\u00f9 cave (geolod:Cave_site_0339)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0340_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Qujia cave (geolod:Cave_site_0340)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0341_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Rey Marcos (geolod:Cave_site_0341)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0342_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Sa balma des quart\u00f3 cave (geolod:Cave_site_0342)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0343_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Sant'Angelo cave (geolod:Cave_site_0343)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0344_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Sarma cave (geolod:Cave_site_0344)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0345_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Schratten cave (geolod:Cave_site_0345)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0346_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Shijiangjun cave (geolod:Cave_site_0346)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0347_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Shizi cave (geolod:Cave_site_0347)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0348_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Sudwala cave (geolod:Cave_site_0348)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0349_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Talisman cave (geolod:Cave_site_0349)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0350_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Toca da Barriguda (geolod:Cave_site_0350)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0351_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Trapi\u00e1 cave (geolod:Cave_site_0351)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0352_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "War Eagle (geolod:Cave_site_0352)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0353_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wintimdouine (geolod:Cave_site_0353)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0354_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Wulu cave (geolod:Cave_site_0354)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0355_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Xiniu cave (geolod:Cave_site_0355)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0356_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Yangzi cave (geolod:Cave_site_0356)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0357_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Yonderup cave (geolod:Cave_site_0357)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0358_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Zhangjia cave (geolod:Cave_site_0358)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0359_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Zoolithen cave (geolod:Cave_site_0359)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0360_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Bigonda cave (geolod:Cave_site_0360)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0361_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Kocain cave (geolod:Cave_site_0361)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0362_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Labyrinth cave (geolod:Cave_site_0362)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0363_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Lake Shasta cave (geolod:Cave_site_0363)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0364_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Naharon (geolod:Cave_site_0364)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0365_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
-        "type": "geoinstance",
-        "text": "Pot au Feu (geolod:Cave_site_0365)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/Cave_site_0366_suniv2_",
-        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
         "type": "geoinstance",
         "text": "Savi cave (geolod:Cave_site_0366)",
         "data": {
@@ -37697,23 +31574,21 @@ var tree={
         "data": {
           "from": {
             "http://www.opengis.net/ont/geosparql#hasGeometry": {
-              "http://w3id.org/geo-lod/Cave": 305,
-              "http://www.cidoc-crm.org/cidoc-crm/E27_Site": 305,
-              "http://www.cidoc-crm.org/cidoc-crm/E53_Place": 305
+              "http://w3id.org/geo-lod/Cave": 305
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "http://www.opengis.net/ont/geosparql#GeometryCollection": 305,
-              "http://www.w3.org/ns/ldp#Resource": 195,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 195
+              "http://www.w3.org/ns/ldp#Resource": 295,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 295
             }
           },
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 305,
-              "http://www.w3.org/ns/adms#Asset": 305,
               "http://rdfs.org/ns/void#Dataset": 305,
-              "http://www.w3.org/ns/ldp#Resource": 270,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 270
+              "http://www.w3.org/ns/adms#Asset": 305,
+              "http://www.w3.org/ns/ldp#Resource": 238,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 238
             },
             "http://www.opengis.net/ont/geosparql#asWKT": {
               "instancecount": 305
@@ -37725,41 +31600,10 @@ var tree={
         }
       },
       {
-        "id": "http://www.opengis.net/ont/geosparql#FeatureCollection",
-        "parent": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
-        "instancecount": 3,
-        "type": "collectionclass",
-        "text": " (gsp:FeatureCollection) [3]",
-        "data": {
-          "from": {},
-          "to": {
-            "http://rdfs.org/ns/void#inDataset": {
-              "instancecount": 3,
-              "http://www.w3.org/ns/adms#Asset": 3,
-              "http://rdfs.org/ns/void#Dataset": 3,
-              "http://www.w3.org/ns/ldp#Resource": 3,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3
-            },
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-              "instancecount": 7
-            },
-            "http://www.w3.org/2000/01/rdf-schema#label": {
-              "instancecount": 3
-            },
-            "http://www.w3.org/2000/01/rdf-schema#member": {
-              "instancecount": 917,
-              "http://w3id.org/geo-lod/Cave": 915,
-              "http://www.cidoc-crm.org/cidoc-crm/E27_Site": 915,
-              "http://www.cidoc-crm.org/cidoc-crm/E53_Place": 915
-            }
-          }
-        }
-      },
-      {
-        "id": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
-        "parent": "#",
-        "type": "collectionclass",
-        "text": "SpatialObjectCollection (gsp:SpatialObjectCollection)",
+        "id": "http://w3id.org/geo-lod/FeatureCollection_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "FeatureCollection Instances Collection (geolod:FeatureCollection_collection)",
         "data": {
           "from": {},
           "to": {}
@@ -37786,10 +31630,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
-              "http://www.w3.org/ns/adms#Asset": 1,
               "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/ldp#Resource": 1,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 3
@@ -37987,11 +31829,17 @@ var tree={
             }
           },
           "to": {
+            "http://purl.org/dc/terms/created": {
+              "instancecount": 1
+            },
             "http://purl.org/dc/terms/description": {
               "instancecount": 3
             },
             "http://purl.org/dc/terms/license": {
               "instancecount": 3
+            },
+            "http://purl.org/dc/terms/publisher": {
+              "instancecount": 1
             },
             "http://purl.org/dc/terms/source": {
               "instancecount": 4,
@@ -38005,6 +31853,11 @@ var tree={
               "http://rdfs.org/ns/void#Dataset": 3,
               "http://www.w3.org/ns/adms#Asset": 3
             },
+            "http://w3id.org/geo-lod/hasObservation": {
+              "instancecount": 2114,
+              "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
+              "http://www.w3.org/ns/sosa/Observation": 2114
+            },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 3
             },
@@ -38013,17 +31866,6 @@ var tree={
               "http://purl.org/dc/terms/BibliographicResource": 2
             },
             "http://www.w3.org/ns/dcat#record": {
-              "instancecount": 2114,
-              "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
-              "http://www.w3.org/ns/sosa/Observation": 2114
-            },
-            "http://purl.org/dc/terms/created": {
-              "instancecount": 1
-            },
-            "http://purl.org/dc/terms/publisher": {
-              "instancecount": 1
-            },
-            "http://w3id.org/geo-lod/hasObservation": {
               "instancecount": 2114,
               "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
               "http://www.w3.org/ns/sosa/Observation": 2114
@@ -80534,18 +74376,18 @@ var tree={
         "text": "S6_Data_Evaluation (crmsci:S6_Data_Evaluation) [2]",
         "data": {
           "from": {
-            "http://w3id.org/geo-lod/smoothingMethod_median": {
+            "http://w3id.org/geo-lod/smoothingMethod_savgol": {
               "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
               "http://www.w3.org/ns/sosa/Observation": 2114
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "http://www.w3.org/2004/02/skos/core#Collection": 4
             },
-            "http://w3id.org/geo-lod/ageChronology": {
+            "http://w3id.org/geo-lod/smoothingMethod_median": {
               "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
               "http://www.w3.org/ns/sosa/Observation": 2114
             },
-            "http://w3id.org/geo-lod/smoothingMethod_savgol": {
+            "http://w3id.org/geo-lod/ageChronology": {
               "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
               "http://www.w3.org/ns/sosa/Observation": 2114
             }
@@ -80559,6 +74401,9 @@ var tree={
               "http://rdfs.org/ns/void#Dataset": 4,
               "http://www.w3.org/ns/adms#Asset": 4
             },
+            "http://w3id.org/geo-lod/polyOrder": {
+              "instancecount": 1
+            },
             "http://w3id.org/geo-lod/windowSize": {
               "instancecount": 2
             },
@@ -80567,9 +74412,6 @@ var tree={
             },
             "http://www.w3.org/2000/01/rdf-schema#label": {
               "instancecount": 4
-            },
-            "http://w3id.org/geo-lod/polyOrder": {
-              "instancecount": 1
             }
           }
         }
@@ -80704,6 +74546,17 @@ var tree={
         }
       },
       {
+        "id": "http://www.cidoc-crm.org/cidoc-crm/E27_Site",
+        "parent": "#",
+        "type": "geoclass",
+        "instancecount": 1,
+        "text": "E27_Site (crm:E27_Site) [1]",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
         "id": "http://w3id.org/geo-lod/EpicaDomeC_Site_suniv1_",
         "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
         "type": "geoinstance",
@@ -80711,6 +74564,54 @@ var tree={
         "data": {
           "from": {},
           "to": {}
+        }
+      },
+      {
+        "id": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+        "parent": "#",
+        "type": "geoclass",
+        "instancecount": 1,
+        "text": "E53_Place (crm:E53_Place) [1]",
+        "data": {
+          "from": {
+            "http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location": {
+              "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object": 1,
+              "http://www.w3.org/ns/sosa/Sample": 1
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": {
+              "http://www.cidoc-crm.org/cidoc-crm/E7_Activity": 1,
+              "http://www.ics.forth.gr/isl/CRMsci/S1_Matter_Removal": 1,
+              "http://www.ics.forth.gr/isl/CRMsci/S4_Observation": 2114,
+              "http://www.w3.org/ns/sosa/Observation": 2114
+            },
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.opengis.net/ont/geosparql#FeatureCollection": 2
+            },
+            "http://www.w3.org/ns/sosa/isSampleOf": {
+              "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object": 1,
+              "http://www.w3.org/ns/sosa/Sample": 1
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 1,
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/adms#Asset": 1
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by": {
+              "instancecount": 1
+            },
+            "http://www.opengis.net/ont/geosparql#hasGeometry": {
+              "instancecount": 1,
+              "http://www.opengis.net/ont/sf#Point": 1
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 2
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 1
+            }
+          }
         }
       },
       {
@@ -80839,6 +74740,26 @@ var tree={
               "http://www.w3.org/ns/sosa/Observation": 2114
             }
           }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/E27_Site_collection",
+        "parent": "http://www.opengis.net/ont/geosparql#FeatureCollection",
+        "type": "featurecollection",
+        "text": "E27_Site Instances Collection (geolod:E27_Site_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/E53_Place_collection",
+        "parent": "http://www.opengis.net/ont/geosparql#FeatureCollection",
+        "type": "featurecollection",
+        "text": "E53_Place Instances Collection (geolod:E53_Place_collection)",
+        "data": {
+          "from": {},
+          "to": {}
         }
       }
     ]
