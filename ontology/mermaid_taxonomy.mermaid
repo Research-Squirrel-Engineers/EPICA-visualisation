@@ -1,185 +1,162 @@
 flowchart LR
+%% External Ontologies
+subgraph EXT["External Ontologies"]
+    direction TB
 
-    subgraph EXT["External Ontologies"]
+    subgraph CRM["CIDOC-CRM"]
         direction TB
-
-        subgraph GEO_ONT["GeoSPARQL"]
-            direction TB
-            GF["geo:Feature"]
-            GFC["geo:FeatureCollection"]
-            GG["geo:Geometry"]
-        end
-
-        subgraph SF_ONT["Simple Features"]
-            SFP["sf:Point"]
-        end
-
-        subgraph CRM_GRP["CIDOC-CRM"]
-            direction TB
-            CE53["crm:E53_Place"]
-            CE27["crm:E27_Site"]
-            CE22["crm:E22_Human-Made_Object"]
-            CE7["crm:E7_Activity"]
-        end
-
-        subgraph CRMSCI_GRP["CRMsci"]
-            direction TB
-            CS4["crmsci:S4_Observation"]
-            CS6["crmsci:S6_Data_Evaluation"]
-            CS9["crmsci:S9_Property_Type"]
-            CS1["crmsci:S1_Matter_Removal"]
-        end
-
-        subgraph SOSA_GRP["SOSA / SSN"]
-            direction TB
-            SO["sosa:Observation"]
-            SS["sosa:Sample"]
-            SP["sosa:ObservableProperty"]
-        end
-
-        subgraph PROV_GRP["PROV-O"]
-            PE["prov:Entity"]
-        end
-
-        SFP -->|subClassOf| GG
-        GFC -.->|rdfs:member| GF
+        CE53["crm:E53_Place"]
+        CE27["crm:E27_Site"]
+        CE22["crm:E22_Human-Made_Object"]
+        CE7["crm:E7_Activity"]
     end
 
-    subgraph CORE["geo-lod Core  (geo_lod_core.ttl)"]
+    subgraph CRMSCI["CRMsci"]
         direction TB
-
-        subgraph C_LOC["Locations"]
-            SL["SamplingLocation"]
-            SL -->|subClassOf| GF
-            SL -->|subClassOf| CE53
-            SL -->|subClassOf| CE27
-        end
-
-        subgraph C_SAMP["Samples"]
-            PS["PalaeoclimateSample"]
-            PS -->|subClassOf| SS
-        end
-
-        subgraph C_OBS["Observations"]
-            PO["PalaeoclimateObservation"]
-            PO -->|subClassOf| CS4
-            PO -->|subClassOf| SO
-        end
-
-        subgraph C_PROP["Observable Properties"]
-            OP["ObservableProperty"]
-            D18OP["Delta18OProperty"]
-            OP -->|subClassOf| SP
-            OP -->|subClassOf| CS9
-            D18OP -->|subClassOf| OP
-        end
-
-        subgraph C_CHRON["Chronology"]
-            CH["Chronology"]
-        end
-
-        subgraph C_SMOOTH["Smoothing"]
-            SM["SmoothingMethod"]
-            RM["RollingMedianFilter"]
-            SG["SavitzkyGolayFilter"]
-            SM -->|subClassOf| CS6
-            RM -->|subClassOf| SM
-            SG -->|subClassOf| SM
-        end
-
-        subgraph C_MTYPE["Measurement Type"]
-            MT["MeasurementType"]
-            MT -->|subClassOf| CS6
-        end
-
-        subgraph C_DS["Data Source"]
-            DS["DataSource"]
-            DS -->|subClassOf| PE
-        end
+        CS4["crmsci:S4_Observation"]
+        CS1["crmsci:S1_Matter_Removal"]
+        CS6["crmsci:S6_Data_Evaluation"]
+        CS9["crmsci:S9_Property_Type"]
     end
 
-    subgraph EPICA["geo-lod EPICA Extension  (epica_ontology.ttl)"]
+    subgraph SOSA["SOSA"]
         direction TB
-
-        subgraph EP_LOC["Ice Core Location"]
-            DRSITE["DrillingSite"]
-            DRSITE -->|subClassOf| SL
-        end
-
-        subgraph EP_SAMP["Ice Core Sample"]
-            IC["IceCore"]
-            IC -->|subClassOf| PS
-            IC -->|subClassOf| CE22
-        end
-
-        subgraph EP_OBS["Ice Core Observations"]
-            ICO["IceCoreObservation"]
-            CH4O["CH4Observation"]
-            D18OO["Delta18OObservation"]
-            ICO -->|subClassOf| PO
-            CH4O -->|subClassOf| ICO
-            D18OO -->|subClassOf| ICO
-        end
-
-        subgraph EP_PROP["Ice Core Properties"]
-            CH4P["CH4ConcentrationProperty"]
-            CH4P -->|subClassOf| OP
-        end
-
-        subgraph EP_CHRON["Ice Core Chronology"]
-            ICC["IceCoreChronology"]
-            ICC -->|subClassOf| CH
-        end
-
-        subgraph EP_DATA["Catalogue & Dataset"]
-            PCC["PalaeoclimateDataCatalogue"]
-            ICD["IceCoreDataset"]
-            CH4D["CH4Dataset"]
-            D18OD["Delta18ODataset"]
-            CH4D -->|subClassOf| ICD
-            D18OD -->|subClassOf| ICD
-        end
-
-        subgraph EP_CAMP["Campaign"]
-            DC["DrillingCampaign"]
-            DC -->|subClassOf| CE7
-        end
+        SO["sosa:Observation"]
+        SS["sosa:Sample"]
+        SP["sosa:ObservableProperty"]
     end
 
-    subgraph SISAL["geo-lod SISAL Extension  (sisal_ontology.ttl)"]
-        direction TB
-
-        subgraph SI_LOC["Speleothem Location"]
-            CAVE["Cave"]
-            CAVE -->|subClassOf| SL
-        end
-
-        subgraph SI_SAMP["Speleothem Sample"]
-            SPEL["Speleothem"]
-            SPEL -->|subClassOf| PS
-        end
-
-        subgraph SI_EVT["Sampling Event"]
-            SSE["SpeleothemSamplingEvent"]
-            SSE -->|subClassOf| CS1
-        end
-
-        subgraph SI_OBS["Speleothem Observations"]
-            SPO["SpeleothemObservation"]
-            D18OS["Delta18OSpeleothemObservation"]
-            D13CS["Delta13CSpeleothemObservation"]
-            SPO -->|subClassOf| PO
-            D18OS -->|subClassOf| SPO
-            D13CS -->|subClassOf| SPO
-        end
-
-        subgraph SI_PROP["Speleothem Properties"]
-            D13CP["Delta13CProperty"]
-            D13CP -->|subClassOf| OP
-        end
-
-        subgraph SI_CHRON["U-Th Chronology"]
-            UTHC["UThChronology"]
-            UTHC -->|subClassOf| CH
-        end
+    subgraph GEO["GeoSPARQL"]
+        GF["geo:Feature"]
     end
+
+    subgraph PROV["PROV-O"]
+        PE["prov:Entity"]
+    end
+end
+
+%% Core Ontology
+subgraph CORE["geo-lod Core Ontology"]
+    direction TB
+    PALOBS["PalaeoclimateObservation"]
+    PALSAMPLE["PalaeoclimateSample"]
+    SAMPLINGLOC["SamplingLocation"]
+    CHRONO["Chronology"]
+    OBSPROP["ObservableProperty"]
+    DATASRC["DataSource"]
+    MTYPE["MeasurementType"]
+    SMOOTH["SmoothingMethod"]
+end
+
+%% EPICA Extension
+subgraph EPICA["EPICA Ice Core Extension"]
+    direction TB
+    ICEOBS["IceCoreObservation"]
+    CH4OBS["CH4Observation"]
+    D18OOBS["Delta18OObservation"]
+    ICECORE["IceCore"]
+    DRILLSITE["DrillingSite"]
+    DRILLCAMP["DrillingCampaign"]
+    ICECHRONO["IceCoreChronology"]
+end
+
+%% SISAL Extension
+subgraph SISAL["SISAL Speleothem Extension"]
+    direction TB
+    SPELOBS["SpeleothemObservation"]
+    D18OSPELOBS["Delta18OSpeleothemObservation"]
+    D13COBS["Delta13CSpeleothemObservation"]
+    SPEL["Speleothem"]
+    CAVE["Cave"]
+    SSE["SpeleothemSamplingEvent"]
+    UTHCHRONO["UThChronology"]
+end
+
+%% External to Core relationships
+SO -.-> PALOBS
+CS4 -.-> PALOBS
+SS -.-> PALSAMPLE
+CE53 -.-> SAMPLINGLOC
+CE27 -.-> SAMPLINGLOC
+GF -.-> SAMPLINGLOC
+SP -.-> OBSPROP
+CS9 -.-> OBSPROP
+CS9 -.-> MTYPE
+CS6 -.-> CHRONO
+CS6 -.-> SMOOTH
+PE -.-> DATASRC
+CE7 -.-> DRILLCAMP
+CS1 -.-> DRILLCAMP
+CE7 -.-> SSE
+CS1 -.-> SSE
+
+%% Core to Extensions
+PALOBS --> ICEOBS
+PALOBS --> SPELOBS
+ICEOBS --> CH4OBS
+ICEOBS --> D18OOBS
+SPELOBS --> D18OSPELOBS
+SPELOBS --> D13COBS
+
+PALSAMPLE --> ICECORE
+PALSAMPLE --> SPEL
+CE22 -.-> ICECORE
+
+SAMPLINGLOC --> DRILLSITE
+SAMPLINGLOC --> CAVE
+
+CHRONO --> ICECHRONO
+CHRONO --> UTHCHRONO
+
+%% Styling - External Ontologies
+style EXT fill:#fafafa,stroke:#999,color:#333
+style CRM fill:#fde8e8,stroke:#9b2226,color:#333
+style CRMSCI fill:#ffe8e8,stroke:#e63946,color:#333
+style SOSA fill:#e8f0fb,stroke:#1d3557,color:#333
+style GEO fill:#e8f1f7,stroke:#457b9d,color:#333
+style PROV fill:#fef0e8,stroke:#e76f51,color:#333
+
+style CE53 fill:#9b2226,color:#fff,stroke:#7a1a1d
+style CE27 fill:#9b2226,color:#fff,stroke:#7a1a1d
+style CE22 fill:#9b2226,color:#fff,stroke:#7a1a1d
+style CE7 fill:#9b2226,color:#fff,stroke:#7a1a1d
+style CS4 fill:#e63946,color:#fff,stroke:#c1121f
+style CS1 fill:#e63946,color:#fff,stroke:#c1121f
+style CS6 fill:#e63946,color:#fff,stroke:#c1121f
+style CS9 fill:#e63946,color:#fff,stroke:#c1121f
+style SO fill:#1d3557,color:#fff,stroke:#0d2137
+style SS fill:#1d3557,color:#fff,stroke:#0d2137
+style SP fill:#1d3557,color:#fff,stroke:#0d2137
+style GF fill:#457b9d,color:#fff,stroke:#2c5f7a
+style PE fill:#e76f51,color:#fff,stroke:#c45c3e
+
+%% Styling - Core
+style CORE fill:#e8f4f8,stroke:#457b9d,stroke-width:2px,color:#333
+style PALOBS fill:#74c0fc,color:#000,stroke:#1971c2,stroke-width:2px
+style PALSAMPLE fill:#74c0fc,color:#000,stroke:#1971c2,stroke-width:2px
+style SAMPLINGLOC fill:#74c0fc,color:#000,stroke:#1971c2,stroke-width:2px
+style CHRONO fill:#74c0fc,color:#000,stroke:#1971c2,stroke-width:2px
+style OBSPROP fill:#a5d8ff,color:#000,stroke:#4dabf7
+style DATASRC fill:#a5d8ff,color:#000,stroke:#4dabf7
+style MTYPE fill:#a5d8ff,color:#000,stroke:#4dabf7
+style SMOOTH fill:#a5d8ff,color:#000,stroke:#4dabf7
+
+%% Styling - EPICA
+style EPICA fill:#d4edda,stroke:#2d6a4f,stroke-width:2px,color:#333
+style ICEOBS fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style CH4OBS fill:#40916c,color:#fff,stroke:#2d6a4f
+style D18OOBS fill:#40916c,color:#fff,stroke:#2d6a4f
+style ICECORE fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style DRILLSITE fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style DRILLCAMP fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style ICECHRONO fill:#40916c,color:#fff,stroke:#2d6a4f
+
+%% Styling - SISAL
+style SISAL fill:#fff3cd,stroke:#856404,stroke-width:2px,color:#333
+style SPELOBS fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
+style D18OSPELOBS fill:#b8860b,color:#fff,stroke:#856404
+style D13COBS fill:#b8860b,color:#fff,stroke:#856404
+style SPEL fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
+style CAVE fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
+style SSE fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
+style UTHCHRONO fill:#b8860b,color:#fff,stroke:#856404

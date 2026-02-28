@@ -75,8 +75,7 @@ RDF Export …
   ✓ Turtle:  c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_dome_c.ttl
   ⚠  geo_lod_utils not available – geo_lod_core.ttl skipped.
   ✓ EPICA ontology: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_ontology.ttl
-  ✓ Mermaid Taxonomy: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_diagram1_taxonomy.mermaid
-  ✓ Mermaid Instance: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_diagram2_instance.mermaid
+  ℹ  Mermaid skipped (geo_lod_utils not available)
   ⚠  geo_lod_utils not available – combined collection skipped.
 
 ============================================================

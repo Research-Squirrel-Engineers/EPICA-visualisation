@@ -1,74 +1,105 @@
 flowchart LR
 
-    COLLECTION["geo:FeatureCollection
-    geolod:EPICA_DrillingSite_Collection
-    1 member"]
+CATALOG(["PalaeoclimateDataCatalogue
+geolod:EPICA_DomeC_Catalog"])
 
-    CATALOG["PalaeoclimateDataCatalogue
-    geolod:EPICA_DomeC_Catalog"]
+DATASET(["IceCoreDataset
+geolod:EPICA_DomeC_Dataset"])
 
-    DATASET["IceCoreDataset
-    geolod:EPICA_DomeC_Dataset"]
+OBS(["IceCoreObservation
+geolod:Obs_CH4_0001
+geolod:Obs_d18O_0001"])
 
-    OBS["IceCoreObservation
-    geolod:Obs_CH4_0001 ...
-    geolod:Obs_d18O_0001 ..."]
+CORE(["IceCore
+geolod:EpicaDomeC_IceCore"])
 
-    CORE["IceCore
-    geolod:EpicaDomeC_IceCore"]
+SITE(["DrillingSite
+geolod:EpicaDomeC_Site"])
 
-    SITE["DrillingSite / geo:Feature
-    geolod:EpicaDomeC_Site
-    crm:E53_Place · crm:E27_Site"]
+CAMPAIGN(["DrillingCampaign
+EPICA Dome C 1996-2004"])
 
-    GEOM["sf:Point
-    geolod:EpicaDomeC_Geometry
-    asWKT: EPSG:4326 POINT(123.35 -75.1)"]
+PROP_CH4(["CH4ConcentrationProperty"])
+PROP_D18O(["Delta18OProperty"])
+MTYPE_CH4(["MeasurementType CH4"])
+MTYPE_D18O(["MeasurementType d18O"])
+CHRON_EDC2(["EDC2 Chronology"])
+CHRON_AICC(["AICC2023 Chronology"])
+MEDIAN(["RollingMedianFilter w11"])
+SG(["SavitzkyGolayFilter w11 p2"])
+SOURCE_CH4(["PANGAEA 472484
+Spahni 2006"])
+SOURCE_D18O(["PANGAEA 961024
+Bouchet 2023"])
 
-    CAMPAIGN["DrillingCampaign
-    EPICA Dome C 1996-2004"]
+GEOM(["sf:Point
+geolod:EpicaDomeC_Geometry"])
 
-    PROP_CH4["CH4ConcentrationProperty
-    geolod:CH4Concentration"]
+LDEPTH((atDepth_m))
+LAGE((ageKaBP))
+LVAL((measuredValue))
+LMEDIAN((smoothed median))
+LSG((smoothed savgol))
+LWKT((asWKT POINT))
+LPPB((unit PPB))
+LPRM((unit PERMILLE))
 
-    PROP_D18O["Delta18OProperty (shared core)
-    geolod:Delta18O"]
+CATALOG -->|dcat:dataset| DATASET
+DATASET -->|hasObservation| OBS
+DATASET -->|hasDrillingCampaign| CAMPAIGN
+OBS -->|hasFeatureOfInterest| CORE
+OBS -->|observedProperty| PROP_CH4
+OBS -->|observedProperty| PROP_D18O
+OBS -->|measurementType| MTYPE_CH4
+OBS -->|measurementType| MTYPE_D18O
+OBS -->|ageChronology| CHRON_EDC2
+OBS -->|ageChronology| CHRON_AICC
+OBS -->|smoothingMethod| MEDIAN
+OBS -->|smoothingMethod| SG
+OBS -->|wasDerivedFrom| SOURCE_CH4
+OBS -->|wasDerivedFrom| SOURCE_D18O
+OBS -.->|atDepth_m| LDEPTH
+OBS -.->|ageKaBP| LAGE
+OBS -.->|measuredValue| LVAL
+OBS -.->|smoothed| LMEDIAN
+OBS -.->|smoothed| LSG
+PROP_CH4 -.->|unit| LPPB
+PROP_D18O -.->|unit| LPRM
+CORE -->|extractedFrom| SITE
+CAMPAIGN -->|tookPlaceAt| SITE
+CAMPAIGN -->|removedSample| CORE
+SITE -->|geo:hasGeometry| GEOM
+GEOM -.->|asWKT| LWKT
 
-    MTYPE_CH4["MeasurementType
-    geolod:MeasurementType_CH4"]
+%% Main instances - darker green
+style CATALOG fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style DATASET fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style OBS fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style CORE fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style SITE fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
+style CAMPAIGN fill:#2d6a4f,color:#fff,stroke:#1b4332,stroke-width:2px
 
-    MTYPE_D18O["MeasurementType (shared core)
-    geolod:MeasurementType_d18O"]
+%% Supporting instances - lighter green
+style PROP_CH4 fill:#40916c,color:#fff,stroke:#2d6a4f
+style PROP_D18O fill:#40916c,color:#fff,stroke:#2d6a4f
+style MTYPE_CH4 fill:#40916c,color:#fff,stroke:#2d6a4f
+style MTYPE_D18O fill:#40916c,color:#fff,stroke:#2d6a4f
+style CHRON_EDC2 fill:#40916c,color:#fff,stroke:#2d6a4f
+style CHRON_AICC fill:#40916c,color:#fff,stroke:#2d6a4f
+style MEDIAN fill:#40916c,color:#fff,stroke:#2d6a4f
+style SG fill:#40916c,color:#fff,stroke:#2d6a4f
+style SOURCE_CH4 fill:#40916c,color:#fff,stroke:#2d6a4f
+style SOURCE_D18O fill:#40916c,color:#fff,stroke:#2d6a4f
 
-    CHRON_EDC2["IceCoreChronology
-    geolod:EDC2_Chronology"]
+%% Geometry - blue
+style GEOM fill:#457b9d,color:#fff,stroke:#2c5f7a
 
-    CHRON_AICC["IceCoreChronology
-    geolod:AICC2023_Chronology"]
-
-    MEDIAN["RollingMedianFilter
-    geolod:RollingMedian_w11
-    windowSize: 11"]
-
-    SAVGOL["SavitzkyGolayFilter
-    geolod:SavitzkyGolay_w11_p2
-    windowSize: 11 polyOrder: 2"]
-
-    DATASRC["DataSource
-    geolod:EPICA_DomeC_CH4_Source
-    geolod:EPICA_DomeC_d18O_Source"]
-
-    COLLECTION -->|"rdfs:member"| SITE
-    CATALOG  -->|"dcat:dataset"| DATASET
-    DATASET  -->|"geolod:hasObservation"| OBS
-    OBS      -->|"sosa:hasFeatureOfInterest"| CORE
-    CORE     -->|"geolod:extractedFrom"| SITE
-    SITE     -->|"geo:hasGeometry"| GEOM
-    CAMPAIGN -->|"crm:P7_took_place_at"| SITE
-    OBS      -->|"geolod:measurementType"| MTYPE_CH4
-    OBS      -->|"geolod:measurementType"| MTYPE_D18O
-    OBS      -->|"geolod:ageChronology"| CHRON_EDC2
-    OBS      -->|"geolod:ageChronology"| CHRON_AICC
-    OBS      -->|"geolod:smoothingMethod_median"| MEDIAN
-    OBS      -->|"geolod:smoothingMethod_savgol"| SAVGOL
-    OBS      -->|"prov:wasDerivedFrom"| DATASRC
+%% Literals - bright yellow
+style LDEPTH fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LAGE fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LVAL fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LMEDIAN fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LSG fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LWKT fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LPPB fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LPRM fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px

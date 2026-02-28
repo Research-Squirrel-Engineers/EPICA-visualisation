@@ -1,53 +1,89 @@
 flowchart LR
 
-    COLLECTION["geo:FeatureCollection
-    geolod:SISAL_Cave_Collection
-    305 members"]
+COLLECTION(["geo:FeatureCollection
+geolod:SISAL_Cave_Collection
+305 members"])
 
-    CAVE["Cave / geo:Feature
-    geolod:Cave_site_0001 ...
-    crm:E53_Place · crm:E27_Site"]
+CAVE(["Cave
+geolod:Cave_site_0001"])
 
-    GEOM["sf:Point
-    geolod:Cave_site_0001_Geometry ...
-    asWKT: EPSG:4326 POINT(lon lat)"]
+GEOM(["sf:Point
+geolod:Cave_site_0001_Geometry"])
 
-    SPEL["Speleothem
-    geolod:Speleothem_entity_XXXX"]
+SPEL(["Speleothem
+geolod:Speleothem_entity_XXXX"])
 
-    SSE["SpeleothemSamplingEvent"]
+SSE(["SpeleothemSamplingEvent"])
 
-    OBS["SpeleothemObservation
-    geolod:Obs_d18O_XXXX
-    geolod:Obs_d13C_XXXX"]
+OBS(["SpeleothemObservation
+geolod:Obs_d18O_XXXX
+geolod:Obs_d13C_XXXX"])
 
-    MTYPE_D18O["MeasurementType (shared core)
-    geolod:MeasurementType_d18O"]
+PROP_D18O(["Delta18OProperty"])
+PROP_D13C(["Delta13CProperty"])
+MTYPE_D18O(["MeasurementType d18O"])
+MTYPE_D13C(["MeasurementType d13C"])
+UTHC(["UThChronology"])
+MEDIAN(["RollingMedianFilter w11"])
+SAVGOL(["SavitzkyGolayFilter w11 p2"])
+DATASRC(["SISALv3 DataSource"])
 
-    MTYPE_D13C["MeasurementType
-    geolod:MeasurementType_d13C"]
+LAGE((ageKaBP))
+LDEPTH((atDepth_mm))
+LVAL((measuredValue))
+LMEDIAN((smoothed median))
+LSG((smoothed savgol))
+LWKT((asWKT POINT))
+LPRM((unit PERMILLE))
 
-    UTHC["UThChronology
-    geolod:UThChronology_entity_XXXX"]
+COLLECTION -->|rdfs:member| CAVE
+CAVE -->|geo:hasGeometry| GEOM
+SPEL -->|collectedFrom| CAVE
+SSE -->|tookPlaceAt| CAVE
+SSE -->|removedSample| SPEL
+OBS -->|hasFeatureOfInterest| SPEL
+OBS -->|observedProperty| PROP_D18O
+OBS -->|observedProperty| PROP_D13C
+OBS -->|measurementType| MTYPE_D18O
+OBS -->|measurementType| MTYPE_D13C
+OBS -->|ageChronology| UTHC
+OBS -->|smoothingMethod| MEDIAN
+OBS -->|smoothingMethod| SAVGOL
+OBS -->|wasDerivedFrom| DATASRC
+OBS -.->|ageKaBP| LAGE
+OBS -.->|atDepth_mm| LDEPTH
+OBS -.->|measuredValue| LVAL
+OBS -.->|smoothed| LMEDIAN
+OBS -.->|smoothed| LSG
+PROP_D18O -.->|unit| LPRM
+PROP_D13C -.->|unit| LPRM
+GEOM -.->|asWKT| LWKT
 
-    MEDIAN["RollingMedianFilter
-    geolod:RollingMedian_wN"]
+%% Main instances - darker yellow/brown
+style COLLECTION fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
+style CAVE fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
+style SPEL fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
+style SSE fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
+style OBS fill:#856404,color:#fff,stroke:#664d03,stroke-width:2px
 
-    SAVGOL["SavitzkyGolayFilter
-    geolod:SavitzkyGolay_wN_pP"]
+%% Supporting instances - lighter brown
+style PROP_D18O fill:#b8860b,color:#fff,stroke:#856404
+style PROP_D13C fill:#b8860b,color:#fff,stroke:#856404
+style MTYPE_D18O fill:#b8860b,color:#fff,stroke:#856404
+style MTYPE_D13C fill:#b8860b,color:#fff,stroke:#856404
+style UTHC fill:#b8860b,color:#fff,stroke:#856404
+style MEDIAN fill:#b8860b,color:#fff,stroke:#856404
+style SAVGOL fill:#b8860b,color:#fff,stroke:#856404
+style DATASRC fill:#b8860b,color:#fff,stroke:#856404
 
-    DATASRC["DataSource
-    geolod:SISALv3_DataSource"]
+%% Geometry - blue
+style GEOM fill:#457b9d,color:#fff,stroke:#2c5f7a
 
-    COLLECTION -->|"rdfs:member"| CAVE
-    CAVE       -->|"geo:hasGeometry"| GEOM
-    SPEL       -->|"geolod:collectedFrom"| CAVE
-    SSE        -->|"geolod:tookPlaceAt"| CAVE
-    SSE        -->|"geolod:removedSample"| SPEL
-    OBS        -->|"sosa:hasFeatureOfInterest"| SPEL
-    OBS        -->|"geolod:measurementType"| MTYPE_D18O
-    OBS        -->|"geolod:measurementType"| MTYPE_D13C
-    OBS        -->|"geolod:ageChronologySpeleothem"| UTHC
-    OBS        -->|"geolod:smoothingMethod_median"| MEDIAN
-    OBS        -->|"geolod:smoothingMethod_savgol"| SAVGOL
-    OBS        -->|"prov:wasDerivedFrom"| DATASRC
+%% Literals - bright yellow
+style LAGE fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LDEPTH fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LVAL fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LMEDIAN fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LSG fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LWKT fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px
+style LPRM fill:#ffd60a,color:#000,stroke:#d4a005,stroke-width:2px

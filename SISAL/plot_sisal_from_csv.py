@@ -418,7 +418,7 @@ except ImportError:
     print("⚠  rdflib not installed – RDF export disabled. (pip install rdflib)")
 
 # geo_lod_utils: shared namespaces, GeoSPARQL helpers, core ontology, Mermaid
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "ontology"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.getcwd()), "ontology"))
 try:
     from geo_lod_utils import (
         NS as GEO_LOD_NS,
