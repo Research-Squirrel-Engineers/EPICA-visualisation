@@ -1,0 +1,49 @@
+
+════════════════════════════════════════════════════════════════════════════════
+                             EPICA + SISAL Pipeline                             
+════════════════════════════════════════════════════════════════════════════════
+
+  Timestamp: 2026-02-28 12:42:09
+  Directory: c:\git\EPICA-SISAL-FAIRification
+
+
+────────────────────────────────────────────────────────────────────────────────
+  1. Preparation
+────────────────────────────────────────────────────────────────────────────────
+
+  Directory structure:
+  ✓ EPICA directory found: EPICA/
+  ✓ SISAL directory found: SISAL/
+  ✓ Ontology directory found: ontology/
+
+  Scripts:
+  ✓ EPICA script found: plot_epica_from_tab.py
+  ✓ SISAL script found: plot_sisal_from_csv.py
+
+────────────────────────────────────────────────────────────────────────────────
+  2. EPICA Dome C (Ice Core)
+────────────────────────────────────────────────────────────────────────────────
+
+  ▶ Starting EPICA Dome C Processing ...
+    Path: c:\git\EPICA-SISAL-FAIRification\EPICA\plot_epica_from_tab.py
+    PYTHONPATH: c:\git\EPICA-SISAL-FAIRification\ontology
+  ✓ EPICA Dome C Processing completed successfully
+
+────────────────────────────────────────────────────────────────────────────────
+  3. SISAL (Speleothems)
+────────────────────────────────────────────────────────────────────────────────
+
+  ▶ Starting SISAL Processing ...
+    Path: c:\git\EPICA-SISAL-FAIRification\SISAL\plot_sisal_from_csv.py
+    PYTHONPATH: c:\git\EPICA-SISAL-FAIRification\ontology
+  ✓ SISAL Processing completed successfully
+
+════════════════════════════════════════════════════════════════════════════════
+                                    Summary                                     
+════════════════════════════════════════════════════════════════════════════════
+
+  EPICA:  ✓ Success
+  SISAL:  ✓ Success
+
+  Total duration: 45.1 seconds
+  Log saved to: c:\git\EPICA-SISAL-FAIRification\pipeline_report.txt

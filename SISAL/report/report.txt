@@ -119,7 +119,10 @@ Loading: v_data_275_buracagloriosa.csv
 ────────────────────────────────────────────────────────────
 RDF Export  (geo-lod SISAL Ontology + data)
 ────────────────────────────────────────────────────────────
-  ⚠  geo_lod_utils not available – geo_lod_core.ttl / Mermaid skipped.
+  ✓ Core ontology : c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\geo_lod_core.ttl
+  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_taxonomy.mermaid
+  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_epica.mermaid
+  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_sisal.mermaid
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_ontology.ttl
 
   Building sites graph …
@@ -145,7 +148,7 @@ RDF Export  (geo-lod SISAL Ontology + data)
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_275_buracagloriosa_data.ttl
 
   ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_all_data.ttl  (152,169 triples total)
-  ⚠  geo_lod_utils not available – combined collection skipped.
+  ℹ  Combined collection skipped (feature not implemented)
 
 ============================================================
 Done! Plots saved to 'c:\git\EPICA-SISAL-FAIRification\SISAL\plots/'

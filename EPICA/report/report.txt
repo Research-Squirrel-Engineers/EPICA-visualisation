@@ -73,10 +73,12 @@ RDF Export …
   Writing δ¹⁸O observations …
   ✓ 40,259 triples written
   ✓ Turtle:  c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_dome_c.ttl
-  ⚠  geo_lod_utils not available – geo_lod_core.ttl skipped.
+  ✓ Core ontology : c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\geo_lod_core.ttl
   ✓ EPICA ontology: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_ontology.ttl
-  ℹ  Mermaid skipped (geo_lod_utils not available)
-  ⚠  geo_lod_utils not available – combined collection skipped.
+  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_taxonomy.mermaid
+  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_epica.mermaid
+  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_sisal.mermaid
+  ℹ  Combined collection skipped (feature not implemented)
 
 ============================================================
 Done! All 12 plots saved to 'c:\git\EPICA-SISAL-FAIRification\EPICA\plots/'.

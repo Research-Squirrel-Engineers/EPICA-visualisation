@@ -28,7 +28,6 @@ try:
         add_geo_site,
         add_feature_collection,
         write_geo_lod_core,
-        write_combined_sites_collection,
         write_mermaid as write_geo_lod_mermaid,
     )
 
@@ -1454,10 +1453,8 @@ unit:M                  rdfs:label "Metre"@en .
         sisal_sites_path = os.path.join(RDF_DIR, "sisal_sites.ttl")
         epica_data_path = os.path.join(RDF_DIR, "epica_dome_c.ttl")
 
-        # Combined sites collection - feature not yet implemented in geo_lod_utils
+        # Combined sites collection skipped
         print("  ℹ  Combined collection skipped (feature not implemented)")
-    else:
-        print("  ⚠  geo_lod_utils not available – combined collection skipped.")
 
 
 def export_rdf(df_ch4: pd.DataFrame, df_d18o: pd.DataFrame):

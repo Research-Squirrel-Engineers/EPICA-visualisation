@@ -427,7 +427,6 @@ try:
         add_geo_site_from_wkt,
         add_feature_collection,
         write_geo_lod_core,
-        write_combined_sites_collection,
         write_mermaid as write_geo_lod_mermaid,
     )
 
@@ -1216,21 +1215,8 @@ def export_sisal_rdf(
         epica_data_path = os.path.join(RDF_DIR, "epica_dome_c.ttl")
         sisal_sites_path = os.path.join(RDF_DIR, "sisal_sites.ttl")
 
-        # Only write if at least one dataset exists
-        if os.path.exists(epica_data_path) or os.path.exists(sisal_sites_path):
-            write_combined_sites_collection(
-                RDF_DIR,
-                epica_ttl_path=(
-                    epica_data_path if os.path.exists(epica_data_path) else None
-                ),
-                sisal_sites_ttl_path=(
-                    sisal_sites_path if os.path.exists(sisal_sites_path) else None
-                ),
-            )
-        else:
-            print(
-                "  ℹ  Combined collection skipped (EPICA/SISAL data files not found yet)"
-            )
+        # Combined sites collection - feature not implemented
+        print("  ℹ  Combined collection skipped (feature not implemented)")
     else:
         print("  ⚠  geo_lod_utils not available – combined collection skipped.")
 
