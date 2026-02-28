@@ -2,6 +2,8 @@
 
 ![Squilly Logo](img/logo.png)
 
+A comprehensive Python pipeline for processing and FAIRifying palaeoclimate data from EPICA (European Project for Ice Coring in Antarctica) ice cores and SISAL (Speleothem Isotopes Synthesis and AnaLysis) speleothem databases. The tool generates publication-ready visualizations, converts raw data into RDF/Linked Open Data following FAIR principles, and produces interactive Mermaid diagrams of the ontology structure. It implements a GeoSPARQL-compliant ontology extending SOSA (Sensor, Observation, Sample, and Actuator), harmonizes EPICA ice core observations (CH₄, δ¹⁸O) with SISAL speleothem isotope data (δ¹⁸O, δ¹³C), and provides 306 georeferenced palaeoclimate sites as a unified FeatureCollection. The pipeline outputs 192,428 RDF triples across multiple files, enabling SPARQL queries for integrated palaeoclimate research spanning up to 805,000 years.
+
 # EPICA + SISAL Palaeoclimate Data Processing
 
 Pipeline for generating plots, RDF/Linked Open Data, and Mermaid visualisations from EPICA and SISAL palaeoclimate data.

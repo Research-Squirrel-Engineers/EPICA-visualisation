@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "EPICA-SISAL-FAIRification: Palaeoclimate Data Processing Pipeline"
+abstract: >
+  A comprehensive Python pipeline for processing and FAIRifying palaeoclimate data from EPICA (European Project for Ice Coring in Antarctica) ice cores and SISAL (Speleothem Isotopes Synthesis and AnaLysis) speleothem databases. The tool generates publication-ready visualizations, converts raw data into RDF/Linked Open Data following FAIR principles, and produces interactive Mermaid diagrams of the ontology structure. It implements a GeoSPARQL-compliant ontology extending SOSA (Sensor, Observation, Sample, and Actuator), harmonizes EPICA ice core observations (CH₄, δ¹⁸O) with SISAL speleothem isotope data (δ¹⁸O, δ¹³C), and provides 306 georeferenced palaeoclimate sites as a unified FeatureCollection. The pipeline outputs 192,428 RDF triples across multiple files, enabling SPARQL queries for integrated palaeoclimate research spanning up to 805,000 years.
+authors:
+  - family-names: Thiery
+    given-names: Florian
+    orcid: "https://orcid.org/0000-0002-3246-3531"
+    email: mail@fthiery.de
+    affiliation: "Research Squirrel Engineers, Mainz, Germany"
+  - family-names: Schenk
+    given-names: Fiona
+    affiliation: "Johannes Gutenberg-Universität, Mainz, Germany"
+repository-code: "https://github.com/Research-Squirrel-Engineers/EPICA-SISAL-FAIRification"
+url: "https://github.com/Research-Squirrel-Engineers/EPICA-SISAL-FAIRification"
+license: CC-BY-4.0
+keywords:
+  - palaeoclimate
+  - FAIR data
+  - Linked Open Data
+  - RDF
+  - GeoSPARQL
+  - SOSA
+  - ice cores
+  - speleothems
+  - EPICA
+  - SISAL
+  - ontology
+  - semantic web
+version: v0.1
+date-released: "2026-02-28"
