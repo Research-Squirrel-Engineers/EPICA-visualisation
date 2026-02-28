@@ -44,18 +44,6 @@
                     <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
 
                 <wfs:FeatureType>
-                    <wfs:Name>DrillingSite_collection</wfs:Name>
-                    <wfs:Title>DrillingSite_collection</wfs:Title>
-                    <wfs:Abstract>FeatureCollection DrillingSite_collection</wfs:Abstract>
-                    <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
-
-                <wfs:FeatureType>
-                    <wfs:Name>Feature_collection</wfs:Name>
-                    <wfs:Title>Feature_collection</wfs:Title>
-                    <wfs:Abstract>FeatureCollection Feature_collection</wfs:Abstract>
-                    <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
-
-                <wfs:FeatureType>
                     <wfs:Name>EPICA_DrillingSite_Collection</wfs:Name>
                     <wfs:Title>EPICA_DrillingSite_Collection</wfs:Title>
                     <wfs:Abstract>FeatureCollection EPICA_DrillingSite_Collection</wfs:Abstract>
@@ -74,21 +62,33 @@
                     <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
 
                 <wfs:FeatureType>
+                    <wfs:Name>DrillingSite_collection</wfs:Name>
+                    <wfs:Title>DrillingSite_collection</wfs:Title>
+                    <wfs:Abstract>FeatureCollection DrillingSite_collection</wfs:Abstract>
+                    <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
+
+                <wfs:FeatureType>
+                    <wfs:Name>Feature_collection</wfs:Name>
+                    <wfs:Title>Feature_collection</wfs:Title>
+                    <wfs:Abstract>FeatureCollection Feature_collection</wfs:Abstract>
+                    <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
+
+                <wfs:FeatureType>
                     <wfs:Name>SISAL_Cave_Collection</wfs:Name>
                     <wfs:Title>SISAL_Cave_Collection</wfs:Title>
                     <wfs:Abstract>FeatureCollection SISAL_Cave_Collection</wfs:Abstract>
                     <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
 
                 <wfs:FeatureType>
-                    <wfs:Name>Cave_collection</wfs:Name>
-                    <wfs:Title>Cave_collection</wfs:Title>
-                    <wfs:Abstract>FeatureCollection Cave_collection</wfs:Abstract>
-                    <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
-
-                <wfs:FeatureType>
                     <wfs:Name>Point_collection</wfs:Name>
                     <wfs:Title>Point_collection</wfs:Title>
                     <wfs:Abstract>FeatureCollection Point_collection</wfs:Abstract>
+                    <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
+
+                <wfs:FeatureType>
+                    <wfs:Name>Cave_collection</wfs:Name>
+                    <wfs:Title>Cave_collection</wfs:Title>
+                    <wfs:Abstract>FeatureCollection Cave_collection</wfs:Abstract>
                     <wfs:DefaultSRS>http://www.opengis.net/def/crs/EPSG/0/4326</wfs:DefaultSRS></wfs:FeatureType>
 </wfs:FeatureTypeList>
             <ogc:Filter_Capabilities></ogc:Filter_Capabilities>
