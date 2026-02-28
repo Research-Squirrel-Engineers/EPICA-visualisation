@@ -1,30 +1,30 @@
 @prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ns2: <http://w3id.org/geo-lod/> .
-@prefix ns3: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns3: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns2:Obs_d18O_0346 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
+ns3:Obs_d18O_0346 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
         <http://www.w3.org/ns/ldp#Resource>,
         sosa:Observation,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "δ¹⁸O observation 0346 (194.3 ka BP)"@en ;
-    ns3:unit <http://qudt.org/vocab/unit/PERMILLE> ;
-    void:inDataset ns2:geo-lod ;
-    ns2:ageChronology ns2:AICC2023_Chronology ;
-    ns2:atDepth_m 2064.15 ;
-    ns2:measurementType ns2:MeasurementType_d18O ;
-    ns2:smoothedValue_rollingMedian -0.087 ;
-    ns2:smoothedValue_savgol -0.09044 ;
-    ns2:smoothingMethod_median ns2:RollingMedian_w11 ;
-    ns2:smoothingMethod_savgol ns2:SavitzkyGolay_w11_p2 ;
-    ns1:P7_took_place_at ns2:EpicaDomeC_Site ;
+    ns2:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    void:inDataset ns3:geo-lod ;
+    ns3:ageChronology ns3:AICC2023_Chronology ;
+    ns3:atDepth_m 2064.15 ;
+    ns3:measurementType ns3:MeasurementType_d18O ;
+    ns3:smoothedValue_rollingMedian -0.087 ;
+    ns3:smoothedValue_savgol -0.09044 ;
+    ns3:smoothingMethod_median ns3:RollingMedian_w11 ;
+    ns3:smoothingMethod_savgol ns3:SavitzkyGolay_w11_p2 ;
+    ns1:P7_took_place_at ns3:EpicaDomeC_Site ;
     prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.961024> ;
-    sosa:hasFeatureOfInterest ns2:EpicaDomeC_IceCore ;
+    sosa:hasFeatureOfInterest ns3:EpicaDomeC_IceCore ;
     sosa:hasSimpleResult -0.0974 ;
-    sosa:observedProperty ns2:Delta18O ;
+    sosa:observedProperty ns3:Delta18O ;
     sosa:resultTime 194.2859 .
 
