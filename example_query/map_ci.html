@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_33f4985385a6a69dcca5e9f468fa30a6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_33f4985385a6a69dcca5e9f468fa30a6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_33f4985385a6a69dcca5e9f468fa30a6 = L.map(
+                "map_33f4985385a6a69dcca5e9f468fa30a6",
+                {
+                    center: [42.5457972972973, 18.554520270270274],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_624f93bef0e9b9eacbecee7670906402 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_624f93bef0e9b9eacbecee7670906402.addTo(map_33f4985385a6a69dcca5e9f468fa30a6);
+        
+    
+            var feature_group_aef4e9973bbd92374a2e43682fc36d00 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_de8baf83eb0c2abb5c3570999f8bd00b = L.circleMarker(
+                [40.9319, 15.6098],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_ab97b9b7b6502c4ddb8c9efe0a1285b2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_016b2726ccdc6a94ca4d7e9d8b226dd7 = $(`<div id="html_016b2726ccdc6a94ca4d7e9d8b226dd7" style="width: 100.0%; height: 100.0%;"><b>Monticchio Lakes</b><br>type: Lake<br>certainty: high<br>findspot</div>`)[0];
+                popup_ab97b9b7b6502c4ddb8c9efe0a1285b2.setContent(html_016b2726ccdc6a94ca4d7e9d8b226dd7);
+            
+        
+
+        circle_marker_de8baf83eb0c2abb5c3570999f8bd00b.bindPopup(popup_ab97b9b7b6502c4ddb8c9efe0a1285b2)
+        ;
+
+        
+    
+    
+            var circle_marker_0b5316c6f8ac5283f124e6526526f37d = L.circleMarker(
+                [50.2825, 6.5951],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_9b72ee75b302cf8f6caebc2e14300e55 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_30bdb8202a9e0bfdf51ec2e4ac7d5721 = $(`<div id="html_30bdb8202a9e0bfdf51ec2e4ac7d5721" style="width: 100.0%; height: 100.0%;"><b>Auel Maar AU3</b><br>type: Maar<br>certainty: high<br>findspot</div>`)[0];
+                popup_9b72ee75b302cf8f6caebc2e14300e55.setContent(html_30bdb8202a9e0bfdf51ec2e4ac7d5721);
+            
+        
+
+        circle_marker_0b5316c6f8ac5283f124e6526526f37d.bindPopup(popup_9b72ee75b302cf8f6caebc2e14300e55)
+        ;
+
+        
+    
+    
+            var circle_marker_a682c048eeca0121e5db0b956a818f76 = L.circleMarker(
+                [50.2821, 6.5949],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_bb6935526a967c343ff94548d39c9cd4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5d288a1aea349e94abac66c359d9bcbb = $(`<div id="html_5d288a1aea349e94abac66c359d9bcbb" style="width: 100.0%; height: 100.0%;"><b>Auel Maar AU4</b><br>type: Maar<br>certainty: high<br>findspot</div>`)[0];
+                popup_bb6935526a967c343ff94548d39c9cd4.setContent(html_5d288a1aea349e94abac66c359d9bcbb);
+            
+        
+
+        circle_marker_a682c048eeca0121e5db0b956a818f76.bindPopup(popup_bb6935526a967c343ff94548d39c9cd4)
+        ;
+
+        
+    
+    
+            var circle_marker_95384c3deda17620b90f3e65078e730f = L.circleMarker(
+                [50.2928, 6.5066],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_cca623292b88ffdd929fd365ae3fce14 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a2fe7425ed4f8e0e166db08b14cf5cde = $(`<div id="html_a2fe7425ed4f8e0e166db08b14cf5cde" style="width: 100.0%; height: 100.0%;"><b>Dehner Maar DE3</b><br>type: Maar<br>certainty: high<br>findspot</div>`)[0];
+                popup_cca623292b88ffdd929fd365ae3fce14.setContent(html_a2fe7425ed4f8e0e166db08b14cf5cde);
+            
+        
+
+        circle_marker_95384c3deda17620b90f3e65078e730f.bindPopup(popup_cca623292b88ffdd929fd365ae3fce14)
+        ;
+
+        
+    
+    
+            var circle_marker_010fff36d0bba7723c552e601ca06fce = L.circleMarker(
+                [40.9874, 20.6749],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_14f4373b79fe5f8fd271a601678b8d1d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_95ee43c20682705eb6cfd02aaf01c064 = $(`<div id="html_95ee43c20682705eb6cfd02aaf01c064" style="width: 100.0%; height: 100.0%;"><b>Lake Ohrid (Albania)</b><br>type: Lake<br>certainty: high<br>findspot</div>`)[0];
+                popup_14f4373b79fe5f8fd271a601678b8d1d.setContent(html_95ee43c20682705eb6cfd02aaf01c064);
+            
+        
+
+        circle_marker_010fff36d0bba7723c552e601ca06fce.bindPopup(popup_14f4373b79fe5f8fd271a601678b8d1d)
+        ;
+
+        
+    
+    
+            var circle_marker_3b32a27901563fc1d60c98e64be5a269 = L.circleMarker(
+                [43.6519, 22.7024],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_fc9a17710b34c8c8192355bf3fd2650f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2534730a5c3ad36770d32a41efe26580 = $(`<div id="html_2534730a5c3ad36770d32a41efe26580" style="width: 100.0%; height: 100.0%;"><b>Kozarnika Cave (Bulgaria)</b><br>type: Cave<br>certainty: high<br>findspot</div>`)[0];
+                popup_fc9a17710b34c8c8192355bf3fd2650f.setContent(html_2534730a5c3ad36770d32a41efe26580);
+            
+        
+
+        circle_marker_3b32a27901563fc1d60c98e64be5a269.bindPopup(popup_fc9a17710b34c8c8192355bf3fd2650f)
+        ;
+
+        
+    
+    
+            var circle_marker_87d53ca684d9f1c6bfa866e56cf1077b = L.circleMarker(
+                [43.0892, 23.3848],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_5983645c381bb0a167d99f348e2d939c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_54a530ed1ca87cc910348c41761499c0 = $(`<div id="html_54a530ed1ca87cc910348c41761499c0" style="width: 100.0%; height: 100.0%;"><b>Temnata Cave (Bulgaria)</b><br>type: Cave<br>certainty: high<br>findspot</div>`)[0];
+                popup_5983645c381bb0a167d99f348e2d939c.setContent(html_54a530ed1ca87cc910348c41761499c0);
+            
+        
+
+        circle_marker_87d53ca684d9f1c6bfa866e56cf1077b.bindPopup(popup_5983645c381bb0a167d99f348e2d939c)
+        ;
+
+        
+    
+    
+            var circle_marker_82af805135d3f8fcbfa2669302801bf2 = L.circleMarker(
+                [43.1907, 24.0053],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_de0979512b245c286587a8fda2619a62 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cd1dacd0a7db59984025a03d8e921187 = $(`<div id="html_cd1dacd0a7db59984025a03d8e921187" style="width: 100.0%; height: 100.0%;"><b>Toplitsa Cave (Bulgaria)</b><br>type: ArchaeologicalSite|Cave<br>certainty: high<br>archaeological</div>`)[0];
+                popup_de0979512b245c286587a8fda2619a62.setContent(html_cd1dacd0a7db59984025a03d8e921187);
+            
+        
+
+        circle_marker_82af805135d3f8fcbfa2669302801bf2.bindPopup(popup_de0979512b245c286587a8fda2619a62)
+        ;
+
+        
+    
+    
+            var circle_marker_0ccebd98e4129b41bc8ff12ef976b920 = L.circleMarker(
+                [37.4226, 23.1311],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_28f78ce71f81bb9da7066ede09363cb2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_97fd7536efed42b00fc57f635de52b54 = $(`<div id="html_97fd7536efed42b00fc57f635de52b54" style="width: 100.0%; height: 100.0%;"><b>Franchthi Cave (Greece)</b><br>type: ArchaeologicalSite|Cave<br>certainty: high<br>archaeological</div>`)[0];
+                popup_28f78ce71f81bb9da7066ede09363cb2.setContent(html_97fd7536efed42b00fc57f635de52b54);
+            
+        
+
+        circle_marker_0ccebd98e4129b41bc8ff12ef976b920.bindPopup(popup_28f78ce71f81bb9da7066ede09363cb2)
+        ;
+
+        
+    
+    
+            var circle_marker_e07f1556c8dd1fe67ba369d63d04e411 = L.circleMarker(
+                [41.0467, 20.7409],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_27279389954fb23c9e16d62631f93999 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e5149eb0ce5f1e792062b6ba7461a12e = $(`<div id="html_e5149eb0ce5f1e792062b6ba7461a12e" style="width: 100.0%; height: 100.0%;"><b>Lake Ohrid (Macedonia)</b><br>type: Lake<br>certainty: high<br>findspot</div>`)[0];
+                popup_27279389954fb23c9e16d62631f93999.setContent(html_e5149eb0ce5f1e792062b6ba7461a12e);
+            
+        
+
+        circle_marker_e07f1556c8dd1fe67ba369d63d04e411.bindPopup(popup_27279389954fb23c9e16d62631f93999)
+        ;
+
+        
+    
+    
+            var circle_marker_0103e95afe46e2ef7a2b99c574c2c0aa = L.circleMarker(
+                [40.4956, 15.2092],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_f38e64ed22e07e9b2a03698be4b612b3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a088429b7ec1348a56843468c0bc1bfb = $(`<div id="html_a088429b7ec1348a56843468c0bc1bfb" style="width: 100.0%; height: 100.0%;"><b>Castelcivita Cave</b><br>type: Cave<br>certainty: high<br>findspot</div>`)[0];
+                popup_f38e64ed22e07e9b2a03698be4b612b3.setContent(html_a088429b7ec1348a56843468c0bc1bfb);
+            
+        
+
+        circle_marker_0103e95afe46e2ef7a2b99c574c2c0aa.bindPopup(popup_f38e64ed22e07e9b2a03698be4b612b3)
+        ;
+
+        
+    
+    
+            var circle_marker_9a4271198d889b2021ee0ca664115e0f = L.circleMarker(
+                [42.779, 18.4815],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_e29584cdde479bc53dfa276d1f43db08 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1866d4e6099b2ecc94b8cdc5beffa184 = $(`<div id="html_1866d4e6099b2ecc94b8cdc5beffa184" style="width: 100.0%; height: 100.0%;"><b>Crvena Stiljena (Montenegro)</b><br>type: ArchaeologicalSite|Cave<br>certainty: high<br>archaeological</div>`)[0];
+                popup_e29584cdde479bc53dfa276d1f43db08.setContent(html_1866d4e6099b2ecc94b8cdc5beffa184);
+            
+        
+
+        circle_marker_9a4271198d889b2021ee0ca664115e0f.bindPopup(popup_e29584cdde479bc53dfa276d1f43db08)
+        ;
+
+        
+    
+    
+            var circle_marker_e25ee78a8bcd1fc58ad752fdff7d00f5 = L.circleMarker(
+                [44.6568, 22.3094],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_61d3ee3525545872ece917b1d0f066c1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bcdd1161ac1ff7fc9613d08fefbf5bc1 = $(`<div id="html_bcdd1161ac1ff7fc9613d08fefbf5bc1" style="width: 100.0%; height: 100.0%;"><b>Tabula Traiana (Serbia)</b><br>type: ArchaeologicalSite<br>certainty: high<br>archaeological</div>`)[0];
+                popup_61d3ee3525545872ece917b1d0f066c1.setContent(html_bcdd1161ac1ff7fc9613d08fefbf5bc1);
+            
+        
+
+        circle_marker_e25ee78a8bcd1fc58ad752fdff7d00f5.bindPopup(popup_61d3ee3525545872ece917b1d0f066c1)
+        ;
+
+        
+    
+    
+            var circle_marker_d61ae4035f609bafd9e5bea0685cdea3 = L.circleMarker(
+                [32.9002, 22.0516],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_aef4e9973bbd92374a2e43682fc36d00);
+        
+    
+        var popup_9e615044b853ca12a1a3f48b96581365 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0632a11597e82663f12ca317b81e04a1 = $(`<div id="html_0632a11597e82663f12ca317b81e04a1" style="width: 100.0%; height: 100.0%;"><b>Haua-Fteah (Libya)</b><br>type: ArchaeologicalSite|Cave<br>certainty: high<br>archaeological</div>`)[0];
+                popup_9e615044b853ca12a1a3f48b96581365.setContent(html_0632a11597e82663f12ca317b81e04a1);
+            
+        
+
+        circle_marker_d61ae4035f609bafd9e5bea0685cdea3.bindPopup(popup_9e615044b853ca12a1a3f48b96581365)
+        ;
+
+        
+    
+    
+            feature_group_aef4e9973bbd92374a2e43682fc36d00.addTo(map_33f4985385a6a69dcca5e9f468fa30a6);
+        
+    
+            var feature_group_e19bd9204985cfa1647b7adcdb6c01b9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_a5a2dac22322e200c1a81a0a88191067 = L.circleMarker(
+                [40.9489, 14.3624],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_44eb5f4e7e8299cd06d5c155f73ba18f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3658408b15fa87b1358a2443d5ff7237 = $(`<div id="html_3658408b15fa87b1358a2443d5ff7237" style="width: 100.0%; height: 100.0%;"><b>Acerra Sink</b><br>type: Sink<br>certainty: medium<br>findspot</div>`)[0];
+                popup_44eb5f4e7e8299cd06d5c155f73ba18f.setContent(html_3658408b15fa87b1358a2443d5ff7237);
+            
+        
+
+        circle_marker_a5a2dac22322e200c1a81a0a88191067.bindPopup(popup_44eb5f4e7e8299cd06d5c155f73ba18f)
+        ;
+
+        
+    
+    
+            var circle_marker_e2cb4b2dc9cc1aa967cc42e4fdc9bf8c = L.circleMarker(
+                [40.6385, 14.3998],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_cfb40440421a82898ecb49a70899c213 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_59c61c15dad0a790681a9ce365409969 = $(`<div id="html_59c61c15dad0a790681a9ce365409969" style="width: 100.0%; height: 100.0%;"><b>Marina di Cassano (Naples)</b><br>type: Bight<br>certainty: medium<br>findspot</div>`)[0];
+                popup_cfb40440421a82898ecb49a70899c213.setContent(html_59c61c15dad0a790681a9ce365409969);
+            
+        
+
+        circle_marker_e2cb4b2dc9cc1aa967cc42e4fdc9bf8c.bindPopup(popup_cfb40440421a82898ecb49a70899c213)
+        ;
+
+        
+    
+    
+            var circle_marker_e7495ab21b616b5c8070256df1423373 = L.circleMarker(
+                [45.2417, 20.5809],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_b1b7187340c61107f21736748d4186c1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_57a3abdb210631904b1008a4326ec6cd = $(`<div id="html_57a3abdb210631904b1008a4326ec6cd" style="width: 100.0%; height: 100.0%;"><b>Orlovat</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_b1b7187340c61107f21736748d4186c1.setContent(html_57a3abdb210631904b1008a4326ec6cd);
+            
+        
+
+        circle_marker_e7495ab21b616b5c8070256df1423373.bindPopup(popup_b1b7187340c61107f21736748d4186c1)
+        ;
+
+        
+    
+    
+            var circle_marker_b447c011b0c6a01db457501d43edeea3 = L.circleMarker(
+                [43.6728, 21.4058],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_46af441fd01ddd09caf14313c87c022f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a0e81fa9f15a001742bbfcd4f25022ac = $(`<div id="html_a0e81fa9f15a001742bbfcd4f25022ac" style="width: 100.0%; height: 100.0%;"><b>Stalać</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_46af441fd01ddd09caf14313c87c022f.setContent(html_a0e81fa9f15a001742bbfcd4f25022ac);
+            
+        
+
+        circle_marker_b447c011b0c6a01db457501d43edeea3.bindPopup(popup_46af441fd01ddd09caf14313c87c022f)
+        ;
+
+        
+    
+    
+            var circle_marker_dffbc5ebc63c946536eddefd500fe8db = L.circleMarker(
+                [46.0874, 18.7587],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_59733ab4849b03c6f50c83fcf843e97b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_62cef02c709c1e1d424faf721ccc9aa0 = $(`<div id="html_62cef02c709c1e1d424faf721ccc9aa0" style="width: 100.0%; height: 100.0%;"><b>Dunaszekcső</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_59733ab4849b03c6f50c83fcf843e97b.setContent(html_62cef02c709c1e1d424faf721ccc9aa0);
+            
+        
+
+        circle_marker_dffbc5ebc63c946536eddefd500fe8db.bindPopup(popup_59733ab4849b03c6f50c83fcf843e97b)
+        ;
+
+        
+    
+    
+            var circle_marker_e5a286eb459e1b7b6c350e630f1fd1ce = L.circleMarker(
+                [44.9032, 20.2802],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_a5ff5cb09aeb7f75d0badb2fa809708e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4456e3e5fc20bda860960ecf6a6b0a40 = $(`<div id="html_4456e3e5fc20bda860960ecf6a6b0a40" style="width: 100.0%; height: 100.0%;"><b>Batajnica</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_a5ff5cb09aeb7f75d0badb2fa809708e.setContent(html_4456e3e5fc20bda860960ecf6a6b0a40);
+            
+        
+
+        circle_marker_e5a286eb459e1b7b6c350e630f1fd1ce.bindPopup(popup_a5ff5cb09aeb7f75d0badb2fa809708e)
+        ;
+
+        
+    
+    
+            var circle_marker_08df832dab1cd5ccb0ea894e9167fde9 = L.circleMarker(
+                [44.2462, 27.9347],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_b1f0e43118e3fc3492ed7d231ae7906b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6f7bdbe7c79a01d4da143ba0ec18fe99 = $(`<div id="html_6f7bdbe7c79a01d4da143ba0ec18fe99" style="width: 100.0%; height: 100.0%;"><b>Rasova</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_b1f0e43118e3fc3492ed7d231ae7906b.setContent(html_6f7bdbe7c79a01d4da143ba0ec18fe99);
+            
+        
+
+        circle_marker_08df832dab1cd5ccb0ea894e9167fde9.bindPopup(popup_b1f0e43118e3fc3492ed7d231ae7906b)
+        ;
+
+        
+    
+    
+            var circle_marker_9d8f0bf2919b8e3c652f983fc68e4686 = L.circleMarker(
+                [40.9167, 21.0],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_fc4a615ad7377aeb79d5cdc5d70248fb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_886e4323f769feff88494b65cbd6a838 = $(`<div id="html_886e4323f769feff88494b65cbd6a838" style="width: 100.0%; height: 100.0%;"><b>Lake Prespa</b><br>type: Lake<br>certainty: medium<br>findspot</div>`)[0];
+                popup_fc4a615ad7377aeb79d5cdc5d70248fb.setContent(html_886e4323f769feff88494b65cbd6a838);
+            
+        
+
+        circle_marker_9d8f0bf2919b8e3c652f983fc68e4686.bindPopup(popup_fc4a615ad7377aeb79d5cdc5d70248fb)
+        ;
+
+        
+    
+    
+            var circle_marker_9e1520ab0fff321a431c92db9ed2998c = L.circleMarker(
+                [40.6619, 14.4476],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_da7d72c63387048874ba752b0b37fc85 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_79b70c46f4fff7e9902fcc2b06023861 = $(`<div id="html_79b70c46f4fff7e9902fcc2b06023861" style="width: 100.0%; height: 100.0%;"><b>Massaquano (Naples)</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_da7d72c63387048874ba752b0b37fc85.setContent(html_79b70c46f4fff7e9902fcc2b06023861);
+            
+        
+
+        circle_marker_9e1520ab0fff321a431c92db9ed2998c.bindPopup(popup_da7d72c63387048874ba752b0b37fc85)
+        ;
+
+        
+    
+    
+            var circle_marker_0a2d18fedbee56fb71370a7497d4a60c = L.circleMarker(
+                [40.8312, 14.2479],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_673527285d2a52ee6a72170a3773c562 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e003a7c011c20ec8b797e791a9676f99 = $(`<div id="html_e003a7c011c20ec8b797e791a9676f99" style="width: 100.0%; height: 100.0%;"><b>Monte Echia (Naples)</b><br>type: Mountain<br>certainty: medium<br>findspot</div>`)[0];
+                popup_673527285d2a52ee6a72170a3773c562.setContent(html_e003a7c011c20ec8b797e791a9676f99);
+            
+        
+
+        circle_marker_0a2d18fedbee56fb71370a7497d4a60c.bindPopup(popup_673527285d2a52ee6a72170a3773c562)
+        ;
+
+        
+    
+    
+            var circle_marker_665dec69cad42a4d3f77cccffddc3bc9 = L.circleMarker(
+                [40.9315, 15.6057],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_63c992e482b6a7945ae79a3ec4167e94 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_da4bc3d58c293300cd9e9e6a74ed5f31 = $(`<div id="html_da4bc3d58c293300cd9e9e6a74ed5f31" style="width: 100.0%; height: 100.0%;"><b>Lago Grande di Monticchio</b><br>type: Lake<br>certainty: medium<br>findspot</div>`)[0];
+                popup_63c992e482b6a7945ae79a3ec4167e94.setContent(html_da4bc3d58c293300cd9e9e6a74ed5f31);
+            
+        
+
+        circle_marker_665dec69cad42a4d3f77cccffddc3bc9.bindPopup(popup_63c992e482b6a7945ae79a3ec4167e94)
+        ;
+
+        
+    
+    
+            var circle_marker_55156bf45bc2ebba8063b59fd53d43ad = L.circleMarker(
+                [40.949, 15.5699],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_7164987b4e836efbe7657f6ec3d09e4c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b7ddcdeeb42a04fad6823b05b90662e4 = $(`<div id="html_b7ddcdeeb42a04fad6823b05b90662e4" style="width: 100.0%; height: 100.0%;"><b>Monticchio (Bagni)</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_7164987b4e836efbe7657f6ec3d09e4c.setContent(html_b7ddcdeeb42a04fad6823b05b90662e4);
+            
+        
+
+        circle_marker_55156bf45bc2ebba8063b59fd53d43ad.bindPopup(popup_7164987b4e836efbe7657f6ec3d09e4c)
+        ;
+
+        
+    
+    
+            var circle_marker_72d2010c8c5f9f056ce1fa494046edb3 = L.circleMarker(
+                [40.8537, 14.208],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_a069b31709218fcd640167b99711001e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_96b303373c0a81e419e897ccdcf4db24 = $(`<div id="html_96b303373c0a81e419e897ccdcf4db24" style="width: 100.0%; height: 100.0%;"><b>Naples</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_a069b31709218fcd640167b99711001e.setContent(html_96b303373c0a81e419e897ccdcf4db24);
+            
+        
+
+        circle_marker_72d2010c8c5f9f056ce1fa494046edb3.bindPopup(popup_a069b31709218fcd640167b99711001e)
+        ;
+
+        
+    
+    
+            var circle_marker_8efbcfca156b73cc7c3313a4fe56f0c3 = L.circleMarker(
+                [40.6484, 14.4347],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_120b0dea03de07d5c2ebb3e949f0bd54 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_72e61c75caaf9ae828bc2a157ae809ce = $(`<div id="html_72e61c75caaf9ae828bc2a157ae809ce" style="width: 100.0%; height: 100.0%;"><b>Pacognano</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_120b0dea03de07d5c2ebb3e949f0bd54.setContent(html_72e61c75caaf9ae828bc2a157ae809ce);
+            
+        
+
+        circle_marker_8efbcfca156b73cc7c3313a4fe56f0c3.bindPopup(popup_120b0dea03de07d5c2ebb3e949f0bd54)
+        ;
+
+        
+    
+    
+            var circle_marker_8122ebc8d96a0e0367c95128fae23b20 = L.circleMarker(
+                [41.6541, 15.615],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_d8f011281c1b463d500cb765cebdddc2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8be935c493666d27eca6a4566f486d7c = $(`<div id="html_8be935c493666d27eca6a4566f486d7c" style="width: 100.0%; height: 100.0%;"><b>Paglicci Cave</b><br>type: ArchaeologicalSite|Cave<br>certainty: medium<br>archaeological</div>`)[0];
+                popup_d8f011281c1b463d500cb765cebdddc2.setContent(html_8be935c493666d27eca6a4566f486d7c);
+            
+        
+
+        circle_marker_8122ebc8d96a0e0367c95128fae23b20.bindPopup(popup_d8f011281c1b463d500cb765cebdddc2)
+        ;
+
+        
+    
+    
+            var circle_marker_bd2fe586873ec421728f50d12eced2f0 = L.circleMarker(
+                [40.9285, 14.6983],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_a00e1a3975e02eae3bd4646283927218 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_545dc4e4e8f65f4a157dbf5d99143823 = $(`<div id="html_545dc4e4e8f65f4a157dbf5d99143823" style="width: 100.0%; height: 100.0%;"><b>Acqua Fidia</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_a00e1a3975e02eae3bd4646283927218.setContent(html_545dc4e4e8f65f4a157dbf5d99143823);
+            
+        
+
+        circle_marker_bd2fe586873ec421728f50d12eced2f0.bindPopup(popup_a00e1a3975e02eae3bd4646283927218)
+        ;
+
+        
+    
+    
+            var circle_marker_d47ef63510bdd6574cab697172d7c352 = L.circleMarker(
+                [40.7249, 14.7546],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_0ee8c83a7f04979723f2f9411fcb71ce = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fc091dc414f584c620b0fe6e3bd09e05 = $(`<div id="html_fc091dc414f584c620b0fe6e3bd09e05" style="width: 100.0%; height: 100.0%;"><b>Pellezzano</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_0ee8c83a7f04979723f2f9411fcb71ce.setContent(html_fc091dc414f584c620b0fe6e3bd09e05);
+            
+        
+
+        circle_marker_d47ef63510bdd6574cab697172d7c352.bindPopup(popup_0ee8c83a7f04979723f2f9411fcb71ce)
+        ;
+
+        
+    
+    
+            var circle_marker_065f2dcd8f7ae6234245b4303d955cab = L.circleMarker(
+                [40.7615, 14.7979],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_44eb6270123a33a463e30fa040f963b8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e895999e070141e8e72c40a7f46c17d7 = $(`<div id="html_e895999e070141e8e72c40a7f46c17d7" style="width: 100.0%; height: 100.0%;"><b>Penta</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_44eb6270123a33a463e30fa040f963b8.setContent(html_e895999e070141e8e72c40a7f46c17d7);
+            
+        
+
+        circle_marker_065f2dcd8f7ae6234245b4303d955cab.bindPopup(popup_44eb6270123a33a463e30fa040f963b8)
+        ;
+
+        
+    
+    
+            var circle_marker_40c20087e5ce5e8327c9c9eea1f93a7a = L.circleMarker(
+                [40.8275, 14.1402],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_691c513a731dc3b3873d7a241fbd9820 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7687b8efd3926f884d6bfd58e06d4201 = $(`<div id="html_7687b8efd3926f884d6bfd58e06d4201" style="width: 100.0%; height: 100.0%;"><b>Phlegraean Fields</b><br>type: Supervolcano<br>certainty: medium<br>findspot</div>`)[0];
+                popup_691c513a731dc3b3873d7a241fbd9820.setContent(html_7687b8efd3926f884d6bfd58e06d4201);
+            
+        
+
+        circle_marker_40c20087e5ce5e8327c9c9eea1f93a7a.bindPopup(popup_691c513a731dc3b3873d7a241fbd9820)
+        ;
+
+        
+    
+    
+            var circle_marker_02198fc9de7c86f7a999aa5267126e25 = L.circleMarker(
+                [40.8731, 14.2594],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_c270a430a997b66e3f8ce73727c6543e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6c26aec9429daf24fe4900ec3a9ff3de = $(`<div id="html_6c26aec9429daf24fe4900ec3a9ff3de" style="width: 100.0%; height: 100.0%;"><b>Ponti Rossi (Naples)</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_c270a430a997b66e3f8ce73727c6543e.setContent(html_6c26aec9429daf24fe4900ec3a9ff3de);
+            
+        
+
+        circle_marker_02198fc9de7c86f7a999aa5267126e25.bindPopup(popup_c270a430a997b66e3f8ce73727c6543e)
+        ;
+
+        
+    
+    
+            var circle_marker_986a6c053bff72039eb8153cf28f7a59 = L.circleMarker(
+                [40.8215, 14.089],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_82cdfcb0a50f8c860e538cc6f2a39bbd = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_08e0cecd125655ac0bf95f14320c2bbe = $(`<div id="html_08e0cecd125655ac0bf95f14320c2bbe" style="width: 100.0%; height: 100.0%;"><b>Pozzuoli Bay</b><br>type: Bight<br>certainty: medium<br>findspot</div>`)[0];
+                popup_82cdfcb0a50f8c860e538cc6f2a39bbd.setContent(html_08e0cecd125655ac0bf95f14320c2bbe);
+            
+        
+
+        circle_marker_986a6c053bff72039eb8153cf28f7a59.bindPopup(popup_82cdfcb0a50f8c860e538cc6f2a39bbd)
+        ;
+
+        
+    
+    
+            var circle_marker_a72945b2422d594b326e4df8f91f4794 = L.circleMarker(
+                [40.6783, 14.6459],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_61c82102b782f161228cfc9d11367304 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_87bd49e07a941606449e96995f66143f = $(`<div id="html_87bd49e07a941606449e96995f66143f" style="width: 100.0%; height: 100.0%;"><b>Pucara</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_61c82102b782f161228cfc9d11367304.setContent(html_87bd49e07a941606449e96995f66143f);
+            
+        
+
+        circle_marker_a72945b2422d594b326e4df8f91f4794.bindPopup(popup_61c82102b782f161228cfc9d11367304)
+        ;
+
+        
+    
+    
+            var circle_marker_0045ce3eb1f80f7e5623c0dea367fbab = L.circleMarker(
+                [40.8888, 14.1489],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_c896b70fef036a900c6a626287c6f442 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3d588aafe5a8b1c76a998abb1b428737 = $(`<div id="html_3d588aafe5a8b1c76a998abb1b428737" style="width: 100.0%; height: 100.0%;"><b>Punta Marmolite</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_c896b70fef036a900c6a626287c6f442.setContent(html_3d588aafe5a8b1c76a998abb1b428737);
+            
+        
+
+        circle_marker_0045ce3eb1f80f7e5623c0dea367fbab.bindPopup(popup_c896b70fef036a900c6a626287c6f442)
+        ;
+
+        
+    
+    
+            var circle_marker_3d64e007a82086dbb8923b8443553742 = L.circleMarker(
+                [40.607, 14.3733],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_b7f23493ecbf432b7dfeda2193c9de1f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c4aa4ed0c242aa41b700bcc62e78dbe1 = $(`<div id="html_c4aa4ed0c242aa41b700bcc62e78dbe1" style="width: 100.0%; height: 100.0%;"><b>Sant‘ Agata dei due Golfi</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_b7f23493ecbf432b7dfeda2193c9de1f.setContent(html_c4aa4ed0c242aa41b700bcc62e78dbe1);
+            
+        
+
+        circle_marker_3d64e007a82086dbb8923b8443553742.bindPopup(popup_b7f23493ecbf432b7dfeda2193c9de1f)
+        ;
+
+        
+    
+    
+            var circle_marker_b1d5fbde456470831c6adc0928baa5aa = L.circleMarker(
+                [40.9746, 14.7402],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_cd5be2298894a03610ce85ef696389b1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_de71d298ea7b1321544cba2e72bce12b = $(`<div id="html_de71d298ea7b1321544cba2e72bce12b" style="width: 100.0%; height: 100.0%;"><b>Sant‘ Angelo a Scala</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_cd5be2298894a03610ce85ef696389b1.setContent(html_de71d298ea7b1321544cba2e72bce12b);
+            
+        
+
+        circle_marker_b1d5fbde456470831c6adc0928baa5aa.bindPopup(popup_cd5be2298894a03610ce85ef696389b1)
+        ;
+
+        
+    
+    
+            var circle_marker_114c09d7123a00105de5ccdd4ad3db67 = L.circleMarker(
+                [41.0369, 14.3381],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_b6b2ae43aa79a218801ea603796b0ac6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f6061b558f44758e377d63785a1413d6 = $(`<div id="html_f6061b558f44758e377d63785a1413d6" style="width: 100.0%; height: 100.0%;"><b>San Marco</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_b6b2ae43aa79a218801ea603796b0ac6.setContent(html_f6061b558f44758e377d63785a1413d6);
+            
+        
+
+        circle_marker_114c09d7123a00105de5ccdd4ad3db67.bindPopup(popup_b6b2ae43aa79a218801ea603796b0ac6)
+        ;
+
+        
+    
+    
+            var circle_marker_3751bdb546f30aef995bd3ccf87e75db = L.circleMarker(
+                [40.7119, 14.768],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_bd4759045da872be52fb7bdb689cd991 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e9800365706f6af9a5730d8f8dc5a1eb = $(`<div id="html_e9800365706f6af9a5730d8f8dc5a1eb" style="width: 100.0%; height: 100.0%;"><b>Capezzano</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_bd4759045da872be52fb7bdb689cd991.setContent(html_e9800365706f6af9a5730d8f8dc5a1eb);
+            
+        
+
+        circle_marker_3751bdb546f30aef995bd3ccf87e75db.bindPopup(popup_bd4759045da872be52fb7bdb689cd991)
+        ;
+
+        
+    
+    
+            var circle_marker_15ce0d017a47106f6b100dcef1ee5e0e = L.circleMarker(
+                [41.0518, 14.3313],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_5d31dad9157bc4b1cf4364b7f64f5d4b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f115ffd7c2bb4e893c640d0cdc3baf19 = $(`<div id="html_f115ffd7c2bb4e893c640d0cdc3baf19" style="width: 100.0%; height: 100.0%;"><b>San Nicola La Strada</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_5d31dad9157bc4b1cf4364b7f64f5d4b.setContent(html_f115ffd7c2bb4e893c640d0cdc3baf19);
+            
+        
+
+        circle_marker_15ce0d017a47106f6b100dcef1ee5e0e.bindPopup(popup_5d31dad9157bc4b1cf4364b7f64f5d4b)
+        ;
+
+        
+    
+    
+            var circle_marker_e1a27713dba8351f4bba230af655d882 = L.circleMarker(
+                [40.8567, 14.8706],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_dc92fae51a7f4836a22c4c53d97ed744 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0b04f7049d8bdda5df365ef3d7bf7e7a = $(`<div id="html_0b04f7049d8bdda5df365ef3d7bf7e7a" style="width: 100.0%; height: 100.0%;"><b>Serino</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_dc92fae51a7f4836a22c4c53d97ed744.setContent(html_0b04f7049d8bdda5df365ef3d7bf7e7a);
+            
+        
+
+        circle_marker_e1a27713dba8351f4bba230af655d882.bindPopup(popup_dc92fae51a7f4836a22c4c53d97ed744)
+        ;
+
+        
+    
+    
+            var circle_marker_d0ab4c20a879df9635c01ee4f015daae = L.circleMarker(
+                [41.0075, 14.7567],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_47d928d3ef0258fc853704fb41121357 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3663ce21ef0ce61cb87c2e5236c8fbc6 = $(`<div id="html_3663ce21ef0ce61cb87c2e5236c8fbc6" style="width: 100.0%; height: 100.0%;"><b>Starza</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_47d928d3ef0258fc853704fb41121357.setContent(html_3663ce21ef0ce61cb87c2e5236c8fbc6);
+            
+        
+
+        circle_marker_d0ab4c20a879df9635c01ee4f015daae.bindPopup(popup_47d928d3ef0258fc853704fb41121357)
+        ;
+
+        
+    
+    
+            var circle_marker_947d5f6ed40991ada1f31c7a515b867b = L.circleMarker(
+                [40.8111, 14.0477],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_fa869b0e12f92d008fd564b0a4cda556 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_451593b7acd50e3e9b299dde0b7735dc = $(`<div id="html_451593b7acd50e3e9b299dde0b7735dc" style="width: 100.0%; height: 100.0%;"><b>Torregaveta</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_fa869b0e12f92d008fd564b0a4cda556.setContent(html_451593b7acd50e3e9b299dde0b7735dc);
+            
+        
+
+        circle_marker_947d5f6ed40991ada1f31c7a515b867b.bindPopup(popup_fa869b0e12f92d008fd564b0a4cda556)
+        ;
+
+        
+    
+    
+            var circle_marker_27221ff979604bf1644719813209a7af = L.circleMarker(
+                [40.8926, 14.1486],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_5eb0c59dcab01d0ac163da0ce7ca0951 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a75e1da0dcf236533cbebd64b58c1efc = $(`<div id="html_a75e1da0dcf236533cbebd64b58c1efc" style="width: 100.0%; height: 100.0%;"><b>Trefola</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_5eb0c59dcab01d0ac163da0ce7ca0951.setContent(html_a75e1da0dcf236533cbebd64b58c1efc);
+            
+        
+
+        circle_marker_27221ff979604bf1644719813209a7af.bindPopup(popup_5eb0c59dcab01d0ac163da0ce7ca0951)
+        ;
+
+        
+    
+    
+            var circle_marker_3d239c2b9839901d6d87da207fc8a087 = L.circleMarker(
+                [41.0577, 14.7069],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_4eb8748bf54bdab91a8eb00442646ff6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7eee9cb96e599bb59569c57e4d2dbb89 = $(`<div id="html_7eee9cb96e599bb59569c57e4d2dbb89" style="width: 100.0%; height: 100.0%;"><b>Tufara</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_4eb8748bf54bdab91a8eb00442646ff6.setContent(html_7eee9cb96e599bb59569c57e4d2dbb89);
+            
+        
+
+        circle_marker_3d239c2b9839901d6d87da207fc8a087.bindPopup(popup_4eb8748bf54bdab91a8eb00442646ff6)
+        ;
+
+        
+    
+    
+            var circle_marker_22110b0fe684a481860468908d0a7396 = L.circleMarker(
+                [40.6622, 14.4273],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_c732e80a1f6d5f3f65c533eb4bda03ab = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_927d13a46652d3d9bd17e6f2679d058d = $(`<div id="html_927d13a46652d3d9bd17e6f2679d058d" style="width: 100.0%; height: 100.0%;"><b>Vico Equense</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_c732e80a1f6d5f3f65c533eb4bda03ab.setContent(html_927d13a46652d3d9bd17e6f2679d058d);
+            
+        
+
+        circle_marker_22110b0fe684a481860468908d0a7396.bindPopup(popup_c732e80a1f6d5f3f65c533eb4bda03ab)
+        ;
+
+        
+    
+    
+            var circle_marker_1d27c94706b8341b36173ebe4a33ee67 = L.circleMarker(
+                [41.0, 14.1607],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_dfeca94c3b3c09ddf30e1b6179dfe801 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6d6df3ec8754960720ec233d892cf644 = $(`<div id="html_6d6df3ec8754960720ec233d892cf644" style="width: 100.0%; height: 100.0%;"><b>Villa di Briano (Naples)</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_dfeca94c3b3c09ddf30e1b6179dfe801.setContent(html_6d6df3ec8754960720ec233d892cf644);
+            
+        
+
+        circle_marker_1d27c94706b8341b36173ebe4a33ee67.bindPopup(popup_dfeca94c3b3c09ddf30e1b6179dfe801)
+        ;
+
+        
+    
+    
+            var circle_marker_2a808362b0393115e0124abe8c452e74 = L.circleMarker(
+                [40.6993, 14.5259],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_1e39830cbcea5d07fe9a8bb1e24afa43 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_375c4efb22c41ebfd8638ae8ada08d34 = $(`<div id="html_375c4efb22c41ebfd8638ae8ada08d34" style="width: 100.0%; height: 100.0%;"><b>Casola</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_1e39830cbcea5d07fe9a8bb1e24afa43.setContent(html_375c4efb22c41ebfd8638ae8ada08d34);
+            
+        
+
+        circle_marker_2a808362b0393115e0124abe8c452e74.bindPopup(popup_1e39830cbcea5d07fe9a8bb1e24afa43)
+        ;
+
+        
+    
+    
+            var circle_marker_323268e0fdd3f22f4fdf2950fa7e2762 = L.circleMarker(
+                [40.5361, 21.4672],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_479dced422a6552d363fcdbb1b0fa7e7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a8ec580447da645e73656dfa1e1e48af = $(`<div id="html_a8ec580447da645e73656dfa1e1e48af" style="width: 100.0%; height: 100.0%;"><b>Klissoura (Greece)</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_479dced422a6552d363fcdbb1b0fa7e7.setContent(html_a8ec580447da645e73656dfa1e1e48af);
+            
+        
+
+        circle_marker_323268e0fdd3f22f4fdf2950fa7e2762.bindPopup(popup_479dced422a6552d363fcdbb1b0fa7e7)
+        ;
+
+        
+    
+    
+            var circle_marker_64145085f9e3f559358afd5ed8d8c8d2 = L.circleMarker(
+                [44.5104, 14.2921],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_47127820b8222bf095aacf94215f04f1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_95a75c70ed19eb5f3c9b285f32be8510 = $(`<div id="html_95a75c70ed19eb5f3c9b285f32be8510" style="width: 100.0%; height: 100.0%;"><b>Susak Island (Greece)</b><br>type: Island<br>certainty: medium<br>findspot</div>`)[0];
+                popup_47127820b8222bf095aacf94215f04f1.setContent(html_95a75c70ed19eb5f3c9b285f32be8510);
+            
+        
+
+        circle_marker_64145085f9e3f559358afd5ed8d8c8d2.bindPopup(popup_47127820b8222bf095aacf94215f04f1)
+        ;
+
+        
+    
+    
+            var circle_marker_cdc8df0581dace3187316dfb79cd4c8a = L.circleMarker(
+                [44.0947, 27.9021],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_5c9229b81cc173b731e9e5d16d531ade = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_83607f2970c65f0969343d704c927ea6 = $(`<div id="html_83607f2970c65f0969343d704c927ea6" style="width: 100.0%; height: 100.0%;"><b>Urluia (Romania)</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_5c9229b81cc173b731e9e5d16d531ade.setContent(html_83607f2970c65f0969343d704c927ea6);
+            
+        
+
+        circle_marker_cdc8df0581dace3187316dfb79cd4c8a.bindPopup(popup_5c9229b81cc173b731e9e5d16d531ade)
+        ;
+
+        
+    
+    
+            var circle_marker_8421dc80099013d2f6ddc84b9466e8a7 = L.circleMarker(
+                [44.3921, 27.8491],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_ec4fc15e131ffa363e567543fd05adc7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4383b373e3fad7dccd8a63bfb5f01dc4 = $(`<div id="html_4383b373e3fad7dccd8a63bfb5f01dc4" style="width: 100.0%; height: 100.0%;"><b>Vlasca (Romania)</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_ec4fc15e131ffa363e567543fd05adc7.setContent(html_4383b373e3fad7dccd8a63bfb5f01dc4);
+            
+        
+
+        circle_marker_8421dc80099013d2f6ddc84b9466e8a7.bindPopup(popup_ec4fc15e131ffa363e567543fd05adc7)
+        ;
+
+        
+    
+    
+            var circle_marker_be7828593964a11d4c37f0e2cf4d0906 = L.circleMarker(
+                [45.3037, 27.2478],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_e9caa1b89c1928125ac43efcafa9409f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8a4edd51b79df7479005f3ff69d0a624 = $(`<div id="html_8a4edd51b79df7479005f3ff69d0a624" style="width: 100.0%; height: 100.0%;"><b>Balta Alba (Romania)</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_e9caa1b89c1928125ac43efcafa9409f.setContent(html_8a4edd51b79df7479005f3ff69d0a624);
+            
+        
+
+        circle_marker_be7828593964a11d4c37f0e2cf4d0906.bindPopup(popup_e9caa1b89c1928125ac43efcafa9409f)
+        ;
+
+        
+    
+    
+            var circle_marker_7943c37238b67a1fb97a40472bde7446 = L.circleMarker(
+                [40.7198, 14.7662],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_34a5094689e59ede0f51d7a3bd4f986d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4f833196b631b5bd6f1d1e1bcfb59534 = $(`<div id="html_4f833196b631b5bd6f1d1e1bcfb59534" style="width: 100.0%; height: 100.0%;"><b>Copecchia</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_34a5094689e59ede0f51d7a3bd4f986d.setContent(html_4f833196b631b5bd6f1d1e1bcfb59534);
+            
+        
+
+        circle_marker_7943c37238b67a1fb97a40472bde7446.bindPopup(popup_34a5094689e59ede0f51d7a3bd4f986d)
+        ;
+
+        
+    
+    
+            var circle_marker_3f4ab6b1cfd4058954bb45deda5bc7d7 = L.circleMarker(
+                [51.3858, 39.0473],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_ebbadb0c1215eb6da378205847b3cfd6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e05171bf1d7d4d284437d855e7b41bc6 = $(`<div id="html_e05171bf1d7d4d284437d855e7b41bc6" style="width: 100.0%; height: 100.0%;"><b>Kostenki (Russia)</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_ebbadb0c1215eb6da378205847b3cfd6.setContent(html_e05171bf1d7d4d284437d855e7b41bc6);
+            
+        
+
+        circle_marker_3f4ab6b1cfd4058954bb45deda5bc7d7.bindPopup(popup_ebbadb0c1215eb6da378205847b3cfd6)
+        ;
+
+        
+    
+    
+            var circle_marker_c16c0bcfa29a0f539fe3c72898087566 = L.circleMarker(
+                [44.7397, 21.3912],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_39b56821ecf476241a96f5e7ea6ddb18 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9baab750d7df29b6aefcf90dec20df64 = $(`<div id="html_9baab750d7df29b6aefcf90dec20df64" style="width: 100.0%; height: 100.0%;"><b>Kisiljevo (Serbia)</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_39b56821ecf476241a96f5e7ea6ddb18.setContent(html_9baab750d7df29b6aefcf90dec20df64);
+            
+        
+
+        circle_marker_c16c0bcfa29a0f539fe3c72898087566.bindPopup(popup_39b56821ecf476241a96f5e7ea6ddb18)
+        ;
+
+        
+    
+    
+            var circle_marker_72d4d0c68950246ee3e7d30d0c325fcd = L.circleMarker(
+                [40.8381, 14.056],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_371883520eb6f39b71e8cfd0a629ac33 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_44ccbe0a0128f2f1f04e5998a3b5bdcd = $(`<div id="html_44ccbe0a0128f2f1f04e5998a3b5bdcd" style="width: 100.0%; height: 100.0%;"><b>Cuma</b><br>type: UnknownCategory<br>certainty: medium<br>findspot</div>`)[0];
+                popup_371883520eb6f39b71e8cfd0a629ac33.setContent(html_44ccbe0a0128f2f1f04e5998a3b5bdcd);
+            
+        
+
+        circle_marker_72d4d0c68950246ee3e7d30d0c325fcd.bindPopup(popup_371883520eb6f39b71e8cfd0a629ac33)
+        ;
+
+        
+    
+    
+            var circle_marker_9bd86d0c380906b55f8e2afc2a9d1133 = L.circleMarker(
+                [40.7192, 14.2559],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_929760b8ef64d4e4c4e7bbd2717ac756 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a63ef10036c701c081b831183db4eb34 = $(`<div id="html_a63ef10036c701c081b831183db4eb34" style="width: 100.0%; height: 100.0%;"><b>Gulf of Naples</b><br>type: Bight<br>certainty: medium<br>findspot</div>`)[0];
+                popup_929760b8ef64d4e4c4e7bbd2717ac756.setContent(html_a63ef10036c701c081b831183db4eb34);
+            
+        
+
+        circle_marker_9bd86d0c380906b55f8e2afc2a9d1133.bindPopup(popup_929760b8ef64d4e4c4e7bbd2717ac756)
+        ;
+
+        
+    
+    
+            var circle_marker_d6d19725a4590e7c3ad975fa0f27994d = L.circleMarker(
+                [40.926, 14.0366],
+                {"bubblingMouseEvents": true, "color": "#fd8d3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd8d3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e19bd9204985cfa1647b7adcdb6c01b9);
+        
+    
+        var popup_bf30eb47a2fe6d2e131859665e6d38a6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9881740922b3047efed3921903a5a57e = $(`<div id="html_9881740922b3047efed3921903a5a57e" style="width: 100.0%; height: 100.0%;"><b>Lago Patria (Naples)</b><br>type: InhabitedPlace<br>certainty: medium<br>findspot</div>`)[0];
+                popup_bf30eb47a2fe6d2e131859665e6d38a6.setContent(html_9881740922b3047efed3921903a5a57e);
+            
+        
+
+        circle_marker_d6d19725a4590e7c3ad975fa0f27994d.bindPopup(popup_bf30eb47a2fe6d2e131859665e6d38a6)
+        ;
+
+        
+    
+    
+            feature_group_e19bd9204985cfa1647b7adcdb6c01b9.addTo(map_33f4985385a6a69dcca5e9f468fa30a6);
+        
+    
+            var feature_group_6e382bf6de3ec28a3fff5ad64517d1c8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_562a2c56413f5765f2826c673f2ca837 = L.circleMarker(
+                [41.0047, 16.2833],
+                {"bubblingMouseEvents": true, "color": "#de2d26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de2d26", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6e382bf6de3ec28a3fff5ad64517d1c8);
+        
+    
+        var popup_f6d010e90ac705b8b1d976ec981bf0ef = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1981398fc0cfcd4d1f2de349afe0daaa = $(`<div id="html_1981398fc0cfcd4d1f2de349afe0daaa" style="width: 100.0%; height: 100.0%;"><b>Murge Plateau</b><br>type: Plateau<br>certainty: low<br>findspot</div>`)[0];
+                popup_f6d010e90ac705b8b1d976ec981bf0ef.setContent(html_1981398fc0cfcd4d1f2de349afe0daaa);
+            
+        
+
+        circle_marker_562a2c56413f5765f2826c673f2ca837.bindPopup(popup_f6d010e90ac705b8b1d976ec981bf0ef)
+        ;
+
+        
+    
+    
+            var circle_marker_f29378e77c15821fa92af2d3d53f4431 = L.circleMarker(
+                [40.9794, 24.2274],
+                {"bubblingMouseEvents": true, "color": "#de2d26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de2d26", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6e382bf6de3ec28a3fff5ad64517d1c8);
+        
+    
+        var popup_ddba0f923c2e590b659154d966e6168c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a64b973f4004cf80d70409c0438c32e3 = $(`<div id="html_a64b973f4004cf80d70409c0438c32e3" style="width: 100.0%; height: 100.0%;"><b>Tenaghi Philippon (Greece)</b><br>type: UnknownCategory<br>certainty: low<br>findspot</div>`)[0];
+                popup_ddba0f923c2e590b659154d966e6168c.setContent(html_a64b973f4004cf80d70409c0438c32e3);
+            
+        
+
+        circle_marker_f29378e77c15821fa92af2d3d53f4431.bindPopup(popup_ddba0f923c2e590b659154d966e6168c)
+        ;
+
+        
+    
+    
+            var circle_marker_2b401f89729311f9fc929b576ede800f = L.circleMarker(
+                [43.655, 25.292],
+                {"bubblingMouseEvents": true, "color": "#de2d26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de2d26", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6e382bf6de3ec28a3fff5ad64517d1c8);
+        
+    
+        var popup_0225ad151290e7ae6f8ba188b95d88a2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_eeda3f598ad5836940cd00d5977eca46 = $(`<div id="html_eeda3f598ad5836940cd00d5977eca46" style="width: 100.0%; height: 100.0%;"><b>Lower Danube Basin (Romania)</b><br>type: Plateau<br>certainty: low<br>findspot</div>`)[0];
+                popup_0225ad151290e7ae6f8ba188b95d88a2.setContent(html_eeda3f598ad5836940cd00d5977eca46);
+            
+        
+
+        circle_marker_2b401f89729311f9fc929b576ede800f.bindPopup(popup_0225ad151290e7ae6f8ba188b95d88a2)
+        ;
+
+        
+    
+    
+            var circle_marker_a6a7ba80d4663b1db10cac7a545d3fc5 = L.circleMarker(
+                [55.0, 45.0],
+                {"bubblingMouseEvents": true, "color": "#de2d26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de2d26", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6e382bf6de3ec28a3fff5ad64517d1c8);
+        
+    
+        var popup_971bdd3bdc0644c5bf71fcc337d0dd3d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d4fb78a719fd87b1fd09dcc6679a1ee2 = $(`<div id="html_d4fb78a719fd87b1fd09dcc6679a1ee2" style="width: 100.0%; height: 100.0%;"><b>Russian Plane</b><br>type: Plateau<br>certainty: low<br>findspot</div>`)[0];
+                popup_971bdd3bdc0644c5bf71fcc337d0dd3d.setContent(html_d4fb78a719fd87b1fd09dcc6679a1ee2);
+            
+        
+
+        circle_marker_a6a7ba80d4663b1db10cac7a545d3fc5.bindPopup(popup_971bdd3bdc0644c5bf71fcc337d0dd3d)
+        ;
+
+        
+    
+    
+            var circle_marker_adf192a03a39cd37d0d58af158b3b57c = L.circleMarker(
+                [45.2034, 20.3026],
+                {"bubblingMouseEvents": true, "color": "#de2d26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de2d26", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6e382bf6de3ec28a3fff5ad64517d1c8);
+        
+    
+        var popup_6ebb826f6b111487e3e4fd71be365417 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b577fb1821e008eb2f705b9258690f68 = $(`<div id="html_b577fb1821e008eb2f705b9258690f68" style="width: 100.0%; height: 100.0%;"><b>Titel Pleateau (Serbia)</b><br>type: ArchaeologicalSite<br>certainty: low<br>archaeological</div>`)[0];
+                popup_6ebb826f6b111487e3e4fd71be365417.setContent(html_b577fb1821e008eb2f705b9258690f68);
+            
+        
+
+        circle_marker_adf192a03a39cd37d0d58af158b3b57c.bindPopup(popup_6ebb826f6b111487e3e4fd71be365417)
+        ;
+
+        
+    
+    
+            var circle_marker_197e00fdf3b5f9ba71dc326ba26d5057 = L.circleMarker(
+                [47.43, 31.8],
+                {"bubblingMouseEvents": true, "color": "#de2d26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de2d26", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6e382bf6de3ec28a3fff5ad64517d1c8);
+        
+    
+        var popup_fa401bbc993ab762490d968839898042 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6493dd830a5a3c3acc3481b1cf238e92 = $(`<div id="html_6493dd830a5a3c3acc3481b1cf238e92" style="width: 100.0%; height: 100.0%;"><b>Southern Ukraine</b><br>type: ModernRegion<br>certainty: low<br>findspot</div>`)[0];
+                popup_fa401bbc993ab762490d968839898042.setContent(html_6493dd830a5a3c3acc3481b1cf238e92);
+            
+        
+
+        circle_marker_197e00fdf3b5f9ba71dc326ba26d5057.bindPopup(popup_fa401bbc993ab762490d968839898042)
+        ;
+
+        
+    
+    
+            feature_group_6e382bf6de3ec28a3fff5ad64517d1c8.addTo(map_33f4985385a6a69dcca5e9f468fa30a6);
+        
+    
+            var feature_group_a78e88c782efcd1167ba36564edc6aab = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_de5c8eb4bd6505544824c1742bf71e3d = L.circleMarker(
+                [40.9346, 14.156],
+                {"bubblingMouseEvents": true, "color": "#756bb1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#756bb1", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a78e88c782efcd1167ba36564edc6aab);
+        
+    
+        var popup_b1320b6aabf093b841139478148867ad = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b31a17cb5efe8c3162474a0d70493f47 = $(`<div id="html_b31a17cb5efe8c3162474a0d70493f47" style="width: 100.0%; height: 100.0%;"><b>Scarafea Area</b><br>type: UnknownCategory<br>certainty: dubious<br>findspot</div>`)[0];
+                popup_b1320b6aabf093b841139478148867ad.setContent(html_b31a17cb5efe8c3162474a0d70493f47);
+            
+        
+
+        circle_marker_de5c8eb4bd6505544824c1742bf71e3d.bindPopup(popup_b1320b6aabf093b841139478148867ad)
+        ;
+
+        
+    
+    
+            var circle_marker_c30c74359819baaf8d48490f7fd9c55f = L.circleMarker(
+                [40.7616, 14.7906],
+                {"bubblingMouseEvents": true, "color": "#756bb1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#756bb1", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a78e88c782efcd1167ba36564edc6aab);
+        
+    
+        var popup_b46b295ce5dbd2fd617d07ca7ad5a3e2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_00d4da779225b711407f669f8c8af4f6 = $(`<div id="html_00d4da779225b711407f669f8c8af4f6" style="width: 100.0%; height: 100.0%;"><b>Tufarella Area</b><br>type: UnknownCategory<br>certainty: dubious<br>findspot</div>`)[0];
+                popup_b46b295ce5dbd2fd617d07ca7ad5a3e2.setContent(html_00d4da779225b711407f669f8c8af4f6);
+            
+        
+
+        circle_marker_c30c74359819baaf8d48490f7fd9c55f.bindPopup(popup_b46b295ce5dbd2fd617d07ca7ad5a3e2)
+        ;
+
+        
+    
+    
+            var circle_marker_aea198b863aa414aaf231dc71d0a1d80 = L.circleMarker(
+                [40.8005, 14.5194],
+                {"bubblingMouseEvents": true, "color": "#756bb1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#756bb1", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a78e88c782efcd1167ba36564edc6aab);
+        
+    
+        var popup_8aa0f0ce1f57bf31ccbd6ade4b8d8225 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7ee49780933f261b70acb638657b621a = $(`<div id="html_7ee49780933f261b70acb638657b621a" style="width: 100.0%; height: 100.0%;"><b>Voscone Area</b><br>type: UnknownCategory<br>certainty: dubious<br>findspot</div>`)[0];
+                popup_8aa0f0ce1f57bf31ccbd6ade4b8d8225.setContent(html_7ee49780933f261b70acb638657b621a);
+            
+        
+
+        circle_marker_aea198b863aa414aaf231dc71d0a1d80.bindPopup(popup_8aa0f0ce1f57bf31ccbd6ade4b8d8225)
+        ;
+
+        
+    
+    
+            var circle_marker_2ac0cdae729c171319a19b58492dfc8f = L.circleMarker(
+                [41.8117, 21.1617],
+                {"bubblingMouseEvents": true, "color": "#756bb1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#756bb1", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a78e88c782efcd1167ba36564edc6aab);
+        
+    
+        var popup_9977926463a0ff4bb996fe95bb1441c1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_36705b42f90bc2de7489f5304c452aa1 = $(`<div id="html_36705b42f90bc2de7489f5304c452aa1" style="width: 100.0%; height: 100.0%;"><b>Golema Pesht Cave near Zdunje (Macedonia)</b><br>type: ArchaeologicalSite|Cave<br>certainty: dubious<br>archaeological</div>`)[0];
+                popup_9977926463a0ff4bb996fe95bb1441c1.setContent(html_36705b42f90bc2de7489f5304c452aa1);
+            
+        
+
+        circle_marker_2ac0cdae729c171319a19b58492dfc8f.bindPopup(popup_9977926463a0ff4bb996fe95bb1441c1)
+        ;
+
+        
+    
+    
+            var circle_marker_bba7b89f0011039d05879f9deac67c03 = L.circleMarker(
+                [44.1891, 27.3271],
+                {"bubblingMouseEvents": true, "color": "#756bb1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#756bb1", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a78e88c782efcd1167ba36564edc6aab);
+        
+    
+        var popup_725549dda207bf9bfe9d416e99b83ffc = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cf0aa223d6368e6e0d1cdc94468a224d = $(`<div id="html_cf0aa223d6368e6e0d1cdc94468a224d" style="width: 100.0%; height: 100.0%;"><b>Bratul Borcea (Romania)</b><br>type: UnknownCategory<br>certainty: dubious<br>findspot</div>`)[0];
+                popup_725549dda207bf9bfe9d416e99b83ffc.setContent(html_cf0aa223d6368e6e0d1cdc94468a224d);
+            
+        
+
+        circle_marker_bba7b89f0011039d05879f9deac67c03.bindPopup(popup_725549dda207bf9bfe9d416e99b83ffc)
+        ;
+
+        
+    
+    
+            feature_group_a78e88c782efcd1167ba36564edc6aab.addTo(map_33f4985385a6a69dcca5e9f468fa30a6);
+        
+    
+            var feature_group_0c6d8bafc2a11df29f4e10f9dc5e6a00 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_116df13f0ab3f7521519e667bb0c653f = L.circleMarker(
+                [43.9996, 28.2329],
+                {"bubblingMouseEvents": true, "color": "#3186cc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0c6d8bafc2a11df29f4e10f9dc5e6a00);
+        
+    
+        var popup_05ca9990fe702e85fe5c1d1bd5d60ec5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fe3a91032bc2d8e21e00f0b99d5e22ed = $(`<div id="html_fe3a91032bc2d8e21e00f0b99d5e22ed" style="width: 100.0%; height: 100.0%;"><b>Dobrogea (Romania)</b><br>type: Plateau<br>certainty: representative<br>findspot</div>`)[0];
+                popup_05ca9990fe702e85fe5c1d1bd5d60ec5.setContent(html_fe3a91032bc2d8e21e00f0b99d5e22ed);
+            
+        
+
+        circle_marker_116df13f0ab3f7521519e667bb0c653f.bindPopup(popup_05ca9990fe702e85fe5c1d1bd5d60ec5)
+        ;
+
+        
+    
+    
+            var circle_marker_7a196f2b66577da9b0f11a8159d8659d = L.circleMarker(
+                [51.3858, 39.0517],
+                {"bubblingMouseEvents": true, "color": "#3186cc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0c6d8bafc2a11df29f4e10f9dc5e6a00);
+        
+    
+        var popup_677d64f24a9a658886ecbea004c257e3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9a3c141e81497f0da9af03a5ded7cf4f = $(`<div id="html_9a3c141e81497f0da9af03a5ded7cf4f" style="width: 100.0%; height: 100.0%;"><b>Kostenki-Borshchevo (Russia)</b><br>type: ArchaeologicalSite<br>certainty: representative<br>archaeological</div>`)[0];
+                popup_677d64f24a9a658886ecbea004c257e3.setContent(html_9a3c141e81497f0da9af03a5ded7cf4f);
+            
+        
+
+        circle_marker_7a196f2b66577da9b0f11a8159d8659d.bindPopup(popup_677d64f24a9a658886ecbea004c257e3)
+        ;
+
+        
+    
+    
+            feature_group_0c6d8bafc2a11df29f4e10f9dc5e6a00.addTo(map_33f4985385a6a69dcca5e9f468fa30a6);
+        
+    
+            var layer_control_1e0ae9762ffeef34b563e7d7d9ba216c_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_624f93bef0e9b9eacbecee7670906402,
+                },
+                overlays :  {
+                    "certainty: high" : feature_group_aef4e9973bbd92374a2e43682fc36d00,
+                    "certainty: medium" : feature_group_e19bd9204985cfa1647b7adcdb6c01b9,
+                    "certainty: low" : feature_group_6e382bf6de3ec28a3fff5ad64517d1c8,
+                    "certainty: dubious" : feature_group_a78e88c782efcd1167ba36564edc6aab,
+                    "certainty: representative" : feature_group_0c6d8bafc2a11df29f4e10f9dc5e6a00,
+                },
+            };
+            let layer_control_1e0ae9762ffeef34b563e7d7d9ba216c = L.control.layers(
+                layer_control_1e0ae9762ffeef34b563e7d7d9ba216c_layers.base_layers,
+                layer_control_1e0ae9762ffeef34b563e7d7d9ba216c_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_33f4985385a6a69dcca5e9f468fa30a6);
+
+        
+</script>
+</html>
