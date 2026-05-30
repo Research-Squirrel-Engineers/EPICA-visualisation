@@ -1,0 +1,481 @@
+---
+title: "Two Sides of the FAIR4RS Coin — querying the published RDF"
+format: live-html
+engine: knitr
+resources:
+  - geo_lod_core.ttl
+  - epica_dome_c.ttl
+  - sisal_sites.ttl
+  - ci_findspots.ttl
+pyodide:
+  packages:
+    - pandas
+    - matplotlib
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+This browser-executable notebook runs three SPARQL queries against local
+Turtle snapshots of the *GeoScience-FAIRification-LOD* graph and turns
+each result into a view: a reconstructed proxy curve, a map of SISAL
+cave sites, and a map of Campanian Ignimbrite findspots. Everything runs
+in your browser via Pyodide — no Python installation, no SPARQL
+endpoint. It is the browser companion to the local Jupyter notebook
+`local_ttl-fair4rs-coin.ipynb`; both run the same queries on the same
+data, only the runtime and the mapping library differ.
+
+::: {.callout-note}
+On first load, your browser downloads the Python runtime (Pyodide,
+~10 MB) and copies the four Turtle files (~2 MB total) into Pyodide's
+virtual filesystem. Please allow a moment for it to initialise.
+:::
+
+## About this notebook
+
+The three queries each exercise one axis of the paper *Two Sides of the
+FAIR4RS Coin* (Thiery & Schenk, 2026): the **methodological** axis (can
+a published curve be traced back to, and rebuilt from, the choices that
+produced it?), the **spatial** axis (where are the sites?), and the
+**cross-domain** axis (which sites also belong to the cultural-heritage
+record?).
+
+### Why this dataset
+
+The graph is compact, globally distributed, and deliberately
+multi-domain: EPICA Dome C ice-core observations, SISALv3 speleothem
+caves, and a Campanian Ignimbrite findspot catalogue share one
+`geo-lod` vocabulary. That makes it a good teaching graph for showing
+how reproducible computation and semantic interoperability are two
+sides of the same publication act, rather than separate concerns.
+
+### What you'll learn
+
+- Loading several Turtle files into one in-memory `rdflib` graph and
+  querying it with SPARQL.
+- Turning SPARQL result bindings into a tidy `pandas` DataFrame.
+- Rebuilding a smoothed time series, and drawing two categorical marker
+  maps, straight from the queried data.
+
+### Data-context notes
+
+- **Coordinate convention.** Geometries are GeoSPARQL WKT literals of
+  the form `<…EPSG/0/4326> POINT(lon lat)` — note the CRS prefix and the
+  `lon lat` axis order. Leaflet expects `[lat, lon]`, so we swap the
+  order once on parse.
+- **EPICA δ¹⁸O is atmospheric.** The δ¹⁸O series here is δ¹⁸O of
+  atmospheric O₂ (≈ −0.5…1.5 ‰), not the δ¹⁸O of the ice.
+- **Smoothing is modelled explicitly.** Each observation links to a
+  `SavitzkyGolayFilter` individual carrying `windowSize` and `polyOrder`,
+  alongside the raw value and the source DOI — that is what makes the
+  lineage query possible.
+- **Two spatial types per findspot.** A few CI findspots carry two
+  `hasSpatialType` values; the CI query groups them so each findspot
+  stays one row.
+
+### Tooling notes
+
+`rdflib` (installed at runtime via `micropip`) parses and queries the
+graph; `pandas` and `matplotlib` are pre-bundled in Pyodide. The maps
+are hand-written Leaflet returned as HTML — `folium` writes files to
+disk and is awkward under a browser runtime, so the local companion
+uses it instead.
+
+## 0  Setup
+
+Install `rdflib`, import the libraries, define the helpers, and the
+shared Leaflet marker-map builder used by the two map cells below.
+
+```{pyodide}
+#| label: setup
+#| autorun: false
+#| output: false
+import micropip
+await micropip.install("rdflib")
+
+import re, json, uuid
+import pandas as pd
+import matplotlib.pyplot as plt
+from rdflib import Graph
+
+
+class _Html:
+    """Wrap an HTML string so quarto-live inserts it on the main thread."""
+    def __init__(self, s): self._s = s
+    def _repr_html_(self): return self._s
+
+
+def load_graph(*files):
+    g = Graph()
+    for f in files:
+        g.parse(f, format="turtle")     # files live in Pyodide's VFS
+    return g
+
+
+_WKT_RE = re.compile(r"point\s*\(\s*([-+\d.eE]+)\s+([-+\d.eE]+)\s*\)",
+                     re.IGNORECASE)
+
+def parse_wkt(wkt):
+    m = _WKT_RE.search(str(wkt) if wkt is not None else "")
+    if not m:
+        return (None, None)
+    try:
+        return (float(m.group(2)), float(m.group(1)))
+    except ValueError:
+        return (None, None)
+
+
+def localname(uri):
+    return str(uri).rsplit("/", 1)[-1].rsplit("#", 1)[-1]
+
+
+def leaflet_marker_map(markers, cats, center, zoom):
+    """Return an _Html Leaflet marker map.
+
+    markers : list of {lat, lon, cat, color, popup}
+    cats    : list of {cat, color}  (drives layer control + legend swatches)
+    """
+    payload = json.dumps({"markers": markers, "cats": cats,
+                          "center": center, "zoom": zoom})
+    map_id = f"map-{uuid.uuid4().hex[:8]}"
+    data_var = f"__mapData_{map_id.replace('-', '_')}"
+    html = f"""
+<div id="{map_id}" style="height:540px;width:100%;border:1px solid #ddd;border-radius:4px"></div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@3.0.2/Control.FullScreen.css" />
+<script>window["{data_var}"] = {payload};</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {{
+    const mapId = "{map_id}";
+    const data = window["{data_var}"];
+
+    function loadFullscreen(cb) {{
+        if (typeof L !== 'undefined' && L.control && L.control.fullscreen) return cb();
+        if (typeof L === 'undefined') return setTimeout(function() {{ loadFullscreen(cb); }}, 50);
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/leaflet.fullscreen@3.0.2/Control.FullScreen.js';
+        s.onload = cb;
+        document.head.appendChild(s);
+    }}
+
+    let attempts = 0;
+    function init() {{
+        const el = document.getElementById(mapId);
+        if (!el || typeof L === 'undefined') return setTimeout(init, 50);
+        if (el._leaflet_id) return;
+        const hasFS = !!(L.control && L.control.fullscreen);
+        if (!hasFS && attempts < 40) {{ attempts++; return setTimeout(init, 50); }}
+
+        const osm = L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+            maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
+        }});
+        const esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}', {{
+            maxZoom: 18, attribution: 'Tiles &copy; Esri'
+        }});
+
+        const catLayers = {{}};
+        for (const c of data.cats) catLayers[c.cat] = L.layerGroup();
+        for (const m of data.markers) {{
+            if (!catLayers[m.cat]) catLayers[m.cat] = L.layerGroup();
+            L.circleMarker([m.lat, m.lon], {{
+                radius: 5, color: m.color, fillColor: m.color,
+                fillOpacity: 0.8, weight: 1
+            }}).bindPopup(m.popup).addTo(catLayers[m.cat]);
+        }}
+
+        const initialLayers = [osm];
+        const overlays = {{}};
+        for (const c of data.cats) {{
+            initialLayers.push(catLayers[c.cat]);
+            const sw = '<span style="display:inline-block;width:10px;height:10px;background:'
+                + c.color + ';border-radius:50%;margin-right:6px;vertical-align:middle"></span>';
+            overlays[sw + c.cat] = catLayers[c.cat];
+        }}
+
+        const opts = {{ center: data.center, zoom: data.zoom, layers: initialLayers }};
+        if (hasFS) {{
+            opts.fullscreenControl = true;
+            opts.fullscreenControlOptions = {{ position: 'topleft' }};
+        }}
+        const map = L.map(mapId, opts);
+        L.control.layers({{ "OpenStreetMap": osm, "Esri WorldImagery": esri }},
+                         overlays, {{ collapsed: true }}).addTo(map);
+        setTimeout(function() {{ map.invalidateSize(); }}, 200);
+    }}
+    loadFullscreen(init);
+}})();
+</script>
+"""
+    return _Html(html)
+
+print("setup complete")
+```
+
+## A  Samples and smoothing lineage (EPICA)
+
+One query returns, for every ice-core observation, its age, raw value,
+Savitzky-Golay-smoothed value, the smoothing method with its window size
+and polynomial order, and the source DOI. The `method / window / order /
+source` columns are the **provenance lineage**; the `age / raw / savgol`
+columns are enough to **redraw the smoothed curve from the published RDF
+alone**, which the next cell does.
+
+```{pyodide}
+#| label: query-samples
+#| autorun: false
+Q_SAMPLES = """
+PREFIX geolod: <http://w3id.org/geo-lod/>
+PREFIX sosa:   <http://www.w3.org/ns/sosa/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+
+SELECT ?obs ?type ?age ?raw ?savgol ?method ?window ?order ?source WHERE {
+  ?obs a sosa:Observation ;
+       geolod:measurementType ?type ;
+       sosa:resultTime ?age ;
+       sosa:hasSimpleResult ?raw ;
+       geolod:smoothedValue_savgol ?savgol ;
+       geolod:smoothingMethod_savgol ?method ;
+       prov:wasDerivedFrom ?source .
+  ?method geolod:windowSize ?window .
+  OPTIONAL { ?method geolod:polyOrder ?order }
+}
+ORDER BY ?type ?age
+"""
+
+g_epica = load_graph("geo_lod_core.ttl", "epica_dome_c.ttl")
+
+df_samples = pd.DataFrame([
+    {
+        "obs":    localname(r["obs"]),
+        "type":   localname(r["type"]).replace("MeasurementType_", ""),
+        "age_ka": float(r["age"]),
+        "raw":    float(r["raw"]),
+        "savgol": float(r["savgol"]),
+        "method": localname(r["method"]),
+        "window": int(r["window"]),
+        "order":  int(r["order"]) if r["order"] is not None else None,
+        "source": str(r["source"]),
+    }
+    for r in g_epica.query(Q_SAMPLES)
+])
+
+print(f"{len(df_samples)} observations "
+      f"({', '.join(f'{t}: {n}' for t, n in df_samples['type'].value_counts().items())})")
+df_samples.head()
+```
+
+### Rebuild the smoothed curves from the RDF
+
+One panel per proxy: the raw measurements and the Savitzky-Golay series,
+both read straight from the graph above — the published figure
+regenerated from the Linked Open Data rather than from the original
+pipeline.
+
+```{pyodide}
+#| label: plot-reconstruction
+#| autorun: false
+assert 'df_samples' in dir() and not df_samples.empty, "Run query A first."
+
+proxies = list(df_samples["type"].unique())
+fig, axes = plt.subplots(len(proxies), 1,
+                         figsize=(9, 3.0 * len(proxies)), squeeze=False)
+for ax, proxy in zip(axes[:, 0], proxies):
+    sub = df_samples[df_samples["type"] == proxy].sort_values("age_ka")
+    ax.plot(sub["age_ka"], sub["raw"], lw=0.5, alpha=0.5, label="raw")
+    ax.plot(sub["age_ka"], sub["savgol"], lw=1.3, label="Savitzky-Golay")
+    ax.set_xlabel("age [ka BP]")
+    ax.set_ylabel(proxy)
+    ax.set_title(f"EPICA Dome C {proxy} rebuilt from the published RDF")
+    ax.legend(loc="best", fontsize=8)
+    ax.invert_xaxis()
+fig.tight_layout()
+plt.show()
+```
+
+## B  SISAL cave sites (marker map)
+
+Every SISALv3 cave with coordinates, plus whether it is also an
+archaeological cave site, whether it is UNESCO World Heritage, and its
+Wikidata cross-link. `EXISTS` keeps the flags to one row per cave. The
+marker colour encodes the highest-priority status; the layer control
+doubles as the legend.
+
+```{pyodide}
+#| label: query-sisal
+#| autorun: false
+Q_SISAL = """
+PREFIX geolod: <http://w3id.org/geo-lod/>
+PREFIX geo:   <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+
+SELECT ?site ?label ?wkt ?isArch ?isUnesco ?wikidata WHERE {
+  ?site a geolod:Cave ;
+        rdfs:label ?label ;
+        geo:hasGeometry / geo:asWKT ?wkt .
+  BIND(EXISTS { ?site a geolod:ArchaeologicalCaveSite } AS ?isArch)
+  BIND(EXISTS { ?site geolod:isUNESCOWorldHeritage true } AS ?isUnesco)
+  OPTIONAL { ?site owl:sameAs ?wikidata
+             FILTER(STRSTARTS(STR(?wikidata), "https://www.wikidata.org/")) }
+}
+ORDER BY ?site
+"""
+
+g_sisal = load_graph("geo_lod_core.ttl", "sisal_sites.ttl")
+
+df_sisal = pd.DataFrame([
+    {
+        "site":     localname(r["site"]),
+        "label":    str(r["label"]),
+        **dict(zip(("lat", "lon"), parse_wkt(r["wkt"]))),
+        "isArch":   bool(r["isArch"]),
+        "isUnesco": bool(r["isUnesco"]),
+        "wikidata": str(r["wikidata"]) if r["wikidata"] else "",
+    }
+    for r in g_sisal.query(Q_SISAL)
+]).dropna(subset=["lat", "lon"]).reset_index(drop=True)
+
+def sisal_status(row):
+    if row["isUnesco"]:
+        return "UNESCO World Heritage"
+    if row["isArch"]:
+        return "Archaeological cave"
+    return "Speleothem site"
+
+df_sisal["status"] = df_sisal.apply(sisal_status, axis=1)
+print(f"{len(df_sisal)} caves | archaeological: {int(df_sisal['isArch'].sum())} | "
+      f"UNESCO: {int(df_sisal['isUnesco'].sum())} | "
+      f"Wikidata: {int((df_sisal['wikidata'] != '').sum())}")
+df_sisal.head()
+```
+
+```{pyodide}
+#| label: map-sisal
+#| autorun: false
+assert 'df_sisal' in dir() and not df_sisal.empty, "Run the SISAL query first."
+
+SISAL_COLORS = {
+    "Speleothem site":       "#3186cc",
+    "Archaeological cave":   "#e6550d",
+    "UNESCO World Heritage": "#31a354",
+}
+
+markers = []
+for _, row in df_sisal.iterrows():
+    popup = f"<b>{row['label']}</b><br>{row['status']}"
+    if row["wikidata"]:
+        popup += f'<br><a href="{row["wikidata"]}" target="_blank">Wikidata</a>'
+    markers.append({"lat": row["lat"], "lon": row["lon"],
+                    "cat": row["status"], "color": SISAL_COLORS[row["status"]],
+                    "popup": popup})
+
+cats = [{"cat": s, "color": c} for s, c in SISAL_COLORS.items()
+        if s in set(df_sisal["status"])]
+center = [float(df_sisal["lat"].mean()), float(df_sisal["lon"].mean())]
+leaflet_marker_map(markers, cats, center, 2)
+```
+
+## C  Campanian Ignimbrite findspots (marker map)
+
+The 74 CI findspots with coordinates, archaeological flag and
+georeferencing certainty; `GROUP_CONCAT` keeps the six twice-typed
+findspots to one row each. The marker colour encodes the certainty of
+the georeferencing — the honest "how sure are we about this point?"
+layer that a fuzzy-linked findspot catalogue needs.
+
+```{pyodide}
+#| label: query-ci
+#| autorun: false
+Q_CI = """
+PREFIX geolod: <http://w3id.org/geo-lod/>
+PREFIX geo:   <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?f ?label ?wkt ?isArch
+       (GROUP_CONCAT(DISTINCT ?st; SEPARATOR="|") AS ?stypes)
+       (SAMPLE(?cl) AS ?certainty)
+WHERE {
+  ?f a geolod:CIFindspot ;
+     rdfs:label ?label ;
+     geo:hasGeometry / geo:asWKT ?wkt .
+  OPTIONAL { ?f geolod:hasSpatialType ?st }
+  OPTIONAL { ?f geolod:hasCertaintyLevel ?cl }
+  BIND(EXISTS { ?f a geolod:CIArchaeologicalSite } AS ?isArch)
+}
+GROUP BY ?f ?label ?wkt ?isArch
+ORDER BY ?f
+"""
+
+g_ci = load_graph("geo_lod_core.ttl", "ci_findspots.ttl")
+
+df_ci = pd.DataFrame([
+    {
+        "findspot":  localname(r["f"]),
+        "label":     str(r["label"]),
+        **dict(zip(("lat", "lon"), parse_wkt(r["wkt"]))),
+        "spatial":   "|".join(localname(s) for s in str(r["stypes"]).split("|") if s),
+        "isArch":    bool(r["isArch"]),
+        "certainty": localname(r["certainty"]) if r["certainty"] else "(none)",
+    }
+    for r in g_ci.query(Q_CI)
+]).dropna(subset=["lat", "lon"]).reset_index(drop=True)
+
+print(f"{len(df_ci)} findspots | archaeological: {int(df_ci['isArch'].sum())}")
+print("certainty:", dict(df_ci["certainty"].value_counts()))
+df_ci.head()
+```
+
+```{pyodide}
+#| label: map-ci
+#| autorun: false
+assert 'df_ci' in dir() and not df_ci.empty, "Run the CI query first."
+
+CERTAINTY_COLORS = {
+    "high":           "#31a354",
+    "medium":         "#fd8d3c",
+    "low":            "#de2d26",
+    "dubious":        "#756bb1",
+    "representative": "#3186cc",
+}
+DEFAULT_COLOR = "#999999"
+
+markers = []
+for _, row in df_ci.iterrows():
+    color = CERTAINTY_COLORS.get(row["certainty"], DEFAULT_COLOR)
+    popup = (f"<b>{row['label']}</b><br>type: {row['spatial'] or 'n/a'}"
+             f"<br>certainty: {row['certainty']}"
+             f"<br>{'archaeological' if row['isArch'] else 'findspot'}")
+    markers.append({"lat": row["lat"], "lon": row["lon"],
+                    "cat": f"certainty: {row['certainty']}",
+                    "color": color, "popup": popup})
+
+order = ["high", "medium", "low", "dubious", "representative"]
+present = [c for c in order if c in set(df_ci["certainty"])]
+present += [c for c in df_ci["certainty"].unique() if c not in order]
+cats = [{"cat": f"certainty: {c}",
+         "color": CERTAINTY_COLORS.get(c, DEFAULT_COLOR)} for c in present]
+center = [float(df_ci["lat"].mean()), float(df_ci["lon"].mean())]
+leaflet_marker_map(markers, cats, center, 4)
+```
+
+## Explore
+
+The three DataFrames (`df_samples`, `df_sisal`, `df_ci`) stay in scope.
+A couple of starting points — adapt freely:
+
+```{pyodide}
+#| label: explore
+#| autorun: false
+# Archaeological SISAL caves that also carry a Wikidata link:
+df_sisal[(df_sisal["isArch"]) & (df_sisal["wikidata"] != "")][
+    ["site", "label", "wikidata"]].head(10)
+```
+
+---
+
+*Companion to the local Jupyter notebook `local_ttl-fair4rs-coin.ipynb`.
+Data and RDF conversion: the
+[GeoScience-FAIRification-LOD](https://github.com/Research-Squirrel-Engineers/GeoScience-FAIRification-LOD)
+repository (Research Squirrel Engineers). Part of an Open Educational
+Resource series on knowledge graphs and linked open data, produced in
+the context of [NFDI4Objects](https://www.nfdi4objects.net/).*
