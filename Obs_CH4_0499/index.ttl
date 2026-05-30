@@ -1,6 +1,6 @@
 @prefix ns1: <http://w3id.org/geo-lod/> .
-@prefix ns2: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ns3: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -12,7 +12,7 @@ ns1:Obs_CH4_0499 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
         sosa:Observation,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "CH₄ observation 0499 (449.3 ka BP)"@en ;
-    ns3:unit <http://qudt.org/vocab/unit/PPB> ;
+    ns2:unit <http://qudt.org/vocab/unit/PPB> ;
     void:inDataset ns1:geo-lod ;
     ns1:ageChronology ns1:EDC2_Chronology ;
     ns1:atDepth_m 2817.12 ;
@@ -21,7 +21,7 @@ ns1:Obs_CH4_0499 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
     ns1:smoothedValue_savgol 455.44 ;
     ns1:smoothingMethod_median ns1:RollingMedian_w11 ;
     ns1:smoothingMethod_savgol ns1:SavitzkyGolay_w11_p2 ;
-    ns2:P7_took_place_at ns1:EpicaDomeC_Site ;
+    ns3:P7_took_place_at ns1:EpicaDomeC_Site ;
     prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.472484> ;
     sosa:hasFeatureOfInterest ns1:EpicaDomeC_IceCore ;
     sosa:hasSimpleResult 521.4 ;
