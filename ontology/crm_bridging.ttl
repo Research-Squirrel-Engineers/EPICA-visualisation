@@ -32,6 +32,8 @@
 @prefix geo:        <http://www.opengis.net/ont/geosparql#> .
 @prefix sf:         <http://www.opengis.net/ont/sf#> .
 @prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:       <http://www.w3.org/2006/time#> .
 @prefix dcterms:    <http://purl.org/dc/terms/> .
 @prefix foaf:       <http://xmlns.com/foaf/0.1/> .
 @prefix pleiades:   <https://pleiades.stoa.org/places/vocab#> .
@@ -133,3 +135,33 @@ fuzzysl:Site
 
 fuzzysl:Georeferencing
     rdfs:subClassOf crm:E13_Attribute_Assignment .
+
+# ============================================================================
+# SKOS  →  CRM
+# ============================================================================
+# Controlled vocabularies. A concept is a term of a vocabulary, a scheme the
+# authority document that publishes it.
+# https://www.w3.org/TR/skos-reference/
+
+skos:Concept
+    rdfs:subClassOf crm:E55_Type .
+
+skos:ConceptScheme
+    rdfs:subClassOf crm:E32_Authority_Document .
+
+skos:Collection
+    rdfs:subClassOf crm:E78_Curated_Holding .
+
+# ============================================================================
+# OWL-Time  →  CRM
+# ============================================================================
+# A time position is a quantified value with a unit and a reference system,
+# which is what E54 describes; the reference system itself is a declarative
+# procedure, mirroring crmgeo:SP4 for spatial coordinate reference systems.
+# https://www.w3.org/TR/owl-time/
+
+time:TimePosition
+    rdfs:subClassOf crm:E54_Dimension .
+
+time:TRS
+    rdfs:subClassOf crm:E29_Design_or_Procedure .

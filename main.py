@@ -174,6 +174,32 @@ def regenerate_canonical_ontology() -> bool:
         return False
 
 
+def regenerate_vocabularies() -> bool:
+    """Schritt 0b: Erzeugt die kontrollierten Vokabulare unter
+    ontology/vocab/ aus den Primärquellen in data/raw/.
+
+    Nebenprodukt sind die aufbereiteten Tabellen in dist/ - dieselben Werte
+    wie im TTL, für Abbildungen und Achsencode.
+
+    Aktuell nur das MIS-Vokabular (plus ontology/trs.ttl); weitere Schemata
+    (z.B. tephra) kommen hier dazu.
+    """
+    print("\n  ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...")
+
+    sys.path.insert(0, str(ONTOLOGY_DIR))
+    try:
+        from build_mis_vocab import build as build_mis
+    except ImportError as e:
+        print(f"  ✗ build_mis_vocab.py konnte nicht importiert werden: {e}")
+        return False
+
+    try:
+        return build_mis()
+    except Exception as e:
+        print(f"  ✗ MIS-Vokabular konnte nicht erzeugt werden: {e}")
+        return False
+
+
 def run_script(script_path: Path, description: str) -> bool:
     """Execute Python script with PYTHONPATH set correctly."""
     if not script_path.exists():
@@ -319,20 +345,26 @@ def main():
         print("\n  ⚠  Ontologie konnte nicht regeneriert werden - Bundle wird")
         print("     vermutlich mit veralteter ontology/geo_lod_core.ttl arbeiten.")
 
+    print_section("3. Regenerate controlled vocabularies")
+    vocab_ok = regenerate_vocabularies()
+    if not vocab_ok:
+        print("\n  ⚠  Vokabulare konnten nicht regeneriert werden - das Bundle")
+        print("     arbeitet dann mit einem veralteten ontology/vocab/mis.ttl.")
+
     if not args.sisal_only and not args.ci_only and epica_exists:
-        print_section("3. EPICA Dome C (Ice Core)")
+        print_section("4. EPICA Dome C (Ice Core)")
         epica_ok = run_script(EPICA_SCRIPT, "EPICA Dome C Processing")
 
     if not args.epica_only and not args.ci_only and sisal_exists:
-        print_section("4. SISAL (Speleothems)")
+        print_section("5. SISAL (Speleothems)")
         sisal_ok = run_script(SISAL_SCRIPT, "SISAL Processing")
 
     if not args.epica_only and not args.sisal_only and ci_exists:
-        print_section("5. Campanian Ignimbrite (CI Findspots)")
+        print_section("6. Campanian Ignimbrite (CI Findspots)")
         ci_ok = run_script(CI_SCRIPT, "CI Findspot Processing")
 
     if not args.no_bundle:
-        print_section("6. RDF Bundle & Validation")
+        print_section("7. RDF Bundle & Validation")
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok)
 
     print_summary(epica_ok, sisal_ok, ci_ok, bundle_ok, start)
@@ -344,7 +376,9 @@ def main():
     # Pipeline insgesamt nur grün, wenn alle aktivierten Schritte ok sind.
     bundle_required = not args.no_bundle
     overall_ok = (
-        epica_ok
+        canonical_ok
+        and vocab_ok
+        and epica_ok
         and sisal_ok
         and ci_ok
         and (bundle_ok if bundle_required else True)

@@ -74,6 +74,12 @@ count from the most recent pipeline run as orientation.
 | `RollingMedianFilter`                   | `crmsci:S6_Data_Evaluation`                 | Smoothing as derived data |
 | `SavitzkyGolayFilter`                   | `crmsci:S6_Data_Evaluation`                 | Smoothing as derived data |
 | `DataSource`                            | `crm:E73_Information_Object`                | Citable source (TAB/CSV file, paper) |
+| `MarineIsotopeStage`                    | `crm:E4_Period`                             | Chronostratigraphic subdivision, also a `skos:Concept` |
+| `MarineIsotopeSubstage` ⊑ `MarineIsotopeStage` | (via parent) `crm:E4_Period`         | Lettered substage after Railsback et al. (2015) |
+| `MISAttributeAssignment`                | `crm:E13_Attribute_Assignment`              | Boundary, peak or climate mode on the authority of one source |
+| `ClimateMode`                           | `crm:E55_Type`                              | Warm / cold classification |
+| `AssignedPropertyType`                  | `crm:E55_Type`                              | Value of `crm:P177` on an attribute assignment |
+| `AssignmentStatus`                      | `crm:E55_Type`                              | Leading vs. alternative reading of a disputed value |
 
 ### 2.2 External vocabularies → CRM (bridging axioms)
 
@@ -96,6 +102,11 @@ axiom.
 | `dcat:Dataset`                          | `crm:E73_Information_Object`                |  |
 | `dcat:Catalog`                          | `crm:E78_Curated_Holding`                   |  |
 | `dcterms:BibliographicResource`         | `crm:E31_Document`                          |  |
+| `skos:Concept`                          | `crm:E55_Type`                              | Vocabulary term |
+| `skos:ConceptScheme`                    | `crm:E32_Authority_Document`                | Published vocabulary |
+| `skos:Collection`                        | `crm:E78_Curated_Holding`                   | Curated subset of a vocabulary |
+| `time:TimePosition`                     | `crm:E54_Dimension`                         | Value with unit and reference system |
+| `time:TRS`                              | `crm:E29_Design_or_Procedure`               | Mirrors `crmgeo:SP4` for spatial CRS |
 | `pleiades:Place`                        | `crm:E53_Place`                             |  |
 | `fuzzy-sl:Site`                         | `crm:E27_Site`                              | Squirrel.link Site model |
 | `fuzzy-sl:Georeferencing`               | `crm:E13_Attribute_Assignment`              | Statement of position |
@@ -211,3 +222,8 @@ A green check here is the gate for N4O readiness.
 - *unreleased* — initial crosswalk drafted alongside `bundle_rdf.py`
   step-5 CRM-coverage gate. Bridging file `crm_bridging.ttl` to be
   written next.
+- *S1* — MIS vocabulary added under
+  `http://w3id.org/geo-lod/vocab/mis/`. New own classes for stages,
+  substages and their attribute assignments; SKOS and OWL-Time bridged
+  into the CRM family so that concepts, time positions and temporal
+  reference systems pass the coverage gate.

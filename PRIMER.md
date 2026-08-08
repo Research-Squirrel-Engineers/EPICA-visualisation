@@ -85,6 +85,10 @@ möglich und wahrscheinlich nötig. Damit gilt:
   Verzeichnis `metadata/ontology/` — so macht es `wdttest-tables` bereits.
 - Nachnutzung heisst kopieren, nicht referenzieren. Einzige Ausnahme ist die
   Ontologie über ihre w3id-IRI.
+- **Rohdaten liegen unter `data/raw/<strang>/`**, unverändert wie bezogen, und
+  werden nur gelesen. Was ein Skript daraus macht, geht nach `dist/`. Damit ist
+  an jeder Datei ablesbar, ob sie Quelle oder Erzeugnis ist; `info/` als
+  Ablage für „brauche ich noch" entfällt.
 - Kopierter Code trägt seine Prüfungen mit. Ein Guard, der beim Kopieren
   wegfällt, ist die gefährlichste Form von Nachnutzung.
 - **Kein Spreadsheet und kein Import-Assistent im Ladeweg.** Das gilt auch für
@@ -96,6 +100,11 @@ möglich und wahrscheinlich nötig. Damit gilt:
   Aufzählung im Fliesstext. Ein Klickpfad ist schneller zu beantworten als eine
   Liste, und die Antwort kommt in einer Form zurück, die sich direkt nach A4
   übertragen lässt.
+- **Jedes Formular hat immer ein freies Kommentarfeld**, unabhängig davon, wie
+  eindeutig die Optionen scheinen. Die wichtigsten Antworten sind regelmässig
+  die, an die beim Formulieren der Frage niemand gedacht hat — etwa dass eine
+  Datei anderswo hingehört, als die Frage unterstellt. Ohne Feld gehen sie
+  entweder verloren oder erzwingen eine zweite Runde.
 - Sprache: Konversation deutsch, Code/Ontologie/Dokumentation englisch.
   Ausnahme: dieses `PRIMER.md` bleibt deutsch — es ist ein internes
   Arbeitsdokument, das offen liegt, aber nicht nach aussen adressiert ist.
@@ -125,9 +134,14 @@ powershell -NoProfile -Command "Compress-Archive -Path 'bundle\geo-lod' -Destina
 generierten Datendateien heraus. Ergebnis: wenige MB. Robocopy meldet Exitcode 1
 bei Erfolg.
 
-**Was gitignoriert ist, kommt nicht über GitHub.** `data/` und `dist/` liegen
-nicht im Repo. Wenn ein Schritt Rohdaten braucht — etwa die `.tab` in S2 —
-müssen sie separat mit.
+**Was gitignoriert ist, kommt nicht über GitHub.** Geprüft 2026-08-08: die
+`.gitignore` ist die Python-Vorlage, `dist/` steht dort auskommentiert und
+`data/` gar nicht — beide sind also versioniert, entsprechend liegt
+`dist/geo-lod-bundle.ttl` im Repo. Der frühere Satz, sie lägen nicht im Repo,
+war falsch. Das ist so gewollt: die kleinen Rohdaten unter `data/raw/` und die
+erzeugten Tabellen in `dist/` sollen über GitHub zitierbar sein. Grosse
+generierte Dateien bleiben trotzdem aus dem Upload-Bundle draussen, dafür sorgt
+der Grössenfilter, nicht die `.gitignore`.
 
 **Wenn eine Datei gezielt geändert werden soll**, genügt sie einzeln zusätzlich
 zum Bundle; dann sehe ich den aktuellen Stand und den Kontext gleichzeitig.
@@ -156,6 +170,15 @@ lesen hier ab, statt neu zu diskutieren.
 | SISAL-Site-Auswahl für RDF | in S3 entscheiden, wenn die vollständige Datenbank vorliegt | 2026-08-08 |
 | Waisen bei FK-Aktivierung: abweisen oder laden | in S3b entscheiden — zeigt sich erst beim Ladelauf | 2026-08-08 |
 | PRIMER.md-Sprache | deutsch — internes Arbeitsdokument | 2026-08-08 |
+| MIS-Leitschema | Railsback et al. 2015, durchgehend. Auch die WD1-Familie zieht darauf um; `wdttest-wd1--ager-corg` ist bereits dort, `wdttest-tables` folgt in S4 | 2026-08-08 |
+| Umfang des MIS-Schemas | vollständig bis TG5/TG6 (5315 ka). Bis 1013,1 ka Railsback, darüber hinaus LR04 als einzige Quelle; Herkunft steht als `dct:source` am Konzept | 2026-08-08 |
+| Welche Quelle gilt, wenn beide etwas sagen | Railsback führt, solange es reicht; darüber hinaus LR04. Beide Lesarten bleiben erhalten, aber jede Zuweisung trägt `geolod:assignmentStatus` (leitend oder alternativ) und jedes Konzept `geolod:leadingSource` | 2026-08-08 |
+| LR04-Peaks 5.1 bis 5.5 | keine Grenzen, sondern Exkursionen: an die Substadien 5a bis 5e gehängt, als `geolod:ExcursionPeak` | 2026-08-08 |
+| Elternstadien ohne Railsback-Zeile | aus der Vereinigung der Substadien abgeleitet, mit `prov:wasDerivedFrom` und Vermerk am E13 | 2026-08-08 |
+| MIS-Labels | `skos:prefLabel "MIS 5e"`, `skos:altLabel "5e"` | 2026-08-08 |
+| Warm/Kalt | Paritätskonvention, ungerade warm, gerade kalt, Beleg Railsback et al. 2015. Nur nummerierte Stadien; die Buchstabenstadien des Pliozäns bleiben unklassifiziert | 2026-08-08 |
+| Ort der Rohdaten | `data/raw/<strang>/`, unverändert und nur lesend. Die MIS-Quellen sind aus `info/` dorthin gezogen; `info/` entfällt | 2026-08-08 |
+| Aufbereitete Tabellen aus dem Vokabular | ja, aus demselben Lauf nach `dist/`: `mis_stages.csv` (eine Zeile je Konzept, leitende Werte) und `mis_assignments.csv` (eine Zeile je Zuweisung, beide Lesarten mit Status) | 2026-08-08 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -170,14 +193,14 @@ noch nicht entschieden.
 |---|---|---|---|
 | `/geo-lod/` | Kernontologie: Klassen und Properties, flach | `geo_lod_core.ttl` | aktiv |
 | `/geo-lod/strat/` | `strat:` — Semantic Layer der WD1-Familie | `strat.ttl` in `wdttest-tables` | aktiv |
-| `/geo-lod/vocab/mis/` | MIS-Stadien und -Substadien, Grenzen als E13 | `ontology/vocab/mis.ttl` | beschlossen (S1) |
+| `/geo-lod/vocab/mis/` | MIS-Stadien und -Substadien, Grenzen als E13 | `ontology/vocab/mis.ttl` | aktiv (S1) |
 | `/geo-lod/vocab/tephra/` | Marker-Tephren, Join zwischen WD1, ELSA und CI | `ontology/vocab/tephra.ttl` | reserviert (S5) |
 | `/geo-lod/epica/` | Instanzdaten Eiskern | `EPICA/rdf/` | beschlossen (S2) |
 | `/geo-lod/sisal/` | Instanzdaten Speläotheme, inkl. der 305 Cave-Sites | `SISAL/rdf/` | beschlossen (S3c) |
 | `/geo-lod/ci/` | Instanzdaten Campanian-Ignimbrite-Fundstellen | `CI/rdf/` | beschlossen (S4-Umzug) |
 | `/geo-lod/elsa/` | Instanzdaten Maarsedimente | noch nicht vorhanden | beschlossen (S5) |
 | `/geo-lod/shapes/` | SHACL-Gate, `core_shapes.ttl` plus `strat`-Shapes | `ontology/shapes/` | geplant (S4) |
-| `/geo-lod/trs/` | Temporal Reference Systems, eine je Chronologie: `EDC1`, `EDC2`, `EDC3`, `AICC2023-gas`, `AICC2023-ice`, später SISAL und ELSA | `ontology/trs.ttl` | beschlossen (S2) |
+| `/geo-lod/trs/` | Temporal Reference Systems, eine je Chronologie: `EDC1`, `EDC2`, `EDC3`, `AICC2023-gas`, `AICC2023-ice`, später SISAL und ELSA | `ontology/trs.ttl` | aktiv (S1: `LR04`, `Railsback2015`); Eiskern-TRS folgen in S2 |
 
 **Was hier bewusst nicht steht.** `metadata/ontology.ttl` und
 `metadata/shapes.ttl` der WD1-Familie liegen unter `wdt:`, nicht unter
@@ -202,7 +225,7 @@ noch nicht entschieden.
 | ID | Schritt | Repo | hängt ab von | Status |
 |---|---|---|---|---|
 | S0 | Festlegungen, kein Code | — | — | erledigt 2026-08-08 |
-| S1 | Gemeinsame Vokabulare | geo-lod | S0 | offen |
+| S1 | Gemeinsame Vokabulare | geo-lod | S0 | erledigt 2026-08-08 |
 | S2 | EPICA nach RDF | geo-lod | S0, S1 | offen |
 | S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | offen |
 | S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | offen |
@@ -453,13 +476,67 @@ Content-Negotiation.
 **Ziel:** übergreifende SKOS-Schemata, auf die alle Stränge zeigen. Muss vor den
 Instanzdaten stehen.
 
-**Uploads:** geo-lod-Bundle (A5); `mis_literature.csv`,
-`mis_stage_boundaries.csv`, `mis_boundaries.csv`.
+**Uploads:** geo-lod-Bundle (A5). Die WD1-CSVs `mis_literature.csv`,
+`mis_stage_boundaries.csv` und `mis_boundaries.csv` wurden nicht gebraucht:
+gebaut wird aus den Primärquellen `data/raw/mis/LR04_MISboundaries.csv` und
+`data/raw/mis/Railsbacketal2015MISSubstagesFig3-TableVersion01-CSV.csv`, dieselbe
+Begründung wie in S2 für die `.tab` gegenüber den abgeleiteten CSVs.
 
 **Ergebnis:** `ontology/vocab/mis.ttl` in geo-lod, IRI-Muster dokumentiert.
 
 **Fertig, wenn:** das MIS-Schema durch SHACL läuft und `wdttest-tables` per
 `skos:exactMatch` darauf zeigen könnte.
+
+**Erledigt 2026-08-08.** 315 Konzepte (228 Stadien, 87 Substadien), 792
+Zuweisungen, 461 Zeitpositionen, 9 806 Tripel. CRM-Coverage 14/14, SHACL ohne
+Violation, zwei Läufe byte-identisch. Neu im Repo:
+
+| Datei | Rolle |
+|---|---|
+| `ontology/build_mis_vocab.py` | Generator, liest `info/`, schreibt beide TTL |
+| `ontology/vocab/mis.ttl` | erzeugt, nicht von Hand editieren |
+| `ontology/vocab/README.md` | IRI-Muster `…/vocab/<scheme>/` und Leitschema-Regel |
+| `ontology/trs.ttl` | erzeugt; `trs:LR04` und `trs:Railsback2015` |
+| `dist/mis_stages.csv` | erzeugt; eine Zeile je Konzept, leitende Werte |
+| `dist/mis_assignments.csv` | erzeugt; eine Zeile je Zuweisung, beide Lesarten |
+| `data/raw/mis/` | die drei Quelldateien aus `info/`, unverändert |
+| `ontology/shapes/mis_shapes.ttl` | Shapes für Konzepte, Zuweisungen, Zeitpositionen |
+
+Geändert: `geo_lod_utils.py` (MIS-Terme im Kern), `crm_bridging.ttl` (SKOS und
+OWL-Time verankert), `ontology/README.md` (Crosswalk), `main.py` (Schritt 3
+erzeugt die Vokabulare, danach ist alles um eins verschoben), `bundle_rdf.py`
+(`ontology/vocab/` kommt ins Bundle).
+
+**Wie mit zwei Quellen umgegangen wird.** Nichts wird verworfen, aber die
+Auswahl steht in den Daten statt im Kopf des Konsumenten. Jede Zuweisung trägt
+`geolod:assignmentStatus`, jedes Konzept `geolod:leadingSource`:
+
+- Wo Railsback reicht, führt Railsback. Die LR04-Lesart derselben Grenze bleibt
+  als `geolod:AlternativeAssignment` daneben stehen — 55 der 792 Zuweisungen.
+- Jenseits von 1013,1 ka führt LR04, mangels Alternative.
+- Wo nur eine Quelle etwas zu einer Eigenschaft sagt, etwa die Exkursionsgipfel
+  von LR04, führt diese.
+
+Ein Filter auf `geolod:LeadingAssignment` liefert damit genau eine Altersachse,
+ohne dass die Abfrage die Reichweite der Quellen kennen muss. Die Grenze selbst
+ist ebenfalls Datum: `geolod:coverageOldestAgeKaBP` an
+`mis:source_railsback2015`.
+
+**Warum zwei Tabellen und nicht eine.** Für Abbildungen und Achsencode ist die
+breite Form richtig: eine Zeile je Konzept, nur die leitenden Werte, direkt als
+Ersatz für `MIS_INTERVALS` lesbar. Für alles, was die Uneinigkeit der Quellen
+sehen muss, ist sie falsch, weil sie sie wegwirft. Die lange Form daneben
+kostet fast nichts und hält den Graphen und die Tabellen deckungsgleich: keine
+Grenze wird stromabwärts noch einmal berechnet.
+
+**Abgleich `MIS_INTERVALS`.** Genau eine Abweichung von der Parität: MIS 3
+steht im Plotting als Interstadial, die Konvention sagt warm. Die übrigen zwölf
+Einträge stimmen. Die Abweichung hängt als `skos:note` an `mis:MIS_3`.
+
+**Folge für die Abbildungen (A2b).** Die MIS-Bänder verschieben sich, weil
+`MIS_INTERVALS` auf LR04 steht und das Leitschema jetzt Railsback ist: 14 → 14,5;
+29 → 35; 57 → 57,3; 71 → 72,7; 130 → 132,2. MIS 3 wandert am stärksten. Für die
+Überarbeitung des Beitrags vermerkt.
 
 Gepflegt wird in `GeoScience-FAIRification-LOD`, unter `ontology/vocab/` neben
 `geo_lod_core.ttl` und `crm_bridging.ttl`. Alle anderen Repos zeigen darauf,
@@ -482,6 +559,11 @@ für den Kern anführt.
   Plotting.
 
 **Nicht in diesem Chat:** Tephra-Vokabular befüllen, Instanzdaten.
+
+**Offen geblieben:** Content Negotiation unter `http://w3id.org/geo-lod/` ist
+weiterhin nicht eingerichtet. Das blockiert das Vokabular nicht, aber solange
+sie fehlt, bleibt die Aussage unbelegt, dass andere Repos darauf zeigen statt
+zu kopieren. Gehört zu S4.
 
 ---
 
@@ -814,8 +896,16 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   Zeilenverlust oder bewusster Join (S3c).
 - Abbildung alt → neu für die migrierten CI- und `Cave_site`-IRIs, zusammen mit
   der Content-Negotiation (S4).
-- Beleg für die Warm/Kalt-Einstufung suchen und den hartcodierten Bestand in
-  `MIS_INTERVALS` dagegen abgleichen (S1).
+- ~~Beleg für die Warm/Kalt-Einstufung suchen und den hartcodierten Bestand in
+  `MIS_INTERVALS` dagegen abgleichen (S1).~~ Erledigt 2026-08-08: Parität mit
+  Railsback et al. 2015 als Beleg, eine Abweichung (MIS 3).
+- `MIS_INTERVALS` in `SISAL/plot_sisal_from_csv.py` durch `dist/mis_stages.csv`
+  ersetzen — die letzte hartcodierte MIS-Stelle (S3c).
+- Die übrigen Rohdaten nach `data/raw/` nachziehen: `src/EPICA_Dome_C_*.csv`
+  und die `.tab` in S2, die SISAL-CSVs in S3c, `CI/cifindspots_part_full.csv`
+  in S4. `src/` behält dann nur noch Code.
+- `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
+  `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
 - Aus den bestehenden Pipeline-Todos: doppeltes Schreiben von
   `geo_lod_core.ttl` in den Unterskripten entfernen; `cisite_59` auf fehlenden
   Pleiades-/Wikidata-Link prüfen. Die DOIs an den `DataSource`-Instanzen

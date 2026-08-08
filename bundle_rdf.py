@@ -194,7 +194,9 @@ def build_bundle(
     """Merge alle TTLs in einen Graph, schreibe nach output_path."""
     print("\n  ▶ Sammle TTL-Quellen ...")
 
-    ontology_files = _collect_ttl_files([ontology_dir])
+    # ontology/*.ttl plus die kontrollierten Vokabulare in ontology/vocab/.
+    # ontology/shapes/ bleibt draussen - Shapes gehören nicht in den Datengraph.
+    ontology_files = _collect_ttl_files([ontology_dir, ontology_dir / "vocab"])
     instance_files = _collect_ttl_files(rdf_dirs)
 
     print(f"    Ontologie-Dateien: {len(ontology_files)}")

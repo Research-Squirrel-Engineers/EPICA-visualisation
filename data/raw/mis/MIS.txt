@@ -1,0 +1,11 @@
+ MIS Stufengrenzen 5/6 und 6/7 nach Lisiecki & Raymo (2005)
+
+https://lorraine-lisiecki.com/stack.html
+https://lorraine-lisiecki.com/LR04_MISboundaries.txt
+Lisiecki, L. E., and M. E. Raymo (2005), A Pliocene-Pleistocene stack of 57 globally distributed benthic d18O records, Paleoceanography, 20, PA1003, doi:10.1029/2004PA001071.
+https://lorraine-lisiecki.com/LisieckiRaymo2005.pdf 
+ 
+MIS jetzt NUR nach Railsback et al. (2015)
+ 
+https://doi.org/10.1016/j.quascirev.2015.01.012
+http://railsback.org/11111misc/Railsbacketal2015MISSubstagesFig3-TableVersion01-CSV  
