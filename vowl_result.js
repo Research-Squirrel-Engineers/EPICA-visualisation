@@ -2876,7 +2876,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2002/07/owl#versionInfo",
       "language": "undefined",
-      "value": "sha256:24fb30252415",
+      "value": "sha256:bf282f412066",
       "type": "label"
      }
     ],
@@ -2905,7 +2905,7 @@ var vowlresult={
      {
       "identifier": "http://purl.org/dc/terms/identifier",
       "language": "undefined",
-      "value": "sha256:6e5a5a41a1c6111ab61eef308e73ce3da116bac5820e02aca56407b41357268d",
+      "value": "sha256:cf8cf7a57432fd3c4c02c687e20ddf40b3db769b38b49afcc69c42269d56a673",
       "type": "label"
      }
     ]
@@ -12567,7 +12567,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2002/07/owl#versionInfo",
       "language": "undefined",
-      "value": "sha256:24fb30252415",
+      "value": "sha256:bf282f412066",
       "type": "label"
      }
     ],

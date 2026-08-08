@@ -8,7 +8,7 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "CI findspot RDF generation"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    owl:versionInfo "sha256:24fb30252415" ;
+    owl:versionInfo "sha256:bf282f412066" ;
     prov:used <http://w3id.org/geo-lod/ci/ci_findspots_generation_input_ci_pipeline_py>,
         <http://w3id.org/geo-lod/ci/ci_findspots_generation_input_cifindspots_part_full_csv> ;
     prov:wasAssociatedWith <https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo>,

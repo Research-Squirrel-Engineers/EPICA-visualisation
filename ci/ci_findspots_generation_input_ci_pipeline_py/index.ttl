@@ -7,6 +7,6 @@
         prov:Entity,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "ci_pipeline.py" ;
-    dcterms:identifier "sha256:6e5a5a41a1c6111ab61eef308e73ce3da116bac5820e02aca56407b41357268d" ;
+    dcterms:identifier "sha256:cf8cf7a57432fd3c4c02c687e20ddf40b3db769b38b49afcc69c42269d56a673" ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> .
 

@@ -1518,6 +1518,6 @@ ns1:EPICA_DomeC_Dataset a dcat:Dataset,
         ns1:Obs_d18O_0761,
         ns1:Obs_d18O_0762,
         ns1:Obs_d18O_0763 ;
-    owl:versionInfo "sha256:7d6a0c9b05c3" ;
+    owl:versionInfo "sha256:db2e1427ad9b" ;
     prov:wasGeneratedBy ns1:EPICA_DomeC_Generation .
 
