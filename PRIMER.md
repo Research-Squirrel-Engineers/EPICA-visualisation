@@ -3,8 +3,7 @@
 Arbeitsplan für die Erweiterung von `GeoScience-FAIRification-LOD` um zusätzliche
 EPICA- und SISAL-Daten, die Angleichung an das WD1-Modell und den ELSA-Strang.
 
-**Ort.** Dieses Dokument lebt als `PRIMER.md` im Wurzelverzeichnis von
-`Research-Squirrel-Engineers/GeoScience-FAIRification-LOD`.
+**Ort.** <https://github.com/Research-Squirrel-Engineers/GeoScience-FAIRification-LOD/blob/main/PRIMER.md>
 
 **So wird es benutzt.** Es wird in jedem Chat vollständig hochgeladen. Danach
 genügt ein Satz: „Wir machen S3a." Teil A gilt immer, Teil B ist die Übersicht,
@@ -76,6 +75,8 @@ geo-lod nicht braucht, und erben aus geo-lod ausschliesslich die Ontologie.
   ausgeben, keine zufälligen Blank-Node-IDs.
 - Ein Thema pro Chat, ein Repo pro Chat.
 - Sprache: Konversation deutsch, Code/Ontologie/Dokumentation englisch.
+  Ausnahme: dieses `PRIMER.md` bleibt deutsch — es ist ein internes
+  Arbeitsdokument, das offen liegt, aber nicht nach aussen adressiert ist.
 
 ## A4. Beschlusslage
 
@@ -87,10 +88,12 @@ lesen hier ab, statt neu zu diskutieren.
 | Kanonische Altersskala | offen | |
 | Natives Alter zusätzlich speichern? | offen | |
 | `crmarchaeo:`-Namensraum | offen | |
-| MIS-Grenzen: zwei konkurrierende Zuweisungen | offen | |
+| MIS: Grenzen, Warm/Kalt-Einstufung, wer sie zugewiesen bekommt | offen | |
 | IRI-Muster Instanzdaten | offen | |
 | Auslieferung `sisalv3_csv.zip` vs. Download | offen | |
 | SISAL-Site-Auswahl für RDF | offen | |
+| Waisen bei FK-Aktivierung: abweisen oder laden | offen | |
+| PRIMER.md-Sprache | deutsch — internes Arbeitsdokument | 2026-08 |
 
 ---
 
@@ -135,6 +138,9 @@ ausschliesslich in Code:
   Plotting addiert 50
 - `data.yaml` deklariert `age_scale` nur als Freitext (`"EDC2 gas age"`,
   `"AICC2023"`, `"EDC3"`)
+- `geo-lod/SISAL/plot_sisal_from_csv.py`: `MIS_INTERVALS`, hartcodiert in ka BP
+  nach LR04, mit einer Warm/Kalt/Interstadial-Einstufung, die in keiner der
+  MIS-CSVs steht
 
 Damit ist die Chronologie-Information nicht FAIR: weder maschinenlesbar noch mit
 dem Rohdatum verknüpft. Zu entscheiden:
@@ -208,6 +214,11 @@ für den Kern anführt.
   vermeiden soll, kommt hintenrum zurück.
 - `…/vocab/tephra/` wird nur reserviert, nicht befüllt. Es ist der Join zwischen
   WD1, ELSA und dem CI-Strang und gehört in S5.
+- **Wer konsumiert das Vokabular?** Ohne eine MIS-Zuweisung an Beobachtungen in
+  S2 oder S3c bliebe das Schema unbenutzt. Die dritte hartcodierte Stelle,
+  `MIS_INTERVALS` in `SISAL/plot_sisal_from_csv.py`, trägt zusätzlich eine
+  Warm/Kalt-Einstufung — die gehört als Eigenschaft ins Schema, nicht ins
+  Plotting.
 
 **Nicht in diesem Chat:** Tephra-Vokabular befüllen, Instanzdaten.
 
@@ -375,36 +386,44 @@ Entscheidung, ob solche Zeilen abgewiesen oder protokolliert und geladen werden.
 `sisalv3_csv.zip` (36 MB) mitliefern und beim Build entpacken, oder von ORA
 ziehen. Damit erledigt sich auch die Frage nach dem alten 43-MB-Dump.
 
-**Aufräumen, was historisch gewachsen ist:**
+**Anpassungen am Repo.** Das Repo war bisher auf die drei WD1-Sites und sechs
+Tabellen zugeschnitten. Mit dem vollständigen Restore ändert sich der Zweck, und
+diese Punkte ziehen mit:
 
-- **`postgres/sisal-v3.sql` (43 MB)** — ein `pg_dump` der bereits geladenen
-  Datenbank, mit exakt denselben sechs Tabellen, die `build_database.py` baut.
-  Dieselben Daten zweimal im Repo; ausserdem Ergebnis statt Quelle, und fragil
-  (mit `pg_dump` 18.0 aus Postgres 13.9 gezogen, mit `\restrict`-Token). Weg —
-  der Build *ist* der Restore-Pfad. Als Abkürzung allenfalls Release-Asset oder
-  Zenodo; 43 MB in der Git-Historie sind dauerhaft.
-- **`postgres/datamodel.gml` / `datamodel.jpg`** — DbVis-Export des
-  Sechs-Tabellen-Ausschnitts, nicht des v3-Modells. Nach dem Restore sofort
-  falsch. Durch das offizielle ER-Diagramm ersetzen; JPEG ist für ein Diagramm
-  ohnehin das falsche Format.
-- **Namensstand `sisal-v2`** — die Datenbank heisst durchgehend so, obwohl sie
-  v3-Daten hält: in `config.ini`, `config.example.ini`, im README-Diagramm, im
-  `main.py`-Docstring und in der Phasenbeschreibung.
-- **Repo-Umbenennung nicht nachgezogen** — `main.py` spricht von der
-  „wdttest-sisal-db-v3 pipeline", der Strukturblock im README ebenso,
-  `CITATION.cff` trägt den alten Titel und
-  `repository-code: …/ORGANISATION/wdttest-sisal-db-v3`. Dazu zwei
-  Platzhalter-ORCIDs und ein Platzhalter-Releasedatum.
-- **`data/derived/`** — die drei WD1-Site-Exporte. In einem Repo, das beide
-  Familien bedient, ist die feste Dreier-Auswahl der Altbestand. Site-Liste zum
-  Parameter machen, nicht zur Konstante; `.gitignore` sieht den Fall schon vor.
-- **WD1-Konstanten in der Build-Phase** — `EXPECTED_SITES` und `FIGURE_WINDOW`
-  sind Plotting-Belange in der Datenbankschicht; der Kommentar zu
-  `FIGURE_WINDOW` sagt selbst, dass das Fenster ins Plot-Repo gehört.
-- **`py/__pycache__/`** — steht in `.gitignore`; falls dennoch getrackt,
+- **`postgres/sisal-v3.sql` (43 MB) entfällt.** Es ist ein `pg_dump` der
+  geladenen Datenbank mit denselben sechs Tabellen, die `build_database.py`
+  ohnehin aus den CSVs baut — dieselben Daten also zweimal, einmal als Quelle
+  plus Code, einmal als Ergebnis. Nach dem Umbau ist der Build der Restore-Pfad,
+  damit hat der Dump keine Rolle mehr. Er ist ausserdem an eine
+  Werkzeugversion gebunden (mit `pg_dump` 18.0 aus Postgres 13.9 gezogen, mit
+  `\restrict`-Token). Falls eine Abkürzung ohne vollen Ladelauf gewünscht ist,
+  gehört sie als Release-Asset oder nach Zenodo — 43 MB in der Git-Historie
+  bleiben dauerhaft darin.
+- **`postgres/datamodel.gml` / `datamodel.jpg` ersetzen.** Der DbVis-Export
+  zeigt den Sechs-Tabellen-Ausschnitt; nach dem Restore beschreibt er nicht mehr
+  das, was in der Datenbank steht. Das offizielle ER-Diagramm aus der
+  ESSD-Veröffentlichung deckt das vollständige Modell ab. Für ein Diagramm ist
+  ausserdem ein Vektorformat oder PNG besser geeignet als JPEG.
+- **Datenbankname auf v3 ziehen.** Die Datenbank heisst an allen Stellen
+  `sisal-v2`, hält aber v3-Daten: `config.ini`, `config.example.ini`,
+  README-Diagramm, `main.py`-Docstring, Phasenbeschreibung. Solange nur ein
+  Ausschnitt geladen war, fiel das nicht ins Gewicht; mit dem vollen Restore ist
+  eine eindeutige Benennung wichtiger.
+- **Repo-Umbenennung nachziehen.** `main.py`, der Strukturblock im README und
+  `CITATION.cff` tragen noch `wdttest-sisal-db-v3`; `repository-code` zeigt auf
+  einen Platzhalter. Der richtige Wert steht jetzt fest. Die verbleibenden
+  `TODO`-Marker in der `.cff` (ORCIDs, Releasedatum) werden bei der Gelegenheit
+  mit erledigt.
+- **Site-Auswahl parametrisieren.** `data/derived/` und `EXPECTED_SITES`
+  kodieren die drei WD1-Sites fest, `FIGURE_WINDOW` das Altersfenster der
+  Abbildungen — der Kommentar dort merkt selbst an, dass das Fenster ins
+  Plot-Repo gehört. Für ein Repo, das beide Familien bedient, werden daraus
+  Parameter. Die `.gitignore` sieht den Fall bereits vor.
+- **`py/__pycache__/`** steht in `.gitignore`; falls dennoch getrackt,
   `git rm -r --cached`.
-- **`config.ini`** ist korrekt git-ignoriert, enthält aber ein ausgefülltes
-  `password = postgres` — genau das, wovor `config.example.ini` warnt.
+- **`config.ini`** ist korrekt git-ignoriert, hat aber das Passwortfeld
+  ausgefüllt — genau das, wovor `config.example.ini` warnt. Auf Umgebungs-
+  variable oder `pgpass` umstellen.
 
 **Nicht in diesem Chat:** RDF, geo-lod anfassen.
 
@@ -486,6 +505,8 @@ kollidiert. Bekannte Punkte:
   ebenso `geolod:Cave_site_0275` — ein Ort ist keine stratigraphische
   Volumeneinheit. Er *enthält* welche. Umbauen.
 - SHACL zusammenführen: `strat`-Shapes und `core_shapes.ttl` in einen Gate.
+- Der CI-Strang gehört mit in diesen Schritt, nicht nur EPICA und SISAL. Der
+  A2-Umbau betrifft seine Instanzdaten unmittelbar.
 
 ---
 
@@ -507,7 +528,9 @@ werden muss. Muss doch gepatcht werden, zeigt die Stelle, was in S4 offen blieb.
 - Ausnahme: die ELSA-20/23-Chronologie kommt mit — sie macht die Tiefen
   überhaupt erst mit EPICA und SISAL vergleichbar.
 - `…/vocab/tephra/` wird befüllt und ist der eigentliche Join: WD1, ELSA und der
-  CI-Strang zeigen auf dieselben Marker-Concepts.
+  CI-Strang zeigen auf dieselben Marker-Concepts. Der Campanian Ignimbrite ist
+  selbst eine Marker-Tephra — die bestehenden CI-Tripel müssen hier auf das
+  gemeinsame Concept umgehängt werden.
 - Maare: Seen mit Geometrie aus OSM (`prov:wasDerivedFrom`, kein `owl:sameAs`
   auf einen Way), `owl:sameAs` nach Wikidata; Trockenmaare über
   `fuzzysl:Georeferencing` mit Sicherheit. Kern-IDs und Marker in der fuzzy-sl
