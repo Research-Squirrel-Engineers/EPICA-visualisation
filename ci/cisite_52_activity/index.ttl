@@ -1,19 +1,19 @@
-@prefix ns1: <http://w3id.org/geo-lod/> .
-@prefix ns2: <http://fuzzy-sl.squirrel.link/ontology/> .
+@prefix ns1: <http://fuzzy-sl.squirrel.link/ontology/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/geo-lod/ci/cisite_52_activity> a ns2:Georeferencing,
+<http://w3id.org/geo-lod/ci/cisite_52_activity> a ns1:Georeferencing,
         <http://www.w3.org/ns/ldp#Resource>,
         prov:Activity,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
-    ns2:activityDesc "set a representative point based on scientific papers using Google Maps"@en ;
-    ns2:hasSource ns2:PaperDesc ;
-    ns2:hasSourceType ns2:Paper ;
-    void:inDataset ns1:geo-lod ;
-    ns1:hasCertaintyLevel ns2:medium ;
-    ns1:hasLiteratureReference "Fitzsimmons et al., 2014",
+    ns1:activityDesc "set a representative point based on scientific papers using Google Maps"@en ;
+    ns1:hasSource ns1:PaperDesc ;
+    ns1:hasSourceType ns1:Paper ;
+    void:inDataset ns2:geo-lod ;
+    ns2:hasCertaintyLevel ns1:medium ;
+    ns2:hasLiteratureReference "Fitzsimmons et al., 2014",
         "Fitzsimmons et al.,, 2013",
         "Obreht et al., 2017",
         "Pötter et al., 2021" ;
