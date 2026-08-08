@@ -117,19 +117,20 @@ This executes:
 
 ### Bundle output formats
 
-The bundle is written as N-Triples by default — fastest to serialise, which
-matters on development runs. Turtle and the other formats are produced on
-demand:
+Turtle is the default: compact, readable, and byte-stable across runs. Other
+formats are produced on demand:
 
 ```bash
-python main.py --bundle-format turtle        # single format
+python main.py --bundle-format nt            # fastest, for tight iteration
 python main.py --bundle-format release       # nt, turtle, jsonld, xml
 ```
 
-Formats older than the current run are reported as stale rather than left to
-look current. `dist/geo-lod-bundle.nt` is git-ignored: it is a development
-artefact and, unlike Turtle, not byte-stable, because rdflib assigns fresh
-blank-node labels on every parse.
+Serialising Turtle costs about 13 seconds more per run than N-Triples, which
+is a fair price for a versioned bundle that always matches the code. Formats
+not rewritten in a run are listed at the end, so a stale JSON-LD is noticed
+before publication rather than after. `dist/geo-lod-bundle.nt` is git-ignored:
+unlike Turtle it is not byte-stable, because rdflib assigns fresh blank-node
+labels on every parse and N-Triples writes them out verbatim.
 
 ### Clean outputs before running
 

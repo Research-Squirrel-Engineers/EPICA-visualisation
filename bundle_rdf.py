@@ -165,9 +165,11 @@ def _parse_with_repair(graph: Graph, path: Path) -> tuple[int, int, bool]:
 #   longturtle  6.4s   10.6 MB
 #   json-ld     8.9s   28.7 MB
 #
-# Für den Entwicklungslauf zählt Zeit, für ein Release Lesbarkeit und
-# Verbreitung. Deshalb ist N-Triples die Voreinstellung und Turtle & Co.
-# kommen per --bundle-format dazu.
+# Voreinstellung ist Turtle. N-Triples wäre schneller, spart aber gemessen nur
+# rund 13 der 187 Sekunden eines vollen Laufs - zu wenig, um dafür in Kauf zu
+# nehmen, dass die versionierte .ttl hinter dem Code herhinkt und man an ein
+# Flag denken muss. Wer eng iteriert, nimmt --bundle-format nt; für eine
+# Veröffentlichung schreibt --bundle-format release alle Formate.
 
 BUNDLE_FORMATS: dict[str, tuple[str, str, str]] = {
     # Schlüssel: (rdflib-Format, Dateiendung, Beschreibung)
@@ -183,7 +185,7 @@ BUNDLE_FORMATS: dict[str, tuple[str, str, str]] = {
     "jsonld": ("json-ld", ".jsonld", "JSON-LD - für Web-Clients"),
 }
 
-DEFAULT_BUNDLE_FORMATS: tuple[str, ...] = ("nt",)
+DEFAULT_BUNDLE_FORMATS: tuple[str, ...] = ("turtle",)
 RELEASE_BUNDLE_FORMATS: tuple[str, ...] = ("nt", "turtle", "jsonld", "xml")
 
 # Aggregatdateien: Vereinigungen von Dateien, die einzeln ohnehin geladen
@@ -343,10 +345,10 @@ def build_bundle(
         if f.name not in written
     )
     if stale:
-        print("\n  ⚠  Nicht neu geschrieben und damit veraltet:")
+        print("\n  ℹ  Aus früheren Läufen, in diesem Lauf nicht neu geschrieben:")
         for name in stale:
             print(f"      • {name}")
-        print("     Für ein Release: python main.py --bundle-format release")
+        print("     Vor einer Veröffentlichung: python main.py --bundle-format release")
 
     return g
 
