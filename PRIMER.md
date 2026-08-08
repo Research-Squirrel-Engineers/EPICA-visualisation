@@ -58,6 +58,24 @@ geo-lod nicht braucht, und erben aus geo-lod ausschliesslich die Ontologie.
 - ELSA kommt zuletzt und dient als Abnahmetest: fügt es sich ein, ohne dass an
   `geolod:` oder `strat:` nachgepatcht werden muss, war die Angleichung richtig.
 
+## A2b. Verhältnis zum ECEASST-Beitrag
+
+Der Proceedings-Beitrag ist im Review. Eine überarbeitete Fassung ist danach
+möglich und wahrscheinlich nötig. Damit gilt:
+
+- Der Beitrag ist **kein eingefrorener Stand**, an dem sich die Arbeit hier
+  ausrichten muss. Ergebnisse aus S0 bis S5 können und sollen in die
+  Überarbeitung einfliessen.
+- Das betrifft nicht nur die RDF-Daten, sondern auch die Abbildungen. Wo ein
+  Schritt hier eine Abbildung inhaltlich verändert — andere Altersachse,
+  korrigierte SISAL-Werte, zusätzliche Proxies — wird das für die Überarbeitung
+  vermerkt, statt die alte Abbildung zu konservieren.
+- Der IRI-Umzug aus S0.4 ist damit deutlich entspannter: die im Beitrag
+  genannten IRIs lassen sich in der überarbeiteten Fassung mitziehen. Die
+  Abbildung alt → neu bleibt trotzdem nötig, weil der Preprint zitierbar ist.
+- Umgekehrt gilt weiter A3: der Beitrag ist kein Grund, hier Umwege zu gehen.
+  Erst wird die Sache richtig modelliert, dann wird der Text nachgeführt.
+
 ## A3. Querschnittsregeln
 
 - **`metadata/ontology.ttl` und `metadata/shapes.ttl` sind tabu.** Das ist die
@@ -74,6 +92,10 @@ geo-lod nicht braucht, und erben aus geo-lod ausschliesslich die Ontologie.
 - **Zweimal laufen lassen, `git status` muss sauber bleiben.** Tripel sortiert
   ausgeben, keine zufälligen Blank-Node-IDs.
 - Ein Thema pro Chat, ein Repo pro Chat.
+- **Offene Entscheidungen werden als interaktives Formular gestellt**, nicht als
+  Aufzählung im Fliesstext. Ein Klickpfad ist schneller zu beantworten als eine
+  Liste, und die Antwort kommt in einer Form zurück, die sich direkt nach A4
+  übertragen lässt.
 - Sprache: Konversation deutsch, Code/Ontologie/Dokumentation englisch.
   Ausnahme: dieses `PRIMER.md` bleibt deutsch — es ist ein internes
   Arbeitsdokument, das offen liegt, aber nicht nach aussen adressiert ist.
@@ -120,15 +142,58 @@ lesen hier ab, statt neu zu diskutieren.
 
 | Frage | Beschluss | seit |
 |---|---|---|
-| Kanonische Altersskala | offen | |
-| Natives Alter zusätzlich speichern? | offen | |
-| `crmarchaeo:`-Namensraum | offen | |
-| MIS: Grenzen, Warm/Kalt-Einstufung, wer sie zugewiesen bekommt | offen | |
-| IRI-Muster Instanzdaten | offen | |
-| Auslieferung `sisalv3_csv.zip` vs. Download | offen | |
-| SISAL-Site-Auswahl für RDF | offen | |
-| Waisen bei FK-Aktivierung: abweisen oder laden | offen | |
+| Kanonische Altersskala | ka BP | 2026-08 |
+| Natives Alter zusätzlich speichern? | nein — ein Alterswert je Beobachtung, in ka BP. Die Chronologie bleibt als eigener Knoten erhalten | 2026-08 |
+| `crmarchaeo:`-Namensraum | `http://www.cidoc-crm.org/extensions/crmarchaeo/`; `crm_bridge.ttl` und `ontology/README.md` ziehen nach | 2026-08 |
+| MIS: Grenzen, Warm/Kalt-Einstufung, wer sie zugewiesen bekommt | Grenzen als konkurrierende E13 je Quelle; Zuweisung an Beobachtungen materialisiert, ebenfalls je Quelle als E13; Warm/Kalt als Property im Schema, mit Literaturbeleg | 2026-08 |
+| IRI-Muster Instanzdaten | ein Zweig je Strang: `…/epica/`, `…/sisal/`, `…/ci/`, `…/elsa/`; Klassen bleiben flach unter `…/geo-lod/` | 2026-08 |
+| Bestand auf das neue IRI-Muster ziehen? | ja, einmalig breaking — CI-Strang und die 305 `Cave_site_NNNN` wandern mit | 2026-08 |
+| Achsenbeschriftung in Darstellungen | immer `Age [ka]`, ohne Zusatz BP oder b2k — in allen Abbildungen, auch den bereits publizierten | 2026-08 |
+| Alter direkt in `[ka]` abfragbar | ja — `time:TimePosition` mit `time:numericPosition` und `time:hasTRS`, keine Umrechnung in der Query | 2026-08 |
+| TRS-IRI für `ka BP` | eigene TRS je Chronologie unter `…/trs/`; keine passende externe vorhanden (Recherche 2026-08) | 2026-08 |
+| Verhältnis `geolod:ageKaBP` zu `time:TimePosition` | beides parallel, kein Deprecation | 2026-08 |
+| Auslieferung `sisalv3_csv.zip` vs. Download | in S3b entscheiden — keine Rückwirkung auf IRIs | 2026-08 |
+| SISAL-Site-Auswahl für RDF | in S3 entscheiden, wenn die vollständige Datenbank vorliegt | 2026-08 |
+| Waisen bei FK-Aktivierung: abweisen oder laden | in S3b entscheiden — zeigt sich erst beim Ladelauf | 2026-08 |
 | PRIMER.md-Sprache | deutsch — internes Arbeitsdokument | 2026-08 |
+
+## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
+
+Was unter welchem Pfad liegt, und was davon bei w3id als Redirect eingetragen
+werden muss. `http://` ist durchgängig korrekt, nicht `https://`.
+
+**Status:** `aktiv` = wird bereits ausgeliefert oder ist vergeben;
+`beschlossen` = in A4 festgelegt, noch nicht angelegt; `geplant` = Vorschlag,
+noch nicht entschieden.
+
+| Pfad | Inhalt | Ziel des Redirects | Status |
+|---|---|---|---|
+| `/geo-lod/` | Kernontologie: Klassen und Properties, flach | `geo_lod_core.ttl` | aktiv |
+| `/geo-lod/strat/` | `strat:` — Semantic Layer der WD1-Familie | `strat.ttl` in `wdttest-tables` | aktiv |
+| `/geo-lod/vocab/mis/` | MIS-Stadien und -Substadien, Grenzen als E13 | `ontology/vocab/mis.ttl` | beschlossen (S1) |
+| `/geo-lod/vocab/tephra/` | Marker-Tephren, Join zwischen WD1, ELSA und CI | `ontology/vocab/tephra.ttl` | reserviert (S5) |
+| `/geo-lod/epica/` | Instanzdaten Eiskern | `EPICA/rdf/` | beschlossen (S2) |
+| `/geo-lod/sisal/` | Instanzdaten Speläotheme, inkl. der 305 Cave-Sites | `SISAL/rdf/` | beschlossen (S3c) |
+| `/geo-lod/ci/` | Instanzdaten Campanian-Ignimbrite-Fundstellen | `CI/rdf/` | beschlossen (S4-Umzug) |
+| `/geo-lod/elsa/` | Instanzdaten Maarsedimente | noch nicht vorhanden | beschlossen (S5) |
+| `/geo-lod/shapes/` | SHACL-Gate, `core_shapes.ttl` plus `strat`-Shapes | `ontology/shapes/` | geplant (S4) |
+| `/geo-lod/trs/` | Temporal Reference Systems, eine je Chronologie: `EDC1`, `EDC2`, `EDC3`, `AICC2023-gas`, `AICC2023-ice`, später SISAL und ELSA | `ontology/trs.ttl` | beschlossen (S2) |
+
+**Was hier bewusst nicht steht.** `metadata/ontology.ttl` und
+`metadata/shapes.ttl` der WD1-Familie liegen unter `wdt:`, nicht unter
+`geo-lod`. Sie sind nach A3 tabu und bekommen hier keinen Pfad.
+
+**Zu klären beim Eintragen:**
+
+- Content Negotiation ist Voraussetzung für S1: solange `/geo-lod/` kein TTL
+  ausliefert, zeigt der `owl:imports` in `crm_bridge.ttl` ins Leere und jeder
+  Konsument hält doch eine lokale Kopie.
+- Der Namensraum von `an:` aus `wdttest-tables` ist noch nicht geprüft. In S4
+  nachsehen: liegt er unter `/geo-lod/`, gehört er in diese Tabelle, sonst wird
+  er hier als externer Namensraum vermerkt.
+- Ein Redirect auf GitHub Pages liefert nur genau eine Repräsentation aus. Für
+  echte Content Negotiation braucht es entweder w3id-seitige `Accept`-Regeln
+  oder je Pfad einen `.ttl`- und einen `.html`-Eintrag.
 
 ---
 
@@ -136,7 +201,7 @@ lesen hier ab, statt neu zu diskutieren.
 
 | ID | Schritt | Repo | hängt ab von | Status |
 |---|---|---|---|---|
-| S0 | Festlegungen, kein Code | — | — | offen |
+| S0 | Festlegungen, kein Code | — | — | erledigt 2026-08 |
 | S1 | Gemeinsame Vokabulare | geo-lod | S0 | offen |
 | S2 | EPICA nach RDF | geo-lod | S0, S1 | offen |
 | S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | offen |
@@ -171,7 +236,7 @@ Der wichtigste Befund. Die Umrechnung auf eine gemeinsame Achse steckt derzeit
 ausschliesslich in Code:
 
 - `wdttest-epica/py/main.py`, `AGE_TRANSFORMS`: `ch4`, `d18o`, `do2n2` →
-  `age × 1000 + 50`; `dust` → `age × 1000 − 8`; `dd` → unverändert (bereits b2k)
+  `age × 1000 + 50`; `dust` → `age × 1000 − 8`; `dd` → unverändert
 - `sisal-db-v3/py/export_sites.py`: Alter werden als BP exportiert, das
   Plotting addiert 50
 - `data.yaml` deklariert `age_scale` nur als Freitext (`"EDC2 gas age"`,
@@ -181,7 +246,35 @@ ausschliesslich in Code:
   MIS-CSVs steht
 
 Damit ist die Chronologie-Information nicht FAIR: weder maschinenlesbar noch mit
-dem Rohdatum verknüpft. Zu entscheiden:
+dem Rohdatum verknüpft.
+
+**Befund aus den PANGAEA-Kopfzeilen** (geprüft 2026-08):
+
+| id | Alterspalte(n) im `.tab` | Einheit | Skala laut Header |
+|---|---|---|---|
+| ch4 | Gas age (EDC1) **und** Gas age (EDC2) | ka BP | EDC1 + EDC2 |
+| d18o | **Gas** age | ka BP | AICC2023 |
+| do2n2 | **Ice** age | ka BP | AICC2023 |
+| dd | AGE (GEOCODE), dazu Age min/max | ka BP | EDC2 („years before 1950") |
+| dust | Age model | ka (ohne BP) | EDC3 |
+
+- Keiner der fünf Datensätze liefert b2k; alle sind BP. Die Annahme, `dd` sei
+  bereits b2k, ist falsch — `dd` ist ka BP auf EDC2, wie `ch4`. Die fehlende
+  Umrechnung in `AGE_TRANSFORMS` ist ein Fehler, kein Sonderfall.
+- Der Offset `−8` bei `dust` ist durch den Header nicht gedeckt und verschiebt
+  den Datensatz um 58 Jahre gegen die übrigen vier.
+- `ch4` liefert zwei Altersspalten; die Wahl EDC2 existiert derzeit nur als
+  Spaltenindex im Code. Die EDC1-Spalte fällt still weg.
+- `d18o` trägt Gasalter, `do2n2` Eisalter — beide „AICC2023", aber nicht
+  dieselbe Achse. Ein einzelner Chronologie-Knoten „AICC2023" würde die
+  Δage-Differenz wegmodellieren.
+- Die Bouchet-Datensätze nennen −75.102/123.395, die übrigen −75.100/123.350:
+  zwei Bohrpunkte rund 200 m auseinander unter einem `geolod:DrillingSite`.
+- Die Header tragen deutlich mehr Provenienz als `data.yaml`: ORCID der PI,
+  `METHOD/DEVICE`, Lizenz-URI, Event und Kampagne, Förderung. Das bestätigt die
+  Festlegung in S2, die `.tab` als Quelle zu nehmen.
+
+Zu entscheiden:
 
 - Welcher Wert wird als Alter gespeichert — das native (mit deklarierter Skala),
   das umgerechnete, oder beide?
@@ -191,6 +284,85 @@ dem Rohdatum verknüpft. Zu entscheiden:
 - `data.yaml` bekommt pro Eintrag einen expliziten Offset/Faktor; die Lambdas
   lesen ihn von dort. Damit landet die Umrechnung im TTL statt im Code.
 
+**Beschluss (2026-08).** Kanonisch ist **ka BP**. Jede Beobachtung trägt genau
+einen Alterswert; ein zusätzliches natives Literal entfällt. Das ist deshalb
+tragbar, weil alle fünf EPICA-Datensätze bereits ka BP liefern — für EPICA
+findet gar keine Umrechnung mehr statt, und `AGE_TRANSFORMS` entfällt
+vollständig. Betroffen sind nur die anderen Stränge: SISAL rechnet Jahre BP
+durch 1000, ELSA-23 rechnet b2k über `(b2k − 50) / 1000`.
+
+Was das **nicht** bedeutet: Die Chronologie verschwindet nicht. Jede Beobachtung
+verweist weiterhin auf ihren `geolod:Chronology`-Knoten (EDC1, EDC2, EDC3,
+AICC2023), und dieser trägt die Umrechnungsregel. Ohne diesen Verweis wären die
+fünf Proxies numerisch vergleichbar, aber sachlich falsch gleichgesetzt.
+
+Folgt daraus für die Modellierung:
+
+- `geolod:ageKaBP` bleibt die Property; `strat:ageB2k` wird in S4 dagegen
+  aufgelöst, nicht umgekehrt.
+- Der Offset `−8` bei `dust` und die `+50` bei den übrigen entfallen ersatzlos.
+- `d18o` (Gasalter) und `do2n2` (Eisalter) brauchen trotz gemeinsamer Skala
+  AICC2023 zwei unterscheidbare Chronologie-Knoten oder ein Attribut am
+  Alterswert. Sonst geht die Δage-Differenz verloren.
+- Für `ch4` liegen zwei Alterswerte in ka BP vor, EDC1 und EDC2. Beide bleiben
+  erhalten, jeweils mit Verweis auf ihre Chronologie — es sind konkurrierende
+  Zuweisungen, kein nativ-gegen-umgerechnet-Fall. Dasselbe Muster wie bei den
+  MIS-Grenzen.
+
+**Darstellungskonvention.** Achsen tragen ausschliesslich `Age [ka]`, ohne den
+Zusatz BP oder b2k — in allen Abbildungen, auch in den bereits für den
+ECEASST-Beitrag erzeugten.
+
+**Abfragbarkeit.** Die Beschriftung darf nicht dazu führen, dass der Bezugspunkt
+nur noch im Fliesstext steht. Umgekehrt soll eine Query den Wert in `[ka]`
+nehmen können, wie er dasteht, ohne Faktor oder Offset. Beides zusammen leistet
+`time:TimePosition` aus OWL-Time:
+
+```turtle
+geolod:obs_… geolod:hasAgePosition [
+    a                     time:TimePosition ;
+    time:numericPosition  "142.7"^^xsd:decimal ;
+    time:hasTRS           <…noch festzulegen…> ;
+    qudt:unit             unit:KiloYR
+] .
+```
+
+`time:numericPosition` trägt die Zahl in ka, `time:hasTRS` den Bezugspunkt. Eine
+SPARQL-Abfrage filtert direkt auf `time:numericPosition`; wer den Datumsbezug
+braucht, liest ihn am TRS ab. Damit ist die Achsenbeschriftung `Age [ka]` keine
+Auslassung mehr, sondern die korrekte Kurzform.
+
+`geolod:ageKaBP` bleibt als einfaches Literal daneben bestehen, damit bestehende
+Queries nicht brechen; das TimePosition-Objekt ist die vollständige Form. Beide
+Formen werden dauerhaft geschrieben, keine wird als `owl:deprecated` markiert.
+
+**TRS: Recherchebefund (2026-08).** OWL-Time definiert `time:TRS` nur als
+Stub-Klasse und legt die Definition ausdrücklich ausserhalb des eigenen Umfangs.
+Festgelegt ist im Standard allein der Gregorianische Kalender über
+`http://www.opengis.net/def/uom/ISO-8601/0/Gregorian`. Für tiefe Zeit nennt das
+Beispiel im Standard `http://www.opengis.net/def/crs/OGC/0/ChronometricGeologicTime`
+— eine Skala in Millionen Jahren, rückwärts positiv.
+
+Sie wird **nicht** übernommen. Ihre Einheit ist Ma, nicht ka; sie zu verwenden
+hiesse, entweder in Ma zu speichern und die Abfrage in `[ka]` wieder zu einem
+Rechenschritt zu machen, oder sie gegen ihre eigene Definition zu benutzen.
+Ausserdem beschreibt sie einen einzigen Deep-Time-Bezug, während hier je
+Chronologie eine TRS gebraucht wird; ein Register auf dieser Granularität
+existiert nicht — EDC2, EDC3 und AICC2023 sind nirgends als TRS publiziert.
+
+**Beschluss.** Eigene TRS-Instanzen unter `http://w3id.org/geo-lod/trs/`, eine
+je Chronologie: `trs/EDC1`, `trs/EDC2`, `trs/EDC3`, `trs/AICC2023`, später die
+SISAL- und ELSA-Chronologien. Jede ist `a time:TRS`, deklariert Ursprung (1950),
+Einheit (ka) und Richtung (rückwärts positiv) und trägt ihre Quelle über
+`dct:source`. `ChronometricGeologicTime` wird per `rdfs:seeAlso` erwähnt, nicht
+per `owl:sameAs` gleichgesetzt — die Einheiten unterscheiden sich.
+
+Damit fällt der Chronologie-Knoten aus S0.1 mit der TRS zusammen: eine
+Chronologie *ist* ein temporales Bezugssystem, kein separates Objekt daneben.
+`geolod:Chronology` wird entsprechend als Unterklasse von `time:TRS` geführt.
+Das löst nebenbei die Gas-/Eisalter-Frage: `AICC2023` liefert zwei Achsen und
+bekommt zwei TRS, `trs/AICC2023-gas` und `trs/AICC2023-ice`.
+
 ### S0.2 CRMarchaeo-Namensraum
 
 Kollision: `wdttest-tables/metadata/ontology/crm_bridge.ttl` verwendet
@@ -199,6 +371,10 @@ Kollision: `wdttest-tables/metadata/ontology/crm_bridge.ttl` verwendet
 und `geolod:CIArchaeologicalSite ⊑ A2` sind derzeit zwei verschiedene Klassen.
 Die geo-lod-Variante ist die richtige; `crm_bridge.ttl` und
 `GeoScience-FAIRification-LOD/ontology/README.md` nachziehen.
+
+**Entschieden (2026-08):** `http://www.cidoc-crm.org/extensions/crmarchaeo/`.
+Der Nachzug in `crm_bridge.ttl` gehört zu S4, der in `ontology/README.md` kann
+sofort erfolgen.
 
 ### S0.3 MIS
 
@@ -215,6 +391,33 @@ Zu prüfen: `mis_stage_boundaries.csv` deklariert für die LR04-Werte
 `timebase = b2k`, `mis_literature.csv` für Railsback `BP`. LR04 wird
 konventionell in BP angegeben — vermutlich ein Übertragungsfehler.
 
+**Geprüft (2026-08):** Beide Originalquellen sind BP —
+`LR04_MISboundaries.csv` führt die Spalte als `Age(ka)` in der LR04-Konvention,
+Railsback Tabelle als `(Yrs BP)`. Die `b2k`-Deklaration für LR04 ist damit ein
+Übertragungsfehler und wird korrigiert. Railsback merkt in der Kopfzeile selbst
+an, dass die Substadien Exkursionen bezeichnen und nicht die Grenzen zwischen
+ihnen — die Grenzwerte der Tabelle sind entsprechend unscharf und sollten nicht
+als exakte Zeitpunkte modelliert werden.
+
+**Beschluss (2026-08).**
+
+- Grenzen bleiben zwei konkurrierende E13 je Quelle, ohne Harmonisierung.
+- Die MIS-Zuweisung an Beobachtungen wird **materialisiert**, ebenfalls als E13
+  je Quelle. Damit wird das Schema tatsächlich konsumiert (S1) und die
+  Zugehörigkeit ist ohne Intervall-Join abfragbar. Preis: bei rund 4 900 EPICA-
+  plus den SISAL-Beobachtungen verdoppelt jede zusätzliche Quelle die
+  Zuweisungstripel. Der Generator muss die Zuweisung deterministisch erzeugen,
+  sonst bricht die Byte-Identität zweier Läufe.
+- Die Warm/Kalt-Einstufung wird eine Property im Schema und braucht einen
+  Literaturbeleg. Die Einstufung in `MIS_INTERVALS` hat derzeit keinen. Als
+  Beleg kommt die Paritätskonvention in Frage — ungerade Stadien warm, gerade
+  kalt — die Railsback et al. 2015 in ihrer climatostratigraphischen Diskussion
+  behandelt. Beim Befüllen ist der hartcodierte Bestand gegen die Konvention
+  abzugleichen; die Abweichungen sind der interessante Teil, insbesondere die
+  Einstufung „Interstadial" bei Substadien.
+- Die Unschärfe der Railsback-Grenzen wird am Schema vermerkt, nicht
+  weggerundet.
+
 ### S0.4 Ort der Instanzdaten
 
 geo-lod legt Klassen und Instanzen flach in denselben Namensraum
@@ -222,6 +425,26 @@ geo-lod legt Klassen und Instanzen flach in denselben Namensraum
 Umzug des Bestands wäre breaking; Vorschlag: Bestand belassen, alles Neue unter
 `http://w3id.org/geo-lod/vocab/…` bzw. `…/elsa/…` und die Trennung ab hier
 durchhalten.
+
+**Beschluss (2026-08).** Drei Ebenen:
+
+| Ebene | Muster |
+|---|---|
+| Klassen und Properties | `http://w3id.org/geo-lod/` — flach, unverändert |
+| Kontrollierte Vokabulare | `http://w3id.org/geo-lod/vocab/<scheme>/` |
+| Instanzdaten | ein Zweig je Strang: `…/epica/`, `…/sisal/`, `…/ci/`, `…/elsa/` |
+
+Der Bestand zieht mit — einmalig breaking, dafür ohne dauerhafte Zweiteilung.
+EPICA und SISAL werden in S2 und S3c ohnehin neu erzeugt und tragen das neue
+Muster von Anfang an. Echter Umzug sind damit nur der CI-Strang und die 305
+`Cave_site_NNNN`.
+
+**Nachzuhalten beim Umzug:** die alten IRIs sind unter w3id bereits publiziert
+und stehen im ECEASST-Beitrag sowie potenziell im N4O-KG. Der Umzug braucht
+deshalb eine Abbildung alt → neu, die mit ausgeliefert wird, statt eines stillen
+Austauschs. Ob das als `owl:sameAs`, `dct:replaces` oder als
+w3id-Weiterleitung gelöst wird, entscheidet S4 zusammen mit der
+Content-Negotiation.
 
 ---
 
@@ -584,9 +807,15 @@ werden muss. Muss doch gepatcht werden, zeigt die Stelle, was in S4 offen blieb.
 
 Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 
-- Zeitbasis-Auszeichnung in `mis_stage_boundaries.csv` prüfen (S0.3).
+- ~~Zeitbasis-Auszeichnung in `mis_stage_boundaries.csv` prüfen (S0.3).~~
+  Erledigt 2026-08: beide Quellen sind BP, die `b2k`-Deklaration ist zu
+  korrigieren.
 - Sanbao: 5832 gegenüber 9535 Samples im Release. Beim Neuaufbau klären, ob
   Zeilenverlust oder bewusster Join (S3c).
+- Abbildung alt → neu für die migrierten CI- und `Cave_site`-IRIs, zusammen mit
+  der Content-Negotiation (S4).
+- Beleg für die Warm/Kalt-Einstufung suchen und den hartcodierten Bestand in
+  `MIS_INTERVALS` dagegen abgleichen (S1).
 - Aus den bestehenden Pipeline-Todos: doppeltes Schreiben von
   `geo_lod_core.ttl` in den Unterskripten entfernen; `cisite_59` auf fehlenden
   Pleiades-/Wikidata-Link prüfen. Die DOIs an den `DataSource`-Instanzen
