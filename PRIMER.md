@@ -142,20 +142,20 @@ lesen hier ab, statt neu zu diskutieren.
 
 | Frage | Beschluss | seit |
 |---|---|---|
-| Kanonische Altersskala | ka BP | 2026-08 |
-| Natives Alter zusätzlich speichern? | nein — ein Alterswert je Beobachtung, in ka BP. Die Chronologie bleibt als eigener Knoten erhalten | 2026-08 |
-| `crmarchaeo:`-Namensraum | `http://www.cidoc-crm.org/extensions/crmarchaeo/`; `crm_bridge.ttl` und `ontology/README.md` ziehen nach | 2026-08 |
-| MIS: Grenzen, Warm/Kalt-Einstufung, wer sie zugewiesen bekommt | Grenzen als konkurrierende E13 je Quelle; Zuweisung an Beobachtungen materialisiert, ebenfalls je Quelle als E13; Warm/Kalt als Property im Schema, mit Literaturbeleg | 2026-08 |
-| IRI-Muster Instanzdaten | ein Zweig je Strang: `…/epica/`, `…/sisal/`, `…/ci/`, `…/elsa/`; Klassen bleiben flach unter `…/geo-lod/` | 2026-08 |
-| Bestand auf das neue IRI-Muster ziehen? | ja, einmalig breaking — CI-Strang und die 305 `Cave_site_NNNN` wandern mit | 2026-08 |
-| Achsenbeschriftung in Darstellungen | immer `Age [ka]`, ohne Zusatz BP oder b2k — in allen Abbildungen, auch den bereits publizierten | 2026-08 |
-| Alter direkt in `[ka]` abfragbar | ja — `time:TimePosition` mit `time:numericPosition` und `time:hasTRS`, keine Umrechnung in der Query | 2026-08 |
-| TRS-IRI für `ka BP` | eigene TRS je Chronologie unter `…/trs/`; keine passende externe vorhanden (Recherche 2026-08) | 2026-08 |
-| Verhältnis `geolod:ageKaBP` zu `time:TimePosition` | beides parallel, kein Deprecation | 2026-08 |
-| Auslieferung `sisalv3_csv.zip` vs. Download | in S3b entscheiden — keine Rückwirkung auf IRIs | 2026-08 |
-| SISAL-Site-Auswahl für RDF | in S3 entscheiden, wenn die vollständige Datenbank vorliegt | 2026-08 |
-| Waisen bei FK-Aktivierung: abweisen oder laden | in S3b entscheiden — zeigt sich erst beim Ladelauf | 2026-08 |
-| PRIMER.md-Sprache | deutsch — internes Arbeitsdokument | 2026-08 |
+| Kanonische Altersskala | ka BP | 2026-08-08 |
+| Natives Alter zusätzlich speichern? | nein — ein Alterswert je Beobachtung, in ka BP. Die Chronologie bleibt als eigener Knoten erhalten | 2026-08-08 |
+| `crmarchaeo:`-Namensraum | `http://www.cidoc-crm.org/extensions/crmarchaeo/`; `crm_bridge.ttl` und `ontology/README.md` ziehen nach | 2026-08-08 |
+| MIS: Grenzen, Warm/Kalt-Einstufung, wer sie zugewiesen bekommt | Grenzen als konkurrierende E13 je Quelle; Zuweisung an Beobachtungen materialisiert, ebenfalls je Quelle als E13; Warm/Kalt als Property im Schema, mit Literaturbeleg | 2026-08-08 |
+| IRI-Muster Instanzdaten | ein Zweig je Strang: `…/epica/`, `…/sisal/`, `…/ci/`, `…/elsa/`; Klassen bleiben flach unter `…/geo-lod/` | 2026-08-08 |
+| Bestand auf das neue IRI-Muster ziehen? | ja, einmalig breaking — CI-Strang und die 305 `Cave_site_NNNN` wandern mit | 2026-08-08 |
+| Achsenbeschriftung in Darstellungen | immer `Age [ka]`, ohne Zusatz BP oder b2k — in allen Abbildungen, auch den bereits publizierten | 2026-08-08 |
+| Alter direkt in `[ka]` abfragbar | ja — `time:TimePosition` mit `time:numericPosition` und `time:hasTRS`, keine Umrechnung in der Query | 2026-08-08 |
+| TRS-IRI für `ka BP` | eigene TRS je Chronologie unter `…/trs/`; keine passende externe vorhanden (Recherche 2026-08-08) | 2026-08-08 |
+| Verhältnis `geolod:ageKaBP` zu `time:TimePosition` | beides parallel, kein Deprecation | 2026-08-08 |
+| Auslieferung `sisalv3_csv.zip` vs. Download | in S3b entscheiden — keine Rückwirkung auf IRIs | 2026-08-08 |
+| SISAL-Site-Auswahl für RDF | in S3 entscheiden, wenn die vollständige Datenbank vorliegt | 2026-08-08 |
+| Waisen bei FK-Aktivierung: abweisen oder laden | in S3b entscheiden — zeigt sich erst beim Ladelauf | 2026-08-08 |
+| PRIMER.md-Sprache | deutsch — internes Arbeitsdokument | 2026-08 (Tag unbekannt) |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -201,7 +201,7 @@ noch nicht entschieden.
 
 | ID | Schritt | Repo | hängt ab von | Status |
 |---|---|---|---|---|
-| S0 | Festlegungen, kein Code | — | — | erledigt 2026-08 |
+| S0 | Festlegungen, kein Code | — | — | erledigt 2026-08-08 |
 | S1 | Gemeinsame Vokabulare | geo-lod | S0 | offen |
 | S2 | EPICA nach RDF | geo-lod | S0, S1 | offen |
 | S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | offen |
@@ -248,7 +248,7 @@ ausschliesslich in Code:
 Damit ist die Chronologie-Information nicht FAIR: weder maschinenlesbar noch mit
 dem Rohdatum verknüpft.
 
-**Befund aus den PANGAEA-Kopfzeilen** (geprüft 2026-08):
+**Befund aus den PANGAEA-Kopfzeilen** (geprüft 2026-08-08):
 
 | id | Alterspalte(n) im `.tab` | Einheit | Skala laut Header |
 |---|---|---|---|
@@ -284,7 +284,7 @@ Zu entscheiden:
 - `data.yaml` bekommt pro Eintrag einen expliziten Offset/Faktor; die Lambdas
   lesen ihn von dort. Damit landet die Umrechnung im TTL statt im Code.
 
-**Beschluss (2026-08).** Kanonisch ist **ka BP**. Jede Beobachtung trägt genau
+**Beschluss (2026-08-08).** Kanonisch ist **ka BP**. Jede Beobachtung trägt genau
 einen Alterswert; ein zusätzliches natives Literal entfällt. Das ist deshalb
 tragbar, weil alle fünf EPICA-Datensätze bereits ka BP liefern — für EPICA
 findet gar keine Umrechnung mehr statt, und `AGE_TRANSFORMS` entfällt
@@ -336,7 +336,7 @@ Auslassung mehr, sondern die korrekte Kurzform.
 Queries nicht brechen; das TimePosition-Objekt ist die vollständige Form. Beide
 Formen werden dauerhaft geschrieben, keine wird als `owl:deprecated` markiert.
 
-**TRS: Recherchebefund (2026-08).** OWL-Time definiert `time:TRS` nur als
+**TRS: Recherchebefund (2026-08-08).** OWL-Time definiert `time:TRS` nur als
 Stub-Klasse und legt die Definition ausdrücklich ausserhalb des eigenen Umfangs.
 Festgelegt ist im Standard allein der Gregorianische Kalender über
 `http://www.opengis.net/def/uom/ISO-8601/0/Gregorian`. Für tiefe Zeit nennt das
@@ -372,7 +372,7 @@ und `geolod:CIArchaeologicalSite ⊑ A2` sind derzeit zwei verschiedene Klassen.
 Die geo-lod-Variante ist die richtige; `crm_bridge.ttl` und
 `GeoScience-FAIRification-LOD/ontology/README.md` nachziehen.
 
-**Entschieden (2026-08):** `http://www.cidoc-crm.org/extensions/crmarchaeo/`.
+**Entschieden (2026-08-08):** `http://www.cidoc-crm.org/extensions/crmarchaeo/`.
 Der Nachzug in `crm_bridge.ttl` gehört zu S4, der in `ontology/README.md` kann
 sofort erfolgen.
 
@@ -391,7 +391,7 @@ Zu prüfen: `mis_stage_boundaries.csv` deklariert für die LR04-Werte
 `timebase = b2k`, `mis_literature.csv` für Railsback `BP`. LR04 wird
 konventionell in BP angegeben — vermutlich ein Übertragungsfehler.
 
-**Geprüft (2026-08):** Beide Originalquellen sind BP —
+**Geprüft (2026-08-08):** Beide Originalquellen sind BP —
 `LR04_MISboundaries.csv` führt die Spalte als `Age(ka)` in der LR04-Konvention,
 Railsback Tabelle als `(Yrs BP)`. Die `b2k`-Deklaration für LR04 ist damit ein
 Übertragungsfehler und wird korrigiert. Railsback merkt in der Kopfzeile selbst
@@ -399,7 +399,7 @@ an, dass die Substadien Exkursionen bezeichnen und nicht die Grenzen zwischen
 ihnen — die Grenzwerte der Tabelle sind entsprechend unscharf und sollten nicht
 als exakte Zeitpunkte modelliert werden.
 
-**Beschluss (2026-08).**
+**Beschluss (2026-08-08).**
 
 - Grenzen bleiben zwei konkurrierende E13 je Quelle, ohne Harmonisierung.
 - Die MIS-Zuweisung an Beobachtungen wird **materialisiert**, ebenfalls als E13
@@ -426,7 +426,7 @@ Umzug des Bestands wäre breaking; Vorschlag: Bestand belassen, alles Neue unter
 `http://w3id.org/geo-lod/vocab/…` bzw. `…/elsa/…` und die Trennung ab hier
 durchhalten.
 
-**Beschluss (2026-08).** Drei Ebenen:
+**Beschluss (2026-08-08).** Drei Ebenen:
 
 | Ebene | Muster |
 |---|---|
@@ -808,7 +808,7 @@ werden muss. Muss doch gepatcht werden, zeigt die Stelle, was in S4 offen blieb.
 Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 
 - ~~Zeitbasis-Auszeichnung in `mis_stage_boundaries.csv` prüfen (S0.3).~~
-  Erledigt 2026-08: beide Quellen sind BP, die `b2k`-Deklaration ist zu
+  Erledigt 2026-08-08: beide Quellen sind BP, die `b2k`-Deklaration ist zu
   korrigieren.
 - Sanbao: 5832 gegenüber 9535 Samples im Release. Beim Neuaufbau klären, ob
   Zeilenverlust oder bewusster Join (S3c).
