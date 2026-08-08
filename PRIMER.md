@@ -99,6 +99,12 @@ möglich und wahrscheinlich nötig. Damit gilt:
   Clip-Path-IDs. Beides ist abgestellt, `plt.rcParams["svg.hashsalt"]` und
   `metadata={"Date": None}` beim Speichern — bei jedem neuen Plot-Skript
   mitnehmen.
+- **Keine Uhr im Output.** Kein Generator liest `datetime.now()`. Ein Datum im
+  RDF kommt aus `GEO_LOD_RELEASE` in `geo_lod_utils.py`, die Bindung an den
+  Stand aus `content_fingerprint()` über Eingabedaten und Generator-Skript.
+  Damit ändert sich ein erzeugter Datensatz genau dann, wenn sich Daten oder
+  Modell ändern — was ihn für den, der den TTL-Dump vor sich hat, prüfbar
+  macht. Neue Generatoren rufen `add_generation_provenance()` auf.
 - Ein Thema pro Chat, ein Repo pro Chat.
 - **Offene Entscheidungen werden als interaktives Formular gestellt**, nicht als
   Aufzählung im Fliesstext. Ein Klickpfad ist schneller zu beantworten als eine
@@ -187,6 +193,10 @@ lesen hier ab, statt neu zu diskutieren.
 | SHACL-Inferenz | `inference="none"` statt `"rdfs"`. SHACL folgt `rdfs:subClassOf` bei `sh:targetClass` und `sh:class` selbst; die Subklassen-Axiome liegen im Bundle. Ergebnis identisch, Schritt von 42 s auf 14 s | 2026-08-08 |
 | Laufzeitmessung | je Schritt eine Dauer im Report, dazu eine Tabelle mit Anteilen in der Summary | 2026-08-08 |
 | Log der Sub-Skripte | eingefangen und zeilenweise durchgereicht: `pipeline_report.txt` und Terminal zeigen dasselbe. `PYTHONIOENCODING=utf-8` im Kindprozess, sonst scheitern ✓, ‰ und δ an der Pipe | 2026-08-08 |
+| Zeitstempel im RDF | keine. `dct:created` aus `GEO_LOD_RELEASE`, dazu `owl:versionInfo` mit einem SHA-256-Fingerabdruck über Eingabedaten und Generator-Skript. Die Aktivitätszeiten in `ci_findspots.ttl` sind entfallen — die Laufzeit eines Konvertierungsskripts ist keine Aussage über die Daten | 2026-08-08 |
+| Umfang des Fingerabdrucks | Eingabedaten **und** Generator-Skript. Ein geänderter Kommentar im Code ändert ihn mit; das ist gewollt, weil der Datensatz nur für den Codestand gilt, aus dem er stammt | 2026-08-08 |
+| `pipeline_report.txt` | wird weiter versioniert; er ändert sich als einzige Datei bei jedem Lauf, das ist der Preis für den Laufprotokoll-Charakter | 2026-08-08 |
+| Zeilenenden | `.gitattributes` mit `eol=lf`. Ohne sie schreibt Git auf Windows beim Checkout um, und die Byte-Gleichheit gilt nur lokal | 2026-08-08 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 

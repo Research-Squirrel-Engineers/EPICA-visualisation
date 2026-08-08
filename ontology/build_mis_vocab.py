@@ -59,6 +59,13 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from geo_lod_utils import (  # noqa: E402
+    GEO_LOD_RELEASE,
+    content_fingerprint,
+    file_sha256,
+)
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_DIR = SCRIPT_DIR.parent
 RAW_DIR = REPO_DIR / "data" / "raw" / "mis"
@@ -349,6 +356,8 @@ def build_mis_ttl(
 
     ordered = sorted(concepts, key=sort_key)
 
+    fingerprint = content_fingerprint([LR04_CSV, RAILSBACK_CSV, Path(__file__)])
+
     out: list[str] = []
     w = out.append
     stage_rows: list[dict] = []
@@ -368,8 +377,8 @@ def build_mis_ttl(
     w("#")
     w("# GENERATED FILE - do not edit by hand.")
     w("# Source: ontology/build_mis_vocab.py")
-    w("# Inputs: info/Railsbacketal2015MISSubstagesFig3-TableVersion01-CSV.csv")
-    w("#         info/LR04_MISboundaries.csv")
+    w(f"# Release: {GEO_LOD_RELEASE}")
+    w(f"# Fingerprint (input data + generator): {fingerprint}")
     w("# ==========================================================================")
     w("")
     w(PREFIXES)
@@ -393,7 +402,32 @@ def build_mis_ttl(
         'only source covering that range."""@en ;'
     )
     w("    owl:imports  <http://w3id.org/geo-lod/> ;")
+    w(f'    dct:created  "{GEO_LOD_RELEASE}"^^xsd:date ;')
+    w(f'    owl:versionInfo "{fingerprint}" ;')
+    w("    prov:wasGeneratedBy mis:vocabulary_generation ;")
     w("    dct:source   mis:source_railsback2015, mis:source_lisieckiRaymo2005 .")
+    w("")
+
+    w("mis:vocabulary_generation")
+    w("    a prov:Activity ;")
+    w('    rdfs:label "MIS vocabulary generation"@en ;')
+    w(f'    owl:versionInfo "{fingerprint}" ;')
+    w("    prov:used mis:input_LR04_MISboundaries_csv ,")
+    w("        mis:input_Railsback2015_csv ,")
+    w("        mis:input_build_mis_vocab_py ;")
+    w("    prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .")
+    w("")
+
+    for local, path in (
+        ("input_LR04_MISboundaries_csv", LR04_CSV),
+        ("input_Railsback2015_csv", RAILSBACK_CSV),
+        ("input_build_mis_vocab_py", Path(__file__)),
+    ):
+        w(f"mis:{local}")
+        w("    a prov:Entity ;")
+        w(f'    rdfs:label "{path.name}" ;')
+        w(f'    dct:identifier "sha256:{file_sha256(path)}" .')
+        w("")
     w("")
 
     w("mis:source_railsback2015")

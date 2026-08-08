@@ -433,6 +433,8 @@ try:
         add_feature_collection,
         write_geo_lod_core,
         write_mermaid as write_geo_lod_mermaid,
+        add_generation_provenance,
+        GEO_LOD_RELEASE,
     )
 
     GEO_LOD_UTILS_AVAILABLE = True
@@ -1271,7 +1273,10 @@ def build_sisal_sites_rdf(df_sites: "pd.DataFrame") -> "Graph | None":
 
 
 def export_sisal_rdf(
-    all_dfs: list, site_slugs: list, df_sites: "pd.DataFrame | None" = None
+    all_dfs: list,
+    site_slugs: list,
+    df_sites: "pd.DataFrame | None" = None,
+    sites_csv_path: "str | None" = None
 ) -> None:
     """
     Exports all RDF artefacts:
@@ -1326,6 +1331,18 @@ def export_sisal_rdf(
         print(f"\n  Building sites graph …")
         g_sites = build_sisal_sites_rdf(df_sites)
         if g_sites is not None:
+            # Erzeugungs-Provenienz: bindet den Dump an den Stand aus
+            # Eingabe-CSV und diesem Skript. Ändert sich eines von beiden,
+            # ändert sich der Fingerabdruck - sonst nicht.
+            if GEO_LOD_UTILS_AVAILABLE:
+                add_generation_provenance(
+                    g_sites,
+                    GEOLOD["SISAL_Sites_Dataset"],
+                    GEOLOD["SISAL_Sites_Generation"],
+                    inputs=[p for p in (sites_csv_path, __file__) if p],
+                    agents=[URIRef("https://orcid.org/0000-0002-3246-3531")],
+                    label="SISAL cave site RDF generation",
+                )
             sites_path = os.path.join(RDF_DIR, "sisal_sites.ttl")
             g_sites.serialize(destination=sites_path, format="turtle")
             print(f"  ✓ {sites_path}")
@@ -1460,7 +1477,12 @@ def main():
         loaded_slugs.append(cfg["slug"])
 
     # ── RDF Export ────────────────────────────────────────────────────────────
-    export_sisal_rdf(loaded_dfs, loaded_slugs, df_sites=df_sites)
+    export_sisal_rdf(
+        loaded_dfs,
+        loaded_slugs,
+        df_sites=df_sites,
+        sites_csv_path=sites_filepath,
+    )
 
     print("\n" + "=" * 60)
     print(f"Done! Plots saved to '{OUTPUT_DIR}/'")

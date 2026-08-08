@@ -48,6 +48,7 @@ Import in calling scripts
 
 from __future__ import annotations
 
+import hashlib
 import os
 import textwrap
 from typing import Iterable
@@ -58,6 +59,9 @@ from typing import Iterable
 try:
     from rdflib import Graph, Namespace, URIRef, Literal
     from rdflib.namespace import RDF, RDFS, OWL, XSD
+
+    PROV = Namespace(NS_PROV := "http://www.w3.org/ns/prov#")
+    DCT = Namespace("http://purl.org/dc/terms/")
 
     RDF_AVAILABLE = True
 except ImportError:
@@ -254,6 +258,99 @@ def add_feature_collection(
     g.add((collection_uri, RDFS.label, Literal(label, lang="en")))
     for m in members:
         g.add((collection_uri, RDFS.member, m))
+
+
+# ===========================================================================
+# 3b.  PROVENANCE  — release date and content fingerprint
+# ===========================================================================
+#
+# Ein erzeugter Datensatz gilt genau für den Stand aus Eingabedaten und
+# Generator-Code, aus dem er entstanden ist. Sichtbar gemacht wird das nicht
+# über die Uhr des Rechners - die sagt nur, wann jemand das Skript gestartet
+# hat -, sondern über einen Fingerabdruck über genau diese Dateien. Er ändert
+# sich, wenn sich Daten oder Code ändern, und sonst nie. Zwei Läufe ohne
+# Änderung sind damit byte-identisch.
+#
+# Daneben steht ein von Hand gepflegtes Release-Datum für dct:created, weil
+# in einem Katalog ein Datum stehen soll und kein Hash.
+
+GEO_LOD_RELEASE: str = "2026-08-08"
+
+FINGERPRINT_LENGTH: int = 12
+
+
+def file_sha256(path) -> str:
+    """Vollständiger SHA-256 einer Datei, hexadezimal."""
+    h = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for chunk in iter(lambda: fh.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def content_fingerprint(paths) -> str:
+    """Fingerabdruck über mehrere Dateien: 'sha256:xxxxxxxxxxxx'.
+
+    Gehasht wird über Dateiname und Inhalt, in sortierter Reihenfolge -
+    damit hängt das Ergebnis weder an der Reihenfolge der Argumente noch am
+    absoluten Pfad, also auch nicht daran, wo das Repo liegt.
+    """
+    entries = sorted(
+        (os.path.basename(str(p)), file_sha256(p))
+        for p in paths
+        if os.path.exists(p)
+    )
+    h = hashlib.sha256()
+    for name, digest in entries:
+        h.update(name.encode("utf-8"))
+        h.update(digest.encode("ascii"))
+    return "sha256:" + h.hexdigest()[:FINGERPRINT_LENGTH]
+
+
+def add_generation_provenance(
+    g,
+    dataset_uri,
+    activity_uri,
+    inputs,
+    agents=(),
+    label: str = "generation",
+) -> str:
+    """Hängt die Erzeugungs-Provenienz an einen Datensatzknoten und gibt den
+    Fingerabdruck zurück.
+
+    Modelliert wird: der Datensatz entstand durch eine Aktivität, die die
+    aufgeführten Dateien benutzt hat; jede davon trägt ihre eigene Prüfsumme.
+    Wer diesen TTL-Dump vor sich hat, kann damit prüfen, ob er zu den Daten
+    und dem Code passt, aus denen er hervorgegangen ist.
+
+    Bewusst ohne prov:startedAtTime / prov:endedAtTime: die Laufzeit eines
+    Konvertierungsskripts ist keine Aussage über die Daten.
+    """
+    fingerprint = content_fingerprint(inputs)
+
+    g.add((dataset_uri, RDF.type, PROV.Entity))
+    g.add((dataset_uri, OWL.versionInfo, Literal(fingerprint)))
+    g.add((dataset_uri, DCT.created, Literal(GEO_LOD_RELEASE, datatype=XSD.date)))
+    g.add((dataset_uri, PROV.wasGeneratedBy, activity_uri))
+
+    g.add((activity_uri, RDF.type, PROV.Activity))
+    g.add((activity_uri, RDFS.label, Literal(label, lang="en")))
+    g.add((activity_uri, OWL.versionInfo, Literal(fingerprint)))
+
+    for agent in agents:
+        g.add((activity_uri, PROV.wasAssociatedWith, agent))
+
+    for path in inputs:
+        if not os.path.exists(path):
+            continue
+        name = os.path.basename(str(path))
+        input_uri = URIRef(f"{activity_uri}_input_{name.replace('.', '_')}")
+        g.add((input_uri, RDF.type, PROV.Entity))
+        g.add((input_uri, RDFS.label, Literal(name)))
+        g.add((input_uri, DCT.identifier, Literal("sha256:" + file_sha256(path))))
+        g.add((activity_uri, PROV.used, input_uri))
+
+    return fingerprint
 
 
 # ===========================================================================
