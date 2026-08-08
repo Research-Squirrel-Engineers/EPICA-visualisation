@@ -7,8 +7,8 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: member"@en ;
     void:property rdfs:member ;
-    void:triples 759,
-        1334,
+    void:triples 763,
+        1338,
         2137,
         2480 .
 

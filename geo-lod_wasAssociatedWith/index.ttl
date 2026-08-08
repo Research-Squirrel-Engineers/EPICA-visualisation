@@ -8,5 +8,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: wasAssociatedWith"@en ;
     void:property prov:wasAssociatedWith ;
-    void:triples 148 .
+    void:triples 1,
+        150 .
 

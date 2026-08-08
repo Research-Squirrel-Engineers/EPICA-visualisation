@@ -101,10 +101,12 @@
 
 <http://w3id.org/geo-lod/geo-lod_github.com_Research-Squirrel-Engineers_> a void:Linkset ;
     rdfs:label "Linkset: geo-lod - Research-Squirrel-Engineers"@en ;
-    void:linkPredicate prov:wasDerivedFrom ;
+    void:linkPredicate prov:wasAssociatedWith,
+        prov:wasDerivedFrom ;
     void:objectsTarget <https://github.com/Research-Squirrel-Engineers/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 74 .
+    void:triples 1,
+        74 .
 
 <http://w3id.org/geo-lod/geo-lod_github.com_Research-Squirrel-Engineers_campanian-ignimbrite-geo_blob_main_py_> a void:Linkset ;
     rdfs:label "Linkset: geo-lod - py"@en ;
@@ -150,7 +152,8 @@
     void:objectsTarget <http://orcid.org/>,
         <https://orcid.org/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 74,
+    void:triples 1,
+        74,
         148 .
 
 <http://w3id.org/geo-lod/geo-lod_pleiades.stoa.org_places_vocab_> a void:Linkset ;
@@ -208,7 +211,7 @@
     void:linkPredicate rdf:type ;
     void:objectsTarget geo: ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 9 .
+    void:triples 8 .
 
 <http://w3id.org/geo-lod/geo-lod_www.opengis.net_ont_sf_> a void:Linkset ;
     rdfs:label "Linkset: geo-lod - Simple Features Vocabulary (sf:)"@en ;
@@ -240,19 +243,19 @@
     void:linkPredicate rdf:type ;
     void:objectsTarget skos: ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 3 .
+    void:triples 4 .
 
 <http://w3id.org/geo-lod/geo-lod_www.w3.org_ns_prov_> a void:Linkset ;
     rdfs:label "Linkset: geo-lod - W3C Provenance Ontology (prov:)"@en ;
     void:linkPredicate rdf:type ;
     void:objectsTarget prov: ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 222 .
+    void:triples 226 .
 
 <http://w3id.org/geo-lod/geo_geo-lod_occ> a voaf:DatasetOccurrence ;
     rdfs:label "Occurrences of vocabulary http://www.opengis.net/ont/geosparql# in geo-lod" ;
     voaf:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    voaf:occurrences 18 .
+    voaf:occurrences 16 .
 
 <http://w3id.org/geo-lod/odrl_geo-lod_occ> a voaf:DatasetOccurrence ;
     rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/odrl/2/ in geo-lod" ;
@@ -273,7 +276,7 @@
 <http://w3id.org/geo-lod/prov_geo-lod_occ> a voaf:DatasetOccurrence ;
     rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/prov# in geo-lod" ;
     voaf:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    voaf:occurrences 444 .
+    voaf:occurrences 452 .
 
 <http://w3id.org/geo-lod/qb_geo-lod_occ> a voaf:DatasetOccurrence ;
     rdfs:label "Occurrences of vocabulary http://purl.org/linked-data/cube# in geo-lod" ;
@@ -298,7 +301,7 @@
 <http://w3id.org/geo-lod/skos_geo-lod_occ> a voaf:DatasetOccurrence ;
     rdfs:label "Occurrences of vocabulary http://www.w3.org/2004/02/skos/core# in geo-lod" ;
     voaf:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    voaf:occurrences 6 .
+    voaf:occurrences 8 .
 
 <http://w3id.org/geo-lod/sosa_geo-lod_occ> a voaf:DatasetOccurrence ;
     rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/sosa/ in geo-lod" ;
@@ -419,7 +422,7 @@ doap: a voaf:Vocabulary ;
 <http://w3id.org/geo-lod/geo-lod_Activity> a void:Dataset ;
     rdfs:label "Class Partition: Activity"@en ;
     void:class prov:Activity ;
-    void:entities 148 .
+    void:entities 149 .
 
 <http://w3id.org/geo-lod/geo-lod_Agent> a void:Dataset ;
     rdfs:label "Class Partition: Agent"@en ;
@@ -442,7 +445,7 @@ doap: a voaf:Vocabulary ;
 <http://w3id.org/geo-lod/geo-lod_Collection> a void:Dataset ;
     rdfs:label "Class Partition: Collection"@en ;
     void:class skos:Collection ;
-    void:entities 3 .
+    void:entities 4 .
 
 <http://w3id.org/geo-lod/geo-lod_Dataset> a void:Dataset ;
     rdfs:label "Class Partition: Dataset"@en ;
@@ -475,12 +478,12 @@ doap: a voaf:Vocabulary ;
 <http://w3id.org/geo-lod/geo-lod_Entity> a void:Dataset ;
     rdfs:label "Class Partition: Entity"@en ;
     void:class prov:Entity ;
-    void:entities 74 .
+    void:entities 77 .
 
 <http://w3id.org/geo-lod/geo-lod_FeatureCollection> a void:Dataset ;
     rdfs:label "Class Partition: FeatureCollection"@en ;
     void:class geo:FeatureCollection ;
-    void:entities 7 .
+    void:entities 6 .
 
 <http://w3id.org/geo-lod/geo-lod_GeometryCollection> a void:Dataset ;
     rdfs:label "Class Partition: GeometryCollection"@en ;
@@ -598,6 +601,11 @@ doap: a voaf:Vocabulary ;
     void:property rdfs:comment ;
     void:triples 74 .
 
+<http://w3id.org/geo-lod/geo-lod_created> a void:Dataset ;
+    rdfs:label "Property Partition: created"@en ;
+    void:property dcterms:created ;
+    void:triples 1 .
+
 <http://w3id.org/geo-lod/geo-lod_creator> a void:Dataset ;
     rdfs:label "Property Partition: creator"@en ;
     void:property dcterms:creator ;
@@ -612,11 +620,6 @@ doap: a voaf:Vocabulary ;
     rdfs:label "Property Partition: dubiousMatch"@en ;
     void:property <http://fuzzy-sl.squirrel.link/ontology/dubiousMatch> ;
     void:triples 4 .
-
-<http://w3id.org/geo-lod/geo-lod_endedAtTime> a void:Dataset ;
-    rdfs:label "Property Partition: endedAtTime"@en ;
-    void:property prov:endedAtTime ;
-    void:triples 148 .
 
 <http://w3id.org/geo-lod/geo-lod_exactMatch> a void:Dataset ;
     rdfs:label "Property Partition: exactMatch"@en ;
@@ -658,10 +661,15 @@ doap: a voaf:Vocabulary ;
     void:property <http://w3id.org/geo-lod/hasSpatialType> ;
     void:triples 80 .
 
+<http://w3id.org/geo-lod/geo-lod_identifier> a void:Dataset ;
+    rdfs:label "Property Partition: identifier"@en ;
+    void:property dcterms:identifier ;
+    void:triples 2 .
+
 <http://w3id.org/geo-lod/geo-lod_label> a void:Dataset ;
     rdfs:label "Property Partition: label"@en ;
     void:property rdfs:label ;
-    void:triples 86 .
+    void:triples 89 .
 
 <http://w3id.org/geo-lod/geo-lod_license> a void:Dataset ;
     rdfs:label "Property Partition: license"@en ;
@@ -671,7 +679,7 @@ doap: a voaf:Vocabulary ;
 <http://w3id.org/geo-lod/geo-lod_member> a void:Dataset ;
     rdfs:label "Property Partition: member"@en ;
     void:property rdfs:member ;
-    void:triples 759 .
+    void:triples 763 .
 
 <http://w3id.org/geo-lod/geo-lod_partlyMatch> a void:Dataset ;
     rdfs:label "Property Partition: partlyMatch"@en ;
@@ -698,11 +706,6 @@ doap: a voaf:Vocabulary ;
     void:property <http://fuzzy-sl.squirrel.link/ontology/spatialCloseMatch> ;
     void:triples 14 .
 
-<http://w3id.org/geo-lod/geo-lod_startedAtTime> a void:Dataset ;
-    rdfs:label "Property Partition: startedAtTime"@en ;
-    void:property prov:startedAtTime ;
-    void:triples 148 .
-
 <http://w3id.org/geo-lod/geo-lod_subClassOf> a void:Dataset ;
     rdfs:label "Property Partition: subClassOf"@en ;
     void:property rdfs:subClassOf ;
@@ -711,17 +714,22 @@ doap: a voaf:Vocabulary ;
 <http://w3id.org/geo-lod/geo-lod_type> a void:Dataset ;
     rdfs:label "Property Partition: type"@en ;
     void:property rdf:type ;
-    void:triples 700 .
+    void:triples 704 .
 
 <http://w3id.org/geo-lod/geo-lod_used> a void:Dataset ;
     rdfs:label "Property Partition: used"@en ;
     void:property prov:used ;
-    void:triples 74 .
+    void:triples 76 .
+
+<http://w3id.org/geo-lod/geo-lod_versionInfo> a void:Dataset ;
+    rdfs:label "Property Partition: versionInfo"@en ;
+    void:property owl:versionInfo ;
+    void:triples 2 .
 
 <http://w3id.org/geo-lod/geo-lod_wasAssociatedWith> a void:Dataset ;
     rdfs:label "Property Partition: wasAssociatedWith"@en ;
     void:property prov:wasAssociatedWith ;
-    void:triples 148 .
+    void:triples 150 .
 
 <http://w3id.org/geo-lod/geo-lod_wasAttributedTo> a void:Dataset ;
     rdfs:label "Property Partition: wasAttributedTo"@en ;
@@ -736,7 +744,12 @@ doap: a voaf:Vocabulary ;
 <http://w3id.org/geo-lod/geo-lod_wasGeneratedBy> a void:Dataset ;
     rdfs:label "Property Partition: wasGeneratedBy"@en ;
     void:property prov:wasGeneratedBy ;
-    void:triples 148 .
+    void:triples 149 .
+
+<http://w3id.org/geo-lod/geo-lod_wasInformedBy> a void:Dataset ;
+    rdfs:label "Property Partition: wasInformedBy"@en ;
+    void:property prov:wasInformedBy ;
+    void:triples 74 .
 
 rdf: a voaf:Vocabulary ;
     rdfs:label "The RDF Concepts Vocabulary (RDF)"@en ;
@@ -878,18 +891,18 @@ foaf:Person rdfs:label "Person"@en .
         adms:Asset ;
     rdfs:label "geo-lod"@en ;
     vext:averageLiteralLength 0 ;
-    vext:averageObjectIRILength 40 ;
-    vext:averagePropertyIRILength 44 ;
-    vext:averageSubjectIRILength 41 ;
+    vext:averageObjectIRILength 41 ;
+    vext:averagePropertyIRILength 43 ;
+    vext:averageSubjectIRILength 42 ;
     vext:datatypes 0 ;
     vext:distinctBlankNodes 0 ;
-    vext:distinctIRIReferences 1050 ;
+    vext:distinctIRIReferences 1006 ;
     vext:distinctLiterals 0 ;
-    vext:distinctRDFNodes 1050 ;
+    vext:distinctRDFNodes 1006 ;
     vext:languages 0 ;
     vext:propertyClasses 0 ;
     dc:language <http://www.lexvo.org/page/iso639-1/en> ;
-    dcterms:modified "2026-08-08T13:04:14"^^xsd:dateTime ;
+    dcterms:modified "2026-08-08T13:10:54"^^xsd:dateTime ;
     dcterms:subject <http://dbpedia.org/resource/Location>,
         <http://dbpedia.org/resource/OGC_GeoSPARQL>,
         <http://dbpedia.org/resource/Time>,
@@ -936,21 +949,21 @@ foaf:Person rdfs:label "Person"@en .
         <http://w3id.org/geo-lod/geo-lod_UThChronology> ;
     void:classes 16 ;
     void:dataDump "https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//index.ttl"^^xsd:anyURI ;
-    void:distinctObjects 703 ;
-    void:distinctSubjects 314 ;
-    void:entities 310 ;
+    void:distinctObjects 653 ;
+    void:distinctSubjects 318 ;
+    void:entities 314 ;
     void:feature <http://www.w3.org/ns/formats/RDFa>,
         <http://www.w3.org/ns/formats/Turtle> ;
-    void:properties 33 ;
+    void:properties 35 ;
     void:propertyPartition <http://w3id.org/geo-lod/geo-lod_P12_occurred_in_the_presence_of>,
         <http://w3id.org/geo-lod/geo-lod_P7_took_place_at>,
         <http://w3id.org/geo-lod/geo-lod_activityDesc>,
         <http://w3id.org/geo-lod/geo-lod_asWKT>,
         <http://w3id.org/geo-lod/geo-lod_closeMatch>,
         <http://w3id.org/geo-lod/geo-lod_comment>,
+        <http://w3id.org/geo-lod/geo-lod_created>,
         <http://w3id.org/geo-lod/geo-lod_creator>,
         <http://w3id.org/geo-lod/geo-lod_dubiousMatch>,
-        <http://w3id.org/geo-lod/geo-lod_endedAtTime>,
         <http://w3id.org/geo-lod/geo-lod_exactMatch>,
         <http://w3id.org/geo-lod/geo-lod_hasCertaintyDescription>,
         <http://w3id.org/geo-lod/geo-lod_hasCertaintyLevel>,
@@ -959,6 +972,7 @@ foaf:Person rdfs:label "Person"@en .
         <http://w3id.org/geo-lod/geo-lod_hasSource>,
         <http://w3id.org/geo-lod/geo-lod_hasSourceType>,
         <http://w3id.org/geo-lod/geo-lod_hasSpatialType>,
+        <http://w3id.org/geo-lod/geo-lod_identifier>,
         <http://w3id.org/geo-lod/geo-lod_label>,
         <http://w3id.org/geo-lod/geo-lod_license>,
         <http://w3id.org/geo-lod/geo-lod_member>,
@@ -967,15 +981,16 @@ foaf:Person rdfs:label "Person"@en .
         <http://w3id.org/geo-lod/geo-lod_rightsHolder>,
         <http://w3id.org/geo-lod/geo-lod_scopeNote>,
         <http://w3id.org/geo-lod/geo-lod_spatialCloseMatch>,
-        <http://w3id.org/geo-lod/geo-lod_startedAtTime>,
         <http://w3id.org/geo-lod/geo-lod_subClassOf>,
         <http://w3id.org/geo-lod/geo-lod_type>,
         <http://w3id.org/geo-lod/geo-lod_used>,
+        <http://w3id.org/geo-lod/geo-lod_versionInfo>,
         <http://w3id.org/geo-lod/geo-lod_wasAssociatedWith>,
         <http://w3id.org/geo-lod/geo-lod_wasAttributedTo>,
         <http://w3id.org/geo-lod/geo-lod_wasDerivedFrom>,
-        <http://w3id.org/geo-lod/geo-lod_wasGeneratedBy> ;
-    void:triples 4531 ;
+        <http://w3id.org/geo-lod/geo-lod_wasGeneratedBy>,
+        <http://w3id.org/geo-lod/geo-lod_wasInformedBy> ;
+    void:triples 4334 ;
     void:uriSpace "http://w3id.org/geo-lod/"^^xsd:string ;
     void:vocabulary vext:,
         dcam:,

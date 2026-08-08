@@ -1,13 +1,20 @@
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<http://w3id.org/geo-lod/Entity_collection> a geo:FeatureCollection,
+<http://w3id.org/geo-lod/Entity_collection> a skos:Collection,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Entity Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/ci/cisite_1>,
+    rdfs:member <http://w3id.org/geo-lod/SISAL_Sites_Dataset>,
+        <http://w3id.org/geo-lod/SISAL_Sites_Generation_input_plot_sisal_from_csv_py>,
+        <http://w3id.org/geo-lod/SISAL_Sites_Generation_input_v_sites_all_csv>,
+        <http://w3id.org/geo-lod/ci/ci_findspots_dataset>,
+        <http://w3id.org/geo-lod/ci/ci_findspots_generation_input_ci_pipeline_py>,
+        <http://w3id.org/geo-lod/ci/ci_findspots_generation_input_cifindspots_part_full_csv>,
+        <http://w3id.org/geo-lod/ci/cisite_1>,
         <http://w3id.org/geo-lod/ci/cisite_10>,
         <http://w3id.org/geo-lod/ci/cisite_101>,
         <http://w3id.org/geo-lod/ci/cisite_102>,
@@ -80,5 +87,9 @@
         <http://w3id.org/geo-lod/ci/cisite_65>,
         <http://w3id.org/geo-lod/ci/cisite_7>,
         <http://w3id.org/geo-lod/ci/cisite_8>,
-        <http://w3id.org/geo-lod/ci/cisite_9> .
+        <http://w3id.org/geo-lod/ci/cisite_9> ;
+    dcat:dataset <http://w3id.org/geo-lod/EPICA_DomeC_Dataset>,
+        <http://w3id.org/geo-lod/EPICA_DomeC_Generation_input_EDC_CH4_tab>,
+        <http://w3id.org/geo-lod/EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab>,
+        <http://w3id.org/geo-lod/EPICA_DomeC_Generation_input_plot_epica_from_tab_py> .
 

@@ -8,5 +8,7 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: used"@en ;
     void:property prov:used ;
-    void:triples 74 .
+    void:triples 2,
+        3,
+        76 .
 

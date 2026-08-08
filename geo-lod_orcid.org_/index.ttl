@@ -16,6 +16,7 @@
     void:objectsTarget <http://orcid.org/>,
         <https://orcid.org/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 74,
+    void:triples 1,
+        74,
         148 .
 

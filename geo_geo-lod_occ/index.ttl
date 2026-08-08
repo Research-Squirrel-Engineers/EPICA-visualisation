@@ -8,6 +8,5 @@
     rdfs:label "Occurrences of vocabulary http://www.opengis.net/ont/geosparql# in geo-lod" ;
     ns1:inDataset <http://w3id.org/geo-lod/geo-lod> ;
     ns1:occurrences 14,
-        16,
-        18 .
+        16 .
 

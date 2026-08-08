@@ -1,0 +1,1 @@
+{"http://purl.org/dc/terms/identifier": ["sha256:e4ce015b10fa8f11adbc2e4d39941d281776cf1d0665e752201a9bff2378b705"], "http://rdfs.org/ns/void#inDataset": ["http://w3id.org/geo-lod/geo-lod"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/ns/prov#Entity"], "http://www.w3.org/2000/01/rdf-schema#label": ["plot_sisal_from_csv.py"]}

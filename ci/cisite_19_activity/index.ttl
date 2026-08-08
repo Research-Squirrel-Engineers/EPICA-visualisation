@@ -2,7 +2,6 @@
 @prefix ns2: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://w3id.org/geo-lod/ci/cisite_19_activity> a ns1:Georeferencing,
         <http://www.w3.org/ns/ldp#Resource>,
@@ -14,8 +13,6 @@
     void:inDataset ns2:geo-lod ;
     ns2:hasCertaintyLevel ns1:medium ;
     ns2:hasLiteratureReference "Giaccio et al., 2008" ;
-    prov:endedAtTime "2026-08-08T14:34:44.133932+00:00"^^xsd:dateTime ;
-    prov:startedAtTime "2026-08-08T14:34:44.088406+00:00"^^xsd:dateTime ;
     prov:used <http://w3id.org/geo-lod/ci/cisite_19> ;
     prov:wasAssociatedWith <http://orcid.org/0000-0002-3246-3531> .
 

@@ -12,6 +12,5 @@
     void:objectsTarget geo: ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
     void:triples 7,
-        8,
-        9 .
+        8 .
 

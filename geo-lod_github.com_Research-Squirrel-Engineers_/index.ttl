@@ -7,8 +7,10 @@
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Linkset: geo-lod - Research-Squirrel-Engineers"@en ;
-    void:linkPredicate prov:wasDerivedFrom ;
+    void:linkPredicate prov:wasAssociatedWith,
+        prov:wasDerivedFrom ;
     void:objectsTarget <https://github.com/Research-Squirrel-Engineers/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 74 .
+    void:triples 1,
+        74 .
 

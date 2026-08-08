@@ -2,7 +2,6 @@
 @prefix ns2: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://w3id.org/geo-lod/ci/cisite_63_activity> a ns1:Georeferencing,
         <http://www.w3.org/ns/ldp#Resource>,
@@ -14,8 +13,6 @@
     void:inDataset ns2:geo-lod ;
     ns2:hasCertaintyLevel ns1:low ;
     ns2:hasLiteratureReference "Baykal et al., 2018" ;
-    prov:endedAtTime "2026-08-08T14:34:44.226872+00:00"^^xsd:dateTime ;
-    prov:startedAtTime "2026-08-08T14:34:44.088406+00:00"^^xsd:dateTime ;
     prov:used <http://w3id.org/geo-lod/ci/cisite_63> ;
     prov:wasAssociatedWith <http://orcid.org/0009-0008-2877-3204> .
 

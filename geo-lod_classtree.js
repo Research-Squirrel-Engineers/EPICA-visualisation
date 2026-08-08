@@ -73,16 +73,6 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/Entity_collection",
-    "parent":"http://www.opengis.net/ont/geosparql#FeatureCollection",
-    "type":"featurecollection",
-    "text":"Entity Instances Collection (geolod:Entity_collection)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
     "id":"http://w3id.org/geo-lod/Place_collection",
     "parent":"http://www.opengis.net/ont/geosparql#FeatureCollection",
     "type":"featurecollection",
@@ -115,37 +105,37 @@ var tree={
    {
     "id":"http://www.opengis.net/ont/geosparql#FeatureCollection",
     "parent":"http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
-    "instancecount":7,
+    "instancecount":6,
     "type":"collectionclass",
-    "text":" (gsp:FeatureCollection) [16]",
+    "text":" (gsp:FeatureCollection) [15]",
     "data":{
      "from":{
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "http://www.w3.org/2004/02/skos/core#Collection":1
+       "http://www.w3.org/2004/02/skos/core#Collection":1,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       }
      },
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
-       "instancecount":7,
-       "http://rdfs.org/ns/void#Dataset":7,
-       "http://www.w3.org/ns/adms#Asset":7,
-       "http://www.w3.org/ns/ldp#Resource":7,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":7
+       "instancecount":6,
+       "http://www.w3.org/ns/adms#Asset":6,
+       "http://rdfs.org/ns/void#Dataset":6
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
-       "instancecount":9
+       "instancecount":8
       },
       "http://www.w3.org/2000/01/rdf-schema#label":{
-       "instancecount":7
+       "instancecount":6
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "instancecount":425,
-       "http://fuzzy-sl.squirrel.link/ontology/Site":388,
-       "http://w3id.org/geo-lod/CIArchaeologicalSite":63,
-       "http://w3id.org/geo-lod/CIFindspot":388,
-       "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":63,
-       "http://www.w3.org/ns/prov#Entity":388,
-       "https://pleiades.stoa.org/places/vocab#Place":388
+       "instancecount":351,
+       "http://fuzzy-sl.squirrel.link/ontology/Site":314,
+       "http://w3id.org/geo-lod/CIFindspot":314,
+       "http://www.w3.org/ns/prov#Entity":314,
+       "https://pleiades.stoa.org/places/vocab#Place":314,
+       "http://w3id.org/geo-lod/CIArchaeologicalSite":54,
+       "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":54
       }
      }
     }
@@ -158,6 +148,821 @@ var tree={
     "data":{
      "from":{},
      "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/ci_findspots_dataset",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":" (ci:ci_findspots_dataset)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/ci_findspots_generation_input_ci_pipeline_py",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":"ci_pipeline.py (ci:ci_findspots_generation_input_ci_pipeline_py)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/ci_findspots_generation_input_cifindspots_part_full_csv",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":"cifindspots_part_full.csv (ci:ci_findspots_generation_input_cifindspots_part_full_csv)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_1_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Acerra Sink (ci:cisite_1)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_10_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Marina di Cassano (Naples) (ci:cisite_10)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_101_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Orlovat (ci:cisite_101)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_102_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Stala\u0107 (ci:cisite_102)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_103_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Dunaszekcs\u0151 (ci:cisite_103)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_104_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Batajnica (ci:cisite_104)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_105_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Rasova (ci:cisite_105)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_106_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Lake Prespa (ci:cisite_106)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_11_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Massaquano (Naples) (ci:cisite_11)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_12_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Monte Echia (Naples) (ci:cisite_12)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_13_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Lago Grande di Monticchio (ci:cisite_13)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_14_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Monticchio (Bagni) (ci:cisite_14)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_15_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Monticchio Lakes (ci:cisite_15)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_16_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Murge Plateau (ci:cisite_16)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_17_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Naples (ci:cisite_17)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_18_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Pacognano (ci:cisite_18)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_19_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Paglicci Cave (ci:cisite_19)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_2_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Acqua Fidia (ci:cisite_2)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_20_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Pellezzano (ci:cisite_20)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_201_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Auel Maar AU3 (ci:cisite_201)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_202_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Auel Maar AU4 (ci:cisite_202)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_203_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Dehner Maar DE3 (ci:cisite_203)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_21_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Penta (ci:cisite_21)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_22_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Phlegraean Fields (ci:cisite_22)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_23_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Ponti Rossi (Naples) (ci:cisite_23)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_24_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Pozzuoli Bay (ci:cisite_24)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_25_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Pucara (ci:cisite_25)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_26_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Punta Marmolite (ci:cisite_26)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_27_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Sant\u2018 Agata dei due Golfi (ci:cisite_27)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_28_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Sant\u2018 Angelo a Scala (ci:cisite_28)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_29_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"San Marco (ci:cisite_29)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_3_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Capezzano (ci:cisite_3)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_30_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"San Nicola La Strada (ci:cisite_30)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_31_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Scarafea Area (ci:cisite_31)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_32_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Serino (ci:cisite_32)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_33_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Starza (ci:cisite_33)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_34_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Torregaveta (ci:cisite_34)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_35_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Trefola (ci:cisite_35)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_36_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Tufara (ci:cisite_36)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_37_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Tufarella Area (ci:cisite_37)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_38_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Vico Equense (ci:cisite_38)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_39_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Villa di Briano (Naples) (ci:cisite_39)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_4_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Casola (ci:cisite_4)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_40_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Voscone Area (ci:cisite_40)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_41_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Lake Ohrid (Albania) (ci:cisite_41)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_42_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Kozarnika Cave (Bulgaria) (ci:cisite_42)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_43_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Temnata Cave (Bulgaria) (ci:cisite_43)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_44_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Toplitsa Cave (Bulgaria) (ci:cisite_44)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_45_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Franchthi Cave (Greece) (ci:cisite_45)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_46_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Klissoura (Greece) (ci:cisite_46)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_47_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Tenaghi Philippon (Greece) (ci:cisite_47)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_48_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Susak Island (Greece) (ci:cisite_48)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_49_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Lake Ohrid (Macedonia) (ci:cisite_49)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_5_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Castelcivita Cave (ci:cisite_5)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_50_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Golema Pesht Cave near Zdunje (Macedonia) (ci:cisite_50)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_51_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Crvena Stiljena (Montenegro) (ci:cisite_51)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_52_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Urluia (Romania) (ci:cisite_52)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_53_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Dobrogea (Romania) (ci:cisite_53)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_54_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Vlasca (Romania) (ci:cisite_54)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_55_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Lower Danube Basin (Romania) (ci:cisite_55)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_56_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Bratul Borcea (Romania) (ci:cisite_56)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_57_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Balta Alba (Romania) (ci:cisite_57)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_58_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Russian Plane (ci:cisite_58)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_59_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Kostenki-Borshchevo (Russia) (ci:cisite_59)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_6_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Copecchia (ci:cisite_6)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_60_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Kostenki (Russia) (ci:cisite_60)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_61_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Kisiljevo (Serbia) (ci:cisite_61)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_62_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Tabula Traiana (Serbia) (ci:cisite_62)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_63_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Titel Pleateau (Serbia) (ci:cisite_63)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_64_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Southern Ukraine (ci:cisite_64)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_65_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Haua-Fteah (Libya) (ci:cisite_65)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_7_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Cuma (ci:cisite_7)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_8_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Gulf of Naples (ci:cisite_8)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/ci/cisite_9_suniv0_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"geoinstance",
+    "text":"Lago Patria (Naples) (ci:cisite_9)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://www.w3.org/ns/prov#Entity",
+    "parent":"#",
+    "type":"halfgeoclass",
+    "instancecount":77,
+    "text":"Entity (prov:Entity) [84]",
+    "data":{
+     "from":{
+      "http://www.w3.org/2000/01/rdf-schema#member":{
+       "http://www.w3.org/2004/02/skos/core#Collection":3,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
+      },
+      "http://www.w3.org/ns/prov#used":{
+       "http://www.w3.org/ns/prov#Activity":2
+      }
+     },
+     "to":{
+      "http://purl.org/dc/terms/identifier":{
+       "instancecount":2
+      },
+      "http://rdfs.org/ns/void#inDataset":{
+       "instancecount":3,
+       "http://www.w3.org/ns/adms#Asset":3,
+       "http://rdfs.org/ns/void#Dataset":3
+      },
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
+       "instancecount":3
+      },
+      "http://www.w3.org/2000/01/rdf-schema#label":{
+       "instancecount":2
+      },
+      "http://purl.org/dc/terms/created":{
+       "instancecount":1
+      },
+      "http://www.w3.org/2002/07/owl#versionInfo":{
+       "instancecount":1
+      },
+      "http://www.w3.org/ns/prov#wasGeneratedBy":{
+       "instancecount":1,
+       "http://www.w3.org/ns/prov#Activity":1
+      }
+     }
     }
    },
    {
@@ -2392,26 +3197,58 @@ var tree={
     }
    },
    {
+    "id":"http://w3id.org/geo-lod/ci/ci_findspots_generation",
+    "parent":"http://www.w3.org/ns/prov#Activity",
+    "type":"instance",
+    "text":"CI findspot RDF generation (ci:ci_findspots_generation)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
     "id":"http://www.w3.org/ns/prov#Activity",
     "parent":"#",
     "type":"class",
-    "instancecount":148,
-    "text":"Activity (prov:Activity) [148]",
+    "instancecount":149,
+    "text":"Activity (prov:Activity) [151]",
     "data":{
      "from":{
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "http://www.w3.org/2004/02/skos/core#Collection":222
+       "http://www.w3.org/2004/02/skos/core#Collection":223
       },
       "http://www.w3.org/ns/prov#wasGeneratedBy":{
        "http://fuzzy-sl.squirrel.link/ontology/Site":148,
        "http://w3id.org/geo-lod/CIFindspot":148,
-       "http://www.w3.org/ns/prov#Entity":148,
+       "http://www.w3.org/ns/prov#Entity":149,
        "https://pleiades.stoa.org/places/vocab#Place":148,
        "http://w3id.org/geo-lod/CIArchaeologicalSite":18,
        "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":18
+      },
+      "http://www.w3.org/ns/prov#wasInformedBy":{
+       "http://www.w3.org/ns/prov#Activity":74
       }
      },
      "to":{
+      "http://rdfs.org/ns/void#inDataset":{
+       "instancecount":149,
+       "http://www.w3.org/ns/adms#Asset":149,
+       "http://rdfs.org/ns/void#Dataset":149,
+       "http://www.w3.org/ns/ldp#Resource":23,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":23
+      },
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
+       "instancecount":223
+      },
+      "http://www.w3.org/ns/prov#wasAssociatedWith":{
+       "instancecount":150,
+       "http://www.w3.org/ns/prov#Agent":74,
+       "http://xmlns.com/foaf/0.1/Person":74
+      },
+      "http://www.w3.org/ns/prov#wasInformedBy":{
+       "instancecount":74,
+       "http://www.w3.org/ns/prov#Activity":74
+      },
       "http://fuzzy-sl.squirrel.link/ontology/activityDesc":{
        "instancecount":74
       },
@@ -2421,41 +3258,26 @@ var tree={
       "http://fuzzy-sl.squirrel.link/ontology/hasSourceType":{
        "instancecount":74
       },
-      "http://rdfs.org/ns/void#inDataset":{
-       "instancecount":148,
-       "http://rdfs.org/ns/void#Dataset":148,
-       "http://www.w3.org/ns/adms#Asset":148,
-       "http://www.w3.org/ns/ldp#Resource":122,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":122
-      },
       "http://w3id.org/geo-lod/hasCertaintyLevel":{
        "instancecount":74
       },
       "http://w3id.org/geo-lod/hasLiteratureReference":{
        "instancecount":100
       },
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
-       "instancecount":222
-      },
-      "http://www.w3.org/ns/prov#endedAtTime":{
-       "instancecount":148
-      },
-      "http://www.w3.org/ns/prov#startedAtTime":{
-       "instancecount":148
-      },
       "http://www.w3.org/ns/prov#used":{
-       "instancecount":74,
+       "instancecount":76,
        "http://fuzzy-sl.squirrel.link/ontology/Site":74,
        "http://w3id.org/geo-lod/CIFindspot":74,
-       "http://www.w3.org/ns/prov#Entity":74,
+       "http://www.w3.org/ns/prov#Entity":76,
        "https://pleiades.stoa.org/places/vocab#Place":74,
        "http://w3id.org/geo-lod/CIArchaeologicalSite":9,
        "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":9
       },
-      "http://www.w3.org/ns/prov#wasAssociatedWith":{
-       "instancecount":148,
-       "http://www.w3.org/ns/prov#Agent":74,
-       "http://xmlns.com/foaf/0.1/Person":74
+      "http://www.w3.org/2000/01/rdf-schema#label":{
+       "instancecount":1
+      },
+      "http://www.w3.org/2002/07/owl#versionInfo":{
+       "instancecount":1
       }
      }
     }
@@ -3969,17 +4791,17 @@ var tree={
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "http://www.opengis.net/ont/geosparql#GeometryCollection":148,
-       "http://www.w3.org/ns/ldp#Resource":29,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":29
+       "http://www.w3.org/ns/ldp#Resource":56,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":56
       }
      },
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":74,
-       "http://rdfs.org/ns/void#Dataset":74,
        "http://www.w3.org/ns/adms#Asset":74,
-       "http://www.w3.org/ns/ldp#Resource":59,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":59
+       "http://rdfs.org/ns/void#Dataset":74,
+       "http://www.w3.org/ns/ldp#Resource":13,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":13
       },
       "http://w3id.org/geo-lod/hasCertaintyDescription":{
        "instancecount":74
@@ -3997,7 +4819,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_1_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_1_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Acerra Sink (ci:cisite_1)",
@@ -4007,7 +4829,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_10_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_10_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Marina di Cassano (Naples) (ci:cisite_10)",
@@ -4017,7 +4839,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_101_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_101_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Orlovat (ci:cisite_101)",
@@ -4027,7 +4849,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_102_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_102_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Stala\u0107 (ci:cisite_102)",
@@ -4037,7 +4859,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_103_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_103_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Dunaszekcs\u0151 (ci:cisite_103)",
@@ -4047,7 +4869,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_104_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_104_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Batajnica (ci:cisite_104)",
@@ -4057,7 +4879,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_105_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_105_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Rasova (ci:cisite_105)",
@@ -4067,7 +4889,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_106_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_106_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Lake Prespa (ci:cisite_106)",
@@ -4077,7 +4899,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_11_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_11_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Massaquano (Naples) (ci:cisite_11)",
@@ -4087,7 +4909,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_12_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_12_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Monte Echia (Naples) (ci:cisite_12)",
@@ -4097,7 +4919,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_13_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_13_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Lago Grande di Monticchio (ci:cisite_13)",
@@ -4107,7 +4929,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_14_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_14_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Monticchio (Bagni) (ci:cisite_14)",
@@ -4117,7 +4939,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_15_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_15_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Monticchio Lakes (ci:cisite_15)",
@@ -4127,7 +4949,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_16_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_16_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Murge Plateau (ci:cisite_16)",
@@ -4137,7 +4959,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_17_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_17_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Naples (ci:cisite_17)",
@@ -4147,7 +4969,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_18_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_18_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Pacognano (ci:cisite_18)",
@@ -4157,7 +4979,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_19_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_19_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Paglicci Cave (ci:cisite_19)",
@@ -4167,7 +4989,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_2_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_2_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Acqua Fidia (ci:cisite_2)",
@@ -4177,7 +4999,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_20_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_20_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Pellezzano (ci:cisite_20)",
@@ -4187,7 +5009,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_201_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_201_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Auel Maar AU3 (ci:cisite_201)",
@@ -4197,7 +5019,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_202_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_202_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Auel Maar AU4 (ci:cisite_202)",
@@ -4207,7 +5029,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_203_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_203_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Dehner Maar DE3 (ci:cisite_203)",
@@ -4217,7 +5039,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_21_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_21_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Penta (ci:cisite_21)",
@@ -4227,7 +5049,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_22_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_22_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Phlegraean Fields (ci:cisite_22)",
@@ -4237,7 +5059,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_23_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_23_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Ponti Rossi (Naples) (ci:cisite_23)",
@@ -4247,7 +5069,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_24_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_24_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Pozzuoli Bay (ci:cisite_24)",
@@ -4257,7 +5079,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_25_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_25_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Pucara (ci:cisite_25)",
@@ -4267,7 +5089,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_26_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_26_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Punta Marmolite (ci:cisite_26)",
@@ -4277,7 +5099,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_27_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_27_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Sant\u2018 Agata dei due Golfi (ci:cisite_27)",
@@ -4287,7 +5109,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_28_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_28_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Sant\u2018 Angelo a Scala (ci:cisite_28)",
@@ -4297,7 +5119,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_29_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_29_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"San Marco (ci:cisite_29)",
@@ -4307,7 +5129,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_3_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_3_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Capezzano (ci:cisite_3)",
@@ -4317,7 +5139,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_30_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_30_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"San Nicola La Strada (ci:cisite_30)",
@@ -4327,7 +5149,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_31_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_31_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Scarafea Area (ci:cisite_31)",
@@ -4337,7 +5159,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_32_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_32_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Serino (ci:cisite_32)",
@@ -4347,7 +5169,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_33_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_33_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Starza (ci:cisite_33)",
@@ -4357,7 +5179,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_34_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_34_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Torregaveta (ci:cisite_34)",
@@ -4367,7 +5189,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_35_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_35_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Trefola (ci:cisite_35)",
@@ -4377,7 +5199,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_36_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_36_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Tufara (ci:cisite_36)",
@@ -4387,7 +5209,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_37_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_37_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Tufarella Area (ci:cisite_37)",
@@ -4397,7 +5219,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_38_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_38_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Vico Equense (ci:cisite_38)",
@@ -4407,7 +5229,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_39_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_39_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Villa di Briano (Naples) (ci:cisite_39)",
@@ -4417,7 +5239,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_4_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_4_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Casola (ci:cisite_4)",
@@ -4427,7 +5249,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_40_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_40_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Voscone Area (ci:cisite_40)",
@@ -4437,7 +5259,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_41_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_41_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Lake Ohrid (Albania) (ci:cisite_41)",
@@ -4447,7 +5269,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_42_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_42_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Kozarnika Cave (Bulgaria) (ci:cisite_42)",
@@ -4457,7 +5279,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_43_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_43_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Temnata Cave (Bulgaria) (ci:cisite_43)",
@@ -4467,7 +5289,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_44_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_44_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Toplitsa Cave (Bulgaria) (ci:cisite_44)",
@@ -4477,7 +5299,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_45_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_45_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Franchthi Cave (Greece) (ci:cisite_45)",
@@ -4487,7 +5309,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_46_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_46_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Klissoura (Greece) (ci:cisite_46)",
@@ -4497,7 +5319,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_47_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_47_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Tenaghi Philippon (Greece) (ci:cisite_47)",
@@ -4507,7 +5329,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_48_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_48_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Susak Island (Greece) (ci:cisite_48)",
@@ -4517,7 +5339,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_49_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_49_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Lake Ohrid (Macedonia) (ci:cisite_49)",
@@ -4527,7 +5349,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_5_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_5_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Castelcivita Cave (ci:cisite_5)",
@@ -4537,7 +5359,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_50_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_50_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Golema Pesht Cave near Zdunje (Macedonia) (ci:cisite_50)",
@@ -4547,7 +5369,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_51_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_51_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Crvena Stiljena (Montenegro) (ci:cisite_51)",
@@ -4557,7 +5379,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_52_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_52_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Urluia (Romania) (ci:cisite_52)",
@@ -4567,7 +5389,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_53_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_53_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Dobrogea (Romania) (ci:cisite_53)",
@@ -4577,7 +5399,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_54_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_54_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Vlasca (Romania) (ci:cisite_54)",
@@ -4587,7 +5409,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_55_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_55_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Lower Danube Basin (Romania) (ci:cisite_55)",
@@ -4597,7 +5419,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_56_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_56_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Bratul Borcea (Romania) (ci:cisite_56)",
@@ -4607,7 +5429,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_57_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_57_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Balta Alba (Romania) (ci:cisite_57)",
@@ -4617,7 +5439,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_58_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_58_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Russian Plane (ci:cisite_58)",
@@ -4627,7 +5449,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_59_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_59_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Kostenki-Borshchevo (Russia) (ci:cisite_59)",
@@ -4637,7 +5459,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_6_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_6_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Copecchia (ci:cisite_6)",
@@ -4647,7 +5469,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_60_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_60_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Kostenki (Russia) (ci:cisite_60)",
@@ -4657,7 +5479,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_61_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_61_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Kisiljevo (Serbia) (ci:cisite_61)",
@@ -4667,7 +5489,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_62_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_62_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Tabula Traiana (Serbia) (ci:cisite_62)",
@@ -4677,7 +5499,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_63_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_63_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Titel Pleateau (Serbia) (ci:cisite_63)",
@@ -4687,7 +5509,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_64_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_64_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Southern Ukraine (ci:cisite_64)",
@@ -4697,7 +5519,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_65_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_65_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Haua-Fteah (Libya) (ci:cisite_65)",
@@ -4707,7 +5529,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_7_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_7_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Cuma (ci:cisite_7)",
@@ -4717,7 +5539,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_8_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_8_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Gulf of Naples (ci:cisite_8)",
@@ -4727,7 +5549,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_9_suniv0_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_9_suniv1_",
     "parent":"http://fuzzy-sl.squirrel.link/ontology/Site",
     "type":"geoinstance",
     "text":"Lago Patria (Naples) (ci:cisite_9)",
@@ -4748,7 +5570,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_1_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_1_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Acerra Sink (ci:cisite_1)",
@@ -4758,7 +5580,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_10_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_10_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Marina di Cassano (Naples) (ci:cisite_10)",
@@ -4768,7 +5590,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_101_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_101_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Orlovat (ci:cisite_101)",
@@ -4778,7 +5600,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_102_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_102_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Stala\u0107 (ci:cisite_102)",
@@ -4788,7 +5610,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_103_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_103_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Dunaszekcs\u0151 (ci:cisite_103)",
@@ -4798,7 +5620,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_104_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_104_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Batajnica (ci:cisite_104)",
@@ -4808,7 +5630,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_105_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_105_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Rasova (ci:cisite_105)",
@@ -4818,7 +5640,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_106_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_106_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Lake Prespa (ci:cisite_106)",
@@ -4828,7 +5650,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_11_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_11_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Massaquano (Naples) (ci:cisite_11)",
@@ -4838,7 +5660,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_12_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_12_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Monte Echia (Naples) (ci:cisite_12)",
@@ -4848,7 +5670,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_13_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_13_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Lago Grande di Monticchio (ci:cisite_13)",
@@ -4858,7 +5680,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_14_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_14_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Monticchio (Bagni) (ci:cisite_14)",
@@ -4868,7 +5690,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_15_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_15_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Monticchio Lakes (ci:cisite_15)",
@@ -4878,7 +5700,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_16_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_16_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Murge Plateau (ci:cisite_16)",
@@ -4888,7 +5710,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_17_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_17_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Naples (ci:cisite_17)",
@@ -4898,7 +5720,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_18_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_18_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Pacognano (ci:cisite_18)",
@@ -4908,7 +5730,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_19_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_19_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Paglicci Cave (ci:cisite_19)",
@@ -4918,7 +5740,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_2_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_2_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Acqua Fidia (ci:cisite_2)",
@@ -4928,7 +5750,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_20_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_20_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Pellezzano (ci:cisite_20)",
@@ -4938,7 +5760,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_201_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_201_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Auel Maar AU3 (ci:cisite_201)",
@@ -4948,7 +5770,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_202_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_202_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Auel Maar AU4 (ci:cisite_202)",
@@ -4958,7 +5780,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_203_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_203_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Dehner Maar DE3 (ci:cisite_203)",
@@ -4968,7 +5790,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_21_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_21_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Penta (ci:cisite_21)",
@@ -4978,7 +5800,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_22_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_22_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Phlegraean Fields (ci:cisite_22)",
@@ -4988,7 +5810,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_23_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_23_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Ponti Rossi (Naples) (ci:cisite_23)",
@@ -4998,7 +5820,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_24_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_24_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Pozzuoli Bay (ci:cisite_24)",
@@ -5008,7 +5830,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_25_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_25_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Pucara (ci:cisite_25)",
@@ -5018,7 +5840,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_26_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_26_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Punta Marmolite (ci:cisite_26)",
@@ -5028,7 +5850,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_27_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_27_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Sant\u2018 Agata dei due Golfi (ci:cisite_27)",
@@ -5038,7 +5860,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_28_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_28_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Sant\u2018 Angelo a Scala (ci:cisite_28)",
@@ -5048,7 +5870,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_29_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_29_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"San Marco (ci:cisite_29)",
@@ -5058,7 +5880,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_3_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_3_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Capezzano (ci:cisite_3)",
@@ -5068,7 +5890,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_30_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_30_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"San Nicola La Strada (ci:cisite_30)",
@@ -5078,7 +5900,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_31_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_31_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Scarafea Area (ci:cisite_31)",
@@ -5088,7 +5910,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_32_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_32_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Serino (ci:cisite_32)",
@@ -5098,7 +5920,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_33_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_33_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Starza (ci:cisite_33)",
@@ -5108,7 +5930,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_34_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_34_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Torregaveta (ci:cisite_34)",
@@ -5118,7 +5940,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_35_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_35_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Trefola (ci:cisite_35)",
@@ -5128,7 +5950,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_36_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_36_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Tufara (ci:cisite_36)",
@@ -5138,7 +5960,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_37_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_37_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Tufarella Area (ci:cisite_37)",
@@ -5148,7 +5970,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_38_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_38_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Vico Equense (ci:cisite_38)",
@@ -5158,7 +5980,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_39_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_39_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Villa di Briano (Naples) (ci:cisite_39)",
@@ -5168,7 +5990,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_4_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_4_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Casola (ci:cisite_4)",
@@ -5178,7 +6000,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_40_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_40_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Voscone Area (ci:cisite_40)",
@@ -5188,7 +6010,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_41_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_41_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Lake Ohrid (Albania) (ci:cisite_41)",
@@ -5198,7 +6020,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_42_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_42_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Kozarnika Cave (Bulgaria) (ci:cisite_42)",
@@ -5208,7 +6030,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_43_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_43_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Temnata Cave (Bulgaria) (ci:cisite_43)",
@@ -5218,7 +6040,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_44_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_44_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Toplitsa Cave (Bulgaria) (ci:cisite_44)",
@@ -5228,7 +6050,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_45_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_45_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Franchthi Cave (Greece) (ci:cisite_45)",
@@ -5238,7 +6060,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_46_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_46_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Klissoura (Greece) (ci:cisite_46)",
@@ -5248,7 +6070,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_47_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_47_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Tenaghi Philippon (Greece) (ci:cisite_47)",
@@ -5258,7 +6080,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_48_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_48_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Susak Island (Greece) (ci:cisite_48)",
@@ -5268,7 +6090,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_49_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_49_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Lake Ohrid (Macedonia) (ci:cisite_49)",
@@ -5278,7 +6100,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_5_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_5_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Castelcivita Cave (ci:cisite_5)",
@@ -5288,7 +6110,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_50_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_50_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Golema Pesht Cave near Zdunje (Macedonia) (ci:cisite_50)",
@@ -5298,7 +6120,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_51_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_51_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Crvena Stiljena (Montenegro) (ci:cisite_51)",
@@ -5308,7 +6130,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_52_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_52_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Urluia (Romania) (ci:cisite_52)",
@@ -5318,7 +6140,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_53_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_53_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Dobrogea (Romania) (ci:cisite_53)",
@@ -5328,7 +6150,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_54_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_54_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Vlasca (Romania) (ci:cisite_54)",
@@ -5338,7 +6160,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_55_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_55_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Lower Danube Basin (Romania) (ci:cisite_55)",
@@ -5348,7 +6170,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_56_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_56_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Bratul Borcea (Romania) (ci:cisite_56)",
@@ -5358,7 +6180,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_57_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_57_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Balta Alba (Romania) (ci:cisite_57)",
@@ -5368,7 +6190,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_58_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_58_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Russian Plane (ci:cisite_58)",
@@ -5378,7 +6200,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_59_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_59_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Kostenki-Borshchevo (Russia) (ci:cisite_59)",
@@ -5388,7 +6210,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_6_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_6_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Copecchia (ci:cisite_6)",
@@ -5398,7 +6220,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_60_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_60_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Kostenki (Russia) (ci:cisite_60)",
@@ -5408,7 +6230,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_61_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_61_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Kisiljevo (Serbia) (ci:cisite_61)",
@@ -5418,7 +6240,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_62_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_62_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Tabula Traiana (Serbia) (ci:cisite_62)",
@@ -5428,7 +6250,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_63_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_63_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Titel Pleateau (Serbia) (ci:cisite_63)",
@@ -5438,7 +6260,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_64_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_64_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Southern Ukraine (ci:cisite_64)",
@@ -5448,7 +6270,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_65_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_65_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Haua-Fteah (Libya) (ci:cisite_65)",
@@ -5458,7 +6280,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_7_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_7_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Cuma (ci:cisite_7)",
@@ -5468,7 +6290,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_8_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_8_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Gulf of Naples (ci:cisite_8)",
@@ -5478,7 +6300,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/ci/cisite_9_suniv1_",
+    "id":"http://w3id.org/geo-lod/ci/cisite_9_suniv2_",
     "parent":"http://w3id.org/geo-lod/CIFindspot",
     "type":"geoinstance",
     "text":"Lago Patria (Naples) (ci:cisite_9)",
@@ -5493,757 +6315,6 @@ var tree={
     "type":"geoclass",
     "instancecount":74,
     "text":"CIFindspot (geolod:CIFindspot) [74]",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_1_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Acerra Sink (ci:cisite_1)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_10_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Marina di Cassano (Naples) (ci:cisite_10)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_101_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Orlovat (ci:cisite_101)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_102_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Stala\u0107 (ci:cisite_102)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_103_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Dunaszekcs\u0151 (ci:cisite_103)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_104_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Batajnica (ci:cisite_104)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_105_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Rasova (ci:cisite_105)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_106_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Lake Prespa (ci:cisite_106)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_11_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Massaquano (Naples) (ci:cisite_11)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_12_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Monte Echia (Naples) (ci:cisite_12)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_13_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Lago Grande di Monticchio (ci:cisite_13)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_14_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Monticchio (Bagni) (ci:cisite_14)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_15_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Monticchio Lakes (ci:cisite_15)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_16_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Murge Plateau (ci:cisite_16)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_17_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Naples (ci:cisite_17)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_18_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Pacognano (ci:cisite_18)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_19_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Paglicci Cave (ci:cisite_19)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_2_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Acqua Fidia (ci:cisite_2)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_20_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Pellezzano (ci:cisite_20)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_201_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Auel Maar AU3 (ci:cisite_201)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_202_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Auel Maar AU4 (ci:cisite_202)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_203_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Dehner Maar DE3 (ci:cisite_203)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_21_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Penta (ci:cisite_21)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_22_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Phlegraean Fields (ci:cisite_22)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_23_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Ponti Rossi (Naples) (ci:cisite_23)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_24_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Pozzuoli Bay (ci:cisite_24)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_25_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Pucara (ci:cisite_25)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_26_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Punta Marmolite (ci:cisite_26)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_27_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Sant\u2018 Agata dei due Golfi (ci:cisite_27)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_28_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Sant\u2018 Angelo a Scala (ci:cisite_28)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_29_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"San Marco (ci:cisite_29)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_3_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Capezzano (ci:cisite_3)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_30_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"San Nicola La Strada (ci:cisite_30)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_31_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Scarafea Area (ci:cisite_31)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_32_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Serino (ci:cisite_32)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_33_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Starza (ci:cisite_33)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_34_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Torregaveta (ci:cisite_34)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_35_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Trefola (ci:cisite_35)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_36_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Tufara (ci:cisite_36)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_37_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Tufarella Area (ci:cisite_37)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_38_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Vico Equense (ci:cisite_38)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_39_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Villa di Briano (Naples) (ci:cisite_39)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_4_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Casola (ci:cisite_4)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_40_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Voscone Area (ci:cisite_40)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_41_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Lake Ohrid (Albania) (ci:cisite_41)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_42_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Kozarnika Cave (Bulgaria) (ci:cisite_42)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_43_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Temnata Cave (Bulgaria) (ci:cisite_43)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_44_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Toplitsa Cave (Bulgaria) (ci:cisite_44)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_45_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Franchthi Cave (Greece) (ci:cisite_45)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_46_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Klissoura (Greece) (ci:cisite_46)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_47_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Tenaghi Philippon (Greece) (ci:cisite_47)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_48_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Susak Island (Greece) (ci:cisite_48)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_49_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Lake Ohrid (Macedonia) (ci:cisite_49)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_5_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Castelcivita Cave (ci:cisite_5)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_50_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Golema Pesht Cave near Zdunje (Macedonia) (ci:cisite_50)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_51_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Crvena Stiljena (Montenegro) (ci:cisite_51)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_52_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Urluia (Romania) (ci:cisite_52)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_53_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Dobrogea (Romania) (ci:cisite_53)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_54_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Vlasca (Romania) (ci:cisite_54)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_55_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Lower Danube Basin (Romania) (ci:cisite_55)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_56_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Bratul Borcea (Romania) (ci:cisite_56)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_57_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Balta Alba (Romania) (ci:cisite_57)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_58_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Russian Plane (ci:cisite_58)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_59_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Kostenki-Borshchevo (Russia) (ci:cisite_59)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_6_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Copecchia (ci:cisite_6)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_60_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Kostenki (Russia) (ci:cisite_60)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_61_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Kisiljevo (Serbia) (ci:cisite_61)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_62_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Tabula Traiana (Serbia) (ci:cisite_62)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_63_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Titel Pleateau (Serbia) (ci:cisite_63)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_64_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Southern Ukraine (ci:cisite_64)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_65_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Haua-Fteah (Libya) (ci:cisite_65)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_7_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Cuma (ci:cisite_7)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_8_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Gulf of Naples (ci:cisite_8)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://w3id.org/geo-lod/ci/cisite_9_suniv2_",
-    "parent":"http://www.w3.org/ns/prov#Entity",
-    "type":"geoinstance",
-    "text":"Lago Patria (Naples) (ci:cisite_9)",
-    "data":{
-     "from":{},
-     "to":{}
-    }
-   },
-   {
-    "id":"http://www.w3.org/ns/prov#Entity",
-    "parent":"#",
-    "type":"geoclass",
-    "instancecount":74,
-    "text":"Entity (prov:Entity) [74]",
     "data":{
      "from":{},
      "to":{}
@@ -6998,7 +7069,10 @@ var tree={
     "data":{
      "from":{
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "http://www.opengis.net/ont/geosparql#FeatureCollection":325
+       "http://www.opengis.net/ont/geosparql#FeatureCollection":260,
+       "http://www.w3.org/2004/02/skos/core#Collection":65,
+       "http://www.w3.org/ns/ldp#Resource":26,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":26
       },
       "http://www.w3.org/ns/prov#used":{
        "http://fuzzy-sl.squirrel.link/ontology/Georeferencing":65,
@@ -7006,8 +7080,8 @@ var tree={
       }
      },
      "to":{
-      "http://fuzzy-sl.squirrel.link/ontology/partlyMatch":{
-       "instancecount":8
+      "http://fuzzy-sl.squirrel.link/ontology/spatialCloseMatch":{
+       "instancecount":14
       },
       "http://purl.org/dc/terms/creator":{
        "instancecount":130
@@ -7020,10 +7094,10 @@ var tree={
       },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":65,
-       "http://rdfs.org/ns/void#Dataset":65,
        "http://www.w3.org/ns/adms#Asset":65,
-       "http://www.w3.org/ns/ldp#Resource":54,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":54
+       "http://rdfs.org/ns/void#Dataset":65,
+       "http://www.w3.org/ns/ldp#Resource":8,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":8
       },
       "http://w3id.org/geo-lod/hasCertaintyDescription":{
        "instancecount":65
@@ -7070,14 +7144,14 @@ var tree={
        "http://fuzzy-sl.squirrel.link/ontology/Georeferencing":65,
        "http://www.w3.org/ns/prov#Activity":130
       },
-      "http://fuzzy-sl.squirrel.link/ontology/spatialCloseMatch":{
-       "instancecount":14
-      },
       "http://www.w3.org/2004/02/skos/core#closeMatch":{
        "instancecount":57
       },
       "http://fuzzy-sl.squirrel.link/ontology/dubiousMatch":{
        "instancecount":3
+      },
+      "http://fuzzy-sl.squirrel.link/ontology/partlyMatch":{
+       "instancecount":8
       }
      }
     }
@@ -7282,9 +7356,10 @@ var tree={
     "data":{
      "from":{
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "http://www.opengis.net/ont/geosparql#FeatureCollection":63,
-       "http://www.w3.org/ns/ldp#Resource":8,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":8
+       "http://www.opengis.net/ont/geosparql#FeatureCollection":54,
+       "http://www.w3.org/2004/02/skos/core#Collection":9,
+       "http://www.w3.org/ns/ldp#Resource":5,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":5
       },
       "http://www.w3.org/ns/prov#used":{
        "http://fuzzy-sl.squirrel.link/ontology/Georeferencing":9,
@@ -7303,10 +7378,8 @@ var tree={
       },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":9,
-       "http://rdfs.org/ns/void#Dataset":9,
        "http://www.w3.org/ns/adms#Asset":9,
-       "http://www.w3.org/ns/ldp#Resource":9,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":9
+       "http://rdfs.org/ns/void#Dataset":9
       },
       "http://w3id.org/geo-lod/hasCertaintyDescription":{
        "instancecount":9
@@ -7433,6 +7506,16 @@ var tree={
     }
    },
    {
+    "id":"http://w3id.org/geo-lod/Entity_collection",
+    "parent":"http://www.w3.org/2004/02/skos/core#Collection",
+    "type":"instance",
+    "text":"Entity Instances Collection (geolod:Entity_collection)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
     "id":"http://w3id.org/geo-lod/Georeferencing_collection",
     "parent":"http://www.w3.org/2004/02/skos/core#Collection",
     "type":"instance",
@@ -7456,29 +7539,38 @@ var tree={
     "id":"http://www.w3.org/2004/02/skos/core#Collection",
     "parent":"#",
     "type":"collectionclass",
-    "instancecount":3,
-    "text":"Collection (skos:Collection) [22]",
+    "instancecount":4,
+    "text":"Collection (skos:Collection) [23]",
     "data":{
      "from":{},
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
-       "instancecount":3,
-       "http://rdfs.org/ns/void#Dataset":3,
-       "http://www.w3.org/ns/adms#Asset":3,
-       "http://www.w3.org/ns/ldp#Resource":3,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":3
+       "instancecount":4,
+       "http://www.w3.org/ns/adms#Asset":4,
+       "http://rdfs.org/ns/void#Dataset":4,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
-       "instancecount":5
+       "instancecount":10
       },
       "http://www.w3.org/2000/01/rdf-schema#label":{
-       "instancecount":3
+       "instancecount":4
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "instancecount":227,
+       "instancecount":309,
+       "http://www.opengis.net/ont/geosparql#FeatureCollection":1,
+       "http://www.w3.org/ns/prov#Entity":77,
+       "http://fuzzy-sl.squirrel.link/ontology/Site":74,
+       "http://w3id.org/geo-lod/CIFindspot":74,
+       "https://pleiades.stoa.org/places/vocab#Place":74,
+       "http://w3id.org/geo-lod/CIArchaeologicalSite":9,
+       "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":9,
        "http://fuzzy-sl.squirrel.link/ontology/Georeferencing":148,
-       "http://www.w3.org/ns/prov#Activity":222,
-       "http://www.opengis.net/ont/geosparql#FeatureCollection":1
+       "http://www.w3.org/ns/prov#Activity":223
+      },
+      "http://www.w3.org/ns/dcat#dataset":{
+       "instancecount":5
       }
      }
     }
@@ -7514,10 +7606,8 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":2,
-       "http://rdfs.org/ns/void#Dataset":2,
        "http://www.w3.org/ns/adms#Asset":2,
-       "http://www.w3.org/ns/ldp#Resource":2,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
+       "http://rdfs.org/ns/void#Dataset":2
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":4
@@ -19891,10 +19981,10 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1234,
-       "http://rdfs.org/ns/void#Dataset":1234,
        "http://www.w3.org/ns/adms#Asset":1234,
-       "http://www.w3.org/ns/ldp#Resource":881,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":881
+       "http://rdfs.org/ns/void#Dataset":1234,
+       "http://www.w3.org/ns/ldp#Resource":328,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":328
       },
       "http://w3id.org/geo-lod/ageChronologySpeleothem":{
        "instancecount":1234,
@@ -19919,16 +20009,16 @@ var tree={
       "http://w3id.org/geo-lod/smoothingMethod_median":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/RollingMedianFilter":1234,
-       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":324,
-       "http://www.w3.org/ns/ldp#Resource":324,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":324
+       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":665,
+       "http://www.w3.org/ns/ldp#Resource":665,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":665
       },
       "http://w3id.org/geo-lod/smoothingMethod_savgol":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/SavitzkyGolayFilter":1234,
-       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":232,
-       "http://www.w3.org/ns/ldp#Resource":232,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":232
+       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":718,
+       "http://www.w3.org/ns/ldp#Resource":718,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":718
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1234
@@ -32302,10 +32392,10 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1234,
-       "http://rdfs.org/ns/void#Dataset":1234,
        "http://www.w3.org/ns/adms#Asset":1234,
-       "http://www.w3.org/ns/ldp#Resource":897,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":897
+       "http://rdfs.org/ns/void#Dataset":1234,
+       "http://www.w3.org/ns/ldp#Resource":329,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":329
       },
       "http://w3id.org/geo-lod/ageChronologySpeleothem":{
        "instancecount":1234,
@@ -32320,8 +32410,8 @@ var tree={
       "http://w3id.org/geo-lod/measurementType":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/MeasurementType":1234,
-       "http://www.w3.org/ns/ldp#Resource":748,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":748
+       "http://www.w3.org/ns/ldp#Resource":287,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":287
       },
       "http://w3id.org/geo-lod/smoothedValue_rollingMedian":{
        "instancecount":1234
@@ -32332,16 +32422,16 @@ var tree={
       "http://w3id.org/geo-lod/smoothingMethod_median":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/RollingMedianFilter":1234,
-       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":342,
-       "http://www.w3.org/ns/ldp#Resource":342,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":342
+       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":670,
+       "http://www.w3.org/ns/ldp#Resource":670,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":670
       },
       "http://w3id.org/geo-lod/smoothingMethod_savgol":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/SavitzkyGolayFilter":1234,
-       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":234,
-       "http://www.w3.org/ns/ldp#Resource":234,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":234
+       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":717,
+       "http://www.w3.org/ns/ldp#Resource":717,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":717
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1234
@@ -32382,14 +32472,17 @@ var tree={
        "http://w3id.org/geo-lod/Speleothem":4
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "http://www.w3.org/2004/02/skos/core#Collection":1
+       "http://www.w3.org/2004/02/skos/core#Collection":1,
+       "http://www.opengis.net/ont/geosparql#FeatureCollection":1,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       }
      },
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
-       "http://www.w3.org/ns/adms#Asset":1
+       "http://www.w3.org/ns/adms#Asset":1,
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://w3id.org/geo-lod/countD13CSamples":{
        "instancecount":1
@@ -32474,10 +32567,10 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":4,
-       "http://rdfs.org/ns/void#Dataset":4,
        "http://www.w3.org/ns/adms#Asset":4,
-       "http://www.w3.org/ns/ldp#Resource":2,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
+       "http://rdfs.org/ns/void#Dataset":4,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       },
       "http://w3id.org/geo-lod/collectedFrom":{
        "instancecount":4,
@@ -32525,10 +32618,8 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
        "http://www.w3.org/ns/adms#Asset":1,
-       "http://www.w3.org/ns/ldp#Resource":1,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1
@@ -32567,10 +32658,8 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
        "http://www.w3.org/ns/adms#Asset":1,
-       "http://www.w3.org/ns/ldp#Resource":1,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1
@@ -32610,29 +32699,31 @@ var tree={
     "data":{
      "from":{
       "http://w3id.org/geo-lod/measurementType":{
-       "http://w3id.org/geo-lod/Delta18OSpeleothemObservation":1234,
-       "http://w3id.org/geo-lod/Delta13CSpeleothemObservation":1234
+       "http://w3id.org/geo-lod/Delta13CSpeleothemObservation":1234,
+       "http://w3id.org/geo-lod/Delta18OSpeleothemObservation":1234
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "http://www.w3.org/2004/02/skos/core#Collection":2
+       "http://www.w3.org/2004/02/skos/core#Collection":2,
+       "http://www.w3.org/ns/ldp#Resource":2,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
       }
      },
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":2,
-       "http://rdfs.org/ns/void#Dataset":2,
        "http://www.w3.org/ns/adms#Asset":2,
-       "http://www.w3.org/ns/ldp#Resource":2,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
+       "http://rdfs.org/ns/void#Dataset":2,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":4
       },
-      "http://www.w3.org/2000/01/rdf-schema#comment":{
-       "instancecount":1
-      },
       "http://www.w3.org/2000/01/rdf-schema#label":{
        "instancecount":3
+      },
+      "http://www.w3.org/2000/01/rdf-schema#comment":{
+       "instancecount":1
       }
      }
     }
@@ -32669,10 +32760,8 @@ var tree={
       },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
        "http://www.w3.org/ns/adms#Asset":1,
-       "http://www.w3.org/ns/ldp#Resource":1,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://w3id.org/geo-lod/windowSize":{
        "instancecount":1
@@ -32718,10 +32807,8 @@ var tree={
       },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
        "http://www.w3.org/ns/adms#Asset":1,
-       "http://www.w3.org/ns/ldp#Resource":1,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://w3id.org/geo-lod/polyOrder":{
        "instancecount":1
@@ -32767,10 +32854,8 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
        "http://www.w3.org/ns/adms#Asset":1,
-       "http://www.w3.org/ns/ldp#Resource":1,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1
@@ -32807,7 +32892,7 @@ var tree={
    {
     "id":"http://w3id.org/geo-lod/Cave_collection",
     "parent":"http://www.w3.org/2004/02/skos/core#Collection",
-    "type":"featurecollection",
+    "type":"instance",
     "text":"Cave Instances Collection (geolod:Cave_collection)",
     "data":{
      "from":{},
@@ -32919,6 +33004,36 @@ var tree={
     "parent":"http://www.opengis.net/ont/geosparql#FeatureCollection",
     "type":"featurecollection",
     "text":"ArchaeologicalCaveSite Instances Collection (geolod:ArchaeologicalCaveSite_collection)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/SISAL_Sites_Dataset",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":" (geolod:SISAL_Sites_Dataset)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/SISAL_Sites_Generation_input_plot_sisal_from_csv_py",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":"plot_sisal_from_csv.py (geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/SISAL_Sites_Generation_input_v_sites_all_csv",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":"v_sites_all.csv (geolod:SISAL_Sites_Generation_input_v_sites_all_csv)",
     "data":{
      "from":{},
      "to":{}
@@ -35969,6 +36084,16 @@ var tree={
     "parent":"http://www.opengis.net/ont/sf#Point",
     "type":"geoinstance",
     "text":" (geolod:Cave_site_0366_Geometry)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/SISAL_Sites_Generation",
+    "parent":"http://www.w3.org/ns/prov#Activity",
+    "type":"instance",
+    "text":"SISAL cave site RDF generation (geolod:SISAL_Sites_Generation)",
     "data":{
      "from":{},
      "to":{}
@@ -39848,6 +39973,22 @@ var tree={
       }
      },
      "to":{
+      "http://rdfs.org/ns/void#inDataset":{
+       "instancecount":2,
+       "http://www.w3.org/ns/adms#Asset":2,
+       "http://rdfs.org/ns/void#Dataset":2
+      },
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
+       "instancecount":2
+      },
+      "http://www.w3.org/2000/01/rdf-schema#label":{
+       "instancecount":2
+      },
+      "http://www.w3.org/ns/dcat#dataset":{
+       "instancecount":6,
+       "http://www.w3.org/ns/dcat#Dataset":6,
+       "http://www.w3.org/ns/prov#Entity":2
+      },
       "http://purl.org/dc/terms/created":{
        "instancecount":1
       },
@@ -39862,21 +40003,6 @@ var tree={
       },
       "http://purl.org/dc/terms/title":{
        "instancecount":1
-      },
-      "http://rdfs.org/ns/void#inDataset":{
-       "instancecount":2,
-       "http://rdfs.org/ns/void#Dataset":2,
-       "http://www.w3.org/ns/adms#Asset":2
-      },
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
-       "instancecount":2
-      },
-      "http://www.w3.org/2000/01/rdf-schema#label":{
-       "instancecount":2
-      },
-      "http://www.w3.org/ns/dcat#dataset":{
-       "instancecount":6,
-       "http://www.w3.org/ns/dcat#Dataset":6
       }
      }
     }
@@ -39927,8 +40053,8 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
-       "http://www.w3.org/ns/adms#Asset":1
+       "http://www.w3.org/ns/adms#Asset":1,
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span":{
        "instancecount":1
@@ -39965,7 +40091,7 @@ var tree={
     }
    },
    {
-    "id":"http://w3id.org/geo-lod/EPICA_DomeC_Dataset",
+    "id":"http://w3id.org/geo-lod/EPICA_DomeC_Dataset_suniv0_",
     "parent":"http://www.w3.org/ns/dcat#Dataset",
     "type":"instance",
     "text":"EPICA Dome C Ice Core \u2013 CH\u2084 and \u03b4\u00b9\u2078O Records (geolod:EPICA_DomeC_Dataset)",
@@ -39993,30 +40119,30 @@ var tree={
     "data":{
      "from":{
       "http://www.w3.org/ns/dcat#dataset":{
-       "http://www.w3.org/ns/dcat#Catalog":6
+       "http://www.w3.org/ns/dcat#Catalog":4
       }
      },
      "to":{
       "http://purl.org/dc/terms/description":{
-       "instancecount":3
+       "instancecount":2
       },
       "http://purl.org/dc/terms/license":{
-       "instancecount":3
+       "instancecount":2
       },
       "http://purl.org/dc/terms/source":{
-       "instancecount":4,
-       "http://purl.org/dc/terms/BibliographicResource":4
+       "instancecount":2,
+       "http://purl.org/dc/terms/BibliographicResource":2
       },
       "http://purl.org/dc/terms/title":{
-       "instancecount":3
+       "instancecount":2
       },
       "http://rdfs.org/ns/void#inDataset":{
-       "instancecount":3,
-       "http://rdfs.org/ns/void#Dataset":3,
-       "http://www.w3.org/ns/adms#Asset":3
+       "instancecount":2,
+       "http://www.w3.org/ns/adms#Asset":2,
+       "http://rdfs.org/ns/void#Dataset":2
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
-       "instancecount":3
+       "instancecount":2
       },
       "http://www.w3.org/ns/dcat#distribution":{
        "instancecount":2,
@@ -40026,19 +40152,58 @@ var tree={
        "instancecount":2114,
        "http://www.ics.forth.gr/isl/CRMsci/S4_Observation":2114,
        "http://www.w3.org/ns/sosa/Observation":2114
-      },
-      "http://purl.org/dc/terms/created":{
-       "instancecount":1
-      },
-      "http://purl.org/dc/terms/publisher":{
-       "instancecount":1
-      },
-      "http://w3id.org/geo-lod/hasObservation":{
-       "instancecount":2114,
-       "http://www.ics.forth.gr/isl/CRMsci/S4_Observation":2114,
-       "http://www.w3.org/ns/sosa/Observation":2114
       }
      }
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/EPICA_DomeC_Dataset_suniv1_",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":"EPICA Dome C Ice Core \u2013 CH\u2084 and \u03b4\u00b9\u2078O Records (geolod:EPICA_DomeC_Dataset)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/EPICA_DomeC_Generation_input_EDC_CH4_tab",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":"EDC_CH4.tab (geolod:EPICA_DomeC_Generation_input_EDC_CH4_tab)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":"EPICA_Dome_C_d18O.tab (geolod:EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/EPICA_DomeC_Generation_input_plot_epica_from_tab_py",
+    "parent":"http://www.w3.org/ns/prov#Entity",
+    "type":"instance",
+    "text":"plot_epica_from_tab.py (geolod:EPICA_DomeC_Generation_input_plot_epica_from_tab_py)",
+    "data":{
+     "from":{},
+     "to":{}
+    }
+   },
+   {
+    "id":"http://w3id.org/geo-lod/EPICA_DomeC_Generation",
+    "parent":"http://www.w3.org/ns/prov#Activity",
+    "type":"instance",
+    "text":"EPICA Dome C RDF generation (geolod:EPICA_DomeC_Generation)",
+    "data":{
+     "from":{},
+     "to":{}
     }
    },
    {
@@ -82351,7 +82516,8 @@ var tree={
     "data":{
      "from":{
       "http://w3id.org/geo-lod/hasObservation":{
-       "http://www.w3.org/ns/dcat#Dataset":2114
+       "http://www.w3.org/ns/dcat#Dataset":2114,
+       "http://www.w3.org/ns/prov#Entity":2114
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "http://www.w3.org/ns/sosa/ObservationCollection":2114
@@ -82369,8 +82535,8 @@ var tree={
       },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":2114,
-       "http://rdfs.org/ns/void#Dataset":2114,
-       "http://www.w3.org/ns/adms#Asset":2114
+       "http://www.w3.org/ns/adms#Asset":2114,
+       "http://rdfs.org/ns/void#Dataset":2114
       },
       "http://w3id.org/geo-lod/ageChronology":{
        "instancecount":2114,
@@ -82506,8 +82672,8 @@ var tree={
       },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":2,
-       "http://rdfs.org/ns/void#Dataset":2,
-       "http://www.w3.org/ns/adms#Asset":2
+       "http://www.w3.org/ns/adms#Asset":2,
+       "http://rdfs.org/ns/void#Dataset":2
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":4
@@ -82546,7 +82712,7 @@ var tree={
     "text":"S6_Data_Evaluation (crmsci:S6_Data_Evaluation) [2]",
     "data":{
      "from":{
-      "http://w3id.org/geo-lod/ageChronology":{
+      "http://w3id.org/geo-lod/smoothingMethod_savgol":{
        "http://www.ics.forth.gr/isl/CRMsci/S4_Observation":2114,
        "http://www.w3.org/ns/sosa/Observation":2114
       },
@@ -82557,31 +82723,31 @@ var tree={
        "http://www.ics.forth.gr/isl/CRMsci/S4_Observation":2114,
        "http://www.w3.org/ns/sosa/Observation":2114
       },
-      "http://w3id.org/geo-lod/smoothingMethod_savgol":{
+      "http://w3id.org/geo-lod/ageChronology":{
        "http://www.ics.forth.gr/isl/CRMsci/S4_Observation":2114,
        "http://www.w3.org/ns/sosa/Observation":2114
       }
      },
      "to":{
+      "http://purl.org/dc/terms/references":{
+       "instancecount":2
+      },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":4,
-       "http://rdfs.org/ns/void#Dataset":4,
-       "http://www.w3.org/ns/adms#Asset":4
+       "http://www.w3.org/ns/adms#Asset":4,
+       "http://rdfs.org/ns/void#Dataset":4
+      },
+      "http://w3id.org/geo-lod/polyOrder":{
+       "instancecount":1
+      },
+      "http://w3id.org/geo-lod/windowSize":{
+       "instancecount":2
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":4
       },
       "http://www.w3.org/2000/01/rdf-schema#label":{
        "instancecount":4
-      },
-      "http://purl.org/dc/terms/references":{
-       "instancecount":2
-      },
-      "http://w3id.org/geo-lod/windowSize":{
-       "instancecount":2
-      },
-      "http://w3id.org/geo-lod/polyOrder":{
-       "instancecount":1
       }
      }
     }
@@ -82680,8 +82846,8 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
-       "http://www.w3.org/ns/adms#Asset":1
+       "http://www.w3.org/ns/adms#Asset":1,
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://www.cidoc-crm.org/cidoc-crm/P2_has_type":{
        "instancecount":1
@@ -82811,8 +82977,8 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
-       "http://www.w3.org/ns/adms#Asset":1
+       "http://www.w3.org/ns/adms#Asset":1,
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by":{
        "instancecount":1
@@ -82941,8 +83107,8 @@ var tree={
      "to":{
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
-       "http://rdfs.org/ns/void#Dataset":1,
-       "http://www.w3.org/ns/adms#Asset":1
+       "http://www.w3.org/ns/adms#Asset":1,
+       "http://rdfs.org/ns/void#Dataset":1
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1

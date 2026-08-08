@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/ci/ci_findspots_generation_input_ci_pipeline_py> a <http://www.w3.org/ns/ldp#Resource>,
+        prov:Entity,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "ci_pipeline.py" ;
+    dcterms:identifier "sha256:6e5a5a41a1c6111ab61eef308e73ce3da116bac5820e02aca56407b41357268d" ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> .
+

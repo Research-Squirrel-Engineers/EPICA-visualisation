@@ -1,12 +1,10 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://w3id.org/geo-lod/ci/cisite_57_pyscript> a <http://www.w3.org/ns/ldp#Resource>,
         prov:Activity,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    prov:endedAtTime "2026-08-08T14:34:44.211893+00:00"^^xsd:dateTime ;
-    prov:startedAtTime "2026-08-08T14:34:44.088406+00:00"^^xsd:dateTime ;
-    prov:wasAssociatedWith <https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py> .
+    prov:wasAssociatedWith <https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py> ;
+    prov:wasInformedBy <http://w3id.org/geo-lod/ci/ci_findspots_generation> .
 

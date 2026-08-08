@@ -1,30 +1,30 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix ns1: <http://w3id.org/geo-lod/> .
-@prefix ns2: <http://fuzzy-sl.squirrel.link/ontology/> .
+@prefix ns1: <http://fuzzy-sl.squirrel.link/ontology/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<http://w3id.org/geo-lod/ci/cisite_56> a ns2:Site,
-        ns1:CIFindspot,
+<http://w3id.org/geo-lod/ci/cisite_56> a ns1:Site,
+        ns2:CIFindspot,
         <http://www.w3.org/ns/ldp#Resource>,
         prov:Entity,
         <https://pleiades.stoa.org/places/vocab#Place>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Bratul Borcea (Romania)"@en ;
-    ns2:dubiousMatch <https://sws.geonames.org/684225> ;
+    ns1:dubiousMatch <https://sws.geonames.org/684225> ;
     dcterms:creator <https://orcid.org/0000-0002-3246-3531>,
         <https://orcid.org/0000-0003-1100-6494> ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:rightsHolder <https://orcid.org/0000-0002-3246-3531>,
         <https://orcid.org/0000-0003-1100-6494> ;
-    void:inDataset ns1:geo-lod ;
-    ns1:hasCertaintyDescription "findspot mentioned in a scientific paper"@en ;
-    ns1:hasCertaintyLevel ns2:dubious ;
-    ns1:hasLiteratureReference "Pötter et al., 2021" ;
-    ns1:hasSpatialType ns2:UnknownCategory ;
+    void:inDataset ns2:geo-lod ;
+    ns2:hasCertaintyDescription "findspot mentioned in a scientific paper"@en ;
+    ns2:hasCertaintyLevel ns1:dubious ;
+    ns2:hasLiteratureReference "Pötter et al., 2021" ;
+    ns2:hasSpatialType ns1:UnknownCategory ;
     geo:hasGeometry <http://w3id.org/geo-lod/ci/cisite_56_geom> ;
     rdfs:comment "CI findspot related from literature"@en ;
     skos:prefLabel "Bratul Borcea (Romania)"@en ;

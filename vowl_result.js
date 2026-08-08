@@ -87,315 +87,315 @@ var vowlresult={
   },
   {
    "id": 1,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Entity"
   },
   {
    "id": 2,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Entity"
   },
   {
    "id": 3,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Entity"
   },
   {
    "id": 4,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 5,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 6,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 7,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 8,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 9,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 10,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 11,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 12,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 13,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 14,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 15,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 16,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 17,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 18,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 19,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 20,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 21,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 22,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 23,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 24,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 25,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 26,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 27,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 28,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 29,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 30,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 31,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 32,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 33,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 34,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 35,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 36,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 37,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 38,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 39,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 40,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 41,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 42,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 43,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 44,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 45,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 46,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 47,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 48,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 49,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 50,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 51,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 52,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 53,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 54,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 55,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 56,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 57,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 58,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 59,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 60,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 61,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 62,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 63,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 64,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 65,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 66,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 67,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 68,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 69,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 70,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 71,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 72,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 73,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 74,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 75,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 76,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 77,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 78,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 79,
@@ -403,7 +403,7 @@ var vowlresult={
   },
   {
    "id": 80,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 81,
@@ -411,7 +411,7 @@ var vowlresult={
   },
   {
    "id": 82,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 83,
@@ -419,7 +419,7 @@ var vowlresult={
   },
   {
    "id": 84,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 85,
@@ -427,7 +427,7 @@ var vowlresult={
   },
   {
    "id": 86,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 87,
@@ -435,7 +435,7 @@ var vowlresult={
   },
   {
    "id": 88,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 89,
@@ -443,7 +443,7 @@ var vowlresult={
   },
   {
    "id": 90,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 91,
@@ -451,7 +451,7 @@ var vowlresult={
   },
   {
    "id": 92,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 93,
@@ -459,7 +459,7 @@ var vowlresult={
   },
   {
    "id": 94,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 95,
@@ -467,7 +467,7 @@ var vowlresult={
   },
   {
    "id": 96,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 97,
@@ -475,7 +475,7 @@ var vowlresult={
   },
   {
    "id": 98,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 99,
@@ -483,7 +483,7 @@ var vowlresult={
   },
   {
    "id": 100,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 101,
@@ -491,7 +491,7 @@ var vowlresult={
   },
   {
    "id": 102,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 103,
@@ -499,7 +499,7 @@ var vowlresult={
   },
   {
    "id": 104,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 105,
@@ -507,7 +507,7 @@ var vowlresult={
   },
   {
    "id": 106,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 107,
@@ -515,7 +515,7 @@ var vowlresult={
   },
   {
    "id": 108,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 109,
@@ -523,7 +523,7 @@ var vowlresult={
   },
   {
    "id": 110,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 111,
@@ -531,7 +531,7 @@ var vowlresult={
   },
   {
    "id": 112,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 113,
@@ -539,7 +539,7 @@ var vowlresult={
   },
   {
    "id": 114,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 115,
@@ -547,7 +547,7 @@ var vowlresult={
   },
   {
    "id": 116,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 117,
@@ -555,7 +555,7 @@ var vowlresult={
   },
   {
    "id": 118,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 119,
@@ -563,7 +563,7 @@ var vowlresult={
   },
   {
    "id": 120,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 121,
@@ -571,7 +571,7 @@ var vowlresult={
   },
   {
    "id": 122,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 123,
@@ -579,7 +579,7 @@ var vowlresult={
   },
   {
    "id": 124,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 125,
@@ -587,7 +587,7 @@ var vowlresult={
   },
   {
    "id": 126,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 127,
@@ -595,7 +595,7 @@ var vowlresult={
   },
   {
    "id": 128,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 129,
@@ -603,7 +603,7 @@ var vowlresult={
   },
   {
    "id": 130,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 131,
@@ -611,7 +611,7 @@ var vowlresult={
   },
   {
    "id": 132,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 133,
@@ -619,7 +619,7 @@ var vowlresult={
   },
   {
    "id": 134,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 135,
@@ -627,7 +627,7 @@ var vowlresult={
   },
   {
    "id": 136,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 137,
@@ -635,7 +635,7 @@ var vowlresult={
   },
   {
    "id": 138,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 139,
@@ -643,7 +643,7 @@ var vowlresult={
   },
   {
    "id": 140,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 141,
@@ -651,7 +651,7 @@ var vowlresult={
   },
   {
    "id": 142,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 143,
@@ -659,7 +659,7 @@ var vowlresult={
   },
   {
    "id": 144,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 145,
@@ -667,7 +667,7 @@ var vowlresult={
   },
   {
    "id": 146,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 147,
@@ -675,7 +675,7 @@ var vowlresult={
   },
   {
    "id": 148,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 149,
@@ -683,7 +683,7 @@ var vowlresult={
   },
   {
    "id": 150,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 151,
@@ -691,599 +691,599 @@ var vowlresult={
   },
   {
    "id": 152,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 153,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 154,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 155,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 156,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 157,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 158,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 159,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 160,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 161,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 162,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 163,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 164,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 165,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 166,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 167,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 168,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 169,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 170,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 171,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 172,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 173,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 174,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 175,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 176,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 177,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 178,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 179,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 180,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 181,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 182,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 183,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 184,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 185,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 186,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 187,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 188,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 189,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 190,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 191,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 192,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 193,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 194,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 195,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 196,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 197,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 198,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 199,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 200,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 201,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 202,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 203,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 204,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 205,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 206,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 207,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 208,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 209,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 210,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 211,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 212,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 213,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 214,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 215,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 216,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 217,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 218,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 219,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 220,
-   "type": "http://www.w3.org/ns/prov#Activity"
-  },
-  {
-   "id": 221,
    "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
-   "id": 222,
+   "id": 221,
    "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
+   "id": 222,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+  },
+  {
    "id": 223,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 224,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 225,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 226,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 227,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 228,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 229,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 230,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 231,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 232,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 233,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 234,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 235,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 236,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 237,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 238,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 239,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 240,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 241,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 242,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 243,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 244,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 245,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 246,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 247,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 248,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 249,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 250,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 251,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 252,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 253,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 254,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 255,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 256,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 257,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 258,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 259,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 260,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 261,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 262,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 263,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 264,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 265,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 266,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 267,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 268,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 269,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 270,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 271,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 272,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 273,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 274,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 275,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 276,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 277,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 278,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 279,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 280,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 281,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 282,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 283,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 284,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 285,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 286,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 287,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 288,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 289,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 290,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 291,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 292,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 293,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 294,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 295,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 296,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 297,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 298,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 299,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 300,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 301,
@@ -1567,315 +1567,315 @@ var vowlresult={
   },
   {
    "id": 371,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 372,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 373,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 374,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 375,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 376,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 377,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 378,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 379,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 380,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 381,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 382,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 383,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 384,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 385,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 386,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 387,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 388,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 389,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 390,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 391,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 392,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 393,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 394,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 395,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 396,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 397,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 398,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 399,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 400,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 401,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 402,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 403,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 404,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 405,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 406,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 407,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 408,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 409,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 410,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 411,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 412,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 413,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 414,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 415,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 416,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 417,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 418,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 419,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 420,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 421,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 422,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 423,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 424,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 425,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 426,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 427,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 428,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 429,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 430,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 431,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 432,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 433,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 434,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 435,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 436,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 437,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 438,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 439,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 440,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 441,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 442,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 443,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 444,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 445,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 446,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 447,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 448,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 449,
@@ -2823,18 +2823,34 @@ var vowlresult={
   },
   {
    "id": 685,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 686,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 687,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 688,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 689,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 690,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 691,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 692,
    "type": "http://www.w3.org/ns/prov#Agent"
   }
  ],
@@ -2847,7 +2863,32 @@ var vowlresult={
    "label": {
     "IRI-based": "CIFindspotCollection"
    },
-   "annotations": {},
+   "annotations": {
+    "http://purl.org/dc/terms/created": [
+     {
+      "identifier": "http://purl.org/dc/terms/created",
+      "language": "undefined",
+      "value": "2026-08-08",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+     {
+      "identifier": "http://www.w3.org/2002/07/owl#versionInfo",
+      "language": "undefined",
+      "value": "sha256:24fb30252415",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
+      "type": "iri"
+     }
+    ]
+   },
    "range": [],
    "domain": [],
    "subProperties": [],
@@ -2855,6 +2896,1098 @@ var vowlresult={
   },
   {
    "id": 1,
+   "iri": "http://w3id.org/geo-lod/ci/ci_findspots_dataset",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": "ci_pipeline.py",
+   "annotations": {
+    "http://purl.org/dc/terms/identifier": [
+     {
+      "identifier": "http://purl.org/dc/terms/identifier",
+      "language": "undefined",
+      "value": "sha256:6e5a5a41a1c6111ab61eef308e73ce3da116bac5820e02aca56407b41357268d",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 2,
+   "iri": "http://w3id.org/geo-lod/ci/ci_findspots_generation_input_ci_pipeline_py",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": "cifindspots_part_full.csv",
+   "annotations": {
+    "http://purl.org/dc/terms/identifier": [
+     {
+      "identifier": "http://purl.org/dc/terms/identifier",
+      "language": "undefined",
+      "value": "sha256:1a6af6fba99889796c31de6307cfa8954efaa17070ef231c6f3cf206ca292437",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 3,
+   "iri": "http://w3id.org/geo-lod/ci/ci_findspots_generation_input_cifindspots_part_full_csv",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_findspots_generation_input_cifindspots_part_full_csv"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 4,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_1",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_1"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 5,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_10",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_10"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 6,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_101",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_101"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 7,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_102",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_102"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 8,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_103",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_103"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 9,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_104",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_104"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 10,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_105",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_105"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 11,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_106",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_106"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 12,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_11",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_11"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 13,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_12",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_12"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 14,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_13",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_13"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 15,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_14",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_14"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 16,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_15",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_15"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 17,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_16",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_16"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 18,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_17",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_17"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 19,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_18",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_18"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 20,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_19",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_19"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 21,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_2",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_2"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 22,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_20",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_20"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 23,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_201",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_201"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 24,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_202",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_202"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 25,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_203",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_203"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 26,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_21",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_21"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 27,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_22",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_22"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 28,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_23",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_23"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 29,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_24",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_24"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 30,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_25",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_25"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 31,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_26",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_26"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 32,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_27",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_27"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 33,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_28",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_28"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 34,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_29",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_29"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 35,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_3",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_3"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 36,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_30",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_30"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 37,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_31",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_31"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 38,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_32",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_32"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 39,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_33",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_33"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 40,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_34",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_34"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 41,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_35",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_35"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 42,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_36",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_36"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 43,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_37",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_37"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 44,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_38",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_38"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 45,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_39",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_39"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 46,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_4",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_4"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 47,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_40",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_40"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 48,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_41",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_41"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 49,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_42",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_42"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 50,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_43",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_43"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 51,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_44",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_44"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 52,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_45",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_45"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 53,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_46",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_46"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 54,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_47",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_47"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 55,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_48",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_48"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 56,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_49",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_49"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 57,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_5",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_5"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 58,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_50",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_50"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 59,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_51",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_51"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 60,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_52",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_52"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 61,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_53",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_53"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 62,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_54",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_54"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 63,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_55",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_55"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 64,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_56",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_56"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 65,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_57",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_57"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 66,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_58",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_58"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 67,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_59",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_59"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 68,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_6",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_6"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 69,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_60",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_60"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 70,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_61",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_61"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 71,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_62",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_62"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 72,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_63",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_63"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 73,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_64",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_64"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 74,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_65",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_65"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 75,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_7",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_7"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 76,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_8",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_8"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 77,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_9",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_9"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 78,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2868,7 +4001,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 2,
+   "id": 79,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2882,7 +4015,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 3,
+   "id": 80,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2896,7 +4029,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 4,
+   "id": 81,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2910,7 +4043,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 5,
+   "id": 82,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2924,7 +4057,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 6,
+   "id": 83,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2938,7 +4071,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 7,
+   "id": 84,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2952,7 +4085,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 8,
+   "id": 85,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2966,7 +4099,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 9,
+   "id": 86,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2980,7 +4113,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 10,
+   "id": 87,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2994,7 +4127,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 11,
+   "id": 88,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3008,7 +4141,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 12,
+   "id": 89,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3022,7 +4155,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 13,
+   "id": 90,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3036,7 +4169,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 14,
+   "id": 91,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3050,7 +4183,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 15,
+   "id": 92,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3064,7 +4197,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 16,
+   "id": 93,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3078,7 +4211,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 17,
+   "id": 94,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3092,7 +4225,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 18,
+   "id": 95,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3106,7 +4239,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 19,
+   "id": 96,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3120,7 +4253,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 20,
+   "id": 97,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3134,7 +4267,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 21,
+   "id": 98,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3148,7 +4281,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 22,
+   "id": 99,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3162,7 +4295,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 23,
+   "id": 100,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3176,7 +4309,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 24,
+   "id": 101,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3190,7 +4323,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 25,
+   "id": 102,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3204,7 +4337,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 26,
+   "id": 103,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3218,7 +4351,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 27,
+   "id": 104,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3232,7 +4365,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 28,
+   "id": 105,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3246,7 +4379,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 29,
+   "id": 106,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3260,7 +4393,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 30,
+   "id": 107,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3274,7 +4407,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 31,
+   "id": 108,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3288,7 +4421,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 32,
+   "id": 109,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3302,7 +4435,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 33,
+   "id": 110,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3316,7 +4449,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 34,
+   "id": 111,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3330,7 +4463,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 35,
+   "id": 112,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3344,7 +4477,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 36,
+   "id": 113,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3358,7 +4491,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 37,
+   "id": 114,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3372,7 +4505,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 38,
+   "id": 115,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3386,7 +4519,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 39,
+   "id": 116,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3400,7 +4533,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 40,
+   "id": 117,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3414,7 +4547,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 41,
+   "id": 118,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3428,7 +4561,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 42,
+   "id": 119,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3442,7 +4575,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 43,
+   "id": 120,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3456,7 +4589,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 44,
+   "id": 121,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3470,7 +4603,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 45,
+   "id": 122,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3484,7 +4617,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 46,
+   "id": 123,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3498,7 +4631,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 47,
+   "id": 124,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3512,7 +4645,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 48,
+   "id": 125,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3526,7 +4659,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 49,
+   "id": 126,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3540,7 +4673,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 50,
+   "id": 127,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3554,7 +4687,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 51,
+   "id": 128,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3568,7 +4701,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 52,
+   "id": 129,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3582,7 +4715,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 53,
+   "id": 130,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3596,7 +4729,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 54,
+   "id": 131,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3610,7 +4743,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 55,
+   "id": 132,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3624,7 +4757,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 56,
+   "id": 133,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3638,7 +4771,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 57,
+   "id": 134,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3652,7 +4785,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 58,
+   "id": 135,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3666,7 +4799,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 59,
+   "id": 136,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3680,7 +4813,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 60,
+   "id": 137,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3694,7 +4827,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 61,
+   "id": 138,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3708,7 +4841,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 62,
+   "id": 139,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3722,7 +4855,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 63,
+   "id": 140,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3736,7 +4869,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 64,
+   "id": 141,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3750,7 +4883,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 65,
+   "id": 142,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3764,7 +4897,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 66,
+   "id": 143,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3778,7 +4911,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 67,
+   "id": 144,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3792,7 +4925,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 68,
+   "id": 145,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3806,7 +4939,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 69,
+   "id": 146,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3820,7 +4953,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 70,
+   "id": 147,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3834,7 +4967,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 71,
+   "id": 148,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3848,7 +4981,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 72,
+   "id": 149,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3862,7 +4995,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 73,
+   "id": 150,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3876,7 +5009,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 74,
+   "id": 151,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3924,22 +5057,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.231772+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -3963,7 +5080,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 75,
+   "id": 152,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3971,27 +5088,19 @@ var vowlresult={
     "IRI-based": "cisite_101_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.231772+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -4002,7 +5111,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 76,
+   "id": 153,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4050,22 +5159,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.233620+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -4089,7 +5182,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 77,
+   "id": 154,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4097,27 +5190,19 @@ var vowlresult={
     "IRI-based": "cisite_102_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.233620+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -4128,7 +5213,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 78,
+   "id": 155,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4176,22 +5261,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.235720+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -4215,7 +5284,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 79,
+   "id": 156,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4223,27 +5292,19 @@ var vowlresult={
     "IRI-based": "cisite_103_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.235720+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -4254,7 +5315,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 80,
+   "id": 157,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4302,22 +5363,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.239974+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -4341,7 +5386,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 81,
+   "id": 158,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4349,27 +5394,19 @@ var vowlresult={
     "IRI-based": "cisite_104_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.239974+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -4380,7 +5417,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 82,
+   "id": 159,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4428,22 +5465,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.242373+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -4467,7 +5488,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 83,
+   "id": 160,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4475,27 +5496,19 @@ var vowlresult={
     "IRI-based": "cisite_105_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.242373+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -4506,7 +5519,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 84,
+   "id": 161,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4554,22 +5567,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.245386+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -4593,7 +5590,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 85,
+   "id": 162,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4601,27 +5598,19 @@ var vowlresult={
     "IRI-based": "cisite_106_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.245386+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -4632,7 +5621,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 86,
+   "id": 163,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4680,22 +5669,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.115728+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -4719,7 +5692,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 87,
+   "id": 164,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4727,27 +5700,19 @@ var vowlresult={
     "IRI-based": "cisite_10_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.115728+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -4758,7 +5723,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 88,
+   "id": 165,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4806,22 +5771,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.118277+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -4845,7 +5794,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 89,
+   "id": 166,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4853,27 +5802,19 @@ var vowlresult={
     "IRI-based": "cisite_11_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.118277+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -4884,7 +5825,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 90,
+   "id": 167,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4932,22 +5873,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.119827+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -4971,7 +5896,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 91,
+   "id": 168,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4979,27 +5904,19 @@ var vowlresult={
     "IRI-based": "cisite_12_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.119827+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -5010,7 +5927,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 92,
+   "id": 169,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5058,22 +5975,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.122670+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -5097,7 +5998,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 93,
+   "id": 170,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5105,27 +6006,19 @@ var vowlresult={
     "IRI-based": "cisite_13_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.122670+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -5136,7 +6029,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 94,
+   "id": 171,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5184,22 +6077,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.125339+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -5223,7 +6100,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 95,
+   "id": 172,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5231,27 +6108,19 @@ var vowlresult={
     "IRI-based": "cisite_14_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.125339+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -5262,7 +6131,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 96,
+   "id": 173,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5310,22 +6179,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.126952+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -5349,7 +6202,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 97,
+   "id": 174,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5357,27 +6210,19 @@ var vowlresult={
     "IRI-based": "cisite_15_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.126952+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -5388,7 +6233,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 98,
+   "id": 175,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5436,22 +6281,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.126952+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -5475,7 +6304,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 99,
+   "id": 176,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5483,27 +6312,19 @@ var vowlresult={
     "IRI-based": "cisite_16_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.126952+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -5514,7 +6335,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 100,
+   "id": 177,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5562,22 +6383,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.131255+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -5601,7 +6406,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 101,
+   "id": 178,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5609,27 +6414,19 @@ var vowlresult={
     "IRI-based": "cisite_17_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.131255+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -5640,7 +6437,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 102,
+   "id": 179,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5688,22 +6485,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.133932+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -5727,7 +6508,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 103,
+   "id": 180,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5735,27 +6516,19 @@ var vowlresult={
     "IRI-based": "cisite_18_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.133932+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -5766,7 +6539,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 104,
+   "id": 181,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5814,22 +6587,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.133932+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -5853,7 +6610,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 105,
+   "id": 182,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5861,27 +6618,19 @@ var vowlresult={
     "IRI-based": "cisite_19_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.133932+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -5892,7 +6641,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 106,
+   "id": 183,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5940,22 +6689,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.096880+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -5979,7 +6712,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 107,
+   "id": 184,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5987,27 +6720,19 @@ var vowlresult={
     "IRI-based": "cisite_1_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.096880+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -6018,7 +6743,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 108,
+   "id": 185,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6066,22 +6791,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.247993+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -6105,7 +6814,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 109,
+   "id": 186,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6113,27 +6822,19 @@ var vowlresult={
     "IRI-based": "cisite_201_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.247993+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -6144,7 +6845,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 110,
+   "id": 187,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6192,22 +6893,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.249719+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -6231,7 +6916,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 111,
+   "id": 188,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6239,27 +6924,19 @@ var vowlresult={
     "IRI-based": "cisite_202_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.249719+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -6270,7 +6947,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 112,
+   "id": 189,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6318,22 +6995,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.250778+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -6357,7 +7018,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 113,
+   "id": 190,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6365,27 +7026,19 @@ var vowlresult={
     "IRI-based": "cisite_203_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.250778+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -6396,7 +7049,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 114,
+   "id": 191,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6444,22 +7097,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.135447+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -6483,7 +7120,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 115,
+   "id": 192,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6491,27 +7128,19 @@ var vowlresult={
     "IRI-based": "cisite_20_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.135447+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -6522,7 +7151,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 116,
+   "id": 193,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6570,22 +7199,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.139675+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -6609,7 +7222,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 117,
+   "id": 194,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6617,27 +7230,19 @@ var vowlresult={
     "IRI-based": "cisite_21_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.139675+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -6648,7 +7253,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 118,
+   "id": 195,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6696,22 +7301,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.139675+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -6735,7 +7324,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 119,
+   "id": 196,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6743,27 +7332,19 @@ var vowlresult={
     "IRI-based": "cisite_22_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.139675+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -6774,7 +7355,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 120,
+   "id": 197,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6822,22 +7403,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.139675+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -6861,7 +7426,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 121,
+   "id": 198,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6869,27 +7434,19 @@ var vowlresult={
     "IRI-based": "cisite_23_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.139675+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -6900,7 +7457,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 122,
+   "id": 199,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6948,22 +7505,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.143823+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -6987,7 +7528,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 123,
+   "id": 200,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6995,27 +7536,19 @@ var vowlresult={
     "IRI-based": "cisite_24_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.143823+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -7026,7 +7559,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 124,
+   "id": 201,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7074,22 +7607,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.145355+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -7113,7 +7630,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 125,
+   "id": 202,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7121,27 +7638,19 @@ var vowlresult={
     "IRI-based": "cisite_25_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.145355+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -7152,7 +7661,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 126,
+   "id": 203,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7200,22 +7709,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.147883+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -7239,7 +7732,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 127,
+   "id": 204,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7247,27 +7740,19 @@ var vowlresult={
     "IRI-based": "cisite_26_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.147883+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -7278,7 +7763,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 128,
+   "id": 205,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7326,22 +7811,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.147883+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -7365,7 +7834,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 129,
+   "id": 206,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7373,27 +7842,19 @@ var vowlresult={
     "IRI-based": "cisite_27_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.147883+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -7404,7 +7865,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 130,
+   "id": 207,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7452,22 +7913,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.147883+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -7491,7 +7936,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 131,
+   "id": 208,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7499,27 +7944,19 @@ var vowlresult={
     "IRI-based": "cisite_28_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.147883+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -7530,7 +7967,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 132,
+   "id": 209,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7578,22 +8015,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.152372+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -7617,7 +8038,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 133,
+   "id": 210,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7625,27 +8046,19 @@ var vowlresult={
     "IRI-based": "cisite_29_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.152372+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -7656,7 +8069,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 134,
+   "id": 211,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7704,22 +8117,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.105552+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -7743,7 +8140,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 135,
+   "id": 212,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7751,27 +8148,19 @@ var vowlresult={
     "IRI-based": "cisite_2_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.105552+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -7782,7 +8171,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 136,
+   "id": 213,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7830,22 +8219,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.155657+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -7869,7 +8242,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 137,
+   "id": 214,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7877,27 +8250,19 @@ var vowlresult={
     "IRI-based": "cisite_30_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.155657+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -7908,7 +8273,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 138,
+   "id": 215,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7956,22 +8321,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.156727+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -7995,7 +8344,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 139,
+   "id": 216,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8003,27 +8352,19 @@ var vowlresult={
     "IRI-based": "cisite_31_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.156727+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -8034,7 +8375,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 140,
+   "id": 217,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8082,22 +8423,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.161256+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -8121,7 +8446,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 141,
+   "id": 218,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8129,27 +8454,19 @@ var vowlresult={
     "IRI-based": "cisite_32_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.161256+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -8160,7 +8477,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 142,
+   "id": 219,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8208,22 +8525,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.162286+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -8247,7 +8548,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 143,
+   "id": 220,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8255,27 +8556,19 @@ var vowlresult={
     "IRI-based": "cisite_33_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.162286+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -8286,7 +8579,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 144,
+   "id": 221,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8334,22 +8627,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.163275+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -8373,7 +8650,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 145,
+   "id": 222,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8381,27 +8658,19 @@ var vowlresult={
     "IRI-based": "cisite_34_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.163275+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -8412,7 +8681,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 146,
+   "id": 223,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8460,22 +8729,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.165496+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -8499,7 +8752,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 147,
+   "id": 224,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8507,27 +8760,19 @@ var vowlresult={
     "IRI-based": "cisite_35_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.165496+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -8538,7 +8783,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 148,
+   "id": 225,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8586,22 +8831,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.166540+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -8625,7 +8854,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 149,
+   "id": 226,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8633,27 +8862,19 @@ var vowlresult={
     "IRI-based": "cisite_36_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.166540+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -8664,7 +8885,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 150,
+   "id": 227,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8712,22 +8933,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.168527+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -8751,7 +8956,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 151,
+   "id": 228,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8759,27 +8964,19 @@ var vowlresult={
     "IRI-based": "cisite_37_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.168527+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -8790,7 +8987,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 152,
+   "id": 229,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8838,22 +9035,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.170435+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -8877,7 +9058,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 153,
+   "id": 230,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8885,27 +9066,19 @@ var vowlresult={
     "IRI-based": "cisite_38_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.170435+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -8916,7 +9089,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 154,
+   "id": 231,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8964,22 +9137,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.174618+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -9003,7 +9160,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 155,
+   "id": 232,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9011,27 +9168,19 @@ var vowlresult={
     "IRI-based": "cisite_39_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.174618+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -9042,7 +9191,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 156,
+   "id": 233,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9090,22 +9239,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.105552+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -9129,7 +9262,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 157,
+   "id": 234,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9137,27 +9270,19 @@ var vowlresult={
     "IRI-based": "cisite_3_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.105552+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -9168,7 +9293,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 158,
+   "id": 235,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9216,22 +9341,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.176540+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -9255,7 +9364,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 159,
+   "id": 236,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9263,27 +9372,19 @@ var vowlresult={
     "IRI-based": "cisite_40_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.176540+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -9294,7 +9395,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 160,
+   "id": 237,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9342,22 +9443,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.178708+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -9381,7 +9466,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 161,
+   "id": 238,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9389,27 +9474,19 @@ var vowlresult={
     "IRI-based": "cisite_41_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.178708+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -9420,7 +9497,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 162,
+   "id": 239,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9468,22 +9545,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.180706+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -9507,7 +9568,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 163,
+   "id": 240,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9515,27 +9576,19 @@ var vowlresult={
     "IRI-based": "cisite_42_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.180706+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -9546,7 +9599,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 164,
+   "id": 241,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9594,22 +9647,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.182230+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -9633,7 +9670,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 165,
+   "id": 242,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9641,27 +9678,19 @@ var vowlresult={
     "IRI-based": "cisite_43_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.182230+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -9672,7 +9701,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 166,
+   "id": 243,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9720,22 +9749,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.184308+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -9759,7 +9772,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 167,
+   "id": 244,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9767,27 +9780,19 @@ var vowlresult={
     "IRI-based": "cisite_44_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.184308+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -9798,7 +9803,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 168,
+   "id": 245,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9846,22 +9851,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.187234+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -9885,7 +9874,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 169,
+   "id": 246,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9893,27 +9882,19 @@ var vowlresult={
     "IRI-based": "cisite_45_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.187234+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -9924,7 +9905,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 170,
+   "id": 247,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9972,22 +9953,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.191308+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -10011,7 +9976,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 171,
+   "id": 248,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10019,27 +9984,19 @@ var vowlresult={
     "IRI-based": "cisite_46_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.191308+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -10050,7 +10007,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 172,
+   "id": 249,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10098,22 +10055,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.193355+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -10137,7 +10078,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 173,
+   "id": 250,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10145,27 +10086,19 @@ var vowlresult={
     "IRI-based": "cisite_47_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.193355+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -10176,7 +10109,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 174,
+   "id": 251,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10224,22 +10157,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.195310+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -10263,7 +10180,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 175,
+   "id": 252,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10271,27 +10188,19 @@ var vowlresult={
     "IRI-based": "cisite_48_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.195310+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -10302,7 +10211,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 176,
+   "id": 253,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10350,22 +10259,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.196431+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -10389,7 +10282,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 177,
+   "id": 254,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10397,27 +10290,19 @@ var vowlresult={
     "IRI-based": "cisite_49_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.196431+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -10428,7 +10313,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 178,
+   "id": 255,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10476,22 +10361,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.105552+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -10515,7 +10384,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 179,
+   "id": 256,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10523,27 +10392,19 @@ var vowlresult={
     "IRI-based": "cisite_4_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.105552+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -10554,7 +10415,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 180,
+   "id": 257,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10602,22 +10463,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.198560+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -10641,7 +10486,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 181,
+   "id": 258,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10649,27 +10494,19 @@ var vowlresult={
     "IRI-based": "cisite_50_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.198560+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -10680,7 +10517,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 182,
+   "id": 259,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10728,22 +10565,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.200561+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -10767,7 +10588,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 183,
+   "id": 260,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10775,27 +10596,19 @@ var vowlresult={
     "IRI-based": "cisite_51_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.200561+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -10806,7 +10619,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 184,
+   "id": 261,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10854,22 +10667,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.202681+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -10893,7 +10690,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 185,
+   "id": 262,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10901,27 +10698,19 @@ var vowlresult={
     "IRI-based": "cisite_52_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.202681+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -10932,7 +10721,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 186,
+   "id": 263,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10980,22 +10769,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.205700+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -11019,7 +10792,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 187,
+   "id": 264,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11027,27 +10800,19 @@ var vowlresult={
     "IRI-based": "cisite_53_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.205700+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -11058,7 +10823,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 188,
+   "id": 265,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11106,22 +10871,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.207778+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -11145,7 +10894,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 189,
+   "id": 266,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11153,27 +10902,19 @@ var vowlresult={
     "IRI-based": "cisite_54_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.207778+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -11184,7 +10925,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 190,
+   "id": 267,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11232,22 +10973,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.207778+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -11271,7 +10996,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 191,
+   "id": 268,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11279,27 +11004,19 @@ var vowlresult={
     "IRI-based": "cisite_55_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.207778+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -11310,7 +11027,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 192,
+   "id": 269,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11358,22 +11075,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.211893+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -11397,7 +11098,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 193,
+   "id": 270,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11405,27 +11106,19 @@ var vowlresult={
     "IRI-based": "cisite_56_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.211893+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -11436,7 +11129,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 194,
+   "id": 271,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11484,22 +11177,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.211893+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -11523,7 +11200,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 195,
+   "id": 272,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11531,27 +11208,19 @@ var vowlresult={
     "IRI-based": "cisite_57_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.211893+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -11562,7 +11231,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 196,
+   "id": 273,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11610,22 +11279,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.215595+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -11649,7 +11302,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 197,
+   "id": 274,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11657,27 +11310,19 @@ var vowlresult={
     "IRI-based": "cisite_58_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.215595+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -11688,7 +11333,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 198,
+   "id": 275,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11736,22 +11381,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.215595+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -11775,7 +11404,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 199,
+   "id": 276,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11783,27 +11412,19 @@ var vowlresult={
     "IRI-based": "cisite_59_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.215595+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -11814,7 +11435,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 200,
+   "id": 277,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11862,22 +11483,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.109973+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -11901,7 +11506,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 201,
+   "id": 278,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11909,27 +11514,19 @@ var vowlresult={
     "IRI-based": "cisite_5_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.109973+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -11940,7 +11537,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 202,
+   "id": 279,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11988,22 +11585,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.219716+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -12027,7 +11608,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 203,
+   "id": 280,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12035,27 +11616,19 @@ var vowlresult={
     "IRI-based": "cisite_60_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.219716+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -12066,7 +11639,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 204,
+   "id": 281,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12114,22 +11687,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.222233+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -12153,7 +11710,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 205,
+   "id": 282,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12161,27 +11718,19 @@ var vowlresult={
     "IRI-based": "cisite_61_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.222233+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -12192,7 +11741,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 206,
+   "id": 283,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12240,22 +11789,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.225254+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -12279,7 +11812,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 207,
+   "id": 284,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12287,27 +11820,19 @@ var vowlresult={
     "IRI-based": "cisite_62_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.225254+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -12318,7 +11843,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 208,
+   "id": 285,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12366,22 +11891,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.226872+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -12405,7 +11914,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 209,
+   "id": 286,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12413,27 +11922,19 @@ var vowlresult={
     "IRI-based": "cisite_63_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.226872+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -12444,7 +11945,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 210,
+   "id": 287,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12492,22 +11993,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.228865+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -12531,7 +12016,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 211,
+   "id": 288,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12539,27 +12024,19 @@ var vowlresult={
     "IRI-based": "cisite_64_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.228865+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -12570,7 +12047,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 212,
+   "id": 289,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12618,22 +12095,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.230774+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -12657,7 +12118,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 213,
+   "id": 290,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12665,27 +12126,19 @@ var vowlresult={
     "IRI-based": "cisite_65_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.230774+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -12696,7 +12149,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 214,
+   "id": 291,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12744,22 +12197,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.109973+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -12783,7 +12220,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 215,
+   "id": 292,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12791,27 +12228,19 @@ var vowlresult={
     "IRI-based": "cisite_6_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.109973+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -12822,7 +12251,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 216,
+   "id": 293,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12870,22 +12299,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.109973+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -12909,7 +12322,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 217,
+   "id": 294,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12917,27 +12330,19 @@ var vowlresult={
     "IRI-based": "cisite_7_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.109973+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -12948,7 +12353,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 218,
+   "id": 295,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12996,22 +12401,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.114179+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -13035,7 +12424,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 219,
+   "id": 296,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13043,27 +12432,19 @@ var vowlresult={
     "IRI-based": "cisite_8_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.114179+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -13074,7 +12455,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 220,
+   "id": 297,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13122,22 +12503,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.114179+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#used": [
      {
       "identifier": "http://www.w3.org/ns/prov#used",
@@ -13161,7 +12526,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 221,
+   "id": 298,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13169,27 +12534,19 @@ var vowlresult={
     "IRI-based": "cisite_9_activity"
    },
    "annotations": {
-    "http://www.w3.org/ns/prov#endedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#endedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.114179+00:00",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#startedAtTime": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#startedAtTime",
-      "language": "undefined",
-      "value": "2026-08-08T14:34:44.088406+00:00",
-      "type": "label"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "language": "undefined",
       "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasInformedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasInformedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
       "type": "iri"
      }
     ]
@@ -13200,12 +12557,49 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 222,
+   "id": 299,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
+   "label": "CI findspot RDF generation",
+   "annotations": {
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+     {
+      "identifier": "http://www.w3.org/2002/07/owl#versionInfo",
+      "language": "undefined",
+      "value": "sha256:24fb30252415",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#used": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#used",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/ci_findspots_generation_input_cifindspots_part_full_csv",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
+      "language": "undefined",
+      "value": "https://orcid.org/0000-0002-3246-3531",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 300,
+   "iri": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
    "label": {
-    "IRI-based": "cisite_9_pyscript"
+    "IRI-based": "ci_findspots_generation"
    },
    "annotations": {},
    "range": [],
@@ -13214,7 +12608,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 223,
+   "id": 301,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13228,7 +12622,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 224,
+   "id": 302,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13242,7 +12636,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 225,
+   "id": 303,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13256,7 +12650,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 226,
+   "id": 304,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13270,7 +12664,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 227,
+   "id": 305,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13284,7 +12678,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 228,
+   "id": 306,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13298,7 +12692,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 229,
+   "id": 307,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13312,7 +12706,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 230,
+   "id": 308,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13326,7 +12720,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 231,
+   "id": 309,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13340,7 +12734,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 232,
+   "id": 310,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13354,7 +12748,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 233,
+   "id": 311,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13368,7 +12762,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 234,
+   "id": 312,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13382,7 +12776,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 235,
+   "id": 313,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13396,7 +12790,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 236,
+   "id": 314,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13410,7 +12804,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 237,
+   "id": 315,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13424,7 +12818,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 238,
+   "id": 316,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13438,7 +12832,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 239,
+   "id": 317,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13452,7 +12846,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 240,
+   "id": 318,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13466,7 +12860,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 241,
+   "id": 319,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13480,7 +12874,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 242,
+   "id": 320,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13494,7 +12888,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 243,
+   "id": 321,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13508,7 +12902,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 244,
+   "id": 322,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13522,7 +12916,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 245,
+   "id": 323,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13536,7 +12930,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 246,
+   "id": 324,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13550,7 +12944,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 247,
+   "id": 325,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13564,7 +12958,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 248,
+   "id": 326,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13578,7 +12972,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 249,
+   "id": 327,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13592,7 +12986,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 250,
+   "id": 328,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13606,7 +13000,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 251,
+   "id": 329,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13620,7 +13014,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 252,
+   "id": 330,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13634,7 +13028,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 253,
+   "id": 331,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13648,7 +13042,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 254,
+   "id": 332,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13662,7 +13056,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 255,
+   "id": 333,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13676,7 +13070,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 256,
+   "id": 334,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13690,7 +13084,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 257,
+   "id": 335,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13704,7 +13098,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 258,
+   "id": 336,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13718,7 +13112,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 259,
+   "id": 337,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13732,7 +13126,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 260,
+   "id": 338,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13746,7 +13140,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 261,
+   "id": 339,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13760,7 +13154,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 262,
+   "id": 340,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13774,7 +13168,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 263,
+   "id": 341,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13788,7 +13182,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 264,
+   "id": 342,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13802,7 +13196,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 265,
+   "id": 343,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13816,7 +13210,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 266,
+   "id": 344,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13830,7 +13224,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 267,
+   "id": 345,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13844,7 +13238,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 268,
+   "id": 346,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13858,7 +13252,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 269,
+   "id": 347,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13872,7 +13266,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 270,
+   "id": 348,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13886,7 +13280,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 271,
+   "id": 349,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13900,7 +13294,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 272,
+   "id": 350,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13914,7 +13308,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 273,
+   "id": 351,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13928,7 +13322,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 274,
+   "id": 352,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13942,7 +13336,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 275,
+   "id": 353,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13956,7 +13350,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 276,
+   "id": 354,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13970,7 +13364,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 277,
+   "id": 355,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13984,7 +13378,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 278,
+   "id": 356,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13998,7 +13392,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 279,
+   "id": 357,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14012,7 +13406,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 280,
+   "id": 358,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14026,7 +13420,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 281,
+   "id": 359,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14040,7 +13434,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 282,
+   "id": 360,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14054,7 +13448,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 283,
+   "id": 361,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14068,7 +13462,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 284,
+   "id": 362,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14082,7 +13476,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 285,
+   "id": 363,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14096,7 +13490,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 286,
+   "id": 364,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14110,7 +13504,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 287,
+   "id": 365,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14124,7 +13518,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 288,
+   "id": 366,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14138,7 +13532,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 289,
+   "id": 367,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14152,7 +13546,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 290,
+   "id": 368,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14166,7 +13560,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 291,
+   "id": 369,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14180,7 +13574,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 292,
+   "id": 370,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14194,7 +13588,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 293,
+   "id": 371,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14208,7 +13602,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 294,
+   "id": 372,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14222,7 +13616,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 295,
+   "id": 373,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14236,7 +13630,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 296,
+   "id": 374,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14275,7 +13669,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 297,
+   "id": 375,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14314,7 +13708,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 298,
+   "id": 376,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14353,7 +13747,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 299,
+   "id": 377,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14392,7 +13786,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 300,
+   "id": 378,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14431,7 +13825,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 301,
+   "id": 379,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14470,7 +13864,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 302,
+   "id": 380,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14509,7 +13903,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 303,
+   "id": 381,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14548,7 +13942,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 304,
+   "id": 382,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14587,7 +13981,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 305,
+   "id": 383,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14626,7 +14020,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 306,
+   "id": 384,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14665,7 +14059,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 307,
+   "id": 385,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14704,7 +14098,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 308,
+   "id": 386,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14743,7 +14137,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 309,
+   "id": 387,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14782,7 +14176,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 310,
+   "id": 388,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14821,7 +14215,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 311,
+   "id": 389,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14860,7 +14254,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 312,
+   "id": 390,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14899,7 +14293,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 313,
+   "id": 391,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14938,7 +14332,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 314,
+   "id": 392,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14977,7 +14371,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 315,
+   "id": 393,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15016,7 +14410,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 316,
+   "id": 394,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15055,7 +14449,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 317,
+   "id": 395,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15094,7 +14488,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 318,
+   "id": 396,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15133,7 +14527,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 319,
+   "id": 397,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15172,7 +14566,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 320,
+   "id": 398,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15211,7 +14605,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 321,
+   "id": 399,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15250,7 +14644,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 322,
+   "id": 400,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15289,7 +14683,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 323,
+   "id": 401,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15328,7 +14722,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 324,
+   "id": 402,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15367,7 +14761,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 325,
+   "id": 403,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15406,7 +14800,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 326,
+   "id": 404,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15445,7 +14839,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 327,
+   "id": 405,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15484,7 +14878,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 328,
+   "id": 406,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15523,7 +14917,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 329,
+   "id": 407,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15562,7 +14956,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 330,
+   "id": 408,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15601,7 +14995,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 331,
+   "id": 409,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15640,7 +15034,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 332,
+   "id": 410,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15679,7 +15073,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 333,
+   "id": 411,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15718,7 +15112,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 334,
+   "id": 412,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15757,7 +15151,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 335,
+   "id": 413,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15796,7 +15190,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 336,
+   "id": 414,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15835,7 +15229,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 337,
+   "id": 415,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15874,7 +15268,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 338,
+   "id": 416,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15913,7 +15307,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 339,
+   "id": 417,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15952,7 +15346,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 340,
+   "id": 418,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15991,7 +15385,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 341,
+   "id": 419,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16030,7 +15424,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 342,
+   "id": 420,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16069,7 +15463,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 343,
+   "id": 421,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16108,7 +15502,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 344,
+   "id": 422,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16147,7 +15541,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 345,
+   "id": 423,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16186,7 +15580,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 346,
+   "id": 424,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16225,7 +15619,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 347,
+   "id": 425,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16264,7 +15658,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 348,
+   "id": 426,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16303,7 +15697,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 349,
+   "id": 427,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16342,7 +15736,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 350,
+   "id": 428,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16381,7 +15775,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 351,
+   "id": 429,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16420,7 +15814,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 352,
+   "id": 430,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16459,7 +15853,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 353,
+   "id": 431,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16498,7 +15892,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 354,
+   "id": 432,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16537,7 +15931,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 355,
+   "id": 433,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16576,7 +15970,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 356,
+   "id": 434,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16615,7 +16009,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 357,
+   "id": 435,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16654,7 +16048,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 358,
+   "id": 436,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16693,7 +16087,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 359,
+   "id": 437,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16732,7 +16126,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 360,
+   "id": 438,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16771,7 +16165,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 361,
+   "id": 439,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16810,7 +16204,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 362,
+   "id": 440,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16849,7 +16243,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 363,
+   "id": 441,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16888,7 +16282,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 364,
+   "id": 442,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16927,7 +16321,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 365,
+   "id": 443,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16966,7 +16360,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 366,
+   "id": 444,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17005,7 +16399,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 367,
+   "id": 445,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17044,7 +16438,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 368,
+   "id": 446,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17083,7 +16477,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 369,
+   "id": 447,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17122,7 +16516,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 370,
+   "id": 448,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17136,1104 +16530,12 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 371,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_1",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_1"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 372,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_10",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_10"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 373,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_101",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_101"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 374,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_102",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_102"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 375,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_103",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_103"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 376,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_104",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_104"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 377,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_105",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_105"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 378,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_106",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_106"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 379,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_11",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_11"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 380,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_12",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_12"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 381,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_13",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_13"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 382,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_14",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_14"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 383,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_15",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_15"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 384,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_16",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_16"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 385,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_17",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_17"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 386,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_18",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_18"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 387,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_19",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_19"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 388,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_2",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_2"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 389,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_20",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_20"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 390,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_201",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_201"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 391,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_202",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_202"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 392,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_203",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_203"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 393,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_21",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_21"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 394,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_22",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_22"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 395,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_23",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_23"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 396,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_24",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_24"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 397,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_25",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_25"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 398,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_26",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_26"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 399,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_27",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_27"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 400,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_28",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_28"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 401,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_29",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_29"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 402,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_3",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_3"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 403,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_30",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_30"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 404,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_31",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_31"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 405,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_32",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_32"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 406,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_33",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_33"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 407,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_34",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_34"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 408,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_35",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_35"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 409,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_36",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_36"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 410,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_37",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_37"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 411,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_38",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_38"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 412,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_39",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_39"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 413,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_4",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_4"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 414,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_40",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_40"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 415,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_41",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_41"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 416,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_42",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_42"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 417,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_43",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_43"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 418,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_44",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_44"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 419,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_45",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_45"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 420,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_46",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_46"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 421,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_47",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_47"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 422,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_48",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_48"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 423,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_49",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_49"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 424,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_5",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_5"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 425,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_50",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_50"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 426,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_51",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_51"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 427,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_52",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_52"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 428,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_53",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_53"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 429,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_54",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_54"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 430,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_55",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_55"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 431,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_56",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_56"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 432,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_57",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_57"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 433,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_58",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_58"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 434,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_59",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_59"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 435,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_6",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_6"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 436,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_60",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_60"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 437,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_61",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_61"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 438,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_62",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_62"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 439,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_63",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_63"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 440,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_64",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_64"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 441,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_65",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_65"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 442,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_7",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_7"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 443,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_8",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_8"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 444,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_9",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_9"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 445,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_1",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_1"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 446,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_10",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_10"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 447,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_101",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_101"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 448,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_102",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_102"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
    "id": 449,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_103",
+   "iri": "http://w3id.org/geo-lod/ci/cisite_1",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
    "label": {
-    "IRI-based": "cisite_103"
+    "IRI-based": "cisite_1"
    },
    "annotations": {},
    "range": [],
@@ -18243,986 +16545,6 @@ var vowlresult={
   },
   {
    "id": 450,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_104",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_104"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 451,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_105",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_105"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 452,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_106",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_106"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 453,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_11",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_11"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 454,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_12",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_12"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 455,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_13",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_13"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 456,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_14",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_14"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 457,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_15",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_15"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 458,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_16",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_16"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 459,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_17",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_17"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 460,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_18",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_18"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 461,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_19",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_19"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 462,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_2",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_2"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 463,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_20",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_20"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 464,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_201",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_201"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 465,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_202",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_202"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 466,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_203",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_203"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 467,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_21",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_21"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 468,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_22",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_22"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 469,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_23",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_23"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 470,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_24",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_24"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 471,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_25",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_25"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 472,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_26",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_26"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 473,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_27",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_27"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 474,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_28",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_28"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 475,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_29",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_29"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 476,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_3",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_3"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 477,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_30",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_30"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 478,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_31",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_31"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 479,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_32",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_32"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 480,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_33",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_33"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 481,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_34",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_34"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 482,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_35",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_35"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 483,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_36",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_36"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 484,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_37",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_37"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 485,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_38",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_38"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 486,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_39",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_39"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 487,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_4",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_4"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 488,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_40",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_40"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 489,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_41",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_41"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 490,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_42",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_42"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 491,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_43",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_43"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 492,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_44",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_44"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 493,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_45",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_45"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 494,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_46",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_46"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 495,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_47",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_47"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 496,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_48",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_48"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 497,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_49",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_49"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 498,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_5",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_5"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 499,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_50",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_50"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 500,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_51",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_51"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 501,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_52",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_52"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 502,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_53",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_53"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 503,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_54",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_54"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 504,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_55",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_55"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 505,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_56",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_56"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 506,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_57",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_57"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 507,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_58",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_58"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 508,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_59",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_59"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 509,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_6",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_6"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 510,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_60",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_60"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 511,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_61",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_61"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 512,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_62",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_62"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 513,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_63",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_63"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 514,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_64",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_64"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 515,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_65",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_65"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 516,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_7",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_7"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 517,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_8",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_8"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 518,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_9",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_9"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 519,
-   "iri": "http://w3id.org/geo-lod/ci/cisite_1",
-   "baseIRI": "http://w3id.org/geo-lod/ci",
-   "instances": 0,
-   "label": {
-    "IRI-based": "cisite_1"
-   },
-   "annotations": {},
-   "range": [],
-   "domain": [],
-   "subProperties": [],
-   "superProperties": []
-  },
-  {
-   "id": 520,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19236,7 +16558,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 521,
+   "id": 451,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19250,7 +16572,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 522,
+   "id": 452,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19264,7 +16586,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 523,
+   "id": 453,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19278,7 +16600,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 524,
+   "id": 454,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19292,7 +16614,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 525,
+   "id": 455,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19306,7 +16628,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 526,
+   "id": 456,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19320,7 +16642,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 527,
+   "id": 457,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19334,7 +16656,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 528,
+   "id": 458,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19348,7 +16670,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 529,
+   "id": 459,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19362,7 +16684,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 530,
+   "id": 460,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19376,7 +16698,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 531,
+   "id": 461,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19390,7 +16712,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 532,
+   "id": 462,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19404,7 +16726,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 533,
+   "id": 463,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19418,7 +16740,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 534,
+   "id": 464,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19432,7 +16754,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 535,
+   "id": 465,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19446,7 +16768,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 536,
+   "id": 466,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19460,7 +16782,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 537,
+   "id": 467,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19474,7 +16796,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 538,
+   "id": 468,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19488,7 +16810,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 539,
+   "id": 469,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19502,7 +16824,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 540,
+   "id": 470,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19516,7 +16838,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 541,
+   "id": 471,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19530,7 +16852,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 542,
+   "id": 472,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19544,7 +16866,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 543,
+   "id": 473,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19558,7 +16880,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 544,
+   "id": 474,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19572,7 +16894,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 545,
+   "id": 475,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19586,7 +16908,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 546,
+   "id": 476,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19600,7 +16922,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 547,
+   "id": 477,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19614,7 +16936,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 548,
+   "id": 478,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19628,7 +16950,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 549,
+   "id": 479,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19642,7 +16964,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 550,
+   "id": 480,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19656,7 +16978,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 551,
+   "id": 481,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19670,7 +16992,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 552,
+   "id": 482,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19684,7 +17006,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 553,
+   "id": 483,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19698,7 +17020,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 554,
+   "id": 484,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19712,7 +17034,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 555,
+   "id": 485,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19726,7 +17048,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 556,
+   "id": 486,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19740,7 +17062,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 557,
+   "id": 487,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19754,7 +17076,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 558,
+   "id": 488,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19768,7 +17090,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 559,
+   "id": 489,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19782,7 +17104,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 560,
+   "id": 490,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19796,7 +17118,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 561,
+   "id": 491,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19810,7 +17132,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 562,
+   "id": 492,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19824,7 +17146,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 563,
+   "id": 493,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19838,7 +17160,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 564,
+   "id": 494,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19852,7 +17174,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 565,
+   "id": 495,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19866,7 +17188,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 566,
+   "id": 496,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19880,7 +17202,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 567,
+   "id": 497,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19894,7 +17216,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 568,
+   "id": 498,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19908,7 +17230,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 569,
+   "id": 499,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19922,7 +17244,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 570,
+   "id": 500,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19936,7 +17258,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 571,
+   "id": 501,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19950,7 +17272,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 572,
+   "id": 502,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19964,7 +17286,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 573,
+   "id": 503,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19978,7 +17300,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 574,
+   "id": 504,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19992,7 +17314,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 575,
+   "id": 505,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20006,7 +17328,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 576,
+   "id": 506,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20020,7 +17342,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 577,
+   "id": 507,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20034,7 +17356,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 578,
+   "id": 508,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20048,7 +17370,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 579,
+   "id": 509,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20062,7 +17384,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 580,
+   "id": 510,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20076,7 +17398,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 581,
+   "id": 511,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20090,7 +17412,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 582,
+   "id": 512,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20104,7 +17426,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 583,
+   "id": 513,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20118,7 +17440,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 584,
+   "id": 514,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20132,7 +17454,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 585,
+   "id": 515,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20146,7 +17468,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 586,
+   "id": 516,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20160,7 +17482,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 587,
+   "id": 517,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20174,7 +17496,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 588,
+   "id": 518,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20188,7 +17510,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 589,
+   "id": 519,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20202,7 +17524,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 590,
+   "id": 520,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20216,7 +17538,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 591,
+   "id": 521,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20230,7 +17552,1043 @@ var vowlresult={
    "superProperties": []
   },
   {
+   "id": 522,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_9",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_9"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 523,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_1",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_1"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 524,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_10",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_10"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 525,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_101",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_101"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 526,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_102",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_102"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 527,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_103",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_103"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 528,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_104",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_104"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 529,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_105",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_105"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 530,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_106",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_106"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 531,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_11",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_11"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 532,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_12",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_12"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 533,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_13",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_13"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 534,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_14",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_14"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 535,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_15",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_15"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 536,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_16",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_16"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 537,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_17",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_17"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 538,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_18",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_18"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 539,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_19",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_19"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 540,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_2",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_2"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 541,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_20",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_20"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 542,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_201",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_201"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 543,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_202",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_202"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 544,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_203",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_203"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 545,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_21",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_21"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 546,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_22",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_22"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 547,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_23",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_23"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 548,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_24",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_24"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 549,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_25",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_25"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 550,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_26",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_26"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 551,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_27",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_27"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 552,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_28",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_28"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 553,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_29",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_29"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 554,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_3",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_3"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 555,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_30",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_30"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 556,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_31",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_31"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 557,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_32",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_32"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 558,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_33",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_33"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 559,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_34",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_34"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 560,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_35",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_35"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 561,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_36",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_36"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 562,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_37",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_37"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 563,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_38",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_38"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 564,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_39",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_39"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 565,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_4",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_4"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 566,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_40",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_40"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 567,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_41",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_41"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 568,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_42",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_42"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 569,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_43",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_43"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 570,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_44",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_44"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 571,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_45",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_45"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 572,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_46",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_46"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 573,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_47",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_47"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 574,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_48",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_48"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 575,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_49",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_49"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 576,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_5",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_5"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 577,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_50",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_50"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 578,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_51",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_51"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 579,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_52",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_52"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 580,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_53",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_53"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 581,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_54",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_54"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 582,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_55",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_55"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 583,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_56",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_56"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 584,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_57",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_57"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 585,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_58",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_58"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 586,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_59",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_59"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 587,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_6",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_6"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 588,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_60",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_60"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 589,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_61",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_61"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 590,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_62",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_62"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 591,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_63",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_63"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
    "id": 592,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_64",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_64"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 593,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_65",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_65"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 594,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_7",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_7"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 595,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_8",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_8"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 596,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20363,7 +18721,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 593,
+   "id": 597,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20496,7 +18854,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 594,
+   "id": 598,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20629,7 +18987,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 595,
+   "id": 599,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20762,7 +19120,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 596,
+   "id": 600,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20895,7 +19253,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 597,
+   "id": 601,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21028,7 +19386,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 598,
+   "id": 602,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21161,7 +19519,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 599,
+   "id": 603,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21294,7 +19652,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 600,
+   "id": 604,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21427,7 +19785,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 601,
+   "id": 605,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21560,7 +19918,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 602,
+   "id": 606,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21693,7 +20051,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 603,
+   "id": 607,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21826,7 +20184,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 604,
+   "id": 608,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21959,7 +20317,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 605,
+   "id": 609,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22092,7 +20450,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 606,
+   "id": 610,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22225,7 +20583,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 607,
+   "id": 611,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22358,7 +20716,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 608,
+   "id": 612,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22372,7 +20730,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 609,
+   "id": 613,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22505,7 +20863,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 610,
+   "id": 614,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22638,7 +20996,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 611,
+   "id": 615,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22771,7 +21129,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 612,
+   "id": 616,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22904,7 +21262,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 613,
+   "id": 617,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23037,7 +21395,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 614,
+   "id": 618,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23170,7 +21528,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 615,
+   "id": 619,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23303,7 +21661,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 616,
+   "id": 620,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23436,7 +21794,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 617,
+   "id": 621,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23569,7 +21927,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 618,
+   "id": 622,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23702,7 +22060,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 619,
+   "id": 623,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23835,7 +22193,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 620,
+   "id": 624,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23968,7 +22326,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 621,
+   "id": 625,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24101,7 +22459,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 622,
+   "id": 626,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24234,7 +22592,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 623,
+   "id": 627,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24367,7 +22725,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 624,
+   "id": 628,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24500,7 +22858,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 625,
+   "id": 629,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24633,7 +22991,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 626,
+   "id": 630,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24766,7 +23124,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 627,
+   "id": 631,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24899,7 +23257,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 628,
+   "id": 632,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25032,7 +23390,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 629,
+   "id": 633,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25165,7 +23523,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 630,
+   "id": 634,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25298,7 +23656,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 631,
+   "id": 635,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25431,7 +23789,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 632,
+   "id": 636,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25564,7 +23922,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 633,
+   "id": 637,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25697,7 +24055,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 634,
+   "id": 638,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25830,7 +24188,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 635,
+   "id": 639,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25963,7 +24321,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 636,
+   "id": 640,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26096,7 +24454,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 637,
+   "id": 641,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26229,7 +24587,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 638,
+   "id": 642,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26362,7 +24720,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 639,
+   "id": 643,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26376,7 +24734,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 640,
+   "id": 644,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26390,7 +24748,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 641,
+   "id": 645,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26523,7 +24881,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 642,
+   "id": 646,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26656,7 +25014,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 643,
+   "id": 647,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26789,7 +25147,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 644,
+   "id": 648,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26922,7 +25280,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 645,
+   "id": 649,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27055,7 +25413,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 646,
+   "id": 650,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27069,7 +25427,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 647,
+   "id": 651,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27083,7 +25441,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 648,
+   "id": 652,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27216,7 +25574,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 649,
+   "id": 653,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27349,7 +25707,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 650,
+   "id": 654,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27482,7 +25840,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 651,
+   "id": 655,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27615,7 +25973,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 652,
+   "id": 656,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27748,7 +26106,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 653,
+   "id": 657,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27881,7 +26239,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 654,
+   "id": 658,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28014,7 +26372,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 655,
+   "id": 659,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28028,7 +26386,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 656,
+   "id": 660,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28161,7 +26519,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 657,
+   "id": 661,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28294,7 +26652,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 658,
+   "id": 662,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28427,7 +26785,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 659,
+   "id": 663,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28441,7 +26799,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 660,
+   "id": 664,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28455,7 +26813,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 661,
+   "id": 665,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28588,7 +26946,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 662,
+   "id": 666,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28602,7 +26960,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 663,
+   "id": 667,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28735,7 +27093,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 664,
+   "id": 668,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28868,7 +27226,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 665,
+   "id": 669,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29001,7 +27359,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 666,
+   "id": 670,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29015,7 +27373,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 667,
+   "id": 671,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29029,7 +27387,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 668,
+   "id": 672,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29043,7 +27401,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 669,
+   "id": 673,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29057,7 +27415,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 670,
+   "id": 674,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29071,7 +27429,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 671,
+   "id": 675,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29085,7 +27443,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 672,
+   "id": 676,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29099,7 +27457,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 673,
+   "id": 677,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29113,7 +27471,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 674,
+   "id": 678,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29127,7 +27485,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 675,
+   "id": 679,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29260,7 +27618,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 676,
+   "id": 680,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29393,7 +27751,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 677,
+   "id": 681,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29526,7 +27884,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 678,
+   "id": 682,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29659,7 +28017,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 679,
+   "id": 683,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29792,7 +28150,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 680,
+   "id": 684,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -29925,7 +28283,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 681,
+   "id": 685,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -30058,7 +28416,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 682,
+   "id": 686,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -30191,7 +28549,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 683,
+   "id": 687,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -30324,7 +28682,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 684,
+   "id": 688,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -30338,7 +28696,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 685,
+   "id": 689,
    "iri": "http://orcid.org/0000-0002-3246-3531",
    "baseIRI": "http://orcid.org",
    "instances": 0,
@@ -30352,7 +28710,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 686,
+   "id": 690,
    "iri": "http://orcid.org/0009-0008-2877-3204",
    "baseIRI": "http://orcid.org",
    "instances": 0,
@@ -30375,7 +28733,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 687,
+   "id": 691,
    "iri": "http://orcid.org/0000-0002-3246-3531",
    "baseIRI": "http://orcid.org",
    "instances": 0,
@@ -30398,7 +28756,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 688,
+   "id": 692,
    "iri": "http://orcid.org/0009-0008-2877-3204",
    "baseIRI": "http://orcid.org",
    "instances": 0,
