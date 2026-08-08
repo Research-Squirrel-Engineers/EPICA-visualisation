@@ -598,7 +598,8 @@ in geo-lod.
 `wdttest-epica/data.yaml`. Die `.tab` sind gitignoriert und müssen von der
 Platte kommen.
 
-**Ergebnis:** neues Sub-Skript im geo-lod-`main.py`, Ausgabe nach `EPICA/rdf/`.
+**Ergebnis:** neues Sub-Skript im geo-lod-`main.py`, Ausgabe nach `EPICA/rdf/`,
+dazu mehrteilige Abbildungen neben den bestehenden Einzeldateien.
 
 **Fertig, wenn:** die Pipeline grün durchläuft, SHACL sauber ist und zwei Läufe
 byte-identisch sind.
@@ -619,7 +620,41 @@ byte-identisch sind.
   `geo_lod_utils.py`. Damit erledigt sich der offene Todo, DOIs als
   `dct:source` zu ergänzen.
 
-**Nicht in diesem Chat:** Abbildungen, `wdttest-epica` anfassen.
+**Abbildungen: Collagen statt nur Einzeldateien.** Bisher entsteht je Proxy,
+Achse und Glättung eine eigene Datei, bei fünf Proxies wird das unübersichtlich.
+Gebraucht werden zusätzlich mehrteilige Tafeln, die den Vergleich zeigen, den
+Einzelbilder nicht leisten: mehrere Proxies übereinander auf gemeinsamer
+Altersachse, dieselbe Grösse in verschiedenen Chronologien nebeneinander,
+geglättet gegen ungeglättet. Welche genau, wird zu Beginn des S2-Chats
+entschieden, wenn die fünf `.tab` und ihre Wertebereiche vorliegen — vorher
+lässt sich nicht sagen, was nebeneinander überhaupt lesbar ist.
+
+Was dabei gilt: die Einzeldateien bleiben, die Collagen kommen dazu. Sie tragen
+dieselben MIS-Bänder aus `dist/mis_stages.csv` wie die SISAL-Abbildungen, damit
+Eiskern und Speläotheme dieselbe Stratigraphie zeigen, und sie sind wie alles
+andere byte-reproduzierbar.
+
+**MIS-Bänder auch in den Tiefenplots.** Tiefenplots sind bisher chronologiefrei,
+obwohl die Tiefe die gemessene Grösse ist und das Alter das Abgeleitete. Die
+Bänder geben der Tiefenachse eine indirekte Altersinformation. Dabei ist zu
+beachten:
+
+- Eine MIS-Grenze in Metern ist keine Beobachtung, sondern eine Interpolation
+  im Tiefen-Alters-Modell. Sie hängt vollständig an der benutzten Chronologie.
+- Die fünf Proxies liegen nicht auf derselben: CH₄ auf EDC1/EDC2, δ¹⁸O und
+  dO₂/N₂ auf AICC2023, dust auf EDC3. Dieselbe Grenze landet je nach Kurve in
+  anderer Tiefe — auf einer Tafel mit mehreren Proxies wird das sichtbar, und
+  genau das ist erwünscht.
+- An jeder Tafel mit Bändern steht, welche Chronologie die Umrechnung geliefert
+  hat. Ohne diese Angabe ist die Abbildung nicht interpretierbar.
+- Grenzen jenseits des tiefsten Messpunktes werden nicht extrapoliert.
+
+**Zu entscheiden in S2:** ob die Grenze-in-Tiefe auch ins RDF geht, als weitere
+`geolod:MISAttributeAssignment` mit der Chronologie als Quelle. Konsequente
+Fortsetzung des Musters, verdoppelt aber die Zuweisungen je Kern und
+Chronologie.
+
+**Nicht in diesem Chat:** `wdttest-epica` anfassen.
 
 ---
 
