@@ -10,7 +10,7 @@ CI Pipeline — Campanian Ignimbrite Findspots → RDF
 
 → Writing TTL ...
   ✓  Written: C:\git\GeoScience-FAIRification-LOD\CI\rdf\ci_findspots.ttl
-     Triples: 3512
+     Triples: 3307
 
 ************************************************************
 SUCCESS

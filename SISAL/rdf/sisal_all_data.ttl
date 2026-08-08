@@ -1,3 +1,4 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix geolod: <http://w3id.org/geo-lod/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -161710,6 +161711,11 @@ geolod:SISAL_Cave_Collection a geo:FeatureCollection ;
         geolod:Cave_site_0365,
         geolod:Cave_site_0366 .
 
+geolod:SISAL_Sites_Dataset a prov:Entity ;
+    dct:created "2026-08-08"^^xsd:date ;
+    owl:versionInfo "sha256:7ce796f2733a" ;
+    prov:wasGeneratedBy geolod:SISAL_Sites_Generation .
+
 geolod:Cave_site_0001_Geometry a sf:Point ;
     geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(77.7764 30.7903)"^^geo:wktLiteral .
 
@@ -162624,6 +162630,21 @@ geolod:Cave_site_0365_Geometry a sf:Point ;
 
 geolod:Cave_site_0366_Geometry a sf:Point ;
     geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(13.8833 45.6167)"^^geo:wktLiteral .
+
+geolod:SISAL_Sites_Generation a prov:Activity ;
+    rdfs:label "SISAL cave site RDF generation"@en ;
+    owl:versionInfo "sha256:7ce796f2733a" ;
+    prov:used geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py,
+        geolod:SISAL_Sites_Generation_input_v_sites_all_csv ;
+    prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
+
+geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py a prov:Entity ;
+    rdfs:label "plot_sisal_from_csv.py" ;
+    dct:identifier "sha256:e4ce015b10fa8f11adbc2e4d39941d281776cf1d0665e752201a9bff2378b705" .
+
+geolod:SISAL_Sites_Generation_input_v_sites_all_csv a prov:Entity ;
+    rdfs:label "v_sites_all.csv" ;
+    dct:identifier "sha256:fa4c724088110f04f1dcdc10dff4b41dc4fe45f6df9fb2f6595b1245ff2d06c1" .
 
 geolod:Cave_site_0001 a geolod:Cave ;
     rdfs:label "Bittoo cave"@en ;

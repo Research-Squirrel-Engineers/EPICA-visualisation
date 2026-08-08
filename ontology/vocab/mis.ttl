@@ -12,8 +12,8 @@
 #
 # GENERATED FILE - do not edit by hand.
 # Source: ontology/build_mis_vocab.py
-# Inputs: info/Railsbacketal2015MISSubstagesFig3-TableVersion01-CSV.csv
-#         info/LR04_MISboundaries.csv
+# Release: 2026-08-08
+# Fingerprint (input data + generator): sha256:f031e6017451
 # ==========================================================================
 
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -35,7 +35,35 @@
     skos:scopeNote """Railsback et al. (2015) point out that their lettered substages label excursions rather than the transitions between them, so the boundary ages of their table are gradational rather than exact instants. The values are reproduced here as published, without rounding; consumers should treat them as approximate."""@en ;
     skos:editorialNote """Concepts up to 1013.1 ka BP follow Railsback et al. (2015), which is the leading scheme for all MIS assignments in geo-lod. Older concepts are taken from the LR04 boundaries of Lisiecki & Raymo (2005), the only source covering that range."""@en ;
     owl:imports  <http://w3id.org/geo-lod/> ;
+    dct:created  "2026-08-08"^^xsd:date ;
+    owl:versionInfo "sha256:f031e6017451" ;
+    prov:wasGeneratedBy mis:vocabulary_generation ;
     dct:source   mis:source_railsback2015, mis:source_lisieckiRaymo2005 .
+
+mis:vocabulary_generation
+    a prov:Activity ;
+    rdfs:label "MIS vocabulary generation"@en ;
+    owl:versionInfo "sha256:f031e6017451" ;
+    prov:used mis:input_LR04_MISboundaries_csv ,
+        mis:input_Railsback2015_csv ,
+        mis:input_build_mis_vocab_py ;
+    prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
+
+mis:input_LR04_MISboundaries_csv
+    a prov:Entity ;
+    rdfs:label "LR04_MISboundaries.csv" ;
+    dct:identifier "sha256:6dd5e35ed5d8faf508697560b3bf24556a3fc102b4893b721da24fae78612765" .
+
+mis:input_Railsback2015_csv
+    a prov:Entity ;
+    rdfs:label "Railsbacketal2015MISSubstagesFig3-TableVersion01-CSV.csv" ;
+    dct:identifier "sha256:e37a9be128a94932137fade02025e5bc876c6092f4e7a55be3943ecf40352d4a" .
+
+mis:input_build_mis_vocab_py
+    a prov:Entity ;
+    rdfs:label "build_mis_vocab.py" ;
+    dct:identifier "sha256:3224482a5658182c3aa0c99ceaaada7b2183a2063867d828ae2ebe799bc85058" .
+
 
 mis:source_railsback2015
     a geolod:DataSource, owl:NamedIndividual ;

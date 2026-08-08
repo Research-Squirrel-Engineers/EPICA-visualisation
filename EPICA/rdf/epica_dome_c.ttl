@@ -4,6 +4,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix geolod: <http://w3id.org/geo-lod/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -782,7 +783,8 @@ geolod:EPICA_DomeC_CH4_Dataset a dcat:Dataset ;
         geolod:Obs_CH4_0734,
         geolod:Obs_CH4_0735 .
 
-geolod:EPICA_DomeC_Dataset a dcat:Dataset ;
+geolod:EPICA_DomeC_Dataset a dcat:Dataset,
+        prov:Entity ;
     dct:created "2026-08-08"^^xsd:date ;
     dct:description "Methane (CH4) and stable water isotope (δ18O) measurements from the EPICA Dome C ice core, East Antarctica, covering the last ~800,000 years (ca. 8 glacial cycles)."@en ;
     dct:license <https://creativecommons.org/licenses/by/3.0/> ;
@@ -2903,7 +2905,29 @@ geolod:EPICA_DomeC_Dataset a dcat:Dataset ;
         geolod:Obs_d18O_1374,
         geolod:Obs_d18O_1375,
         geolod:Obs_d18O_1376,
-        geolod:Obs_d18O_1377 .
+        geolod:Obs_d18O_1377 ;
+    owl:versionInfo "sha256:7d6a0c9b05c3" ;
+    prov:wasGeneratedBy geolod:EPICA_DomeC_Generation .
+
+geolod:EPICA_DomeC_Generation a prov:Activity ;
+    rdfs:label "EPICA Dome C RDF generation"@en ;
+    owl:versionInfo "sha256:7d6a0c9b05c3" ;
+    prov:used geolod:EPICA_DomeC_Generation_input_EDC_CH4_tab,
+        geolod:EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab,
+        geolod:EPICA_DomeC_Generation_input_plot_epica_from_tab_py ;
+    prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
+
+geolod:EPICA_DomeC_Generation_input_EDC_CH4_tab a prov:Entity ;
+    rdfs:label "EDC_CH4.tab" ;
+    dct:identifier "sha256:b25a7f7a69ac4347aeb72a7e6e134476200dca5c8b574b5d445b2c1f770a8539" .
+
+geolod:EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab a prov:Entity ;
+    rdfs:label "EPICA_Dome_C_d18O.tab" ;
+    dct:identifier "sha256:529baf6a3186bbc65adf675e5569a18f50ad11d53a92b6fb6b30d563dd01757e" .
+
+geolod:EPICA_DomeC_Generation_input_plot_epica_from_tab_py a prov:Entity ;
+    rdfs:label "plot_epica_from_tab.py" ;
+    dct:identifier "sha256:30d942d780c95b6469b319c1b5ad72b3f81e38d5cbe745e06b0a5a8b81708b47" .
 
 geolod:EPICA_DomeC_d18O_Dataset a dcat:Dataset ;
     dct:description "δ¹⁸O measurements from the EPICA Dome C ice core on the AICC2023 chronology (102–806 ka BP, 1378 data points)."@en ;
