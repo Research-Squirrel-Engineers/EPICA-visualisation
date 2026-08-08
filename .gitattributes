@@ -1,0 +1,22 @@
+# Zeilenenden festnageln. Ohne diese Datei schreibt Git auf Windows beim
+# Checkout LF nach CRLF um; die Byte-Gleichheit zweier Läufe gälte dann nur
+# auf dem Rechner, auf dem erzeugt wurde.
+
+* text=auto eol=lf
+
+*.ttl    text eol=lf
+*.rq     text eol=lf
+*.csv    text eol=lf
+*.tab    text eol=lf
+*.py     text eol=lf
+*.md     text eol=lf
+*.yaml   text eol=lf
+*.yml    text eol=lf
+*.mermaid text eol=lf
+*.txt    text eol=lf
+
+*.jpg    binary
+*.png    binary
+*.pdf    binary
+*.ods    binary
+*.xlsx   binary
