@@ -155,7 +155,7 @@ lesen hier ab, statt neu zu diskutieren.
 | Auslieferung `sisalv3_csv.zip` vs. Download | in S3b entscheiden — keine Rückwirkung auf IRIs | 2026-08-08 |
 | SISAL-Site-Auswahl für RDF | in S3 entscheiden, wenn die vollständige Datenbank vorliegt | 2026-08-08 |
 | Waisen bei FK-Aktivierung: abweisen oder laden | in S3b entscheiden — zeigt sich erst beim Ladelauf | 2026-08-08 |
-| PRIMER.md-Sprache | deutsch — internes Arbeitsdokument | 2026-08 (Tag unbekannt) |
+| PRIMER.md-Sprache | deutsch — internes Arbeitsdokument | 2026-08-08 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
