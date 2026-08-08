@@ -1,33 +1,33 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix ns1: <http://w3id.org/geo-lod/> .
-@prefix ns2: <http://fuzzy-sl.squirrel.link/ontology/> .
+@prefix ns1: <http://fuzzy-sl.squirrel.link/ontology/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
-<http://w3id.org/geo-lod/ci/cisite_59> a ns2:Site,
-        ns1:CIArchaeologicalSite,
-        ns1:CIFindspot,
+<http://w3id.org/geo-lod/ci/cisite_59> a ns1:Site,
+        ns2:CIArchaeologicalSite,
+        ns2:CIFindspot,
         <http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit>,
         <http://www.w3.org/ns/ldp#Resource>,
         prov:Entity,
         <https://pleiades.stoa.org/places/vocab#Place>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Kostenki-Borshchevo (Russia)"@en ;
-    ns2:dubiousMatch <https://en.wikipedia.org/wiki/Kostyonki%E2%80%93Borshchyovo> ;
+    ns1:dubiousMatch <https://en.wikipedia.org/wiki/Kostyonki%E2%80%93Borshchyovo> ;
     dcterms:creator <https://orcid.org/0000-0002-3246-3531>,
         <https://orcid.org/0000-0003-1100-6494> ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:rightsHolder <https://orcid.org/0000-0002-3246-3531>,
         <https://orcid.org/0000-0003-1100-6494> ;
-    void:inDataset ns1:geo-lod ;
-    ns1:hasCertaintyDescription "findspot mentioned in a scientific paper"@en ;
-    ns1:hasCertaintyLevel ns2:representative ;
-    ns1:hasLiteratureReference "Fedele et al., 2008",
+    void:inDataset ns2:geo-lod ;
+    ns2:hasCertaintyDescription "findspot mentioned in a scientific paper"@en ;
+    ns2:hasCertaintyLevel ns1:representative ;
+    ns2:hasLiteratureReference "Fedele et al., 2008",
         "Giaccio et al., 2008" ;
-    ns1:hasSpatialType ns2:ArchaeologicalSite ;
+    ns2:hasSpatialType ns1:ArchaeologicalSite ;
     geo:hasGeometry <http://w3id.org/geo-lod/ci/cisite_59_geom> ;
     rdfs:comment "CI findspot related from literature"@en ;
     skos:prefLabel "Kostenki-Borshchevo (Russia)"@en ;
