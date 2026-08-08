@@ -119,8 +119,8 @@ var tree={
        "instancecount":6,
        "http://www.w3.org/ns/adms#Asset":6,
        "http://rdfs.org/ns/void#Dataset":6,
-       "http://www.w3.org/ns/ldp#Resource":4,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":4
+       "http://www.w3.org/ns/ldp#Resource":2,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":8
@@ -929,33 +929,23 @@ var tree={
     "data":{
      "from":{
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "http://www.w3.org/2004/02/skos/core#Collection":3,
-       "http://www.w3.org/ns/ldp#Resource":3,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":3
+       "http://www.w3.org/2004/02/skos/core#Collection":3
       },
       "http://www.w3.org/ns/prov#used":{
        "http://www.w3.org/ns/prov#Activity":2
       }
      },
      "to":{
-      "http://purl.org/dc/terms/identifier":{
-       "instancecount":2
+      "http://purl.org/dc/terms/created":{
+       "instancecount":1
       },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":3,
        "http://www.w3.org/ns/adms#Asset":3,
-       "http://rdfs.org/ns/void#Dataset":3,
-       "http://www.w3.org/ns/ldp#Resource":3,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":3
+       "http://rdfs.org/ns/void#Dataset":3
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":3
-      },
-      "http://www.w3.org/2000/01/rdf-schema#label":{
-       "instancecount":2
-      },
-      "http://purl.org/dc/terms/created":{
-       "instancecount":1
       },
       "http://www.w3.org/2002/07/owl#versionInfo":{
        "instancecount":1
@@ -963,6 +953,12 @@ var tree={
       "http://www.w3.org/ns/prov#wasGeneratedBy":{
        "instancecount":1,
        "http://www.w3.org/ns/prov#Activity":1
+      },
+      "http://purl.org/dc/terms/identifier":{
+       "instancecount":2
+      },
+      "http://www.w3.org/2000/01/rdf-schema#label":{
+       "instancecount":2
       }
      }
     }
@@ -3218,8 +3214,8 @@ var tree={
      "from":{
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "http://www.w3.org/2004/02/skos/core#Collection":223,
-       "http://www.w3.org/ns/ldp#Resource":44,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":44
+       "http://www.w3.org/ns/ldp#Resource":108,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":108
       },
       "http://www.w3.org/ns/prov#wasGeneratedBy":{
        "http://fuzzy-sl.squirrel.link/ontology/Site":148,
@@ -3234,39 +3230,15 @@ var tree={
       }
      },
      "to":{
-      "http://fuzzy-sl.squirrel.link/ontology/activityDesc":{
-       "instancecount":74
-      },
-      "http://fuzzy-sl.squirrel.link/ontology/hasSource":{
-       "instancecount":74
-      },
-      "http://fuzzy-sl.squirrel.link/ontology/hasSourceType":{
-       "instancecount":74
-      },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":149,
        "http://www.w3.org/ns/adms#Asset":149,
        "http://rdfs.org/ns/void#Dataset":149,
-       "http://www.w3.org/ns/ldp#Resource":105,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":105
-      },
-      "http://w3id.org/geo-lod/hasCertaintyLevel":{
-       "instancecount":74
-      },
-      "http://w3id.org/geo-lod/hasLiteratureReference":{
-       "instancecount":100
+       "http://www.w3.org/ns/ldp#Resource":51,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":51
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":223
-      },
-      "http://www.w3.org/ns/prov#used":{
-       "instancecount":76,
-       "http://fuzzy-sl.squirrel.link/ontology/Site":74,
-       "http://w3id.org/geo-lod/CIFindspot":74,
-       "http://www.w3.org/ns/prov#Entity":76,
-       "https://pleiades.stoa.org/places/vocab#Place":74,
-       "http://w3id.org/geo-lod/CIArchaeologicalSite":9,
-       "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":9
       },
       "http://www.w3.org/ns/prov#wasAssociatedWith":{
        "instancecount":150,
@@ -3276,6 +3248,30 @@ var tree={
       "http://www.w3.org/ns/prov#wasInformedBy":{
        "instancecount":74,
        "http://www.w3.org/ns/prov#Activity":74
+      },
+      "http://fuzzy-sl.squirrel.link/ontology/activityDesc":{
+       "instancecount":74
+      },
+      "http://fuzzy-sl.squirrel.link/ontology/hasSource":{
+       "instancecount":74
+      },
+      "http://fuzzy-sl.squirrel.link/ontology/hasSourceType":{
+       "instancecount":74
+      },
+      "http://w3id.org/geo-lod/hasCertaintyLevel":{
+       "instancecount":74
+      },
+      "http://w3id.org/geo-lod/hasLiteratureReference":{
+       "instancecount":100
+      },
+      "http://www.w3.org/ns/prov#used":{
+       "instancecount":76,
+       "http://fuzzy-sl.squirrel.link/ontology/Site":74,
+       "http://w3id.org/geo-lod/CIFindspot":74,
+       "http://www.w3.org/ns/prov#Entity":76,
+       "https://pleiades.stoa.org/places/vocab#Place":74,
+       "http://w3id.org/geo-lod/CIArchaeologicalSite":9,
+       "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":9
       },
       "http://www.w3.org/2000/01/rdf-schema#label":{
        "instancecount":1
@@ -4787,16 +4783,16 @@ var tree={
      "from":{
       "http://www.opengis.net/ont/geosparql#hasGeometry":{
        "http://fuzzy-sl.squirrel.link/ontology/Site":74,
-       "http://w3id.org/geo-lod/CIFindspot":74,
-       "http://www.w3.org/ns/prov#Entity":74,
-       "https://pleiades.stoa.org/places/vocab#Place":74,
        "http://w3id.org/geo-lod/CIArchaeologicalSite":9,
-       "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":9
+       "http://w3id.org/geo-lod/CIFindspot":74,
+       "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit":9,
+       "http://www.w3.org/ns/prov#Entity":74,
+       "https://pleiades.stoa.org/places/vocab#Place":74
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "http://www.opengis.net/ont/geosparql#GeometryCollection":148,
-       "http://www.w3.org/ns/ldp#Resource":14,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":14
+       "http://www.w3.org/ns/ldp#Resource":40,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":40
       }
      },
      "to":{
@@ -4804,8 +4800,8 @@ var tree={
        "instancecount":74,
        "http://www.w3.org/ns/adms#Asset":74,
        "http://rdfs.org/ns/void#Dataset":74,
-       "http://www.w3.org/ns/ldp#Resource":55,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":55
+       "http://www.w3.org/ns/ldp#Resource":34,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":34
       },
       "http://w3id.org/geo-lod/hasCertaintyDescription":{
        "instancecount":74
@@ -7075,8 +7071,8 @@ var tree={
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "http://www.opengis.net/ont/geosparql#FeatureCollection":260,
        "http://www.w3.org/2004/02/skos/core#Collection":65,
-       "http://www.w3.org/ns/ldp#Resource":23,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":23
+       "http://www.w3.org/ns/ldp#Resource":4,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":4
       },
       "http://www.w3.org/ns/prov#used":{
        "http://fuzzy-sl.squirrel.link/ontology/Georeferencing":65,
@@ -7084,9 +7080,6 @@ var tree={
       }
      },
      "to":{
-      "http://fuzzy-sl.squirrel.link/ontology/dubiousMatch":{
-       "instancecount":3
-      },
       "http://purl.org/dc/terms/creator":{
        "instancecount":130
       },
@@ -7100,8 +7093,8 @@ var tree={
        "instancecount":65,
        "http://www.w3.org/ns/adms#Asset":65,
        "http://rdfs.org/ns/void#Dataset":65,
-       "http://www.w3.org/ns/ldp#Resource":48,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":48
+       "http://www.w3.org/ns/ldp#Resource":23,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":23
       },
       "http://w3id.org/geo-lod/hasCertaintyDescription":{
        "instancecount":65
@@ -7129,6 +7122,9 @@ var tree={
       "http://www.w3.org/2000/01/rdf-schema#label":{
        "instancecount":65
       },
+      "http://www.w3.org/2004/02/skos/core#closeMatch":{
+       "instancecount":57
+      },
       "http://www.w3.org/2004/02/skos/core#prefLabel":{
        "instancecount":65
       },
@@ -7148,14 +7144,14 @@ var tree={
        "http://fuzzy-sl.squirrel.link/ontology/Georeferencing":65,
        "http://www.w3.org/ns/prov#Activity":130
       },
-      "http://www.w3.org/2004/02/skos/core#closeMatch":{
-       "instancecount":57
+      "http://fuzzy-sl.squirrel.link/ontology/spatialCloseMatch":{
+       "instancecount":14
       },
       "http://fuzzy-sl.squirrel.link/ontology/partlyMatch":{
        "instancecount":8
       },
-      "http://fuzzy-sl.squirrel.link/ontology/spatialCloseMatch":{
-       "instancecount":14
+      "http://fuzzy-sl.squirrel.link/ontology/dubiousMatch":{
+       "instancecount":3
       }
      }
     }
@@ -7362,8 +7358,8 @@ var tree={
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "http://www.opengis.net/ont/geosparql#FeatureCollection":54,
        "http://www.w3.org/2004/02/skos/core#Collection":9,
-       "http://www.w3.org/ns/ldp#Resource":1,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
+       "http://www.w3.org/ns/ldp#Resource":3,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":3
       },
       "http://www.w3.org/ns/prov#used":{
        "http://fuzzy-sl.squirrel.link/ontology/Georeferencing":9,
@@ -7383,9 +7379,7 @@ var tree={
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":9,
        "http://www.w3.org/ns/adms#Asset":9,
-       "http://rdfs.org/ns/void#Dataset":9,
-       "http://www.w3.org/ns/ldp#Resource":7,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":7
+       "http://rdfs.org/ns/void#Dataset":9
       },
       "http://w3id.org/geo-lod/hasCertaintyDescription":{
        "instancecount":9
@@ -7554,8 +7548,8 @@ var tree={
        "instancecount":4,
        "http://www.w3.org/ns/adms#Asset":4,
        "http://rdfs.org/ns/void#Dataset":4,
-       "http://www.w3.org/ns/ldp#Resource":4,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":4
+       "http://www.w3.org/ns/ldp#Resource":2,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":10
@@ -7565,9 +7559,9 @@ var tree={
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "instancecount":309,
-       "http://www.opengis.net/ont/geosparql#FeatureCollection":1,
-       "http://www.w3.org/ns/prov#Activity":223,
        "http://fuzzy-sl.squirrel.link/ontology/Georeferencing":148,
+       "http://www.w3.org/ns/prov#Activity":223,
+       "http://www.opengis.net/ont/geosparql#FeatureCollection":1,
        "http://fuzzy-sl.squirrel.link/ontology/Site":74,
        "http://w3id.org/geo-lod/CIFindspot":74,
        "http://www.w3.org/ns/prov#Entity":77,
@@ -7614,8 +7608,8 @@ var tree={
        "instancecount":2,
        "http://www.w3.org/ns/adms#Asset":2,
        "http://rdfs.org/ns/void#Dataset":2,
-       "http://www.w3.org/ns/ldp#Resource":2,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":4
@@ -19991,8 +19985,8 @@ var tree={
        "instancecount":1234,
        "http://www.w3.org/ns/adms#Asset":1234,
        "http://rdfs.org/ns/void#Dataset":1234,
-       "http://www.w3.org/ns/ldp#Resource":245,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":245
+       "http://www.w3.org/ns/ldp#Resource":120,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":120
       },
       "http://w3id.org/geo-lod/ageChronologySpeleothem":{
        "instancecount":1234,
@@ -20017,16 +20011,16 @@ var tree={
       "http://w3id.org/geo-lod/smoothingMethod_median":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/RollingMedianFilter":1234,
-       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":1029,
-       "http://www.w3.org/ns/ldp#Resource":1029,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1029
+       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":27,
+       "http://www.w3.org/ns/ldp#Resource":27,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":27
       },
       "http://w3id.org/geo-lod/smoothingMethod_savgol":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/SavitzkyGolayFilter":1234,
-       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":634,
-       "http://www.w3.org/ns/ldp#Resource":634,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":634
+       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":143,
+       "http://www.w3.org/ns/ldp#Resource":143,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":143
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1234
@@ -32402,8 +32396,8 @@ var tree={
        "instancecount":1234,
        "http://www.w3.org/ns/adms#Asset":1234,
        "http://rdfs.org/ns/void#Dataset":1234,
-       "http://www.w3.org/ns/ldp#Resource":232,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":232
+       "http://www.w3.org/ns/ldp#Resource":121,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":121
       },
       "http://w3id.org/geo-lod/ageChronologySpeleothem":{
        "instancecount":1234,
@@ -32418,8 +32412,8 @@ var tree={
       "http://w3id.org/geo-lod/measurementType":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/MeasurementType":1234,
-       "http://www.w3.org/ns/ldp#Resource":813,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":813
+       "http://www.w3.org/ns/ldp#Resource":23,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":23
       },
       "http://w3id.org/geo-lod/smoothedValue_rollingMedian":{
        "instancecount":1234
@@ -32430,16 +32424,16 @@ var tree={
       "http://w3id.org/geo-lod/smoothingMethod_median":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/RollingMedianFilter":1234,
-       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":1014,
-       "http://www.w3.org/ns/ldp#Resource":1014,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1014
+       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":20,
+       "http://www.w3.org/ns/ldp#Resource":20,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":20
       },
       "http://w3id.org/geo-lod/smoothingMethod_savgol":{
        "instancecount":1234,
        "http://w3id.org/geo-lod/SavitzkyGolayFilter":1234,
-       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":600,
-       "http://www.w3.org/ns/ldp#Resource":600,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":600
+       "http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation":141,
+       "http://www.w3.org/ns/ldp#Resource":141,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":141
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1234
@@ -32480,7 +32474,10 @@ var tree={
        "http://w3id.org/geo-lod/Speleothem":4
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
-       "http://www.w3.org/2004/02/skos/core#Collection":1
+       "http://www.w3.org/2004/02/skos/core#Collection":1,
+       "http://www.opengis.net/ont/geosparql#FeatureCollection":1,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       }
      },
      "to":{
@@ -32573,13 +32570,15 @@ var tree={
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":4,
        "http://www.w3.org/ns/adms#Asset":4,
-       "http://rdfs.org/ns/void#Dataset":4
+       "http://rdfs.org/ns/void#Dataset":4,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       },
       "http://w3id.org/geo-lod/collectedFrom":{
        "instancecount":4,
        "http://w3id.org/geo-lod/Cave":4,
-       "http://www.w3.org/ns/ldp#Resource":4,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":4
+       "http://www.w3.org/ns/ldp#Resource":2,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
       },
       "http://w3id.org/geo-lod/entityId":{
        "instancecount":4
@@ -32622,7 +32621,9 @@ var tree={
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
        "http://www.w3.org/ns/adms#Asset":1,
-       "http://rdfs.org/ns/void#Dataset":1
+       "http://rdfs.org/ns/void#Dataset":1,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       },
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":1
@@ -32702,13 +32703,13 @@ var tree={
     "data":{
      "from":{
       "http://w3id.org/geo-lod/measurementType":{
-       "http://w3id.org/geo-lod/Delta18OSpeleothemObservation":1234,
-       "http://w3id.org/geo-lod/Delta13CSpeleothemObservation":1234
+       "http://w3id.org/geo-lod/Delta13CSpeleothemObservation":1234,
+       "http://w3id.org/geo-lod/Delta18OSpeleothemObservation":1234
       },
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "http://www.w3.org/2004/02/skos/core#Collection":2,
-       "http://www.w3.org/ns/ldp#Resource":2,
-       "https://www.iana.org/assignments/media-types/text/turtle#Resource":2
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       }
      },
      "to":{
@@ -32722,11 +32723,11 @@ var tree={
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":{
        "instancecount":4
       },
-      "http://www.w3.org/2000/01/rdf-schema#comment":{
-       "instancecount":1
-      },
       "http://www.w3.org/2000/01/rdf-schema#label":{
        "instancecount":3
+      },
+      "http://www.w3.org/2000/01/rdf-schema#comment":{
+       "instancecount":1
       }
      }
     }
@@ -32764,7 +32765,9 @@ var tree={
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":1,
        "http://www.w3.org/ns/adms#Asset":1,
-       "http://rdfs.org/ns/void#Dataset":1
+       "http://rdfs.org/ns/void#Dataset":1,
+       "http://www.w3.org/ns/ldp#Resource":1,
+       "https://www.iana.org/assignments/media-types/text/turtle#Resource":1
       },
       "http://w3id.org/geo-lod/windowSize":{
        "instancecount":1
@@ -32895,7 +32898,7 @@ var tree={
    {
     "id":"http://w3id.org/geo-lod/Cave_collection",
     "parent":"http://www.w3.org/2004/02/skos/core#Collection",
-    "type":"featurecollection",
+    "type":"instance",
     "text":"Cave Instances Collection (geolod:Cave_collection)",
     "data":{
      "from":{},
@@ -39976,21 +39979,6 @@ var tree={
       }
      },
      "to":{
-      "http://purl.org/dc/terms/created":{
-       "instancecount":1
-      },
-      "http://purl.org/dc/terms/description":{
-       "instancecount":1
-      },
-      "http://purl.org/dc/terms/license":{
-       "instancecount":1
-      },
-      "http://purl.org/dc/terms/publisher":{
-       "instancecount":1
-      },
-      "http://purl.org/dc/terms/title":{
-       "instancecount":1
-      },
       "http://rdfs.org/ns/void#inDataset":{
        "instancecount":2,
        "http://www.w3.org/ns/adms#Asset":2,
@@ -40006,6 +39994,21 @@ var tree={
        "instancecount":6,
        "http://www.w3.org/ns/dcat#Dataset":6,
        "http://www.w3.org/ns/prov#Entity":2
+      },
+      "http://purl.org/dc/terms/created":{
+       "instancecount":1
+      },
+      "http://purl.org/dc/terms/description":{
+       "instancecount":1
+      },
+      "http://purl.org/dc/terms/license":{
+       "instancecount":1
+      },
+      "http://purl.org/dc/terms/publisher":{
+       "instancecount":1
+      },
+      "http://purl.org/dc/terms/title":{
+       "instancecount":1
       }
      }
     }
@@ -82722,11 +82725,11 @@ var tree={
       "http://www.w3.org/2000/01/rdf-schema#member":{
        "http://www.w3.org/2004/02/skos/core#Collection":4
       },
-      "http://w3id.org/geo-lod/smoothingMethod_median":{
+      "http://w3id.org/geo-lod/smoothingMethod_savgol":{
        "http://www.ics.forth.gr/isl/CRMsci/S4_Observation":2114,
        "http://www.w3.org/ns/sosa/Observation":2114
       },
-      "http://w3id.org/geo-lod/smoothingMethod_savgol":{
+      "http://w3id.org/geo-lod/smoothingMethod_median":{
        "http://www.ics.forth.gr/isl/CRMsci/S4_Observation":2114,
        "http://www.w3.org/ns/sosa/Observation":2114
       }
@@ -82746,11 +82749,11 @@ var tree={
       "http://purl.org/dc/terms/references":{
        "instancecount":2
       },
-      "http://w3id.org/geo-lod/windowSize":{
-       "instancecount":2
-      },
       "http://w3id.org/geo-lod/polyOrder":{
        "instancecount":1
+      },
+      "http://w3id.org/geo-lod/windowSize":{
+       "instancecount":2
       }
      }
     }
