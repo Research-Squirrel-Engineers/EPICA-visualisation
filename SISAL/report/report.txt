@@ -22,23 +22,23 @@ Loading: v_data_144_botuvera.csv
 
   Generating 6 plots for Botuverá cave …
     → 144_botuvera_d18o_age_unsmoothed
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d18o_age_unsmoothed.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d18o_age_unsmoothed.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_unsmoothed.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_unsmoothed.svg
     → 144_botuvera_d18o_age_smooth11
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d18o_age_smooth11.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d18o_age_smooth11.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_smooth11.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_smooth11.svg
     → 144_botuvera_d18o_age_savgol11p2
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d18o_age_savgol11p2.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d18o_age_savgol11p2.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_savgol11p2.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_savgol11p2.svg
     → 144_botuvera_d13c_age_unsmoothed
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d13c_age_unsmoothed.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d13c_age_unsmoothed.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_unsmoothed.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_unsmoothed.svg
     → 144_botuvera_d13c_age_smooth11
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d13c_age_smooth11.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d13c_age_smooth11.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_smooth11.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_smooth11.svg
     → 144_botuvera_d13c_age_savgol11p2
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d13c_age_savgol11p2.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\144_botuvera_d13c_age_savgol11p2.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_savgol11p2.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_savgol11p2.svg
 
 ────────────────────────────────────────────────────────────
 Loading: v_data_145_corchia.csv
@@ -51,23 +51,23 @@ Loading: v_data_145_corchia.csv
 
   Generating 6 plots for Antro del Corchia …
     → 145_corchia_d18o_age_unsmoothed
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d18o_age_unsmoothed.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d18o_age_unsmoothed.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_unsmoothed.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_unsmoothed.svg
     → 145_corchia_d18o_age_smooth11
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d18o_age_smooth11.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d18o_age_smooth11.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_smooth11.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_smooth11.svg
     → 145_corchia_d18o_age_savgol11p2
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d18o_age_savgol11p2.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d18o_age_savgol11p2.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_savgol11p2.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_savgol11p2.svg
     → 145_corchia_d13c_age_unsmoothed
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d13c_age_unsmoothed.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d13c_age_unsmoothed.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_unsmoothed.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_unsmoothed.svg
     → 145_corchia_d13c_age_smooth11
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d13c_age_smooth11.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d13c_age_smooth11.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_smooth11.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_smooth11.svg
     → 145_corchia_d13c_age_savgol11p2
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d13c_age_savgol11p2.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\145_corchia_d13c_age_savgol11p2.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_savgol11p2.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_savgol11p2.svg
 
 ────────────────────────────────────────────────────────────
 Loading: v_data_140_sanbao.csv
@@ -80,14 +80,14 @@ Loading: v_data_140_sanbao.csv
 
   Generating 3 plots for Sanbao cave …
     → 140_sanbao_d18o_age_unsmoothed
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\140_sanbao_d18o_age_unsmoothed.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\140_sanbao_d18o_age_unsmoothed.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_unsmoothed.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_unsmoothed.svg
     → 140_sanbao_d18o_age_smooth11
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\140_sanbao_d18o_age_smooth11.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\140_sanbao_d18o_age_smooth11.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_smooth11.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_smooth11.svg
     → 140_sanbao_d18o_age_savgol11p2
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\140_sanbao_d18o_age_savgol11p2.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\140_sanbao_d18o_age_savgol11p2.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_savgol11p2.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_savgol11p2.svg
 
 ────────────────────────────────────────────────────────────
 Loading: v_data_275_buracagloriosa.csv
@@ -100,33 +100,33 @@ Loading: v_data_275_buracagloriosa.csv
 
   Generating 6 plots for Buraca Gloriosa …
     → 275_buracagloriosa_d18o_age_unsmoothed
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.svg
     → 275_buracagloriosa_d18o_age_smooth11
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.svg
     → 275_buracagloriosa_d18o_age_savgol11p2
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.svg
     → 275_buracagloriosa_d13c_age_unsmoothed
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.svg
     → 275_buracagloriosa_d13c_age_smooth11
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.svg
     → 275_buracagloriosa_d13c_age_savgol11p2
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.jpg
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.jpg
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg
 
 ────────────────────────────────────────────────────────────
 RDF Export  (geo-lod SISAL Ontology + data)
 ────────────────────────────────────────────────────────────
-  ✓ Core ontology : c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\geo_lod_core.ttl
-  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_taxonomy.mermaid
-  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_epica.mermaid
-  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_sisal.mermaid
-  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_ci.mermaid
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_ontology.ttl
+  ✓ Core ontology : C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\geo_lod_core.ttl
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_taxonomy.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_epica.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_sisal.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_ci.mermaid
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_ontology.ttl
 
   Building sites graph …
   FeatureCollection: 305 members → geolod:SISAL_Cave_Collection
@@ -134,30 +134,30 @@ RDF Export  (geo-lod SISAL Ontology + data)
   Global Collection: 305 cave sites added → geolod:AllPalaeoclimateSites_Collection
   Archaeological sites modelled: 37
   RDF sites: 305 caves · 3,663 triples
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_sites.ttl
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_sites.ttl
 
   Botuverá cave  (144_botuvera)
   RDF: 907 d18O obs · 907 d13C obs · 21,795 triples
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_144_botuvera_data.ttl
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_144_botuvera_data.ttl
 
   Antro del Corchia  (145_corchia)
   RDF: 1,234 d18O obs · 1,234 d13C obs · 29,651 triples
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_145_corchia_data.ttl
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_145_corchia_data.ttl
 
   Sanbao cave  (140_sanbao)
   RDF: 5,832 d18O obs · 0 d13C obs · 70,075 triples
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_140_sanbao_data.ttl
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_140_sanbao_data.ttl
 
   Buraca Gloriosa  (275_buracagloriosa)
   RDF: 1,137 d18O obs · 1,137 d13C obs · 27,327 triples
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_275_buracagloriosa_data.ttl
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_275_buracagloriosa_data.ttl
 
-  ✓ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\sisal_all_data.ttl  (152,460 triples total)
+  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_all_data.ttl  (152,460 triples total)
   ℹ  Combined collection skipped (feature not implemented)
 
 ============================================================
-Done! Plots saved to 'c:\git\EPICA-SISAL-FAIRification\SISAL\plots/'
+Done! Plots saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\plots/'
 Total: 24 plots
-RDF files saved to 'c:\git\EPICA-SISAL-FAIRification\SISAL\rdf/'
+RDF files saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\rdf/'
 ============================================================
-Report saved: c:\git\EPICA-SISAL-FAIRification\SISAL\report\report.txt
+Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt

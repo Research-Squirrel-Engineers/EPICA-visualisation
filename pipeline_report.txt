@@ -3,8 +3,8 @@
                           EPICA + SISAL + CI Pipeline                           
 ════════════════════════════════════════════════════════════════════════════════
 
-  Timestamp: 2026-04-28 12:34:00
-  Directory: c:\git\EPICA-SISAL-FAIRification
+  Timestamp: 2026-08-08 13:52:09
+  Directory: C:\git\GeoScience-FAIRification-LOD
 
 
 ────────────────────────────────────────────────────────────────────────────────
@@ -27,46 +27,58 @@
 ────────────────────────────────────────────────────────────────────────────────
 
   ▶ Regeneriere kanonische Ontologie-Dateien aus geo_lod_utils.py ...
-  ✓ geo_lod_core.ttl geschrieben (12.8 KB)
+  ✓ geo_lod_core.ttl geschrieben (18.8 KB)
 
 ────────────────────────────────────────────────────────────────────────────────
-  3. EPICA Dome C (Ice Core)
+  3. Regenerate controlled vocabularies
+────────────────────────────────────────────────────────────────────────────────
+
+  ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...
+  ✓ ontology\vocab\mis.ttl: 228 stages, 87 substages, 792 assignments (563.4 KB)
+  ✓ ontology\trs.ttl: 2 temporal reference systems
+  ✓ dist\mis_stages.csv: 315 rows
+  ✓ dist\mis_assignments.csv: 792 rows
+
+────────────────────────────────────────────────────────────────────────────────
+  4. EPICA Dome C (Ice Core)
 ────────────────────────────────────────────────────────────────────────────────
 
   ▶ Starting EPICA Dome C Processing ...
-    Path: c:\git\EPICA-SISAL-FAIRification\EPICA\plot_epica_from_tab.py
-    PYTHONPATH: c:\git\EPICA-SISAL-FAIRification\ontology
+    Path: C:\git\GeoScience-FAIRification-LOD\EPICA\plot_epica_from_tab.py
+    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
   ✓ EPICA Dome C Processing completed successfully
 
 ────────────────────────────────────────────────────────────────────────────────
-  4. SISAL (Speleothems)
+  5. SISAL (Speleothems)
 ────────────────────────────────────────────────────────────────────────────────
 
   ▶ Starting SISAL Processing ...
-    Path: c:\git\EPICA-SISAL-FAIRification\SISAL\plot_sisal_from_csv.py
-    PYTHONPATH: c:\git\EPICA-SISAL-FAIRification\ontology
+    Path: C:\git\GeoScience-FAIRification-LOD\SISAL\plot_sisal_from_csv.py
+    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
   ✓ SISAL Processing completed successfully
 
 ────────────────────────────────────────────────────────────────────────────────
-  5. Campanian Ignimbrite (CI Findspots)
+  6. Campanian Ignimbrite (CI Findspots)
 ────────────────────────────────────────────────────────────────────────────────
 
   ▶ Starting CI Findspot Processing ...
-    Path: c:\git\EPICA-SISAL-FAIRification\CI\ci_pipeline.py
-    PYTHONPATH: c:\git\EPICA-SISAL-FAIRification\ontology
+    Path: C:\git\GeoScience-FAIRification-LOD\CI\ci_pipeline.py
+    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
   ✓ CI Findspot Processing completed successfully
 
 ────────────────────────────────────────────────────────────────────────────────
-  6. RDF Bundle & Validation
+  7. RDF Bundle & Validation
 ────────────────────────────────────────────────────────────────────────────────
 
   ▶ Sammle TTL-Quellen ...
-    Ontologie-Dateien: 2
+    Ontologie-Dateien: 4
       • ontology\crm_bridging.ttl
       • ontology\geo_lod_core.ttl
+      • ontology\trs.ttl
+      • ontology\vocab\mis.ttl
     (Duplikate ignoriert - kanonische Version liegt in ontology/):
-      ~ c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\geo_lod_core.ttl
-      ~ c:\git\EPICA-SISAL-FAIRification\SISAL\rdf\geo_lod_core.ttl
+      ~ C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\geo_lod_core.ttl
+      ~ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\geo_lod_core.ttl
     Instanz-Dateien:   10
       • EPICA\rdf\epica_dome_c.ttl
       • EPICA\rdf\epica_ontology.ttl
@@ -80,8 +92,10 @@
       • CI\rdf\ci_findspots.ttl
 
   ▶ Parse & merge ...
-    + crm_bridging.ttl:       21 Triples
-    + geo_lod_core.ttl:      168 Triples
+    + crm_bridging.ttl:       26 Triples
+    + geo_lod_core.ttl:      264 Triples
+    + trs.ttl:       14 Triples
+    + mis.ttl:   10,914 Triples
     + epica_dome_c.ttl:   40,259 Triples (40,258 new, 1 dup)
     + epica_ontology.ttl:      180 Triples (162 new, 18 dup)
     + sisal_140_sanbao_data.ttl:   70,075 Triples (70,069 new, 6 dup)
@@ -94,25 +108,20 @@
     + ci_findspots.ttl:    3,512 Triples
 
   ▶ Serialisiere Bundle nach geo-lod-bundle.ttl ...
-  ✓ Bundle geschrieben: 196,713 Triples, 10,178.2 KB
+  ✓ Bundle geschrieben: 207,742 Triples, 10,703.8 KB
 
   ▶ CIDOC-CRM Coverage-Check (strict CRM-family) ...
-    Instanz-Klassen geprüft: 46
-    ✓ mit CRM-Anker:         46
+    Instanz-Klassen geprüft: 56
+    ✓ mit CRM-Anker:         56
     ✗ ohne CRM-Anker:        0
 
   ▶ SHACL-Validierung ...
     + lade Shapes: core_shapes.ttl
+    + lade Shapes: mis_shapes.ttl
     SHACL-Ergebnis: 0 Violation(s), 4 Warning(s)
       Validation Report
       Conforms: False
       Results (4):
-      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-      	Severity: sh:Warning
-      	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
-      	Focus Node: geolod:PANGAEA_CH4_Source
-      	Result Path: dct:source
-      	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
       Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
       	Severity: sh:Warning
       	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
@@ -127,6 +136,12 @@
       	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
       Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
       	Severity: sh:Warning
+      	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
+      	Focus Node: geolod:PANGAEA_CH4_Source
+      	Result Path: dct:source
+      	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
+      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+      	Severity: sh:Warning
       	Source Shape: [ sh:message Literal("CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path skos:closeMatch ; sh:severity sh:Warning ]
       	Focus Node: ci:cisite_59
       	Result Path: skos:closeMatch
@@ -135,34 +150,34 @@
     ⚠  Nur Warnings - Bundle gilt als gültig.
 
   ▶ Sanity-Report ...
-    Triples:         196,713
-    Subjekte:        15,606
-    Distinkte Typen: 52
-    Distinkte Props: 92
+    Triples:         207,742
+    Subjekte:        17,208
+    Distinkte Typen: 62
+    Distinkte Props: 109
 
     Top-10 Klassen nach Instanzzahl:
        9,110  http://w3id.org/geo-lod/Delta18OSpeleothemObservation
        3,278  http://w3id.org/geo-lod/Delta13CSpeleothemObservation
        2,114  http://www.ics.forth.gr/isl/CRMsci/S4_Observation
        2,114  http://www.w3.org/ns/sosa/Observation
+         792  http://w3id.org/geo-lod/MISAttributeAssignment
+         461  http://www.w3.org/2006/time#TimePosition
          380  http://www.opengis.net/ont/sf#Point
+         315  http://www.w3.org/2004/02/skos/core#Concept
          305  http://w3id.org/geo-lod/Cave
-         148  http://www.w3.org/ns/prov#Activity
-          74  http://fuzzy-sl.squirrel.link/ontology/Georeferencing
-          74  http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place
-          74  http://fuzzy-sl.squirrel.link/ontology/Site
+         228  http://w3id.org/geo-lod/MarineIsotopeStage
 
     Top-10 Properties nach Vorkommen:
-      18,170  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-      14,881  http://www.w3.org/ns/prov#wasDerivedFrom
+      20,093  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+      15,055  http://www.w3.org/ns/prov#wasDerivedFrom
       14,502  http://w3id.org/geo-lod/measurementType
-      14,502  http://w3id.org/geo-lod/smoothingMethod_median
-      14,502  http://w3id.org/geo-lod/smoothedValue_rollingMedian
-      14,502  http://www.w3.org/ns/sosa/observedProperty
-      14,502  http://w3id.org/geo-lod/smoothingMethod_savgol
-      14,502  http://w3id.org/geo-lod/smoothedValue_savgol
       14,502  http://www.w3.org/ns/sosa/hasFeatureOfInterest
-      12,388  http://w3id.org/geo-lod/ageChronologySpeleothem
+      14,502  http://w3id.org/geo-lod/smoothingMethod_median
+      14,502  http://w3id.org/geo-lod/smoothingMethod_savgol
+      14,502  http://www.w3.org/ns/sosa/observedProperty
+      14,502  http://w3id.org/geo-lod/smoothedValue_rollingMedian
+      14,502  http://w3id.org/geo-lod/smoothedValue_savgol
+      12,849  http://w3id.org/geo-lod/ageKaBP
 
     CRM-Coverage:   ✓
     SHACL:          ✓
@@ -176,5 +191,5 @@
   CI:      ✓ Success
   Bundle:  ✓ Success
 
-  Total duration: 293.1 seconds
-  Log saved to: c:\git\EPICA-SISAL-FAIRification\pipeline_report.txt
+  Total duration: 268.9 seconds
+  Log saved to: C:\git\GeoScience-FAIRification-LOD\pipeline_report.txt

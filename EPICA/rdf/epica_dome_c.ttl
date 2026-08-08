@@ -19,7 +19,7 @@ geolod:AllPalaeoclimateSites_Collection a geo:FeatureCollection ;
 
 geolod:EPICA_DomeC_Catalog a dcat:Catalog ;
     rdfs:label "EPICA Dome C Ice Core – Linked Data Catalogue"@en ;
-    dct:created "2026-04-28"^^xsd:date ;
+    dct:created "2026-08-08"^^xsd:date ;
     dct:description "DCAT catalogue aggregating palaeoclimate observation datasets from the EPICA Dome C ice core, East Antarctica. Includes CH₄ and δ¹⁸O records with raw and smoothed values, full provenance, site geometry and chronology metadata."@en ;
     dct:license <https://creativecommons.org/licenses/by/3.0/> ;
     dct:publisher "PANGAEA – Data Publisher for Earth & Environmental Science" ;
@@ -783,7 +783,7 @@ geolod:EPICA_DomeC_CH4_Dataset a dcat:Dataset ;
         geolod:Obs_CH4_0735 .
 
 geolod:EPICA_DomeC_Dataset a dcat:Dataset ;
-    dct:created "2026-04-28"^^xsd:date ;
+    dct:created "2026-08-08"^^xsd:date ;
     dct:description "Methane (CH4) and stable water isotope (δ18O) measurements from the EPICA Dome C ice core, East Antarctica, covering the last ~800,000 years (ca. 8 glacial cycles)."@en ;
     dct:license <https://creativecommons.org/licenses/by/3.0/> ;
     dct:publisher "PANGAEA – Data Publisher for Earth & Environmental Science" ;
@@ -28061,7 +28061,7 @@ geolod:Obs_d18O_0584 a crmsci:S4_Observation,
     geolod:atDepth_m 2346.85 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.7262 ;
-    geolod:smoothedValue_savgol 0.71381 ;
+    geolod:smoothedValue_savgol 0.69456 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28079,7 +28079,7 @@ geolod:Obs_d18O_0585 a crmsci:S4_Observation,
     geolod:atDepth_m 2347.95 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.6324 ;
-    geolod:smoothedValue_savgol 0.67441 ;
+    geolod:smoothedValue_savgol 0.69847 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28097,7 +28097,7 @@ geolod:Obs_d18O_0586 a crmsci:S4_Observation,
     geolod:atDepth_m 2348.5 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.6313 ;
-    geolod:smoothedValue_savgol 0.63445 ;
+    geolod:smoothedValue_savgol 0.65317 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28115,7 +28115,7 @@ geolod:Obs_d18O_0587 a crmsci:S4_Observation,
     geolod:atDepth_m 2349.6 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.6247 ;
-    geolod:smoothedValue_savgol 0.60969 ;
+    geolod:smoothedValue_savgol 0.62306 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28133,7 +28133,7 @@ geolod:Obs_d18O_0588 a crmsci:S4_Observation,
     geolod:atDepth_m 2349.62 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.6206 ;
-    geolod:smoothedValue_savgol 0.57238 ;
+    geolod:smoothedValue_savgol 0.5804 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28151,13 +28151,13 @@ geolod:Obs_d18O_0589 a crmsci:S4_Observation,
     geolod:atDepth_m 2350.15 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.6164 ;
-    geolod:smoothedValue_savgol 0.56795 ;
+    geolod:smoothedValue_savgol 0.57062 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
     prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.961024> ;
     sosa:hasFeatureOfInterest geolod:EpicaDomeC_IceCore ;
-    sosa:hasSimpleResult 0.4019 ;
+    sosa:hasSimpleResult 0.6313 ;
     sosa:observedProperty geolod:Delta18O ;
     sosa:resultTime 254.6749 .
 
@@ -28169,13 +28169,13 @@ geolod:Obs_d18O_0590 a crmsci:S4_Observation,
     geolod:atDepth_m 2350.15 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.6131 ;
-    geolod:smoothedValue_savgol 0.55206 ;
+    geolod:smoothedValue_savgol 0.54939 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
     prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.961024> ;
     sosa:hasFeatureOfInterest geolod:EpicaDomeC_IceCore ;
-    sosa:hasSimpleResult 0.6313 ;
+    sosa:hasSimpleResult 0.4019 ;
     sosa:observedProperty geolod:Delta18O ;
     sosa:resultTime 254.6749 .
 
@@ -28187,7 +28187,7 @@ geolod:Obs_d18O_0591 a crmsci:S4_Observation,
     geolod:atDepth_m 2351.11 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.586 ;
-    geolod:smoothedValue_savgol 0.5512 ;
+    geolod:smoothedValue_savgol 0.54318 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28205,7 +28205,7 @@ geolod:Obs_d18O_0592 a crmsci:S4_Observation,
     geolod:atDepth_m 2351.25 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.5767 ;
-    geolod:smoothedValue_savgol 0.52809 ;
+    geolod:smoothedValue_savgol 0.51472 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28223,7 +28223,7 @@ geolod:Obs_d18O_0593 a crmsci:S4_Observation,
     geolod:atDepth_m 2351.88 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.5091 ;
-    geolod:smoothedValue_savgol 0.51944 ;
+    geolod:smoothedValue_savgol 0.50072 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28241,7 +28241,7 @@ geolod:Obs_d18O_0594 a crmsci:S4_Observation,
     geolod:atDepth_m 2352.35 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
     geolod:smoothedValue_rollingMedian 0.4937 ;
-    geolod:smoothedValue_savgol 0.52397 ;
+    geolod:smoothedValue_savgol 0.4999 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;
@@ -28258,8 +28258,8 @@ geolod:Obs_d18O_0595 a crmsci:S4_Observation,
     geolod:ageChronology geolod:AICC2023_Chronology ;
     geolod:atDepth_m 2352.87 ;
     geolod:measurementType geolod:MeasurementType_d18O ;
-    geolod:smoothedValue_rollingMedian 0.4937 ;
-    geolod:smoothedValue_savgol 0.48819 ;
+    geolod:smoothedValue_rollingMedian 0.4337 ;
+    geolod:smoothedValue_savgol 0.50744 ;
     geolod:smoothingMethod_median geolod:RollingMedian_w11 ;
     geolod:smoothingMethod_savgol geolod:SavitzkyGolay_w11_p2 ;
     crm:P7_took_place_at geolod:EpicaDomeC_Site ;

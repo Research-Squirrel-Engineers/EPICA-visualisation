@@ -1,0 +1,44 @@
+# ==========================================================================
+# trs.ttl
+# geo-lod Temporal Reference Systems  —  <http://w3id.org/geo-lod/trs/>
+#
+# One TRS per chronology, so that an age can be read without knowing which
+# age model produced it. Ages are given in ka BP throughout; time:TimePosition
+# carries the numeric value, time:hasTRS the model it belongs to.
+#
+# GENERATED FILE - do not edit by hand.
+# Source: ontology/build_mis_vocab.py
+#
+# Currently the two chronologies behind the MIS vocabulary. The ice-core
+# chronologies (EDC1, EDC2, EDC3, AICC2023) are added in S2.
+# ==========================================================================
+
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix geolod: <http://w3id.org/geo-lod/> .
+@prefix mis:    <http://w3id.org/geo-lod/vocab/mis/> .
+@prefix trs:    <http://w3id.org/geo-lod/trs/> .
+
+<http://w3id.org/geo-lod/trs/>
+    a owl:Ontology ;
+    rdfs:label   "geo-lod Temporal Reference Systems"@en ;
+    rdfs:comment "Temporal reference systems used by geo-lod, one per chronology. All express age in thousands of years before present (ka BP)."@en ;
+    owl:imports  <http://w3id.org/geo-lod/> .
+
+trs:LR04
+    a time:TRS, owl:NamedIndividual ;
+    rdfs:label   "LR04 benthic stack age model (ka BP)"@en ;
+    rdfs:comment "Age model of the LR04 benthic d18O stack. Ages in thousands of years before present."@en ;
+    dct:source   mis:source_lisieckiRaymo2005 .
+
+trs:Railsback2015
+    a time:TRS, owl:NamedIndividual ;
+    rdfs:label   "Railsback et al. (2015) MIS substage chronology (ka BP)"@en ;
+    rdfs:comment "Age scale of the optimised lettered substage scheme of Railsback et al. (2015). Ages in thousands of years before present."@en ;
+    dct:source   mis:source_railsback2015 .

@@ -19,52 +19,52 @@ Generating plots …
 ────────────────────────────────────────────────────────────
 
 [1/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg
 
 [2/12] EPICA – δ¹⁸O – Y: Depth [m]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg
 
 [3/12] EPICA – CH₄ – Y: Age [ka BP]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg
 
 [4/12] EPICA – δ¹⁸O – Y: Age [ka BP]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg
 
 [5/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_smooth11.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg
 
 [6/12] EPICA – δ¹⁸O – Y: Depth [m]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_smooth11.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg
 
 [7/12] EPICA – CH₄ – Y: Age [ka BP]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_smooth11.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg
 
 [8/12] EPICA – δ¹⁸O – Y: Age [ka BP]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_smooth11.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg
 
 [9/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_savgol11p2.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg
 
 [10/12] EPICA – δ¹⁸O – Y: Depth [m]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_savgol11p2.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg
 
 [11/12] EPICA – CH₄ – Y: Age [ka BP]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg
 
 [12/12] EPICA – δ¹⁸O – Y: Age [ka BP]
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.jpg
-  ✓ Saved: c:\git\EPICA-SISAL-FAIRification\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg
 
 ────────────────────────────────────────────────────────────
 RDF Export …
@@ -72,16 +72,16 @@ RDF Export …
   Writing CH4 observations …
   Writing δ¹⁸O observations …
   ✓ 40,259 triples written
-  ✓ Turtle:  c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_dome_c.ttl
-  ✓ Core ontology : c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\geo_lod_core.ttl
-  ✓ EPICA ontology: c:\git\EPICA-SISAL-FAIRification\EPICA\rdf\epica_ontology.ttl
-  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_taxonomy.mermaid
-  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_epica.mermaid
-  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_sisal.mermaid
-  ✓ Mermaid       : c:\git\EPICA-SISAL-FAIRification\ontology\mermaid_instance_ci.mermaid
+  ✓ Turtle:  C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\epica_dome_c.ttl
+  ✓ Core ontology : C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\geo_lod_core.ttl
+  ✓ EPICA ontology: C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\epica_ontology.ttl
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_taxonomy.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_epica.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_sisal.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_ci.mermaid
   ℹ  Combined collection skipped (feature not implemented)
 
 ============================================================
-Done! All 12 plots saved to 'c:\git\EPICA-SISAL-FAIRification\EPICA\plots/'.
-Report saved: c:\git\EPICA-SISAL-FAIRification\EPICA\report\report.txt
+Done! All 12 plots saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
+Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
 ============================================================

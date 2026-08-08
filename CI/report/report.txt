@@ -2,17 +2,17 @@
 CI Pipeline — Campanian Ignimbrite Findspots → RDF
 ************************************************************
 
-→ Reading c:\git\EPICA-SISAL-FAIRification\CI\cifindspots_part_full.csv
+→ Reading C:\git\GeoScience-FAIRification-LOD\CI\cifindspots_part_full.csv
    Rows loaded: 74
    Archaeological sites: 9 (IDs: [19, 44, 45, 50, 51, 59, 62, 63, 65])
 
 → Building RDF graph ...
 
 → Writing TTL ...
-  ✓  Written: c:\git\EPICA-SISAL-FAIRification\CI\rdf\ci_findspots.ttl
+  ✓  Written: C:\git\GeoScience-FAIRification-LOD\CI\rdf\ci_findspots.ttl
      Triples: 3512
 
 ************************************************************
 SUCCESS
 ************************************************************
-Report saved: c:\git\EPICA-SISAL-FAIRification\CI\report\report.txt
+Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt

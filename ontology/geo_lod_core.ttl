@@ -32,6 +32,7 @@
 @prefix dct:     <http://purl.org/dc/terms/> .
 @prefix dcat:    <http://www.w3.org/ns/dcat#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
 @prefix geolod:  <http://w3id.org/geo-lod/> .
 
 <http://w3id.org/geo-lod/>
@@ -278,6 +279,135 @@ geolod:MeasurementType_d18O
     rdfs:label   "δ¹⁸O measurement"@en .
 
 # ==========================================================================
+# MARINE ISOTOPE STAGES
+# Schema for the controlled vocabulary under
+# <http://w3id.org/geo-lod/vocab/mis/>, which is generated from the
+# primary sources by ontology/build_mis_vocab.py.
+# ==========================================================================
+
+geolod:MarineIsotopeStage
+    a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:subClassOf crm:E4_Period ;
+    rdfs:label   "Marine Isotope Stage"@en ;
+    rdfs:comment "A stage of the marine oxygen-isotope record, used as a chronostratigraphic subdivision of the Quaternary and late Neogene."@en .
+
+geolod:MarineIsotopeSubstage
+    a owl:Class ;
+    rdfs:subClassOf geolod:MarineIsotopeStage ;
+    rdfs:label   "Marine Isotope Substage"@en ;
+    rdfs:comment "A lettered subdivision of a Marine Isotope Stage after Railsback et al. (2015). Substages label excursions rather than the transitions between them, so their boundaries are gradational."@en .
+
+geolod:MISAttributeAssignment
+    a owl:Class ;
+    rdfs:subClassOf crm:E13_Attribute_Assignment ;
+    rdfs:label   "MIS Attribute Assignment"@en ;
+    rdfs:comment "Assigns a boundary age, an excursion peak or a climate mode to a Marine Isotope Stage on the authority of one source. Competing readings of the same boundary are kept as separate assignments rather than harmonised."@en .
+
+geolod:ClimateMode
+    a owl:Class ;
+    rdfs:subClassOf crm:E55_Type ;
+    rdfs:label   "Climate Mode"@en ;
+    rdfs:comment "Classifies a Marine Isotope Stage as warm or cold."@en .
+
+geolod:ClimateMode_Warm
+    a geolod:ClimateMode, owl:NamedIndividual ;
+    rdfs:label   "warm"@en .
+
+geolod:ClimateMode_Cold
+    a geolod:ClimateMode, owl:NamedIndividual ;
+    rdfs:label   "cold"@en .
+
+geolod:AssignedPropertyType
+    a owl:Class ;
+    rdfs:subClassOf crm:E55_Type ;
+    rdfs:label   "Assigned Property Type"@en ;
+    rdfs:comment "The kind of property an attribute assignment establishes (crm:P177)."@en .
+
+geolod:PeriodBeginning
+    a geolod:AssignedPropertyType, owl:NamedIndividual ;
+    rdfs:label   "beginning of period"@en ;
+    rdfs:comment "The older boundary of a period, in ka BP."@en .
+
+geolod:PeriodEnd
+    a geolod:AssignedPropertyType, owl:NamedIndividual ;
+    rdfs:label   "end of period"@en ;
+    rdfs:comment "The younger boundary of a period, in ka BP."@en .
+
+geolod:ExcursionPeak
+    a geolod:AssignedPropertyType, owl:NamedIndividual ;
+    rdfs:label   "excursion peak"@en ;
+    rdfs:comment "The age of the isotopic maximum or minimum a substage labels."@en .
+
+geolod:ClimateModeType
+    a geolod:AssignedPropertyType, owl:NamedIndividual ;
+    rdfs:label   "climate mode"@en ;
+    rdfs:comment "Warm or cold classification of a stage."@en .
+
+geolod:AssignmentStatus
+    a owl:Class ;
+    rdfs:subClassOf crm:E55_Type ;
+    rdfs:label   "Assignment Status"@en ;
+    rdfs:comment "States whether an attribute assignment is the one geo-lod follows, or a competing reading kept alongside it. Competing readings are never dropped; this only records which one leads."@en .
+
+geolod:LeadingAssignment
+    a geolod:AssignmentStatus, owl:NamedIndividual ;
+    rdfs:label   "leading assignment"@en ;
+    rdfs:comment "The assignment geo-lod follows for this property. Filtering on it yields one consistent value per property without knowing where a source's coverage ends."@en .
+
+geolod:AlternativeAssignment
+    a geolod:AssignmentStatus, owl:NamedIndividual ;
+    rdfs:label   "alternative assignment"@en ;
+    rdfs:comment "A competing reading from another source, kept for comparison but not followed."@en .
+
+geolod:assignmentStatus
+    a owl:ObjectProperty ;
+    rdfs:domain  crm:E13_Attribute_Assignment ;
+    rdfs:range   geolod:AssignmentStatus ;
+    rdfs:label   "assignment status"@en .
+
+geolod:leadingSource
+    a owl:ObjectProperty ;
+    rdfs:range   geolod:DataSource ;
+    rdfs:label   "leading source"@en ;
+    rdfs:comment "The source geo-lod follows for this entity where the sources disagree."@en .
+
+geolod:coverageOldestAgeKaBP
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:DataSource ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "oldest age covered (ka BP)"@en ;
+    rdfs:comment "Oldest age a source reaches. Beyond it another source has to lead."@en .
+
+geolod:climateMode
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:MarineIsotopeStage ;
+    rdfs:range   geolod:ClimateMode ;
+    rdfs:label   "climate mode"@en ;
+    rdfs:comment "Materialised warm/cold classification. The assignment carrying the source is kept alongside as a geolod:MISAttributeAssignment."@en .
+
+geolod:beginAgeKaBP
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geolod:ageKaBP ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "beginning age (ka BP)"@en ;
+    rdfs:comment "Materialised older boundary of a period, taken from the leading source. Competing values are reachable through the attribute assignments."@en .
+
+geolod:endAgeKaBP
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geolod:ageKaBP ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "end age (ka BP)"@en ;
+    rdfs:comment "Materialised younger boundary of a period, taken from the leading source."@en .
+
+geolod:peakAgeKaBP
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geolod:ageKaBP ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "peak age (ka BP)"@en ;
+    rdfs:comment "Materialised age of the excursion a substage labels."@en .
+
+# ==========================================================================
 # EXTERNAL VOCABULARY LABELS
 # (so Protégé also shows labels for imported terms)
 # ==========================================================================
@@ -325,7 +455,19 @@ crmsci:S1_Matter_Removal
     rdfs:label   "Matter Removal"@en ;
     rdfs:comment "A process of removing matter from an object (CRMsci S1)."@en .
 
+crm:E4_Period
+    rdfs:label   "Period"@en ;
+    rdfs:comment "A set of coherent phenomena or cultural manifestations bounded in time and space (CIDOC-CRM E4)."@en .
+
+crm:E13_Attribute_Assignment
+    rdfs:label   "Attribute Assignment"@en ;
+    rdfs:comment "An act of assigning a property to an entity, on the authority of some source (CIDOC-CRM E13)."@en .
+
 sosa:Observation        rdfs:label "Observation"@en .
 sosa:ObservableProperty rdfs:label "Observable Property"@en .
 sosa:Sample             rdfs:label "Sample"@en .
 prov:Entity             rdfs:label "Entity"@en .
+skos:Concept            rdfs:label "Concept"@en .
+skos:ConceptScheme      rdfs:label "Concept Scheme"@en .
+time:TimePosition       rdfs:label "Time Position"@en .
+time:TRS                rdfs:label "Temporal Reference System"@en .
