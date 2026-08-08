@@ -17,8 +17,8 @@ ns1:Obs_d18O_0595 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
     ns1:ageChronology ns1:AICC2023_Chronology ;
     ns1:atDepth_m 2352.87 ;
     ns1:measurementType ns1:MeasurementType_d18O ;
-    ns1:smoothedValue_rollingMedian 0.4937 ;
-    ns1:smoothedValue_savgol 0.48819 ;
+    ns1:smoothedValue_rollingMedian 0.4337 ;
+    ns1:smoothedValue_savgol 0.50744 ;
     ns1:smoothingMethod_median ns1:RollingMedian_w11 ;
     ns1:smoothingMethod_savgol ns1:SavitzkyGolay_w11_p2 ;
     ns2:P7_took_place_at ns1:EpicaDomeC_Site ;

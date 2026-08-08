@@ -18,13 +18,13 @@ ns1:Obs_d18O_0590 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
     ns1:atDepth_m 2350.15 ;
     ns1:measurementType ns1:MeasurementType_d18O ;
     ns1:smoothedValue_rollingMedian 0.6131 ;
-    ns1:smoothedValue_savgol 0.55206 ;
+    ns1:smoothedValue_savgol 0.54939 ;
     ns1:smoothingMethod_median ns1:RollingMedian_w11 ;
     ns1:smoothingMethod_savgol ns1:SavitzkyGolay_w11_p2 ;
     ns3:P7_took_place_at ns1:EpicaDomeC_Site ;
     prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.961024> ;
     sosa:hasFeatureOfInterest ns1:EpicaDomeC_IceCore ;
-    sosa:hasSimpleResult 0.6313 ;
+    sosa:hasSimpleResult 0.4019 ;
     sosa:observedProperty ns1:Delta18O ;
     sosa:resultTime 254.6749 .
 
