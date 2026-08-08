@@ -10,6 +10,11 @@ from matplotlib.ticker import MultipleLocator, FuncFormatter, FixedLocator
 import matplotlib.transforms as transforms
 from scipy.signal import savgol_filter
 
+# Byte-identical SVG across runs. Two things vary otherwise: the <dc:date>
+# in the SVG metadata, and the random ids matplotlib gives clip paths. The
+# salt fixes the ids, metadata={"Date": None} at save time drops the date.
+plt.rcParams["svg.hashsalt"] = "geo-lod"
+
 
 class Tee:
     """Writes simultaneously to stdout and a file."""
@@ -294,7 +299,7 @@ def create_plot(
     jpg_path = output_filename + ".jpg"
     svg_path = output_filename + ".svg"
     plt.savefig(jpg_path, bbox_inches="tight")
-    plt.savefig(svg_path, bbox_inches="tight")
+    plt.savefig(svg_path, bbox_inches="tight", metadata={"Date": None})
     plt.close()
 
     print(f"  ✓ {jpg_path}")

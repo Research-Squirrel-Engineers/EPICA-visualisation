@@ -10,6 +10,7 @@ from datetime import datetime
 from pathlib import Path
 import subprocess
 import shutil
+import time
 
 # Paths
 SCRIPT_DIR = Path(__file__).parent.absolute()
@@ -58,11 +59,31 @@ def print_header(text: str, char: str = "=", width: int = 80):
     print()
 
 
+# Laufzeit je Schritt. print_section startet die Uhr, end_section hält sie an;
+# print_summary zeigt daraus, wo die Zeit geblieben ist.
+STEP_TIMES: list[tuple[str, float]] = []
+_current_step: list = []
+
+
 def print_section(text: str):
     print()
     print("─" * 80)
     print(f"  {text}")
     print("─" * 80)
+    print(f"  Start: {datetime.now().strftime('%H:%M:%S')}")
+    _current_step.clear()
+    _current_step.extend([text, time.perf_counter()])
+
+
+def end_section() -> None:
+    """Hält die Uhr des laufenden Abschnitts an und meldet die Dauer."""
+    if not _current_step:
+        return
+    label, started = _current_step[0], _current_step[1]
+    duration = time.perf_counter() - started
+    STEP_TIMES.append((label, duration))
+    print(f"\n  ⏱  {label}: {duration:.1f}s")
+    _current_step.clear()
 
 
 def check_file_exists(filepath: Path, description: str) -> bool:
@@ -201,7 +222,19 @@ def regenerate_vocabularies() -> bool:
 
 
 def run_script(script_path: Path, description: str) -> bool:
-    """Execute Python script with PYTHONPATH set correctly."""
+    """Execute Python script with PYTHONPATH set correctly.
+
+    Die Ausgabe des Sub-Skripts wird zeilenweise eingefangen und über den
+    TeeOutput weitergereicht. Damit steht im pipeline_report.txt exakt das,
+    was auch im Terminal steht - vorher schrieben die Sub-Skripte direkt auf
+    die Konsole und kamen am Log vorbei.
+
+    Zwei Umgebungsvariablen sind dafür nötig: sobald die Ausgabe durch eine
+    Pipe geht, fällt Python im Kindprozess auf die Locale-Kodierung zurück
+    (auf Windows cp1252), und Zeichen wie ✓, ‰ oder δ würden dort scheitern.
+    PYTHONIOENCODING erzwingt UTF-8, PYTHONUNBUFFERED sorgt dafür, dass die
+    Zeilen sofort ankommen statt erst am Ende des Schrittes.
+    """
     if not script_path.exists():
         print(f"  ✗ {description} not found: {script_path}")
         return False
@@ -218,21 +251,34 @@ def run_script(script_path: Path, description: str) -> bool:
     else:
         env["PYTHONPATH"] = pythonpath
 
+    env["PYTHONIOENCODING"] = "utf-8"
+    env["PYTHONUNBUFFERED"] = "1"
+
     print(f"    PYTHONPATH: {pythonpath}")
 
     try:
-        result = subprocess.run(
+        process = subprocess.Popen(
             [sys.executable, str(script_path)],
             cwd=str(script_path.parent),
             env=env,
-            capture_output=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            bufsize=1,
         )
 
-        if result.returncode == 0:
+        assert process.stdout is not None
+        for line in process.stdout:
+            print(line.rstrip("\n"))
+        returncode = process.wait()
+
+        if returncode == 0:
             print(f"  ✓ {description} completed successfully")
             return True
         else:
-            print(f"  ✗ {description} failed with exit code {result.returncode}")
+            print(f"  ✗ {description} failed with exit code {returncode}")
             return False
 
     except Exception as e:
@@ -288,6 +334,15 @@ def print_summary(epica: bool, sisal: bool, ci: bool, bundle: bool, start: datet
     print(f"  SISAL:   {'✓ Success' if sisal  else '✗ Failed / skipped'}")
     print(f"  CI:      {'✓ Success' if ci     else '✗ Failed / skipped'}")
     print(f"  Bundle:  {'✓ Success' if bundle else '✗ Failed / skipped'}")
+
+    if STEP_TIMES:
+        print("\n  Duration per step:")
+        width = max(len(label) for label, _ in STEP_TIMES)
+        total_steps = sum(d for _, d in STEP_TIMES) or 1.0
+        for label, secs in STEP_TIMES:
+            share = 100.0 * secs / total_steps
+            print(f"    {label.ljust(width)}   {secs:7.1f}s   {share:4.1f}%")
+
     print(f"\n  Total duration: {duration.total_seconds():.1f} seconds")
     print(f"  Log saved to: {LOG_FILE}")
 
@@ -333,6 +388,7 @@ def main():
     epica_exists = check_file_exists(EPICA_SCRIPT, "EPICA script")
     sisal_exists = check_file_exists(SISAL_SCRIPT, "SISAL script")
     ci_exists    = check_file_exists(CI_SCRIPT,    "CI script")
+    end_section()
 
     epica_ok  = False
     sisal_ok  = False
@@ -344,34 +400,36 @@ def main():
     if not canonical_ok:
         print("\n  ⚠  Ontologie konnte nicht regeneriert werden - Bundle wird")
         print("     vermutlich mit veralteter ontology/geo_lod_core.ttl arbeiten.")
+    end_section()
 
     print_section("3. Regenerate controlled vocabularies")
     vocab_ok = regenerate_vocabularies()
     if not vocab_ok:
         print("\n  ⚠  Vokabulare konnten nicht regeneriert werden - das Bundle")
         print("     arbeitet dann mit einem veralteten ontology/vocab/mis.ttl.")
+    end_section()
 
     if not args.sisal_only and not args.ci_only and epica_exists:
         print_section("4. EPICA Dome C (Ice Core)")
         epica_ok = run_script(EPICA_SCRIPT, "EPICA Dome C Processing")
+        end_section()
 
     if not args.epica_only and not args.ci_only and sisal_exists:
         print_section("5. SISAL (Speleothems)")
         sisal_ok = run_script(SISAL_SCRIPT, "SISAL Processing")
+        end_section()
 
     if not args.epica_only and not args.sisal_only and ci_exists:
         print_section("6. Campanian Ignimbrite (CI Findspots)")
         ci_ok = run_script(CI_SCRIPT, "CI Findspot Processing")
+        end_section()
 
     if not args.no_bundle:
         print_section("7. RDF Bundle & Validation")
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok)
+        end_section()
 
     print_summary(epica_ok, sisal_ok, ci_ok, bundle_ok, start)
-
-    # Close log file
-    tee.close()
-    sys.stdout = tee.terminal
 
     # Pipeline insgesamt nur grün, wenn alle aktivierten Schritte ok sind.
     bundle_required = not args.no_bundle
@@ -384,12 +442,17 @@ def main():
         and (bundle_ok if bundle_required else True)
     )
 
-    if not overall_ok:
-        print("⚠  Some steps failed - see errors above.")
-        sys.exit(1)
-    else:
+    # Schlusszeile noch durch den Tee, damit Log und Terminal Zeile für Zeile
+    # dasselbe zeigen; erst danach die Logdatei schliessen.
+    if overall_ok:
         print("✓ Pipeline completed successfully!")
-        sys.exit(0)
+    else:
+        print("⚠  Some steps failed - see errors above.")
+
+    tee.close()
+    sys.stdout = tee.terminal
+
+    sys.exit(0 if overall_ok else 1)
 
 
 if __name__ == "__main__":

@@ -94,7 +94,11 @@ möglich und wahrscheinlich nötig. Damit gilt:
 - **Kein Spreadsheet und kein Import-Assistent im Ladeweg.** Das gilt auch für
   den pgAdmin-Importdialog. `COPY ... (FORMAT csv)` ist der einzige Pfad.
 - **Zweimal laufen lassen, `git status` muss sauber bleiben.** Tripel sortiert
-  ausgeben, keine zufälligen Blank-Node-IDs.
+  ausgeben, keine zufälligen Blank-Node-IDs. Bei matplotlib-SVG kommen zwei
+  weitere Quellen dazu: das `<dc:date>` in den Metadaten und die zufälligen
+  Clip-Path-IDs. Beides ist abgestellt, `plt.rcParams["svg.hashsalt"]` und
+  `metadata={"Date": None}` beim Speichern — bei jedem neuen Plot-Skript
+  mitnehmen.
 - Ein Thema pro Chat, ein Repo pro Chat.
 - **Offene Entscheidungen werden als interaktives Formular gestellt**, nicht als
   Aufzählung im Fliesstext. Ein Klickpfad ist schneller zu beantworten als eine
@@ -179,6 +183,10 @@ lesen hier ab, statt neu zu diskutieren.
 | Warm/Kalt | Paritätskonvention, ungerade warm, gerade kalt, Beleg Railsback et al. 2015. Nur nummerierte Stadien; die Buchstabenstadien des Pliozäns bleiben unklassifiziert | 2026-08-08 |
 | Ort der Rohdaten | `data/raw/<strang>/`, unverändert und nur lesend. Die MIS-Quellen sind aus `info/` dorthin gezogen; `info/` entfällt | 2026-08-08 |
 | Aufbereitete Tabellen aus dem Vokabular | ja, aus demselben Lauf nach `dist/`: `mis_stages.csv` (eine Zeile je Konzept, leitende Werte) und `mis_assignments.csv` (eine Zeile je Zuweisung, beide Lesarten mit Status) | 2026-08-08 |
+| SVG-Determinismus | `svg.hashsalt` gesetzt, `<dc:date>` unterdrückt — 33 Abbildungen über zwei Läufe byte-identisch, JPG ohnehin | 2026-08-08 |
+| SHACL-Inferenz | `inference="none"` statt `"rdfs"`. SHACL folgt `rdfs:subClassOf` bei `sh:targetClass` und `sh:class` selbst; die Subklassen-Axiome liegen im Bundle. Ergebnis identisch, Schritt von 42 s auf 14 s | 2026-08-08 |
+| Laufzeitmessung | je Schritt eine Dauer im Report, dazu eine Tabelle mit Anteilen in der Summary | 2026-08-08 |
+| Log der Sub-Skripte | eingefangen und zeilenweise durchgereicht: `pipeline_report.txt` und Terminal zeigen dasselbe. `PYTHONIOENCODING=utf-8` im Kindprozess, sonst scheitern ✓, ‰ und δ an der Pipe | 2026-08-08 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
