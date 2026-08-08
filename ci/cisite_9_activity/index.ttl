@@ -15,8 +15,8 @@
     ns2:hasCertaintyLevel ns1:medium ;
     ns2:hasLiteratureReference "Civetta et al., 1997",
         "Scandone et al., 1991" ;
-    prov:endedAtTime "2026-08-08T13:53:06.059859+00:00"^^xsd:dateTime ;
-    prov:startedAtTime "2026-08-08T13:53:06.010574+00:00"^^xsd:dateTime ;
+    prov:endedAtTime "2026-08-08T14:28:14.144242+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-08-08T14:28:14.099780+00:00"^^xsd:dateTime ;
     prov:used <http://w3id.org/geo-lod/ci/cisite_9> ;
     prov:wasAssociatedWith <http://orcid.org/0000-0002-3246-3531> .
 

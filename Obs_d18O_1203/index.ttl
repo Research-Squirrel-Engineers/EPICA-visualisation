@@ -1,5 +1,5 @@
-@prefix ns1: <http://w3id.org/geo-lod/> .
-@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
 @prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,24 +7,24 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:Obs_d18O_1203 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
+ns2:Obs_d18O_1203 a <http://www.ics.forth.gr/isl/CRMsci/S4_Observation>,
         <http://www.w3.org/ns/ldp#Resource>,
         sosa:Observation,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "δ¹⁸O observation 1203 (629.8 ka BP)"@en ;
-    ns2:unit <http://qudt.org/vocab/unit/PERMILLE> ;
-    void:inDataset ns1:geo-lod ;
-    ns1:ageChronology ns1:AICC2023_Chronology ;
-    ns1:atDepth_m 3038.72 ;
-    ns1:measurementType ns1:MeasurementType_d18O ;
-    ns1:smoothedValue_rollingMedian 0.835 ;
-    ns1:smoothedValue_savgol 0.93897 ;
-    ns1:smoothingMethod_median ns1:RollingMedian_w11 ;
-    ns1:smoothingMethod_savgol ns1:SavitzkyGolay_w11_p2 ;
-    ns3:P7_took_place_at ns1:EpicaDomeC_Site ;
+    ns1:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    void:inDataset ns2:geo-lod ;
+    ns2:ageChronology ns2:AICC2023_Chronology ;
+    ns2:atDepth_m 3038.72 ;
+    ns2:measurementType ns2:MeasurementType_d18O ;
+    ns2:smoothedValue_rollingMedian 0.835 ;
+    ns2:smoothedValue_savgol 0.93897 ;
+    ns2:smoothingMethod_median ns2:RollingMedian_w11 ;
+    ns2:smoothingMethod_savgol ns2:SavitzkyGolay_w11_p2 ;
+    ns3:P7_took_place_at ns2:EpicaDomeC_Site ;
     prov:wasDerivedFrom <https://doi.org/10.1594/PANGAEA.961024> ;
-    sosa:hasFeatureOfInterest ns1:EpicaDomeC_IceCore ;
+    sosa:hasFeatureOfInterest ns2:EpicaDomeC_IceCore ;
     sosa:hasSimpleResult 1.1 ;
-    sosa:observedProperty ns1:Delta18O ;
+    sosa:observedProperty ns2:Delta18O ;
     sosa:resultTime 629.7512 .
 
