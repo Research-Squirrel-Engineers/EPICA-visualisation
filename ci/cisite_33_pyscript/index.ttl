@@ -6,7 +6,7 @@
         prov:Activity,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    prov:endedAtTime "2026-08-08T14:28:14.185681+00:00"^^xsd:dateTime ;
-    prov:startedAtTime "2026-08-08T14:28:14.099780+00:00"^^xsd:dateTime ;
+    prov:endedAtTime "2026-08-08T14:34:44.162286+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-08-08T14:34:44.088406+00:00"^^xsd:dateTime ;
     prov:wasAssociatedWith <https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py> .
 

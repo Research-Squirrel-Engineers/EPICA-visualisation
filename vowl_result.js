@@ -3928,7 +3928,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.242149+00:00",
+      "value": "2026-08-08T14:34:44.231772+00:00",
       "type": "label"
      }
     ],
@@ -3936,7 +3936,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -3975,7 +3975,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.242149+00:00",
+      "value": "2026-08-08T14:34:44.231772+00:00",
       "type": "label"
      }
     ],
@@ -3983,7 +3983,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4054,7 +4054,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.243215+00:00",
+      "value": "2026-08-08T14:34:44.233620+00:00",
       "type": "label"
      }
     ],
@@ -4062,7 +4062,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4101,7 +4101,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.243215+00:00",
+      "value": "2026-08-08T14:34:44.233620+00:00",
       "type": "label"
      }
     ],
@@ -4109,7 +4109,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4180,7 +4180,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.245373+00:00",
+      "value": "2026-08-08T14:34:44.235720+00:00",
       "type": "label"
      }
     ],
@@ -4188,7 +4188,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4227,7 +4227,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.245373+00:00",
+      "value": "2026-08-08T14:34:44.235720+00:00",
       "type": "label"
      }
     ],
@@ -4235,7 +4235,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4306,7 +4306,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.246432+00:00",
+      "value": "2026-08-08T14:34:44.239974+00:00",
       "type": "label"
      }
     ],
@@ -4314,7 +4314,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4353,7 +4353,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.246432+00:00",
+      "value": "2026-08-08T14:34:44.239974+00:00",
       "type": "label"
      }
     ],
@@ -4361,7 +4361,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4432,7 +4432,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.248481+00:00",
+      "value": "2026-08-08T14:34:44.242373+00:00",
       "type": "label"
      }
     ],
@@ -4440,7 +4440,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4479,7 +4479,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.248481+00:00",
+      "value": "2026-08-08T14:34:44.242373+00:00",
       "type": "label"
      }
     ],
@@ -4487,7 +4487,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4558,7 +4558,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.249510+00:00",
+      "value": "2026-08-08T14:34:44.245386+00:00",
       "type": "label"
      }
     ],
@@ -4566,7 +4566,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4605,7 +4605,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.249510+00:00",
+      "value": "2026-08-08T14:34:44.245386+00:00",
       "type": "label"
      }
     ],
@@ -4613,7 +4613,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4684,7 +4684,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.146864+00:00",
+      "value": "2026-08-08T14:34:44.115728+00:00",
       "type": "label"
      }
     ],
@@ -4692,7 +4692,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4731,7 +4731,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.146864+00:00",
+      "value": "2026-08-08T14:34:44.115728+00:00",
       "type": "label"
      }
     ],
@@ -4739,7 +4739,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4810,7 +4810,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.150044+00:00",
+      "value": "2026-08-08T14:34:44.118277+00:00",
       "type": "label"
      }
     ],
@@ -4818,7 +4818,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4857,7 +4857,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.150044+00:00",
+      "value": "2026-08-08T14:34:44.118277+00:00",
       "type": "label"
      }
     ],
@@ -4865,7 +4865,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4936,7 +4936,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.151619+00:00",
+      "value": "2026-08-08T14:34:44.119827+00:00",
       "type": "label"
      }
     ],
@@ -4944,7 +4944,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -4983,7 +4983,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.151619+00:00",
+      "value": "2026-08-08T14:34:44.119827+00:00",
       "type": "label"
      }
     ],
@@ -4991,7 +4991,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5062,7 +5062,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.122670+00:00",
       "type": "label"
      }
     ],
@@ -5070,7 +5070,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5109,7 +5109,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.122670+00:00",
       "type": "label"
      }
     ],
@@ -5117,7 +5117,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5188,7 +5188,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.125339+00:00",
       "type": "label"
      }
     ],
@@ -5196,7 +5196,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5235,7 +5235,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.125339+00:00",
       "type": "label"
      }
     ],
@@ -5243,7 +5243,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5314,7 +5314,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.126952+00:00",
       "type": "label"
      }
     ],
@@ -5322,7 +5322,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5361,7 +5361,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.126952+00:00",
       "type": "label"
      }
     ],
@@ -5369,7 +5369,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5440,7 +5440,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.126952+00:00",
       "type": "label"
      }
     ],
@@ -5448,7 +5448,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5487,7 +5487,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.126952+00:00",
       "type": "label"
      }
     ],
@@ -5495,7 +5495,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5566,7 +5566,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.131255+00:00",
       "type": "label"
      }
     ],
@@ -5574,7 +5574,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5613,7 +5613,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.154383+00:00",
+      "value": "2026-08-08T14:34:44.131255+00:00",
       "type": "label"
      }
     ],
@@ -5621,7 +5621,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5692,7 +5692,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.162018+00:00",
+      "value": "2026-08-08T14:34:44.133932+00:00",
       "type": "label"
      }
     ],
@@ -5700,7 +5700,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5739,7 +5739,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.162018+00:00",
+      "value": "2026-08-08T14:34:44.133932+00:00",
       "type": "label"
      }
     ],
@@ -5747,7 +5747,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5818,7 +5818,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.162018+00:00",
+      "value": "2026-08-08T14:34:44.133932+00:00",
       "type": "label"
      }
     ],
@@ -5826,7 +5826,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5865,7 +5865,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.162018+00:00",
+      "value": "2026-08-08T14:34:44.133932+00:00",
       "type": "label"
      }
     ],
@@ -5873,7 +5873,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5944,7 +5944,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.119392+00:00",
+      "value": "2026-08-08T14:34:44.096880+00:00",
       "type": "label"
      }
     ],
@@ -5952,7 +5952,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -5991,7 +5991,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.119392+00:00",
+      "value": "2026-08-08T14:34:44.096880+00:00",
       "type": "label"
      }
     ],
@@ -5999,7 +5999,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6070,7 +6070,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.251682+00:00",
+      "value": "2026-08-08T14:34:44.247993+00:00",
       "type": "label"
      }
     ],
@@ -6078,7 +6078,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6117,7 +6117,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.251682+00:00",
+      "value": "2026-08-08T14:34:44.247993+00:00",
       "type": "label"
      }
     ],
@@ -6125,7 +6125,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6196,7 +6196,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.253866+00:00",
+      "value": "2026-08-08T14:34:44.249719+00:00",
       "type": "label"
      }
     ],
@@ -6204,7 +6204,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6243,7 +6243,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.253866+00:00",
+      "value": "2026-08-08T14:34:44.249719+00:00",
       "type": "label"
      }
     ],
@@ -6251,7 +6251,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6322,7 +6322,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.255055+00:00",
+      "value": "2026-08-08T14:34:44.250778+00:00",
       "type": "label"
      }
     ],
@@ -6330,7 +6330,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6369,7 +6369,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.255055+00:00",
+      "value": "2026-08-08T14:34:44.250778+00:00",
       "type": "label"
      }
     ],
@@ -6377,7 +6377,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6448,7 +6448,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.135447+00:00",
       "type": "label"
      }
     ],
@@ -6456,7 +6456,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6495,7 +6495,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.135447+00:00",
       "type": "label"
      }
     ],
@@ -6503,7 +6503,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6574,7 +6574,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.139675+00:00",
       "type": "label"
      }
     ],
@@ -6582,7 +6582,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6621,7 +6621,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.139675+00:00",
       "type": "label"
      }
     ],
@@ -6629,7 +6629,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6700,7 +6700,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.139675+00:00",
       "type": "label"
      }
     ],
@@ -6708,7 +6708,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6747,7 +6747,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.139675+00:00",
       "type": "label"
      }
     ],
@@ -6755,7 +6755,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6826,7 +6826,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.139675+00:00",
       "type": "label"
      }
     ],
@@ -6834,7 +6834,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6873,7 +6873,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.139675+00:00",
       "type": "label"
      }
     ],
@@ -6881,7 +6881,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6952,7 +6952,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.143823+00:00",
       "type": "label"
      }
     ],
@@ -6960,7 +6960,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -6999,7 +6999,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.164603+00:00",
+      "value": "2026-08-08T14:34:44.143823+00:00",
       "type": "label"
      }
     ],
@@ -7007,7 +7007,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7078,7 +7078,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.171370+00:00",
+      "value": "2026-08-08T14:34:44.145355+00:00",
       "type": "label"
      }
     ],
@@ -7086,7 +7086,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7125,7 +7125,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.171370+00:00",
+      "value": "2026-08-08T14:34:44.145355+00:00",
       "type": "label"
      }
     ],
@@ -7133,7 +7133,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7204,7 +7204,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.171370+00:00",
+      "value": "2026-08-08T14:34:44.147883+00:00",
       "type": "label"
      }
     ],
@@ -7212,7 +7212,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7251,7 +7251,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.171370+00:00",
+      "value": "2026-08-08T14:34:44.147883+00:00",
       "type": "label"
      }
     ],
@@ -7259,7 +7259,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7330,7 +7330,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.174496+00:00",
+      "value": "2026-08-08T14:34:44.147883+00:00",
       "type": "label"
      }
     ],
@@ -7338,7 +7338,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7377,7 +7377,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.174496+00:00",
+      "value": "2026-08-08T14:34:44.147883+00:00",
       "type": "label"
      }
     ],
@@ -7385,7 +7385,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7456,7 +7456,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.174496+00:00",
+      "value": "2026-08-08T14:34:44.147883+00:00",
       "type": "label"
      }
     ],
@@ -7464,7 +7464,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7503,7 +7503,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.174496+00:00",
+      "value": "2026-08-08T14:34:44.147883+00:00",
       "type": "label"
      }
     ],
@@ -7511,7 +7511,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7582,7 +7582,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.178588+00:00",
+      "value": "2026-08-08T14:34:44.152372+00:00",
       "type": "label"
      }
     ],
@@ -7590,7 +7590,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7629,7 +7629,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.178588+00:00",
+      "value": "2026-08-08T14:34:44.152372+00:00",
       "type": "label"
      }
     ],
@@ -7637,7 +7637,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7708,7 +7708,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.131410+00:00",
+      "value": "2026-08-08T14:34:44.105552+00:00",
       "type": "label"
      }
     ],
@@ -7716,7 +7716,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7755,7 +7755,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.131410+00:00",
+      "value": "2026-08-08T14:34:44.105552+00:00",
       "type": "label"
      }
     ],
@@ -7763,7 +7763,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7834,7 +7834,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.178588+00:00",
+      "value": "2026-08-08T14:34:44.155657+00:00",
       "type": "label"
      }
     ],
@@ -7842,7 +7842,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7881,7 +7881,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.178588+00:00",
+      "value": "2026-08-08T14:34:44.155657+00:00",
       "type": "label"
      }
     ],
@@ -7889,7 +7889,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -7960,7 +7960,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.178588+00:00",
+      "value": "2026-08-08T14:34:44.156727+00:00",
       "type": "label"
      }
     ],
@@ -7968,7 +7968,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8007,7 +8007,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.178588+00:00",
+      "value": "2026-08-08T14:34:44.156727+00:00",
       "type": "label"
      }
     ],
@@ -8015,7 +8015,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8086,7 +8086,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.178588+00:00",
+      "value": "2026-08-08T14:34:44.161256+00:00",
       "type": "label"
      }
     ],
@@ -8094,7 +8094,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8133,7 +8133,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.178588+00:00",
+      "value": "2026-08-08T14:34:44.161256+00:00",
       "type": "label"
      }
     ],
@@ -8141,7 +8141,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8212,7 +8212,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.185681+00:00",
+      "value": "2026-08-08T14:34:44.162286+00:00",
       "type": "label"
      }
     ],
@@ -8220,7 +8220,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8259,7 +8259,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.185681+00:00",
+      "value": "2026-08-08T14:34:44.162286+00:00",
       "type": "label"
      }
     ],
@@ -8267,7 +8267,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8338,7 +8338,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.188818+00:00",
+      "value": "2026-08-08T14:34:44.163275+00:00",
       "type": "label"
      }
     ],
@@ -8346,7 +8346,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8385,7 +8385,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.188818+00:00",
+      "value": "2026-08-08T14:34:44.163275+00:00",
       "type": "label"
      }
     ],
@@ -8393,7 +8393,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8464,7 +8464,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.190973+00:00",
+      "value": "2026-08-08T14:34:44.165496+00:00",
       "type": "label"
      }
     ],
@@ -8472,7 +8472,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8511,7 +8511,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.190973+00:00",
+      "value": "2026-08-08T14:34:44.165496+00:00",
       "type": "label"
      }
     ],
@@ -8519,7 +8519,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8590,7 +8590,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.193046+00:00",
+      "value": "2026-08-08T14:34:44.166540+00:00",
       "type": "label"
      }
     ],
@@ -8598,7 +8598,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8637,7 +8637,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.193046+00:00",
+      "value": "2026-08-08T14:34:44.166540+00:00",
       "type": "label"
      }
     ],
@@ -8645,7 +8645,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8716,7 +8716,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.195299+00:00",
+      "value": "2026-08-08T14:34:44.168527+00:00",
       "type": "label"
      }
     ],
@@ -8724,7 +8724,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8763,7 +8763,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.195299+00:00",
+      "value": "2026-08-08T14:34:44.168527+00:00",
       "type": "label"
      }
     ],
@@ -8771,7 +8771,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8842,7 +8842,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.196330+00:00",
+      "value": "2026-08-08T14:34:44.170435+00:00",
       "type": "label"
      }
     ],
@@ -8850,7 +8850,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8889,7 +8889,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.196330+00:00",
+      "value": "2026-08-08T14:34:44.170435+00:00",
       "type": "label"
      }
     ],
@@ -8897,7 +8897,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -8968,7 +8968,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.197361+00:00",
+      "value": "2026-08-08T14:34:44.174618+00:00",
       "type": "label"
      }
     ],
@@ -8976,7 +8976,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9015,7 +9015,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.197361+00:00",
+      "value": "2026-08-08T14:34:44.174618+00:00",
       "type": "label"
      }
     ],
@@ -9023,7 +9023,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9094,7 +9094,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.105552+00:00",
       "type": "label"
      }
     ],
@@ -9102,7 +9102,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9141,7 +9141,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.105552+00:00",
       "type": "label"
      }
     ],
@@ -9149,7 +9149,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9220,7 +9220,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.199478+00:00",
+      "value": "2026-08-08T14:34:44.176540+00:00",
       "type": "label"
      }
     ],
@@ -9228,7 +9228,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9267,7 +9267,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.199478+00:00",
+      "value": "2026-08-08T14:34:44.176540+00:00",
       "type": "label"
      }
     ],
@@ -9275,7 +9275,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9346,7 +9346,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.200674+00:00",
+      "value": "2026-08-08T14:34:44.178708+00:00",
       "type": "label"
      }
     ],
@@ -9354,7 +9354,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9393,7 +9393,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.200674+00:00",
+      "value": "2026-08-08T14:34:44.178708+00:00",
       "type": "label"
      }
     ],
@@ -9401,7 +9401,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9472,7 +9472,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.202807+00:00",
+      "value": "2026-08-08T14:34:44.180706+00:00",
       "type": "label"
      }
     ],
@@ -9480,7 +9480,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9519,7 +9519,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.202807+00:00",
+      "value": "2026-08-08T14:34:44.180706+00:00",
       "type": "label"
      }
     ],
@@ -9527,7 +9527,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9598,7 +9598,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.204481+00:00",
+      "value": "2026-08-08T14:34:44.182230+00:00",
       "type": "label"
      }
     ],
@@ -9606,7 +9606,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9645,7 +9645,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.204481+00:00",
+      "value": "2026-08-08T14:34:44.182230+00:00",
       "type": "label"
      }
     ],
@@ -9653,7 +9653,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9724,7 +9724,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.207113+00:00",
+      "value": "2026-08-08T14:34:44.184308+00:00",
       "type": "label"
      }
     ],
@@ -9732,7 +9732,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9771,7 +9771,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.207113+00:00",
+      "value": "2026-08-08T14:34:44.184308+00:00",
       "type": "label"
      }
     ],
@@ -9779,7 +9779,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9850,7 +9850,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.208139+00:00",
+      "value": "2026-08-08T14:34:44.187234+00:00",
       "type": "label"
      }
     ],
@@ -9858,7 +9858,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9897,7 +9897,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.208139+00:00",
+      "value": "2026-08-08T14:34:44.187234+00:00",
       "type": "label"
      }
     ],
@@ -9905,7 +9905,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -9976,7 +9976,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.210209+00:00",
+      "value": "2026-08-08T14:34:44.191308+00:00",
       "type": "label"
      }
     ],
@@ -9984,7 +9984,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10023,7 +10023,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.210209+00:00",
+      "value": "2026-08-08T14:34:44.191308+00:00",
       "type": "label"
      }
     ],
@@ -10031,7 +10031,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10102,7 +10102,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.211774+00:00",
+      "value": "2026-08-08T14:34:44.193355+00:00",
       "type": "label"
      }
     ],
@@ -10110,7 +10110,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10149,7 +10149,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.211774+00:00",
+      "value": "2026-08-08T14:34:44.193355+00:00",
       "type": "label"
      }
     ],
@@ -10157,7 +10157,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10228,7 +10228,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.213329+00:00",
+      "value": "2026-08-08T14:34:44.195310+00:00",
       "type": "label"
      }
     ],
@@ -10236,7 +10236,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10275,7 +10275,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.213329+00:00",
+      "value": "2026-08-08T14:34:44.195310+00:00",
       "type": "label"
      }
     ],
@@ -10283,7 +10283,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10354,7 +10354,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.215418+00:00",
+      "value": "2026-08-08T14:34:44.196431+00:00",
       "type": "label"
      }
     ],
@@ -10362,7 +10362,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10401,7 +10401,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.215418+00:00",
+      "value": "2026-08-08T14:34:44.196431+00:00",
       "type": "label"
      }
     ],
@@ -10409,7 +10409,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10480,7 +10480,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.105552+00:00",
       "type": "label"
      }
     ],
@@ -10488,7 +10488,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10527,7 +10527,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.105552+00:00",
       "type": "label"
      }
     ],
@@ -10535,7 +10535,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10606,7 +10606,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.217598+00:00",
+      "value": "2026-08-08T14:34:44.198560+00:00",
       "type": "label"
      }
     ],
@@ -10614,7 +10614,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10653,7 +10653,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.217598+00:00",
+      "value": "2026-08-08T14:34:44.198560+00:00",
       "type": "label"
      }
     ],
@@ -10661,7 +10661,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10732,7 +10732,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.218671+00:00",
+      "value": "2026-08-08T14:34:44.200561+00:00",
       "type": "label"
      }
     ],
@@ -10740,7 +10740,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10779,7 +10779,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.218671+00:00",
+      "value": "2026-08-08T14:34:44.200561+00:00",
       "type": "label"
      }
     ],
@@ -10787,7 +10787,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10858,7 +10858,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.221817+00:00",
+      "value": "2026-08-08T14:34:44.202681+00:00",
       "type": "label"
      }
     ],
@@ -10866,7 +10866,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10905,7 +10905,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.221817+00:00",
+      "value": "2026-08-08T14:34:44.202681+00:00",
       "type": "label"
      }
     ],
@@ -10913,7 +10913,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -10984,7 +10984,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.222910+00:00",
+      "value": "2026-08-08T14:34:44.205700+00:00",
       "type": "label"
      }
     ],
@@ -10992,7 +10992,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11031,7 +11031,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.222910+00:00",
+      "value": "2026-08-08T14:34:44.205700+00:00",
       "type": "label"
      }
     ],
@@ -11039,7 +11039,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11110,7 +11110,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.224602+00:00",
+      "value": "2026-08-08T14:34:44.207778+00:00",
       "type": "label"
      }
     ],
@@ -11118,7 +11118,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11157,7 +11157,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.224602+00:00",
+      "value": "2026-08-08T14:34:44.207778+00:00",
       "type": "label"
      }
     ],
@@ -11165,7 +11165,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11236,7 +11236,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.225215+00:00",
+      "value": "2026-08-08T14:34:44.207778+00:00",
       "type": "label"
      }
     ],
@@ -11244,7 +11244,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11283,7 +11283,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.225215+00:00",
+      "value": "2026-08-08T14:34:44.207778+00:00",
       "type": "label"
      }
     ],
@@ -11291,7 +11291,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11362,7 +11362,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.227328+00:00",
+      "value": "2026-08-08T14:34:44.211893+00:00",
       "type": "label"
      }
     ],
@@ -11370,7 +11370,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11409,7 +11409,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.227328+00:00",
+      "value": "2026-08-08T14:34:44.211893+00:00",
       "type": "label"
      }
     ],
@@ -11417,7 +11417,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11488,7 +11488,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.228350+00:00",
+      "value": "2026-08-08T14:34:44.211893+00:00",
       "type": "label"
      }
     ],
@@ -11496,7 +11496,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11535,7 +11535,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.228350+00:00",
+      "value": "2026-08-08T14:34:44.211893+00:00",
       "type": "label"
      }
     ],
@@ -11543,7 +11543,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11614,7 +11614,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.229424+00:00",
+      "value": "2026-08-08T14:34:44.215595+00:00",
       "type": "label"
      }
     ],
@@ -11622,7 +11622,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11661,7 +11661,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.229424+00:00",
+      "value": "2026-08-08T14:34:44.215595+00:00",
       "type": "label"
      }
     ],
@@ -11669,7 +11669,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11740,7 +11740,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.231539+00:00",
+      "value": "2026-08-08T14:34:44.215595+00:00",
       "type": "label"
      }
     ],
@@ -11748,7 +11748,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11787,7 +11787,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.231539+00:00",
+      "value": "2026-08-08T14:34:44.215595+00:00",
       "type": "label"
      }
     ],
@@ -11795,7 +11795,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11866,7 +11866,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.109973+00:00",
       "type": "label"
      }
     ],
@@ -11874,7 +11874,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11913,7 +11913,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.109973+00:00",
       "type": "label"
      }
     ],
@@ -11921,7 +11921,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -11992,7 +11992,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.233646+00:00",
+      "value": "2026-08-08T14:34:44.219716+00:00",
       "type": "label"
      }
     ],
@@ -12000,7 +12000,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12039,7 +12039,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.233646+00:00",
+      "value": "2026-08-08T14:34:44.219716+00:00",
       "type": "label"
      }
     ],
@@ -12047,7 +12047,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12118,7 +12118,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.234767+00:00",
+      "value": "2026-08-08T14:34:44.222233+00:00",
       "type": "label"
      }
     ],
@@ -12126,7 +12126,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12165,7 +12165,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.234767+00:00",
+      "value": "2026-08-08T14:34:44.222233+00:00",
       "type": "label"
      }
     ],
@@ -12173,7 +12173,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12244,7 +12244,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.236845+00:00",
+      "value": "2026-08-08T14:34:44.225254+00:00",
       "type": "label"
      }
     ],
@@ -12252,7 +12252,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12291,7 +12291,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.236845+00:00",
+      "value": "2026-08-08T14:34:44.225254+00:00",
       "type": "label"
      }
     ],
@@ -12299,7 +12299,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12370,7 +12370,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.237918+00:00",
+      "value": "2026-08-08T14:34:44.226872+00:00",
       "type": "label"
      }
     ],
@@ -12378,7 +12378,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12417,7 +12417,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.237918+00:00",
+      "value": "2026-08-08T14:34:44.226872+00:00",
       "type": "label"
      }
     ],
@@ -12425,7 +12425,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12496,7 +12496,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.238940+00:00",
+      "value": "2026-08-08T14:34:44.228865+00:00",
       "type": "label"
      }
     ],
@@ -12504,7 +12504,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12543,7 +12543,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.238940+00:00",
+      "value": "2026-08-08T14:34:44.228865+00:00",
       "type": "label"
      }
     ],
@@ -12551,7 +12551,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12622,7 +12622,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.241085+00:00",
+      "value": "2026-08-08T14:34:44.230774+00:00",
       "type": "label"
      }
     ],
@@ -12630,7 +12630,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12669,7 +12669,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.241085+00:00",
+      "value": "2026-08-08T14:34:44.230774+00:00",
       "type": "label"
      }
     ],
@@ -12677,7 +12677,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12748,7 +12748,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.109973+00:00",
       "type": "label"
      }
     ],
@@ -12756,7 +12756,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12795,7 +12795,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.109973+00:00",
       "type": "label"
      }
     ],
@@ -12803,7 +12803,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12874,7 +12874,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.109973+00:00",
       "type": "label"
      }
     ],
@@ -12882,7 +12882,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -12921,7 +12921,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.134311+00:00",
+      "value": "2026-08-08T14:34:44.109973+00:00",
       "type": "label"
      }
     ],
@@ -12929,7 +12929,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -13000,7 +13000,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.144242+00:00",
+      "value": "2026-08-08T14:34:44.114179+00:00",
       "type": "label"
      }
     ],
@@ -13008,7 +13008,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -13047,7 +13047,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.144242+00:00",
+      "value": "2026-08-08T14:34:44.114179+00:00",
       "type": "label"
      }
     ],
@@ -13055,7 +13055,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -13126,7 +13126,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.144242+00:00",
+      "value": "2026-08-08T14:34:44.114179+00:00",
       "type": "label"
      }
     ],
@@ -13134,7 +13134,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],
@@ -13173,7 +13173,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#endedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.144242+00:00",
+      "value": "2026-08-08T14:34:44.114179+00:00",
       "type": "label"
      }
     ],
@@ -13181,7 +13181,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/ns/prov#startedAtTime",
       "language": "undefined",
-      "value": "2026-08-08T14:28:14.099780+00:00",
+      "value": "2026-08-08T14:34:44.088406+00:00",
       "type": "label"
      }
     ],

@@ -17,8 +17,8 @@
         "Fitzsimmons et al.,, 2013",
         "Obreht et al., 2017",
         "Pötter et al., 2021" ;
-    prov:endedAtTime "2026-08-08T14:28:14.221817+00:00"^^xsd:dateTime ;
-    prov:startedAtTime "2026-08-08T14:28:14.099780+00:00"^^xsd:dateTime ;
+    prov:endedAtTime "2026-08-08T14:34:44.202681+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-08-08T14:34:44.088406+00:00"^^xsd:dateTime ;
     prov:used <http://w3id.org/geo-lod/ci/cisite_52> ;
     prov:wasAssociatedWith <http://orcid.org/0009-0008-2877-3204> .
 

@@ -14,8 +14,8 @@
     void:inDataset ns2:geo-lod ;
     ns2:hasCertaintyLevel ns1:medium ;
     ns2:hasLiteratureReference "Rosi et al., 1999" ;
-    prov:endedAtTime "2026-08-08T14:28:14.196330+00:00"^^xsd:dateTime ;
-    prov:startedAtTime "2026-08-08T14:28:14.099780+00:00"^^xsd:dateTime ;
+    prov:endedAtTime "2026-08-08T14:34:44.170435+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-08-08T14:34:44.088406+00:00"^^xsd:dateTime ;
     prov:used <http://w3id.org/geo-lod/ci/cisite_38> ;
     prov:wasAssociatedWith <http://orcid.org/0009-0008-2877-3204> .
 
