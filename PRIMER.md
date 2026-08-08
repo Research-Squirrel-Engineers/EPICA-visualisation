@@ -78,6 +78,41 @@ geo-lod nicht braucht, und erben aus geo-lod ausschliesslich die Ontologie.
   Ausnahme: dieses `PRIMER.md` bleibt deutsch — es ist ein internes
   Arbeitsdokument, das offen liegt, aber nicht nach aussen adressiert ist.
 
+## A5. Was in welchem Chat hochgeladen wird
+
+Die Zeile **Uploads** bei jedem Schritt in Teil C nennt, was zusätzlich
+gebraucht wird. Grundregel: lieber das Bundle als einzelne Dateien — bei
+Einzeldateien fehlt regelmässig der Kontext, und Nachfragen kosten mehr als der
+Upload.
+
+**Das geo-lod-Bundle.** Das Repo ist mit Abbildungen und generiertem RDF rund
+54 MB gross, das meiste davon erzeugt. Gebraucht wird der Code, die Ontologie,
+die kleinen Eingabedaten und die kleinen TTL. Ein Grössenfilter erledigt die
+Auswahl zuverlässiger als eine Dateiliste:
+
+```cmd
+cd /d C:\git
+robocopy GeoScience-FAIRification-LOD bundle\geo-lod /E /MAX:1000000 ^
+  /XD plots img dist .git .venv __pycache__ example_query ^
+  /XF *.jpg *.svg *.png
+powershell -NoProfile -Command "Compress-Archive -Path 'bundle\geo-lod' -DestinationPath 'geo-lod_bundle.zip' -Force"
+```
+
+`/MAX:1000000` lässt `geo_lod_core.ttl`, die Ontologiemodule, `core_shapes.ttl`,
+`sisal_sites.ttl` und `ci_findspots.ttl` durch und filtert die fünf grossen
+generierten Datendateien heraus. Ergebnis: wenige MB. Robocopy meldet Exitcode 1
+bei Erfolg.
+
+**Was gitignoriert ist, kommt nicht über GitHub.** `data/` und `dist/` liegen
+nicht im Repo. Wenn ein Schritt Rohdaten braucht — etwa die `.tab` in S2 —
+müssen sie separat mit.
+
+**Wenn eine Datei gezielt geändert werden soll**, genügt sie einzeln zusätzlich
+zum Bundle; dann sehe ich den aktuellen Stand und den Kontext gleichzeitig.
+
+**Nicht hochladen:** `config.ini`, `.venv/`, `.git/`, generierte Abbildungen,
+die grossen Daten-TTL, die SISAL-CSVs.
+
 ## A4. Beschlusslage
 
 Wird nach S0 gefüllt und danach nur noch fortgeschrieben. Alle späteren Schritte
@@ -123,7 +158,10 @@ und kann sofort beginnen.
 **Ziel:** die Entscheidungen treffen, die IRIs und Klassenidentität betreffen.
 Werden sie später getroffen, müssen erzeugte Tripel neu geschrieben werden.
 
-**Uploads:** keine. Die Belege stehen unten.
+**Uploads:** für S0.2 bis S0.4 keine, die Belege stehen unten. Für S0.1 die
+fünf EPICA-`.tab` — die Kopfzeilen zeigen, welche Altersskalen tatsächlich
+ausgeliefert werden, und davon hängt ab, ob native und umgerechnete Werte
+nebeneinander gespeichert werden müssen.
 
 **Ergebnis:** Tabelle A4 ausgefüllt.
 
@@ -192,7 +230,7 @@ durchhalten.
 **Ziel:** übergreifende SKOS-Schemata, auf die alle Stränge zeigen. Muss vor den
 Instanzdaten stehen.
 
-**Uploads:** `ontology/` aus geo-lod; `mis_literature.csv`,
+**Uploads:** geo-lod-Bundle (A5); `mis_literature.csv`,
 `mis_stage_boundaries.csv`, `mis_boundaries.csv`.
 
 **Ergebnis:** `ontology/vocab/mis.ttl` in geo-lod, IRI-Muster dokumentiert.
@@ -229,9 +267,9 @@ für den Kern anführt.
 **Ziel:** alle fünf Proxies direkt aus den `.tab`-Dateien nach RDF, vollständig
 in geo-lod.
 
-**Uploads:** geo-lod-Repo (mindestens `EPICA/`, `ontology/`, `main.py`,
-`geo_lod_utils.py`); die fünf `.tab` aus `wdttest-epica/data/`;
-`wdttest-epica/data.yaml`.
+**Uploads:** geo-lod-Bundle (A5); die fünf `.tab` aus `wdttest-epica/data/`;
+`wdttest-epica/data.yaml`. Die `.tab` sind gitignoriert und müssen von der
+Platte kommen.
 
 **Ergebnis:** neues Sub-Skript im geo-lod-`main.py`, Ausgabe nach `EPICA/rdf/`.
 
@@ -434,8 +472,7 @@ diese Punkte ziehen mit:
 **Ziel:** Neuaufbau der SISAL-Tripel aus der restaurierten Datenbank, statt aus
 den bestehenden `v_data_*.csv`. Der Generator läuft in geo-lod.
 
-**Uploads:** geo-lod-Repo (mindestens `SISAL/`, `ontology/`, `main.py`,
-`geo_lod_utils.py`); der Exportcode aus `sisal-db-v3`; eine
+**Uploads:** geo-lod-Bundle (A5); der Exportcode aus `sisal-db-v3`; eine
 strukturerhaltende Exportdatei für die gewählten Sites.
 
 **Ergebnis:** neues Sub-Skript im geo-lod-`main.py`, Ausgabe nach `SISAL/rdf/`.
@@ -482,8 +519,8 @@ laufenden Datenbank noch am anderen Repo.
 **Ziel:** `geolod:` und `strat:` so zusammenführen, dass ein gemeinsames Bundle
 widerspruchsfrei lädt.
 
-**Uploads:** `ontology/` aus geo-lod; `metadata/ontology/` aus `wdttest-tables`;
-die in S2 und S3c erzeugten TTL.
+**Uploads:** geo-lod-Bundle (A5); `metadata/ontology/` aus `wdttest-tables`;
+die in S2 und S3c erzeugten Ontologie-TTL.
 
 **Ergebnis:** angepasste Ontologiemodule, zusammengeführte SHACL-Shapes.
 
@@ -514,7 +551,7 @@ kollidiert. Bekannte Punkte:
 
 **Ziel:** vierter Datenstrang als Integrationstest der Angleichung.
 
-**Uploads:** geo-lod-Repo; die MDPI-Quaternary-PDFs (Sirocko et al. 2024,
+**Uploads:** geo-lod-Bundle (A5); die MDPI-Quaternary-PDFs (Sirocko et al. 2024,
 Schenk et al. 2024); Tabelle 1 des ELSA-23-Stacks als CSV, falls verfügbar.
 
 **Ergebnis:** neues Sub-Skript, `…/vocab/tephra/` befüllt, `strat:`-Erweiterung.
