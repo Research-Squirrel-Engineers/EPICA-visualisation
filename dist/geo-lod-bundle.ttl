@@ -161815,7 +161815,7 @@ geolod:SISAL_Cave_Collection a geo:FeatureCollection,
 
 geolod:SISAL_Sites_Dataset a prov:Entity ;
     dct:created "2026-08-08"^^xsd:date ;
-    owl:versionInfo "sha256:7ce796f2733a" ;
+    owl:versionInfo "sha256:a76f0d9d28f0" ;
     prov:wasGeneratedBy geolod:SISAL_Sites_Generation .
 
 geolod:SpeleothemSamplingEvent a owl:Class ;
@@ -161958,7 +161958,7 @@ ci:CIFindspotCollection a geo:FeatureCollection ;
 
 ci:ci_findspots_dataset a prov:Entity ;
     dct:created "2026-08-08"^^xsd:date ;
-    owl:versionInfo "sha256:24fb30252415" ;
+    owl:versionInfo "sha256:bf282f412066" ;
     prov:wasGeneratedBy ci:ci_findspots_generation .
 
 geolod:ci_volcanic_event crm:P12_occurred_in_the_presence_of ci:cisite_1,
@@ -171865,12 +171865,12 @@ geolod:EPICA_DomeC_Dataset a dcat:Dataset,
         geolod:Obs_d18O_1375,
         geolod:Obs_d18O_1376,
         geolod:Obs_d18O_1377 ;
-    owl:versionInfo "sha256:7d6a0c9b05c3" ;
+    owl:versionInfo "sha256:db2e1427ad9b" ;
     prov:wasGeneratedBy geolod:EPICA_DomeC_Generation .
 
 geolod:EPICA_DomeC_Generation a prov:Activity ;
     rdfs:label "EPICA Dome C RDF generation"@en ;
-    owl:versionInfo "sha256:7d6a0c9b05c3" ;
+    owl:versionInfo "sha256:db2e1427ad9b" ;
     prov:used geolod:EPICA_DomeC_Generation_input_EDC_CH4_tab,
         geolod:EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab,
         geolod:EPICA_DomeC_Generation_input_plot_epica_from_tab_py ;
@@ -171886,7 +171886,7 @@ geolod:EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab a prov:Entity ;
 
 geolod:EPICA_DomeC_Generation_input_plot_epica_from_tab_py a prov:Entity ;
     rdfs:label "plot_epica_from_tab.py" ;
-    dct:identifier "sha256:30d942d780c95b6469b319c1b5ad72b3f81e38d5cbe745e06b0a5a8b81708b47" .
+    dct:identifier "sha256:1d02c7ba1edce612e7bd00d23478624886def3ac13ab40232b77c1af210ac3cd" .
 
 geolod:EPICA_DomeC_d18O_Dataset a dcat:Dataset ;
     dct:description "δ¹⁸O measurements from the EPICA Dome C ice core on the AICC2023 chronology (102–806 ka BP, 1378 data points)."@en ;
@@ -173279,14 +173279,14 @@ geolod:EpicaDomeC_Geometry a sf:Point,
 
 geolod:SISAL_Sites_Generation a prov:Activity ;
     rdfs:label "SISAL cave site RDF generation"@en ;
-    owl:versionInfo "sha256:7ce796f2733a" ;
+    owl:versionInfo "sha256:a76f0d9d28f0" ;
     prov:used geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py,
         geolod:SISAL_Sites_Generation_input_v_sites_all_csv ;
     prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
 
 geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py a prov:Entity ;
     rdfs:label "plot_sisal_from_csv.py" ;
-    dct:identifier "sha256:e4ce015b10fa8f11adbc2e4d39941d281776cf1d0665e752201a9bff2378b705" .
+    dct:identifier "sha256:df240f0328a18fc70458df58d421c0e4ba4c233e90f844333947c4132a5cc098" .
 
 geolod:SISAL_Sites_Generation_input_v_sites_all_csv a prov:Entity ;
     rdfs:label "v_sites_all.csv" ;
@@ -173298,7 +173298,7 @@ geolod:ageChronology a owl:ObjectProperty ;
 
 ci:ci_findspots_generation_input_ci_pipeline_py a prov:Entity ;
     rdfs:label "ci_pipeline.py" ;
-    dct:identifier "sha256:6e5a5a41a1c6111ab61eef308e73ce3da116bac5820e02aca56407b41357268d" .
+    dct:identifier "sha256:cf8cf7a57432fd3c4c02c687e20ddf40b3db769b38b49afcc69c42269d56a673" .
 
 ci:ci_findspots_generation_input_cifindspots_part_full_csv a prov:Entity ;
     rdfs:label "cifindspots_part_full.csv" ;
@@ -224432,7 +224432,7 @@ geolod:CIFindspot a owl:Class ;
 
 ci:ci_findspots_generation a prov:Activity ;
     rdfs:label "CI findspot RDF generation"@en ;
-    owl:versionInfo "sha256:24fb30252415" ;
+    owl:versionInfo "sha256:bf282f412066" ;
     prov:used ci:ci_findspots_generation_input_ci_pipeline_py,
         ci:ci_findspots_generation_input_cifindspots_part_full_csv ;
     prov:wasAssociatedWith <https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo>,

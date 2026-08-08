@@ -2906,12 +2906,12 @@ geolod:EPICA_DomeC_Dataset a dcat:Dataset,
         geolod:Obs_d18O_1375,
         geolod:Obs_d18O_1376,
         geolod:Obs_d18O_1377 ;
-    owl:versionInfo "sha256:7d6a0c9b05c3" ;
+    owl:versionInfo "sha256:db2e1427ad9b" ;
     prov:wasGeneratedBy geolod:EPICA_DomeC_Generation .
 
 geolod:EPICA_DomeC_Generation a prov:Activity ;
     rdfs:label "EPICA Dome C RDF generation"@en ;
-    owl:versionInfo "sha256:7d6a0c9b05c3" ;
+    owl:versionInfo "sha256:db2e1427ad9b" ;
     prov:used geolod:EPICA_DomeC_Generation_input_EDC_CH4_tab,
         geolod:EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab,
         geolod:EPICA_DomeC_Generation_input_plot_epica_from_tab_py ;
@@ -2927,7 +2927,7 @@ geolod:EPICA_DomeC_Generation_input_EPICA_Dome_C_d18O_tab a prov:Entity ;
 
 geolod:EPICA_DomeC_Generation_input_plot_epica_from_tab_py a prov:Entity ;
     rdfs:label "plot_epica_from_tab.py" ;
-    dct:identifier "sha256:30d942d780c95b6469b319c1b5ad72b3f81e38d5cbe745e06b0a5a8b81708b47" .
+    dct:identifier "sha256:1d02c7ba1edce612e7bd00d23478624886def3ac13ab40232b77c1af210ac3cd" .
 
 geolod:EPICA_DomeC_d18O_Dataset a dcat:Dataset ;
     dct:description "δ¹⁸O measurements from the EPICA Dome C ice core on the AICC2023 chronology (102–806 ka BP, 1378 data points)."@en ;
