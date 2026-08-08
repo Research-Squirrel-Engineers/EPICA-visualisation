@@ -3,14 +3,14 @@
                           EPICA + SISAL + CI Pipeline                           
 ════════════════════════════════════════════════════════════════════════════════
 
-  Timestamp: 2026-08-08 15:38:34
+  Timestamp: 2026-08-08 15:47:40
   Directory: C:\git\GeoScience-FAIRification-LOD
 
 
 ────────────────────────────────────────────────────────────────────────────────
   1. Preparation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:38:34
+  Start: 15:47:40
 
   Directory structure:
   ✓ EPICA directory found: EPICA/
@@ -28,7 +28,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   2. Regenerate canonical ontology
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:38:34
+  Start: 15:47:40
 
   ▶ Regeneriere kanonische Ontologie-Dateien aus geo_lod_utils.py ...
   ✓ geo_lod_core.ttl geschrieben (18.8 KB)
@@ -38,7 +38,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   3. Regenerate controlled vocabularies
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:38:34
+  Start: 15:47:40
 
   ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...
   ✓ ontology\vocab\mis.ttl: 228 stages, 87 substages, 792 assignments (564.4 KB)
@@ -51,7 +51,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   4. EPICA Dome C (Ice Core)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:38:34
+  Start: 15:47:40
 
   ▶ Starting EPICA Dome C Processing ...
     Path: C:\git\GeoScience-FAIRification-LOD\EPICA\plot_epica_from_tab.py
@@ -145,12 +145,12 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
 ============================================================
   ✓ EPICA Dome C Processing completed successfully
 
-  ⏱  4. EPICA Dome C (Ice Core): 21.6s
+  ⏱  4. EPICA Dome C (Ice Core): 18.2s
 
 ────────────────────────────────────────────────────────────────────────────────
   5. SISAL (Speleothems)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:38:55
+  Start: 15:47:58
 
   ▶ Starting SISAL Processing ...
     Path: C:\git\GeoScience-FAIRification-LOD\SISAL\plot_sisal_from_csv.py
@@ -320,12 +320,12 @@ RDF files saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\rdf/'
 Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt
   ✓ SISAL Processing completed successfully
 
-  ⏱  5. SISAL (Speleothems): 60.4s
+  ⏱  5. SISAL (Speleothems): 73.1s
 
 ────────────────────────────────────────────────────────────────────────────────
   6. Campanian Ignimbrite (CI Findspots)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:39:56
+  Start: 15:49:11
 
   ▶ Starting CI Findspot Processing ...
     Path: C:\git\GeoScience-FAIRification-LOD\CI\ci_pipeline.py
@@ -356,7 +356,7 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
 ────────────────────────────────────────────────────────────────────────────────
   7. RDF Bundle & Validation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:39:57
+  Start: 15:49:13
 
   ▶ Sammle TTL-Quellen ...
     Ontologie-Dateien: 4
@@ -396,10 +396,13 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
     + ci_findspots.ttl:    3,307 Triples
 
   ▶ Serialisiere Bundle (207,591 Triples) ...
-  ✓ geo-lod-bundle.nt            30.1 MB    2.4s  (N-Triples - eine Zeile je Tripel, am schnellsten)
-  ✓ geo-lod-bundle.ttl           10.4 MB   15.4s  (Turtle - kompakt und lesbar, Release-Format)
-  ✓ geo-lod-bundle.jsonld        28.7 MB   11.4s  (JSON-LD - für Web-Clients)
-  ✓ geo-lod-bundle.rdf           21.3 MB    4.5s  (RDF/XML - für Werkzeuge, die nichts anderes lesen)
+  ✓ geo-lod-bundle.ttl           10.4 MB   12.1s  (Turtle - kompakt und lesbar, Release-Format)
+
+  ℹ  Aus früheren Läufen, in diesem Lauf nicht neu geschrieben:
+      • geo-lod-bundle.jsonld
+      • geo-lod-bundle.nt
+      • geo-lod-bundle.rdf
+     Vor einer Veröffentlichung: python main.py --bundle-format release
 
   ▶ CIDOC-CRM Coverage-Check (strict CRM-family) ...
     Instanz-Klassen geprüft: 56
@@ -409,7 +412,7 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
   ▶ SHACL-Validierung ...
     + lade Shapes: core_shapes.ttl
     + lade Shapes: mis_shapes.ttl
-    Dauer: 28.3s
+    Dauer: 36.3s
     SHACL-Ergebnis: 0 Violation(s), 4 Warning(s)
       Validation Report
       Conforms: False
@@ -423,12 +426,6 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
       Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
       	Severity: sh:Warning
       	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
-      	Focus Node: geolod:PANGAEA_d18O_Source
-      	Result Path: dct:source
-      	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
-      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-      	Severity: sh:Warning
-      	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
       	Focus Node: geolod:SISALv3_DataSource
       	Result Path: dct:source
       	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
@@ -436,6 +433,12 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
       	Severity: sh:Warning
       	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
       	Focus Node: geolod:PANGAEA_CH4_Source
+      	Result Path: dct:source
+      	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
+      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+      	Severity: sh:Warning
+      	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
+      	Focus Node: geolod:PANGAEA_d18O_Source
       	Result Path: dct:source
       	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
 
@@ -462,19 +465,19 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
     Top-10 Properties nach Vorkommen:
       20,110  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
       15,055  http://www.w3.org/ns/prov#wasDerivedFrom
-      14,502  http://w3id.org/geo-lod/measurementType
-      14,502  http://w3id.org/geo-lod/smoothedValue_rollingMedian
       14,502  http://w3id.org/geo-lod/smoothingMethod_savgol
+      14,502  http://w3id.org/geo-lod/smoothingMethod_median
       14,502  http://w3id.org/geo-lod/smoothedValue_savgol
+      14,502  http://w3id.org/geo-lod/measurementType
       14,502  http://www.w3.org/ns/sosa/hasFeatureOfInterest
       14,502  http://www.w3.org/ns/sosa/observedProperty
-      14,502  http://w3id.org/geo-lod/smoothingMethod_median
+      14,502  http://w3id.org/geo-lod/smoothedValue_rollingMedian
       12,849  http://w3id.org/geo-lod/ageKaBP
 
     CRM-Coverage:   ✓
     SHACL:          ✓
 
-  ⏱  7. RDF Bundle & Validation: 103.7s
+  ⏱  7. RDF Bundle & Validation: 83.0s
 
 ════════════════════════════════════════════════════════════════════════════════
                                     Summary                                     
@@ -489,11 +492,11 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
     1. Preparation                               0.0s    0.0%
     2. Regenerate canonical ontology             0.0s    0.0%
     3. Regenerate controlled vocabularies        0.0s    0.0%
-    4. EPICA Dome C (Ice Core)                  21.6s   11.6%
-    5. SISAL (Speleothems)                      60.4s   32.2%
+    4. EPICA Dome C (Ice Core)                  18.2s   10.3%
+    5. SISAL (Speleothems)                      73.1s   41.6%
     6. Campanian Ignimbrite (CI Findspots)       1.4s    0.8%
-    7. RDF Bundle & Validation                 103.7s   55.4%
+    7. RDF Bundle & Validation                  83.0s   47.2%
 
-  Total duration: 187.2 seconds
+  Total duration: 175.8 seconds
   Log saved to: C:\git\GeoScience-FAIRification-LOD\pipeline_report.txt
 ✓ Pipeline completed successfully!
