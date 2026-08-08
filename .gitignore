@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ---------------------------------------------------------------------------
+# geo-lod
+# ---------------------------------------------------------------------------
+# Das N-Triples-Bundle ist ein Entwicklungsartefakt: schnell zu schreiben,
+# aber 30 MB gross und bei jedem Lauf anders, weil rdflib beim Parsen neue
+# Blank-Node-Labels vergibt und N-Triples sie im Klartext ausgibt. Turtle
+# bleibt byte-identisch, weil dieselben Knoten dort inline als [ ] stehen.
+# Fuer ein Release: python main.py --bundle-format release
+dist/geo-lod-bundle.nt

@@ -49,7 +49,7 @@ class Tee:
     """Schreibt gleichzeitig auf stdout und in eine Datei."""
 
     def __init__(self, filepath):
-        self.file = open(filepath, "w", encoding="utf-8")
+        self.file = open(filepath, "w", encoding="utf-8", newline="\n")
         self.stdout = sys.stdout
         sys.stdout = self
 

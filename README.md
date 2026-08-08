@@ -2,7 +2,7 @@
 
 ![Squilly Logo](img/logo.png)
 
-A comprehensive Python pipeline for processing and FAIRifying palaeoclimate data from EPICA (European Project for Ice Coring in Antarctica) ice cores and SISAL (Speleothem Isotopes Synthesis and AnaLysis) speleothem databases. The tool generates publication-ready visualizations, converts raw data into RDF/Linked Open Data following FAIR principles, and produces interactive Mermaid diagrams of the ontology structure. It implements a GeoSPARQL-compliant ontology extending SOSA (Sensor, Observation, Sample, and Actuator), harmonizes EPICA ice core observations (CH₄, δ¹⁸O) with SISAL speleothem isotope data (δ¹⁸O, δ¹³C), and provides 306 georeferenced palaeoclimate sites as a unified FeatureCollection. The pipeline outputs 192,428 RDF triples across multiple files, enabling SPARQL queries for integrated palaeoclimate research spanning up to 805,000 years. SISAL cave sites and CI findspots can be typed as archaeological sites (`geolod:ArchaeologicalCaveSite`, `geolod:CIArchaeologicalSite`) and are linked to Wikidata via `owl:sameAs`.
+A comprehensive Python pipeline for processing and FAIRifying palaeoclimate data from EPICA (European Project for Ice Coring in Antarctica) ice cores and SISAL (Speleothem Isotopes Synthesis and AnaLysis) speleothem databases. The tool generates publication-ready visualizations, converts raw data into RDF/Linked Open Data following FAIR principles, and produces interactive Mermaid diagrams of the ontology structure. It implements a GeoSPARQL-compliant ontology extending SOSA (Sensor, Observation, Sample, and Actuator), harmonizes EPICA ice core observations (CH₄, δ¹⁸O) with SISAL speleothem isotope data (δ¹⁸O, δ¹³C), and provides 306 georeferenced palaeoclimate sites as a unified FeatureCollection. The pipeline outputs 207,591 RDF triples across multiple files, enabling SPARQL queries for integrated palaeoclimate research spanning up to 805,000 years. SISAL cave sites and CI findspots can be typed as archaeological sites (`geolod:ArchaeologicalCaveSite`, `geolod:CIArchaeologicalSite`) and are linked to Wikidata via `owl:sameAs`. A shared Marine Isotope Stage vocabulary under `http://w3id.org/geo-lod/vocab/mis/` gives all strands a common chronostratigraphic reference. Every run is byte-reproducible: no output carries a timestamp, and each generated dataset states the fingerprint of the input data and generator code it came from.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18814640.svg)](https://doi.org/10.5281/zenodo.18814640)
 
@@ -57,8 +57,17 @@ project/
 │       └── report.txt
 │
 ├── ontology/                     ← Shared ontology utilities
-│   ├── geo_lod_utils.py          ← Core functions + Mermaid generation
+│   ├── geo_lod_utils.py          ← Core functions, provenance, Mermaid
+│   ├── build_mis_vocab.py        ← MIS vocabulary generator
 │   ├── geo_lod_core.ttl          ← Base ontology (generated)
+│   ├── crm_bridging.ttl          ← CIDOC-CRM bridging axioms
+│   ├── trs.ttl                   ← Temporal reference systems (generated)
+│   ├── vocab/                    ← Controlled vocabularies
+│   │   ├── mis.ttl               ← Marine Isotope Stages (generated)
+│   │   └── README.md
+│   ├── shapes/                   ← SHACL shapes
+│   │   ├── core_shapes.ttl
+│   │   └── mis_shapes.ttl
 │   ├── mermaid_taxonomy.mermaid  ← Class hierarchy diagram
 │   ├── mermaid_instance_epica.mermaid  ← EPICA instances
 │   ├── mermaid_instance_sisal.mermaid  ← SISAL instances
@@ -70,7 +79,13 @@ project/
 │   ├── instance_epica.png        ← EPICA RDF model
 │   └── instance_sisal.png        ← SISAL RDF model
 │
+├── dist/                         ← Bundle and derived tables (generated)
+│   ├── geo-lod-bundle.ttl        ← All triples in one file
+│   ├── mis_stages.csv            ← One row per MIS concept
+│   └── mis_assignments.csv       ← One row per boundary assignment
+│
 ├── data/                         ← Input data (Tab/CSV)
+│   ├── raw/mis/                  ← MIS primary sources (LR04, Railsback)
 │   ├── EDC_CH4.tab
 │   ├── EPICA_Dome_C_d18O.tab
 │   ├── v_data_144_botuvera.csv
@@ -98,7 +113,23 @@ This executes:
 3. ✓ Shared ontology (`geo_lod_core.ttl`) with 4 Mermaid diagrams
 4. ✓ Complete log saved to `pipeline_report.txt`
 
-**Duration:** ~45-60 seconds
+**Duration:** ~2-3 minutes
+
+### Bundle output formats
+
+The bundle is written as N-Triples by default — fastest to serialise, which
+matters on development runs. Turtle and the other formats are produced on
+demand:
+
+```bash
+python main.py --bundle-format turtle        # single format
+python main.py --bundle-format release       # nt, turtle, jsonld, xml
+```
+
+Formats older than the current run are reported as stale rather than left to
+look current. `dist/geo-lod-bundle.nt` is git-ignored: it is a development
+artefact and, unlike Turtle, not byte-stable, because rdflib assigns fresh
+blank-node labels on every parse.
 
 ### Clean outputs before running
 
@@ -275,7 +306,7 @@ Result: 305 caves with sample counts
 ## 🛠️ Dependencies
 
 ```bash
-pip install numpy pandas matplotlib scipy rdflib
+pip install numpy pandas matplotlib scipy rdflib pyshacl
 ```
 
 **Optional (for Mermaid PNG rendering):**
@@ -344,6 +375,38 @@ All resources use persistent W3ID.org URIs:
 - **220,224 total δ¹³C samples** across all 305 sites (metadata only)
 - **152,169 RDF triples** (sites + 4 caves data)
 
+## ♻️ Reproducibility
+
+Two consecutive runs produce byte-identical output; only `pipeline_report.txt`
+differs, since it logs wall-clock times. Three things make that work:
+
+- **No clock in the output.** No generator reads the current time. Dates come
+  from `GEO_LOD_RELEASE` in `geo_lod_utils.py`.
+- **Content fingerprints instead of run timestamps.** Every generated dataset
+  carries `owl:versionInfo` with a SHA-256 over its input data and generator
+  script, and a `prov:Activity` naming each input with its own checksum. The
+  fingerprint changes when the data or the model changes — and only then, so a
+  dump can be checked against the state it claims to come from.
+- **Deterministic figures.** `svg.hashsalt` fixes matplotlib's clip-path ids
+  and the SVG metadata date is suppressed.
+
+## 🕰️ Marine Isotope Stage Vocabulary
+
+`ontology/vocab/mis.ttl` holds 315 concepts (228 stages, 87 substages) with
+792 boundary assignments, generated from the primary sources in
+`data/raw/mis/`. Railsback et al. (2015) is the leading scheme wherever it
+reaches; beyond its coverage of 1013.1 ka BP the LR04 boundaries of Lisiecki &
+Raymo (2005) take over. The two sources disagree — LR04 puts the 5/6 boundary
+at 130 ka, Railsback puts 5e/6a at 132.2 ka — and that disagreement is kept
+rather than resolved: each reading is its own `crm:E13_Attribute_Assignment`
+with its own `dct:source`, marked `geolod:LeadingAssignment` or
+`geolod:AlternativeAssignment`. Filtering on the former yields one consistent
+age axis without having to know where a source's coverage ends.
+
+The same run writes `dist/mis_stages.csv` (one row per concept, leading values)
+and `dist/mis_assignments.csv` (one row per assignment, both readings) for
+figures and age-axis code, so plots and RDF cannot drift apart.
+
 ## 📖 Literature
 
 **EPICA:**
@@ -354,6 +417,7 @@ All resources use persistent W3ID.org URIs:
 - Kaushal et al. (2024): SISALv3: a global speleothem stable isotope and trace element database. *Earth System Science Data* 16, 1933-1963. https://doi.org/10.5194/essd-16-1933-2024
 
 **MIS Boundaries:**
+- Railsback et al. (2015): An optimized scheme of lettered marine isotope substages for the last 1.0 million years. *Quaternary Science Reviews* 111, 94-106. https://doi.org/10.1016/j.quascirev.2015.01.012
 - Lisiecki & Raymo (2005): A Plio-Pleistocene stack of 57 globally distributed benthic δ¹⁸O records. *Paleoceanography* 20, PA1003. https://doi.org/10.1029/2004PA001071
 
 ## 🐛 Troubleshooting

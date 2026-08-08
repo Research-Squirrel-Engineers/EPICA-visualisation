@@ -153,6 +153,46 @@ def _parse_with_repair(graph: Graph, path: Path) -> tuple[int, int, bool]:
 # ---------------------------------------------------------------------------
 
 
+# ---------------------------------------------------------------------------
+# Ausgabeformate
+# ---------------------------------------------------------------------------
+#
+# Gemessen an einem Bundle mit rund 208.000 Tripeln (10 MB Turtle):
+#
+#   nt          1.4s   30.1 MB   schnell, zeilenweise, gut zu grep-en
+#   xml         2.7s   21.3 MB
+#   turtle      6.6s   10.4 MB   kompakt und lesbar - das Release-Format
+#   longturtle  6.4s   10.6 MB
+#   json-ld     8.9s   28.7 MB
+#
+# Für den Entwicklungslauf zählt Zeit, für ein Release Lesbarkeit und
+# Verbreitung. Deshalb ist N-Triples die Voreinstellung und Turtle & Co.
+# kommen per --bundle-format dazu.
+
+BUNDLE_FORMATS: dict[str, tuple[str, str, str]] = {
+    # Schlüssel: (rdflib-Format, Dateiendung, Beschreibung)
+    # Achtung: N-Triples ist nicht byte-stabil. rdflib vergibt beim Parsen
+    # neue Blank-Node-Labels, und N-Triples schreibt sie im Klartext aus -
+    # rund 30 Zeilen mit OWL-Restriktionen aendern sich damit bei jedem Lauf.
+    # Deshalb steht dist/geo-lod-bundle.nt in der .gitignore. Turtle bleibt
+    # stabil, weil dieselben Knoten dort inline als [ ] serialisiert werden.
+    "nt": ("nt", ".nt", "N-Triples - eine Zeile je Tripel, am schnellsten"),
+    "turtle": ("turtle", ".ttl", "Turtle - kompakt und lesbar, Release-Format"),
+    "longturtle": ("longturtle", ".lttl", "Turtle mit einem Prädikat je Zeile"),
+    "xml": ("xml", ".rdf", "RDF/XML - für Werkzeuge, die nichts anderes lesen"),
+    "jsonld": ("json-ld", ".jsonld", "JSON-LD - für Web-Clients"),
+}
+
+DEFAULT_BUNDLE_FORMATS: tuple[str, ...] = ("nt",)
+RELEASE_BUNDLE_FORMATS: tuple[str, ...] = ("nt", "turtle", "jsonld", "xml")
+
+# Aggregatdateien: Vereinigungen von Dateien, die einzeln ohnehin geladen
+# werden. Sie tragen nichts zum Bundle bei, kosten aber den vollen Parse.
+# Geprüft 2026-08-08: ohne sisal_all_data.ttl bleibt das Bundle bei
+# identischer Tripelzahl, der Schritt wird rund ein Drittel schneller.
+AGGREGATE_FILENAMES: set[str] = {"sisal_all_data.ttl"}
+
+
 def _collect_ttl_files(source_dirs: Iterable[Path]) -> list[Path]:
     files: list[Path] = []
     for d in source_dirs:
@@ -191,6 +231,7 @@ def build_bundle(
     ontology_dir: Path,
     rdf_dirs: Iterable[Path],
     output_path: Path,
+    formats: Iterable[str] = DEFAULT_BUNDLE_FORMATS,
 ) -> Graph | None:
     """Merge alle TTLs in einen Graph, schreibe nach output_path."""
     print("\n  ▶ Sammle TTL-Quellen ...")
@@ -208,6 +249,13 @@ def build_bundle(
             print(f"      • {f}")
 
     instance_files = _dedupe_core_copies(instance_files, ontology_dir)
+
+    aggregates = [f for f in instance_files if f.name in AGGREGATE_FILENAMES]
+    if aggregates:
+        print("    (Aggregate übersprungen - Inhalt liegt schon in den Einzeldateien):")
+        for f in aggregates:
+            print(f"      ~ {f.name}")
+        instance_files = [f for f in instance_files if f.name not in AGGREGATE_FILENAMES]
 
     print(f"    Instanz-Dateien:   {len(instance_files)}")
     for f in instance_files:
@@ -267,11 +315,39 @@ def build_bundle(
         print(f"\n  ⚠  {len(parse_errors)} Datei(en) konnten nicht geparst werden.")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    print(f"\n  ▶ Serialisiere Bundle nach {output_path.name} ...")
-    g.serialize(destination=output_path, format="turtle")
+    print(f"\n  ▶ Serialisiere Bundle ({len(g):,} Triples) ...")
 
-    size_kb = output_path.stat().st_size / 1024
-    print(f"  ✓ Bundle geschrieben: {len(g):,} Triples, {size_kb:,.1f} KB")
+    written: set[str] = set()
+
+    for key in formats:
+        if key not in BUNDLE_FORMATS:
+            print(f"    ⚠  Unbekanntes Format übersprungen: {key}")
+            continue
+        rdflib_format, suffix, description = BUNDLE_FORMATS[key]
+        target = output_path.with_suffix(suffix)
+        t_start = time.perf_counter()
+        g.serialize(destination=target, format=rdflib_format, encoding="utf-8")
+        size_mb = target.stat().st_size / 1048576
+        print(
+            f"  ✓ {target.name:<26} {size_mb:6.1f} MB  "
+            f"{time.perf_counter() - t_start:5.1f}s  ({description})"
+        )
+        written.add(target.name)
+
+    # Bundles aus früheren Läufen, die diesmal nicht neu geschrieben wurden,
+    # sind jetzt veraltet. Stillschweigend liegen lassen wäre die gefährlichere
+    # Variante: sie sehen aktuell aus und sind es nicht.
+    stale = sorted(
+        f.name
+        for f in output_path.parent.glob(output_path.stem + ".*")
+        if f.name not in written
+    )
+    if stale:
+        print("\n  ⚠  Nicht neu geschrieben und damit veraltet:")
+        for name in stale:
+            print(f"      • {name}")
+        print("     Für ein Release: python main.py --bundle-format release")
+
     return g
 
 
@@ -492,6 +568,7 @@ def run_bundle_step(
     ontology_dir: Path,
     rdf_dirs: Iterable[Path],
     dist_dir: Path | None = None,
+    formats: Iterable[str] = DEFAULT_BUNDLE_FORMATS,
 ) -> bool:
     """Bauen + validieren. True nur wenn Bundle gebaut UND alle harten
     Checks ok (CRM-Coverage, SHACL).
@@ -499,8 +576,9 @@ def run_bundle_step(
     if dist_dir is None:
         dist_dir = script_dir / "dist"
 
+    # Basisname ohne Endung; build_bundle hängt je Format die richtige an.
     bundle_path = dist_dir / "geo-lod-bundle.ttl"
-    g = build_bundle(ontology_dir, rdf_dirs, bundle_path)
+    g = build_bundle(ontology_dir, rdf_dirs, bundle_path, formats=formats)
     if g is None:
         return False
 
@@ -527,7 +605,7 @@ def _main() -> int:
         here / "SISAL" / "rdf",
         here / "CI" / "rdf",
     ]
-    ok = run_bundle_step(here, ontology_dir, rdf_dirs)
+    ok = run_bundle_step(here, ontology_dir, rdf_dirs, formats=DEFAULT_BUNDLE_FORMATS)
     return 0 if ok else 1
 
 

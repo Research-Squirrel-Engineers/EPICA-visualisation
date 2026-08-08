@@ -37,7 +37,10 @@ class TeeOutput:
 
     def __init__(self, filepath):
         self.terminal = sys.stdout
-        self.log = open(filepath, "w", encoding="utf-8")
+        # newline="\n": sonst schreibt Python auf Windows CRLF, während Git
+        # die Datei nach .gitattributes als LF speichert - die Arbeitskopie
+        # wiche dann dauerhaft von ihrer eigenen abgelegten Form ab.
+        self.log = open(filepath, "w", encoding="utf-8", newline="\n")
 
     def write(self, message):
         self.terminal.write(message)
@@ -286,7 +289,24 @@ def run_script(script_path: Path, description: str) -> bool:
         return False
 
 
-def run_bundle(epica_ok: bool, sisal_ok: bool, ci_ok: bool) -> bool:
+def _bundle_format_choices():
+    """Formatliste aus bundle_rdf importieren, ohne rdflib zu erzwingen."""
+    sys.path.insert(0, str(SCRIPT_DIR))
+    from bundle_rdf import (
+        BUNDLE_FORMATS,
+        DEFAULT_BUNDLE_FORMATS,
+        RELEASE_BUNDLE_FORMATS,
+    )
+
+    return BUNDLE_FORMATS, DEFAULT_BUNDLE_FORMATS, RELEASE_BUNDLE_FORMATS
+
+
+BUNDLE_FORMATS, DEFAULT_BUNDLE_FORMATS, RELEASE_BUNDLE_FORMATS = (
+    _bundle_format_choices()
+)
+
+
+def run_bundle(epica_ok: bool, sisal_ok: bool, ci_ok: bool, formats) -> bool:
     """Schritt 5: Ontologie + alle RDF-Outputs zu dist/geo-lod-bundle.ttl
     zusammenführen und validieren (CRM-Coverage + SHACL).
 
@@ -321,6 +341,7 @@ def run_bundle(epica_ok: bool, sisal_ok: bool, ci_ok: bool) -> bool:
             ontology_dir=ONTOLOGY_DIR,
             rdf_dirs=rdf_dirs,
             dist_dir=DIST_DIR,
+            formats=formats,
         )
     except Exception as e:
         print(f"  ✗ Bundle-Schritt fehlgeschlagen: {e}")
@@ -360,8 +381,26 @@ def main():
         action="store_true",
         help="Schritt 5 (RDF-Bundle + Validierung) überspringen",
     )
+    parser.add_argument(
+        "--bundle-format",
+        default=",".join(DEFAULT_BUNDLE_FORMATS),
+        help=(
+            "Ausgabeformate des Bundles, kommagetrennt. "
+            "Verfügbar: " + ", ".join(BUNDLE_FORMATS) + ". "
+            "'release' schreibt " + ", ".join(RELEASE_BUNDLE_FORMATS) + ". "
+            "Voreinstellung: " + ",".join(DEFAULT_BUNDLE_FORMATS)
+            + " - schnell für Entwicklungsläufe."
+        ),
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
+
+    if args.bundle_format.strip().lower() in ("release", "all"):
+        bundle_formats = list(RELEASE_BUNDLE_FORMATS)
+    else:
+        bundle_formats = [
+            f.strip() for f in args.bundle_format.split(",") if f.strip()
+        ]
 
     # Set up logging
     tee = TeeOutput(LOG_FILE)
@@ -426,7 +465,7 @@ def main():
 
     if not args.no_bundle:
         print_section("7. RDF Bundle & Validation")
-        bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok)
+        bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok, bundle_formats)
         end_section()
 
     print_summary(epica_ok, sisal_ok, ci_ok, bundle_ok, start)
