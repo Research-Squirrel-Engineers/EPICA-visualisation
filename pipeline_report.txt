@@ -3,14 +3,14 @@
                           EPICA + SISAL + CI Pipeline                           
 ════════════════════════════════════════════════════════════════════════════════
 
-  Timestamp: 2026-08-09 15:27:21
+  Timestamp: 2026-08-09 15:42:03
   Directory: C:\git\GeoScience-FAIRification-LOD
 
 
 ────────────────────────────────────────────────────────────────────────────────
   Cleaning Output Directories
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:27:21
+  Start: 15:42:03
   ✓ Cleaned EPICA plots: 38 items removed
   ✓ Cleaned EPICA RDF: 2 items removed
   ✓ Cleaned EPICA reports: 2 items removed
@@ -29,7 +29,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   1. Preparation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:27:21
+  Start: 15:42:03
 
   Directory structure:
   ✓ EPICA directory found: EPICA/
@@ -48,7 +48,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   2. Regenerate canonical ontology
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:27:21
+  Start: 15:42:03
 
   ▶ Regeneriere kanonische Ontologie-Dateien aus geo_lod_utils.py ...
   ✓ geo_lod_core.ttl geschrieben (25.6 KB)
@@ -58,7 +58,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   3. Regenerate controlled vocabularies
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:27:21
+  Start: 15:42:03
 
   ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...
   ✓ ontology\vocab\mis.ttl: 228 stages, 87 substages, 792 assignments (564.4 KB)
@@ -71,7 +71,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   4. EPICA Dome C (RDF)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:27:21
+  Start: 15:42:03
 
   ▶ Starting EPICA Dome C RDF generation ...
     Path: C:\git\GeoScience-FAIRification-LOD\EPICA\epica_rdf.py
@@ -104,75 +104,113 @@ Done.
 ============================================================
   ✓ EPICA Dome C RDF generation completed successfully
 
-  ⏱  4. EPICA Dome C (RDF): 14.2s
+  ⏱  4. EPICA Dome C (RDF): 18.4s
 
 ────────────────────────────────────────────────────────────────────────────────
   5. EPICA Dome C (figures)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:27:36
+  Start: 15:42:21
 
   ▶ Starting EPICA Dome C figures ...
     Path: C:\git\GeoScience-FAIRification-LOD\EPICA\plot_epica_from_tab.py
     PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
 ============================================================
-EPICA Dome C – Plot Generator (TAB files, complete)
+EPICA Dome C - figure generator (five records)
 ============================================================
 
-[1/2] Loading CH4 TAB file …
+------------------------------------------------------------
+Generating 30 single figures ...
+------------------------------------------------------------
 
-[2/2] Loading d18O TAB file …
+[1/30] EPICA - Methane (CH₄) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg / .jpg
 
-────────────────────────────────────────────────────────────
-Generating plots …
-────────────────────────────────────────────────────────────
+[2/30] EPICA - Methane (CH₄) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg / .jpg
 
-[1/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg
+[3/30] EPICA - Methane (CH₄) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg / .jpg
 
-[2/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg
+[4/30] EPICA - Methane (CH₄) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg / .jpg
 
-[3/12] EPICA – CH₄ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg
+[5/30] EPICA - Methane (CH₄) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg / .jpg
 
-[4/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg
+[6/30] EPICA - Methane (CH₄) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg / .jpg
 
-[5/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg
+[7/30] EPICA - Deuterium (δD) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full.svg / .jpg
 
-[6/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg
+[8/30] EPICA - Deuterium (δD) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_smooth11.svg / .jpg
 
-[7/12] EPICA – CH₄ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg
+[9/30] EPICA - Deuterium (δD) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_savgol11p2.svg / .jpg
 
-[8/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg
+[10/30] EPICA - Deuterium (δD) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full.svg / .jpg
 
-[9/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg
+[11/30] EPICA - Deuterium (δD) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_smooth11.svg / .jpg
 
-[10/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg
+[12/30] EPICA - Deuterium (δD) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_savgol11p2.svg / .jpg
 
-[11/12] EPICA – CH₄ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg
+[13/30] EPICA - Dust concentration - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full.svg / .jpg
 
-[12/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg
+[14/30] EPICA - Dust concentration - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_smooth11.svg / .jpg
+
+[15/30] EPICA - Dust concentration - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_savgol11p2.svg / .jpg
+
+[16/30] EPICA - Dust concentration - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full.svg / .jpg
+
+[17/30] EPICA - Dust concentration - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_smooth11.svg / .jpg
+
+[18/30] EPICA - Dust concentration - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_savgol11p2.svg / .jpg
+
+[19/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg / .jpg
+
+[20/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg / .jpg
+
+[21/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg / .jpg
+
+[22/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg / .jpg
+
+[23/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg / .jpg
+
+[24/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg / .jpg
+
+[25/30] EPICA - δO₂/N₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full.svg / .jpg
+
+[26/30] EPICA - δO₂/N₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_smooth11.svg / .jpg
+
+[27/30] EPICA - δO₂/N₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_savgol11p2.svg / .jpg
+
+[28/30] EPICA - δO₂/N₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full.svg / .jpg
+
+[29/30] EPICA - δO₂/N₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_smooth11.svg / .jpg
+
+[30/30] EPICA - δO₂/N₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_savgol11p2.svg / .jpg
 
 ────────────────────────────────────────────────────────────
 Generating plates …
@@ -184,19 +222,21 @@ Generating plates …
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_savgol11p2.svg / .jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_savgol11p2.svg / .jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_boundary_depths.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\fig02_pipeline_outputs.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\fig02_pipeline_outputs_five.svg / .jpg
 
 ============================================================
-Done! 12 single figures and 7 plates saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
+Done! 30 single figures plus the plates saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
 Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
 ============================================================
   ✓ EPICA Dome C figures completed successfully
 
-  ⏱  5. EPICA Dome C (figures): 30.9s
+  ⏱  5. EPICA Dome C (figures): 59.8s
 
 ────────────────────────────────────────────────────────────────────────────────
   6. SISAL (Speleothems)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:28:07
+  Start: 15:43:21
 
   ▶ Starting SISAL Processing ...
     Path: C:\git\GeoScience-FAIRification-LOD\SISAL\plot_sisal_from_csv.py
@@ -366,12 +406,12 @@ RDF files saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\rdf/'
 Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt
   ✓ SISAL Processing completed successfully
 
-  ⏱  6. SISAL (Speleothems): 53.8s
+  ⏱  6. SISAL (Speleothems): 48.1s
 
 ────────────────────────────────────────────────────────────────────────────────
   7. Campanian Ignimbrite (CI Findspots)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:29:00
+  Start: 15:44:09
 
   ▶ Starting CI Findspot Processing ...
     Path: C:\git\GeoScience-FAIRification-LOD\CI\ci_pipeline.py
@@ -397,12 +437,12 @@ SUCCESS
 Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
   ✓ CI Findspot Processing completed successfully
 
-  ⏱  7. Campanian Ignimbrite (CI Findspots): 0.9s
+  ⏱  7. Campanian Ignimbrite (CI Findspots): 1.3s
 
 ────────────────────────────────────────────────────────────────────────────────
   8. RDF Bundle & Validation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:29:01
+  Start: 15:44:10
 
   ▶ Sammle TTL-Quellen ...
     Ontologie-Dateien: 4
@@ -441,7 +481,7 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
     + ci_findspots.ttl:    3,307 Triples
 
   ▶ Serialisiere Bundle (354,901 Triples) ...
-  ✓ geo-lod-bundle.ttl           16.8 MB   21.8s  (Turtle - kompakt und lesbar, Release-Format)
+  ✓ geo-lod-bundle.ttl           16.8 MB   17.4s  (Turtle - kompakt und lesbar, Release-Format)
 
   ▶ CIDOC-CRM Coverage-Check (strict CRM-family) ...
     Instanz-Klassen geprüft: 51
@@ -451,23 +491,23 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
   ▶ SHACL-Validierung ...
     + lade Shapes: core_shapes.ttl
     + lade Shapes: mis_shapes.ttl
-    Dauer: 43.2s
+    Dauer: 43.1s
     SHACL-Ergebnis: 0 Violation(s), 2 Warning(s)
       Validation Report
       Conforms: False
       Results (2):
       Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
       	Severity: sh:Warning
-      	Source Shape: [ sh:message Literal("CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path skos:closeMatch ; sh:severity sh:Warning ]
-      	Focus Node: ci:cisite_59
-      	Result Path: skos:closeMatch
-      	Message: CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).
-      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-      	Severity: sh:Warning
       	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
       	Focus Node: geolod:SISALv3_DataSource
       	Result Path: dct:source
       	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
+      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+      	Severity: sh:Warning
+      	Source Shape: [ sh:message Literal("CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path skos:closeMatch ; sh:severity sh:Warning ]
+      	Focus Node: ci:cisite_59
+      	Result Path: skos:closeMatch
+      	Message: CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).
 
     ⚠  Nur Warnings - Bundle gilt als gültig.
 
@@ -493,18 +533,18 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
       37,577  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
       22,879  http://w3id.org/geo-lod/ageKaBP
       17,999  http://www.w3.org/ns/prov#wasDerivedFrom
-      17,292  http://w3id.org/geo-lod/smoothedValue_rollingMedian
+      17,292  http://www.w3.org/ns/sosa/observedProperty
       17,292  http://w3id.org/geo-lod/smoothedValue_savgol
       17,292  http://www.w3.org/ns/sosa/hasFeatureOfInterest
       17,292  http://w3id.org/geo-lod/measuredValue
-      17,292  http://w3id.org/geo-lod/smoothingMethod_median
+      17,292  http://w3id.org/geo-lod/smoothedValue_rollingMedian
       17,292  http://w3id.org/geo-lod/measurementType
       17,292  http://w3id.org/geo-lod/smoothingMethod_savgol
 
     CRM-Coverage:   ✓
     SHACL:          ✓
 
-  ⏱  8. RDF Bundle & Validation: 128.1s
+  ⏱  8. RDF Bundle & Validation: 121.1s
 
 ════════════════════════════════════════════════════════════════════════════════
                                     Summary                                     
@@ -519,12 +559,12 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
     1. Preparation                               0.0s    0.0%
     2. Regenerate canonical ontology             0.0s    0.0%
     3. Regenerate controlled vocabularies        0.0s    0.0%
-    4. EPICA Dome C (RDF)                       14.2s    6.2%
-    5. EPICA Dome C (figures)                   30.9s   13.5%
-    6. SISAL (Speleothems)                      53.8s   23.6%
-    7. Campanian Ignimbrite (CI Findspots)       0.9s    0.4%
-    8. RDF Bundle & Validation                 128.1s   56.2%
+    4. EPICA Dome C (RDF)                       18.4s    7.4%
+    5. EPICA Dome C (figures)                   59.8s   24.0%
+    6. SISAL (Speleothems)                      48.1s   19.3%
+    7. Campanian Ignimbrite (CI Findspots)       1.3s    0.5%
+    8. RDF Bundle & Validation                 121.1s   48.7%
 
-  Total duration: 228.0 seconds
+  Total duration: 248.8 seconds
   Log saved to: C:\git\GeoScience-FAIRification-LOD\pipeline_report.txt
 ✓ Pipeline completed successfully!

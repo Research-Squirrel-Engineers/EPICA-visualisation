@@ -44,6 +44,7 @@ from matplotlib.ticker import MultipleLocator
 from scipy.signal import savgol_filter
 
 import epica_data as ed
+import epica_style as st
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "plots")
@@ -133,9 +134,18 @@ def draw_bands(ax, stages, covered, horizontal: bool):
         trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
         span = ax.axhspan
 
+    # Grenzen aus der Achse, nicht aus den Modulkonstanten: die Collage setzt
+    # je Panel eigene Grenzen, und ein Band ausserhalb davon würde sein Label
+    # neben die Abbildung schreiben.
+    if horizontal:
+        lo, hi = sorted(ax.get_xlim())
+    else:
+        lo, hi = sorted(ax.get_ylim())
+
     ages = sorted(covered)
     for st in stages:
-        if st["end"] >= AGE_MAX or st["begin"] <= AGE_MIN:
+        visible_lo, visible_hi = max(st["end"], lo), min(st["begin"], hi)
+        if visible_lo >= visible_hi:
             continue
         warm = st["mode"] == "warm"
         color = MIS_COLOR_WARM if warm else MIS_COLOR_COLD
@@ -155,7 +165,7 @@ def draw_bands(ax, stages, covered, horizontal: bool):
                 linewidth=1.0,
                 zorder=0,
             )
-        middle = (st["end"] + st["begin"]) / 2.0
+        middle = (visible_lo + visible_hi) / 2.0
         if horizontal:
             ax.text(
                 middle, 0.97, st["label"].replace("MIS ", ""), transform=trans,
@@ -171,12 +181,9 @@ def draw_bands(ax, stages, covered, horizontal: bool):
 
 
 def save(fig, name: str) -> None:
-    base = os.path.join(OUTPUT_DIR, name)
-    fig.savefig(f"{base}.svg", format="svg", metadata={"Date": None},
-                bbox_inches="tight")
-    fig.savefig(f"{base}.jpg", format="jpg", dpi=DPI, bbox_inches="tight")
+    # Über epica_style, damit das SVG auch auf Windows mit LF herauskommt.
+    st.save_figure(fig, os.path.join(OUTPUT_DIR, name), dpi=DPI)
     plt.close(fig)
-    print(f"  ✓ Saved: {base}.svg / .jpg")
 
 
 def axis_label(dataset_id: str) -> str:
@@ -211,6 +218,8 @@ def plate_columns(frames: dict, stages: list[dict], variant: str) -> None:
         ages = df["age_ka"].to_numpy()
         values = smooth_values(df["value"].to_numpy(), variant)
 
+        # Grenzen vor den Bändern setzen: draw_bands liest sie von der Achse.
+        ax.set_ylim(AGE_MAX, AGE_MIN)
         draw_bands(ax, stages, ages, horizontal=False)
 
         for lo, hi in segments(ages):
@@ -261,6 +270,7 @@ def plate_rows(frames: dict, stages: list[dict], variant: str) -> None:
         ages = df["age_ka"].to_numpy()
         values = smooth_values(df["value"].to_numpy(), variant)
 
+        ax.set_xlim(AGE_MIN, AGE_MAX)
         draw_bands(ax, stages, ages, horizontal=True)
 
         for lo, hi in segments(ages):
@@ -417,6 +427,90 @@ def plate_boundary_depths(frames: dict, stages: list[dict]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# The paper collage
+# ---------------------------------------------------------------------------
+
+
+def collage(frames: dict, stages: list[dict], name: str,
+            entries: list[tuple[str, str]], title: str) -> None:
+    """Panels side by side, raw curve behind the smoothed one.
+
+    This is the figure the paper uses to show what the pipeline produces, so
+    it deliberately shows both the measured series and the smoothed one in the
+    same panel: the point being made is that the graph carries both, not that
+    one of them is prettier. The footnote names the filter, because a smoothed
+    curve without its window size is not reproducible.
+
+    *entries* is a list of (dataset_id, axis) with axis one of "age_ka" or
+    "depth_m" - which panels appear, and in which order, is the caller's
+    decision rather than something this function guesses.
+    """
+    fig, axes = plt.subplots(1, len(entries), figsize=(4.6 * len(entries), 20))
+    if len(entries) == 1:
+        axes = [axes]
+
+    for ax, (dataset_id, axis_key) in zip(axes, entries):
+        meta = ed.DATASETS[dataset_id]
+        df = frames[dataset_id]
+        y = df[axis_key].to_numpy()
+        raw = df["value"].to_numpy()
+        smooth = st.rolling_median(raw, ROLLING_WINDOW)
+
+        ax.set_ylim(float(y.max()), float(y.min()))
+        ax.margins(y=0)
+
+        if axis_key == "age_ka":
+            draw_bands(ax, stages, y, horizontal=False)
+            ylabel = AGE_LABEL
+        else:
+            ylabel = "Depth [m]"
+
+        ages = df["age_ka"].to_numpy()
+        for lo, hi in segments(ages):
+            ax.plot(raw[lo:hi], y[lo:hi], linewidth=0.8,
+                    color=LINE_COLOR_FADED, zorder=2)
+            ax.plot(smooth[lo:hi], y[lo:hi], linewidth=1.4,
+                    color=LINE_COLOR, zorder=3)
+        segs = segments(ages)
+        for (_, hi), (lo, _) in zip(segs, segs[1:]):
+            ax.plot([smooth[hi - 1], smooth[lo]], [y[hi - 1], y[lo]],
+                    linewidth=1.0, color=LINE_COLOR, linestyle=(0, (5, 4)),
+                    zorder=3)
+
+        if dataset_id == "dust":
+            ticks, (x0, x1) = st.log_ticks(float(raw.min()), float(raw.max()))
+            ax.set_xscale("log")
+            ax.set_xticks(ticks)
+            ax.set_xlim(x0, x1)
+        else:
+            ticks, (x0, x1), decimals = st.nice_ticks(
+                float(raw.min()), float(raw.max()), target=4
+            )
+            ax.set_xticks(ticks)
+            ax.set_xlim(x0, x1)
+            ax.set_xticklabels([st.format_tick(t, decimals) for t in ticks])
+
+        ax.xaxis.tick_top()
+        ax.xaxis.set_label_position("top")
+        ax.set_xlabel(f"{meta['label']} [{meta['unit_label']}]", fontsize=13,
+                      labelpad=8)
+        ax.set_ylabel(ylabel, fontsize=13, labelpad=8, fontweight="bold")
+        ax.set_title(f"EPICA - {meta['label']}\n({meta['trs']})",
+                     fontsize=14, fontweight="bold", pad=10)
+        ax.grid(axis="y", color=GRID_COLOR, linewidth=0.6)
+        ax.tick_params(labelsize=11)
+        ax.annotate(
+            f"Rolling median filter  |  window = {ROLLING_WINDOW} pts",
+            xy=(0.5, -0.012), xycoords="axes fraction", ha="center", va="top",
+            fontsize=9, fontstyle="italic", color="#777777",
+        )
+
+    fig.suptitle(title, fontsize=15, y=0.995)
+    fig.tight_layout(rect=(0, 0, 1, 0.975))
+    save(fig, name)
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -434,6 +528,24 @@ def build_all() -> None:
         plate_columns(frames, stages, variant)
         plate_rows(frames, stages, variant)
     plate_boundary_depths(frames, stages)
+
+    # Die Collage des Beitrags, in zwei Zuschnitten. Der alte Vierer bleibt,
+    # damit die bestehende Abbildung ersetzbar ist, ohne dass sich der Text
+    # ändern muss; der Fünfer zeigt dasselbe Prinzip - Rohwerte und Glättung
+    # nebeneinander - über alle Datensätze, die seit S2 im Graphen stehen.
+    collage(
+        frames, stages, "fig02_pipeline_outputs",
+        [("d18o", "age_ka"), ("d18o", "depth_m"),
+         ("ch4", "age_ka"), ("ch4", "depth_m")],
+        "EPICA Dome C - pipeline outputs: measured series and rolling median, "
+        "on the age and the depth axis",
+    )
+    collage(
+        frames, stages, "fig02_pipeline_outputs_five",
+        [(k, "age_ka") for k in ed.DATASET_ORDER],
+        "EPICA Dome C - pipeline outputs: all five records, measured series "
+        "and rolling median, each on its own chronology",
+    )
 
 
 if __name__ == "__main__":

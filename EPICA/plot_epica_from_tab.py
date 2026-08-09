@@ -23,6 +23,7 @@ plt.rcParams["svg.hashsalt"] = "geo-lod"
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import epica_data as ed
 import epica_plates
+import epica_style as st
 
 
 class Tee:
@@ -90,6 +91,23 @@ SG_POLYORDER = 2  # Savitzky-Golay: polynomial order (2 = smooth, classic)
 LINE_COLOR_FADED = "#aaaaaa"  # original line in smoothed plot
 LINE_WIDTH_SMOOTH = 1.5  # smoothed line slightly thicker   # MIS label size
 LABEL_PAD = 12
+
+# ──────────────────────────────────────────────
+# Achsen-Overrides je Datensatz
+# ──────────────────────────────────────────────
+# Voreinstellung sind Ticks aus den Daten (epica_style.nice_ticks). Wer eine
+# Achse von Hand setzen will, trägt sie hier ein - genau dafür ist das Dict
+# da, damit niemand wieder eine Tick-Liste in den Plot-Aufruf schreibt und
+# damit unbemerkt Messwerte abschneidet.
+#
+#   "log"      : logarithmische Wertachse
+#   "ticks"    : feste Tick-Positionen; die Grenzen umschliessen trotzdem
+#                immer die Daten, damit nichts wegfallen kann
+#   "target"   : ungefähre Anzahl Intervalle für die automatische Teilung
+AXIS_OVERRIDES: dict[str, dict] = {
+    # Dust spannt Faktor 560; linear wären neun Zehntel der Achse leer.
+    "dust": {"log": True},
+}
 
 # ──────────────────────────────────────────────
 # MIS-Bänder
@@ -168,6 +186,49 @@ def draw_mis_bands(ax, y_min_ka, y_max_ka, covered=None, horizontal=False):
             )
 
 
+def mis_depth_bands_for(dataset_id, df):
+    """MIS-Bänder in Tiefe für einen Datensatz.
+
+    Jede Stadiengrenze ist als Alter publiziert. Eine Tiefe dafür entsteht nur
+    durch Interpolation im Tiefen-Alters-Modell dieses Datensatzes - dasselbe
+    Verfahren, das der Generator für `geolod:MISBoundaryDepth` benutzt, und
+    aus derselben Funktion, damit Abbildung und Graph nicht auseinanderlaufen
+    können.
+
+    Ein Band entsteht nur, wenn beide Grenzen eine Tiefe haben. Wo der
+    Datensatz eine Lücke hat, verweigert die Interpolation, und dann fehlt das
+    Band - genau richtig: es gibt dort keine Messung, aus der sich eine Tiefe
+    ableiten liesse. Bei CH4 fallen so MIS 8 bis 10 weg.
+    """
+    bands = []
+    for st_ in ed.read_mis_stages():
+        d_top = ed.interpolate_depth(df, st_["end"]) if st_["end"] > 0 else None
+        d_bot = ed.interpolate_depth(df, st_["begin"])
+        if d_bot is None:
+            continue
+        if d_top is None:
+            # Jüngste Grenze: das Band beginnt am obersten Messpunkt.
+            if st_["end"] > float(df["age_ka"].min()):
+                continue
+            d_top = float(df["depth_m"].min())
+        bands.append((d_top, d_bot, st_["label"], st_["mode"] == "warm"))
+    return bands
+
+
+def draw_mis_depth_bands(ax, bands):
+    """Zeichnet die vorberechneten Tiefen-Bänder."""
+    trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
+    for d_top, d_bot, label, warm in bands:
+        color = MIS_COLOR_WARM if warm else MIS_COLOR_COLD
+        label_color = MIS_LABEL_COLOR_WARM if warm else MIS_LABEL_COLOR_COLD
+        ax.axhspan(d_top, d_bot, facecolor=color, zorder=0)
+        ax.text(
+            0.99, (d_top + d_bot) / 2.0, label, transform=trans, ha="right",
+            va="center", fontsize=FONT_SIZE_MIS, fontweight="bold",
+            color=label_color, zorder=2,
+        )
+
+
 def create_plot(
     x_values,
     y_values,
@@ -178,9 +239,12 @@ def create_plot(
     y_major_interval,
     y_minor_interval,
     x_ticks=None,
+    x_target=6,
+    log_x=False,
     x_padding=0.05,
     invert_y=True,
     show_mis=False,
+    mis_depth_bands=None,
     gap_line=None,
     rolling_window=None,
     use_savgol=False,
@@ -222,6 +286,8 @@ def create_plot(
         # y_values sind hier die Alter - damit weiss die Bänderfunktion,
         # welche Stadien im Datensatz überhaupt Messwerte haben.
         draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max, covered=y_values)
+    elif mis_depth_bands:
+        draw_mis_depth_bands(ax, mis_depth_bands)
 
     if use_savgol:
         # Original grau im Hintergrund
@@ -282,20 +348,38 @@ def create_plot(
     ax.xaxis.tick_top()
     ax.xaxis.set_label_position("top")
 
-    # X-Achsen-Grenzen
-    x_min, x_max = x_values.min(), x_values.max()
-    x_range = x_max - x_min
+    # X-Achse: Ticks und Grenzen aus den Daten, nicht aus einer Liste im Code.
+    # Die Grenzen umschliessen den Wertebereich immer - die frühere feste Liste
+    # endete bei d18O auf 1.0, wo die Daten bis 1.457 reichen, und schnitt
+    # damit 82 von 1378 Messwerten aus der Abbildung.
+    x_min, x_max = float(x_values.min()), float(x_values.max())
 
-    if x_ticks is not None:
-        ax.xaxis.set_major_locator(FixedLocator(x_ticks))
-        t_min, t_max = min(x_ticks), max(x_ticks)
-        span = t_max - t_min
-        pad = span * 0.05 if span > 0 else 0.5
-        ax.set_xlim(t_min - pad, t_max + pad)
+    if log_x:
+        ticks, (lo, hi) = st.log_ticks(x_min, x_max)
+        ax.set_xscale("log")
+        ax.xaxis.set_major_locator(FixedLocator(ticks))
+        ax.set_xlim(lo, hi)
+        ax.xaxis.set_major_formatter(
+            FuncFormatter(lambda val, pos: f"{val:g}")
+        )
     else:
-        ax.set_xlim(x_min - x_range * x_padding, x_max + x_range * x_padding)
-
-    ax.xaxis.set_major_formatter(FuncFormatter(lambda val, pos: f"{val:.1f}"))
+        if x_ticks is not None:
+            ticks = list(x_ticks)
+            lo = min(min(ticks), x_min)
+            hi = max(max(ticks), x_max)
+            pad = (hi - lo) * 0.04
+            lo, hi = lo - pad, hi + pad
+            step = ticks[1] - ticks[0] if len(ticks) > 1 else 1.0
+            _, _, decimals = st.nice_ticks(lo, hi)
+            if step == int(step):
+                decimals = 0
+        else:
+            ticks, (lo, hi), decimals = st.nice_ticks(x_min, x_max, target=x_target)
+        ax.xaxis.set_major_locator(FixedLocator(ticks))
+        ax.set_xlim(lo, hi)
+        ax.xaxis.set_major_formatter(
+            FuncFormatter(lambda val, pos: st.format_tick(val, decimals))
+        )
 
     # Beschriftungen
     ax.set_xlabel(xlabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD)
@@ -334,15 +418,10 @@ def create_plot(
     ax.tick_params(axis="x", labelsize=FONT_SIZE_TICK)
     ax.tick_params(axis="y", labelsize=FONT_SIZE_TICK)
 
-    # Speichern
-    jpg_path = output_filename + ".jpg"
-    svg_path = output_filename + ".svg"
-    plt.savefig(jpg_path, bbox_inches="tight")
-    plt.savefig(svg_path, bbox_inches="tight", metadata={"Date": None})
-    plt.close()
-
-    print(f"  ✓ Saved: {jpg_path}")
-    print(f"  ✓ Saved: {svg_path}")
+    # Speichern - SVG über ein binär geöffnetes Handle, sonst schreibt Python
+    # auf Windows CRLF, während .gitattributes LF ablegt.
+    st.save_figure(fig, output_filename, dpi=DPI)
+    plt.close(fig)
 
 
 
@@ -351,223 +430,83 @@ def main():
     tee = Tee(report_path)
 
     print("=" * 60)
-    print("EPICA Dome C – Plot Generator (TAB files, complete)")
+    print("EPICA Dome C - figure generator (five records)")
     print("=" * 60)
 
-    # ── Daten laden ──────────────────────────────
-    # Über epica_data, aus data/raw/epica/. Die Spalten heissen dort für alle
-    # fünf Datensätze gleich (depth_m, age_ka, value); die alten Namen bleiben
-    # hier stehen, damit die Plot-Konfigurationen unverändert bleiben.
-    print("\n[1/2] Loading CH4 TAB file …")
-    df_ch4 = ed.load_ch4().rename(columns={"value": "ch4", "age_ka": "age_edc2_ka"})
+    # Alle fünf Datensätze, beide Achsen, drei Glättungsvarianten. Vorher
+    # standen hier zwölf von Hand geschriebene Konfigurationen für CH4 und
+    # d18O; die drei übrigen Datensätze kamen in keiner Einzelabbildung vor,
+    # obwohl sie seit S2 im Graphen stehen.
+    frames = {k: df for k, df in ed.load_all()}
 
-    print("\n[2/2] Loading d18O TAB file …")
-    df_d18o = ed.load_d18o().rename(columns={"value": "d18o"})
-
-    # ── Plot-Konfigurationen ──────────────────────
-    # X-Ticks für CH4 (ppbv) und d18O (‰)
-    CH4_TICKS = [300, 400, 500, 600, 700, 800, 900]
-    D18O_TICKS = [-0.5, 0.0, 0.5, 1.0]
-
-    plots = [
-        # ── Nach Tiefe (m) ──────────────────────────
-        {
-            "x": df_ch4["ch4"],
-            "y": df_ch4["depth_m"],
-            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Depth [m]",
-            "title": "EPICA – CH₄",
-            "filename": os.path.join(OUTPUT_DIR, "ch4_vs_depth_full"),
-            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
-            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
-            "x_ticks": CH4_TICKS,
-        },
-        {
-            "x": df_d18o["d18o"],
-            "y": df_d18o["depth_m"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
-            "ylabel": "Depth [m]",
-            "title": "EPICA – δ¹⁸O of O₂",
-            "filename": os.path.join(OUTPUT_DIR, "d18o_vs_depth_full"),
-            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
-            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
-            "x_ticks": D18O_TICKS,
-        },
-        # ── Nach Age (ka BP) ─────────────────────────
-        {
-            "x": df_ch4["ch4"],
-            "y": df_ch4["age_edc2_ka"],
-            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Age [ka]",
-            "title": "EPICA – CH₄",
-            "filename": os.path.join(OUTPUT_DIR, "ch4_vs_age_ka_full"),
-            "y_major": AGE_MAJOR_TICK_INTERVAL,
-            "y_minor": AGE_MINOR_TICK_INTERVAL,
-            "x_ticks": CH4_TICKS,
-            "show_mis": True,
-            # Dashed connecting line across data gap MIS 8-10 (243–374 ka)
-            # x=CH4 value, y=Age; boundary points taken directly from data
-            "gap_line": (505.7, 214.19, 484.9, 391.85),
-        },
-        {
-            "x": df_d18o["d18o"],
-            "y": df_d18o["age_ka"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
-            "ylabel": "Age [ka]",
-            "title": "EPICA – δ¹⁸O of O₂",
-            "filename": os.path.join(OUTPUT_DIR, "d18o_vs_age_ka_full"),
-            "y_major": AGE_MAJOR_TICK_INTERVAL,
-            "y_minor": AGE_MINOR_TICK_INTERVAL,
-            "x_ticks": D18O_TICKS,
-            "show_mis": True,
-        },
-        # ── Smoothed: by depth (m) ──────────────────
-        {
-            "x": df_ch4["ch4"],
-            "y": df_ch4["depth_m"],
-            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Depth [m]",
-            "title": "EPICA – CH₄",
-            "filename": os.path.join(
-                OUTPUT_DIR, f"ch4_vs_depth_full_smooth{ROLLING_WINDOW}"
-            ),
-            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
-            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
-            "x_ticks": CH4_TICKS,
-            "rolling_window": ROLLING_WINDOW,
-        },
-        {
-            "x": df_d18o["d18o"],
-            "y": df_d18o["depth_m"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
-            "ylabel": "Depth [m]",
-            "title": "EPICA – δ¹⁸O of O₂",
-            "filename": os.path.join(
-                OUTPUT_DIR, f"d18o_vs_depth_full_smooth{ROLLING_WINDOW}"
-            ),
-            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
-            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
-            "x_ticks": D18O_TICKS,
-            "rolling_window": ROLLING_WINDOW,
-        },
-        # ── Smoothed: by age (ka BP) ─────────────────
-        {
-            "x": df_ch4["ch4"],
-            "y": df_ch4["age_edc2_ka"],
-            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Age [ka]",
-            "title": "EPICA – CH₄",
-            "filename": os.path.join(
-                OUTPUT_DIR, f"ch4_vs_age_ka_full_smooth{ROLLING_WINDOW}"
-            ),
-            "y_major": AGE_MAJOR_TICK_INTERVAL,
-            "y_minor": AGE_MINOR_TICK_INTERVAL,
-            "x_ticks": CH4_TICKS,
-            "show_mis": True,
-            "gap_line": (505.7, 214.19, 484.9, 391.85),
-            "rolling_window": ROLLING_WINDOW,
-        },
-        {
-            "x": df_d18o["d18o"],
-            "y": df_d18o["age_ka"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
-            "ylabel": "Age [ka]",
-            "title": "EPICA – δ¹⁸O of O₂",
-            "filename": os.path.join(
-                OUTPUT_DIR, f"d18o_vs_age_ka_full_smooth{ROLLING_WINDOW}"
-            ),
-            "y_major": AGE_MAJOR_TICK_INTERVAL,
-            "y_minor": AGE_MINOR_TICK_INTERVAL,
-            "x_ticks": D18O_TICKS,
-            "show_mis": True,
-            "rolling_window": ROLLING_WINDOW,
-        },
-        # ── Savitzky-Golay: Nach Tiefe (m) ───────────
-        {
-            "x": df_ch4["ch4"],
-            "y": df_ch4["depth_m"],
-            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Depth [m]",
-            "title": "EPICA – CH₄",
-            "filename": os.path.join(
-                OUTPUT_DIR, f"ch4_vs_depth_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
-            ),
-            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
-            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
-            "x_ticks": CH4_TICKS,
-            "use_savgol": True,
-        },
-        {
-            "x": df_d18o["d18o"],
-            "y": df_d18o["depth_m"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
-            "ylabel": "Depth [m]",
-            "title": "EPICA – δ¹⁸O of O₂",
-            "filename": os.path.join(
-                OUTPUT_DIR, f"d18o_vs_depth_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
-            ),
-            "y_major": DEPTH_MAJOR_TICK_INTERVAL,
-            "y_minor": DEPTH_MINOR_TICK_INTERVAL,
-            "x_ticks": D18O_TICKS,
-            "use_savgol": True,
-        },
-        # ── Savitzky-Golay: Nach Age (ka BP) ─────────
-        {
-            "x": df_ch4["ch4"],
-            "y": df_ch4["age_edc2_ka"],
-            "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Age [ka]",
-            "title": "EPICA – CH₄",
-            "filename": os.path.join(
-                OUTPUT_DIR, f"ch4_vs_age_ka_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
-            ),
-            "y_major": AGE_MAJOR_TICK_INTERVAL,
-            "y_minor": AGE_MINOR_TICK_INTERVAL,
-            "x_ticks": CH4_TICKS,
-            "show_mis": True,
-            "gap_line": (505.7, 214.19, 484.9, 391.85),
-            "use_savgol": True,
-        },
-        {
-            "x": df_d18o["d18o"],
-            "y": df_d18o["age_ka"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
-            "ylabel": "Age [ka]",
-            "title": "EPICA – δ¹⁸O of O₂",
-            "filename": os.path.join(
-                OUTPUT_DIR, f"d18o_vs_age_ka_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
-            ),
-            "y_major": AGE_MAJOR_TICK_INTERVAL,
-            "y_minor": AGE_MINOR_TICK_INTERVAL,
-            "x_ticks": D18O_TICKS,
-            "show_mis": True,
-            "use_savgol": True,
-        },
+    variants = [
+        ("", {}),
+        (f"_smooth{ROLLING_WINDOW}", {"rolling_window": ROLLING_WINDOW}),
+        (f"_savgol{SG_WINDOW}p{SG_POLYORDER}", {"use_savgol": True}),
     ]
 
-    print("\n" + "─" * 60)
-    print("Generating plots …")
-    print("─" * 60)
+    n_total = len(ed.DATASET_ORDER) * 2 * len(variants)
+    n = 0
 
-    for i, cfg in enumerate(plots, 1):
-        print(f"\n[{i}/{len(plots)}] {cfg['title']} – Y: {cfg['ylabel']}")
-        # Only rows with valid Y values (age can be NaN for individual points)
-        mask = cfg["y"].notna() & cfg["x"].notna()
-        create_plot(
-            x_values=cfg["x"][mask],
-            y_values=cfg["y"][mask],
-            xlabel=cfg["xlabel"],
-            ylabel=cfg["ylabel"],
-            title_text=cfg["title"],
-            output_filename=cfg["filename"],
-            y_major_interval=cfg["y_major"],
-            y_minor_interval=cfg["y_minor"],
-            x_ticks=cfg.get("x_ticks"),
-            show_mis=cfg.get("show_mis", False),
-            gap_line=cfg.get("gap_line", None),
-            rolling_window=cfg.get("rolling_window", None),
-            use_savgol=cfg.get("use_savgol", False),
-        )
+    print("\n" + "-" * 60)
+    print(f"Generating {n_total} single figures ...")
+    print("-" * 60)
+
+    for dataset_id in ed.DATASET_ORDER:
+        meta = ed.DATASETS[dataset_id]
+        df = frames[dataset_id]
+        override = AXIS_OVERRIDES.get(dataset_id, {})
+        xlabel = f"{meta['label']} [{meta['unit_label']}]"
+        title = f"EPICA - {meta['label']}"
+
+        depth_bands = mis_depth_bands_for(dataset_id, df)
+
+        axes = [
+            {
+                "key": "depth",
+                "y": df["depth_m"],
+                "ylabel": "Depth [m]",
+                "y_major": DEPTH_MAJOR_TICK_INTERVAL,
+                "y_minor": DEPTH_MINOR_TICK_INTERVAL,
+                "show_mis": False,
+                "mis_depth_bands": depth_bands,
+            },
+            {
+                "key": "age_ka",
+                "y": df["age_ka"],
+                # Nach A4: "Age [ka]", ohne BP oder b2k. Der Bezugspunkt steht
+                # am Chronologieknoten im Graphen.
+                "ylabel": "Age [ka]",
+                "y_major": AGE_MAJOR_TICK_INTERVAL,
+                "y_minor": AGE_MINOR_TICK_INTERVAL,
+                "show_mis": True,
+                "mis_depth_bands": None,
+            },
+        ]
+
+        for axis in axes:
+            for suffix, opts in variants:
+                n += 1
+                name = f"{meta['short'].lower()}_vs_{axis['key']}_full{suffix}"
+                print(f"\n[{n}/{n_total}] {title} - Y: {axis['ylabel']}")
+                create_plot(
+                    x_values=df["value"],
+                    y_values=axis["y"],
+                    xlabel=xlabel,
+                    ylabel=axis["ylabel"],
+                    title_text=f"{title}  ({meta['trs']})"
+                    if axis["key"] == "age_ka"
+                    else title,
+                    output_filename=os.path.join(OUTPUT_DIR, name),
+                    y_major_interval=axis["y_major"],
+                    y_minor_interval=axis["y_minor"],
+                    x_ticks=override.get("ticks"),
+                    x_target=override.get("target", 6),
+                    log_x=override.get("log", False),
+                    show_mis=axis["show_mis"],
+                    mis_depth_bands=axis["mis_depth_bands"],
+                    **opts,
+                )
 
     # Die mehrteiligen Tafeln kommen neben den Einzeldateien, nicht statt
     # ihrer: die Einzelabbildung zeigt eine Kurve gross, die Tafel den
@@ -575,7 +514,7 @@ def main():
     epica_plates.build_all()
 
     print("\n" + "=" * 60)
-    print(f"Done! {len(plots)} single figures and 7 plates saved to '{OUTPUT_DIR}/'.")
+    print(f"Done! {n_total} single figures plus the plates saved to '{OUTPUT_DIR}/'.")
     print(f"Report saved: {report_path}")
     print("=" * 60)
     tee.close()

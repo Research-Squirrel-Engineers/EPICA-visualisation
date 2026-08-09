@@ -1,62 +1,100 @@
 ============================================================
-EPICA Dome C – Plot Generator (TAB files, complete)
+EPICA Dome C - figure generator (five records)
 ============================================================
 
-[1/2] Loading CH4 TAB file …
+------------------------------------------------------------
+Generating 30 single figures ...
+------------------------------------------------------------
 
-[2/2] Loading d18O TAB file …
+[1/30] EPICA - Methane (CH₄) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg / .jpg
 
-────────────────────────────────────────────────────────────
-Generating plots …
-────────────────────────────────────────────────────────────
+[2/30] EPICA - Methane (CH₄) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg / .jpg
 
-[1/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg
+[3/30] EPICA - Methane (CH₄) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg / .jpg
 
-[2/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg
+[4/30] EPICA - Methane (CH₄) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg / .jpg
 
-[3/12] EPICA – CH₄ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg
+[5/30] EPICA - Methane (CH₄) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg / .jpg
 
-[4/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg
+[6/30] EPICA - Methane (CH₄) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg / .jpg
 
-[5/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg
+[7/30] EPICA - Deuterium (δD) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full.svg / .jpg
 
-[6/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg
+[8/30] EPICA - Deuterium (δD) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_smooth11.svg / .jpg
 
-[7/12] EPICA – CH₄ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg
+[9/30] EPICA - Deuterium (δD) - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_savgol11p2.svg / .jpg
 
-[8/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg
+[10/30] EPICA - Deuterium (δD) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full.svg / .jpg
 
-[9/12] EPICA – CH₄ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg
+[11/30] EPICA - Deuterium (δD) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_smooth11.svg / .jpg
 
-[10/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg
+[12/30] EPICA - Deuterium (δD) - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_savgol11p2.svg / .jpg
 
-[11/12] EPICA – CH₄ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg
+[13/30] EPICA - Dust concentration - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full.svg / .jpg
 
-[12/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg
+[14/30] EPICA - Dust concentration - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_smooth11.svg / .jpg
+
+[15/30] EPICA - Dust concentration - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_savgol11p2.svg / .jpg
+
+[16/30] EPICA - Dust concentration - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full.svg / .jpg
+
+[17/30] EPICA - Dust concentration - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_smooth11.svg / .jpg
+
+[18/30] EPICA - Dust concentration - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_savgol11p2.svg / .jpg
+
+[19/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg / .jpg
+
+[20/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg / .jpg
+
+[21/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg / .jpg
+
+[22/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg / .jpg
+
+[23/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg / .jpg
+
+[24/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg / .jpg
+
+[25/30] EPICA - δO₂/N₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full.svg / .jpg
+
+[26/30] EPICA - δO₂/N₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_smooth11.svg / .jpg
+
+[27/30] EPICA - δO₂/N₂ - Y: Depth [m]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_savgol11p2.svg / .jpg
+
+[28/30] EPICA - δO₂/N₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full.svg / .jpg
+
+[29/30] EPICA - δO₂/N₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_smooth11.svg / .jpg
+
+[30/30] EPICA - δO₂/N₂ - Y: Age [ka]
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_savgol11p2.svg / .jpg
 
 ────────────────────────────────────────────────────────────
 Generating plates …
@@ -68,8 +106,10 @@ Generating plates …
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_savgol11p2.svg / .jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_savgol11p2.svg / .jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_boundary_depths.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\fig02_pipeline_outputs.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\fig02_pipeline_outputs_five.svg / .jpg
 
 ============================================================
-Done! 12 single figures and 7 plates saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
+Done! 30 single figures plus the plates saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
 Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
 ============================================================

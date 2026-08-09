@@ -222,6 +222,12 @@ lesen hier ab, statt neu zu diskutieren.
 | „Kein Datum“-Bänder | nicht mehr hartcodiert. `draw_mis_bands` bekommt die Alter der Messpunkte und schraffiert die Stadien ohne einen einzigen Messwert selbst — gilt damit für alle fünf Datensätze statt nur für die drei früher für CH₄ eingetragenen | 2026-08-09 |
 | Achsenbeschriftung `Age [ka]` | umgesetzt, in Einzelabbildungen wie Tafeln. Der Bezugspunkt steht am Chronologieknoten im Graphen, nicht in jeder Bildunterschrift | 2026-08-09 |
 | Interpolation über Datenlücken | verboten. `interpolate_depth` liefert `None`, wenn die beiden umgebenden Messpunkte weiter als 15 ka auseinanderliegen. Vorher bekamen die Beginne von MIS 8, 9 und 10 im CH₄-Datensatz eine Tiefe, die über 178 ka ohne Daten geradlinig hinweggerechnet war — auf der Abweichungstafel ein Ausschlag von 36 m, der wie ein Modellunterschied aussah und keiner war. 77 Grenzen statt 81 | 2026-08-09 |
+| SVG-Zeilenenden | über ein binär geöffnetes Handle geschrieben (`epica_style.save_figure`). matplotlib öffnet sonst im Textmodus, und Python übersetzt auf Windows jedes Zeilenende zu CRLF, während `.gitattributes` LF ablegt — die Arbeitskopie wich damit bei **jeder** Abbildung von ihrer eigenen abgelegten Form ab. Dasselbe Muster wie bei den Logdateien am 2026-08-08, eine Ebene weiter | 2026-08-09 |
+| Wertachsen | aus den Daten, `epica_style.nice_ticks`. Schritte aus 1, 2, 2,5 oder 5 mal einer Zehnerpotenz, Nachkommastellen aus dem Schritt, Grenzen umschliessen den Wertebereich immer. Handgesetzte Achsen bleiben über `AXIS_OVERRIDES` in `plot_epica_from_tab.py` möglich | 2026-08-09 |
+| **Abgeschnittene Messwerte** | behoben. Die feste Tick-Liste `D18O_TICKS` endete bei 1,0 und setzte damit die Achsengrenze auf 1,075; δ¹⁸O reicht bis 1,457. **82 von 1378 Messwerten (6 %) lagen ausserhalb der Achse und wurden weggeschnitten** — in jeder δ¹⁸O-Abbildung einschliesslich der publizierten Collage. Für die Überarbeitung des Beitrags vermerkt | 2026-08-09 |
+| Umfang der Einzelabbildungen | alle fünf Proxies, Tiefe und Alter, drei Glättungsvarianten: 30 statt 12. Die Konfigurationen kommen aus `DATASETS`, nicht mehr aus einer handgeschriebenen Liste; δD, Dust und δO₂/N₂ hatten bis dahin überhaupt keine Einzelabbildung | 2026-08-09 |
+| MIS-Bänder in Tiefendarstellungen | ja, nur in den Einzelabbildungen. Die Tiefen kommen aus `ed.interpolate_depth`, also aus derselben Funktion wie `geolod:MISBoundaryDepth` im Graphen. Wo die Interpolation verweigert, fehlt das Band — bei CH₄ betrifft das MIS 8 bis 10, und ein fehlendes Band ist dort die ehrliche Auskunft | 2026-08-09 |
+| Collage des Beitrags | zwei Zuschnitte aus derselben Funktion: `fig02_pipeline_outputs` mit den vier bisherigen Panels (δ¹⁸O und CH₄, je Alter und Tiefe), damit die bestehende Abbildung ersetzbar ist, ohne den Text zu ändern, und `fig02_pipeline_outputs_five` mit allen fünf Datensätzen auf der Altersachse. Beide zeigen Rohwerte grau hinter der Glättung — das ist die Aussage der Abbildung | 2026-08-09 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -663,8 +669,17 @@ Modellen unsichtbar bleibt, rechts die Abweichung jeder Kurve vom Mittel
 derselben Grenze, auf einer Achse von Zehnermetern. Bezugsgrösse ist das
 Mittel über die Datensätze, die eine Grenze überhaupt abdecken, nicht ein
 gewählter Referenzdatensatz: es gibt hier keine Wahrheit, nur Modelle, die
-voneinander abweichen. Insgesamt 110 erzeugte Dateien, über zwei Läufe
-byte-identisch.
+voneinander abweichen. Insgesamt 150 erzeugte Dateien, über zwei Läufe
+byte-identisch — 30 Einzelabbildungen, sieben Tafeln und zwei Collagen, je als
+SVG und JPG.
+
+**Nachlese zum ersten Auslieferungslauf.** Drei Fehler sind erst am Ergebnis
+auf Windows aufgefallen und am 2026-08-09 behoben: die CRLF-Zeilenenden in
+allen SVG, die feste δ¹⁸O-Tick-Liste, die 6 % der Messwerte aus der Abbildung
+schnitt, und die drei Datensätze ohne jede Einzelabbildung. Beim Übernehmen
+sind ausserdem `EPICA/EDC_CH4.tab`, `EPICA/EPICA_Dome_C_d18O.tab` und
+`EPICA/rdf/geo_lod_core.ttl` zu löschen; `py main.py --clean` erledigt die
+letzte.
 
 - Die fünf `.tab` ziehen nach geo-lod um und ersetzen dort die bisherigen
   Rohdaten (`src/EPICA_Dome_C_*.csv`, `EPICA/*.tab`). `wdttest-epica` behält
@@ -1031,10 +1046,13 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 - ~~`MIS_INTERVALS` in `EPICA/plot_epica_from_tab.py`~~ — erledigt 2026-08-09.
   Offen bleibt die Stelle in `SISAL/plot_sisal_from_csv.py` (S3c); danach ist
   keine MIS-Grenze mehr im Code hinterlegt.
-- Die Tiefenplots tragen weiterhin keine MIS-Bänder. Der Graph liefert die
-  Grenzen in Tiefe seit S2 je Datensatz, gerechnet werden müsste nichts mehr —
-  offen ist nur, ob die Einzelabbildungen sie bekommen sollen oder ob
-  `plate_boundary_depths` den Zweck schon erfüllt.
+- ~~Die Tiefenplots tragen keine MIS-Bänder.~~ Erledigt 2026-08-09.
+- Die Fünfer-Collage zeigt nur die Altersachse. Eine Tiefenvariante ist eine
+  Zeile in `build_all`, falls der Text sie braucht.
+- `epica_style.py` gilt bisher nur für EPICA. `save_figure` und `nice_ticks`
+  gehören eigentlich neben `geo_lod_utils.py`, damit SISAL in S3c dieselben
+  Achsen und dieselben Zeilenenden bekommt — dort schreibt das Plot-Skript
+  weiterhin direkt über `plt.savefig`, also mit demselben CRLF-Problem.
 - `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
   `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
 - Der Bundle-Schritt bleibt der grösste Posten, jetzt aber im Parsen der
