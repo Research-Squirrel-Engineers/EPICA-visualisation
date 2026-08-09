@@ -1,6 +1,6 @@
-@prefix ns1: <http://qudt.org/schema/qudt/> .
-@prefix ns2: <http://w3id.org/geo-lod/> .
-@prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns1: <http://w3id.org/geo-lod/> .
+@prefix ns2: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns3: <http://qudt.org/schema/qudt/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,25 +8,25 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/geo-lod/epica/obs_dust_0465> a ns2:IceCoreObservation,
+<http://w3id.org/geo-lod/epica/obs_dust_0465> a ns1:IceCoreObservation,
         owl:NamedIndividual,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Dust concentration observation 0465 (33.5 ka BP, 653.4 m)"@en ;
-    ns1:unit <http://qudt.org/vocab/unit/MicroGM-PER-KiloGM> ;
-    void:inDataset ns2:geo-lod ;
-    ns2:ageChronology <http://w3id.org/geo-lod/trs/EDC3-ice> ;
-    ns2:ageKaBP 33.5040 ;
-    ns2:atDepth_m 653.420 ;
-    ns2:fallsWithinStage <http://w3id.org/geo-lod/vocab/mis/MIS_2> ;
-    ns2:hasTimePosition <http://w3id.org/geo-lod/epica/tp_dust_0465> ;
-    ns2:measuredValue 234.64000 ;
-    ns2:measurementType <http://w3id.org/geo-lod/epica/measurement_type_dust> ;
-    ns2:smoothedValue_rollingMedian 273.47000 ;
-    ns2:smoothedValue_savgol 276.11312 ;
-    ns2:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
-    ns2:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
-    ns3:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;
+    ns3:unit <http://qudt.org/vocab/unit/MicroGM-PER-KiloGM> ;
+    void:inDataset ns1:geo-lod ;
+    ns1:ageChronology <http://w3id.org/geo-lod/trs/EDC3-ice> ;
+    ns1:ageKaBP 33.5040 ;
+    ns1:atDepth_m 653.420 ;
+    ns1:fallsWithinStage <http://w3id.org/geo-lod/vocab/mis/MIS_2> ;
+    ns1:hasTimePosition <http://w3id.org/geo-lod/epica/tp_dust_0465> ;
+    ns1:measuredValue 234.64000 ;
+    ns1:measurementType <http://w3id.org/geo-lod/epica/measurement_type_dust> ;
+    ns1:smoothedValue_rollingMedian 273.47000 ;
+    ns1:smoothedValue_savgol 276.11312 ;
+    ns1:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
+    ns1:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
+    ns2:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;
     prov:wasDerivedFrom <http://w3id.org/geo-lod/epica/source_dust> ;
     sosa:hasFeatureOfInterest <http://w3id.org/geo-lod/epica/core_edc> ;
     sosa:hasSimpleResult 234.64000 ;
