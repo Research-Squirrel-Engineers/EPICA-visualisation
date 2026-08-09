@@ -106,8 +106,9 @@ Generating plates …
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_savgol11p2.svg / .jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_savgol11p2.svg / .jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_boundary_depths.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\fig02_pipeline_outputs.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\fig02_pipeline_outputs_five.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_pipeline_outputs.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_pipeline_outputs_five.svg / .jpg
+  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\EPICA\captions.yaml (39 entries)
 
 ============================================================
 Done! 30 single figures plus the plates saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.

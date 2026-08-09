@@ -8,6 +8,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FuncFormatter, FixedLocator
 import matplotlib.transforms as transforms
+
+sys.path.insert(
+    0,
+    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "ontology"),
+)
+import geo_lod_figures as gf  # noqa: E402
 from scipy.signal import savgol_filter
 
 # Byte-identical SVG across runs. Two things vary otherwise: the <dc:date>
@@ -296,14 +302,12 @@ def create_plot(
     ax.tick_params(axis="x", labelsize=FONT_SIZE_TICK)
     ax.tick_params(axis="y", labelsize=FONT_SIZE_TICK)
 
-    jpg_path = output_filename + ".jpg"
-    svg_path = output_filename + ".svg"
-    plt.savefig(jpg_path, bbox_inches="tight")
-    plt.savefig(svg_path, bbox_inches="tight", metadata={"Date": None})
+    # Über geo_lod_figures, nicht über plt.savefig: matplotlib öffnet die
+    # Zieldatei sonst im Textmodus, und Python schreibt auf Windows CRLF,
+    # während .gitattributes LF ablegt - jedes SVG wiche dann dauerhaft von
+    # seiner eigenen abgelegten Form ab. Dieselbe Stelle wie in EPICA (S2).
+    gf.save_figure(plt.gcf(), output_filename, dpi=DPI)
     plt.close()
-
-    print(f"  ✓ {jpg_path}")
-    print(f"  ✓ {svg_path}")
 
 
 # ──────────────────────────────────────────────

@@ -227,7 +227,17 @@ lesen hier ab, statt neu zu diskutieren.
 | **Abgeschnittene Messwerte** | behoben. Die feste Tick-Liste `D18O_TICKS` endete bei 1,0 und setzte damit die Achsengrenze auf 1,075; δ¹⁸O reicht bis 1,457. **82 von 1378 Messwerten (6 %) lagen ausserhalb der Achse und wurden weggeschnitten** — in jeder δ¹⁸O-Abbildung einschliesslich der publizierten Collage. Für die Überarbeitung des Beitrags vermerkt | 2026-08-09 |
 | Umfang der Einzelabbildungen | alle fünf Proxies, Tiefe und Alter, drei Glättungsvarianten: 30 statt 12. Die Konfigurationen kommen aus `DATASETS`, nicht mehr aus einer handgeschriebenen Liste; δD, Dust und δO₂/N₂ hatten bis dahin überhaupt keine Einzelabbildung | 2026-08-09 |
 | MIS-Bänder in Tiefendarstellungen | ja, nur in den Einzelabbildungen. Die Tiefen kommen aus `ed.interpolate_depth`, also aus derselben Funktion wie `geolod:MISBoundaryDepth` im Graphen. Wo die Interpolation verweigert, fehlt das Band — bei CH₄ betrifft das MIS 8 bis 10, und ein fehlendes Band ist dort die ehrliche Auskunft | 2026-08-09 |
-| Collage des Beitrags | zwei Zuschnitte aus derselben Funktion: `fig02_pipeline_outputs` mit den vier bisherigen Panels (δ¹⁸O und CH₄, je Alter und Tiefe), damit die bestehende Abbildung ersetzbar ist, ohne den Text zu ändern, und `fig02_pipeline_outputs_five` mit allen fünf Datensätzen auf der Altersachse. Beide zeigen Rohwerte grau hinter der Glättung — das ist die Aussage der Abbildung | 2026-08-09 |
+| Collage des Beitrags | zwei Zuschnitte aus derselben Funktion: `plate_pipeline_outputs` mit den vier bisherigen Panels (δ¹⁸O und CH₄, je Alter und Tiefe), damit die bestehende Abbildung ersetzbar ist, ohne den Text zu ändern, und `plate_pipeline_outputs_five` mit allen fünf Datensätzen auf der Altersachse. Beide zeigen Rohwerte grau hinter der Glättung — das ist die Aussage der Abbildung | 2026-08-09 |
+| Benennung der Collagen | `plate_pipeline_outputs` und `plate_pipeline_outputs_five`. Alles Mehrteilige heisst `plate_*`, `fig02_*` entfällt — eine Abbildungsnummer aus einem Beitrag ist kein Dateiname, sie ändert sich beim nächsten Umbruch | 2026-08-09 |
+| Bildüberschrift in der Grafik | nur bei den mehrteiligen Tafeln entfernt. Die Einzelabbildungen behalten ihren Titel — dort ist er die einzige Kennzeichnung. Die Panel-Titel innerhalb einer Tafel bleiben ebenfalls, sonst wäre nicht erkennbar, welche Spalte welche ist | 2026-08-09 |
+| Captions | `EPICA/captions.yaml`, eine Datei je Strang. Feldnamen wie in `wdttest-tables`: `caption`, `captiondetail`, `license`, dazu `sources` mit den DOIs und `generated` | 2026-08-09 |
+| Wem gehört die Caption | erzeugt, aber nacheditierbar. Jeder Eintrag führt unter `generated` den zuletzt maschinell erzeugten Text mit. Weicht `caption` davon ab, gilt er als von Hand geschrieben und bleibt stehen, während `generated` nachgeführt wird — der Diff zeigt damit, wo Prosa und Daten auseinandergelaufen sind. Von Hand ändert man `caption` und sonst nichts | 2026-08-09 |
+| Neue Abhängigkeit `pyyaml` | nötig, weil die Caption-Datei nicht nur geschrieben, sondern auch wieder gelesen wird, um die handgeschriebenen Einträge zu erkennen. Damit ist die Begründung vom Vormittag, für fünf Konstanten lohne kein YAML, nicht mehr tragfähig; `EPICA/epica_data.py` bleibt trotzdem Python, weil es niemand editiert | 2026-08-09 |
+| Ort der geteilten Abbildungs-Helfer | `ontology/geo_lod_figures.py` und `ontology/geo_lod_captions.py`, neben `geo_lod_utils.py`. Jedes Sub-Skript läuft ohnehin mit `ontology/` auf dem `PYTHONPATH`. `EPICA/epica_style.py` entfällt | 2026-08-09 |
+| SISAL-Abbildungen | auf `geo_lod_figures.save_figure` umgestellt, sofort und nicht erst in S3c. Der CRLF-Fehler war dort derselbe, und ein bekannter Fehler, der auf einen späteren Schritt vertagt wird, wird bei jedem Lauf dazwischen erneut geschrieben. SISAL bekommt seine `captions.yaml` in S3c | 2026-08-09 |
+| Darstellung von Datenlücken | Konvention aus `wdttest-sisal` übernommen: innerhalb eines Laufs durchgezogen, über die Unterbrechung gestrichelt, die letzte Probe davor und die erste danach geringelt. Liegt als `geo_lod_figures.find_breaks` / `draw_profile` im geteilten Modul, gilt für Einzelabbildungen, Tafeln und Collagen. Der Vorbehalt wandert mit: ein gestrichelter Abschnitt heisst „hier keine Proben", nicht „hier kein Eintrag" | 2026-08-09 |
+| Lückenschwelle EPICA | 15 ka, nicht die 5 kyr aus `wdttest-sisal`. Bei 5 ka markiert die Konvention 14 Lücken im Dust-Datensatz und 5 im δD, die nur dünne Beprobung sind; bei 15 ka bleibt genau die eine echte Lücke im CH₄. Der Wert ist derselbe wie `ed.MAX_INTERPOLATION_GAP_KA` und wird von dort bezogen — was in der Abbildung eine Lücke ist, ist genau die Strecke, über die der Generator keine Stadiengrenze interpoliert | 2026-08-09 |
+| Glättung über Lücken | verboten, laufweise statt über die ganze Reihe (`geo_lod_figures.smooth_by_run`). Ein zentriertes Fenster von 11 Punkten griff bei CH₄ über 178 ka ohne Daten hinweg: der geglättete Wert bei 214 ka enthielt Messungen von 392 ka. Betrifft 9 der 736 CH₄-Werte, maximale Abweichung 63 ppbv. **Gilt für Abbildung und RDF**, aus derselben Funktion — `geolod:smoothedValue_rollingMedian` und `…_savgol` haben sich für diese neun Beobachtungen geändert | 2026-08-09 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -1049,10 +1059,14 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 - ~~Die Tiefenplots tragen keine MIS-Bänder.~~ Erledigt 2026-08-09.
 - Die Fünfer-Collage zeigt nur die Altersachse. Eine Tiefenvariante ist eine
   Zeile in `build_all`, falls der Text sie braucht.
-- `epica_style.py` gilt bisher nur für EPICA. `save_figure` und `nice_ticks`
-  gehören eigentlich neben `geo_lod_utils.py`, damit SISAL in S3c dieselben
-  Achsen und dieselben Zeilenenden bekommt — dort schreibt das Plot-Skript
-  weiterhin direkt über `plt.savefig`, also mit demselben CRLF-Problem.
+- ~~`epica_style.py` gilt nur für EPICA.~~ Erledigt 2026-08-09: liegt als
+  `ontology/geo_lod_figures.py` neben `geo_lod_utils.py`, SISAL nutzt es.
+- SISAL hat noch keine `captions.yaml`. Die Mechanik liegt in
+  `ontology/geo_lod_captions.py` bereit; einzutragen sind die Unterschriften
+  der 36 Abbildungen, das gehört in S3c.
+- Die SISAL-Achsen laufen weiter über handgesetzte Grenzen. Ob dort dasselbe
+  Abschneiden passiert wie bei δ¹⁸O, ist ungeprüft — beim Umbau in S3c gegen
+  `geo_lod_figures.nice_ticks` stellen und die Wertebereiche vergleichen.
 - `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
   `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
 - Der Bundle-Schritt bleibt der grösste Posten, jetzt aber im Parsen der

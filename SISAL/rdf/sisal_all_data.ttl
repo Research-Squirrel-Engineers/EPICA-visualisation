@@ -161713,7 +161713,7 @@ geolod:SISAL_Cave_Collection a geo:FeatureCollection ;
 
 geolod:SISAL_Sites_Dataset a prov:Entity ;
     dct:created "2026-08-08"^^xsd:date ;
-    owl:versionInfo "sha256:a76f0d9d28f0" ;
+    owl:versionInfo "sha256:3c1017311690" ;
     prov:wasGeneratedBy geolod:SISAL_Sites_Generation .
 
 geolod:Cave_site_0001_Geometry a sf:Point ;
@@ -162633,14 +162633,14 @@ geolod:Cave_site_0366_Geometry a sf:Point ;
 
 geolod:SISAL_Sites_Generation a prov:Activity ;
     rdfs:label "SISAL cave site RDF generation"@en ;
-    owl:versionInfo "sha256:a76f0d9d28f0" ;
+    owl:versionInfo "sha256:3c1017311690" ;
     prov:used geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py,
         geolod:SISAL_Sites_Generation_input_v_sites_all_csv ;
     prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
 
 geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py a prov:Entity ;
     rdfs:label "plot_sisal_from_csv.py" ;
-    dct:identifier "sha256:df240f0328a18fc70458df58d421c0e4ba4c233e90f844333947c4132a5cc098" .
+    dct:identifier "sha256:e85f4bb0307612e4ea8386ed28c4c9b0fcb4fa282bcf32541f78850a5a6f0e3b" .
 
 geolod:SISAL_Sites_Generation_input_v_sites_all_csv a prov:Entity ;
     rdfs:label "v_sites_all.csv" ;

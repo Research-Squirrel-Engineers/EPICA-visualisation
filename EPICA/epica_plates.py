@@ -36,6 +36,7 @@ clock is read anywhere.
 from __future__ import annotations
 
 import os
+import sys
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -43,11 +44,17 @@ import pandas as pd
 from matplotlib.ticker import MultipleLocator
 from scipy.signal import savgol_filter
 
-import epica_data as ed
-import epica_style as st
-
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "plots")
+
+# ontology/ auf den Pfad, damit geo_lod_figures auch beim Direktaufruf des
+# Moduls gefunden wird und nicht nur über main.py.
+sys.path.insert(0, SCRIPT_DIR)
+sys.path.insert(0, os.path.join(os.path.dirname(SCRIPT_DIR), "ontology"))
+
+import epica_data as ed  # noqa: E402
+import geo_lod_figures as st  # noqa: E402
+from geo_lod_captions import CaptionFile  # noqa: E402
 
 # --- shared with the single figures -----------------------------------------
 ROLLING_WINDOW = 11
@@ -87,10 +94,68 @@ TRS_COLORS = {
 
 VARIANTS = ("unsmoothed", f"smooth{ROLLING_WINDOW}", f"savgol{SG_WINDOW}p{SG_POLYORDER}")
 
-# The gap in the CH4 record, taken from the data rather than written down: any
-# interval between consecutive measurements longer than this counts as a gap
-# and is drawn dashed instead of solid.
-GAP_THRESHOLD_KA = 15.0
+#: Licence of the figures themselves. The underlying records carry their own,
+#: two of them CC BY 4.0 and three CC BY 3.0; those are listed per figure under
+#: ``sources`` rather than collapsed into one statement that would be wrong for
+#: some of them.
+FIGURE_LICENSE = "CC BY 4.0, Florian Thiery"
+
+#: Filled while drawing, written once at the end of build_all().
+CAPTIONS = CaptionFile(
+    os.path.join(SCRIPT_DIR, "captions.yaml"),
+    header=(
+        "captions.yaml - one entry per generated figure of the EPICA strand.\n"
+        "\n"
+        "Written by EPICA/epica_plates.py and EPICA/plot_epica_from_tab.py.\n"
+        "Edit 'caption' freely: an entry whose caption differs from 'generated'\n"
+        "is treated as hand-written and kept on the next run, while 'generated'\n"
+        "is refreshed so the diff shows what the code would say now."
+    ),
+)
+
+VARIANT_TEXT = {
+    "unsmoothed": "the measured series, unsmoothed",
+    f"smooth{ROLLING_WINDOW}": (
+        f"a rolling median over {ROLLING_WINDOW} points"
+    ),
+    f"savgol{SG_WINDOW}p{SG_POLYORDER}": (
+        f"a Savitzky-Golay filter, window {SG_WINDOW} points, "
+        f"polynomial order {SG_POLYORDER}"
+    ),
+}
+
+
+def caption_multi(name: str, variant: str, layout: str) -> None:
+    """Caption for the two five-panel plates."""
+    arrangement = (
+        "five columns sharing one vertical age axis"
+        if layout == "columns"
+        else "five rows sharing one horizontal age axis"
+    )
+    CAPTIONS.add(
+        name,
+        caption=(
+            f"The five EPICA Dome C proxy records over 0 to 806 ka, arranged as "
+            f"{arrangement}, showing {VARIANT_TEXT[variant]}. Each record rests "
+            f"on its own chronology, named in the panel heading, so the curves "
+            f"are not on a common time axis. Marine Isotope Stage bands follow "
+            f"Railsback et al. (2015); a hatched band marks a stage in which "
+            f"that record holds no measurement. Dust is on a logarithmic scale."
+        ),
+        captiondetail=(
+            "Methane, deuterium and dust reach the present; the two gas records "
+            "begin at 102 and 106 ka. Methane ends at 649 ka and has no data "
+            "between 214 and 392 ka, bridged by a dashed line."
+        ),
+        license=FIGURE_LICENSE,
+        sources=[ed.DATASETS[k]["doi"] for k in ed.DATASET_ORDER],
+    )
+
+# Ab dieser Lücke gilt der Verlauf als unterbrochen: gestrichelt statt
+# durchgezogen, mit geringelten Enden. Derselbe Wert, über den der Generator
+# keine Stadiengrenze mehr interpoliert - Abbildung und Graph benutzen dieselbe
+# Definition von "Lücke".
+GAP_THRESHOLD_KA = ed.MAX_INTERPOLATION_GAP_KA
 
 
 # ---------------------------------------------------------------------------
@@ -98,29 +163,20 @@ GAP_THRESHOLD_KA = 15.0
 # ---------------------------------------------------------------------------
 
 
-def smooth_values(values: np.ndarray, variant: str) -> np.ndarray:
+def smooth_values(values: np.ndarray, variant: str, breaks) -> np.ndarray:
+    """Glättung je Lauf - ein zentriertes Fenster darf nicht über eine
+    Unterbrechung greifen, sonst enthält der Wert am Rand der Lücke
+    Messungen von jenseits der Lücke."""
     if variant == "unsmoothed":
         return values
     if variant.startswith("smooth"):
-        return (
-            pd.Series(values)
-            .rolling(window=ROLLING_WINDOW, center=True, min_periods=1)
-            .median()
-            .to_numpy()
-        )
-    return savgol_filter(
-        values, window_length=min(SG_WINDOW, len(values)), polyorder=SG_POLYORDER
-    )
+        return st.smooth_by_run(values, breaks, "median", ROLLING_WINDOW)
+    return st.smooth_by_run(values, breaks, "savgol", SG_WINDOW, SG_POLYORDER)
 
 
-def segments(ages: np.ndarray) -> list[tuple[int, int]]:
-    """Index ranges of continuous stretches, split at gaps."""
-    cuts = [0]
-    for i in range(len(ages) - 1):
-        if ages[i + 1] - ages[i] > GAP_THRESHOLD_KA:
-            cuts.append(i + 1)
-    cuts.append(len(ages))
-    return [(cuts[i], cuts[i + 1]) for i in range(len(cuts) - 1)]
+def breaks_of(ages: np.ndarray) -> list[tuple[int, int]]:
+    """Unterbrechungen des Verlaufs, nach der Konvention aus wdttest-sisal."""
+    return st.find_breaks(ages, GAP_THRESHOLD_KA)
 
 
 def draw_bands(ax, stages, covered, horizontal: bool):
@@ -216,21 +272,14 @@ def plate_columns(frames: dict, stages: list[dict], variant: str) -> None:
         df = frames[dataset_id]
         meta = ed.DATASETS[dataset_id]
         ages = df["age_ka"].to_numpy()
-        values = smooth_values(df["value"].to_numpy(), variant)
+        values = smooth_values(df["value"].to_numpy(), variant, breaks_of(ages))
 
         # Grenzen vor den Bändern setzen: draw_bands liest sie von der Achse.
         ax.set_ylim(AGE_MAX, AGE_MIN)
         draw_bands(ax, stages, ages, horizontal=False)
 
-        for lo, hi in segments(ages):
-            ax.plot(values[lo:hi], ages[lo:hi], color=LINE_COLOR,
-                    linewidth=LINE_WIDTH, zorder=3)
-        # Dashed bridge across every gap, so a gap reads as a gap.
-        segs = segments(ages)
-        for (_, hi), (lo, _) in zip(segs, segs[1:]):
-            ax.plot([values[hi - 1], values[lo]], [ages[hi - 1], ages[lo]],
-                    color=LINE_COLOR, linewidth=LINE_WIDTH,
-                    linestyle=(0, (5, 4)), zorder=3)
+        st.draw_profile(ax, values, ages, breaks_of(ages), colour=LINE_COLOR,
+                        linewidth=LINE_WIDTH, vertical=True, zorder=3)
 
         if dataset_id == "dust":
             ax.set_xscale("log")
@@ -244,15 +293,10 @@ def plate_columns(frames: dict, stages: list[dict], variant: str) -> None:
     axes[0].yaxis.set_major_locator(MultipleLocator(AGE_MAJOR))
     axes[0].yaxis.set_minor_locator(MultipleLocator(AGE_MINOR))
 
-    fig.suptitle(
-        "EPICA Dome C - five proxy records on a shared age axis\n"
-        "Each record on its own chronology; hatched stages carry no "
-        "measurement in that record",
-        fontsize=16,
-        y=0.995,
-    )
-    fig.tight_layout(rect=(0, 0, 1, 0.975))
+    # Keine Überschrift in der Grafik - sie steht in captions.yaml.
+    fig.tight_layout()
     save(fig, f"plate_columns_{variant}")
+    caption_multi(f"plate_columns_{variant}", variant, "columns")
 
 
 # ---------------------------------------------------------------------------
@@ -268,19 +312,13 @@ def plate_rows(frames: dict, stages: list[dict], variant: str) -> None:
     for ax, dataset_id in zip(axes, ed.DATASET_ORDER):
         df = frames[dataset_id]
         ages = df["age_ka"].to_numpy()
-        values = smooth_values(df["value"].to_numpy(), variant)
+        values = smooth_values(df["value"].to_numpy(), variant, breaks_of(ages))
 
         ax.set_xlim(AGE_MIN, AGE_MAX)
         draw_bands(ax, stages, ages, horizontal=True)
 
-        for lo, hi in segments(ages):
-            ax.plot(ages[lo:hi], values[lo:hi], color=LINE_COLOR,
-                    linewidth=LINE_WIDTH, zorder=3)
-        segs = segments(ages)
-        for (_, hi), (lo, _) in zip(segs, segs[1:]):
-            ax.plot([ages[hi - 1], ages[lo]], [values[hi - 1], values[lo]],
-                    color=LINE_COLOR, linewidth=LINE_WIDTH,
-                    linestyle=(0, (5, 4)), zorder=3)
+        st.draw_profile(ax, values, ages, breaks_of(ages), colour=LINE_COLOR,
+                        linewidth=LINE_WIDTH, vertical=False, zorder=3)
 
         if dataset_id == "dust":
             ax.set_yscale("log")
@@ -294,15 +332,9 @@ def plate_rows(frames: dict, stages: list[dict], variant: str) -> None:
     axes[-1].xaxis.set_major_locator(MultipleLocator(AGE_MAJOR))
     axes[-1].xaxis.set_minor_locator(MultipleLocator(AGE_MINOR))
 
-    fig.suptitle(
-        "EPICA Dome C - five proxy records on a shared age axis\n"
-        "Each record on its own chronology; hatched stages carry no "
-        "measurement in that record",
-        fontsize=16,
-        y=0.997,
-    )
-    fig.tight_layout(rect=(0, 0, 1, 0.975))
+    fig.tight_layout()
     save(fig, f"plate_rows_{variant}")
+    caption_multi(f"plate_rows_{variant}", variant, "rows")
 
 
 # ---------------------------------------------------------------------------
@@ -414,16 +446,27 @@ def plate_boundary_depths(frames: dict, stages: list[dict]) -> None:
     ax_dev.grid(True, color=GRID_COLOR, linewidth=0.6, zorder=1)
     ax_dev.tick_params(labelsize=11)
 
-    fig.suptitle(
-        "EPICA Dome C - the same Marine Isotope Stage boundaries in the depth "
-        "axis of each record\n"
-        "Boundary ages after Railsback et al. (2015), carried into depth by "
-        "linear interpolation in each record's own chronology",
-        fontsize=15,
-        y=0.985,
-    )
-    fig.tight_layout(rect=(0, 0, 1, 0.93))
+    fig.tight_layout()
     save(fig, "plate_boundary_depths")
+    CAPTIONS.add(
+        "plate_boundary_depths",
+        caption=(
+            "Marine Isotope Stage boundaries of Railsback et al. (2015) carried "
+            "into the depth axis of each of the five EPICA Dome C records by "
+            "linear interpolation in that record's own chronology. Left: the "
+            "depth of every boundary. Right: the departure of each record from "
+            "the mean depth of the same boundary, across the records that cover "
+            "it. Boundaries falling inside a data gap are omitted rather than "
+            "interpolated across it."
+        ),
+        captiondetail=(
+            "The beginning of MIS 5 lies at 1733.94 m on AICC2023-ice and at "
+            "1782.26 m on EDC2-gas, 48 m apart in the same core from one "
+            "published boundary age."
+        ),
+        license=FIGURE_LICENSE,
+        sources=[ed.DATASETS[k]["doi"] for k in ed.DATASET_ORDER],
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -454,7 +497,7 @@ def collage(frames: dict, stages: list[dict], name: str,
         df = frames[dataset_id]
         y = df[axis_key].to_numpy()
         raw = df["value"].to_numpy()
-        smooth = st.rolling_median(raw, ROLLING_WINDOW)
+        smooth = None  # gesetzt, sobald die Unterbrechungen bekannt sind
 
         ax.set_ylim(float(y.max()), float(y.min()))
         ax.margins(y=0)
@@ -466,16 +509,12 @@ def collage(frames: dict, stages: list[dict], name: str,
             ylabel = "Depth [m]"
 
         ages = df["age_ka"].to_numpy()
-        for lo, hi in segments(ages):
-            ax.plot(raw[lo:hi], y[lo:hi], linewidth=0.8,
-                    color=LINE_COLOR_FADED, zorder=2)
-            ax.plot(smooth[lo:hi], y[lo:hi], linewidth=1.4,
-                    color=LINE_COLOR, zorder=3)
-        segs = segments(ages)
-        for (_, hi), (lo, _) in zip(segs, segs[1:]):
-            ax.plot([smooth[hi - 1], smooth[lo]], [y[hi - 1], y[lo]],
-                    linewidth=1.0, color=LINE_COLOR, linestyle=(0, (5, 4)),
-                    zorder=3)
+        breaks = breaks_of(ages)
+        smooth = st.smooth_by_run(raw, breaks, "median", ROLLING_WINDOW)
+        st.draw_profile(ax, raw, y, breaks, colour=LINE_COLOR_FADED,
+                        linewidth=0.8, zorder=2)
+        st.draw_profile(ax, smooth, y, breaks, colour=LINE_COLOR,
+                        linewidth=1.4, zorder=3)
 
         if dataset_id == "dust":
             ticks, (x0, x1) = st.log_ticks(float(raw.min()), float(raw.max()))
@@ -505,9 +544,29 @@ def collage(frames: dict, stages: list[dict], name: str,
             fontsize=9, fontstyle="italic", color="#777777",
         )
 
-    fig.suptitle(title, fontsize=15, y=0.995)
-    fig.tight_layout(rect=(0, 0, 1, 0.975))
+    fig.tight_layout()
     save(fig, name)
+
+    used = []
+    for dataset_id, _ in entries:
+        if dataset_id not in used:
+            used.append(dataset_id)
+    panels = ", ".join(
+        f"{ed.DATASETS[k]['label']} against {'age' if a == 'age_ka' else 'depth'}"
+        for k, a in entries
+    )
+    CAPTIONS.add(
+        name,
+        caption=(
+            f"{title} Panels, left to right: {panels}. Each panel shows the "
+            f"measured series in grey behind a rolling median over "
+            f"{ROLLING_WINDOW} points in black. Age panels carry Marine Isotope "
+            f"Stage bands after Railsback et al. (2015); each record sits on "
+            f"its own chronology, named in the panel heading."
+        ),
+        license=FIGURE_LICENSE,
+        sources=[ed.DATASETS[k]["doi"] for k in used],
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -515,7 +574,13 @@ def collage(frames: dict, stages: list[dict], name: str,
 # ---------------------------------------------------------------------------
 
 
-def build_all() -> None:
+def build_all() -> CaptionFile:
+    """Draws every plate and returns the collected captions.
+
+    The file is not written here: the plot script adds the captions of the 30
+    single figures first, so that EPICA/captions.yaml is complete after one
+    run rather than being overwritten by whichever script finishes last.
+    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     stages = ed.read_mis_stages()
     frames = {k: df for k, df in ed.load_all()}
@@ -534,20 +599,22 @@ def build_all() -> None:
     # ändern muss; der Fünfer zeigt dasselbe Prinzip - Rohwerte und Glättung
     # nebeneinander - über alle Datensätze, die seit S2 im Graphen stehen.
     collage(
-        frames, stages, "fig02_pipeline_outputs",
+        frames, stages, "plate_pipeline_outputs",
         [("d18o", "age_ka"), ("d18o", "depth_m"),
          ("ch4", "age_ka"), ("ch4", "depth_m")],
-        "EPICA Dome C - pipeline outputs: measured series and rolling median, "
-        "on the age and the depth axis",
+        "Pipeline outputs of the EPICA Dome C strand on the age and the depth "
+        "axis.",
     )
     collage(
-        frames, stages, "fig02_pipeline_outputs_five",
+        frames, stages, "plate_pipeline_outputs_five",
         [(k, "age_ka") for k in ed.DATASET_ORDER],
-        "EPICA Dome C - pipeline outputs: all five records, measured series "
-        "and rolling median, each on its own chronology",
+        "Pipeline outputs of the EPICA Dome C strand, all five records.",
     )
+    return CAPTIONS
 
 
 if __name__ == "__main__":
     plt.rcParams["svg.hashsalt"] = "geo-lod"
-    build_all()
+    own = CaptionFile(os.path.join(SCRIPT_DIR, "captions.yaml"))
+    build_all(own)
+    own.write().write()

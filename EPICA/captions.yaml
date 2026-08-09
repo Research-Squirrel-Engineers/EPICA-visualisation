@@ -1,0 +1,319 @@
+# captions.yaml - one entry per generated figure of the EPICA strand.
+#
+# Written by EPICA/epica_plates.py and EPICA/plot_epica_from_tab.py.
+# Edit 'caption' freely: an entry whose caption differs from 'generated'
+# is treated as hand-written and kept on the next run, while 'generated'
+# is refreshed so the diff shows what the code would say now.
+
+ch4_vs_age_ka_full:
+  caption: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, ages from 0.0 to 648.7 ka on the EDC2-gas scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, ages from 0.0 to 648.7 ka on the EDC2-gas scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+
+ch4_vs_age_ka_full_savgol11p2:
+  caption: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, ages from 0.0 to 648.7 ka on the EDC2-gas scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, ages from 0.0 to 648.7 ka on the EDC2-gas scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+
+ch4_vs_age_ka_full_smooth11:
+  caption: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, ages from 0.0 to 648.7 ka on the EDC2-gas scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, ages from 0.0 to 648.7 ka on the EDC2-gas scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+
+ch4_vs_depth_full:
+  caption: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, depths from 99.3 to 3059.1 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, depths from 99.3 to 3059.1 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+
+ch4_vs_depth_full_savgol11p2:
+  caption: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, depths from 99.3 to 3059.1 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, depths from 99.3 to 3059.1 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+
+ch4_vs_depth_full_smooth11:
+  caption: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, depths from 99.3 to 3059.1 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Methane (CH₄) from the EPICA Dome C ice core, 736 measurements, depths from 99.3 to 3059.1 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+
+d18o_vs_age_ka_full:
+  caption: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, ages from 101.7 to 805.8 ka on the AICC2023-gas scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, ages from 101.7 to 805.8 ka on the AICC2023-gas scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961024
+
+d18o_vs_age_ka_full_savgol11p2:
+  caption: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, ages from 101.7 to 805.8 ka on the AICC2023-gas scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, ages from 101.7 to 805.8 ka on the AICC2023-gas scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961024
+
+d18o_vs_age_ka_full_smooth11:
+  caption: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, ages from 101.7 to 805.8 ka on the AICC2023-gas scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, ages from 101.7 to 805.8 ka on the AICC2023-gas scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961024
+
+d18o_vs_depth_full:
+  caption: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, depths from 1410.8 to 3191.1 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, depths from 1410.8 to 3191.1 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961024
+
+d18o_vs_depth_full_savgol11p2:
+  caption: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, depths from 1410.8 to 3191.1 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, depths from 1410.8 to 3191.1 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961024
+
+d18o_vs_depth_full_smooth11:
+  caption: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, depths from 1410.8 to 3191.1 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "δ¹⁸O of O₂ from the EPICA Dome C ice core, 1378 measurements, depths from 1410.8 to 3191.1 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-gas scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961024
+
+dd_vs_age_ka_full:
+  caption: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, ages from 0.1 to 740.0 ka on the EDC2-ice scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, ages from 0.1 to 740.0 ka on the EDC2-ice scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.198743
+
+dd_vs_age_ka_full_savgol11p2:
+  caption: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, ages from 0.1 to 740.0 ka on the EDC2-ice scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, ages from 0.1 to 740.0 ka on the EDC2-ice scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.198743
+
+dd_vs_age_ka_full_smooth11:
+  caption: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, ages from 0.1 to 740.0 ka on the EDC2-ice scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, ages from 0.1 to 740.0 ka on the EDC2-ice scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.198743
+
+dd_vs_depth_full:
+  caption: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, depths from 8.5 to 3138.6 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, depths from 8.5 to 3138.6 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.198743
+
+dd_vs_depth_full_savgol11p2:
+  caption: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, depths from 8.5 to 3138.6 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, depths from 8.5 to 3138.6 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.198743
+
+dd_vs_depth_full_smooth11:
+  caption: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, depths from 8.5 to 3138.6 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Deuterium (δD) from the EPICA Dome C ice core, 814 measurements, depths from 8.5 to 3138.6 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC2-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.198743
+
+do2n2_vs_age_ka_full:
+  caption: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, ages from 105.9 to 805.1 ka on the AICC2023-ice scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, ages from 105.9 to 805.1 ka on the AICC2023-ice scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961025
+
+do2n2_vs_age_ka_full_savgol11p2:
+  caption: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, ages from 105.9 to 805.1 ka on the AICC2023-ice scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, ages from 105.9 to 805.1 ka on the AICC2023-ice scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961025
+
+do2n2_vs_age_ka_full_smooth11:
+  caption: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, ages from 105.9 to 805.1 ka on the AICC2023-ice scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, ages from 105.9 to 805.1 ka on the AICC2023-ice scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961025
+
+do2n2_vs_depth_full:
+  caption: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, depths from 1420.6 to 3188.9 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, depths from 1420.6 to 3188.9 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961025
+
+do2n2_vs_depth_full_savgol11p2:
+  caption: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, depths from 1420.6 to 3188.9 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, depths from 1420.6 to 3188.9 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961025
+
+do2n2_vs_depth_full_smooth11:
+  caption: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, depths from 1420.6 to 3188.9 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "δO₂/N₂ from the EPICA Dome C ice core, 822 measurements, depths from 1420.6 to 3188.9 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the AICC2023-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961025
+
+dust_vs_age_ka_full:
+  caption: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, ages from 0.1 to 800.5 ka on the EDC3-ice scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, ages from 0.1 to 800.5 ka on the EDC3-ice scale. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.695984
+
+dust_vs_age_ka_full_savgol11p2:
+  caption: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, ages from 0.1 to 800.5 ka on the EDC3-ice scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, ages from 0.1 to 800.5 ka on the EDC3-ice scale. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.695984
+
+dust_vs_age_ka_full_smooth11:
+  caption: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, ages from 0.1 to 800.5 ka on the EDC3-ice scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  generated: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, ages from 0.1 to 800.5 ka on the EDC3-ice scale. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage without a measurement in this record."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.695984
+
+dust_vs_depth_full:
+  caption: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, depths from 11.8 to 3188.9 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC3-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, depths from 11.8 to 3188.9 m. The measured series is shown unsmoothed. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC3-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.695984
+
+dust_vs_depth_full_savgol11p2:
+  caption: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, depths from 11.8 to 3188.9 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC3-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, depths from 11.8 to 3188.9 m. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC3-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.695984
+
+dust_vs_depth_full_smooth11:
+  caption: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, depths from 11.8 to 3188.9 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC3-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  generated: "Dust concentration from the EPICA Dome C ice core, 1154 measurements, depths from 11.8 to 3188.9 m. A rolling median over 11 points is drawn in black over the measured series in grey. Marine Isotope Stage bands are the boundaries of Railsback et al. (2015) carried into depth by linear interpolation on the EDC3-ice scale; a stage whose boundary falls inside a data gap carries no band."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.695984
+
+plate_boundary_depths:
+  caption: "Marine Isotope Stage boundaries of Railsback et al. (2015) carried into the depth axis of each of the five EPICA Dome C records by linear interpolation in that record's own chronology. Left: the depth of every boundary. Right: the departure of each record from the mean depth of the same boundary, across the records that cover it. Boundaries falling inside a data gap are omitted rather than interpolated across it."
+  captiondetail: "The beginning of MIS 5 lies at 1733.94 m on AICC2023-ice and at 1782.26 m on EDC2-gas, 48 m apart in the same core from one published boundary age."
+  generated: "Marine Isotope Stage boundaries of Railsback et al. (2015) carried into the depth axis of each of the five EPICA Dome C records by linear interpolation in that record's own chronology. Left: the depth of every boundary. Right: the departure of each record from the mean depth of the same boundary, across the records that cover it. Boundaries falling inside a data gap are omitted rather than interpolated across it."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+    - https://doi.org/10.1594/PANGAEA.198743
+    - https://doi.org/10.1594/PANGAEA.695984
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.961025
+
+plate_columns_savgol11p2:
+  caption: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five columns sharing one vertical age axis, showing a Savitzky-Golay filter, window 11 points, polynomial order 2. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  captiondetail: "Methane, deuterium and dust reach the present; the two gas records begin at 102 and 106 ka. Methane ends at 649 ka and has no data between 214 and 392 ka, bridged by a dashed line."
+  generated: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five columns sharing one vertical age axis, showing a Savitzky-Golay filter, window 11 points, polynomial order 2. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+    - https://doi.org/10.1594/PANGAEA.198743
+    - https://doi.org/10.1594/PANGAEA.695984
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.961025
+
+plate_columns_smooth11:
+  caption: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five columns sharing one vertical age axis, showing a rolling median over 11 points. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  captiondetail: "Methane, deuterium and dust reach the present; the two gas records begin at 102 and 106 ka. Methane ends at 649 ka and has no data between 214 and 392 ka, bridged by a dashed line."
+  generated: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five columns sharing one vertical age axis, showing a rolling median over 11 points. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+    - https://doi.org/10.1594/PANGAEA.198743
+    - https://doi.org/10.1594/PANGAEA.695984
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.961025
+
+plate_columns_unsmoothed:
+  caption: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five columns sharing one vertical age axis, showing the measured series, unsmoothed. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  captiondetail: "Methane, deuterium and dust reach the present; the two gas records begin at 102 and 106 ka. Methane ends at 649 ka and has no data between 214 and 392 ka, bridged by a dashed line."
+  generated: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five columns sharing one vertical age axis, showing the measured series, unsmoothed. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+    - https://doi.org/10.1594/PANGAEA.198743
+    - https://doi.org/10.1594/PANGAEA.695984
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.961025
+
+plate_pipeline_outputs:
+  caption: "Pipeline outputs of the EPICA Dome C strand on the age and the depth axis. Panels, left to right: δ¹⁸O of O₂ against age, δ¹⁸O of O₂ against depth, Methane (CH₄) against age, Methane (CH₄) against depth. Each panel shows the measured series in grey behind a rolling median over 11 points in black. Age panels carry Marine Isotope Stage bands after Railsback et al. (2015); each record sits on its own chronology, named in the panel heading."
+  generated: "Pipeline outputs of the EPICA Dome C strand on the age and the depth axis. Panels, left to right: δ¹⁸O of O₂ against age, δ¹⁸O of O₂ against depth, Methane (CH₄) against age, Methane (CH₄) against depth. Each panel shows the measured series in grey behind a rolling median over 11 points in black. Age panels carry Marine Isotope Stage bands after Railsback et al. (2015); each record sits on its own chronology, named in the panel heading."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.472484
+
+plate_pipeline_outputs_five:
+  caption: "Pipeline outputs of the EPICA Dome C strand, all five records. Panels, left to right: Methane (CH₄) against age, Deuterium (δD) against age, Dust concentration against age, δ¹⁸O of O₂ against age, δO₂/N₂ against age. Each panel shows the measured series in grey behind a rolling median over 11 points in black. Age panels carry Marine Isotope Stage bands after Railsback et al. (2015); each record sits on its own chronology, named in the panel heading."
+  generated: "Pipeline outputs of the EPICA Dome C strand, all five records. Panels, left to right: Methane (CH₄) against age, Deuterium (δD) against age, Dust concentration against age, δ¹⁸O of O₂ against age, δO₂/N₂ against age. Each panel shows the measured series in grey behind a rolling median over 11 points in black. Age panels carry Marine Isotope Stage bands after Railsback et al. (2015); each record sits on its own chronology, named in the panel heading."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+    - https://doi.org/10.1594/PANGAEA.198743
+    - https://doi.org/10.1594/PANGAEA.695984
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.961025
+
+plate_rows_savgol11p2:
+  caption: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five rows sharing one horizontal age axis, showing a Savitzky-Golay filter, window 11 points, polynomial order 2. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  captiondetail: "Methane, deuterium and dust reach the present; the two gas records begin at 102 and 106 ka. Methane ends at 649 ka and has no data between 214 and 392 ka, bridged by a dashed line."
+  generated: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five rows sharing one horizontal age axis, showing a Savitzky-Golay filter, window 11 points, polynomial order 2. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+    - https://doi.org/10.1594/PANGAEA.198743
+    - https://doi.org/10.1594/PANGAEA.695984
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.961025
+
+plate_rows_smooth11:
+  caption: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five rows sharing one horizontal age axis, showing a rolling median over 11 points. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  captiondetail: "Methane, deuterium and dust reach the present; the two gas records begin at 102 and 106 ka. Methane ends at 649 ka and has no data between 214 and 392 ka, bridged by a dashed line."
+  generated: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five rows sharing one horizontal age axis, showing a rolling median over 11 points. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+    - https://doi.org/10.1594/PANGAEA.198743
+    - https://doi.org/10.1594/PANGAEA.695984
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.961025
+
+plate_rows_unsmoothed:
+  caption: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five rows sharing one horizontal age axis, showing the measured series, unsmoothed. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  captiondetail: "Methane, deuterium and dust reach the present; the two gas records begin at 102 and 106 ka. Methane ends at 649 ka and has no data between 214 and 392 ka, bridged by a dashed line."
+  generated: "The five EPICA Dome C proxy records over 0 to 806 ka, arranged as five rows sharing one horizontal age axis, showing the measured series, unsmoothed. Each record rests on its own chronology, named in the panel heading, so the curves are not on a common time axis. Marine Isotope Stage bands follow Railsback et al. (2015); a hatched band marks a stage in which that record holds no measurement. Dust is on a logarithmic scale."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.1594/PANGAEA.472484
+    - https://doi.org/10.1594/PANGAEA.198743
+    - https://doi.org/10.1594/PANGAEA.695984
+    - https://doi.org/10.1594/PANGAEA.961024
+    - https://doi.org/10.1594/PANGAEA.961025

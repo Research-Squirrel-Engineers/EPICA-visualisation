@@ -21,9 +21,14 @@ from scipy.signal import savgol_filter
 plt.rcParams["svg.hashsalt"] = "geo-lod"
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(
+    0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "ontology")
+)
 import epica_data as ed
+import numpy as np
 import epica_plates
-import epica_style as st
+import geo_lod_figures as st
+from geo_lod_captions import CaptionFile
 
 
 class Tee:
@@ -186,6 +191,55 @@ def draw_mis_bands(ax, y_min_ka, y_max_ka, covered=None, horizontal=False):
             )
 
 
+#: Ab dieser Lücke zwischen zwei Messungen gilt der Verlauf als unterbrochen.
+#: Derselbe Wert wie ed.MAX_INTERPOLATION_GAP_KA, und mit Absicht: eine Strecke,
+#: die in der Abbildung als Lücke erscheint, ist genau die Strecke, über die der
+#: Generator keine Stadiengrenze interpoliert.
+GAP_THRESHOLD_KA = ed.MAX_INTERPOLATION_GAP_KA
+
+FIGURE_LICENSE = "CC BY 4.0, Florian Thiery"
+
+SMOOTHING_TEXT = {
+    "": "The measured series is shown unsmoothed.",
+    f"_smooth{ROLLING_WINDOW}": (
+        f"A rolling median over {ROLLING_WINDOW} points is drawn in black over "
+        f"the measured series in grey."
+    ),
+    f"_savgol{SG_WINDOW}p{SG_POLYORDER}": (
+        f"A Savitzky-Golay filter over {SG_WINDOW} points at polynomial order "
+        f"{SG_POLYORDER} is drawn in black over the measured series in grey."
+    ),
+}
+
+
+def caption_for(meta, df, axis, suffix):
+    """Bildunterschrift einer Einzelabbildung, aus dem was gezeichnet wurde."""
+    n = len(df)
+    if axis["key"] == "age_ka":
+        span = (
+            f"ages from {df['age_ka'].min():.1f} to {df['age_ka'].max():.1f} ka "
+            f"on the {meta['trs']} scale"
+        )
+        bands = (
+            "Marine Isotope Stage bands follow Railsback et al. (2015); a "
+            "hatched band marks a stage without a measurement in this record."
+        )
+    else:
+        span = (
+            f"depths from {df['depth_m'].min():.1f} to {df['depth_m'].max():.1f} m"
+        )
+        bands = (
+            f"Marine Isotope Stage bands are the boundaries of Railsback et al. "
+            f"(2015) carried into depth by linear interpolation on the "
+            f"{meta['trs']} scale; a stage whose boundary falls inside a data "
+            f"gap carries no band."
+        )
+    return (
+        f"{meta['label']} from the EPICA Dome C ice core, {n} measurements, "
+        f"{span}. {SMOOTHING_TEXT[suffix]} {bands}"
+    )
+
+
 def mis_depth_bands_for(dataset_id, df):
     """MIS-Bänder in Tiefe für einen Datensatz.
 
@@ -245,7 +299,7 @@ def create_plot(
     invert_y=True,
     show_mis=False,
     mis_depth_bands=None,
-    gap_line=None,
+    age_values=None,
     rolling_window=None,
     use_savgol=False,
 ):
@@ -264,7 +318,8 @@ def create_plot(
     x_padding      : float     – relative X padding (if no manual ticks)
     invert_y       : bool      – invert Y-axis (depth increases downward)
     show_mis       : bool      – draw MIS bands and labels (age plots only)
-    gap_line       : tuple|None – (x1, y1, x2, y2) dashed line bridging data gaps
+    age_values     : pd.Series  – Alter der Messpunkte; nur zum Finden der
+                                 Unterbrechungen, auch bei Tiefendarstellungen
     rolling_window : int|None  – window size for rolling median (None = no smoothing)
     use_savgol     : bool      – use Savitzky-Golay filter instead of rolling median
                                  (SG_WINDOW, SG_POLYORDER from config)
@@ -289,54 +344,40 @@ def create_plot(
     elif mis_depth_bands:
         draw_mis_depth_bands(ax, mis_depth_bands)
 
-    if use_savgol:
-        # Original grau im Hintergrund
-        ax.plot(
-            x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
-        )
-        # Savitzky-Golay smoothed in black in foreground
-        smooth = savgol_filter(
-            x_values.values, window_length=SG_WINDOW, polyorder=SG_POLYORDER
-        )
-        ax.plot(
-            smooth, y_values, linewidth=LINE_WIDTH_SMOOTH, color=LINE_COLOR, zorder=3
-        )
-    elif rolling_window is not None:
-        # Original grau im Hintergrund
-        ax.plot(
-            x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
-        )
-        # Rolling median smoothed in black in foreground
-        import pandas as _pd
+    # Die Kurve, mit Lücken als Lücken. Die Konvention ist aus wdttest-sisal
+    # übernommen: durchgezogen innerhalb eines Laufs, gestrichelt über die
+    # Unterbrechung, und die letzte Probe davor wie die erste danach geringelt.
+    # Ohne sie zieht matplotlib eine gerade Linie über 178 ka ohne Daten, die
+    # aussieht wie ein gemessener flacher Verlauf.
+    #
+    # Die Unterbrechungen werden immer über die Alter gesucht, auch in den
+    # Tiefendarstellungen: eine Lücke ist eine Lücke in der Beprobung, und ob
+    # sie in Metern gross wirkt, hängt nur an der Kompression des Eises.
+    breaks = st.find_breaks(np.asarray(age_values), GAP_THRESHOLD_KA)
+    values = np.asarray(x_values, dtype=float)
+    positions = np.asarray(y_values, dtype=float)
 
-        smooth = (
-            _pd.Series(x_values.values)
-            .rolling(window=rolling_window, center=True, min_periods=1)
-            .median()
-        )
-        ax.plot(
-            smooth.values,
-            y_values,
-            linewidth=LINE_WIDTH_SMOOTH,
-            color=LINE_COLOR,
-            zorder=3,
-        )
+    if use_savgol or rolling_window is not None:
+        # Rohwerte blass im Hintergrund, geglättet darüber.
+        # Auch die Rohkurve bekommt Ringe und Strichelung. Der Ring markiert
+        # die letzte gemessene Probe vor der Unterbrechung - das ist eine
+        # Aussage über die Messreihe, nicht über die Glättung, und sie gilt
+        # für beide Kurven.
+        st.draw_profile(ax, values, positions, breaks,
+                        colour=LINE_COLOR_FADED, linewidth=LINE_WIDTH,
+                        zorder=2)
+        # Laufweise geglättet, nicht über die Unterbrechung hinweg.
+        if use_savgol:
+            smooth = st.smooth_by_run(values, breaks, "savgol", SG_WINDOW,
+                                      SG_POLYORDER)
+        else:
+            smooth = st.smooth_by_run(values, breaks, "median", rolling_window)
+        st.draw_profile(ax, smooth, positions, breaks,
+                        colour=LINE_COLOR, linewidth=LINE_WIDTH_SMOOTH,
+                        zorder=3)
     else:
-        ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR, zorder=2)
-
-    # Dashed connecting line for data gaps
-    # gap_line = (x1, y1, x2, y2): connects last point before gap to first point after
-    if gap_line is not None:
-        x1, y1, x2, y2 = gap_line
-        ax.plot(
-            [x1, x2],
-            [y1, y2],
-            linewidth=LINE_WIDTH,
-            color=LINE_COLOR,
-            linestyle=(0, (5, 4)),
-            dashes=(5, 4),
-            zorder=2,
-        )
+        st.draw_profile(ax, values, positions, breaks,
+                        colour=LINE_COLOR, linewidth=LINE_WIDTH, zorder=2)
 
     ax.yaxis.set_major_locator(MultipleLocator(y_major_interval))
     ax.yaxis.set_minor_locator(MultipleLocator(y_minor_interval))
@@ -439,6 +480,12 @@ def main():
     # obwohl sie seit S2 im Graphen stehen.
     frames = {k: df for k, df in ed.load_all()}
 
+    # Eine Caption-Datei je Strang, gesammelt in epica_plates.CAPTIONS: die
+    # Einzelabbildungen tragen ihre Unterschrift dort ein, die Tafeln ebenso,
+    # geschrieben wird einmal am Ende. Zwei getrennte Sammler hätten sich beim
+    # Schreiben gegenseitig überschrieben.
+    captions = epica_plates.CAPTIONS
+
     variants = [
         ("", {}),
         (f"_smooth{ROLLING_WINDOW}", {"rolling_window": ROLLING_WINDOW}),
@@ -505,13 +552,21 @@ def main():
                     log_x=override.get("log", False),
                     show_mis=axis["show_mis"],
                     mis_depth_bands=axis["mis_depth_bands"],
+                    age_values=df["age_ka"],
                     **opts,
+                )
+                captions.add(
+                    name,
+                    caption=caption_for(meta, df, axis, suffix),
+                    license=FIGURE_LICENSE,
+                    sources=[meta["doi"]],
                 )
 
     # Die mehrteiligen Tafeln kommen neben den Einzeldateien, nicht statt
     # ihrer: die Einzelabbildung zeigt eine Kurve gross, die Tafel den
     # Vergleich, den eine Einzelabbildung nicht leisten kann.
     epica_plates.build_all()
+    captions.write()
 
     print("\n" + "=" * 60)
     print(f"Done! {n_total} single figures plus the plates saved to '{OUTPUT_DIR}/'.")

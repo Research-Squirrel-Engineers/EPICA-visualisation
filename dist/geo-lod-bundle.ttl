@@ -161739,7 +161739,7 @@ geolod:SISAL_Cave_Collection a geo:FeatureCollection,
 
 geolod:SISAL_Sites_Dataset a prov:Entity ;
     dct:created "2026-08-08"^^xsd:date ;
-    owl:versionInfo "sha256:a76f0d9d28f0" ;
+    owl:versionInfo "sha256:3c1017311690" ;
     prov:wasGeneratedBy geolod:SISAL_Sites_Generation .
 
 geolod:SpeleothemSamplingEvent a owl:Class ;
@@ -214081,14 +214081,14 @@ geolod:PalaeoclimateDataCatalogue a owl:Class ;
 
 geolod:SISAL_Sites_Generation a prov:Activity ;
     rdfs:label "SISAL cave site RDF generation"@en ;
-    owl:versionInfo "sha256:a76f0d9d28f0" ;
+    owl:versionInfo "sha256:3c1017311690" ;
     prov:used geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py,
         geolod:SISAL_Sites_Generation_input_v_sites_all_csv ;
     prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
 
 geolod:SISAL_Sites_Generation_input_plot_sisal_from_csv_py a prov:Entity ;
     rdfs:label "plot_sisal_from_csv.py" ;
-    dct:identifier "sha256:df240f0328a18fc70458df58d421c0e4ba4c233e90f844333947c4132a5cc098" .
+    dct:identifier "sha256:e85f4bb0307612e4ea8386ed28c4c9b0fcb4fa282bcf32541f78850a5a6f0e3b" .
 
 geolod:SISAL_Sites_Generation_input_v_sites_all_csv a prov:Entity ;
     rdfs:label "v_sites_all.csv" ;
@@ -216156,7 +216156,7 @@ epica:depth_position_dust_9_begin a geolod:DepthPosition ;
 
 epica:generation_ch4 a prov:Activity ;
     rdfs:label "EPICA Dome C CH4 RDF generation"@en ;
-    owl:versionInfo "sha256:bb24a3cb6d2f" ;
+    owl:versionInfo "sha256:99c356f616d0" ;
     prov:used epica:generation_ch4_input_EDC_CH4_tab,
         epica:generation_ch4_input_epica_data_py,
         epica:generation_ch4_input_epica_rdf_py ;
@@ -216172,11 +216172,11 @@ epica:generation_ch4_input_epica_data_py a prov:Entity ;
 
 epica:generation_ch4_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
+    dct:identifier "sha256:4acba7e00c86b1a8fa2d5d7dcfed45905b75fae0108647e6a65e9bf93b12ee13" .
 
 epica:generation_d18o a prov:Activity ;
     rdfs:label "EPICA Dome C d18O RDF generation"@en ;
-    owl:versionInfo "sha256:7a8269320a86" ;
+    owl:versionInfo "sha256:aea08aabe15f" ;
     prov:used epica:generation_d18o_input_EPICA_Dome_C_d18O_tab,
         epica:generation_d18o_input_epica_data_py,
         epica:generation_d18o_input_epica_rdf_py ;
@@ -216192,11 +216192,11 @@ epica:generation_d18o_input_epica_data_py a prov:Entity ;
 
 epica:generation_d18o_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
+    dct:identifier "sha256:4acba7e00c86b1a8fa2d5d7dcfed45905b75fae0108647e6a65e9bf93b12ee13" .
 
 epica:generation_dd a prov:Activity ;
     rdfs:label "EPICA Dome C dD RDF generation"@en ;
-    owl:versionInfo "sha256:f149a06bc407" ;
+    owl:versionInfo "sha256:8211264173e0" ;
     prov:used epica:generation_dd_input_EPICA_Dome_C_dD_tab,
         epica:generation_dd_input_epica_data_py,
         epica:generation_dd_input_epica_rdf_py ;
@@ -216212,11 +216212,11 @@ epica:generation_dd_input_epica_data_py a prov:Entity ;
 
 epica:generation_dd_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
+    dct:identifier "sha256:4acba7e00c86b1a8fa2d5d7dcfed45905b75fae0108647e6a65e9bf93b12ee13" .
 
 epica:generation_do2n2 a prov:Activity ;
     rdfs:label "EPICA Dome C dO2N2 RDF generation"@en ;
-    owl:versionInfo "sha256:dd3d1ec9533f" ;
+    owl:versionInfo "sha256:03ac49839997" ;
     prov:used epica:generation_do2n2_input_EPICA_Dome_C_do2n2_tab,
         epica:generation_do2n2_input_epica_data_py,
         epica:generation_do2n2_input_epica_rdf_py ;
@@ -216232,11 +216232,11 @@ epica:generation_do2n2_input_epica_data_py a prov:Entity ;
 
 epica:generation_do2n2_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
+    dct:identifier "sha256:4acba7e00c86b1a8fa2d5d7dcfed45905b75fae0108647e6a65e9bf93b12ee13" .
 
 epica:generation_dust a prov:Activity ;
     rdfs:label "EPICA Dome C dust RDF generation"@en ;
-    owl:versionInfo "sha256:fbc3221dc4dc" ;
+    owl:versionInfo "sha256:a60727461745" ;
     prov:used epica:generation_dust_input_EPICA_Dome_C_dust_tab,
         epica:generation_dust_input_epica_data_py,
         epica:generation_dust_input_epica_rdf_py ;
@@ -216252,7 +216252,7 @@ epica:generation_dust_input_epica_data_py a prov:Entity ;
 
 epica:generation_dust_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
+    dct:identifier "sha256:4acba7e00c86b1a8fa2d5d7dcfed45905b75fae0108647e6a65e9bf93b12ee13" .
 
 epica:geom_borehole_domec a sf:Point,
         owl:NamedIndividual ;
@@ -274060,8 +274060,8 @@ epica:obs_ch4_0427 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0427 ;
     geolod:measuredValue 579.30000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 532.30000 ;
-    geolod:smoothedValue_savgol 572.84569 ;
+    geolod:smoothedValue_rollingMedian 546.80000 ;
+    geolod:smoothedValue_savgol 567.35147 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 10.00 ;
@@ -274084,7 +274084,7 @@ epica:obs_ch4_0428 a geolod:IceCoreObservation,
     geolod:measuredValue 585.70000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
     geolod:smoothedValue_rollingMedian 561.30000 ;
-    geolod:smoothedValue_savgol 565.52494 ;
+    geolod:smoothedValue_savgol 567.27007 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 10.00 ;
@@ -274106,8 +274106,8 @@ epica:obs_ch4_0429 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0429 ;
     geolod:measuredValue 573.70000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 565.30000 ;
-    geolod:smoothedValue_savgol 555.23986 ;
+    geolod:smoothedValue_rollingMedian 563.30000 ;
+    geolod:smoothedValue_savgol 561.36350 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 10.00 ;
@@ -274129,8 +274129,8 @@ epica:obs_ch4_0430 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0430 ;
     geolod:measuredValue 561.30000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 573.70000 ;
-    geolod:smoothedValue_savgol 545.03776 ;
+    geolod:smoothedValue_rollingMedian 565.30000 ;
+    geolod:smoothedValue_savgol 549.63175 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 10.00 ;
@@ -274152,8 +274152,8 @@ epica:obs_ch4_0431 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0431 ;
     geolod:measuredValue 505.70000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 579.30000 ;
-    geolod:smoothedValue_savgol 538.30303 ;
+    geolod:smoothedValue_rollingMedian 569.50000 ;
+    geolod:smoothedValue_savgol 532.07483 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 10.00 ;
@@ -274175,8 +274175,8 @@ epica:obs_ch4_0432 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0432 ;
     geolod:measuredValue 484.90000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 585.70000 ;
-    geolod:smoothedValue_savgol 547.83357 ;
+    geolod:smoothedValue_rollingMedian 630.00000 ;
+    geolod:smoothedValue_savgol 518.77273 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 21.00 ;
@@ -274198,8 +274198,8 @@ epica:obs_ch4_0433 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0433 ;
     geolod:measuredValue 590.10000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 590.10000 ;
-    geolod:smoothedValue_savgol 572.55851 ;
+    geolod:smoothedValue_rollingMedian 653.20000 ;
+    geolod:smoothedValue_savgol 569.44727 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 10.00 ;
@@ -274221,8 +274221,8 @@ epica:obs_ch4_0434 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0434 ;
     geolod:measuredValue 606.80000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 606.80000 ;
-    geolod:smoothedValue_savgol 611.88252 ;
+    geolod:smoothedValue_rollingMedian 636.45000 ;
+    geolod:smoothedValue_savgol 611.01273 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 10.00 ;
@@ -274244,8 +274244,8 @@ epica:obs_ch4_0435 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0435 ;
     geolod:measuredValue 653.20000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 619.70000 ;
-    geolod:smoothedValue_savgol 646.12401 ;
+    geolod:smoothedValue_rollingMedian 629.60000 ;
+    geolod:smoothedValue_savgol 643.46909 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 10.00 ;
@@ -274267,8 +274267,8 @@ epica:obs_ch4_0436 a geolod:IceCoreObservation,
     geolod:hasTimePosition epica:tp_ch4_0436 ;
     geolod:measuredValue 707.50000 ;
     geolod:measurementType epica:measurement_type_ch4 ;
-    geolod:smoothedValue_rollingMedian 628.10000 ;
-    geolod:smoothedValue_savgol 674.58252 ;
+    geolod:smoothedValue_rollingMedian 628.85000 ;
+    geolod:smoothedValue_savgol 666.81636 ;
     geolod:smoothingMethod_median epica:smoothing_rolling_median_w11 ;
     geolod:smoothingMethod_savgol epica:smoothing_savitzky_golay_w11_p2 ;
     geolod:standardDeviation 11.00 ;
@@ -375946,7 +375946,7 @@ epica:dataset_ch4 a geolod:IceCoreDataset,
         epica:obs_ch4_0734,
         epica:obs_ch4_0735,
         epica:obs_ch4_0736 ;
-    owl:versionInfo "sha256:bb24a3cb6d2f" ;
+    owl:versionInfo "sha256:99c356f616d0" ;
     dcat:record epica:obs_ch4_0001,
         epica:obs_ch4_0002,
         epica:obs_ch4_0003,
@@ -378088,7 +378088,7 @@ epica:dataset_d18o a geolod:IceCoreDataset,
         epica:obs_d18o_1376,
         epica:obs_d18o_1377,
         epica:obs_d18o_1378 ;
-    owl:versionInfo "sha256:7a8269320a86" ;
+    owl:versionInfo "sha256:aea08aabe15f" ;
     dcat:record epica:obs_d18o_0001,
         epica:obs_d18o_0002,
         epica:obs_d18o_0003,
@@ -380302,7 +380302,7 @@ epica:dataset_do2n2 a geolod:IceCoreDataset,
         epica:obs_do2n2_0820,
         epica:obs_do2n2_0821,
         epica:obs_do2n2_0822 ;
-    owl:versionInfo "sha256:dd3d1ec9533f" ;
+    owl:versionInfo "sha256:03ac49839997" ;
     dcat:record epica:obs_do2n2_0001,
         epica:obs_do2n2_0002,
         epica:obs_do2n2_0003,
@@ -381952,7 +381952,7 @@ epica:dataset_dd a geolod:IceCoreDataset,
         epica:obs_dd_0812,
         epica:obs_dd_0813,
         epica:obs_dd_0814 ;
-    owl:versionInfo "sha256:f149a06bc407" ;
+    owl:versionInfo "sha256:8211264173e0" ;
     dcat:record epica:obs_dd_0001,
         epica:obs_dd_0002,
         epica:obs_dd_0003,
@@ -383946,7 +383946,7 @@ epica:dataset_dust a geolod:IceCoreDataset,
         epica:obs_dust_1152,
         epica:obs_dust_1153,
         epica:obs_dust_1154 ;
-    owl:versionInfo "sha256:fbc3221dc4dc" ;
+    owl:versionInfo "sha256:a60727461745" ;
     dcat:record epica:obs_dust_0001,
         epica:obs_dust_0002,
         epica:obs_dust_0003,

@@ -67,6 +67,8 @@ import epica_data as ed  # noqa: E402
 from rdflib import Graph, Namespace, URIRef, Literal  # noqa: E402
 from rdflib.namespace import RDF, RDFS, OWL, XSD, DCTERMS as DCT, PROV  # noqa: E402
 
+import geo_lod_figures as gf  # noqa: E402
+
 from geo_lod_utils import (  # noqa: E402
     GEO_LOD_RELEASE,
     add_generation_provenance,
@@ -479,15 +481,15 @@ def add_observations(
     median_method = EPICA[f"smoothing_rolling_median_w{ROLLING_WINDOW}"]
     savgol_method = EPICA[f"smoothing_savitzky_golay_w{SG_WINDOW}_p{SG_POLYORDER}"]
 
+    # Geglättet wird je ununterbrochenem Lauf, nicht über die ganze Reihe: ein
+    # zentriertes Fenster über eine Datenlücke hinweg mischt Messungen von
+    # beiden Seiten und schreibt einen Wert ins RDF, der zu keiner Tiefe im Kern
+    # gehört. Dieselbe Funktion und dieselbe Schwelle wie in den Abbildungen.
     values = df["value"].to_numpy()
-    smooth_median = (
-        pd.Series(values).rolling(window=ROLLING_WINDOW, center=True, min_periods=1)
-        .median()
-        .to_numpy()
-    )
-    smooth_savgol = savgol_filter(
-        values, window_length=min(SG_WINDOW, len(values)), polyorder=SG_POLYORDER
-    )
+    breaks = gf.find_breaks(df["age_ka"].to_numpy(), ed.MAX_INTERPOLATION_GAP_KA)
+    smooth_median = gf.smooth_by_run(values, breaks, "median", ROLLING_WINDOW)
+    smooth_savgol = gf.smooth_by_run(values, breaks, "savgol", SG_WINDOW,
+                                     SG_POLYORDER)
 
     has_section = "depth_top_m" in df.columns
     n_membership = 0

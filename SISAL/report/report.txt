@@ -22,23 +22,17 @@ Loading: v_data_144_botuvera.csv
 
   Generating 6 plots for Botuverá cave …
     → 144_botuvera_d18o_age_unsmoothed
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_unsmoothed.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_unsmoothed.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_unsmoothed.svg / .jpg
     → 144_botuvera_d18o_age_smooth11
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_smooth11.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_smooth11.svg / .jpg
     → 144_botuvera_d18o_age_savgol11p2
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_savgol11p2.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_savgol11p2.svg / .jpg
     → 144_botuvera_d13c_age_unsmoothed
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_unsmoothed.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_unsmoothed.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_unsmoothed.svg / .jpg
     → 144_botuvera_d13c_age_smooth11
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_smooth11.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_smooth11.svg / .jpg
     → 144_botuvera_d13c_age_savgol11p2
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_savgol11p2.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_savgol11p2.svg / .jpg
 
 ────────────────────────────────────────────────────────────
 Loading: v_data_145_corchia.csv
@@ -51,23 +45,17 @@ Loading: v_data_145_corchia.csv
 
   Generating 6 plots for Antro del Corchia …
     → 145_corchia_d18o_age_unsmoothed
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_unsmoothed.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_unsmoothed.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_unsmoothed.svg / .jpg
     → 145_corchia_d18o_age_smooth11
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_smooth11.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_smooth11.svg / .jpg
     → 145_corchia_d18o_age_savgol11p2
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_savgol11p2.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_savgol11p2.svg / .jpg
     → 145_corchia_d13c_age_unsmoothed
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_unsmoothed.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_unsmoothed.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_unsmoothed.svg / .jpg
     → 145_corchia_d13c_age_smooth11
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_smooth11.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_smooth11.svg / .jpg
     → 145_corchia_d13c_age_savgol11p2
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_savgol11p2.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_savgol11p2.svg / .jpg
 
 ────────────────────────────────────────────────────────────
 Loading: v_data_140_sanbao.csv
@@ -80,14 +68,11 @@ Loading: v_data_140_sanbao.csv
 
   Generating 3 plots for Sanbao cave …
     → 140_sanbao_d18o_age_unsmoothed
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_unsmoothed.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_unsmoothed.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_unsmoothed.svg / .jpg
     → 140_sanbao_d18o_age_smooth11
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_smooth11.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_smooth11.svg / .jpg
     → 140_sanbao_d18o_age_savgol11p2
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_savgol11p2.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_savgol11p2.svg / .jpg
 
 ────────────────────────────────────────────────────────────
 Loading: v_data_275_buracagloriosa.csv
@@ -100,23 +85,17 @@ Loading: v_data_275_buracagloriosa.csv
 
   Generating 6 plots for Buraca Gloriosa …
     → 275_buracagloriosa_d18o_age_unsmoothed
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.svg / .jpg
     → 275_buracagloriosa_d18o_age_smooth11
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.svg / .jpg
     → 275_buracagloriosa_d18o_age_savgol11p2
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.svg / .jpg
     → 275_buracagloriosa_d13c_age_unsmoothed
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.svg / .jpg
     → 275_buracagloriosa_d13c_age_smooth11
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.svg / .jpg
     → 275_buracagloriosa_d13c_age_savgol11p2
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.jpg
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg / .jpg
 
 ────────────────────────────────────────────────────────────
 RDF Export  (geo-lod SISAL Ontology + data)
