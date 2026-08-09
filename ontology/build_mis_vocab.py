@@ -230,8 +230,14 @@ def build_trs_ttl() -> str:
 # GENERATED FILE - do not edit by hand.
 # Source: ontology/build_mis_vocab.py
 #
-# Currently the two chronologies behind the MIS vocabulary. The ice-core
-# chronologies (EDC1, EDC2, EDC3, AICC2023) are added in S2.
+# Two groups: the chronologies behind the MIS vocabulary, and the ice-core
+# chronologies the EPICA records are expressed in (added S2).
+#
+# The ice-core entries are also geolod:IceCoreChronology, so one node serves
+# both roles: an observation names it with geolod:ageChronology, and the
+# time:TimePosition of that observation names the same node with time:hasTRS.
+# Without that, a consumer would have to know that trs:EDC2 and some separate
+# "EDC2 chronology" individual were meant to be the same thing.
 # ==========================================================================
 
 {PREFIXES}
@@ -240,6 +246,10 @@ def build_trs_ttl() -> str:
     rdfs:label   "geo-lod Temporal Reference Systems"@en ;
     rdfs:comment "Temporal reference systems used by geo-lod, one per chronology. All express age in thousands of years before present (ka BP)."@en ;
     owl:imports  <http://w3id.org/geo-lod/> .
+
+# --------------------------------------------------------------------------
+# Chronologies of the MIS vocabulary
+# --------------------------------------------------------------------------
 
 trs:LR04
     a time:TRS, owl:NamedIndividual ;
@@ -252,6 +262,58 @@ trs:Railsback2015
     rdfs:label   "Railsback et al. (2015) MIS substage chronology (ka BP)"@en ;
     rdfs:comment "Age scale of the optimised lettered substage scheme of Railsback et al. (2015). Ages in thousands of years before present."@en ;
     dct:source   mis:source_railsback2015 .
+
+# --------------------------------------------------------------------------
+# Ice-core chronologies, EPICA Dome C
+# --------------------------------------------------------------------------
+# Five, not three. At a given depth in an ice core the trapped air is younger
+# than the ice enclosing it, because the bubbles only close off some tens of
+# metres below the surface. A depth-age model therefore yields two different
+# ages, and a record has to say which of them it uses. AICC2023 is published
+# with both, and the two EPICA records that cite it use one each: the d18O of
+# O2 is on the gas age, dO2/N2 on the ice age. Merging them into a single
+# "AICC2023" would silently shift one of the two curves against the other.
+
+# Every entry names its phase. The suffix is not cosmetic: the CH4 record and
+# the deuterium record both cite EDC2, but the first dates trapped air and the
+# second the ice around it. Reading both as one scale puts the MIS 5 boundary
+# at two depths 27 m apart with nothing in the graph to explain why.
+
+trs:EDC1-gas
+    a time:TRS, geolod:IceCoreChronology, owl:NamedIndividual ;
+    rdfs:label   "EDC1 gas age, EPICA Dome C (ka BP)"@en ;
+    rdfs:comment "First EPICA Dome C timescale, gas phase. Superseded by EDC2, kept because the published CH4 record carries both and dropping one would hide that the age of a measurement depends on the model chosen."@en ;
+    dct:source   <https://doi.org/10.1038/nature02599> .
+
+trs:EDC2-gas
+    a time:TRS, geolod:IceCoreChronology, owl:NamedIndividual ;
+    rdfs:label   "EDC2 gas age, EPICA Dome C (ka BP)"@en ;
+    rdfs:comment "Gas-age branch of the EPICA Dome C timescale of Schwander et al. (2001). Dates the air trapped in the bubbles. Used by the CH4 record."@en ;
+    dct:source   <https://doi.org/10.1029/2000JD900527> .
+
+trs:EDC2-ice
+    a time:TRS, geolod:IceCoreChronology, owl:NamedIndividual ;
+    rdfs:label   "EDC2 ice age, EPICA Dome C (ka BP)"@en ;
+    rdfs:comment "Ice-age branch of the same timescale. Dates the ice matrix. Used by the deuterium record, whose averaging intervals the source states in years before 1950 on EDC2."@en ;
+    dct:source   <https://doi.org/10.1029/2000JD900527> .
+
+trs:EDC3-ice
+    a time:TRS, geolod:IceCoreChronology, owl:NamedIndividual ;
+    rdfs:label   "EDC3 ice age, EPICA Dome C (ka BP)"@en ;
+    rdfs:comment "EPICA Dome C timescale of Parrenin et al. (2007), an ice-flow age model. Used by the dust record, which is measured on the ice."@en ;
+    dct:source   <https://doi.org/10.5194/cp-3-485-2007> .
+
+trs:AICC2023-gas
+    a time:TRS, geolod:IceCoreChronology, owl:NamedIndividual ;
+    rdfs:label   "AICC2023 gas age, EPICA Dome C (ka BP)"@en ;
+    rdfs:comment "Gas-age branch of the Antarctic Ice Core Chronology 2023. Dates the air trapped in the bubbles, which is younger than the surrounding ice."@en ;
+    dct:source   <https://doi.org/10.5194/cp-19-2257-2023> .
+
+trs:AICC2023-ice
+    a time:TRS, geolod:IceCoreChronology, owl:NamedIndividual ;
+    rdfs:label   "AICC2023 ice age, EPICA Dome C (ka BP)"@en ;
+    rdfs:comment "Ice-age branch of the Antarctic Ice Core Chronology 2023. Dates the ice matrix itself. Offset against the gas age of the same depth by the gas-age/ice-age difference."@en ;
+    dct:source   <https://doi.org/10.5194/cp-19-2257-2023> .
 """
 
 

@@ -3,14 +3,14 @@
                           EPICA + SISAL + CI Pipeline                           
 ════════════════════════════════════════════════════════════════════════════════
 
-  Timestamp: 2026-08-08 15:53:36
+  Timestamp: 2026-08-09 14:45:40
   Directory: C:\git\GeoScience-FAIRification-LOD
 
 
 ────────────────────────────────────────────────────────────────────────────────
   1. Preparation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:53:36
+  Start: 14:45:40
 
   Directory structure:
   ✓ EPICA directory found: EPICA/
@@ -19,7 +19,8 @@
   ✓ Ontology directory found: ontology/
 
   Scripts:
-  ✓ EPICA script found: plot_epica_from_tab.py
+  ✓ EPICA RDF script found: epica_rdf.py
+  ✓ EPICA plot script found: plot_epica_from_tab.py
   ✓ SISAL script found: plot_sisal_from_csv.py
   ✓ CI script found: ci_pipeline.py
 
@@ -28,17 +29,17 @@
 ────────────────────────────────────────────────────────────────────────────────
   2. Regenerate canonical ontology
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:53:36
+  Start: 14:45:40
 
   ▶ Regeneriere kanonische Ontologie-Dateien aus geo_lod_utils.py ...
-  ✓ geo_lod_core.ttl geschrieben (18.8 KB)
+  ✓ geo_lod_core.ttl geschrieben (25.6 KB)
 
   ⏱  2. Regenerate canonical ontology: 0.0s
 
 ────────────────────────────────────────────────────────────────────────────────
   3. Regenerate controlled vocabularies
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:53:36
+  Start: 14:45:40
 
   ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...
   ✓ ontology\vocab\mis.ttl: 228 stages, 87 substages, 792 assignments (564.4 KB)
@@ -49,11 +50,49 @@
   ⏱  3. Regenerate controlled vocabularies: 0.0s
 
 ────────────────────────────────────────────────────────────────────────────────
-  4. EPICA Dome C (Ice Core)
+  4. EPICA Dome C (RDF)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:53:36
+  Start: 14:45:40
 
-  ▶ Starting EPICA Dome C Processing ...
+  ▶ Starting EPICA Dome C RDF generation ...
+    Path: C:\git\GeoScience-FAIRification-LOD\EPICA\epica_rdf.py
+    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
+============================================================
+EPICA Dome C - RDF generator (five records from PANGAEA .tab)
+============================================================
+
+Building graph ...
+  ch4      736 observations,   736 stage memberships,  15 boundary depths  (EDC2-gas)
+  dd       814 observations,   814 stage memberships,  17 boundary depths  (EDC2-ice)
+  dust    1154 observations,  1154 stage memberships,  19 boundary depths  (EDC3-ice)
+  d18o    1378 observations,  1378 stage memberships,  15 boundary depths  (AICC2023-gas)
+  do2n2    822 observations,   822 stage memberships,  15 boundary depths  (AICC2023-ice)
+
+  187,622 triples
+  4,904 observations over 5 records
+  4,904 stage memberships
+  81 stage boundaries carried into depth
+
+  Turtle:   C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\epica_dome_c.ttl
+  Ontology: C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\epica_ontology.ttl
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_taxonomy.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_epica.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_sisal.mermaid
+  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_ci.mermaid
+
+============================================================
+Done.
+============================================================
+  ✓ EPICA Dome C RDF generation completed successfully
+
+  ⏱  4. EPICA Dome C (RDF): 18.2s
+
+────────────────────────────────────────────────────────────────────────────────
+  5. EPICA Dome C (figures)
+────────────────────────────────────────────────────────────────────────────────
+  Start: 14:45:58
+
+  ▶ Starting EPICA Dome C figures ...
     Path: C:\git\GeoScience-FAIRification-LOD\EPICA\plot_epica_from_tab.py
     PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
 ============================================================
@@ -61,16 +100,8 @@ EPICA Dome C – Plot Generator (TAB files, complete)
 ============================================================
 
 [1/2] Loading CH4 TAB file …
-  CH4 loaded: 736 data points
-  Depth: 99.3 – 3059.1 m
-  Age (EDC2, ka BP): 0.0 – 648.7
-  CH4: 343.5 – 907.0 ppbv
 
 [2/2] Loading d18O TAB file …
-  d18O loaded: 1378 data points
-  Depth: 1410.8 – 3191.1 m
-  Age (ka BP): 101.7 – 805.8
-  d18O: -0.4759 – 1.4573 ‰
 
 ────────────────────────────────────────────────────────────
 Generating plots …
@@ -124,33 +155,18 @@ Generating plots …
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg
 
-────────────────────────────────────────────────────────────
-RDF Export …
-────────────────────────────────────────────────────────────
-  Writing CH4 observations …
-  Writing δ¹⁸O observations …
-  ✓ 40,278 triples written
-  ✓ Turtle:  C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\epica_dome_c.ttl
-  ✓ Core ontology : C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\geo_lod_core.ttl
-  ✓ EPICA ontology: C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\epica_ontology.ttl
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_taxonomy.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_epica.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_sisal.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_ci.mermaid
-  ℹ  Combined collection skipped (feature not implemented)
-
 ============================================================
 Done! All 12 plots saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
 Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
 ============================================================
-  ✓ EPICA Dome C Processing completed successfully
+  ✓ EPICA Dome C figures completed successfully
 
-  ⏱  4. EPICA Dome C (Ice Core): 25.5s
+  ⏱  5. EPICA Dome C (figures): 7.6s
 
 ────────────────────────────────────────────────────────────────────────────────
-  5. SISAL (Speleothems)
+  6. SISAL (Speleothems)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:54:02
+  Start: 14:46:06
 
   ▶ Starting SISAL Processing ...
     Path: C:\git\GeoScience-FAIRification-LOD\SISAL\plot_sisal_from_csv.py
@@ -320,12 +336,12 @@ RDF files saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\rdf/'
 Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt
   ✓ SISAL Processing completed successfully
 
-  ⏱  5. SISAL (Speleothems): 81.8s
+  ⏱  6. SISAL (Speleothems): 30.8s
 
 ────────────────────────────────────────────────────────────────────────────────
-  6. Campanian Ignimbrite (CI Findspots)
+  7. Campanian Ignimbrite (CI Findspots)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:55:23
+  Start: 14:46:37
 
   ▶ Starting CI Findspot Processing ...
     Path: C:\git\GeoScience-FAIRification-LOD\CI\ci_pipeline.py
@@ -351,12 +367,12 @@ SUCCESS
 Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
   ✓ CI Findspot Processing completed successfully
 
-  ⏱  6. Campanian Ignimbrite (CI Findspots): 1.8s
+  ⏱  7. Campanian Ignimbrite (CI Findspots): 0.9s
 
 ────────────────────────────────────────────────────────────────────────────────
-  7. RDF Bundle & Validation
+  8. RDF Bundle & Validation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 15:55:25
+  Start: 14:46:38
 
   ▶ Sammle TTL-Quellen ...
     Ontologie-Dateien: 4
@@ -382,47 +398,35 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
 
   ▶ Parse & merge ...
     + crm_bridging.ttl:       26 Triples
-    + geo_lod_core.ttl:      264 Triples
-    + trs.ttl:       14 Triples
+    + geo_lod_core.ttl:      338 Triples
+    + trs.ttl:       50 Triples
     + mis.ttl:   10,933 Triples
-    + epica_dome_c.ttl:   40,278 Triples (40,277 new, 1 dup)
-    + epica_ontology.ttl:      180 Triples (162 new, 18 dup)
-    + sisal_140_sanbao_data.ttl:   70,075 Triples (70,069 new, 6 dup)
+    + epica_dome_c.ttl:  187,622 Triples
+    + epica_ontology.ttl:       81 Triples (78 new, 3 dup)
+    + sisal_140_sanbao_data.ttl:   70,075 Triples (70,074 new, 1 dup)
     + sisal_144_botuvera_data.ttl:   21,795 Triples (21,782 new, 13 dup)
     + sisal_145_corchia_data.ttl:   29,651 Triples (29,638 new, 13 dup)
     + sisal_275_buracagloriosa_data.ttl:   27,327 Triples (27,314 new, 13 dup)
-    + sisal_ontology.ttl:      166 Triples (143 new, 23 dup)
+    + sisal_ontology.ttl:      166 Triples (145 new, 21 dup)
     + sisal_sites.ttl:    3,679 Triples (3,662 new, 17 dup)
     + ci_findspots.ttl:    3,307 Triples
 
-  ▶ Serialisiere Bundle (207,591 Triples) ...
-  ✓ geo-lod-bundle.ttl           10.4 MB   17.3s  (Turtle - kompakt und lesbar, Release-Format)
+  ▶ Serialisiere Bundle (354,969 Triples) ...
+  ✓ geo-lod-bundle.ttl           16.8 MB   14.1s  (Turtle - kompakt und lesbar, Release-Format)
 
   ▶ CIDOC-CRM Coverage-Check (strict CRM-family) ...
-    Instanz-Klassen geprüft: 56
-    ✓ mit CRM-Anker:         56
+    Instanz-Klassen geprüft: 51
+    ✓ mit CRM-Anker:         51
     ✗ ohne CRM-Anker:        0
 
   ▶ SHACL-Validierung ...
     + lade Shapes: core_shapes.ttl
     + lade Shapes: mis_shapes.ttl
-    Dauer: 55.9s
-    SHACL-Ergebnis: 0 Violation(s), 4 Warning(s)
+    Dauer: 26.7s
+    SHACL-Ergebnis: 0 Violation(s), 2 Warning(s)
       Validation Report
       Conforms: False
-      Results (4):
-      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-      	Severity: sh:Warning
-      	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
-      	Focus Node: geolod:PANGAEA_CH4_Source
-      	Result Path: dct:source
-      	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
-      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-      	Severity: sh:Warning
-      	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
-      	Focus Node: geolod:PANGAEA_d18O_Source
-      	Result Path: dct:source
-      	Message: DataSource should reference dct:source URI (DOI, repository, etc.).
+      Results (2):
       Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
       	Severity: sh:Warning
       	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("DataSource should reference dct:source URI (DOI, repository, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:source ; sh:severity sh:Warning ]
@@ -439,39 +443,39 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
     ⚠  Nur Warnings - Bundle gilt als gültig.
 
   ▶ Sanity-Report ...
-    Triples:         207,591
-    Subjekte:        17,224
-    Distinkte Typen: 62
-    Distinkte Props: 108
+    Triples:         354,969
+    Subjekte:        31,056
+    Distinkte Typen: 57
+    Distinkte Props: 121
 
     Top-10 Klassen nach Instanzzahl:
        9,110  http://w3id.org/geo-lod/Delta18OSpeleothemObservation
+       5,779  http://www.w3.org/2002/07/owl#NamedIndividual
+       5,587  http://www.w3.org/2006/time#TimePosition
+       4,904  http://w3id.org/geo-lod/MISMembershipAssignment
+       4,904  http://w3id.org/geo-lod/IceCoreObservation
        3,278  http://w3id.org/geo-lod/Delta13CSpeleothemObservation
-       2,114  http://www.ics.forth.gr/isl/CRMsci/S4_Observation
-       2,114  http://www.w3.org/ns/sosa/Observation
-         792  http://w3id.org/geo-lod/MISAttributeAssignment
-         461  http://www.w3.org/2006/time#TimePosition
-         380  http://www.opengis.net/ont/sf#Point
+         873  http://w3id.org/geo-lod/MISAttributeAssignment
+         814  http://w3id.org/geo-lod/SampleSection
+         381  http://www.opengis.net/ont/sf#Point
          315  http://www.w3.org/2004/02/skos/core#Concept
-         305  http://w3id.org/geo-lod/Cave
-         228  http://w3id.org/geo-lod/MarineIsotopeStage
 
     Top-10 Properties nach Vorkommen:
-      20,110  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-      15,055  http://www.w3.org/ns/prov#wasDerivedFrom
-      14,502  http://w3id.org/geo-lod/smoothedValue_rollingMedian
-      14,502  http://w3id.org/geo-lod/smoothingMethod_savgol
-      14,502  http://www.w3.org/ns/sosa/observedProperty
-      14,502  http://www.w3.org/ns/sosa/hasFeatureOfInterest
-      14,502  http://w3id.org/geo-lod/smoothingMethod_median
-      14,502  http://w3id.org/geo-lod/smoothedValue_savgol
-      14,502  http://w3id.org/geo-lod/measurementType
-      12,849  http://w3id.org/geo-lod/ageKaBP
+      37,585  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+      22,879  http://w3id.org/geo-lod/ageKaBP
+      18,007  http://www.w3.org/ns/prov#wasDerivedFrom
+      17,292  http://w3id.org/geo-lod/smoothedValue_rollingMedian
+      17,292  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+      17,292  http://w3id.org/geo-lod/smoothedValue_savgol
+      17,292  http://www.w3.org/ns/sosa/observedProperty
+      17,292  http://w3id.org/geo-lod/measuredValue
+      17,292  http://w3id.org/geo-lod/measurementType
+      17,292  http://w3id.org/geo-lod/smoothingMethod_savgol
 
     CRM-Coverage:   ✓
     SHACL:          ✓
 
-  ⏱  7. RDF Bundle & Validation: 123.9s
+  ⏱  8. RDF Bundle & Validation: 85.8s
 
 ════════════════════════════════════════════════════════════════════════════════
                                     Summary                                     
@@ -486,11 +490,12 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
     1. Preparation                               0.0s    0.0%
     2. Regenerate canonical ontology             0.0s    0.0%
     3. Regenerate controlled vocabularies        0.0s    0.0%
-    4. EPICA Dome C (Ice Core)                  25.5s   10.9%
-    5. SISAL (Speleothems)                      81.8s   35.1%
-    6. Campanian Ignimbrite (CI Findspots)       1.8s    0.8%
-    7. RDF Bundle & Validation                 123.9s   53.2%
+    4. EPICA Dome C (RDF)                       18.2s   12.7%
+    5. EPICA Dome C (figures)                    7.6s    5.3%
+    6. SISAL (Speleothems)                      30.8s   21.5%
+    7. Campanian Ignimbrite (CI Findspots)       0.9s    0.6%
+    8. RDF Bundle & Validation                  85.8s   59.9%
 
-  Total duration: 233.0 seconds
+  Total duration: 143.4 seconds
   Log saved to: C:\git\GeoScience-FAIRification-LOD\pipeline_report.txt
 ✓ Pipeline completed successfully!

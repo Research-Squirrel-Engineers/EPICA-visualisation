@@ -201,6 +201,19 @@ lesen hier ab, statt neu zu diskutieren.
 | `dist/geo-lod-bundle.nt` | gitignoriert. N-Triples ist nicht byte-stabil, weil rdflib beim Parsen neue Blank-Node-Labels vergibt und sie im Klartext ausgibt; Turtle bleibt stabil, dort stehen dieselben Knoten inline als `[ ]` | 2026-08-08 |
 | Aggregatdateien im Bundle | `sisal_all_data.ttl` wird übersprungen. Sie ist die Vereinigung der vier Höhlendateien, trägt geprüft null Tripel bei und kostete ein Drittel der Parse-Zeit | 2026-08-08 |
 | Logdateien | mit `newline="\n"` geschrieben. Sonst schreibt Python auf Windows CRLF, während Git nach `.gitattributes` LF ablegt — die Arbeitskopie wiche dauerhaft von ihrer eigenen abgelegten Form ab | 2026-08-08 |
+| Ebene, an der eine EPICA-Beobachtung hängt | Kern als Feature of Interest; ein `geolod:SampleSection` nur dort, wo die Quelle das Intervall nennt — das ist allein der δD-Datensatz mit Tiefe top/bottom und Alter min/max. Bei den übrigen vier wäre ein Probenknoten eine erfundene Mächtigkeit | 2026-08-09 |
+| CH₄ mit zwei Altersspalten | beide ins RDF, EDC2 leitend. `geolod:ageChronology` an der Beobachtung sagt, welcher der beiden `time:TimePosition` das materialisierte `geolod:ageKaBP` folgt | 2026-08-09 |
+| MIS-Zuweisung je Beobachtung | ja, nur die leitende Lesart (Railsback). Eigene Klasse `geolod:MISMembershipAssignment`, weil `geolod:MISAttributeAssignment` Eigenschaften *an* ein Stadium hängt und diese hier ein Stadium *an* etwas anderes; die Shapes unterscheiden sich entsprechend | 2026-08-09 |
+| Nur Stadien, keine Substadien für die Zugehörigkeit | Railsback löst Substadien nur über einen Teil des Bereichs auf. Stadien-Zugehörigkeit ist durchgehend vollständig, Substadien wären lückenhaft; über `skos:broader` bleiben sie erreichbar | 2026-08-09 |
+| Glättungswerte im RDF | bleiben. Die publizierten Abbildungen zeigen geglättete Kurven, also muss der Graph beantworten können, was gezeichnet wurde; die Parameter hängen als eigene Knoten daran | 2026-08-09 |
+| Bohrstelle Dome C | ein `geolod:DrillingSite`, darunter zwei `geolod:Borehole` (EDC99 und DomeC) mit je eigener Geometrie und `crm:P89_falls_within`. Die beiden PANGAEA-Events geben Koordinaten 1,3 km auseinander; keine wird verworfen, keine gemittelt. Der Site verweist per `geo:hasGeometry` auf die EDC99-Geometrie, statt die Koordinate ein zweites Mal hinzuschreiben | 2026-08-09 |
+| IRI-Muster Instanzdaten EPICA | klein mit Unterstrich: `epica:obs_ch4_0001`, `epica:tp_ch4_0001`, `epica:site_dome_c`. Klassen und Properties bleiben flach unter `…/geo-lod/` | 2026-08-09 |
+| MIS-Grenze in Tiefe ins RDF | ja, als `geolod:MISAttributeAssignment` mit `geolod:MISBoundaryDepth`, einer `geolod:DepthPosition` als Wert und der Chronologie an der Zuweisung. Lineare Interpolation, **nicht** extrapoliert: eine Grenze jenseits des tiefsten Messpunkts bekommt keine Zuweisung. 81 Zuweisungen über fünf Datensätze | 2026-08-09 |
+| TRS je Chronologie **und Phase** | sechs statt drei: `EDC1-gas`, `EDC2-gas`, `EDC2-ice`, `EDC3-ice`, `AICC2023-gas`, `AICC2023-ice`. **Korrigiert A6 vom 2026-08-08**, wo nur AICC2023 getrennt war. Beleg aus den Headern: CH₄ ist Gasalter auf EDC2, δD Eisalter auf EDC2 — ungetrennt liegt die MIS-5-Grenze bei beiden 27 m auseinander, ohne dass der Graph sagen könnte warum. Mit Trennung liegen die drei Eisalter-Skalen bei 1734–1756 m, die beiden Gasalter-Skalen bei 1760–1782 m, was der Gas-Eis-Altersdifferenz entspricht | 2026-08-09 |
+| `geolod:Chronology` als `time:TRS` | umgesetzt. Ein Knoten in zwei Rollen: `geolod:ageChronology` an der Beobachtung und `time:hasTRS` an ihrer `time:TimePosition` zeigen auf dasselbe Individuum unter `…/trs/` | 2026-08-09 |
+| δ¹⁸O-Datensatz | ist δ¹⁸O **von O₂ aus der Luft**, kein Wasserisotop. Der Header sagt `δ18O, gas [‰] … COMMENT: of O2`. Die alte Ontologie beschrieb ihn als „stable water isotope ratio … from the ice matrix“ — falsch. Das Wasserisotop des Kerns ist δD. Betrifft auch die Achsenbeschriftung im ECEASST-Beitrag | 2026-08-09 |
+| Provenienz aus `data.yaml` | als Python-Konstante `DATASETS` in `EPICA/epica_data.py` nachgenutzt, nicht als YAML. Nachnutzung heisst kopieren (A3), und für fünf Datensätze lohnt keine PyYAML-Abhängigkeit. Werte gegen die `.tab`-Header geprüft, zwei korrigiert (δ¹⁸O-Beschreibung, Gas/Eis-Trennung) | 2026-08-09 |
+| EPICA-Schritt in `main.py` | zweigeteilt: erst RDF (`epica_rdf.py`), dann Abbildungen (`plot_epica_from_tab.py`). So fällt ein Datenfehler auf, bevor die Abbildungen entstehen | 2026-08-09 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -217,12 +230,12 @@ noch nicht entschieden.
 | `/geo-lod/strat/` | `strat:` — Semantic Layer der WD1-Familie | `strat.ttl` in `wdttest-tables` | aktiv |
 | `/geo-lod/vocab/mis/` | MIS-Stadien und -Substadien, Grenzen als E13 | `ontology/vocab/mis.ttl` | aktiv (S1) |
 | `/geo-lod/vocab/tephra/` | Marker-Tephren, Join zwischen WD1, ELSA und CI | `ontology/vocab/tephra.ttl` | reserviert (S5) |
-| `/geo-lod/epica/` | Instanzdaten Eiskern | `EPICA/rdf/` | beschlossen (S2) |
+| `/geo-lod/epica/` | Instanzdaten Eiskern | `EPICA/rdf/` | aktiv (S2) |
 | `/geo-lod/sisal/` | Instanzdaten Speläotheme, inkl. der 305 Cave-Sites | `SISAL/rdf/` | beschlossen (S3c) |
 | `/geo-lod/ci/` | Instanzdaten Campanian-Ignimbrite-Fundstellen | `CI/rdf/` | beschlossen (S4-Umzug) |
 | `/geo-lod/elsa/` | Instanzdaten Maarsedimente | noch nicht vorhanden | beschlossen (S5) |
 | `/geo-lod/shapes/` | SHACL-Gate, `core_shapes.ttl` plus `strat`-Shapes | `ontology/shapes/` | geplant (S4) |
-| `/geo-lod/trs/` | Temporal Reference Systems, eine je Chronologie: `EDC1`, `EDC2`, `EDC3`, `AICC2023-gas`, `AICC2023-ice`, später SISAL und ELSA | `ontology/trs.ttl` | aktiv (S1: `LR04`, `Railsback2015`); Eiskern-TRS folgen in S2 |
+| `/geo-lod/trs/` | Temporal Reference Systems, eine je Chronologie **und Phase**: `LR04`, `Railsback2015`, `EDC1-gas`, `EDC2-gas`, `EDC2-ice`, `EDC3-ice`, `AICC2023-gas`, `AICC2023-ice`, später SISAL und ELSA | `ontology/trs.ttl` | aktiv (S1 + S2) |
 
 **Was hier bewusst nicht steht.** `metadata/ontology.ttl` und
 `metadata/shapes.ttl` der WD1-Familie liegen unter `wdt:`, nicht unter
@@ -248,7 +261,7 @@ noch nicht entschieden.
 |---|---|---|---|---|
 | S0 | Festlegungen, kein Code | — | — | erledigt 2026-08-08 |
 | S1 | Gemeinsame Vokabulare | geo-lod | S0 | erledigt 2026-08-08 |
-| S2 | EPICA nach RDF | geo-lod | S0, S1 | offen |
+| S2 | EPICA nach RDF | geo-lod | S0, S1 | RDF erledigt 2026-08-09; Tafeln offen |
 | S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | offen |
 | S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | offen |
 | S3c | SISAL nach RDF | geo-lod | S0, S1, S3b | offen |
@@ -604,6 +617,35 @@ dazu mehrteilige Abbildungen neben den bestehenden Einzeldateien.
 **Fertig, wenn:** die Pipeline grün durchläuft, SHACL sauber ist und zwei Läufe
 byte-identisch sind.
 
+**Stand 2026-08-09: RDF fertig, Tafeln offen.** Pipeline grün, 0 SHACL-
+Violations, 48 erzeugte Dateien über zwei Läufe byte-identisch. Bundle
+354 969 Tripel (vorher 207 591), davon EPICA 187 622. Was entstanden ist:
+
+| Datei | Rolle |
+|---|---|
+| `data/raw/epica/*.tab` | die fünf PANGAEA-Dateien, unverändert |
+| `EPICA/epica_data.py` | ein Ladeweg für Generator und Plots, plus Provenienzmanifest |
+| `EPICA/epica_rdf.py` | der Generator, Ausgabe nach `EPICA/rdf/` |
+| `EPICA/plot_epica_from_tab.py` | nur noch Abbildungen; RDF-Hälfte entfernt |
+
+4 904 Beobachtungen, 5 587 `time:TimePosition` (die Differenz sind die 683
+EDC1-Alter des CH₄-Datensatzes), 4 904 Stadien-Zugehörigkeiten, 814
+`geolod:SampleSection` aus dem δD-Datensatz, 81 Grenzen in Tiefe.
+
+Entfallen: `EPICA/*.tab` und `src/EPICA_Dome_C_*.csv` (Rohdaten jetzt unter
+`data/raw/epica/`), `EPICA/rdf/geo_lod_core.ttl` (das doppelte Schreiben aus
+Teil D, für EPICA erledigt), `geolod:PANGAEA_CH4_Source` und
+`geolod:PANGAEA_d18O_Source` (ersetzt durch `epica:source_*` mit DOI als
+`dct:source` — damit sind zwei der drei offenen DOI-Todos erledigt).
+
+**Was der Graph jetzt zeigt und vorher nicht konnte.** Der Beginn von MIS 5
+(132,2 ka BP nach Railsback) liegt je nach Datensatz bei 1733,94 m
+(AICC2023-ice), 1739,87 m (EDC3-ice), 1755,63 m (EDC2-ice), 1759,64 m
+(AICC2023-gas) oder 1782,26 m (EDC2-gas). Die drei Eisalter-Skalen liegen
+beisammen, die beiden Gasalter-Skalen systematisch tiefer — das ist die
+Gas-Eis-Altersdifferenz, und sie steht jetzt abfragbar im Graphen statt in
+einer Fussnote. Das ist ein Ergebnis für die Überarbeitung des Beitrags.
+
 - Die fünf `.tab` ziehen nach geo-lod um und ersetzen dort die bisherigen
   Rohdaten (`src/EPICA_Dome_C_*.csv`, `EPICA/*.tab`). `wdttest-epica` behält
   seine eigene Kopie — die Repos sind unabhängig.
@@ -958,9 +1000,21 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   Railsback et al. 2015 als Beleg, eine Abweichung (MIS 3).
 - `MIS_INTERVALS` in `SISAL/plot_sisal_from_csv.py` durch `dist/mis_stages.csv`
   ersetzen — die letzte hartcodierte MIS-Stelle (S3c).
-- Die übrigen Rohdaten nach `data/raw/` nachziehen: `src/EPICA_Dome_C_*.csv`
-  und die `.tab` in S2, die SISAL-CSVs in S3c, `CI/cifindspots_part_full.csv`
-  in S4. `src/` behält dann nur noch Code.
+- ~~Die übrigen Rohdaten nach `data/raw/` nachziehen: `src/EPICA_Dome_C_*.csv`
+  und die `.tab` in S2~~ — für EPICA erledigt 2026-08-09. Offen bleiben die
+  SISAL-CSVs (S3c) und `CI/cifindspots_part_full.csv` (S4).
+- `src/plot_epica_115--250.py` liest fünf CSVs, von denen nur zwei je in `src/`
+  lagen; das Skript war schon vorher nicht lauffähig und hängt in keiner
+  Pipeline. Entweder auf `EPICA/epica_data.py` umstellen oder löschen — in S2
+  bewusst nicht angefasst.
+- Die mehrteiligen Tafeln aus S2 stehen noch aus: mehrere Proxies auf
+  gemeinsamer Altersachse, dieselbe Grösse in verschiedenen Chronologien,
+  geglättet gegen ungeglättet. Die Bänder kommen aus `dist/mis_stages.csv`,
+  die Grenzen in Tiefe stehen seit S2 im Graphen und müssen für die
+  Tiefenplots nicht neu gerechnet werden.
+- `MIS_INTERVALS` steht auch in `EPICA/plot_epica_from_tab.py` noch hartcodiert,
+  mit von LR04 abweichenden Grenzen und einem entfallenen MIS 14. Beim Bau der
+  Tafeln gegen `dist/mis_stages.csv` austauschen, zusammen mit der SISAL-Stelle.
 - `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
   `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
 - Der Bundle-Schritt bleibt der grösste Posten, jetzt aber im Parsen der
@@ -968,6 +1022,8 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   irgendwann stört: die Sub-Skripte könnten zusätzlich N-Triples schreiben,
   die das Bundle dann schneller einliest.
 - Aus den bestehenden Pipeline-Todos: doppeltes Schreiben von
-  `geo_lod_core.ttl` in den Unterskripten entfernen; `cisite_59` auf fehlenden
-  Pleiades-/Wikidata-Link prüfen. Die DOIs an den `DataSource`-Instanzen
-  erledigt S2 mit.
+  `geo_lod_core.ttl` — für EPICA erledigt 2026-08-09, für SISAL offen
+  (`SISAL/plot_sisal_from_csv.py` legt weiter eine Kopie in `SISAL/rdf/`);
+  `cisite_59` auf fehlenden Pleiades-/Wikidata-Link prüfen. Von den DOIs an den
+  `DataSource`-Instanzen sind die beiden PANGAEA-Quellen mit S2 erledigt, offen
+  bleibt `SISALv3_DataSource` (S3c).

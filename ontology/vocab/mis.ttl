@@ -13,7 +13,7 @@
 # GENERATED FILE - do not edit by hand.
 # Source: ontology/build_mis_vocab.py
 # Release: 2026-08-08
-# Fingerprint (input data + generator): sha256:f031e6017451
+# Fingerprint (input data + generator): sha256:2e1c25d11e13
 # ==========================================================================
 
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -36,14 +36,14 @@
     skos:editorialNote """Concepts up to 1013.1 ka BP follow Railsback et al. (2015), which is the leading scheme for all MIS assignments in geo-lod. Older concepts are taken from the LR04 boundaries of Lisiecki & Raymo (2005), the only source covering that range."""@en ;
     owl:imports  <http://w3id.org/geo-lod/> ;
     dct:created  "2026-08-08"^^xsd:date ;
-    owl:versionInfo "sha256:f031e6017451" ;
+    owl:versionInfo "sha256:2e1c25d11e13" ;
     prov:wasGeneratedBy mis:vocabulary_generation ;
     dct:source   mis:source_railsback2015, mis:source_lisieckiRaymo2005 .
 
 mis:vocabulary_generation
     a prov:Activity ;
     rdfs:label "MIS vocabulary generation"@en ;
-    owl:versionInfo "sha256:f031e6017451" ;
+    owl:versionInfo "sha256:2e1c25d11e13" ;
     prov:used mis:input_LR04_MISboundaries_csv ,
         mis:input_Railsback2015_csv ,
         mis:input_build_mis_vocab_py ;
@@ -62,7 +62,7 @@ mis:input_Railsback2015_csv
 mis:input_build_mis_vocab_py
     a prov:Entity ;
     rdfs:label "build_mis_vocab.py" ;
-    dct:identifier "sha256:3224482a5658182c3aa0c99ceaaada7b2183a2063867d828ae2ebe799bc85058" .
+    dct:identifier "sha256:c451728938a9e9eb8ab923bb20af4778fa35f6cedabb6369af7d544594391541" .
 
 
 mis:source_railsback2015

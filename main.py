@@ -14,7 +14,8 @@ import time
 
 # Paths
 SCRIPT_DIR = Path(__file__).parent.absolute()
-EPICA_SCRIPT = SCRIPT_DIR / "EPICA" / "plot_epica_from_tab.py"
+EPICA_RDF_SCRIPT  = SCRIPT_DIR / "EPICA" / "epica_rdf.py"
+EPICA_PLOT_SCRIPT = SCRIPT_DIR / "EPICA" / "plot_epica_from_tab.py"
 SISAL_SCRIPT = SCRIPT_DIR / "SISAL" / "plot_sisal_from_csv.py"
 CI_SCRIPT    = SCRIPT_DIR / "CI" / "ci_pipeline.py"
 ONTOLOGY_DIR = SCRIPT_DIR / "ontology"
@@ -424,7 +425,9 @@ def main():
     check_directory_exists(ONTOLOGY_DIR, "Ontology directory")
 
     print("\n  Scripts:")
-    epica_exists = check_file_exists(EPICA_SCRIPT, "EPICA script")
+    epica_rdf_exists  = check_file_exists(EPICA_RDF_SCRIPT,  "EPICA RDF script")
+    epica_plot_exists = check_file_exists(EPICA_PLOT_SCRIPT, "EPICA plot script")
+    epica_exists = epica_rdf_exists and epica_plot_exists
     sisal_exists = check_file_exists(SISAL_SCRIPT, "SISAL script")
     ci_exists    = check_file_exists(CI_SCRIPT,    "CI script")
     end_section()
@@ -448,23 +451,33 @@ def main():
         print("     arbeitet dann mit einem veralteten ontology/vocab/mis.ttl.")
     end_section()
 
+    # EPICA ist seit S2 zweigeteilt: erst die Tripel, dann die Abbildungen.
+    # Der Generator liest die fuenf .tab aus data/raw/epica/, das Plot-Skript
+    # dieselben Dateien ueber denselben Loader. Die Reihenfolge ist so gewaehlt,
+    # dass ein Fehler in den Daten am RDF-Schritt auffaellt, bevor eine halbe
+    # Stunde Abbildungen entsteht.
     if not args.sisal_only and not args.ci_only and epica_exists:
-        print_section("4. EPICA Dome C (Ice Core)")
-        epica_ok = run_script(EPICA_SCRIPT, "EPICA Dome C Processing")
+        print_section("4. EPICA Dome C (RDF)")
+        epica_ok = run_script(EPICA_RDF_SCRIPT, "EPICA Dome C RDF generation")
         end_section()
 
+        print_section("5. EPICA Dome C (figures)")
+        epica_plots_ok = run_script(EPICA_PLOT_SCRIPT, "EPICA Dome C figures")
+        end_section()
+        epica_ok = epica_ok and epica_plots_ok
+
     if not args.epica_only and not args.ci_only and sisal_exists:
-        print_section("5. SISAL (Speleothems)")
+        print_section("6. SISAL (Speleothems)")
         sisal_ok = run_script(SISAL_SCRIPT, "SISAL Processing")
         end_section()
 
     if not args.epica_only and not args.sisal_only and ci_exists:
-        print_section("6. Campanian Ignimbrite (CI Findspots)")
+        print_section("7. Campanian Ignimbrite (CI Findspots)")
         ci_ok = run_script(CI_SCRIPT, "CI Findspot Processing")
         end_section()
 
     if not args.no_bundle:
-        print_section("7. RDF Bundle & Validation")
+        print_section("8. RDF Bundle & Validation")
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok, bundle_formats)
         end_section()
 

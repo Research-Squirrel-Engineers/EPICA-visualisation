@@ -55,6 +55,14 @@ geolod:SamplingLocation
     rdfs:label   "Sampling Location"@en ;
     rdfs:comment "A geographically identified location from which palaeoclimate  proxy material was obtained (ice-core drilling site or speleothem cave)."@en .
 
+# -- Borehole  (a point inside a SamplingLocation, EPICA) --
+
+geolod:Borehole
+    a owl:Class ;
+    rdfs:subClassOf geolod:SamplingLocation ;
+    rdfs:label   "Borehole"@en ;
+    rdfs:comment "The individual hole from which core material was recovered,  inside the wider site. Kept apart from the site because published records of  the same drilling can carry different coordinates, and averaging them would  invent a position that no source states."@en .
+
 # -- PalaeoclimateSample  (superclass: IceCore in EPICA, Speleothem in SISAL) --
 
 geolod:PalaeoclimateSample
@@ -63,6 +71,14 @@ geolod:PalaeoclimateSample
     rdfs:subClassOf sosa:Sample ;
     rdfs:label   "Palaeoclimate Sample"@en ;
     rdfs:comment "A physical archive recording a palaeoclimate signal  (ice core or speleothem)."@en .
+
+# -- SampleSection  (a bounded piece of a sample, EPICA deuterium) --
+
+geolod:SampleSection
+    a owl:Class ;
+    rdfs:subClassOf geolod:PalaeoclimateSample ;
+    rdfs:label   "Sample Section"@en ;
+    rdfs:comment "A bounded interval cut from a larger archive, over which a  single value was measured or averaged. Minted only where the source states  the interval; where a record gives a single depth and nothing else, the  observation hangs on the whole archive instead of on an invented section."@en .
 
 # -- PalaeoclimateObservation  (superclass for all measurement types) --
 
@@ -93,8 +109,15 @@ geolod:Delta18OProperty
 geolod:Chronology
     a owl:Class ;
     rdfs:subClassOf crmsci:S4_Observation ;
+    rdfs:subClassOf time:TRS ;
     rdfs:label   "Chronology"@en ;
-    rdfs:comment "A depth-age model assigning calendar ages to positions  within a palaeoclimate archive."@en .
+    rdfs:comment "A depth-age model assigning calendar ages to positions  within a palaeoclimate archive. Also a temporal reference system: an age is only meaningful together with the model that produced it, so the same node serves as the value of geolod:ageChronology on an observation and of time:hasTRS on its time position."@en .
+
+geolod:IceCoreChronology
+    a owl:Class ;
+    rdfs:subClassOf geolod:Chronology ;
+    rdfs:label   "Ice Core Chronology"@en ;
+    rdfs:comment "A depth-age model for an ice core, such as EDC2, EDC3 or  AICC2023. Ice cores yield two ages per depth - one for the ice, one for the  air trapped in it - so a chronology that publishes both appears here as two  individuals rather than one."@en .
 
 # -- MeasurementType --
 
@@ -406,6 +429,109 @@ geolod:peakAgeKaBP
     rdfs:range   xsd:decimal ;
     rdfs:label   "peak age (ka BP)"@en ;
     rdfs:comment "Materialised age of the excursion a substage labels."@en .
+
+# ==========================================================================
+# STAGE MEMBERSHIP AND STAGE BOUNDARIES IN DEPTH
+# ==========================================================================
+# Two further things get assigned once observations exist, and both are
+# kept as assignments rather than as bare properties, because both depend
+# on a choice that has to stay readable.
+#
+# Membership: which stage an observation falls in follows from its age,
+# and its age follows from the chronology of its record. Two records of
+# the same core can therefore place the same depth in different stages.
+#
+# Boundary in depth: a stage boundary is published as an age. Turning it
+# into a depth means interpolating in one particular depth-age model, so
+# the same boundary sits at different depths depending on which record
+# was used. That is a derived statement about a model, not a measurement,
+# and it says so.
+
+geolod:MISMembershipAssignment
+    a owl:Class ;
+    rdfs:subClassOf crm:E13_Attribute_Assignment ;
+    rdfs:label   "MIS Membership Assignment"@en ;
+    rdfs:comment "Places an observation in a Marine Isotope Stage, on the  authority of one boundary source and through one chronology. Deliberately not  a subclass of geolod:MISAttributeAssignment: that one assigns properties *to*  a stage, this one assigns a stage *to* something else, and the two carry  different constraints."@en .
+
+geolod:DepthPosition
+    a owl:Class ;
+    rdfs:subClassOf crm:E54_Dimension ;
+    rdfs:label   "Depth Position"@en ;
+    rdfs:comment "A position along the depth axis of an archive, in metres.  Used where a value published as an age has been carried into depth through a  depth-age model."@en .
+
+geolod:MISMembership
+    a geolod:AssignedPropertyType, owl:NamedIndividual ;
+    rdfs:label   "marine isotope stage membership"@en ;
+    rdfs:comment "The stage an observation falls in."@en .
+
+geolod:MISBoundaryDepth
+    a geolod:AssignedPropertyType, owl:NamedIndividual ;
+    rdfs:label   "stage boundary in depth"@en ;
+    rdfs:comment "The depth at which a stage boundary falls in a given  archive, obtained by interpolation in a given chronology."@en .
+
+geolod:LinearInterpolation
+    a crmsci:S6_Data_Evaluation, owl:NamedIndividual ;
+    rdfs:label   "linear interpolation between neighbouring measurements"@en ;
+    rdfs:comment "Straight-line interpolation between the two measured  depth-age pairs bracketing the target age. Not applied beyond the outermost  measurement of a record: an extrapolated boundary would state a depth the  record does not reach."@en .
+
+geolod:interpolationMethod
+    a owl:ObjectProperty ;
+    rdfs:range   crmsci:S6_Data_Evaluation ;
+    rdfs:label   "interpolation method"@en ;
+    rdfs:comment "The method by which a value was obtained between two  measured points. Deliberately not the same property as the smoothing methods:  smoothing rewrites a measured value, interpolation produces one where none  was measured, and a consumer has to be able to tell the two apart."@en .
+
+geolod:inChronology
+    a owl:ObjectProperty ;
+    rdfs:range   geolod:Chronology ;
+    rdfs:label   "in chronology"@en ;
+    rdfs:comment "The depth-age model an assignment depends on. Without it a  derived age or depth cannot be compared with one from another record."@en .
+
+geolod:hasTimePosition
+    a owl:ObjectProperty ;
+    rdfs:range   time:TimePosition ;
+    rdfs:label   "has time position"@en ;
+    rdfs:comment "The age of an observation as a time position, carrying both  the numeric value and the reference system it belongs to. Kept alongside the  plain geolod:ageKaBP literal, which stays queryable without a join."@en .
+
+geolod:atDepth_m
+    a owl:DatatypeProperty ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "at depth (m)"@en ;
+    rdfs:comment "Depth below the surface of the archive, in metres. In an  ice core this is the measured quantity and the age is the derived one."@en ;
+    qudt:unit    unit:M .
+
+geolod:depthTop_m
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geolod:atDepth_m ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "top depth (m)"@en ;
+    rdfs:comment "Upper, younger bound of a sample section."@en .
+
+geolod:depthBottom_m
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geolod:atDepth_m ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "bottom depth (m)"@en ;
+    rdfs:comment "Lower, older bound of a sample section."@en .
+
+geolod:ageMinKaBP
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geolod:ageKaBP ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "youngest age of interval (ka BP)"@en ;
+    rdfs:comment "Age at the top of the interval a value was averaged over."@en .
+
+geolod:ageMaxKaBP
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geolod:ageKaBP ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "oldest age of interval (ka BP)"@en ;
+    rdfs:comment "Age at the base of the interval a value was averaged over."@en .
+
+geolod:standardDeviation
+    a owl:DatatypeProperty ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "standard deviation"@en ;
+    rdfs:comment "Reported standard deviation of a measured value, in the  unit of that value."@en .
 
 # ==========================================================================
 # EXTERNAL VOCABULARY LABELS
