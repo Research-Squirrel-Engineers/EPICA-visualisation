@@ -240,6 +240,20 @@ def caption_for(meta, df, axis, suffix):
     )
 
 
+def _gap_edge_depth(df, age_ka, side):
+    """Tiefe der letzten Messung vor bzw. der ersten nach der Lücke, in die
+    *age_ka* fällt. Liefert None, wenn das Alter ausserhalb der Messreihe liegt.
+
+    ``side="older"`` heisst: die gesuchte Kante ist die ältere Grenze eines
+    Stadiums, das Band endet also an der letzten Messung *vor* der Lücke.
+    """
+    pairs = sorted(zip(df["age_ka"].tolist(), df["depth_m"].tolist()))
+    for (a0, d0), (a1, d1) in zip(pairs, pairs[1:]):
+        if a0 <= age_ka <= a1:
+            return d0 if side == "older" else d1
+    return None
+
+
 def mis_depth_bands_for(dataset_id, df):
     """MIS-Bänder in Tiefe für einen Datensatz.
 
@@ -249,33 +263,80 @@ def mis_depth_bands_for(dataset_id, df):
     aus derselben Funktion, damit Abbildung und Graph nicht auseinanderlaufen
     können.
 
-    Ein Band entsteht nur, wenn beide Grenzen eine Tiefe haben. Wo der
-    Datensatz eine Lücke hat, verweigert die Interpolation, und dann fehlt das
-    Band - genau richtig: es gibt dort keine Messung, aus der sich eine Tiefe
-    ableiten liesse. Bei CH4 fallen so MIS 8 bis 10 weg.
+    Drei Fälle, seit 2026-08-09 unterschieden:
+
+    * Beide Grenzen interpolierbar - das Band steht ausgefüllt.
+    * Nur eine Grenze interpolierbar, weil die andere in eine Datenlücke fällt
+      - das Band reicht von der bekannten Kante bis an den Rand der Messreihe
+      und ist schraffiert. Vorher entfiel es ganz; bei CH4 verschwanden so
+      MIS 7 und MIS 11, obwohl von beiden je eine Kante bekannt ist.
+    * Keine der beiden - das Stadium liegt vollständig in der Lücke, und es
+      gibt keine Tiefe, der es zuzuordnen wäre. Bei CH4 sind das MIS 8 bis 10.
+
+    Dazu ein neutrales Band über die Lücke selbst. Ohne das steht dort nur
+    weisse Fläche, und weiss ist in dieser Abbildung sonst nichts.
     """
     bands = []
+    top_of_core = float(df["depth_m"].min())
+    youngest = float(df["age_ka"].min())
+
     for st_ in ed.read_mis_stages():
         d_top = ed.interpolate_depth(df, st_["end"]) if st_["end"] > 0 else None
         d_bot = ed.interpolate_depth(df, st_["begin"])
-        if d_bot is None:
+
+        if d_top is None and st_["end"] <= youngest:
+            # Jüngstes Stadium: das Band beginnt am obersten Messpunkt.
+            d_top = top_of_core
+
+        partial = False
+        if d_top is None and d_bot is not None:
+            d_top = _gap_edge_depth(df, st_["end"], "younger")
+            partial = True
+        elif d_bot is None and d_top is not None:
+            d_bot = _gap_edge_depth(df, st_["begin"], "older")
+            partial = True
+
+        if d_top is None or d_bot is None or d_bot <= d_top:
             continue
-        if d_top is None:
-            # Jüngste Grenze: das Band beginnt am obersten Messpunkt.
-            if st_["end"] > float(df["age_ka"].min()):
-                continue
-            d_top = float(df["depth_m"].min())
-        bands.append((d_top, d_bot, st_["label"], st_["mode"] == "warm"))
+        bands.append((d_top, d_bot, st_["label"], st_["mode"] == "warm", partial))
+
     return bands
 
 
-def draw_mis_depth_bands(ax, bands):
+def gap_bands_for(df):
+    """Die Datenlücken selbst, als neutrale Bänder in Tiefe."""
+    pairs = sorted(zip(df["age_ka"].tolist(), df["depth_m"].tolist()))
+    return [
+        (d0, d1)
+        for (a0, d0), (a1, d1) in zip(pairs, pairs[1:])
+        if a1 - a0 > GAP_THRESHOLD_KA
+    ]
+
+
+def draw_mis_depth_bands(ax, bands, gaps=()):
     """Zeichnet die vorberechneten Tiefen-Bänder."""
     trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
-    for d_top, d_bot, label, warm in bands:
+
+    for d_top, d_bot in gaps:
+        ax.axhspan(d_top, d_bot, facecolor="#f2f2f2", edgecolor="#999999",
+                   linestyle=(0, (4, 3)), linewidth=1.0, zorder=0)
+        ax.text(
+            0.99, (d_top + d_bot) / 2.0, "no samples", transform=trans,
+            ha="right", va="center", fontsize=FONT_SIZE_MIS,
+            fontstyle="italic", color="#777777", zorder=2,
+        )
+
+    for d_top, d_bot, label, warm, partial in bands:
         color = MIS_COLOR_WARM if warm else MIS_COLOR_COLD
         label_color = MIS_LABEL_COLOR_WARM if warm else MIS_LABEL_COLOR_COLD
-        ax.axhspan(d_top, d_bot, facecolor=color, zorder=0)
+        if partial:
+            # Schraffiert: das Stadium reicht über den Rand der Messreihe
+            # hinaus, wo seine Tiefe unbekannt ist.
+            ax.axhspan(d_top, d_bot, facecolor=color, alpha=0.45,
+                       edgecolor=label_color, linestyle=(0, (4, 3)),
+                       linewidth=1.0, zorder=0)
+        else:
+            ax.axhspan(d_top, d_bot, facecolor=color, zorder=0)
         ax.text(
             0.99, (d_top + d_bot) / 2.0, label, transform=trans, ha="right",
             va="center", fontsize=FONT_SIZE_MIS, fontweight="bold",
@@ -299,6 +360,7 @@ def create_plot(
     invert_y=True,
     show_mis=False,
     mis_depth_bands=None,
+    mis_depth_gaps=None,
     age_values=None,
     rolling_window=None,
     use_savgol=False,
@@ -342,7 +404,7 @@ def create_plot(
         # welche Stadien im Datensatz überhaupt Messwerte haben.
         draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max, covered=y_values)
     elif mis_depth_bands:
-        draw_mis_depth_bands(ax, mis_depth_bands)
+        draw_mis_depth_bands(ax, mis_depth_bands, mis_depth_gaps or ())
 
     # Die Kurve, mit Lücken als Lücken. Die Konvention ist aus wdttest-sisal
     # übernommen: durchgezogen innerhalb eines Laufs, gestrichelt über die
@@ -507,6 +569,7 @@ def main():
         title = f"EPICA - {meta['label']}"
 
         depth_bands = mis_depth_bands_for(dataset_id, df)
+        depth_gaps = gap_bands_for(df)
 
         axes = [
             {
@@ -517,6 +580,7 @@ def main():
                 "y_minor": DEPTH_MINOR_TICK_INTERVAL,
                 "show_mis": False,
                 "mis_depth_bands": depth_bands,
+                "mis_depth_gaps": depth_gaps,
             },
             {
                 "key": "age_ka",
@@ -528,6 +592,7 @@ def main():
                 "y_minor": AGE_MINOR_TICK_INTERVAL,
                 "show_mis": True,
                 "mis_depth_bands": None,
+                "mis_depth_gaps": None,
             },
         ]
 
@@ -552,6 +617,7 @@ def main():
                     log_x=override.get("log", False),
                     show_mis=axis["show_mis"],
                     mis_depth_bands=axis["mis_depth_bands"],
+                    mis_depth_gaps=axis["mis_depth_gaps"],
                     age_values=df["age_ka"],
                     **opts,
                 )
