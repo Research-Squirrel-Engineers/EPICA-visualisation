@@ -8,6 +8,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: creator"@en ;
     void:property dcterms:creator ;
-    void:triples 2,
+    void:triples 5,
         148 .
 

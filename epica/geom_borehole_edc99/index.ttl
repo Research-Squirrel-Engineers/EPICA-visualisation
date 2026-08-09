@@ -1,0 +1,11 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/epica/geom_borehole_edc99> a <http://www.opengis.net/ont/sf#Point>,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(123.350000 -75.100000)"^^geo:wktLiteral .
+

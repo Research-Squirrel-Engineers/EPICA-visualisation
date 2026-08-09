@@ -8,5 +8,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: versionInfo"@en ;
     void:property owl:versionInfo ;
-    void:triples 2 .
+    void:triples 2,
+        10 .
 

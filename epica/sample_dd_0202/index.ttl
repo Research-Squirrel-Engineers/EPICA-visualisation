@@ -1,0 +1,21 @@
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geo-lod/epica/sample_dd_0202> a ns2:SampleSection,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "EDC core section 780.45-784.30 m"@en ;
+    void:inDataset ns2:geo-lod ;
+    ns2:ageMaxKaBP 44.6324 ;
+    ns2:ageMinKaBP 44.3194 ;
+    ns2:depthBottom_m 784.300 ;
+    ns2:depthTop_m 780.450 ;
+    ns1:P46i_forms_part_of <http://w3id.org/geo-lod/epica/core_edc> ;
+    sosa:isSampleOf <http://w3id.org/geo-lod/epica/core_edc> .
+

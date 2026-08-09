@@ -1,0 +1,1 @@
+{"http://purl.org/dc/terms/identifier": ["sha256:529baf6a3186bbc65adf675e5569a18f50ad11d53a92b6fb6b30d563dd01757e"], "http://rdfs.org/ns/void#inDataset": ["http://w3id.org/geo-lod/geo-lod"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/ns/prov#Entity"], "http://www.w3.org/2000/01/rdf-schema#label": ["EPICA_Dome_C_d18O.tab"]}

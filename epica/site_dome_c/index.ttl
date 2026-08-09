@@ -1,0 +1,17 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geo-lod/epica/site_dome_c> a <http://w3id.org/geo-lod/DrillingSite>,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "EPICA Dome C, East Antarctica"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    ns1:P87_is_identified_by "EDC"^^xsd:string ;
+    geo:hasGeometry <http://w3id.org/geo-lod/epica/geom_borehole_edc99> ;
+    rdfs:comment "Drilling site of the European Project for Ice Coring in Antarctica on the East Antarctic plateau, 3233 m above sea level. The published records give two slightly different positions for it; both are kept on the borehole nodes below."@en .
+

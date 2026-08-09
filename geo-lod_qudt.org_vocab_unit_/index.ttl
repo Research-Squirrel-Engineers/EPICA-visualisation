@@ -6,8 +6,10 @@
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Linkset: geo-lod - unit:"@en ;
-    void:linkPredicate <http://qudt.org/schema/qudt/unit> ;
+    void:linkPredicate <http://qudt.org/schema/qudt/unit>,
+        <http://www.cidoc-crm.org/cidoc-crm/P91_has_unit> ;
     void:objectsTarget <http://qudt.org/vocab/unit/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 2116 .
+    void:triples 81,
+        4909 .
 

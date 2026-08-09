@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/epica/mis_boundary_depth_do2n2_8_begin> a ns2:MISAttributeAssignment,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Beginning of MIS 8 at 2402.90 m in the dO2N2 record"@en ;
+    dcterms:source <http://w3id.org/geo-lod/vocab/mis/source_railsback2015> ;
+    void:inDataset ns2:geo-lod ;
+    ns2:assignmentStatus ns2:LeadingAssignment ;
+    ns2:inChronology <http://w3id.org/geo-lod/trs/AICC2023-ice> ;
+    ns2:interpolationMethod ns2:LinearInterpolation ;
+    ns1:P140_assigned_attribute_to <http://w3id.org/geo-lod/vocab/mis/MIS_8> ;
+    ns1:P141_assigned <http://w3id.org/geo-lod/epica/depth_position_do2n2_8_begin> ;
+    ns1:P177_assigned_property_of_type ns2:MISBoundaryDepth ;
+    rdfs:comment "Depth obtained by linear interpolation between the two measurements bracketing 279.0 ka BP on the AICC2023-ice scale. Valid for this record only."@en ;
+    prov:wasDerivedFrom <http://w3id.org/geo-lod/vocab/mis/tp_railsback2015_MIS_8_begin> .
+

@@ -8,6 +8,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: license"@en ;
     void:property dcterms:license ;
-    void:triples 4,
+    void:triples 10,
         74 .
 

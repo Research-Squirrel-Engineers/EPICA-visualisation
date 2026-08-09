@@ -1,0 +1,24 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geo-lod/epica/catalog> a <http://w3id.org/geo-lod/PalaeoclimateDataCatalogue>,
+        owl:NamedIndividual,
+        dcat:Catalog,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "EPICA Dome C ice core - linked data catalogue"@en ;
+    dcterms:created "2026-08-08"^^xsd:date ;
+    dcterms:description "Five proxy records from the EPICA Dome C ice core, East Antarctica: methane, deuterium, dust, the oxygen isotope composition of trapped air, and the oxygen to nitrogen ratio of trapped air. The records rest on four different depth-age models and are not on a common time axis; each observation names the chronology its age comes from."@en ;
+    dcterms:publisher "PANGAEA - Data Publisher for Earth & Environmental Science" ;
+    dcterms:title "EPICA Dome C ice core - linked data catalogue"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    dcat:dataset <http://w3id.org/geo-lod/epica/dataset_ch4>,
+        <http://w3id.org/geo-lod/epica/dataset_d18o>,
+        <http://w3id.org/geo-lod/epica/dataset_dd>,
+        <http://w3id.org/geo-lod/epica/dataset_do2n2>,
+        <http://w3id.org/geo-lod/epica/dataset_dust> .
+

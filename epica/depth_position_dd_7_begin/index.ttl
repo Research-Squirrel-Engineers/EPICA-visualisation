@@ -1,0 +1,17 @@
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geo-lod/epica/depth_position_dd_7_begin> a ns2:DepthPosition,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "2306.31 m in the dD record (beginning of MIS 7, EDC2-ice)"@en ;
+    void:inDataset ns2:geo-lod ;
+    ns2:atDepth_m 2306.309 ;
+    ns1:P90_has_value 2306.309 ;
+    ns1:P91_has_unit <http://qudt.org/vocab/unit/M> ;
+    prov:wasDerivedFrom <http://w3id.org/geo-lod/epica/dataset_dd> .
+

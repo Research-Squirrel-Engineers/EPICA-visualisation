@@ -10,6 +10,6 @@
     void:property prov:wasDerivedFrom ;
     void:triples 74,
         305,
-        2114,
-        2468 .
+        2468,
+        5066 .
 

@@ -8,5 +8,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: description"@en ;
     void:property dcterms:description ;
-    void:triples 4 .
+    void:triples 6 .
 

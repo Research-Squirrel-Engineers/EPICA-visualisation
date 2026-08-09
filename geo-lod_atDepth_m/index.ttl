@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: atDepth_m"@en ;
     void:property <http://w3id.org/geo-lod/atDepth_m> ;
-    void:triples 2114 .
+    void:triples 4985 .
 

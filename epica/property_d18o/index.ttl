@@ -1,0 +1,14 @@
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/epica/property_d18o> a <http://w3id.org/geo-lod/ObservableProperty>,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "δ¹⁸O of O₂"@en ;
+    ns1:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:comment "Oxygen isotope composition of molecular oxygen in the trapped air, not of the ice. Reflects the composition of the atmosphere, and is used for orbital dating rather than as a local temperature proxy."@en .
+

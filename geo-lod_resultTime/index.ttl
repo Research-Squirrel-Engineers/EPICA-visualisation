@@ -8,5 +8,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: resultTime"@en ;
     void:property sosa:resultTime ;
-    void:triples 2114 .
+    void:triples 4904 .
 

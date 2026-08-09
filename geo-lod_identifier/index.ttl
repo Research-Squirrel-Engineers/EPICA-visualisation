@@ -9,5 +9,5 @@
     rdfs:label "Property Partition: identifier"@en ;
     void:property dcterms:identifier ;
     void:triples 2,
-        3 .
+        15 .
 

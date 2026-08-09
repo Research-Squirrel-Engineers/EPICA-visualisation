@@ -1,0 +1,14 @@
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/epica/property_dust> a <http://w3id.org/geo-lod/ObservableProperty>,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Dust concentration"@en ;
+    ns1:unit <http://qudt.org/vocab/unit/MicroGM-PER-KiloGM> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:comment "Mass concentration of insoluble dust particles in the melted ice, measured with a Coulter counter."@en .
+

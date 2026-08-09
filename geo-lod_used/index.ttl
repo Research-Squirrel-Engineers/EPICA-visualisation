@@ -9,6 +9,6 @@
     rdfs:label "Property Partition: used"@en ;
     void:property prov:used ;
     void:triples 2,
-        3,
+        15,
         76 .
 

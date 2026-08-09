@@ -8,5 +8,5 @@
     rdfs:label "Property Partition: P7_took_place_at"@en ;
     void:property <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ;
     void:triples 9,
-        2115 .
+        4904 .
 

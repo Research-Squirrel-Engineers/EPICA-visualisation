@@ -1,0 +1,35 @@
+@prefix ns1: <http://w3id.org/geo-lod/> .
+@prefix ns2: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns3: <http://qudt.org/schema/qudt/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geo-lod/epica/obs_dd_0274> a ns1:IceCoreObservation,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Deuterium (δD) observation 0274 (68.5 ka BP, 1059.6 m)"@en ;
+    ns3:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    void:inDataset ns1:geo-lod ;
+    ns1:ageChronology <http://w3id.org/geo-lod/trs/EDC2-ice> ;
+    ns1:ageKaBP 68.5132 ;
+    ns1:atDepth_m 1059.580 ;
+    ns1:fallsWithinStage <http://w3id.org/geo-lod/vocab/mis/MIS_4> ;
+    ns1:hasTimePosition <http://w3id.org/geo-lod/epica/tp_dd_0274> ;
+    ns1:measuredValue -423.40000 ;
+    ns1:measurementType <http://w3id.org/geo-lod/epica/measurement_type_dd> ;
+    ns1:smoothedValue_rollingMedian -431.37000 ;
+    ns1:smoothedValue_savgol -428.02727 ;
+    ns1:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
+    ns1:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
+    ns2:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;
+    prov:wasDerivedFrom <http://w3id.org/geo-lod/epica/source_dd> ;
+    sosa:hasFeatureOfInterest <http://w3id.org/geo-lod/epica/sample_dd_0274> ;
+    sosa:hasSimpleResult -423.40000 ;
+    sosa:observedProperty <http://w3id.org/geo-lod/epica/property_dd> ;
+    sosa:resultTime 68.5132 .
+

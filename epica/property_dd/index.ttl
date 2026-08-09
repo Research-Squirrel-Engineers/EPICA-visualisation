@@ -1,0 +1,14 @@
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/epica/property_dd> a <http://w3id.org/geo-lod/ObservableProperty>,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Deuterium (δD)"@en ;
+    ns1:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:comment "Deuterium content of the ice itself, relative to SMOW. This is the water-isotope record of the core and the usual temperature proxy."@en .
+

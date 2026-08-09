@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: P2_has_type"@en ;
     void:property <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ;
-    void:triples 1 .
+    void:triples 6 .
 

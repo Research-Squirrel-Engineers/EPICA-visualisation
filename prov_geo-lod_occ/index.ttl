@@ -8,6 +8,6 @@
     rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/prov# in geo-lod" ;
     ns1:inDataset <http://w3id.org/geo-lod/geo-lod> ;
     ns1:occurrences 8,
-        10,
+        50,
         452 .
 

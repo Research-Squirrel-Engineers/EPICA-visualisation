@@ -12,6 +12,6 @@
     void:objectsTarget prov: ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
     void:triples 4,
-        5,
+        25,
         226 .
 

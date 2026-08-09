@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Catalog Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/EPICA_DomeC_Catalog> .
+    rdfs:member <http://w3id.org/geo-lod/epica/catalog> .
 

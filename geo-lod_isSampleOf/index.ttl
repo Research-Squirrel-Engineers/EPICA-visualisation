@@ -8,5 +8,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: isSampleOf"@en ;
     void:property sosa:isSampleOf ;
-    void:triples 1 .
+    void:triples 815 .
 

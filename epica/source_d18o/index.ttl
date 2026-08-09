@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geo-lod/epica/source_d18o> a <http://w3id.org/geo-lod/DataSource>,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Bouchet et al. (2023)"@en ;
+    dcterms:creator "Bouchet, M. et al." ;
+    dcterms:date "2023"^^xsd:gYear ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:source <https://doi.org/10.1594/PANGAEA.961024> ;
+    dcterms:title "EPICA Dome C - δ18O of atmospheric O2"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    owl:sameAs <https://doi.org/10.1594/PANGAEA.961024> .
+

@@ -1,4 +1,3 @@
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -157,6 +156,10 @@
         <http://w3id.org/geo-lod/ci/cisite_8_activity>,
         <http://w3id.org/geo-lod/ci/cisite_8_pyscript>,
         <http://w3id.org/geo-lod/ci/cisite_9_activity>,
-        <http://w3id.org/geo-lod/ci/cisite_9_pyscript> ;
-    dcat:dataset <http://w3id.org/geo-lod/EPICA_DomeC_Generation> .
+        <http://w3id.org/geo-lod/ci/cisite_9_pyscript>,
+        <http://w3id.org/geo-lod/epica/generation_ch4>,
+        <http://w3id.org/geo-lod/epica/generation_d18o>,
+        <http://w3id.org/geo-lod/epica/generation_dd>,
+        <http://w3id.org/geo-lod/epica/generation_do2n2>,
+        <http://w3id.org/geo-lod/epica/generation_dust> .
 

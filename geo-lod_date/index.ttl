@@ -8,5 +8,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: date"@en ;
     void:property dcterms:date ;
-    void:triples 2 .
+    void:triples 5 .
 

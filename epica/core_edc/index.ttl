@@ -1,0 +1,18 @@
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/epica/core_edc> a ns2:IceCore,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "EPICA Dome C ice core (EDC)"@en ;
+    void:inDataset ns2:geo-lod ;
+    ns2:extractedFrom <http://w3id.org/geo-lod/epica/site_dome_c> ;
+    ns1:P2_has_type "Ice core"@en ;
+    ns1:P53_has_former_or_current_location <http://w3id.org/geo-lod/epica/site_dome_c> ;
+    sosa:isSampleOf <http://w3id.org/geo-lod/epica/site_dome_c> .
+

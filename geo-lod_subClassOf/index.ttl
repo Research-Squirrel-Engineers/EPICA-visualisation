@@ -8,5 +8,5 @@
     rdfs:label "Property Partition: subClassOf"@en ;
     void:property rdfs:subClassOf ;
     void:triples 3,
-        5 .
+        4 .
 

@@ -428,10 +428,6 @@ doap: a voaf:Vocabulary ;
     rdfs:label "Class Partition: Agent"@en ;
     void:class prov:Agent .
 
-<http://w3id.org/geo-lod/geo-lod_BibliographicResource> a void:Dataset ;
-    rdfs:label "Class Partition: BibliographicResource"@en ;
-    void:class dcterms:BibliographicResource .
-
 <http://w3id.org/geo-lod/geo-lod_CIArchaeologicalSite> a void:Dataset ;
     rdfs:label "Class Partition: CIArchaeologicalSite"@en ;
     void:class <http://w3id.org/geo-lod/CIArchaeologicalSite> ;
@@ -446,6 +442,10 @@ doap: a voaf:Vocabulary ;
     rdfs:label "Class Partition: Collection"@en ;
     void:class skos:Collection ;
     void:entities 4 .
+
+<http://w3id.org/geo-lod/geo-lod_DataSource> a void:Dataset ;
+    rdfs:label "Class Partition: DataSource"@en ;
+    void:class <http://w3id.org/geo-lod/DataSource> .
 
 <http://w3id.org/geo-lod/geo-lod_Dataset> a void:Dataset ;
     rdfs:label "Class Partition: Dataset"@en ;
@@ -467,13 +467,13 @@ doap: a voaf:Vocabulary ;
     rdfs:label "Class Partition: Delta18OSpeleothemObservation"@en ;
     void:class <http://w3id.org/geo-lod/Delta18OSpeleothemObservation> .
 
-<http://w3id.org/geo-lod/geo-lod_E22_Human-Made_Object> a void:Dataset ;
-    rdfs:label "Class Partition: E22_Human-Made_Object"@en ;
-    void:class <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> .
+<http://w3id.org/geo-lod/geo-lod_DepthPosition> a void:Dataset ;
+    rdfs:label "Class Partition: DepthPosition"@en ;
+    void:class <http://w3id.org/geo-lod/DepthPosition> .
 
-<http://w3id.org/geo-lod/geo-lod_E7_Activity> a void:Dataset ;
-    rdfs:label "Class Partition: E7_Activity"@en ;
-    void:class <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> .
+<http://w3id.org/geo-lod/geo-lod_DrillingCampaign> a void:Dataset ;
+    rdfs:label "Class Partition: DrillingCampaign"@en ;
+    void:class <http://w3id.org/geo-lod/DrillingCampaign> .
 
 <http://w3id.org/geo-lod/geo-lod_Entity> a void:Dataset ;
     rdfs:label "Class Partition: Entity"@en ;
@@ -495,17 +495,33 @@ doap: a voaf:Vocabulary ;
     void:class <http://fuzzy-sl.squirrel.link/ontology/Georeferencing> ;
     void:entities 74 .
 
+<http://w3id.org/geo-lod/geo-lod_IceCore> a void:Dataset ;
+    rdfs:label "Class Partition: IceCore"@en ;
+    void:class <http://w3id.org/geo-lod/IceCore> .
+
+<http://w3id.org/geo-lod/geo-lod_IceCoreDataset> a void:Dataset ;
+    rdfs:label "Class Partition: IceCoreDataset"@en ;
+    void:class <http://w3id.org/geo-lod/IceCoreDataset> .
+
+<http://w3id.org/geo-lod/geo-lod_IceCoreObservation> a void:Dataset ;
+    rdfs:label "Class Partition: IceCoreObservation"@en ;
+    void:class <http://w3id.org/geo-lod/IceCoreObservation> .
+
+<http://w3id.org/geo-lod/geo-lod_MISAttributeAssignment> a void:Dataset ;
+    rdfs:label "Class Partition: MISAttributeAssignment"@en ;
+    void:class <http://w3id.org/geo-lod/MISAttributeAssignment> .
+
+<http://w3id.org/geo-lod/geo-lod_MISMembershipAssignment> a void:Dataset ;
+    rdfs:label "Class Partition: MISMembershipAssignment"@en ;
+    void:class <http://w3id.org/geo-lod/MISMembershipAssignment> .
+
 <http://w3id.org/geo-lod/geo-lod_MeasurementType> a void:Dataset ;
     rdfs:label "Class Partition: MeasurementType"@en ;
     void:class <http://w3id.org/geo-lod/MeasurementType> .
 
 <http://w3id.org/geo-lod/geo-lod_ObservableProperty> a void:Dataset ;
     rdfs:label "Class Partition: ObservableProperty"@en ;
-    void:class sosa:ObservableProperty .
-
-<http://w3id.org/geo-lod/geo-lod_Observation> a void:Dataset ;
-    rdfs:label "Class Partition: Observation"@en ;
-    void:class sosa:Observation .
+    void:class <http://w3id.org/geo-lod/ObservableProperty> .
 
 <http://w3id.org/geo-lod/geo-lod_P12_occurred_in_the_presence_of> a void:Dataset ;
     rdfs:label "Property Partition: P12_occurred_in_the_presence_of"@en ;
@@ -516,6 +532,10 @@ doap: a voaf:Vocabulary ;
     rdfs:label "Property Partition: P7_took_place_at"@en ;
     void:property <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ;
     void:triples 9 .
+
+<http://w3id.org/geo-lod/geo-lod_PalaeoclimateDataCatalogue> a void:Dataset ;
+    rdfs:label "Class Partition: PalaeoclimateDataCatalogue"@en ;
+    void:class <http://w3id.org/geo-lod/PalaeoclimateDataCatalogue> .
 
 <http://w3id.org/geo-lod/geo-lod_Person> a void:Dataset ;
     rdfs:label "Class Partition: Person"@en ;
@@ -535,30 +555,14 @@ doap: a voaf:Vocabulary ;
     rdfs:label "Class Partition: RollingMedianFilter"@en ;
     void:class <http://w3id.org/geo-lod/RollingMedianFilter> .
 
-<http://w3id.org/geo-lod/geo-lod_S1_Matter_Removal> a void:Dataset ;
-    rdfs:label "Class Partition: S1_Matter_Removal"@en ;
-    void:class <http://www.ics.forth.gr/isl/CRMsci/S1_Matter_Removal> .
-
-<http://w3id.org/geo-lod/geo-lod_S4_Observation> a void:Dataset ;
-    rdfs:label "Class Partition: S4_Observation"@en ;
-    void:class <http://www.ics.forth.gr/isl/CRMsci/S4_Observation> .
-
-<http://w3id.org/geo-lod/geo-lod_S6_Data_Evaluation> a void:Dataset ;
-    rdfs:label "Class Partition: S6_Data_Evaluation"@en ;
-    void:class <http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation> .
-
-<http://w3id.org/geo-lod/geo-lod_S9_Property_Type> a void:Dataset ;
-    rdfs:label "Class Partition: S9_Property_Type"@en ;
-    void:class <http://www.ics.forth.gr/isl/CRMsci/S9_Property_Type> .
-
 <http://w3id.org/geo-lod/geo-lod_SP6_Declarative_Place> a void:Dataset ;
     rdfs:label "Class Partition: SP6_Declarative_Place"@en ;
     void:class <http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place> ;
     void:entities 74 .
 
-<http://w3id.org/geo-lod/geo-lod_Sample> a void:Dataset ;
-    rdfs:label "Class Partition: Sample"@en ;
-    void:class sosa:Sample .
+<http://w3id.org/geo-lod/geo-lod_SampleSection> a void:Dataset ;
+    rdfs:label "Class Partition: SampleSection"@en ;
+    void:class <http://w3id.org/geo-lod/SampleSection> .
 
 <http://w3id.org/geo-lod/geo-lod_SavitzkyGolayFilter> a void:Dataset ;
     rdfs:label "Class Partition: SavitzkyGolayFilter"@en ;
@@ -576,6 +580,10 @@ doap: a voaf:Vocabulary ;
 <http://w3id.org/geo-lod/geo-lod_Speleothem> a void:Dataset ;
     rdfs:label "Class Partition: Speleothem"@en ;
     void:class <http://w3id.org/geo-lod/Speleothem> .
+
+<http://w3id.org/geo-lod/geo-lod_TimePosition> a void:Dataset ;
+    rdfs:label "Class Partition: TimePosition"@en ;
+    void:class time:TimePosition .
 
 <http://w3id.org/geo-lod/geo-lod_UThChronology> a void:Dataset ;
     rdfs:label "Class Partition: UThChronology"@en ;
@@ -902,7 +910,7 @@ foaf:Person rdfs:label "Person"@en .
     vext:languages 0 ;
     vext:propertyClasses 0 ;
     dc:language <http://www.lexvo.org/page/iso639-1/en> ;
-    dcterms:modified "2026-08-08T14:04:29"^^xsd:dateTime ;
+    dcterms:modified "2026-08-09T12:53:03"^^xsd:dateTime ;
     dcterms:subject <http://dbpedia.org/resource/Location>,
         <http://dbpedia.org/resource/OGC_GeoSPARQL>,
         <http://dbpedia.org/resource/Time>,
@@ -914,38 +922,40 @@ foaf:Person rdfs:label "Person"@en .
     void:classPartition <http://w3id.org/geo-lod/geo-lod_A2_Stratigraphic_Volume_Unit>,
         <http://w3id.org/geo-lod/geo-lod_Activity>,
         <http://w3id.org/geo-lod/geo-lod_Agent>,
-        <http://w3id.org/geo-lod/geo-lod_BibliographicResource>,
         <http://w3id.org/geo-lod/geo-lod_CIArchaeologicalSite>,
         <http://w3id.org/geo-lod/geo-lod_CIFindspot>,
         <http://w3id.org/geo-lod/geo-lod_Collection>,
+        <http://w3id.org/geo-lod/geo-lod_DataSource>,
         <http://w3id.org/geo-lod/geo-lod_Dataset>,
         <http://w3id.org/geo-lod/geo-lod_Delta13CProperty>,
         <http://w3id.org/geo-lod/geo-lod_Delta13CSpeleothemObservation>,
         <http://w3id.org/geo-lod/geo-lod_Delta18OProperty>,
         <http://w3id.org/geo-lod/geo-lod_Delta18OSpeleothemObservation>,
-        <http://w3id.org/geo-lod/geo-lod_E22_Human-Made_Object>,
-        <http://w3id.org/geo-lod/geo-lod_E7_Activity>,
+        <http://w3id.org/geo-lod/geo-lod_DepthPosition>,
+        <http://w3id.org/geo-lod/geo-lod_DrillingCampaign>,
         <http://w3id.org/geo-lod/geo-lod_Entity>,
         <http://w3id.org/geo-lod/geo-lod_FeatureCollection>,
         <http://w3id.org/geo-lod/geo-lod_GeometryCollection>,
         <http://w3id.org/geo-lod/geo-lod_Georeferencing>,
+        <http://w3id.org/geo-lod/geo-lod_IceCore>,
+        <http://w3id.org/geo-lod/geo-lod_IceCoreDataset>,
+        <http://w3id.org/geo-lod/geo-lod_IceCoreObservation>,
+        <http://w3id.org/geo-lod/geo-lod_MISAttributeAssignment>,
+        <http://w3id.org/geo-lod/geo-lod_MISMembershipAssignment>,
         <http://w3id.org/geo-lod/geo-lod_MeasurementType>,
         <http://w3id.org/geo-lod/geo-lod_ObservableProperty>,
-        <http://w3id.org/geo-lod/geo-lod_Observation>,
+        <http://w3id.org/geo-lod/geo-lod_PalaeoclimateDataCatalogue>,
         <http://w3id.org/geo-lod/geo-lod_Person>,
         <http://w3id.org/geo-lod/geo-lod_Place>,
         <http://w3id.org/geo-lod/geo-lod_Point>,
         <http://w3id.org/geo-lod/geo-lod_RollingMedianFilter>,
-        <http://w3id.org/geo-lod/geo-lod_S1_Matter_Removal>,
-        <http://w3id.org/geo-lod/geo-lod_S4_Observation>,
-        <http://w3id.org/geo-lod/geo-lod_S6_Data_Evaluation>,
-        <http://w3id.org/geo-lod/geo-lod_S9_Property_Type>,
         <http://w3id.org/geo-lod/geo-lod_SP6_Declarative_Place>,
-        <http://w3id.org/geo-lod/geo-lod_Sample>,
+        <http://w3id.org/geo-lod/geo-lod_SampleSection>,
         <http://w3id.org/geo-lod/geo-lod_SavitzkyGolayFilter>,
         <http://w3id.org/geo-lod/geo-lod_Site>,
         <http://w3id.org/geo-lod/geo-lod_SpatialObjectCollection>,
         <http://w3id.org/geo-lod/geo-lod_Speleothem>,
+        <http://w3id.org/geo-lod/geo-lod_TimePosition>,
         <http://w3id.org/geo-lod/geo-lod_UThChronology> ;
     void:classes 16 ;
     void:dataDump "https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//index.ttl"^^xsd:anyURI ;

@@ -1,3 +1,4 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -7,6 +8,9 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "ObservableProperty Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/CH4Concentration>,
-        <http://w3id.org/geo-lod/Delta18O> .
+    dcat:dataset <http://w3id.org/geo-lod/epica/property_ch4>,
+        <http://w3id.org/geo-lod/epica/property_d18o>,
+        <http://w3id.org/geo-lod/epica/property_dd>,
+        <http://w3id.org/geo-lod/epica/property_do2n2>,
+        <http://w3id.org/geo-lod/epica/property_dust> .
 

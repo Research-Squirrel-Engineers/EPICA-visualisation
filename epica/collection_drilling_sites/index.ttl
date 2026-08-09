@@ -1,0 +1,13 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/epica/collection_drilling_sites> a geo:FeatureCollection,
+        owl:NamedIndividual,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "EPICA Dome C drilling site collection"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:member <http://w3id.org/geo-lod/epica/site_dome_c> .
+

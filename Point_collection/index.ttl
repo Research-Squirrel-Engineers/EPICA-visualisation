@@ -1,4 +1,3 @@
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -386,6 +385,7 @@
         <http://w3id.org/geo-lod/ci/cisite_6_geom>,
         <http://w3id.org/geo-lod/ci/cisite_7_geom>,
         <http://w3id.org/geo-lod/ci/cisite_8_geom>,
-        <http://w3id.org/geo-lod/ci/cisite_9_geom> ;
-    dcat:dataset <http://w3id.org/geo-lod/EpicaDomeC_Geometry> .
+        <http://w3id.org/geo-lod/ci/cisite_9_geom>,
+        <http://w3id.org/geo-lod/epica/geom_borehole_domec>,
+        <http://w3id.org/geo-lod/epica/geom_borehole_edc99> .
 

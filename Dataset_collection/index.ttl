@@ -7,7 +7,9 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Dataset Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    dcat:dataset <http://w3id.org/geo-lod/EPICA_DomeC_CH4_Dataset>,
-        <http://w3id.org/geo-lod/EPICA_DomeC_Dataset>,
-        <http://w3id.org/geo-lod/EPICA_DomeC_d18O_Dataset> .
+    dcat:dataset <http://w3id.org/geo-lod/epica/dataset_ch4>,
+        <http://w3id.org/geo-lod/epica/dataset_d18o>,
+        <http://w3id.org/geo-lod/epica/dataset_dd>,
+        <http://w3id.org/geo-lod/epica/dataset_do2n2>,
+        <http://w3id.org/geo-lod/epica/dataset_dust> .
 

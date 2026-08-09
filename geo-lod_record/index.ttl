@@ -8,5 +8,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: record"@en ;
     void:property dcat:record ;
-    void:triples 2114 .
+    void:triples 4904 .
 

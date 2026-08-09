@@ -1,6 +1,5 @@
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -10,11 +9,8 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Linkset: geo-lod - 10.1594"@en ;
     void:linkPredicate dcterms:source,
-        dcat:distribution,
-        prov:wasDerivedFrom ;
+        owl:sameAs ;
     void:objectsTarget <https://doi.org/10.1594/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 2,
-        4,
-        2114 .
+    void:triples 5 .
 

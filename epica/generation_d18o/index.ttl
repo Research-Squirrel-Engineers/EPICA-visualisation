@@ -1,0 +1,16 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/epica/generation_d18o> a <http://www.w3.org/ns/ldp#Resource>,
+        prov:Activity,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "EPICA Dome C d18O RDF generation"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    owl:versionInfo "sha256:53ea24fa015b" ;
+    prov:used <http://w3id.org/geo-lod/epica/generation_d18o_input_EPICA_Dome_C_d18O_tab>,
+        <http://w3id.org/geo-lod/epica/generation_d18o_input_epica_data_py>,
+        <http://w3id.org/geo-lod/epica/generation_d18o_input_epica_rdf_py> ;
+    prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
+
