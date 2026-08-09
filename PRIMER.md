@@ -214,6 +214,14 @@ lesen hier ab, statt neu zu diskutieren.
 | δ¹⁸O-Datensatz | ist δ¹⁸O **von O₂ aus der Luft**, kein Wasserisotop. Der Header sagt `δ18O, gas [‰] … COMMENT: of O2`. Die alte Ontologie beschrieb ihn als „stable water isotope ratio … from the ice matrix“ — falsch. Das Wasserisotop des Kerns ist δD. Betrifft auch die Achsenbeschriftung im ECEASST-Beitrag | 2026-08-09 |
 | Provenienz aus `data.yaml` | als Python-Konstante `DATASETS` in `EPICA/epica_data.py` nachgenutzt, nicht als YAML. Nachnutzung heisst kopieren (A3), und für fünf Datensätze lohnt keine PyYAML-Abhängigkeit. Werte gegen die `.tab`-Header geprüft, zwei korrigiert (δ¹⁸O-Beschreibung, Gas/Eis-Trennung) | 2026-08-09 |
 | EPICA-Schritt in `main.py` | zweigeteilt: erst RDF (`epica_rdf.py`), dann Abbildungen (`plot_epica_from_tab.py`). So fällt ein Datenfehler auf, bevor die Abbildungen entstehen | 2026-08-09 |
+| Tafel-Layout | beides: `plate_columns_*` (fünf Spalten, senkrechte Altersachse, wie der Bestand) und `plate_rows_*` (fünf Zeilen, waagerechte Achse, wie die Eiskern-Literatur) | 2026-08-09 |
+| Altersfenster der Tafeln | nur voll 0–806 ka. Ausschnitte erst, wenn der Text sie braucht | 2026-08-09 |
+| Dust-Skala | logarithmisch; die Werte spannen Faktor 560 (2,7 bis 1525 µg/kg) | 2026-08-09 |
+| Glättung auf den Tafeln | je ein vollständiger Satz ungeglättet, Median und Savitzky-Golay, nicht roh und geglättet in einer Abbildung | 2026-08-09 |
+| MIS-Bänder in **allen** Abbildungen | aus `dist/mis_stages.csv`, also Railsback. Die zwölf Einzelabbildungen ändern sich dadurch sichtbar: die alte Liste war LR04 mit zwei von Hand ans CH₄-Signal angepassten Übergängen und ohne MIS 14, und MIS 3 galt dort als Interstadial statt nach Paritätskonvention als warm. Für die Überarbeitung des Beitrags vermerkt | 2026-08-09 |
+| „Kein Datum“-Bänder | nicht mehr hartcodiert. `draw_mis_bands` bekommt die Alter der Messpunkte und schraffiert die Stadien ohne einen einzigen Messwert selbst — gilt damit für alle fünf Datensätze statt nur für die drei früher für CH₄ eingetragenen | 2026-08-09 |
+| Achsenbeschriftung `Age [ka]` | umgesetzt, in Einzelabbildungen wie Tafeln. Der Bezugspunkt steht am Chronologieknoten im Graphen, nicht in jeder Bildunterschrift | 2026-08-09 |
+| Interpolation über Datenlücken | verboten. `interpolate_depth` liefert `None`, wenn die beiden umgebenden Messpunkte weiter als 15 ka auseinanderliegen. Vorher bekamen die Beginne von MIS 8, 9 und 10 im CH₄-Datensatz eine Tiefe, die über 178 ka ohne Daten geradlinig hinweggerechnet war — auf der Abweichungstafel ein Ausschlag von 36 m, der wie ein Modellunterschied aussah und keiner war. 77 Grenzen statt 81 | 2026-08-09 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -261,7 +269,7 @@ noch nicht entschieden.
 |---|---|---|---|---|
 | S0 | Festlegungen, kein Code | — | — | erledigt 2026-08-08 |
 | S1 | Gemeinsame Vokabulare | geo-lod | S0 | erledigt 2026-08-08 |
-| S2 | EPICA nach RDF | geo-lod | S0, S1 | RDF erledigt 2026-08-09; Tafeln offen |
+| S2 | EPICA nach RDF | geo-lod | S0, S1 | erledigt 2026-08-09 |
 | S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | offen |
 | S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | offen |
 | S3c | SISAL nach RDF | geo-lod | S0, S1, S3b | offen |
@@ -617,7 +625,7 @@ dazu mehrteilige Abbildungen neben den bestehenden Einzeldateien.
 **Fertig, wenn:** die Pipeline grün durchläuft, SHACL sauber ist und zwei Läufe
 byte-identisch sind.
 
-**Stand 2026-08-09: RDF fertig, Tafeln offen.** Pipeline grün, 0 SHACL-
+**Stand 2026-08-09: erledigt.** Pipeline grün, 0 SHACL-
 Violations, 48 erzeugte Dateien über zwei Läufe byte-identisch. Bundle
 354 969 Tripel (vorher 207 591), davon EPICA 187 622. Was entstanden ist:
 
@@ -645,6 +653,18 @@ Teil D, für EPICA erledigt), `geolod:PANGAEA_CH4_Source` und
 beisammen, die beiden Gasalter-Skalen systematisch tiefer — das ist die
 Gas-Eis-Altersdifferenz, und sie steht jetzt abfragbar im Graphen statt in
 einer Fussnote. Das ist ein Ergebnis für die Überarbeitung des Beitrags.
+
+**Abbildungen.** Die zwölf Einzeldateien bleiben, dazu sieben Tafeln aus
+`EPICA/epica_plates.py`, je als SVG und JPG: `plate_columns_*` und
+`plate_rows_*` in den drei Glättungsvarianten, dazu `plate_boundary_depths`.
+Letztere hat zwei Hälften, weil eine nicht reicht — links die Tiefen-Alters-
+Beziehung als Kontext, auf deren 3200-m-Achse der Unterschied zwischen den
+Modellen unsichtbar bleibt, rechts die Abweichung jeder Kurve vom Mittel
+derselben Grenze, auf einer Achse von Zehnermetern. Bezugsgrösse ist das
+Mittel über die Datensätze, die eine Grenze überhaupt abdecken, nicht ein
+gewählter Referenzdatensatz: es gibt hier keine Wahrheit, nur Modelle, die
+voneinander abweichen. Insgesamt 110 erzeugte Dateien, über zwei Läufe
+byte-identisch.
 
 - Die fünf `.tab` ziehen nach geo-lod um und ersetzen dort die bisherigen
   Rohdaten (`src/EPICA_Dome_C_*.csv`, `EPICA/*.tab`). `wdttest-epica` behält
@@ -1007,14 +1027,14 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   lagen; das Skript war schon vorher nicht lauffähig und hängt in keiner
   Pipeline. Entweder auf `EPICA/epica_data.py` umstellen oder löschen — in S2
   bewusst nicht angefasst.
-- Die mehrteiligen Tafeln aus S2 stehen noch aus: mehrere Proxies auf
-  gemeinsamer Altersachse, dieselbe Grösse in verschiedenen Chronologien,
-  geglättet gegen ungeglättet. Die Bänder kommen aus `dist/mis_stages.csv`,
-  die Grenzen in Tiefe stehen seit S2 im Graphen und müssen für die
-  Tiefenplots nicht neu gerechnet werden.
-- `MIS_INTERVALS` steht auch in `EPICA/plot_epica_from_tab.py` noch hartcodiert,
-  mit von LR04 abweichenden Grenzen und einem entfallenen MIS 14. Beim Bau der
-  Tafeln gegen `dist/mis_stages.csv` austauschen, zusammen mit der SISAL-Stelle.
+- ~~Die mehrteiligen Tafeln aus S2~~ — erledigt 2026-08-09, sieben Tafeln.
+- ~~`MIS_INTERVALS` in `EPICA/plot_epica_from_tab.py`~~ — erledigt 2026-08-09.
+  Offen bleibt die Stelle in `SISAL/plot_sisal_from_csv.py` (S3c); danach ist
+  keine MIS-Grenze mehr im Code hinterlegt.
+- Die Tiefenplots tragen weiterhin keine MIS-Bänder. Der Graph liefert die
+  Grenzen in Tiefe seit S2 je Datensatz, gerechnet werden müsste nichts mehr —
+  offen ist nur, ob die Einzelabbildungen sie bekommen sollen oder ob
+  `plate_boundary_depths` den Zweck schon erfüllt.
 - `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
   `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
 - Der Bundle-Schritt bleibt der grösste Posten, jetzt aber im Parsen der

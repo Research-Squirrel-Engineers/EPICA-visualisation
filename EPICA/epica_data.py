@@ -364,3 +364,93 @@ def load_all() -> Iterator[tuple[str, pd.DataFrame]]:
     """Yield ``(dataset_id, frame)`` for all five records, in fixed order."""
     for dataset_id in DATASET_ORDER:
         yield dataset_id, LOADERS[dataset_id]()
+
+
+# ===========================================================================
+# 3.  MARINE ISOTOPE STAGES
+# ===========================================================================
+# Read from dist/mis_stages.csv, the table the vocabulary step writes from the
+# same values it puts in the RDF. Nothing about stage boundaries is defined in
+# this repository outside that one generator any more: the hard-coded
+# MIS_INTERVALS list that used to sit in the plot script carried boundaries of
+# its own - LR04 with two hand-adjusted transitions and MIS 14 dropped
+# entirely - so a band in a figure and a membership triple in the graph could
+# disagree without anything noticing.
+
+MIS_STAGES_CSV = os.path.join(REPO_DIR, "dist", "mis_stages.csv")
+
+
+def read_mis_stages() -> list[dict]:
+    """Leading stage boundaries, oldest bound first.
+
+    Stages only, no substages: Railsback et al. (2015) resolve substages over
+    part of their range only, so substage bands would be present for some
+    intervals and absent for others.
+    """
+    import csv
+
+    if not os.path.exists(MIS_STAGES_CSV):
+        raise FileNotFoundError(
+            f"{MIS_STAGES_CSV} missing - run the vocabulary step "
+            f"(main.py step 3) first."
+        )
+
+    stages: list[dict] = []
+    with open(MIS_STAGES_CSV, encoding="utf-8", newline="") as fh:
+        for row in csv.DictReader(fh):
+            if row["kind"] != "stage" or not row["begin_ka"]:
+                continue
+            stages.append(
+                {
+                    "stage": row["stage"],
+                    "label": row["label"],
+                    # begin = older bound, end = younger bound. MIS 1 has no
+                    # younger bound; it reaches the present.
+                    "begin": float(row["begin_ka"]),
+                    "end": float(row["end_ka"]) if row["end_ka"] else 0.0,
+                    "mode": row["climate_mode"] or None,
+                }
+            )
+    stages.sort(key=lambda s: s["begin"])
+    return stages
+
+
+def stage_for_age(stages: list[dict], age_ka: float) -> dict | None:
+    """The stage an age falls in: end <= age < begin."""
+    for st in stages:
+        if st["end"] <= age_ka < st["begin"]:
+            return st
+    return None
+
+
+#: Longest gap between two measurements that interpolation will still bridge.
+#: A boundary falling inside a longer gap gets no depth at all. Without this
+#: the CH4 record, which has no data between 214 and 392 ka, produced depths
+#: for the beginnings of MIS 8, 9 and 10 by drawing a straight line across
+#: 178 ka of nothing - values that look like the others and mean nothing.
+MAX_INTERPOLATION_GAP_KA = 15.0
+
+
+def interpolate_depth(
+    df: pd.DataFrame, age_ka: float, max_gap_ka: float = MAX_INTERPOLATION_GAP_KA
+) -> float | None:
+    """Depth at which *age_ka* falls in this record, by linear interpolation.
+
+    Returns None outside the measured range, and also inside it wherever the
+    two bracketing measurements are further apart than *max_gap_ka*.
+    Extrapolating past the ends would state a depth the record does not reach;
+    interpolating across a long gap states one it does not support. Both are
+    refused rather than flagged, because a depth that is present in the data
+    will be used as though it were measured.
+    """
+    pairs = sorted(zip(df["age_ka"].tolist(), df["depth_m"].tolist()))
+    if not pairs or age_ka < pairs[0][0] or age_ka > pairs[-1][0]:
+        return None
+    for (a0, d0), (a1, d1) in zip(pairs, pairs[1:]):
+        if a0 <= age_ka <= a1:
+            if a1 - a0 > max_gap_ka:
+                return None
+            if a1 == a0:
+                return d0
+            return d0 + (d1 - d0) * (age_ka - a0) / (a1 - a0)
+    return None

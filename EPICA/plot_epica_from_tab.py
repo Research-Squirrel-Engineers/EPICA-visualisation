@@ -22,6 +22,7 @@ plt.rcParams["svg.hashsalt"] = "geo-lod"
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import epica_data as ed
+import epica_plates
 
 
 class Tee:
@@ -91,101 +92,80 @@ LINE_WIDTH_SMOOTH = 1.5  # smoothed line slightly thicker   # MIS label size
 LABEL_PAD = 12
 
 # ──────────────────────────────────────────────
-# MIS-Intervalle (Grenzen in ka BP, Quelle: LR04 Lisiecki & Raymo 2005)
-# Format: (age_top_ka, age_bottom_ka, label, farbe)
-# Warmzeiten (ungerade MIS) = hellblau, Kaltzeiten (gerade MIS) = kein Hintergrund
+# MIS-Bänder
 # ──────────────────────────────────────────────
-MIS_COLOR_WARM = "#fddbc7"  # red/orange       – full interglacial
-MIS_COLOR_INTERSTADIAL = "#fef0e6"  # pale reddish  – interstadial (MIS 3)
-MIS_COLOR_COLD = "#d6e8f7"  # blue             – glacial
-
-# MIS type:
-#   "warm"       = full interglacial   → red/orange, solid
-#   "inter"      = interstadial        → pale reddish, solid (MIS 3)
-#   "cold"       = glacial             → blue, solid
-#   "warm_nodata"= interglacial, no CH4 data → red/orange, dashed border
-#   "cold_nodata"= glacial, no CH4 data      → blue, dashed border
-#
-# Grenzen: LR04 (Lisiecki & Raymo 2005), außer:
-#   - MIS 13/14-Grenze bei 527 ka (statt LR04 533 ka) → CH4-Minimum in EDC
-#   - MIS 14/15-Grenze bei 545 ka (statt LR04 563 ka) → CH4-Anstieg in EDC
-#   - MIS 8/9/10 (243–374 ka): keine CH4-Daten in EDC-Tab-Datei → "no_data"
-MIS_INTERVALS = [
-    (0, 14, "MIS 1", "warm"),
-    (14, 29, "MIS 2", "cold"),
-    (29, 57, "MIS 3", "inter"),  # Interstadial, kein volles Interglazial
-    (57, 71, "MIS 4", "cold"),
-    (71, 130, "MIS 5", "warm"),
-    (130, 191, "MIS 6", "cold"),
-    (191, 243, "MIS 7", "warm"),
-    (243, 300, "MIS 8", "cold_nodata"),  # keine EDC CH4-Daten
-    (300, 337, "MIS 9", "warm_nodata"),  # keine EDC CH4-Daten
-    (337, 374, "MIS 10", "cold_nodata"),  # keine EDC CH4-Daten
-    (374, 424, "MIS 11", "warm"),
-    (424, 527, "MIS 12", "cold"),  # Grenze bei 527 ka (CH4-Minimum EDC)
-    (527, 545, "MIS 13", "warm"),  # Grenze bei 545 ka (CH4-Anstieg EDC)
-    (545, 621, "MIS 15", "warm"),  # MIS 14 durch Anpassung entfallen
-    (621, 676, "MIS 16", "cold"),
-    (676, 712, "MIS 17", "warm"),
-    (712, 761, "MIS 18", "cold"),
-    (761, 790, "MIS 19", "warm"),
-    (790, 814, "MIS 20", "cold"),
-]
+# Grenzen und Warm/Kalt kommen aus dist/mis_stages.csv, also aus derselben
+# Quelle wie die Zuweisungen im Graphen (Railsback et al. 2015 als Leitschema).
+# Vorher stand hier eine eigene Liste nach LR04 mit zwei von Hand an das
+# CH4-Signal angepassten Übergängen und ohne MIS 14. Die Abbildungen ändern
+# sich dadurch sichtbar; das ist der Beschluss vom 2026-08-09.
+MIS_COLOR_WARM = "#fddbc7"
+MIS_COLOR_COLD = "#d6e8f7"
+MIS_LABEL_COLOR_WARM = "#8b1a00"
+MIS_LABEL_COLOR_COLD = "#003f6b"
 
 
-# ──────────────────────────────────────────────
-# Plot function (generic for both axis types)
-# ──────────────────────────────────────────────
+def draw_mis_bands(ax, y_min_ka, y_max_ka, covered=None, horizontal=False):
+    """Zeichnet die MIS-Bänder auf der Altersachse.
 
-
-def draw_mis_bands(ax, y_min_ka, y_max_ka):
+    covered  : optionale Folge von Altern der tatsächlichen Messpunkte. Ist sie
+               gegeben, bekommen Stadien ohne einen einzigen Messwert eine
+               gestrichelte Umrandung statt einer Füllung - so ist eine
+               Datenlücke als Lücke erkennbar und nicht als flache Kurve.
+               Ersetzt die früher für CH4 hartcodierten "nodata"-Einträge.
+    horizontal : True, wenn das Alter auf der X-Achse liegt (Zeilen-Tafeln).
     """
-    Draws MIS colour bands on the Y-axis (ka BP).
+    stages = ed.read_mis_stages()
+    y_lo, y_hi = min(y_min_ka, y_max_ka), max(y_min_ka, y_max_ka)
+    ages = sorted(covered) if covered is not None else None
 
-    Types:
-      "warm"        → red/orange, solid (full interglacial)
-      "inter"       → pale reddish, solid (interstadial, e.g. MIS 3)
-      "cold"        → blue, solid (glacial)
-      "warm_nodata" → red/orange, dashed border (no measurement data)
-      "cold_nodata" → blue, dashed border (no measurement data)
-    """
-    mis_trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
+    if horizontal:
+        trans = transforms.blended_transform_factory(ax.transData, ax.transAxes)
+    else:
+        trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
 
-    type_config = {
-        "warm": (MIS_COLOR_WARM, "#8b1a00", False),
-        "inter": (MIS_COLOR_INTERSTADIAL, "#8b1a00", False),
-        "cold": (MIS_COLOR_COLD, "#003f6b", False),
-        "warm_nodata": (MIS_COLOR_WARM, "#8b1a00", True),
-        "cold_nodata": (MIS_COLOR_COLD, "#003f6b", True),
-    }
-
-    for age_top, age_bot, label, mis_type in MIS_INTERVALS:
-        y_lo = min(y_min_ka, y_max_ka)
-        y_hi = max(y_min_ka, y_max_ka)
-        visible_top = max(age_top, y_lo)
-        visible_bot = min(age_bot, y_hi)
+    for st in stages:
+        top, bot = st["end"], st["begin"]
+        visible_top, visible_bot = max(top, y_lo), min(bot, y_hi)
         if visible_top >= visible_bot:
             continue
 
-        color, label_color, dashed = type_config.get(
-            mis_type, (MIS_COLOR_COLD, "#003f6b", False)
-        )
+        warm = st["mode"] == "warm"
+        color = MIS_COLOR_WARM if warm else MIS_COLOR_COLD
+        label_color = MIS_LABEL_COLOR_WARM if warm else MIS_LABEL_COLOR_COLD
 
-        ax.axhspan(age_top, age_bot, facecolor=color, alpha=1.0, zorder=0)
+        has_data = True
+        if ages is not None:
+            has_data = any(top <= a < bot for a in ages)
 
-        y_label = (visible_top + visible_bot) / 2.0
-        ax.text(
-            0.99,
-            y_label,
-            label,
-            transform=mis_trans,
-            ha="right",
-            va="center",
-            fontsize=FONT_SIZE_MIS,
-            fontweight="bold",
-            color=label_color,
-            zorder=2,
-        )
+        span = ax.axvspan if horizontal else ax.axhspan
+        if has_data:
+            span(top, bot, facecolor=color, alpha=1.0, zorder=0)
+        else:
+            span(
+                top,
+                bot,
+                facecolor=color,
+                alpha=0.35,
+                edgecolor=label_color,
+                linestyle=(0, (4, 3)),
+                linewidth=1.2,
+                zorder=0,
+            )
+
+        middle = (visible_top + visible_bot) / 2.0
+        if horizontal:
+            ax.text(
+                middle, 0.985, st["label"], transform=trans, ha="center",
+                va="top", fontsize=FONT_SIZE_MIS, fontweight="bold",
+                color=label_color, rotation=90, zorder=2,
+            )
+        else:
+            ax.text(
+                0.99, middle, st["label"], transform=trans, ha="right",
+                va="center", fontsize=FONT_SIZE_MIS, fontweight="bold",
+                color=label_color, zorder=2,
+            )
 
 
 def create_plot(
@@ -239,7 +219,9 @@ def create_plot(
 
     # MIS bands in background (zorder=0)
     if show_mis:
-        draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max)
+        # y_values sind hier die Alter - damit weiss die Bänderfunktion,
+        # welche Stadien im Datensatz überhaupt Messwerte haben.
+        draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max, covered=y_values)
 
     if use_savgol:
         # Original grau im Hintergrund
@@ -403,9 +385,9 @@ def main():
         {
             "x": df_d18o["d18o"],
             "y": df_d18o["depth_m"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
             "ylabel": "Depth [m]",
-            "title": "EPICA – δ¹⁸O",
+            "title": "EPICA – δ¹⁸O of O₂",
             "filename": os.path.join(OUTPUT_DIR, "d18o_vs_depth_full"),
             "y_major": DEPTH_MAJOR_TICK_INTERVAL,
             "y_minor": DEPTH_MINOR_TICK_INTERVAL,
@@ -416,7 +398,7 @@ def main():
             "x": df_ch4["ch4"],
             "y": df_ch4["age_edc2_ka"],
             "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Age [ka BP]",
+            "ylabel": "Age [ka]",
             "title": "EPICA – CH₄",
             "filename": os.path.join(OUTPUT_DIR, "ch4_vs_age_ka_full"),
             "y_major": AGE_MAJOR_TICK_INTERVAL,
@@ -430,9 +412,9 @@ def main():
         {
             "x": df_d18o["d18o"],
             "y": df_d18o["age_ka"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
-            "ylabel": "Age [ka BP]",
-            "title": "EPICA – δ¹⁸O",
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
+            "ylabel": "Age [ka]",
+            "title": "EPICA – δ¹⁸O of O₂",
             "filename": os.path.join(OUTPUT_DIR, "d18o_vs_age_ka_full"),
             "y_major": AGE_MAJOR_TICK_INTERVAL,
             "y_minor": AGE_MINOR_TICK_INTERVAL,
@@ -457,9 +439,9 @@ def main():
         {
             "x": df_d18o["d18o"],
             "y": df_d18o["depth_m"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
             "ylabel": "Depth [m]",
-            "title": "EPICA – δ¹⁸O",
+            "title": "EPICA – δ¹⁸O of O₂",
             "filename": os.path.join(
                 OUTPUT_DIR, f"d18o_vs_depth_full_smooth{ROLLING_WINDOW}"
             ),
@@ -473,7 +455,7 @@ def main():
             "x": df_ch4["ch4"],
             "y": df_ch4["age_edc2_ka"],
             "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Age [ka BP]",
+            "ylabel": "Age [ka]",
             "title": "EPICA – CH₄",
             "filename": os.path.join(
                 OUTPUT_DIR, f"ch4_vs_age_ka_full_smooth{ROLLING_WINDOW}"
@@ -488,9 +470,9 @@ def main():
         {
             "x": df_d18o["d18o"],
             "y": df_d18o["age_ka"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
-            "ylabel": "Age [ka BP]",
-            "title": "EPICA – δ¹⁸O",
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
+            "ylabel": "Age [ka]",
+            "title": "EPICA – δ¹⁸O of O₂",
             "filename": os.path.join(
                 OUTPUT_DIR, f"d18o_vs_age_ka_full_smooth{ROLLING_WINDOW}"
             ),
@@ -518,9 +500,9 @@ def main():
         {
             "x": df_d18o["d18o"],
             "y": df_d18o["depth_m"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
             "ylabel": "Depth [m]",
-            "title": "EPICA – δ¹⁸O",
+            "title": "EPICA – δ¹⁸O of O₂",
             "filename": os.path.join(
                 OUTPUT_DIR, f"d18o_vs_depth_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
             ),
@@ -534,7 +516,7 @@ def main():
             "x": df_ch4["ch4"],
             "y": df_ch4["age_edc2_ka"],
             "xlabel": r"$\mathbf{CH}_{\mathbf{4}}\ \mathbf{[ppbv]}$",
-            "ylabel": "Age [ka BP]",
+            "ylabel": "Age [ka]",
             "title": "EPICA – CH₄",
             "filename": os.path.join(
                 OUTPUT_DIR, f"ch4_vs_age_ka_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
@@ -549,9 +531,9 @@ def main():
         {
             "x": df_d18o["d18o"],
             "y": df_d18o["age_ka"],
-            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
-            "ylabel": "Age [ka BP]",
-            "title": "EPICA – δ¹⁸O",
+            "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{of\ O_2}\ \mathbf{[‰]}$",
+            "ylabel": "Age [ka]",
+            "title": "EPICA – δ¹⁸O of O₂",
             "filename": os.path.join(
                 OUTPUT_DIR, f"d18o_vs_age_ka_full_savgol{SG_WINDOW}p{SG_POLYORDER}"
             ),
@@ -587,8 +569,13 @@ def main():
             use_savgol=cfg.get("use_savgol", False),
         )
 
+    # Die mehrteiligen Tafeln kommen neben den Einzeldateien, nicht statt
+    # ihrer: die Einzelabbildung zeigt eine Kurve gross, die Tafel den
+    # Vergleich, den eine Einzelabbildung nicht leisten kann.
+    epica_plates.build_all()
+
     print("\n" + "=" * 60)
-    print(f"Done! All {len(plots)} plots saved to '{OUTPUT_DIR}/'.")
+    print(f"Done! {len(plots)} single figures and 7 plates saved to '{OUTPUT_DIR}/'.")
     print(f"Report saved: {report_path}")
     print("=" * 60)
     tee.close()

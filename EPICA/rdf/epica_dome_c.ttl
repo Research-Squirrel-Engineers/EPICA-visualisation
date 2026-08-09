@@ -65,18 +65,6 @@ epica:collection_drilling_sites a geo:FeatureCollection,
     rdfs:label "EPICA Dome C drilling site collection"@en ;
     rdfs:member epica:site_dome_c .
 
-epica:mis_boundary_depth_ch4_10_begin a geolod:MISAttributeAssignment ;
-    rdfs:label "Beginning of MIS 10 at 2626.55 m in the CH4 record"@en ;
-    dct:source mis:source_railsback2015 ;
-    geolod:assignmentStatus geolod:LeadingAssignment ;
-    geolod:inChronology trs:EDC2-gas ;
-    geolod:interpolationMethod geolod:LinearInterpolation ;
-    crm:P140_assigned_attribute_to mis:MIS_10 ;
-    crm:P141_assigned epica:depth_position_ch4_10_begin ;
-    crm:P177_assigned_property_of_type geolod:MISBoundaryDepth ;
-    rdfs:comment "Depth obtained by linear interpolation between the two measurements bracketing 365.4 ka BP on the EDC2-gas scale. Valid for this record only."@en ;
-    prov:wasDerivedFrom mis:tp_railsback2015_MIS_10_begin .
-
 epica:mis_boundary_depth_ch4_11_begin a geolod:MISAttributeAssignment ;
     rdfs:label "Beginning of MIS 11 at 2792.27 m in the CH4 record"@en ;
     dct:source mis:source_railsback2015 ;
@@ -208,42 +196,6 @@ epica:mis_boundary_depth_ch4_6_begin a geolod:MISAttributeAssignment ;
     crm:P177_assigned_property_of_type geolod:MISBoundaryDepth ;
     rdfs:comment "Depth obtained by linear interpolation between the two measurements bracketing 190.4 ka BP on the EDC2-gas scale. Valid for this record only."@en ;
     prov:wasDerivedFrom mis:tp_railsback2015_MIS_6_begin .
-
-epica:mis_boundary_depth_ch4_7_begin a geolod:MISAttributeAssignment ;
-    rdfs:label "Beginning of MIS 7 at 2279.70 m in the CH4 record"@en ;
-    dct:source mis:source_railsback2015 ;
-    geolod:assignmentStatus geolod:LeadingAssignment ;
-    geolod:inChronology trs:EDC2-gas ;
-    geolod:interpolationMethod geolod:LinearInterpolation ;
-    crm:P140_assigned_attribute_to mis:MIS_7 ;
-    crm:P141_assigned epica:depth_position_ch4_7_begin ;
-    crm:P177_assigned_property_of_type geolod:MISBoundaryDepth ;
-    rdfs:comment "Depth obtained by linear interpolation between the two measurements bracketing 244.0 ka BP on the EDC2-gas scale. Valid for this record only."@en ;
-    prov:wasDerivedFrom mis:tp_railsback2015_MIS_7_begin .
-
-epica:mis_boundary_depth_ch4_8_begin a geolod:MISAttributeAssignment ;
-    rdfs:label "Beginning of MIS 8 at 2379.70 m in the CH4 record"@en ;
-    dct:source mis:source_railsback2015 ;
-    geolod:assignmentStatus geolod:LeadingAssignment ;
-    geolod:inChronology trs:EDC2-gas ;
-    geolod:interpolationMethod geolod:LinearInterpolation ;
-    crm:P140_assigned_attribute_to mis:MIS_8 ;
-    crm:P141_assigned epica:depth_position_ch4_8_begin ;
-    crm:P177_assigned_property_of_type geolod:MISBoundaryDepth ;
-    rdfs:comment "Depth obtained by linear interpolation between the two measurements bracketing 279.0 ka BP on the EDC2-gas scale. Valid for this record only."@en ;
-    prov:wasDerivedFrom mis:tp_railsback2015_MIS_8_begin .
-
-epica:mis_boundary_depth_ch4_9_begin a geolod:MISAttributeAssignment ;
-    rdfs:label "Beginning of MIS 9 at 2545.41 m in the CH4 record"@en ;
-    dct:source mis:source_railsback2015 ;
-    geolod:assignmentStatus geolod:LeadingAssignment ;
-    geolod:inChronology trs:EDC2-gas ;
-    geolod:interpolationMethod geolod:LinearInterpolation ;
-    crm:P140_assigned_attribute_to mis:MIS_9 ;
-    crm:P141_assigned epica:depth_position_ch4_9_begin ;
-    crm:P177_assigned_property_of_type geolod:MISBoundaryDepth ;
-    rdfs:comment "Depth obtained by linear interpolation between the two measurements bracketing 337.0 ka BP on the EDC2-gas scale. Valid for this record only."@en ;
-    prov:wasDerivedFrom mis:tp_railsback2015_MIS_9_begin .
 
 epica:mis_boundary_depth_d18o_10_begin a geolod:MISAttributeAssignment ;
     rdfs:label "Beginning of MIS 10 at 2644.79 m in the d18O record"@en ;
@@ -45173,13 +45125,6 @@ epica:mis_membership_dust_1154 a geolod:MISMembershipAssignment ;
     crm:P141_assigned mis:MIS_20 ;
     crm:P177_assigned_property_of_type geolod:MISMembership .
 
-epica:depth_position_ch4_10_begin a geolod:DepthPosition ;
-    rdfs:label "2626.55 m in the CH4 record (beginning of MIS 10, EDC2-gas)"@en ;
-    geolod:atDepth_m 2626.554 ;
-    crm:P90_has_value 2626.554 ;
-    crm:P91_has_unit unit:M ;
-    prov:wasDerivedFrom epica:dataset_ch4 .
-
 epica:depth_position_ch4_11_begin a geolod:DepthPosition ;
     rdfs:label "2792.27 m in the CH4 record (beginning of MIS 11, EDC2-gas)"@en ;
     geolod:atDepth_m 2792.273 ;
@@ -45254,27 +45199,6 @@ epica:depth_position_ch4_6_begin a geolod:DepthPosition ;
     rdfs:label "2064.95 m in the CH4 record (beginning of MIS 6, EDC2-gas)"@en ;
     geolod:atDepth_m 2064.954 ;
     crm:P90_has_value 2064.954 ;
-    crm:P91_has_unit unit:M ;
-    prov:wasDerivedFrom epica:dataset_ch4 .
-
-epica:depth_position_ch4_7_begin a geolod:DepthPosition ;
-    rdfs:label "2279.70 m in the CH4 record (beginning of MIS 7, EDC2-gas)"@en ;
-    geolod:atDepth_m 2279.698 ;
-    crm:P90_has_value 2279.698 ;
-    crm:P91_has_unit unit:M ;
-    prov:wasDerivedFrom epica:dataset_ch4 .
-
-epica:depth_position_ch4_8_begin a geolod:DepthPosition ;
-    rdfs:label "2379.70 m in the CH4 record (beginning of MIS 8, EDC2-gas)"@en ;
-    geolod:atDepth_m 2379.697 ;
-    crm:P90_has_value 2379.697 ;
-    crm:P91_has_unit unit:M ;
-    prov:wasDerivedFrom epica:dataset_ch4 .
-
-epica:depth_position_ch4_9_begin a geolod:DepthPosition ;
-    rdfs:label "2545.41 m in the CH4 record (beginning of MIS 9, EDC2-gas)"@en ;
-    geolod:atDepth_m 2545.411 ;
-    crm:P90_has_value 2545.411 ;
     crm:P91_has_unit unit:M ;
     prov:wasDerivedFrom epica:dataset_ch4 .
 
@@ -45742,7 +45666,7 @@ epica:depth_position_dust_9_begin a geolod:DepthPosition ;
 
 epica:generation_ch4 a prov:Activity ;
     rdfs:label "EPICA Dome C CH4 RDF generation"@en ;
-    owl:versionInfo "sha256:4d83c2780759" ;
+    owl:versionInfo "sha256:bb24a3cb6d2f" ;
     prov:used epica:generation_ch4_input_EDC_CH4_tab,
         epica:generation_ch4_input_epica_data_py,
         epica:generation_ch4_input_epica_rdf_py ;
@@ -45754,15 +45678,15 @@ epica:generation_ch4_input_EDC_CH4_tab a prov:Entity ;
 
 epica:generation_ch4_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:4aa25b118186aae6197db4518697d4a50f5874c5cb7a9ab7b1a89d4fc296a300" .
+    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
 
 epica:generation_ch4_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:b27fbab33920707c357a66d7d753765d850f089c1bf2cdcaa36f69490247ceaa" .
+    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
 
 epica:generation_d18o a prov:Activity ;
     rdfs:label "EPICA Dome C d18O RDF generation"@en ;
-    owl:versionInfo "sha256:53ea24fa015b" ;
+    owl:versionInfo "sha256:7a8269320a86" ;
     prov:used epica:generation_d18o_input_EPICA_Dome_C_d18O_tab,
         epica:generation_d18o_input_epica_data_py,
         epica:generation_d18o_input_epica_rdf_py ;
@@ -45774,15 +45698,15 @@ epica:generation_d18o_input_EPICA_Dome_C_d18O_tab a prov:Entity ;
 
 epica:generation_d18o_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:4aa25b118186aae6197db4518697d4a50f5874c5cb7a9ab7b1a89d4fc296a300" .
+    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
 
 epica:generation_d18o_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:b27fbab33920707c357a66d7d753765d850f089c1bf2cdcaa36f69490247ceaa" .
+    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
 
 epica:generation_dd a prov:Activity ;
     rdfs:label "EPICA Dome C dD RDF generation"@en ;
-    owl:versionInfo "sha256:ad333c0215a7" ;
+    owl:versionInfo "sha256:f149a06bc407" ;
     prov:used epica:generation_dd_input_EPICA_Dome_C_dD_tab,
         epica:generation_dd_input_epica_data_py,
         epica:generation_dd_input_epica_rdf_py ;
@@ -45794,15 +45718,15 @@ epica:generation_dd_input_EPICA_Dome_C_dD_tab a prov:Entity ;
 
 epica:generation_dd_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:4aa25b118186aae6197db4518697d4a50f5874c5cb7a9ab7b1a89d4fc296a300" .
+    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
 
 epica:generation_dd_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:b27fbab33920707c357a66d7d753765d850f089c1bf2cdcaa36f69490247ceaa" .
+    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
 
 epica:generation_do2n2 a prov:Activity ;
     rdfs:label "EPICA Dome C dO2N2 RDF generation"@en ;
-    owl:versionInfo "sha256:af9a6c4eb6b8" ;
+    owl:versionInfo "sha256:dd3d1ec9533f" ;
     prov:used epica:generation_do2n2_input_EPICA_Dome_C_do2n2_tab,
         epica:generation_do2n2_input_epica_data_py,
         epica:generation_do2n2_input_epica_rdf_py ;
@@ -45814,15 +45738,15 @@ epica:generation_do2n2_input_EPICA_Dome_C_do2n2_tab a prov:Entity ;
 
 epica:generation_do2n2_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:4aa25b118186aae6197db4518697d4a50f5874c5cb7a9ab7b1a89d4fc296a300" .
+    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
 
 epica:generation_do2n2_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:b27fbab33920707c357a66d7d753765d850f089c1bf2cdcaa36f69490247ceaa" .
+    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
 
 epica:generation_dust a prov:Activity ;
     rdfs:label "EPICA Dome C dust RDF generation"@en ;
-    owl:versionInfo "sha256:01e684419e5e" ;
+    owl:versionInfo "sha256:fbc3221dc4dc" ;
     prov:used epica:generation_dust_input_EPICA_Dome_C_dust_tab,
         epica:generation_dust_input_epica_data_py,
         epica:generation_dust_input_epica_rdf_py ;
@@ -45834,11 +45758,11 @@ epica:generation_dust_input_EPICA_Dome_C_dust_tab a prov:Entity ;
 
 epica:generation_dust_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:4aa25b118186aae6197db4518697d4a50f5874c5cb7a9ab7b1a89d4fc296a300" .
+    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
 
 epica:generation_dust_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
-    dct:identifier "sha256:b27fbab33920707c357a66d7d753765d850f089c1bf2cdcaa36f69490247ceaa" .
+    dct:identifier "sha256:4db2098fedc225e60edac642a3a2c20378330264d8e8d869bb611e343438c8f0" .
 
 epica:geom_borehole_domec a sf:Point,
         owl:NamedIndividual ;
@@ -194337,7 +194261,7 @@ epica:dataset_ch4 a geolod:IceCoreDataset,
         epica:obs_ch4_0734,
         epica:obs_ch4_0735,
         epica:obs_ch4_0736 ;
-    owl:versionInfo "sha256:4d83c2780759" ;
+    owl:versionInfo "sha256:bb24a3cb6d2f" ;
     dcat:record epica:obs_ch4_0001,
         epica:obs_ch4_0002,
         epica:obs_ch4_0003,
@@ -196465,7 +196389,7 @@ epica:dataset_d18o a geolod:IceCoreDataset,
         epica:obs_d18o_1376,
         epica:obs_d18o_1377,
         epica:obs_d18o_1378 ;
-    owl:versionInfo "sha256:53ea24fa015b" ;
+    owl:versionInfo "sha256:7a8269320a86" ;
     dcat:record epica:obs_d18o_0001,
         epica:obs_d18o_0002,
         epica:obs_d18o_0003,
@@ -198679,7 +198603,7 @@ epica:dataset_do2n2 a geolod:IceCoreDataset,
         epica:obs_do2n2_0820,
         epica:obs_do2n2_0821,
         epica:obs_do2n2_0822 ;
-    owl:versionInfo "sha256:af9a6c4eb6b8" ;
+    owl:versionInfo "sha256:dd3d1ec9533f" ;
     dcat:record epica:obs_do2n2_0001,
         epica:obs_do2n2_0002,
         epica:obs_do2n2_0003,
@@ -200329,7 +200253,7 @@ epica:dataset_dd a geolod:IceCoreDataset,
         epica:obs_dd_0812,
         epica:obs_dd_0813,
         epica:obs_dd_0814 ;
-    owl:versionInfo "sha256:ad333c0215a7" ;
+    owl:versionInfo "sha256:f149a06bc407" ;
     dcat:record epica:obs_dd_0001,
         epica:obs_dd_0002,
         epica:obs_dd_0003,
@@ -202311,7 +202235,7 @@ epica:dataset_dust a geolod:IceCoreDataset,
         epica:obs_dust_1152,
         epica:obs_dust_1153,
         epica:obs_dust_1154 ;
-    owl:versionInfo "sha256:01e684419e5e" ;
+    owl:versionInfo "sha256:fbc3221dc4dc" ;
     dcat:record epica:obs_dust_0001,
         epica:obs_dust_0002,
         epica:obs_dust_0003,

@@ -46,7 +46,6 @@ inputs are byte-identical.
 
 from __future__ import annotations
 
-import csv
 import os
 import sys
 
@@ -59,7 +58,6 @@ RDF_DIR = os.path.join(SCRIPT_DIR, "rdf")
 REPORT_DIR = os.path.join(SCRIPT_DIR, "report")
 ONTOLOGY_DIR = os.path.join(REPO_DIR, "ontology")
 DIST_DIR = os.path.join(REPO_DIR, "dist")
-MIS_STAGES_CSV = os.path.join(DIST_DIR, "mis_stages.csv")
 
 sys.path.insert(0, SCRIPT_DIR)
 sys.path.insert(0, ONTOLOGY_DIR)
@@ -125,63 +123,14 @@ def dec(value: float, places: int) -> Literal:
 # ===========================================================================
 
 
-def read_mis_stages() -> list[dict]:
-    """Leading stage boundaries from ``dist/mis_stages.csv``.
-
-    Substages are skipped on purpose. Railsback et al. (2015) resolve
-    substages only over part of their range, so substage membership would be
-    complete for some observations and absent for others; stage membership is
-    complete throughout. A consumer needing substages can reach them through
-    skos:broader and the boundary assignments in the vocabulary.
-    """
-    if not os.path.exists(MIS_STAGES_CSV):
-        raise FileNotFoundError(
-            f"{MIS_STAGES_CSV} missing - run the vocabulary step (main.py step 3) first."
-        )
-
-    stages: list[dict] = []
-    with open(MIS_STAGES_CSV, encoding="utf-8", newline="") as fh:
-        for row in csv.DictReader(fh):
-            if row["kind"] != "stage" or not row["begin_ka"]:
-                continue
-            stages.append(
-                {
-                    "stage": row["stage"],
-                    "label": row["label"],
-                    # begin = older bound, end = younger bound. MIS 1 has no
-                    # younger bound; it reaches the present.
-                    "begin": float(row["begin_ka"]),
-                    "end": float(row["end_ka"]) if row["end_ka"] else 0.0,
-                }
-            )
-    stages.sort(key=lambda s: s["begin"])
-    return stages
-
-
-def stage_for_age(stages: list[dict], age_ka: float) -> dict | None:
-    """The stage an age falls in: end <= age < begin."""
-    for st in stages:
-        if st["end"] <= age_ka < st["begin"]:
-            return st
-    return None
-
-
-def interpolate_depth(df: pd.DataFrame, age_ka: float) -> float | None:
-    """Depth at which *age_ka* falls in this record, by linear interpolation.
-
-    Returns None outside the measured range. Extrapolating would state a depth
-    the record does not reach, and a boundary drawn there would look measured
-    while resting on nothing.
-    """
-    pairs = sorted(zip(df["age_ka"].tolist(), df["depth_m"].tolist()))
-    if not pairs or age_ka < pairs[0][0] or age_ka > pairs[-1][0]:
-        return None
-    for (a0, d0), (a1, d1) in zip(pairs, pairs[1:]):
-        if a0 <= age_ka <= a1:
-            if a1 == a0:
-                return d0
-            return d0 + (d1 - d0) * (age_ka - a0) / (a1 - a0)
-    return None
+# The three helpers below live in epica_data so that the figures use exactly
+# the boundaries and the interpolation the graph uses. They were duplicated
+# here first; that is the sort of duplication that stays correct for a week.
+from epica_data import (  # noqa: E402
+    interpolate_depth,
+    read_mis_stages,
+    stage_for_age,
+)
 
 
 # ===========================================================================

@@ -14,15 +14,15 @@ Generating plots …
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg
 
-[2/12] EPICA – δ¹⁸O – Y: Depth [m]
+[2/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg
 
-[3/12] EPICA – CH₄ – Y: Age [ka BP]
+[3/12] EPICA – CH₄ – Y: Age [ka]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg
 
-[4/12] EPICA – δ¹⁸O – Y: Age [ka BP]
+[4/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg
 
@@ -30,15 +30,15 @@ Generating plots …
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg
 
-[6/12] EPICA – δ¹⁸O – Y: Depth [m]
+[6/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg
 
-[7/12] EPICA – CH₄ – Y: Age [ka BP]
+[7/12] EPICA – CH₄ – Y: Age [ka]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg
 
-[8/12] EPICA – δ¹⁸O – Y: Age [ka BP]
+[8/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg
 
@@ -46,19 +46,30 @@ Generating plots …
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg
 
-[10/12] EPICA – δ¹⁸O – Y: Depth [m]
+[10/12] EPICA – δ¹⁸O of O₂ – Y: Depth [m]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg
 
-[11/12] EPICA – CH₄ – Y: Age [ka BP]
+[11/12] EPICA – CH₄ – Y: Age [ka]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg
 
-[12/12] EPICA – δ¹⁸O – Y: Age [ka BP]
+[12/12] EPICA – δ¹⁸O of O₂ – Y: Age [ka]
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg
 
+────────────────────────────────────────────────────────────
+Generating plates …
+────────────────────────────────────────────────────────────
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_boundary_depths.svg / .jpg
+
 ============================================================
-Done! All 12 plots saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
+Done! 12 single figures and 7 plates saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
 Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
 ============================================================
