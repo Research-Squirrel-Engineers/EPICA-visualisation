@@ -9,6 +9,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     dcterms:created "2026-08-08"^^xsd:date ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    owl:versionInfo "sha256:a76f0d9d28f0" ;
+    owl:versionInfo "sha256:3c1017311690" ;
     prov:wasGeneratedBy <http://w3id.org/geo-lod/SISAL_Sites_Generation> .
 

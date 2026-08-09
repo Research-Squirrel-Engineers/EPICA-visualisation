@@ -49,16 +49,16 @@
     ns1:distinctIRIReferences 1006,
         2533,
         9655,
-        68353 ;
+        68357 ;
     ns1:distinctLiterals 0 ;
     ns1:distinctRDFNodes 1006,
         2533,
         9655,
-        68353 ;
+        68357 ;
     ns1:languages 0 ;
     ns1:propertyClasses 0 ;
     dc:language <http://www.lexvo.org/page/iso639-1/en> ;
-    dcterms:modified "2026-08-09T13:52:27"^^xsd:dateTime ;
+    dcterms:modified "2026-08-09T15:03:19"^^xsd:dateTime ;
     dcterms:subject <http://dbpedia.org/resource/Location>,
         <http://dbpedia.org/resource/OGC_GeoSPARQL>,
         <http://dbpedia.org/resource/Time>,
@@ -118,7 +118,7 @@
     void:distinctObjects 653,
         1882,
         7145,
-        52299 ;
+        52303 ;
     void:distinctSubjects 318,
         627,
         2490,

@@ -1175,7 +1175,7 @@
         <http://w3id.org/geo-lod/epica/obs_dust_1152>,
         <http://w3id.org/geo-lod/epica/obs_dust_1153>,
         <http://w3id.org/geo-lod/epica/obs_dust_1154> ;
-    owl:versionInfo "sha256:fbc3221dc4dc" ;
+    owl:versionInfo "sha256:a60727461745" ;
     dcat:record <http://w3id.org/geo-lod/epica/obs_dust_0001>,
         <http://w3id.org/geo-lod/epica/obs_dust_0002>,
         <http://w3id.org/geo-lod/epica/obs_dust_0003>,
