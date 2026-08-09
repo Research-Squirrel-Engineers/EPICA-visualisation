@@ -1,19 +1,19 @@
 @prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ns2: <http://www.ics.forth.gr/isl/CRMsci/> .
-@prefix ns3: <http://w3id.org/geo-lod/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
+@prefix ns3: <http://www.ics.forth.gr/isl/CRMsci/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/geo-lod/epica/campaign_1996_2004> a ns3:DrillingCampaign,
+<http://w3id.org/geo-lod/epica/campaign_1996_2004> a ns2:DrillingCampaign,
         owl:NamedIndividual,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "EPICA Dome C drilling campaign 1996-2004"@en ;
-    void:inDataset ns3:geo-lod ;
-    ns3:removedSample <http://w3id.org/geo-lod/epica/core_edc> ;
-    ns3:tookPlaceAt <http://w3id.org/geo-lod/epica/site_dome_c> ;
+    void:inDataset ns2:geo-lod ;
+    ns2:removedSample <http://w3id.org/geo-lod/epica/core_edc> ;
+    ns2:tookPlaceAt <http://w3id.org/geo-lod/epica/site_dome_c> ;
     ns1:P4_has_time-span "1996/2004"^^xsd:string ;
-    ns2:O1_removed <http://w3id.org/geo-lod/epica/core_edc> .
+    ns3:O1_removed <http://w3id.org/geo-lod/epica/core_edc> .
 

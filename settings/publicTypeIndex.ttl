@@ -3994,7 +3994,6 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#dataset_dust_suniv0_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#dataset_dust_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#dataset_dust_suniv2_>,
-        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_10_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_11_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_12_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_13_begin>,
@@ -4006,9 +4005,6 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_4_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_5_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_6_begin>,
-        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_7_begin>,
-        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_8_begin>,
-        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_9_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_d18o_10_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_d18o_11_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_d18o_12_begin>,
@@ -4102,7 +4098,6 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#measurement_type_dd>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#measurement_type_do2n2>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#measurement_type_dust>,
-        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_10_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_11_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_12_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_13_begin>,
@@ -4114,9 +4109,6 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_4_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_5_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_6_begin>,
-        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_7_begin>,
-        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_8_begin>,
-        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_9_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_d18o_10_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_d18o_11_begin>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_d18o_12_begin>,
@@ -31842,9 +31834,6 @@ void:Linkset a owl:Class .
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#dataset_dust_suniv2_> ns1:forClass dcat:Dataset ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//dataset_dust_suniv2_> .
 
-<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_10_begin> ns1:forClass <http://w3id.org/geo-lod/DepthPosition> ;
-    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//depth_position_ch4_10_begin> .
-
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_11_begin> ns1:forClass <http://w3id.org/geo-lod/DepthPosition> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//depth_position_ch4_11_begin> .
 
@@ -31877,15 +31866,6 @@ void:Linkset a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_6_begin> ns1:forClass <http://w3id.org/geo-lod/DepthPosition> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//depth_position_ch4_6_begin> .
-
-<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_7_begin> ns1:forClass <http://w3id.org/geo-lod/DepthPosition> ;
-    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//depth_position_ch4_7_begin> .
-
-<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_8_begin> ns1:forClass <http://w3id.org/geo-lod/DepthPosition> ;
-    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//depth_position_ch4_8_begin> .
-
-<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_ch4_9_begin> ns1:forClass <http://w3id.org/geo-lod/DepthPosition> ;
-    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//depth_position_ch4_9_begin> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#depth_position_d18o_10_begin> ns1:forClass <http://w3id.org/geo-lod/DepthPosition> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//depth_position_d18o_10_begin> .
@@ -32166,9 +32146,6 @@ void:Linkset a owl:Class .
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#measurement_type_dust> ns1:forClass <http://w3id.org/geo-lod/MeasurementType> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//measurement_type_dust> .
 
-<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_10_begin> ns1:forClass <http://w3id.org/geo-lod/MISAttributeAssignment> ;
-    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//mis_boundary_depth_ch4_10_begin> .
-
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_11_begin> ns1:forClass <http://w3id.org/geo-lod/MISAttributeAssignment> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//mis_boundary_depth_ch4_11_begin> .
 
@@ -32201,15 +32178,6 @@ void:Linkset a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_6_begin> ns1:forClass <http://w3id.org/geo-lod/MISAttributeAssignment> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//mis_boundary_depth_ch4_6_begin> .
-
-<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_7_begin> ns1:forClass <http://w3id.org/geo-lod/MISAttributeAssignment> ;
-    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//mis_boundary_depth_ch4_7_begin> .
-
-<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_8_begin> ns1:forClass <http://w3id.org/geo-lod/MISAttributeAssignment> ;
-    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//mis_boundary_depth_ch4_8_begin> .
-
-<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_ch4_9_begin> ns1:forClass <http://w3id.org/geo-lod/MISAttributeAssignment> ;
-    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//mis_boundary_depth_ch4_9_begin> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#mis_boundary_depth_d18o_10_begin> ns1:forClass <http://w3id.org/geo-lod/MISAttributeAssignment> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//mis_boundary_depth_d18o_10_begin> .

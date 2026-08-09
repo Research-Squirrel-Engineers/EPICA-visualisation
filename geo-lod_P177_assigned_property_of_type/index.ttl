@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: P177_assigned_property_of_type"@en ;
     void:property <http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type> ;
-    void:triples 4985 .
+    void:triples 4981 .
 

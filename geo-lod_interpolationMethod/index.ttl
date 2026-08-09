@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: interpolationMethod"@en ;
     void:property <http://w3id.org/geo-lod/interpolationMethod> ;
-    void:triples 81 .
+    void:triples 77 .
 

@@ -10,6 +10,6 @@
         <http://www.cidoc-crm.org/cidoc-crm/P91_has_unit> ;
     void:objectsTarget <http://qudt.org/vocab/unit/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 81,
+    void:triples 77,
         4909 .
 

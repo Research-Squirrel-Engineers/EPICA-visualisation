@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: P91_has_unit"@en ;
     void:property <http://www.cidoc-crm.org/cidoc-crm/P91_has_unit> ;
-    void:triples 81 .
+    void:triples 77 .
 

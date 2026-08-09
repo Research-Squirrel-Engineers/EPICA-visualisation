@@ -7,8 +7,7 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "DepthPosition Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/epica/depth_position_ch4_10_begin>,
-        <http://w3id.org/geo-lod/epica/depth_position_ch4_11_begin>,
+    rdfs:member <http://w3id.org/geo-lod/epica/depth_position_ch4_11_begin>,
         <http://w3id.org/geo-lod/epica/depth_position_ch4_12_begin>,
         <http://w3id.org/geo-lod/epica/depth_position_ch4_13_begin>,
         <http://w3id.org/geo-lod/epica/depth_position_ch4_14_begin>,
@@ -19,9 +18,6 @@
         <http://w3id.org/geo-lod/epica/depth_position_ch4_4_begin>,
         <http://w3id.org/geo-lod/epica/depth_position_ch4_5_begin>,
         <http://w3id.org/geo-lod/epica/depth_position_ch4_6_begin>,
-        <http://w3id.org/geo-lod/epica/depth_position_ch4_7_begin>,
-        <http://w3id.org/geo-lod/epica/depth_position_ch4_8_begin>,
-        <http://w3id.org/geo-lod/epica/depth_position_ch4_9_begin>,
         <http://w3id.org/geo-lod/epica/depth_position_d18o_10_begin>,
         <http://w3id.org/geo-lod/epica/depth_position_d18o_11_begin>,
         <http://w3id.org/geo-lod/epica/depth_position_d18o_12_begin>,

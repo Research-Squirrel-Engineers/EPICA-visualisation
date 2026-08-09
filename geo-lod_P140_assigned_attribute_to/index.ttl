@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: P140_assigned_attribute_to"@en ;
     void:property <http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> ;
-    void:triples 4985 .
+    void:triples 4981 .
 
