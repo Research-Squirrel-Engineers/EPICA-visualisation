@@ -241,6 +241,15 @@ lesen hier ab, statt neu zu diskutieren.
 | Ringe an der Bruchstelle | auf **beiden** Kurven, Rohwerte wie Glättung. Der Ring markiert die letzte gemessene Probe vor der Unterbrechung — eine Aussage über die Messreihe, nicht über die Glättung. Der Versatz zwischen grauem und schwarzem Ring zeigt nebenbei, wie weit die Glättung dort vom Messwert abweicht | 2026-08-09 |
 | Teilweise bekannte MIS-Bänder in Tiefe | werden gezeichnet, schraffiert, bis an den Rand der Messreihe. Vorher entfiel ein Band, sobald **eine** seiner Grenzen in eine Datenlücke fiel — bei CH₄ verschwanden so MIS 7 und MIS 11, obwohl von beiden je eine Kante interpolierbar ist. Stadien, die vollständig in der Lücke liegen (MIS 8 bis 10), bekommen weiterhin kein Band; dort gibt es keine Tiefe, der sie zuzuordnen wären | 2026-08-09 |
 | Datenlücke in Tiefendarstellungen | bekommt ein eigenes neutrales Band mit der Beschriftung „no samples". Vorher stand dort weisse Fläche, und weiss ist in diesen Abbildungen sonst nichts — eine Lücke sah aus wie ein Zeichenfehler | 2026-08-09 |
+| Datenbankname | `sisal_v3`, klein mit Unterstrich. Der Bindestrich in `sisal-v2` erzwingt in jeder Query Anführungszeichen | 2026-08-10 |
+| Postgres-Schema | `public`. Ein eigenes Schema brächte nur einen weiteren Bezeichner in jede Query, ohne dass etwas anderes in dieser Datenbank läge | 2026-08-10 |
+| Fremdschlüssel und Indizes | getrennt in `postgres/constraints.sql`, angewandt **nach** dem Ladelauf. So werden Verletzungen zu einer prüfbaren Liste, statt das `COPY` abzubrechen, und die Indizes entstehen nicht zeilenweise während des Ladens | 2026-08-10 |
+| Textspalten | durchgehend `text` statt `varchar(n)`. In Postgres kein Laufzeitunterschied, und die Längen des Releases (`varchar(2555)`, `varchar(8000)`) sind gewachsene Schätzwerte, keine dokumentierten fachlichen Grenzen | 2026-08-10 |
+| Enum-Spalten | `text` mit `CHECK (col IN (…))`, 75 Stück. Als **Detektor** gedacht, nicht als Filter: weist der Ladelauf eine Zeile ab, wird der Wert angesehen und nicht der Constraint gelockert | 2026-08-10 |
+| `AUTO_INCREMENT` | entfällt auf allen zwölf Spalten. Der Restore lädt die Originalschlüssel aus den Release-CSVs; eine Sequenz wäre eine zweite, konkurrierende Quelle für Identifikatoren | 2026-08-10 |
+| Isotopenspalten in `dating` | Massenzahl hinter das Elementsymbol: `238U_content` → `u238_content`, `230Th_232Th_ratio` → `th230_th232_ratio`, `14C_correction` → `c14_correction`. Postgres akzeptiert keinen unquotierten Bezeichner, der mit einer Ziffer beginnt; dauerhaftes Quoten war nach A4 ausgeschlossen. 13 Spalten, alle in `postgres/NAMING.md` | 2026-08-10 |
+| Constraint-Benennung | Postgres-Konvention statt Release: `<tabelle>_pkey`, `<tabelle>_<spalte>_fkey`, `…_chk`, `…_idx`. Die Namen des Dumps (`fk_entity_id`, `fk_Sample_entity1_idx`) sind über Tabellen hinweg nicht eindeutig | 2026-08-10 |
+| Herkunft des Schemas | `postgres/schema.sql` ist ab sofort die gepflegte Quelle. Der Einmal-Übersetzer aus dem Dump-DDL wandert nicht ins Repo — er liefe ohne `ddl.sql` gar nicht, und die liegt nicht im Repo | 2026-08-10 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -289,7 +298,7 @@ noch nicht entschieden.
 | S0 | Festlegungen, kein Code | — | — | erledigt 2026-08-08 |
 | S1 | Gemeinsame Vokabulare | geo-lod | S0 | erledigt 2026-08-08 |
 | S2 | EPICA nach RDF | geo-lod | S0, S1 | erledigt 2026-08-09 |
-| S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | offen |
+| S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | erledigt 2026-08-10 |
 | S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | offen |
 | S3c | SISAL nach RDF | geo-lod | S0, S1, S3b | offen |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c | offen |
@@ -811,6 +820,37 @@ Namenszuordnung MySQL → Postgres.
 
 **Fertig, wenn:** das Schema auf einer leeren Datenbank ohne Fehler durchläuft.
 
+### Erledigt 2026-08-10
+
+Ausgeliefert: `postgres/schema.sql` (21 Tabellen, 190 Spalten, 19 Primär-
+schlüssel, 75 CHECK-Constraints), `postgres/constraints.sql` (21 Fremdschlüssel,
+21 Indizes) und `postgres/NAMING.md`. Beide SQL-Dateien laufen auf Postgres 13.9
+fehlerfrei durch; Gegenprobe in der Datenbank ergab 21 Tabellen, `contype='p'`
+19 und `contype='c'` 75 im Schema `public`.
+
+Was dabei herauskam und über S3a hinaus wirkt:
+
+- **Spaltenparität steht.** Alle 21 Tabellen wurden gegen die CSV-Kopfzeilen
+  gestellt: Namen und Reihenfolge stimmen überein. Damit lädt
+  `COPY <tabelle> FROM … (FORMAT csv, HEADER true)` ohne explizite Spaltenliste
+  — eine Fehlerquelle weniger in S3b.
+- **Zwei Tabellen haben keinen Primärschlüssel**, `composite_link_entity` und
+  `entity_link_reference`. Reine Verknüpfungstabellen aus zwei
+  Fremdschlüsselspalten; MySQL hat dort nie einen PK definiert. Ohne PK
+  verdoppelt ein zweiter Ladelauf sie stillschweigend — in S3b braucht es dort
+  einen zusammengesetzten Primärschlüssel oder einen Zeilenzahl-Abgleich.
+- **Vier Postgres-Instanzen parallel** (9.6, 11, 12, 13). Die 13 lauscht auf
+  **Port 5435**, nicht auf 5432. Ohne `-p` verbindet `psql` sich auf die
+  falsche Instanz — die wahrscheinlichste Ursache für „lädt, aber nichts ist
+  da". Der Port gehört in `config.ini` und `config.example.ini`.
+- **BOM-Falle.** `Set-Content -Encoding UTF8` schreibt unter PowerShell 5.1 ein
+  BOM. `findstr /b` zählt die erste Zeile der Datei dann nicht mit, was
+  zweimal wie eine fehlende Tabelle aussah (`Ba_Ca`, dann `Ba_Ca.csv`). Für
+  erzeugte Dateien, die andere Werkzeuge lesen, gehört `utf8NoBOM`
+  beziehungsweise `UTF8Encoding($false)` gesetzt.
+- `alter.sql` blieb leer: der Dump legt alle Constraints direkt in die
+  `CREATE TABLE`-Blöcke.
+
 **Warum DDL aus dem Dump und Daten aus den CSVs.** Nur der Dump trägt Typen,
 Schlüssel, `NOT NULL` und `ON DELETE CASCADE` — genau das, was den CSVs fehlt;
 ohne ihn müsste die Integrität aus dem ER-Diagramm rekonstruiert werden. Die
@@ -848,24 +888,47 @@ referenzieller Integrität und ist danach der einzige Zugriffsweg auf SISAL —
 für geo-lod wie für die WD1-Repos.
 
 **Uploads:** `sisal-db-v3` als ZIP ohne `data/sisalv3_csv/` und ohne
-`postgres/sisal-v3.sql`; das in S3a entstandene `postgres/schema.sql`; die
-Zeilenzahlen je CSV (`wc -l` bzw. unter Windows `find /c /v ""`).
+`postgres/sisal-v3.sql`; das in S3a entstandene `postgres/schema.sql` und
+`postgres/constraints.sql`. Die Zeilenzahlen je CSV stehen bereits in der
+`csv_info.txt` aus dem S3a-Bundle und müssen nicht neu erhoben werden:
+`sample` 448 574, `d18O` 447 171, `original_chronology` 439 093,
+`sisal_chronology` 319 685, `d13C` 286 634, `dating_lamina` 35 973,
+`Mg_Ca` 26 486, `Sr_Ca` 23 963, `Ba_Ca` 15 144, `dating` 13 690,
+`P_Ca` 11 465, `U_Ca` 11 048, `entity_link_reference` 1057, `entity` 903,
+`reference` 502, `hiatus` 431, `site` 366, `notes` 249, `Sr_isotopes` 165,
+`composite_link_entity` 51, `gap` 49 — jeweils einschliesslich Kopfzeile.
 
 **Ergebnis:** angepasstes `build_database.py`, neuer Guard, aufgeräumtes Repo.
 
 **Fertig, wenn:** ein Lauf von leerer Datenbank bis geladener v3-DB durchläuft
 und der Guard grün meldet.
 
-**Ladeweg.** `COPY ... (FORMAT csv)` aus den Original-CSVs, Ladereihenfolge
-entlang der Fremdschlüssel: `site` → `entity` → `sample` → Messtabellen, dann
-`reference`, `notes`, Link-Tabellen. Kein pgAdmin-Import; Datenbank anlegen und
-hineinschauen gern, laden nicht.
+**Ladeweg.** `COPY ... (FORMAT csv, HEADER true)` aus den Original-CSVs, ohne
+explizite Spaltenliste — die Spaltenparität ist in S3a geprüft. Die
+Ladereihenfolge entlang der Fremdschlüssel (`site` → `entity` → `sample` →
+Messtabellen, dann `reference`, `notes`, Link-Tabellen) ist nach dem Beschluss
+aus S3a nicht mehr zwingend, weil `constraints.sql` erst danach läuft; sie
+bleibt trotzdem sinnvoll, weil sie die Fehlersuche vereinfacht. Kein
+pgAdmin-Import; Datenbank anlegen und hineinschauen gern, laden nicht.
+
+Zu beachten: Tabellennamen und Isotopenspalten weichen vom Release ab, die
+CSV-Dateinamen dagegen nicht. `postgres/NAMING.md` ist die Zuordnung; der
+Loader darf den Dateinamen nicht ungeprüft als Tabellennamen verwenden.
 
 **Was der Guard prüft.** Nicht mehr drei Sites gegen handgepflegte Zahlen,
 sondern: Zeilenzahl je Tabelle gegen die CSV-Zeilenzahl, Wertebereiche gegen
 `PLAUSIBLE_RANGE` als direkten Test auf die 1000×-Signatur, und
 Fremdschlüssel-Integrität. Site-bezogene Sollwerte bleiben möglich, sind aber
 optional und nicht mehr WD1-fest.
+
+Der Zeilenzahl-Abgleich ist bei `composite_link_entity` und
+`entity_link_reference` die einzige Sicherung gegen doppeltes Laden — beide
+haben keinen Primärschlüssel (S3a).
+
+**Mit CHECK-Verletzungen ist zu rechnen.** Die 75 Constraints deklarieren exakt
+die Wertelisten des Dumps. Steht in einer CSV ein Wert, den der Dump nicht
+kennt, weist der Ladelauf die Zeile ab. Das ist der gewollte Detektor: jeder
+Treffer wird angesehen, nicht durch Lockern des Constraints erledigt.
 
 **Erwartbarer Nebenbefund.** Beim Aktivieren der Fremdschlüssel werden
 wahrscheinlich Waisen auffallen, die im Sechs-Tabellen-Ausschnitt gar nicht
@@ -898,7 +961,11 @@ diese Punkte ziehen mit:
   `sisal-v2`, hält aber v3-Daten: `config.ini`, `config.example.ini`,
   README-Diagramm, `main.py`-Docstring, Phasenbeschreibung. Solange nur ein
   Ausschnitt geladen war, fiel das nicht ins Gewicht; mit dem vollen Restore ist
-  eine eindeutige Benennung wichtiger.
+  eine eindeutige Benennung wichtiger. Neuer Name nach A4: `sisal_v3`.
+- **Port in die Konfiguration.** Auf der Arbeitsmaschine laufen vier Instanzen
+  nebeneinander, die 13 auf Port 5435. Host, Port, Datenbank und Benutzer
+  gehören zusammen in `config.ini` und `config.example.ini`; ein fehlender Port
+  ist bei dieser Konstellation die wahrscheinlichste Fehlerursache.
 - **Repo-Umbenennung nachziehen.** `main.py`, der Strukturblock im README und
   `CITATION.cff` tragen noch `wdttest-sisal-db-v3`; `repository-code` zeigt auf
   einen Platzhalter. Der richtige Wert steht jetzt fest. Die verbleibenden
@@ -1041,6 +1108,9 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   korrigieren.
 - Sanbao: 5832 gegenüber 9535 Samples im Release. Beim Neuaufbau klären, ob
   Zeilenverlust oder bewusster Join (S3c).
+- Skripte, die unter Windows Dateien für andere Werkzeuge erzeugen, auf
+  `utf8NoBOM` stellen. Das BOM aus PowerShell 5.1 hat in S3a zweimal wie eine
+  fehlende Tabelle ausgesehen (S3b).
 - Abbildung alt → neu für die migrierten CI- und `Cave_site`-IRIs, zusammen mit
   der Content-Negotiation (S4).
 - ~~Beleg für die Warm/Kalt-Einstufung suchen und den hartcodierten Bestand in
