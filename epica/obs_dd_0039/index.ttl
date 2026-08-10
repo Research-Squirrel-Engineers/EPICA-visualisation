@@ -1,6 +1,6 @@
-@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ns2: <http://w3id.org/geo-lod/> .
-@prefix ns3: <http://qudt.org/schema/qudt/> .
+@prefix ns1: <http://w3id.org/geo-lod/> .
+@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,25 +8,25 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/geo-lod/epica/obs_dd_0039> a ns2:IceCoreObservation,
+<http://w3id.org/geo-lod/epica/obs_dd_0039> a ns1:IceCoreObservation,
         owl:NamedIndividual,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Deuterium (δD) observation 0039 (4.3 ka BP, 154.8 m)"@en ;
-    ns3:unit <http://qudt.org/vocab/unit/PERMILLE> ;
-    void:inDataset ns2:geo-lod ;
-    ns2:ageChronology <http://w3id.org/geo-lod/trs/EDC2-ice> ;
-    ns2:ageKaBP 4.2510 ;
-    ns2:atDepth_m 154.825 ;
-    ns2:fallsWithinStage <http://w3id.org/geo-lod/vocab/mis/MIS_1> ;
-    ns2:hasTimePosition <http://w3id.org/geo-lod/epica/tp_dd_0039> ;
-    ns2:measuredValue -395.20000 ;
-    ns2:measurementType <http://w3id.org/geo-lod/epica/measurement_type_dd> ;
-    ns2:smoothedValue_rollingMedian -395.27000 ;
-    ns2:smoothedValue_savgol -395.50737 ;
-    ns2:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
-    ns2:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
-    ns1:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;
+    ns2:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    void:inDataset ns1:geo-lod ;
+    ns1:ageChronology <http://w3id.org/geo-lod/trs/EDC2-ice> ;
+    ns1:ageKaBP 4.2510 ;
+    ns1:atDepth_m 154.825 ;
+    ns1:fallsWithinStage <http://w3id.org/geo-lod/vocab/mis/MIS_1> ;
+    ns1:hasTimePosition <http://w3id.org/geo-lod/epica/tp_dd_0039> ;
+    ns1:measuredValue -395.20000 ;
+    ns1:measurementType <http://w3id.org/geo-lod/epica/measurement_type_dd> ;
+    ns1:smoothedValue_rollingMedian -395.27000 ;
+    ns1:smoothedValue_savgol -395.50737 ;
+    ns1:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
+    ns1:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
+    ns3:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;
     prov:wasDerivedFrom <http://w3id.org/geo-lod/epica/source_dd> ;
     sosa:hasFeatureOfInterest <http://w3id.org/geo-lod/epica/sample_dd_0039> ;
     sosa:hasSimpleResult -395.20000 ;
