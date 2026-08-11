@@ -54,6 +54,8 @@ from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
 TABLES_DIR = ROOT / "data" / "derived" / "sisal" / "tables"
+CATALOGUE_DIR = ROOT / "data" / "derived" / "sisal" / "catalogue"
+CURATED_DIR = ROOT / "data" / "curated"
 RDF_DIR = SCRIPT_DIR / "rdf"
 
 sys.path.insert(0, str(ROOT / "ontology"))
@@ -61,6 +63,7 @@ from geo_lod_utils import add_generation_provenance  # noqa: E402
 
 CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 CRMSCI = Namespace("http://www.ics.forth.gr/isl/CRMsci/")
+CRMARCHAEO = Namespace("http://www.cidoc-crm.org/extensions/crmarchaeo/")
 GEO = Namespace("http://www.opengis.net/ont/geosparql#")
 SF = Namespace("http://www.opengis.net/ont/sf#")
 GEOLOD = Namespace("http://w3id.org/geo-lod/")
@@ -119,6 +122,13 @@ ENTITY_STATUS = {
 # Reading the cut
 # --------------------------------------------------------------------------
 
+def read_csv(path: Path, hint: str) -> list[dict]:
+    if not path.exists():
+        raise FileNotFoundError(f"{path} not found. {hint}")
+    with open(path, newline="", encoding="utf-8-sig") as handle:
+        return list(csv.DictReader(handle))
+
+
 def read_table(name: str) -> list[dict]:
     path = TABLES_DIR / f"{name}.csv"
     if not path.exists():
@@ -171,6 +181,7 @@ SISAL_ONTOLOGY_TTL = """\
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix crmsci:  <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/extensions/crmarchaeo/> .
 @prefix sosa:    <http://www.w3.org/ns/sosa/> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix time:    <http://www.w3.org/2006/time#> .
@@ -336,6 +347,101 @@ geolod:elevation_m
     a owl:DatatypeProperty ;
     rdfs:range   xsd:decimal ;
     rdfs:label   "elevation (m)"@en .
+
+# -- Archaeological enrichment ---------------------------------------------
+# geo-lod's own reading of a cave, not part of SISAL. Carried over unchanged
+# from the ontology the plotting script used to write, so no IRI moves.
+
+geolod:ArchaeologicalCaveSite
+    a owl:Class ;
+    rdfs:subClassOf geolod:Cave ;
+    rdfs:subClassOf crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    rdfs:label   "Archaeological Cave Site"@en ;
+    rdfs:comment "A SISAL cave site that also carries confirmed or probable archaeological evidence (art, human occupation, skeletal remains, inscriptions). Modelling mirrors the CIArchaeologicalSite pattern from ci_pipeline.py."@en .
+
+geolod:ArchaeologicalContext
+    a owl:Class ;
+    rdfs:subClassOf crm:E55_Type ;
+    rdfs:label   "Archaeological Context"@en ;
+    rdfs:comment "Controlled vocabulary class for broader cultural-temporal context categories."@en .
+
+geolod:PalaeolithicContext
+    a geolod:ArchaeologicalContext, owl:NamedIndividual ;
+    rdfs:label "Palaeolithic Context"@en .
+
+geolod:PrehistoricContext
+    a geolod:ArchaeologicalContext, owl:NamedIndividual ;
+    rdfs:label "Prehistoric Context"@en .
+
+geolod:PalaeontologicalContext
+    a geolod:ArchaeologicalContext, owl:NamedIndividual ;
+    rdfs:label "Palaeontological Context"@en .
+
+geolod:HistoricContext
+    a geolod:ArchaeologicalContext, owl:NamedIndividual ;
+    rdfs:label "Historic Context"@en .
+
+geolod:MesoamericanContext
+    a geolod:ArchaeologicalContext, owl:NamedIndividual ;
+    rdfs:label "Mesoamerican Context"@en .
+
+geolod:archaeologicalCategory
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:ArchaeologicalCaveSite ;
+    rdfs:range   xsd:string ;
+    rdfs:label   "archaeological category"@en ;
+    rdfs:comment "Free-text classification of the archaeological character, e.g. 'Palaeolithic Art', 'Prehistoric Occupation'."@en .
+
+geolod:archaeologicalBroaderContext
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:ArchaeologicalCaveSite ;
+    rdfs:range   geolod:ArchaeologicalContext ;
+    rdfs:label   "archaeological broader context"@en .
+
+geolod:archaeologicalConfidence
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:ArchaeologicalCaveSite ;
+    rdfs:range   xsd:string ;
+    rdfs:label   "archaeological confidence"@en ;
+    rdfs:comment "Confidence of the archaeological attribution: high, medium or low."@en .
+
+geolod:screenedForArchaeology
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:boolean ;
+    rdfs:label   "screened for archaeology"@en ;
+    rdfs:comment "True where geo-lod checked this cave against the archaeological literature, whatever the outcome. Absence of the property means the cave has not been looked at, which is a different statement from a negative result and has to stay distinguishable."@en .
+
+geolod:isUNESCOWorldHeritage
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:boolean ;
+    rdfs:label   "is UNESCO World Heritage"@en .
+
+geolod:unescoWHId
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:label   "UNESCO WH identifier"@en ;
+    rdfs:comment "URI of the UNESCO World Heritage list entry."@en .
+
+geolod:countD18OSamples
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:integer ;
+    rdfs:label   "number of δ¹⁸O samples"@en ;
+    rdfs:comment "Samples of this cave carrying a δ¹⁸O measurement, over all its speleothems. Recomputed from the database with every export, not carried over from a hand-kept list."@en .
+
+geolod:countD13CSamples
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:integer ;
+    rdfs:label   "number of δ¹³C samples"@en .
+
+geolod:collectedFrom
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:SpeleothemSample ;
+    rdfs:range   geolod:Speleothem ;
+    rdfs:label   "collected from"@en .
 """
 
 
@@ -352,7 +458,7 @@ def write_ontology() -> Path:
 
 def bind_prefixes(g: Graph) -> None:
     for prefix, ns in [
-        ("crm", CRM), ("crmsci", CRMSCI), ("geo", GEO), ("sf", SF),
+        ("crm", CRM), ("crmsci", CRMSCI), ("crmarchaeo", CRMARCHAEO), ("geo", GEO), ("sf", SF),
         ("geolod", GEOLOD), ("sisal", SISAL), ("trs", TRS), ("sosa", SOSA),
         ("qudt", QUDT), ("unit", UNIT), ("prov", PROV), ("time", TIME),
         ("dct", DCT), ("skos", SKOS), ("owl", OWL),
@@ -401,6 +507,9 @@ def add_vocabularies(g: Graph) -> None:
     g.add((source, OWL.sameAs, SISAL_DOI))
     g.add((source, DCT.license, SISAL_LICENSE))
 
+    # Unit and source sit here, not on each of the 50 456 observations: both
+    # hold for every measurement of the property, and repeating them per node
+    # is 100 000 triples that say the same thing over and over.
     for local, cls, label in [
         ("Delta18OProperty_speleothem", "Delta18OProperty", "δ¹⁸O of speleothem calcite"),
         ("Delta13CProperty_speleothem", "Delta13CProperty", "δ¹³C of speleothem calcite"),
@@ -409,10 +518,17 @@ def add_vocabularies(g: Graph) -> None:
         g.add((node, RDF.type, GEOLOD[cls]))
         g.add((node, RDF.type, OWL.NamedIndividual))
         g.add((node, RDFS.label, Literal(label, lang="en")))
+        g.add((node, QUDT["unit"], UNIT["PERMILLE"]))
+        g.add((node, PROV.wasDerivedFrom, GEOLOD["SISALv3_DataSource"]))
 
 
 def add_sites(g: Graph, sites: list[dict]) -> dict[str, URIRef]:
-    """The caves of the cut, on the existing geolod:Cave_site_NNNN nodes (A1)."""
+    """The six caves of the cut, on the nodes the catalogue already made.
+
+    Only the mapping is built here; the catalogue writes name, position and
+    counts for all 365. Kept as its own function so that a run over a
+    different site selection needs no other change.
+    """
     uris: dict[str, URIRef] = {}
     for row in sites:
         site_id = int(row["site_id"])
@@ -420,12 +536,68 @@ def add_sites(g: Graph, sites: list[dict]) -> dict[str, URIRef]:
         uris[row["site_id"]] = site
 
         g.add((site, RDF.type, GEOLOD["Cave"]))
+        g.add((site, RDFS.label, Literal(row["site_name"], lang="en")))
+    return uris
+
+
+def add_cave_catalogue(g: Graph, ann: Graph) -> tuple[int, int, int]:
+    """One cave node per site SISAL knows, not only per site in the cut.
+
+    Two files, two graphs, and the split is the point. catalogue/sites.csv
+    comes straight out of the database and holds what SISAL states: name,
+    position, elevation, measurement counts. That goes into the core graph.
+    data/curated/sisal_site_annotations.csv is geo-lod's own work - the
+    archaeological reading of a cave, its Wikidata entity, its UNESCO listing -
+    and no database export will ever produce it. That goes into its own graph,
+    with its own source node.
+
+    The separation is a provenance requirement, not tidiness. The Palaeolithic
+    paintings at Villars are not in any SISAL table, and a cave node that
+    carries them under prov:wasDerivedFrom geolod:SISALv3_DataSource states
+    something false about where they come from.
+
+    Replaces the old SISAL/v_sites_all.csv, which mixed both and was a v2-era
+    snapshot: it held 305 sites where SISAL v3 has 365. The 305 ids and names
+    are unchanged, so nothing has to be migrated; 60 caves were simply missing.
+    """
+    sites = read_csv(CATALOGUE_DIR / "sites.csv",
+                     "Fetch the cut with SISAL/sisal_import.py; the catalogue "
+                     "needs an export repo that carries postgres/queries.yaml "
+                     "with a `catalogue:` block.")
+    annotations = {
+        row["site_id"]: row
+        for row in read_csv(CURATED_DIR / "sisal_site_annotations.csv",
+                            "This file is maintained by hand in geo-lod and is "
+                            "not a database export.")
+    }
+
+    add_annotation_source(ann)
+
+    collection = GEOLOD["SISAL_Cave_Collection"]
+    all_sites = GEOLOD["AllPalaeoclimateSites_Collection"]
+    arch_collection = GEOLOD["SISAL_Archaeological_Cave_Collection"]
+    for node, label in [
+        (collection, "SISAL cave collection"),
+        (arch_collection, "SISAL caves with an archaeological record"),
+    ]:
+        g.add((node, RDF.type, GEO["FeatureCollection"]))
+        g.add((node, RDFS.label, Literal(label, lang="en")))
+
+    n_arch = 0
+    n_screened = 0
+    for row in sites:
+        site_id = int(row["site_id"])
+        site = GEOLOD[f"Cave_site_{site_id:04d}"]
+
+        g.add((site, RDF.type, GEOLOD["Cave"]))
         g.add((site, RDF.type, OWL.NamedIndividual))
         g.add((site, RDFS.label, Literal(row["site_name"], lang="en")))
         g.add((site, GEOLOD["siteId"], Literal(site_id, datatype=XSD.integer)))
         g.add((site, PROV.wasDerivedFrom, GEOLOD["SISALv3_DataSource"]))
+        g.add((collection, RDFS.member, site))
+        g.add((all_sites, RDFS.member, site))
 
-        lat, lon = num(row["latitude"]), num(row["longitude"])
+        lat, lon = num(row.get("latitude")), num(row.get("longitude"))
         if lat is not None and lon is not None:
             geom = SISAL[f"geom_site_{site_id:04d}"]
             wkt = (f"<http://www.opengis.net/def/crs/EPSG/0/4326> "
@@ -433,10 +605,89 @@ def add_sites(g: Graph, sites: list[dict]) -> dict[str, URIRef]:
             g.add((site, GEO["hasGeometry"], geom))
             g.add((geom, RDF.type, SF["Point"]))
             g.add((geom, GEO["asWKT"], Literal(wkt, datatype=GEO["wktLiteral"])))
+
         elevation = num(row.get("elevation"))
         if elevation is not None:
             g.add((site, GEOLOD["elevation_m"], dec(elevation, 1)))
-    return uris
+        for column, prop in [("n_d18o_samples", "countD18OSamples"),
+                             ("n_d13c_samples", "countD13CSamples")]:
+            count = num(row.get(column))
+            if count is not None:
+                g.add((site, GEOLOD[prop],
+                       Literal(int(count), datatype=XSD.integer)))
+
+        note = annotations.get(row["site_id"])
+        if note:
+            n_screened += 1
+            n_arch += add_site_annotation(ann, site, note, arch_collection)
+    return len(sites), n_screened, n_arch
+
+
+def add_annotation_source(g: Graph) -> None:
+    """The curation as a source in its own right.
+
+    Without this node the annotations would hang off the cave with no author,
+    and a consumer merging the file into a wider graph could not tell a SISAL
+    measurement from a reading geo-lod added.
+    """
+    source = GEOLOD["GeoLodSiteAnnotations_DataSource"]
+    g.add((source, RDF.type, GEOLOD["DataSource"]))
+    g.add((source, RDF.type, OWL.NamedIndividual))
+    g.add((source, RDFS.label,
+           Literal("geo-lod cave site annotations", lang="en")))
+    g.add((source, RDFS.comment,
+           Literal("Archaeological, Wikidata and UNESCO annotations added to "
+                   "SISAL cave sites by the geo-lod project. Not part of "
+                   "SISAL v3 and not reproducible from it.", lang="en")))
+    g.add((source, DCT.creator, ORCID_FLO))
+    g.add((source, DCT.license, URIRef(
+        "https://creativecommons.org/licenses/by/4.0/")))
+
+
+def add_site_annotation(g: Graph, site: URIRef, note: dict,
+                        arch_collection: URIRef) -> int:
+    """geo-lod's own reading of a cave: archaeology, Wikidata, UNESCO."""
+    def value(column: str) -> str:
+        return (note.get(column) or "").strip()
+
+    source = GEOLOD["GeoLodSiteAnnotations_DataSource"]
+
+    # Screened and found nothing is a result, and a different one from never
+    # looked at. 305 caves were screened, 37 positively; the 60 caves SISAL v3
+    # added since carry neither triple, and a map can tell the three apart.
+    g.add((site, GEOLOD["screenedForArchaeology"],
+           Literal(True, datatype=XSD.boolean)))
+    g.add((site, PROV.wasDerivedFrom, source))
+
+    is_arch = value("isArchaeologicalSite").lower() == "true"
+    if is_arch:
+        g.add((site, RDF.type, GEOLOD["ArchaeologicalCaveSite"]))
+        g.add((site, RDF.type, CRMARCHAEO["A2_Stratigraphic_Volume_Unit"]))
+        g.add((arch_collection, RDFS.member, site))
+        if value("arch_category"):
+            g.add((site, GEOLOD["archaeologicalCategory"],
+                   Literal(value("arch_category"), lang="en")))
+        if value("arch_broader_context"):
+            g.add((site, GEOLOD["archaeologicalBroaderContext"],
+                   GEOLOD[value("arch_broader_context")]))
+        if value("arch_note"):
+            g.add((site, SKOS.note, Literal(value("arch_note"), lang="en")))
+        if value("arch_confidence"):
+            g.add((site, GEOLOD["archaeologicalConfidence"],
+                   Literal(value("arch_confidence"), lang="en")))
+
+    if value("wikidata_qid"):
+        g.add((site, OWL.sameAs,
+               URIRef(f"http://www.wikidata.org/entity/{value('wikidata_qid')}")))
+    if value("osm_url"):
+        g.add((site, RDFS.seeAlso, URIRef(value("osm_url"))))
+    if value("isUNESCO").lower() in ("true", "yes"):
+        g.add((site, GEOLOD["isUNESCOWorldHeritage"],
+               Literal(True, datatype=XSD.boolean)))
+        if value("unesco_wh_id"):
+            g.add((site, GEOLOD["unescoWHId"],
+                   URIRef(f"https://whc.unesco.org/en/list/{value('unesco_wh_id')}")))
+    return 1 if is_arch else 0
 
 
 def add_entities(g: Graph, entities: list[dict],
@@ -478,21 +729,17 @@ def add_samples(g: Graph, samples: list[dict],
         uris[row["sample_id"]] = sample
 
         g.add((sample, RDF.type, GEOLOD["SpeleothemSample"]))
-        g.add((sample, RDF.type, OWL.NamedIndividual))
         g.add((sample, GEOLOD["sampleId"], Literal(sample_id, datatype=XSD.integer)))
 
         entity = entity_uris.get(row["entity_id"])
         if entity is not None:
             g.add((sample, GEOLOD["collectedFrom"], entity))
-            g.add((entity, CRM["P46_is_composed_of"], sample))
 
+        # No rdfs:label: at 35 777 samples it would restate the id and the
+        # depth, both of which are already triples.
         depth = num(row.get("depth_sample"))
         if depth is not None:
             g.add((sample, GEOLOD["atDepth_mm"], dec(depth, DEC_DEPTH)))
-            g.add((sample, RDFS.label,
-                   Literal(f"sample {sample_id} at {depth:.1f} mm", lang="en")))
-        else:
-            g.add((sample, RDFS.label, Literal(f"sample {sample_id}", lang="en")))
 
         thickness = num(row.get("sample_thickness"))
         if thickness is not None:
@@ -528,15 +775,13 @@ def add_isotopes(g: Graph, rows: list[dict], sample_uris: dict[str, URIRef],
         obs = SISAL[f"obs_{isotope}_{sample_id:07d}"]
 
         g.add((obs, RDF.type, GEOLOD[cls]))
-        g.add((obs, RDF.type, OWL.NamedIndividual))
-        g.add((obs, RDFS.label,
-               Literal(f"{label} observation, sample {sample_id}", lang="en")))
         g.add((obs, SOSA["hasFeatureOfInterest"], sample))
         g.add((obs, SOSA["observedProperty"], GEOLOD[prop]))
+        # One value, one property. geolod:measuredValue used to carry the same
+        # number a second time; at 50 456 observations that is 50 456 triples
+        # asserting nothing new. The unit and the source moved to the
+        # observable property, where they hold for every observation of it.
         g.add((obs, SOSA["hasSimpleResult"], dec(value, DEC_VALUE)))
-        g.add((obs, GEOLOD["measuredValue"], dec(value, DEC_VALUE)))
-        g.add((obs, QUDT["unit"], UNIT["PERMILLE"]))
-        g.add((obs, PROV.wasDerivedFrom, GEOLOD["SISALv3_DataSource"]))
         g.add((sample, GEOLOD["hasObservation"], obs))
 
         precision = num(row.get(precision_col))
@@ -688,6 +933,12 @@ def build() -> bool:
     bind_prefixes(g)
 
     add_vocabularies(g)
+    ann = Graph()
+    bind_prefixes(ann)
+    n_catalogue, n_screened, n_arch = add_cave_catalogue(g, ann)
+    print(f"  {n_catalogue} cave sites in the catalogue; "
+          f"{n_screened} screened for archaeology, {n_arch} positive, "
+          f"{n_catalogue - n_screened} not yet screened")
     site_uris = add_sites(g, sites)
     entity_uris = add_entities(g, entities, site_uris)
     sample_uris = add_samples(g, samples, entity_uris)
@@ -718,6 +969,19 @@ def build() -> bool:
 
     onto_path = write_ontology()
     print(f"\n  ✓ {onto_path.relative_to(ROOT)}")
+
+    add_generation_provenance(
+        ann,
+        GEOLOD["SISAL_Site_Annotations_Dataset"],
+        GEOLOD["SISAL_Site_Annotations_Generation"],
+        inputs=[str(CURATED_DIR / "sisal_site_annotations.csv"), __file__],
+        agents=[ORCID_FLO],
+        label="geo-lod cave site annotations (S3c.2)",
+    )
+
+    ann_path = RDF_DIR / "sisal_site_annotations.ttl"
+    ann.serialize(destination=str(ann_path), format="turtle")
+    print(f"  ✓ {ann_path.relative_to(ROOT)}  ({len(ann):,} triples)")
 
     core_path = RDF_DIR / "sisal_v3_core.ttl"
     g.serialize(destination=str(core_path), format="turtle")

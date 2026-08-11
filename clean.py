@@ -107,7 +107,8 @@ GENERATED: dict[str, list[Entry]] = {
         Entry("EPICA/captions.yaml", "EPICA/epica_plates.py, one entry per figure"),
     ],
     "sisal": [
-        Entry("SISAL/rdf", "SISAL/plot_sisal_from_csv.py", contents=True),
+        Entry("SISAL/rdf", "SISAL/sisal_rdf.py", contents=True),
+        # data/curated/ is NOT here: it is hand-maintained input, not output.
         Entry("SISAL/report", "SISAL/plot_sisal_from_csv.py", contents=True),
         Entry("SISAL/plots", "SISAL/plot_sisal_from_csv.py", contents=True),
     ],
@@ -144,6 +145,11 @@ DEFAULT_GROUPS: tuple[str, ...] = (
 # line: a file that looks like a leftover and turns out to be an input is the
 # expensive kind of mistake.
 STALE: list[Entry] = [
+    Entry("SISAL/v_sites_all.csv",
+          "the old 305-site list, replaced by the database catalogue",
+          note="a v2-era snapshot: SISAL v3 has 365 sites. Ids and names are "
+               "unchanged, so nothing had to be migrated. The curated columns "
+               "live on in data/curated/sisal_site_annotations.csv"),
     Entry("EPICA/epica_ontology.ttl",
           "identical to the generated EPICA/rdf/epica_ontology.ttl",
           note="the bundle reads EPICA/rdf/*.ttl; nothing reads this one"),
@@ -169,15 +175,10 @@ PENDING: list[Entry] = [
           "figure input of plot_sisal_from_csv.py",
           note="carries the decimal-separator error; replaced by "
                "data/derived/sisal/ once S3c.2 is green"),
-    Entry("SISAL/v_sites_all.csv",
-          "site input of plot_sisal_from_csv.py",
-          note="replaced by data/derived/sisal/tables/site.csv in S3c.4"),
+
     Entry("archaeo-connect/v_sites_all.csv",
           "input of sisal_arch_html.py",
           note="an older cut than SISAL/v_sites_all.csv, not a copy of it"),
-    Entry("SISAL/rdf/geo_lod_core.ttl",
-          "copy of the canonical ontology, written by plot_sisal_from_csv.py",
-          note="removed and rewritten at every run; the writing stops in S3c.4"),
     Entry("s3c1_import.txt",
           "run log of the S3c.1 import",
           note="evidence, not an input; keep or remove by hand"),

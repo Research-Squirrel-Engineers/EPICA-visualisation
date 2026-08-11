@@ -194,13 +194,32 @@ RELEASE_BUNDLE_FORMATS: tuple[str, ...] = ("nt", "turtle", "jsonld", "xml")
 # identischer Tripelzahl, der Schritt wird rund ein Drittel schneller.
 AGGREGATE_FILENAMES: set[str] = {"sisal_all_data.ttl"}
 
+# Files a development run leaves out. sisal_v3_chronologies.ttl holds the
+# 101 470 competing ages from the seven models geo-lod does not follow: 885 000
+# triples that no figure and no shape needs, and roughly half the parse time of
+# the whole bundle. They belong in a release, not in every run.
+#
+# Nothing is lost by leaving them out. The age geo-lod follows is materialised
+# on the sample in sisal_v3_core.ttl, and the file stands on its own next to
+# the bundle for anyone comparing models.
+RELEASE_ONLY_FILENAMES: set[str] = {"sisal_v3_chronologies.ttl"}
 
-def _collect_ttl_files(source_dirs: Iterable[Path]) -> list[Path]:
+
+def _collect_ttl_files(source_dirs: Iterable[Path],
+                       release: bool = False) -> list[Path]:
     files: list[Path] = []
+    skipped: list[Path] = []
     for d in source_dirs:
         if not d.exists():
             continue
-        files.extend(sorted(d.glob("*.ttl")))
+        for path in sorted(d.glob("*.ttl")):
+            if not release and path.name in RELEASE_ONLY_FILENAMES:
+                skipped.append(path)
+                continue
+            files.append(path)
+    for path in skipped:
+        print(f"  ℹ  {path.name} übersprungen - nur im Release-Bundle. "
+              f"Mit --bundle-format release ist es dabei.")
     return files
 
 
@@ -240,8 +259,12 @@ def build_bundle(
 
     # ontology/*.ttl plus die kontrollierten Vokabulare in ontology/vocab/.
     # ontology/shapes/ bleibt draussen - Shapes gehören nicht in den Datengraph.
+    # "Release" is read off the formats rather than passed as a second switch:
+    # a run that asks for the release formats is the release run, and two
+    # independent flags would eventually disagree.
+    release = set(formats) >= set(RELEASE_BUNDLE_FORMATS)
     ontology_files = _collect_ttl_files([ontology_dir, ontology_dir / "vocab"])
-    instance_files = _collect_ttl_files(rdf_dirs)
+    instance_files = _collect_ttl_files(rdf_dirs, release=release)
 
     print(f"    Ontologie-Dateien: {len(ontology_files)}")
     for f in ontology_files:

@@ -17,6 +17,7 @@ import clean
 SCRIPT_DIR = Path(__file__).parent.absolute()
 EPICA_RDF_SCRIPT  = SCRIPT_DIR / "EPICA" / "epica_rdf.py"
 EPICA_PLOT_SCRIPT = SCRIPT_DIR / "EPICA" / "plot_epica_from_tab.py"
+SISAL_RDF_SCRIPT = SCRIPT_DIR / "SISAL" / "sisal_rdf.py"
 SISAL_SCRIPT = SCRIPT_DIR / "SISAL" / "plot_sisal_from_csv.py"
 CI_SCRIPT    = SCRIPT_DIR / "CI" / "ci_pipeline.py"
 ONTOLOGY_DIR = SCRIPT_DIR / "ontology"
@@ -434,7 +435,9 @@ def main():
     epica_rdf_exists  = check_file_exists(EPICA_RDF_SCRIPT,  "EPICA RDF script")
     epica_plot_exists = check_file_exists(EPICA_PLOT_SCRIPT, "EPICA plot script")
     epica_exists = epica_rdf_exists and epica_plot_exists
-    sisal_exists = check_file_exists(SISAL_SCRIPT, "SISAL script")
+    sisal_rdf_exists = check_file_exists(SISAL_RDF_SCRIPT, "SISAL RDF script")
+    sisal_plot_exists = check_file_exists(SISAL_SCRIPT, "SISAL plot script")
+    sisal_exists = sisal_rdf_exists and sisal_plot_exists
     ci_exists    = check_file_exists(CI_SCRIPT,    "CI script")
     end_section()
 
@@ -473,17 +476,22 @@ def main():
         epica_ok = epica_ok and epica_plots_ok
 
     if not args.epica_only and not args.ci_only and sisal_exists:
-        print_section("6. SISAL (Speleothems)")
-        sisal_ok = run_script(SISAL_SCRIPT, "SISAL Processing")
+        print_section("6. SISAL (RDF)")
+        sisal_ok = run_script(SISAL_RDF_SCRIPT, "SISAL v3 RDF generation")
         end_section()
 
+        print_section("7. SISAL (figures)")
+        sisal_plots_ok = run_script(SISAL_SCRIPT, "SISAL figures")
+        end_section()
+        sisal_ok = sisal_ok and sisal_plots_ok
+
     if not args.epica_only and not args.sisal_only and ci_exists:
-        print_section("7. Campanian Ignimbrite (CI Findspots)")
+        print_section("8. Campanian Ignimbrite (CI Findspots)")
         ci_ok = run_script(CI_SCRIPT, "CI Findspot Processing")
         end_section()
 
     if not args.no_bundle:
-        print_section("8. RDF Bundle & Validation")
+        print_section("9. RDF Bundle & Validation")
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok, bundle_formats)
         end_section()
 

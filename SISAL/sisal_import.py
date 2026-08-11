@@ -22,6 +22,9 @@ What is taken over:
     tables/*.csv     the structure-preserving cut, one file per release table.
                      site -> entity -> sample -> chronology is intact, which is
                      what the RDF generator needs.
+    catalogue/*.csv  statements not restricted to the cut. Currently the full
+                     365-site list with its measurement counts, which becomes
+                     one cave node per site in the graph.
     sites/*.csv      the flat per-site files, one row per measurement, used by
                      the figures.
     queries.yaml     the export definition that produced both. Copied rather
@@ -166,6 +169,7 @@ def pull(source: Path) -> int:
         shutil.rmtree(TARGET)
     (TARGET / "tables").mkdir(parents=True)
     (TARGET / "sites").mkdir(parents=True)
+    (TARGET / "catalogue").mkdir(parents=True)
 
     manifest: dict = {
         # No local path here. The manifest is versioned, and an absolute path is
@@ -185,6 +189,20 @@ def pull(source: Path) -> int:
         shutil.copyfile(path, target)
         manifest["files"][f"tables/{path.name}"] = describe(target)
         print(f"  tables/{path.name:<32s} {manifest['files'][f'tables/{path.name}']['rows']:>7d} rows")
+
+    src_catalogue = source / "data" / "derived" / "catalogue"
+    if src_catalogue.is_dir():
+        print()
+        for path in sorted(src_catalogue.glob("*.csv")):
+            target = TARGET / "catalogue" / path.name
+            shutil.copyfile(path, target)
+            entry = describe(target)
+            manifest["files"][f"catalogue/{path.name}"] = entry
+            print(f"  catalogue/{path.name:<29s} {entry['rows']:>7d} rows")
+    else:
+        # Not fatal: an older checkout of the export repo has no catalogue yet.
+        # The generator says clearly what is missing when it cannot find it.
+        print(f"\n  WARNING: {src_catalogue} does not exist; no catalogue copied.")
 
     print()
     for site_id, stem in sorted(stems.items()):
