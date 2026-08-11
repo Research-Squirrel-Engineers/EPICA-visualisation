@@ -215,3 +215,9 @@ __marimo__/
 # bleibt byte-identisch, weil dieselben Knoten dort inline als [ ] stehen.
 # Fuer ein Release: python main.py --bundle-format release
 dist/geo-lod-bundle.nt
+
+# Dieselbe Begruendung fuer die beiden grossen SISAL-Graphen: N-Triples ist
+# das Entwicklungsformat, viermal schneller zu schreiben und zu lesen, dabei
+# dreimal so gross (143 MB gegen 46 MB). Versioniert wird Turtle, das ein
+# Release-Lauf schreibt:  python main.py --bundle-format release
+SISAL/rdf/*.nt

@@ -1,0 +1,1254 @@
+@prefix crmarchaeo: <http://www.cidoc-crm.org/extensions/crmarchaeo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geolod: <http://w3id.org/geo-lod/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+geolod:Cave_site_0001 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0002 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0003 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0005 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0006 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0007 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0008 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0009 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0010 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0012 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0013 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0014 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0015 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0017 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0020 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0023 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0024 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0025 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0026 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0027 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0028 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0029 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0031 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0032 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0034 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0035 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0036 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0038 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0039 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0040 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0042 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0045 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0046 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0047 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0048 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0049 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0053 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0054 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0055 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0056 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0057 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0058 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0059 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0060 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0061 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0062 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0063 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0064 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0065 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0066 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0069 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0070 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0072 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0074 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0078 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0079 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0080 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0082 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0083 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0084 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0085 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0086 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0090 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0091 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0094 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0095 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0097 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0098 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0099 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0100 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0101 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0102 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0103 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0105 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0106 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0107 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0109 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0111 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0112 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0113 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0115 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0116 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0117 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0120 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0121 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0122 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0123 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0127 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0128 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0129 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0130 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0132 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0133 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0134 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0137 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0138 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0139 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0140 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0141 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0142 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0144 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0145 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0146 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0147 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0149 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0151 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0152 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0154 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0155 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0156 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0157 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0158 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0162 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0163 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0164 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0165 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0166 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0167 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0168 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0169 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0172 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0173 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0174 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0175 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0177 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0178 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0181 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0183 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0185 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0186 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0187 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0189 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0190 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0191 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0192 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0193 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0195 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0196 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0197 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0198 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0199 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0200 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0202 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0203 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0204 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0205 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0206 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0207 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0208 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0209 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0210 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0211 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0213 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0214 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0215 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0216 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0219 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0221 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0222 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0224 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0225 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0230 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0231 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0232 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0233 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0234 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0235 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0236 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0237 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0239 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0241 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0242 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0243 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0244 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0246 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0248 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0249 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0250 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0252 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0254 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0255 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0256 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0259 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0260 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0262 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0263 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0264 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0265 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0269 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0270 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0271 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0272 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0273 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0274 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0277 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0278 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0279 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0280 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0281 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0282 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0283 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0284 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0285 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0287 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0288 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0289 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0290 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0292 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0293 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0294 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0296 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0299 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0300 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0301 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0303 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0304 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0305 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0306 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0307 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0308 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0310 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0312 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0313 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0314 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0315 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0316 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0317 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0318 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0319 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0320 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0321 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0323 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0325 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0326 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0327 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0328 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0330 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0332 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0333 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0334 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0335 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0336 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0338 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0339 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0340 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0341 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0342 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0343 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0344 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0345 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0346 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0347 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0348 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0349 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0350 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0351 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0352 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0354 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0355 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0356 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0357 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0358 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0360 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0361 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0362 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0363 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0365 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0366 geolod:screenedForArchaeology true ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:SISAL_Archaeological_Cave_Collection rdfs:member geolod:Cave_site_0004,
+        geolod:Cave_site_0011,
+        geolod:Cave_site_0016,
+        geolod:Cave_site_0019,
+        geolod:Cave_site_0067,
+        geolod:Cave_site_0071,
+        geolod:Cave_site_0073,
+        geolod:Cave_site_0077,
+        geolod:Cave_site_0081,
+        geolod:Cave_site_0087,
+        geolod:Cave_site_0104,
+        geolod:Cave_site_0108,
+        geolod:Cave_site_0118,
+        geolod:Cave_site_0135,
+        geolod:Cave_site_0136,
+        geolod:Cave_site_0160,
+        geolod:Cave_site_0161,
+        geolod:Cave_site_0182,
+        geolod:Cave_site_0223,
+        geolod:Cave_site_0226,
+        geolod:Cave_site_0245,
+        geolod:Cave_site_0253,
+        geolod:Cave_site_0258,
+        geolod:Cave_site_0266,
+        geolod:Cave_site_0267,
+        geolod:Cave_site_0268,
+        geolod:Cave_site_0275,
+        geolod:Cave_site_0286,
+        geolod:Cave_site_0295,
+        geolod:Cave_site_0297,
+        geolod:Cave_site_0298,
+        geolod:Cave_site_0324,
+        geolod:Cave_site_0329,
+        geolod:Cave_site_0337,
+        geolod:Cave_site_0353,
+        geolod:Cave_site_0359,
+        geolod:Cave_site_0364 .
+
+geolod:SISAL_Site_Annotations_Dataset a prov:Entity ;
+    dct:created "2026-08-08"^^xsd:date ;
+    owl:versionInfo "sha256:9106a6fd2d4b" ;
+    prov:wasGeneratedBy geolod:SISAL_Site_Annotations_Generation .
+
+geolod:Cave_site_0004 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Art"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    rdfs:seeAlso <https://www.openstreetmap.org/node/2423303117> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q3578093> ;
+    skos:note "Palaeolithic paintings, Dordogne"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0011 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q193368> ;
+    skos:note "Prehistoric finds"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0016 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1571916> ;
+    skos:note "Archaeological finds"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0019 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Prehistoric context"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0067 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:isUNESCOWorldHeritage true ;
+    geolod:screenedForArchaeology true ;
+    geolod:unescoWHId <https://whc.unesco.org/en/list/709> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1092810> ;
+    skos:note "Mulu – prehistoric finds"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0071 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Neolithic / Bronze Age"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:isUNESCOWorldHeritage true ;
+    geolod:screenedForArchaeology true ;
+    geolod:unescoWHId <https://whc.unesco.org/en/list/171> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q816830> ;
+    skos:note "Neolithic–Bronze Age finds, UNESCO World Heritage"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0073 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q2968020> ;
+    skos:note "La Chaise, Palaeolithic hominin remains"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0077 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Art"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:isUNESCOWorldHeritage true ;
+    geolod:screenedForArchaeology true ;
+    geolod:unescoWHId <https://whc.unesco.org/en/list/1426> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q191483> ;
+    skos:note "UNESCO World Heritage, ~36,000 BP cave paintings"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0081 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Neolithic / Protohistoric"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q16838232> ;
+    skos:note "Neolithic artefacts"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0087 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Art"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:isUNESCOWorldHeritage true ;
+    geolod:screenedForArchaeology true ;
+    geolod:unescoWHId <https://whc.unesco.org/en/list/714> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1665461> ;
+    skos:note "Rock art, Asturias"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0104 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeontologicalContext ;
+    geolod:archaeologicalCategory "Hominin Site"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1847377> ;
+    skos:note "Type site for Homo floresiensis"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0108 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1060261> ;
+    skos:note "Prehistoric occupation"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0118 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:isUNESCOWorldHeritage true ;
+    geolod:screenedForArchaeology true ;
+    geolod:unescoWHId <https://whc.unesco.org/en/list/709> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1092810> ;
+    skos:note "Prehistoric finds, Mulu"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0135 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Art"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Prehistoric rock art"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0136 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:MesoamericanContext ;
+    geolod:archaeologicalCategory "Mesoamerican Art"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1377944> ;
+    skos:note "Olmec cave paintings"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0160 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q2305521> ;
+    skos:note "Near major prehistoric sites, key palaeoclimate proxy"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0161 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "low" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Near Homo luzonensis sites"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0182 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q6434952> ;
+    skos:note "Archaeological finds reported"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0223 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:HistoricContext ;
+    geolod:archaeologicalCategory "Historic / Prehistoric"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q7965218> ;
+    skos:note "Archaeological context reported"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0226 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:MesoamericanContext ;
+    geolod:archaeologicalCategory "Mesoamerican"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Archaeological cave"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0245 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Prehistoric finds"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0253 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:HistoricContext ;
+    geolod:archaeologicalCategory "Ancient Inscriptions"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1622209> ;
+    skos:note "Ancient inscriptions, Socotra Island"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0258 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Soreq area, prehistoric context"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0266 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeontologicalContext ;
+    geolod:archaeologicalCategory "Pleistocene Fauna / Hominins"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q3011793> ;
+    skos:note "Hominins & Pleistocene fauna"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0267 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Prehistoric finds"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0268 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q3374490> ;
+    skos:note "Prehistoric occupation"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0275 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q4995636> ;
+    skos:note "Pleistocene/Prehistoric finds"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0286 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Art"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:isUNESCOWorldHeritage true ;
+    geolod:screenedForArchaeology true ;
+    geolod:unescoWHId <https://whc.unesco.org/en/list/714> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1243761> ;
+    skos:note "Palaeolithic occupation & art, Cantabria"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0295 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:HistoricContext ;
+    geolod:archaeologicalCategory "Sacred / Historic"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:isUNESCOWorldHeritage true ;
+    geolod:screenedForArchaeology true ;
+    geolod:unescoWHId <https://whc.unesco.org/en/list/850> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q643919> ;
+    skos:note "Qadisha Valley, UNESCO World Heritage"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0297 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Art"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1756800> ;
+    skos:note "Palaeolithic footprints & art, Liguria"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0298 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q900775> ;
+    skos:note "Prehistoric occupation"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0324 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeolithicContext ;
+    geolod:archaeologicalCategory "Palaeolithic Art"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q6479849> ;
+    skos:note "Rock art, Asturias"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0329 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "African Later Stone Age"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q6789024> ;
+    skos:note "Later Stone Age artefacts"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0337 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "South Asian prehistoric occupation"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0353 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Art"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Prehistoric rock art"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0359 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PalaeontologicalContext ;
+    geolod:archaeologicalCategory "Pleistocene Fauna"@en ;
+    geolod:archaeologicalConfidence "high" ;
+    geolod:screenedForArchaeology true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q2590036> ;
+    skos:note "Cave bear & Pleistocene megafauna"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:Cave_site_0364 a geolod:ArchaeologicalCaveSite,
+        crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+    geolod:archaeologicalBroaderContext geolod:PrehistoricContext ;
+    geolod:archaeologicalCategory "Prehistoric Occupation"@en ;
+    geolod:archaeologicalConfidence "medium" ;
+    geolod:screenedForArchaeology true ;
+    skos:note "Submerged prehistoric human remains (underwater archaeology)"@en ;
+    prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
+
+geolod:SISAL_Site_Annotations_Generation a prov:Activity ;
+    rdfs:label "geo-lod cave site annotations (S3c.2)"@en ;
+    owl:versionInfo "sha256:9106a6fd2d4b" ;
+    prov:used geolod:SISAL_Site_Annotations_Generation_input_sisal_rdf_py,
+        geolod:SISAL_Site_Annotations_Generation_input_sisal_site_annotations_csv ;
+    prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
+
+geolod:SISAL_Site_Annotations_Generation_input_sisal_rdf_py a prov:Entity ;
+    rdfs:label "sisal_rdf.py" ;
+    dct:identifier "sha256:c11336241fb5ce4ca3d86371bb5170f7fb62ccb394f2bce388f958ad48898d94" .
+
+geolod:SISAL_Site_Annotations_Generation_input_sisal_site_annotations_csv a prov:Entity ;
+    rdfs:label "sisal_site_annotations.csv" ;
+    dct:identifier "sha256:99fe8923b21f72b4e185d2943013208e500ef87bb5ec361518753ea2cbeb0d39" .
+
+geolod:GeoLodSiteAnnotations_DataSource a geolod:DataSource,
+        owl:NamedIndividual ;
+    rdfs:label "geo-lod cave site annotations"@en ;
+    dct:creator <https://orcid.org/0000-0002-3246-3531> ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:source <https://github.com/Research-Squirrel-Engineers/GeoScience-FAIRification-LOD> ;
+    rdfs:comment "Archaeological, Wikidata and UNESCO annotations added to SISAL cave sites by the geo-lod project. Not part of SISAL v3 and not reproducible from it."@en .
+

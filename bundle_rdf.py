@@ -185,7 +185,11 @@ BUNDLE_FORMATS: dict[str, tuple[str, str, str]] = {
     "jsonld": ("json-ld", ".jsonld", "JSON-LD - für Web-Clients"),
 }
 
-DEFAULT_BUNDLE_FORMATS: tuple[str, ...] = ("turtle",)
+# N-Triples for a development run: writing the 1.2-million-triple bundle as
+# Turtle took 373s against roughly 60s here, and nothing in a development run
+# reads the bundle with its eyes. Turtle is still written by a release run,
+# where RELEASE_BUNDLE_FORMATS asks for all four.
+DEFAULT_BUNDLE_FORMATS: tuple[str, ...] = ("nt",)
 RELEASE_BUNDLE_FORMATS: tuple[str, ...] = ("nt", "turtle", "jsonld", "xml")
 
 # Aggregatdateien: Vereinigungen von Dateien, die einzeln ohnehin geladen
@@ -202,18 +206,45 @@ AGGREGATE_FILENAMES: set[str] = {"sisal_all_data.ttl"}
 # Nothing is lost by leaving them out. The age geo-lod follows is materialised
 # on the sample in sisal_v3_core.ttl, and the file stands on its own next to
 # the bundle for anyone comparing models.
-RELEASE_ONLY_FILENAMES: set[str] = {"sisal_v3_chronologies.ttl"}
+# Matched on the stem, because the same graph is written as .nt in a
+# development run and as .ttl in a release one.
+RELEASE_ONLY_STEMS: set[str] = {"sisal_v3_chronologies"}
+
+# Instance graphs may arrive in either format. Turtle first so that a stale
+# .ttl next to a fresh .nt is still found and reported rather than silently
+# ignored; _dedupe_formats then keeps one per stem.
+INSTANCE_SUFFIXES: tuple[str, ...] = (".ttl", ".nt")
+
+
+def _dedupe_formats(paths: list[Path]) -> list[Path]:
+    """One file per stem, preferring the format written most recently.
+
+    A release run writes sisal_v3_core.ttl next to the sisal_v3_core.nt a
+    development run left behind. Reading both would load every triple twice,
+    which rdflib survives and the triple count does not - and a stale one
+    would quietly outvote the fresh one.
+    """
+    by_stem: dict[str, Path] = {}
+    for path in paths:
+        current = by_stem.get(path.stem)
+        if current is None or path.stat().st_mtime > current.stat().st_mtime:
+            by_stem[path.stem] = path
+    return [by_stem[stem] for stem in sorted(by_stem)]
 
 
 def _collect_ttl_files(source_dirs: Iterable[Path],
-                       release: bool = False) -> list[Path]:
+                       release: bool = False,
+                       suffixes: tuple[str, ...] = (".ttl",)) -> list[Path]:
     files: list[Path] = []
     skipped: list[Path] = []
     for d in source_dirs:
         if not d.exists():
             continue
-        for path in sorted(d.glob("*.ttl")):
-            if not release and path.name in RELEASE_ONLY_FILENAMES:
+        found: list[Path] = []
+        for suffix in suffixes:
+            found.extend(sorted(d.glob(f"*{suffix}")))
+        for path in _dedupe_formats(found):
+            if not release and path.stem in RELEASE_ONLY_STEMS:
                 skipped.append(path)
                 continue
             files.append(path)
@@ -264,7 +295,8 @@ def build_bundle(
     # independent flags would eventually disagree.
     release = set(formats) >= set(RELEASE_BUNDLE_FORMATS)
     ontology_files = _collect_ttl_files([ontology_dir, ontology_dir / "vocab"])
-    instance_files = _collect_ttl_files(rdf_dirs, release=release)
+    instance_files = _collect_ttl_files(rdf_dirs, release=release,
+                                        suffixes=INSTANCE_SUFFIXES)
 
     print(f"    Ontologie-Dateien: {len(ontology_files)}")
     for f in ontology_files:

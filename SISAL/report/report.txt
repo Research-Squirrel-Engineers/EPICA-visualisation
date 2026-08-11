@@ -3,15 +3,6 @@ SISAL Speleothem – Plot Generator
 ============================================================
 
 ────────────────────────────────────────────────────────────
-Loading sites: v_sites_all.csv
-────────────────────────────────────────────────────────────
-  Loaded SISAL sites: 305 sites
-  Archaeological sites: 37
-  UNESCO World Heritage caves: 7
-  d18O samples total: 318,870
-  d13C samples total: 220,224
-
-────────────────────────────────────────────────────────────
 Loading: v_data_144_botuvera.csv
 ────────────────────────────────────────────────────────────
   Loaded: Botuverá cave
@@ -97,46 +88,8 @@ Loading: v_data_275_buracagloriosa.csv
     → 275_buracagloriosa_d13c_age_savgol11p2
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg / .jpg
 
-────────────────────────────────────────────────────────────
-RDF Export  (geo-lod SISAL Ontology + data)
-────────────────────────────────────────────────────────────
-  ✓ Core ontology : C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\geo_lod_core.ttl
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_taxonomy.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_epica.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_sisal.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_ci.mermaid
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_ontology.ttl
-
-  Building sites graph …
-  FeatureCollection: 305 members → geolod:SISAL_Cave_Collection
-  ArchaeologicalCave Collection: 37 members → geolod:SISAL_ArchaeologicalCave_Collection
-  Global Collection: 305 cave sites added → geolod:AllPalaeoclimateSites_Collection
-  Archaeological sites modelled: 37
-  RDF sites: 305 caves · 3,663 triples
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_sites.ttl
-
-  Botuverá cave  (144_botuvera)
-  RDF: 907 d18O obs · 907 d13C obs · 21,795 triples
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_144_botuvera_data.ttl
-
-  Antro del Corchia  (145_corchia)
-  RDF: 1,234 d18O obs · 1,234 d13C obs · 29,651 triples
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_145_corchia_data.ttl
-
-  Sanbao cave  (140_sanbao)
-  RDF: 5,832 d18O obs · 0 d13C obs · 70,075 triples
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_140_sanbao_data.ttl
-
-  Buraca Gloriosa  (275_buracagloriosa)
-  RDF: 1,137 d18O obs · 1,137 d13C obs · 27,327 triples
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_275_buracagloriosa_data.ttl
-
-  ✓ C:\git\GeoScience-FAIRification-LOD\SISAL\rdf\sisal_all_data.ttl  (152,476 triples total)
-  ℹ  Combined collection skipped (feature not implemented)
-
 ============================================================
 Done! Plots saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\plots/'
 Total: 24 plots
-RDF files saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\rdf/'
 ============================================================
 Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt

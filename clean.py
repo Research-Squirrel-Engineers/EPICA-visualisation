@@ -95,10 +95,10 @@ GENERATED: dict[str, list[Entry]] = {
         Entry("dist/mis_assignments.csv", "step 3, build_mis_vocab"),
     ],
     "diagrams": [
-        # write_mermaid writes all four in one call, from EPICA and from
-        # SISAL alike. Their own group, because a --ci-only run would
-        # otherwise remove them and leave nothing to write them back.
-        Entry("ontology/*.mermaid", "geo_lod_utils.write_mermaid, EPICA/SISAL step"),
+        # write_mermaid writes all four in one call, and since S3c.2 only the
+        # EPICA step calls it. Their own group, because a run without EPICA
+        # would otherwise remove them and leave nothing to write them back.
+        Entry("ontology/*.mermaid", "geo_lod_utils.write_mermaid, EPICA step"),
     ],
     "epica": [
         Entry("EPICA/rdf", "EPICA/epica_rdf.py", contents=True),
@@ -107,6 +107,9 @@ GENERATED: dict[str, list[Entry]] = {
         Entry("EPICA/captions.yaml", "EPICA/epica_plates.py, one entry per figure"),
     ],
     "sisal": [
+        # Both .ttl and .nt: the directory is swept whole, so a release run's
+        # Turtle cannot survive next to a later development run's N-Triples
+        # and be picked up as if it were current.
         Entry("SISAL/rdf", "SISAL/sisal_rdf.py", contents=True),
         # data/curated/ is NOT here: it is hand-maintained input, not output.
         Entry("SISAL/report", "SISAL/plot_sisal_from_csv.py", contents=True),

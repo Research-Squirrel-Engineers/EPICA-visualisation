@@ -1,8 +1,13 @@
 {
   "files": {
+    "catalogue/sites.csv": {
+      "bytes": 20391,
+      "rows": 365,
+      "sha256": "291f52b5e003e8441179b60f20fec979e48bf690c66ed53d71027f79cdb13449"
+    },
     "queries.yaml": {
-      "bytes": 12678,
-      "sha256": "846dcad14e242ccfe331cb38ae684eacf565da5a697c241862caf61de2327313"
+      "bytes": 14092,
+      "sha256": "806699663695d0b13ec30a06e93d851c09a19c8185a22b3999e35c69ee2ce5cc"
     },
     "sites/botuvera.csv": {
       "bytes": 76433,
@@ -149,7 +154,7 @@
     275
   ],
   "source": {
-    "commit": "5e78c111234296b916d21826698a5f8ebc4d2bf5",
+    "commit": "01218f26bea2e94503cef8f36861bfad5a207498",
     "repository": "squirrels-sisal-db-v3"
   }
 }

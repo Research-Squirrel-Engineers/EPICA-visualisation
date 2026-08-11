@@ -110,8 +110,12 @@ def clean_groups_for(args) -> list[str]:
     Scoped deliberately: `--sisal-only` must not remove the EPICA figures.
     They would not be redrawn in that run, and half an hour of plotting would
     be gone for nothing. Steps 2 and 3 always run, so their groups are always
-    in; the diagrams are written by EPICA and by SISAL, so they go only if one
-    of the two is on.
+    in.
+
+    The four Mermaid files hang on EPICA alone. They used to be written by
+    both strands, but the SISAL side went with the RDF export in S3c.2, and
+    while this said "epica or sisal" a --sisal-only run deleted them and left
+    them deleted.
     """
     groups = ["vocab", "cache"]
     epica = not (args.sisal_only or args.ci_only)
@@ -123,7 +127,7 @@ def clean_groups_for(args) -> list[str]:
         groups.append("sisal")
     if ci:
         groups.append("ci")
-    if epica or sisal:
+    if epica:
         groups.append("diagrams")
     if not args.no_bundle:
         groups.append("bundle")
@@ -209,7 +213,8 @@ def regenerate_vocabularies() -> bool:
         return False
 
 
-def run_script(script_path: Path, description: str) -> bool:
+def run_script(script_path: Path, description: str,
+               script_args: list[str] | None = None) -> bool:
     """Execute Python script with PYTHONPATH set correctly.
 
     Die Ausgabe des Sub-Skripts wird zeilenweise eingefangen und über den
@@ -229,6 +234,8 @@ def run_script(script_path: Path, description: str) -> bool:
 
     print(f"\n  ▶ Starting {description} ...")
     print(f"    Path: {script_path}")
+    if script_args:
+        print(f"    Args: {' '.join(script_args)}")
 
     # Set up environment with PYTHONPATH
     env = os.environ.copy()
@@ -246,7 +253,7 @@ def run_script(script_path: Path, description: str) -> bool:
 
     try:
         process = subprocess.Popen(
-            [sys.executable, str(script_path)],
+            [sys.executable, str(script_path), *(script_args or [])],
             cwd=str(script_path.parent),
             env=env,
             stdout=subprocess.PIPE,
@@ -333,13 +340,26 @@ def run_bundle(epica_ok: bool, sisal_ok: bool, ci_ok: bool, formats) -> bool:
         return False
 
 
-def print_summary(epica: bool, sisal: bool, ci: bool, bundle: bool, start: datetime):
+def _status(ok: bool, requested: bool) -> str:
+    """Three outcomes, not two.
+
+    A step that was never asked for has not failed, and reporting it as a
+    failure trains the reader to ignore the summary - which is the one line
+    that has to stay trustworthy.
+    """
+    if not requested:
+        return "– Not requested"
+    return "✓ Success" if ok else "✗ Failed"
+
+
+def print_summary(epica: bool, sisal: bool, ci: bool, bundle: bool,
+                  requested: dict[str, bool], start: datetime):
     print_header("Summary", char="═")
     duration = datetime.now() - start
-    print(f"  EPICA:   {'✓ Success' if epica  else '✗ Failed / skipped'}")
-    print(f"  SISAL:   {'✓ Success' if sisal  else '✗ Failed / skipped'}")
-    print(f"  CI:      {'✓ Success' if ci     else '✗ Failed / skipped'}")
-    print(f"  Bundle:  {'✓ Success' if bundle else '✗ Failed / skipped'}")
+    print(f"  EPICA:   {_status(epica,  requested['epica'])}")
+    print(f"  SISAL:   {_status(sisal,  requested['sisal'])}")
+    print(f"  CI:      {_status(ci,     requested['ci'])}")
+    print(f"  Bundle:  {_status(bundle, requested['bundle'])}")
 
     if STEP_TIMES:
         print("\n  Duration per step:")
@@ -410,6 +430,10 @@ def main():
             f.strip() for f in args.bundle_format.split(",") if f.strip()
         ]
 
+    # One notion of "this is a release run", read off the bundle formats and
+    # passed down. Two independent switches would eventually disagree.
+    release_run = set(bundle_formats) >= set(RELEASE_BUNDLE_FORMATS)
+
     # Set up logging
     tee = TeeOutput(LOG_FILE)
     sys.stdout = tee
@@ -477,7 +501,13 @@ def main():
 
     if not args.epica_only and not args.ci_only and sisal_exists:
         print_section("6. SISAL (RDF)")
-        sisal_ok = run_script(SISAL_RDF_SCRIPT, "SISAL v3 RDF generation")
+        # The two large SISAL graphs are written as N-Triples in a development
+        # run: four times faster to write and to parse, at three times the
+        # size, and .gitignore keeps them out. A release run asks for Turtle,
+        # which is the format that gets versioned.
+        sisal_format = ["--format", "turtle" if release_run else "nt"]
+        sisal_ok = run_script(SISAL_RDF_SCRIPT, "SISAL v3 RDF generation",
+                              sisal_format)
         end_section()
 
         print_section("7. SISAL (figures)")
@@ -495,17 +525,24 @@ def main():
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok, bundle_formats)
         end_section()
 
-    print_summary(epica_ok, sisal_ok, ci_ok, bundle_ok, start)
+    # Was dieser Lauf überhaupt vorhatte. Ein nicht angeforderter Schritt ist
+    # nicht fehlgeschlagen; vorher gab `--sisal-only` selbst bei fehlerfreiem
+    # Lauf Exit-Code 1 zurück, was einen CI-Job reihenweise rot färbt.
+    requested = {
+        "epica": not (args.sisal_only or args.ci_only) and epica_exists,
+        "sisal": not (args.epica_only or args.ci_only) and sisal_exists,
+        "ci": not (args.epica_only or args.sisal_only) and ci_exists,
+        "bundle": not args.no_bundle,
+    }
 
-    # Pipeline insgesamt nur grün, wenn alle aktivierten Schritte ok sind.
-    bundle_required = not args.no_bundle
+    print_summary(epica_ok, sisal_ok, ci_ok, bundle_ok, requested, start)
+
     overall_ok = (
         canonical_ok
         and vocab_ok
-        and epica_ok
-        and sisal_ok
-        and ci_ok
-        and (bundle_ok if bundle_required else True)
+        and all(ok for name, ok in [("epica", epica_ok), ("sisal", sisal_ok),
+                                    ("ci", ci_ok), ("bundle", bundle_ok)]
+                if requested[name])
     )
 
     # Schlusszeile noch durch den Tee, damit Log und Terminal Zeile für Zeile

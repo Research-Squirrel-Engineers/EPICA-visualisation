@@ -265,6 +265,21 @@ lesen hier ab, statt neu zu diskutieren.
 | Site-übergreifende Composite-Entitäten | beide Enden müssen im Ausschnitt liegen, sonst fällt die Zeile. Gemessen 2026-08-11: keine betroffen | 2026-08-11 |
 | Extrapolierte Alter nach 1950 | kommen in den Graphen, mit `geolod:assignmentStatus`. Nicht stillschweigend filtern: ein Alter nach 1950 ist eine Aussage über das Modell, nicht über die Probe. In der Auswahl sind es zwei | 2026-08-11 |
 | Alte `v_data_*.csv` | werden durch den Ausschnitt ersetzt und gelöscht, sobald S3c.2 grün ist | 2026-08-11 |
+| Welche Altersmodelle in den Graphen | alle acht: die sieben aus `sisal_chronology` und `original_chronology`. Jede Zuweisung nennt ihr Modell über `geolod:ageModel`. Nur `lin_interp` zu übernehmen liesse die Hälfte des Ausschnitts fallen, ohne es zu sagen | 2026-08-11 |
+| Führendes Alter je Probe | `lin_interp`, wo vorhanden, sonst `original_chronology` — aber nie bei einer Probe eines abgelösten Speläothems. Die acht `superseded`-Entitäten tragen kein einziges `lin_interp_age`, aber 3621 Alter aus `original_chronology`; liesse man die führen, kämen von SISAL zurückgezogene Daten in jede Abfrage nach dem führenden Alter | 2026-08-11 |
+| Wie eine Abbildung aus dem Graphen reproduziert wird | über das **Modell**, nicht über den Status: `?a geolod:ageModel geolod:AgeModel_lin_interp`. Ein Tripelmuster wie ein Statusfilter, trifft aber die 18 213 Proben mit `lin_interp_age`, davon 18 178 mit δ¹⁸O — die Zeilenzahl des flachen Exports. Der Statusfilter beantwortet eine andere und ebenso richtige Frage und liefert rund 31 000 Proben | 2026-08-11 |
+| `entity_status` im Graphen | ja, am Entitätsknoten, als `geolod:entityStatus` auf drei SKOS-Konzepte, dazu `geolod:correspondingCurrentSpeleothem`. Nicht optional: es ist der einzige Grund, warum `original_chronology` bei abgelösten Entitäten nicht führen darf | 2026-08-11 |
+| Woher die Cave-Sites kommen | aus der Datenbank, über einen `catalogue:`-Block in `queries.yaml`, der nicht auf die sechs Sites gefiltert ist. `v_sites_all.csv` war ein v2-Stand mit 305 Sites; SISAL v3 hat 365. Alle 305 IDs und Namen sind unverändert, es fehlten schlicht 60 Höhlen | 2026-08-11 |
+| Ort der kuratierten Anreicherung | `data/curated/sisal_site_annotations.csv`, eigener Graph `SISAL/rdf/sisal_site_annotations.ttl`, eigene Quelle `geolod:GeoLodSiteAnnotations_DataSource` mit `dct:creator`. Die alte CSV mischte Datenbankfelder und eigene Arbeit; ohne die Trennung kostet jedes Neuziehen der Sites die Anreicherung. Ein Cave-Knoten darf die Malereien von Villars nicht unter `prov:wasDerivedFrom geolod:SISALv3_DataSource` tragen | 2026-08-11 |
+| Geprüft-und-nichts-gefunden | eigene Aussage: alle 305 je geprüften Höhlen tragen `geolod:screenedForArchaeology true`, 37 davon positiv. Die 60 aus v3 tragen keins von beidem. Drei Zustände, alle abfragbar — eine Karte braucht den Unterschied zwischen „geprüft, nichts" und „nie angesehen" | 2026-08-11 |
+| Aufteilung der SISAL-Ausgabe | drei Dateien: `sisal_v3_core` mit Sites, Speläothemen, Proben, Isotopen und dem führenden Alter; `sisal_v3_chronologies` mit den 101 470 konkurrierenden Altern; `sisal_site_annotations.ttl`. Der Kern reproduziert die Abbildungen für sich allein, weil das führende Alter zusätzlich an der Probe materialisiert ist | 2026-08-11 |
+| Umfang des Bundles | Kern immer, Chronologien nur bei `--bundle-format release`. 885 000 Tripel, die keine Abbildung und keine Shape braucht, und rund die Hälfte der Parsezeit. Die Datei liegt neben dem Bundle für jeden, der Modelle vergleicht | 2026-08-11 |
+| Serialisierungsformat im Alltag | N-Triples für die beiden grossen SISAL-Graphen und für das Bundle, Turtle im Release-Lauf. Gemessen: Kern 6,8 s gegen 30,5 s, Bundle 9,8 s gegen 373 s, dafür dreimal so gross. `.gitignore` hält die `.nt` heraus, versioniert wird das Turtle aus dem Release | 2026-08-11 |
+| Aufräumen vor dem Lauf | Voreinstellung, `--no-clean` schaltet ab. Eng gefasst auf die Schritte, die tatsächlich laufen: `--sisal-only` fasst die EPICA-Abbildungen nicht an. Der Sweep ist das, was Waisen fernhält — eine Abbildung mit umbenanntem Proxy wird nicht überschrieben, sondern nur nicht mehr geschrieben. Inventar in `clean.py`, in drei Registern: erzeugt, tot, terminiert | 2026-08-11 |
+| Nicht angeforderte Schritte | zählen nicht als Fehlschlag. `--sisal-only` gab vorher auch bei fehlerfreiem Lauf Exit-Code 1 zurück | 2026-08-11 |
+| `geolod:ageKaBP` an Speläothem-Beobachtungen | kein `sh:minCount` mehr, `sh:maxCount 1` bleibt. Die Anforderung galt, solange die Eingabe `v_data_*.csv` war, wo keine Zeile ohne `lin_interp`-Alter entstehen konnte. Der vollständige Ausschnitt hat 4688 δ¹⁸O- und 3093 δ¹³C-Messungen an Proben, die kein Altersmodell erreicht hat; das sind Daten. Der Generator schreibt die Zahl in seine Ausgabe, damit sie sichtbar bleibt | 2026-08-11 |
+| `geolod:UThChronology` | in der SISAL-Erweiterung definiert, als Unterklasse von `geolod:Chronology`. `geo_lod_core.ttl` nannte die Klasse nur in einem Kommentar als Gegenstück zu `IceCoreChronology`; ohne Definition kein CRM-Anker | 2026-08-11 |
+| `geolod:measuredValue` neben `sosa:hasSimpleResult` | beide, wie EPICA es schreibt. Sie sehen aus wie eine Dublette und sind keine: `core_shapes.ttl` verlangt genau ein `measuredValue`, `hasSimpleResult` liest ein SOSA-Konsument | 2026-08-11 |
 | SQL-Ablage | `postgres/queries.yaml` in `sisal-db-v3`, mit dem Ausschnitt nach geo-lod kopiert. Das Skript trägt kein SQL mehr; was die Daten sind, steht in der Datei, die neben ihnen liegt | 2026-08-11 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
@@ -317,8 +332,8 @@ noch nicht entschieden.
 | S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | erledigt 2026-08-10 |
 | S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | erledigt 2026-08-11 |
 | S3c.1 | SISAL: CSV-Ausschnitt aus der Datenbank | sisal-db-v3 + geo-lod | S3b | erledigt 2026-08-11 |
-| S3c.2 | SISAL nach RDF: Kern | geo-lod | S0, S1, S3c.1 | offen |
-| S3c.3 | SISAL nach RDF: Datierungen, Lücken, zweite Chronologie | geo-lod | S3c.2 | offen |
+| S3c.2 | SISAL nach RDF: Kern | geo-lod | S0, S1, S3c.1 | erledigt 2026-08-11 |
+| S3c.3 | SISAL nach RDF: Datierungen und Lücken | geo-lod | S3c.2 | offen |
 | S3c.4 | SISAL-Abbildungen und Captions | geo-lod | S3c.2 | offen |
 | S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | offen |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c.3 | offen |
@@ -1185,37 +1200,59 @@ Was dabei herauskam und über S3c.1 hinaus wirkt:
 **Ziel:** Site, Entität, Probe, δ¹⁸O, δ¹³C und Chronologie aus dem Ausschnitt
 in den Graphen, an den bestehenden `geolod:Cave_site_NNNN`-Knoten.
 
-**Uploads:** geo-lod-Bundle (A5).
+**Ergebnis:** `SISAL/sisal_rdf.py` als eigener Schritt 6 in `main.py`,
+`data/curated/sisal_site_annotations.csv`, ein `catalogue:`-Block in
+`queries.yaml`. `SISAL/plot_sisal_from_csv.py` schreibt kein RDF mehr und ist
+649 Zeilen leichter.
 
-**Ergebnis:** neues Sub-Skript im geo-lod-`main.py`, Ausgabe nach `SISAL/rdf/`.
+**Erledigt 2026-08-11.** Pipeline grün, CRM-Coverage 55/55, SHACL ohne
+Verstoss, eine bekannte Warnung (`cisite_59`, Teil D).
 
-**Fertig, wenn:** die Pipeline grün ist, SHACL sauber, und die alten
-`v_data_*.csv` gelöscht werden können.
+```
+365 cave sites; 305 screened for archaeology, 37 positive, 60 not yet screened
+6 sites, 60 speleothems, 35 777 samples
+35 713 δ¹⁸O and 14 743 δ¹³C observations (4688 and 3093 of them undated)
+132 531 age assignments over eight models
+  leading, lin_interp   18 213
+  leading, original     12 848
+  no leading age         4 691
+```
 
-- Die Sites hängen an bestehenden `geolod:Cave_site_NNNN`-Knoten (A1).
-- `age_uncert_pos` / `age_uncert_neg` stehen im Ausschnitt und werden bisher
-  beim TTL-Schreiben verworfen. Kein neuer Datenweg nötig, zwei Properties mehr
-  im Modell.
-- Zu entscheiden: welche der sieben Altersmodelle in den Graphen gehen, und was
-  mit den 17 564 Proben ohne `lin_interp_age` geschieht.
-- Zu entscheiden: ob `entity_status` im Graphen steht. `superseded` und
-  `current partially modified` sind Aussagen über die Daten, nicht über die
-  Höhle, und ohne sie liesse sich nicht sagen, warum zwei Entitäten dieselbe
-  Lamelle beschreiben.
-- Die beiden negativen Alter tragen `geolod:assignmentStatus` (A4).
+`sisal_v3_core` 1 230 751 Tripel, `sisal_v3_chronologies` 884 822,
+`sisal_site_annotations.ttl` 934. Bundle 1 434 113 Tripel.
+
+**Was sich gegenüber der Planung verschoben hat.**
+
+- `original_chronology` ist hier schon dabei, nicht erst in S3c.3. Es ist das
+  achte Altersmodell und liess sich vom führenden Alter nicht trennen.
+- Die Cave-Sites kommen jetzt aus der Datenbank statt aus `v_sites_all.csv`,
+  365 statt 305. Die eigene Anreicherung ist dabei in eine eigene Datei, einen
+  eigenen Graphen und eine eigene Quelle gewandert (A4).
+- Die alten `v_data_*.csv` sind **nicht** gelöscht: die Abbildungen lesen sie
+  weiter, das entfällt erst mit S3c.4. `v_sites_all.csv` dagegen ist tot und
+  wird von `clean.py` als solche gemeldet.
+
+**Was beim ersten vollen Lauf schiefging, und warum es lehrreich ist.** Der
+Lauf brauchte 59 Minuten und meldete 136 625 SHACL-Verstösse. Ursache waren
+drei Auslassungen im Generator — fehlendes `geolod:measuredValue`,
+`geolod:measurementType` und `geolod:ageKaBP` an den Beobachtungen — und eine
+Shape, die nicht die Daten prüfte, sondern eine Eigenschaft des kaputten
+Exports festschrieb (A4). Nach der Korrektur: 12 Minuten, null Verstösse.
+Der Report über 187 120 Ergebnisse aufzubauen war der grössere Teil der
+verlorenen Zeit, nicht die Prüfung selbst.
 
 ---
 
-### S3c.3 — Datierungen, Lücken, zweite Chronologie
+### S3c.3 — Datierungen und Lücken
 
-**Ziel:** `dating`, `hiatus`, `gap` und `original_chronology` modellieren.
+**Ziel:** `dating`, `hiatus` und `gap` modellieren.
 
 **Uploads:** geo-lod-Bundle (A5).
 
 **Ergebnis:** erweiterte Ontologie und Shapes, zusätzliche Tripel.
 
-**Fertig, wenn:** SHACL sauber ist und eine Abfrage die konkurrierenden
-Altersmodelle je Probe auseinanderhalten kann.
+**Fertig, wenn:** SHACL sauber ist und eine Abfrage sagen kann, worauf ein
+Alter an einer bestimmten Tiefe beruht.
 
 - 1200 U/Th-Datierungen werden eigene Messereignisse, nach dem Muster von
   `strat:AgeControlPoint`. Dasselbe Muster wie bei den MIS-Grenzen.
@@ -1223,9 +1260,12 @@ Altersmodelle je Probe auseinanderhalten kann.
   Messreihe. Der Unterschied zur Darstellungskonvention aus S2 ist zu wahren:
   ein gestrichelter Abschnitt heisst „hier keine Proben", ein Hiatus heisst
   „hier kein Eintrag".
-- `original_chronology` mit 31 352 Altern ist das konkurrierende Altersmodell.
-  Dieselbe Unterscheidung wie bei den MIS-Quellen aus S1: beide Lesarten
-  bleiben, `geolod:assignmentStatus` sagt, welche führt.
+- `original_chronology` ist mit S3c.2 erledigt: es ist als achtes Altersmodell
+  im Graphen, mit `geolod:assignmentStatus` wie die anderen sieben.
+- Die Datierungspunkte machen `geolod:extrapolatedBeyondDatingRange` prüfbar.
+  Bisher steht das Kennzeichen an den 30 Altern vor 1950, hergeleitet aus dem
+  Vorzeichen; mit `dating` liesse sich sagen, wo der äusserste Stützpunkt
+  wirklich liegt.
 
 ---
 
@@ -1241,13 +1281,21 @@ dieselben Konventionen wie EPICA.
 **Fertig, wenn:** die Abbildungen aus `data/derived/sisal/sites/` entstehen und
 keine MIS-Grenze mehr im Code steht.
 
+**Ausgangslage nach S3c.2.** Der RDF-Teil ist schon draussen, das Skript zeichnet
+nur noch. Was bleibt, ist die Eingabe: es liest weiter die `v_data_*.csv` mit dem
+Dezimaltrenner-Fehler, und das steht seit S3c.2 im selben Log neben den richtigen
+Zahlen — Botuverá 907 gegen 920, Sanbao 5832 gegen 6085, Buraca Gloriosa 1137
+gegen 1178.
+
 - `MIS_INTERVALS` durch `dist/mis_stages.csv` ersetzen — die letzte
   hartcodierte MIS-Stelle.
 - Achsen auf `geo_lod_figures.nice_ticks`. Ob dort dasselbe Abschneiden
   passiert wie bei δ¹⁸O in S2, ist ungeprüft; die Wertebereiche vergleichen.
 - `captions.yaml` für die 36 Abbildungen, Mechanik liegt in
   `ontology/geo_lod_captions.py` bereit.
-- Das doppelte `geo_lod_core.ttl` in `SISAL/rdf/` entfällt.
+- ~~Das doppelte `geo_lod_core.ttl` in `SISAL/rdf/`~~ — mit S3c.2 entfallen.
+- Sieben Proben tragen δ¹³C ohne δ¹⁸O. Die flache Abfrage geht `FROM d18o` und
+  verliert sie stillschweigend; im Graphen sind sie.
 
 ---
 
@@ -1255,6 +1303,11 @@ keine MIS-Grenze mehr im Code steht.
 
 **Ziel:** die Abbildungen des Repos entstehen aus der vollständigen Datenbank
 statt aus einem mitgelieferten Ausschnitt. Eine Quelle, und zwar die geprüfte.
+
+**Gute Nachricht vorweg, geprüft 2026-08-11.** `wdttest-sisal` zeichnet drei
+Sites, und seine drei CSV sind **byte-gleich** mit dem, was `queries.yaml` heute
+aus `sisal_v3` schreibt. Die Umstellung ändert also, woher die Datei kommt, und
+nicht die Abbildungen. Die flache Abfrage bleibt unangetastet.
 
 **Uploads:** `wdttest-sisal` als ZIP ohne Abbildungen; dazu `postgres/NAMING.md`
 und `py/export_sites.py` aus `sisal-db-v3`, weil dort die
@@ -1383,11 +1436,10 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   Railsback et al. 2015 als Beleg, eine Abweichung (MIS 3).
 - `MIS_INTERVALS` in `SISAL/plot_sisal_from_csv.py` durch `dist/mis_stages.csv`
   ersetzen — die letzte hartcodierte MIS-Stelle (S3c.4).
-- **Sechs von sieben Altersmodellen sind bisher unsichtbar.** `sisal_chronology`
-  führt `lin_interp`, `lin_reg`, `bchron`, `bacon`, `oxcal`, `copra` und
-  `stalage`. Im Ausschnitt haben 24 390 Proben eine Chronologiezeile, 18 213
-  ein `lin_interp_age`; die übrigen 6177 tragen ausschliesslich andere Modelle.
-  Der Weg über die flachen CSV sieht keine davon. Entscheidung in S3c.2.
+- ~~**Sechs von sieben Altersmodellen sind bisher unsichtbar.**~~ Erledigt
+  2026-08-11: alle acht sind im Graphen, jede Zuweisung nennt ihr Modell (A4).
+  Die 6177 Proben, die ausschliesslich `stalage` oder `bacon` tragen, sind damit
+  zum ersten Mal sichtbar.
 - ~~Die übrigen Rohdaten nach `data/raw/` nachziehen: `src/EPICA_Dome_C_*.csv`
   und die `.tab` in S2~~ — für EPICA erledigt 2026-08-09. Offen bleiben die
   `CI/cifindspots_part_full.csv` (S4). Die SISAL-CSV sind mit S3c.1 nach
@@ -1413,16 +1465,35 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   `geo_lod_figures.nice_ticks` stellen und die Wertebereiche vergleichen.
 - `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
   `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
-- Der Bundle-Schritt bleibt der grösste Posten, jetzt aber im Parsen der
-  Einzeldateien, nicht mehr in SHACL oder der Serialisierung. Falls das
-  irgendwann stört: die Sub-Skripte könnten zusätzlich N-Triples schreiben,
-  die das Bundle dann schneller einliest.
-- Aus den bestehenden Pipeline-Todos: doppeltes Schreiben von
-  `geo_lod_core.ttl` — für EPICA erledigt 2026-08-09, für SISAL offen
-  (`SISAL/plot_sisal_from_csv.py` legt weiter eine Kopie in `SISAL/rdf/`, S3c.4);
-  `cisite_59` auf fehlenden Pleiades-/Wikidata-Link prüfen. Von den DOIs an den
-  `DataSource`-Instanzen sind die beiden PANGAEA-Quellen mit S2 erledigt, offen
-  bleibt `SISALv3_DataSource` (S3c.2).
+- Der Bundle-Schritt bleibt der grösste Posten und ist es nach S3c.2 noch
+  deutlicher: 486 s von 723 s, davon 161 s SHACL und 10 s Serialisierung. Die
+  restlichen rund 310 s sind das Einlesen von 1,43 Mio. Tripeln aus zehn
+  Dateien. Der Weg dahin wäre, die Schritte ihre Graphen weiterreichen zu
+  lassen, statt sie über die Platte zu schicken. **Bewusst zurückgestellt
+  2026-08-11.**
+- Aus den bestehenden Pipeline-Todos: das doppelte `geo_lod_core.ttl` in
+  `SISAL/rdf/` ist mit S3c.2 entfallen, ebenso der fehlende DOI an
+  `SISALv3_DataSource`. Offen bleibt `cisite_59` ohne `skos:closeMatch` auf
+  Pleiades oder Wikidata — die einzige SHACL-Warnung des Laufs vom 2026-08-11
+  und älter als S3c. **Bewusst zurückgestellt 2026-08-11.**
+- Vier tote Dateien meldet `clean.py` in geo-lod: `SISAL/v_sites_all.csv`,
+  `EPICA/epica_ontology.ttl` und die beiden JPG ausserhalb von `EPICA/plots/`,
+  dazu die Kopie von `cifindspots_part_full.csv` in `archaeo-connect/`. Alle
+  geprüft und, wo Kopie, byte-gleich mit ihrem Original. Entfernen von Hand mit
+  `clean.py --stale --delete`.
+- In `sisal-db-v3` liegt `data/sisalv3_database_mysql_csv` mit 303 MB, das
+  MySQL-Verzeichnis aus der Zeit vor S3a. In `.gitignore` genannt, von nichts
+  gelesen.
+- Der Schlüssel von `data/curated/sisal_site_annotations.csv` ist `site_id`,
+  ein SISAL-interner Zähler. Von v2 auf v3 hat sich keine der 305 IDs und keiner
+  der Namen verschoben, geprüft 2026-08-11. Verlassen sollte man sich darauf
+  nicht; ein zweiter Schlüssel wäre `wikidata_qid`, den haben aber nur 27 der 37.
+- Die OSM-Spalten der Anreicherung sind fast leer: eine `osm_id` von 305 Zeilen,
+  `osm_match_score` und `osm_match_distance_km` durchgehend leer. Die Spalten
+  stehen weiter in der CSV; im Graphen landet nur, was da ist.
+- `wdttest-sisal-db-v3` ist als `deprecated` zu kennzeichnen, mit Verweis auf
+  `squirrels-sisal-db-v3`. Es ist ein Stand vor S3a: kein `schema.sql`, kein
+  `guard.py`, keine `queries.yaml`, `data/sisalv3_csv/` ausgepackt im Repo.
 
 - **Zwei weiche Warnungen im SISAL-Guard, beide kein Fehler.** Der Ladelauf vom
   2026-08-11 ist in allen harten Prüfungen grün: 21 Tabellen zeilengleich mit

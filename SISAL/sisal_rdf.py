@@ -41,9 +41,12 @@ Run through main.py, or standalone from the repository root:
 
 from __future__ import annotations
 
+import argparse
 import csv
 import os
 import sys
+import threading
+import time
 from collections import defaultdict
 from pathlib import Path
 
@@ -116,6 +119,55 @@ ENTITY_STATUS = {
         "EntityStatus_superseded", "superseded",
         "Replaced by a newer record; corresponding_current names the successor."),
 }
+
+
+# --------------------------------------------------------------------------
+# Heartbeat
+# --------------------------------------------------------------------------
+
+class Heartbeat:
+    """Says where the run is, every INTERVAL seconds, from its own thread.
+
+    A progress line printed inside a loop cannot help here: most of the time
+    goes into two rdflib calls that do not come back until they are done. A
+    daemon thread is the only thing that can speak during them.
+
+    Nothing is printed when a step finishes quickly, so a fast run stays as
+    quiet as it was before.
+    """
+
+    INTERVAL = 30.0
+
+    def __init__(self, total: int):
+        self.total = total
+        self.index = 0
+        self.label = "starting"
+        self.started = time.perf_counter()
+        self.step_started = self.started
+        self._stop = threading.Event()
+        self._thread = threading.Thread(target=self._run, daemon=True)
+
+    def start(self) -> "Heartbeat":
+        self._thread.start()
+        return self
+
+    def step(self, label: str) -> None:
+        self.index += 1
+        self.label = label
+        self.step_started = time.perf_counter()
+
+    def stop(self) -> None:
+        self._stop.set()
+
+    def _run(self) -> None:
+        while not self._stop.wait(self.INTERVAL):
+            now = time.perf_counter()
+            # flush: the output goes through a pipe to main.py, where an
+            # unflushed line would sit in the buffer until the step ends -
+            # which is exactly the moment the message stops being useful.
+            print(f"    … still running: step {self.index}/{self.total} "
+                  f"{self.label}, {now - self.step_started:.0f}s in this step, "
+                  f"{now - self.started:.0f}s total", flush=True)
 
 
 # --------------------------------------------------------------------------
@@ -405,6 +457,12 @@ geolod:archaeologicalConfidence
     rdfs:label   "archaeological confidence"@en ;
     rdfs:comment "Confidence of the archaeological attribution: high, medium or low."@en .
 
+geolod:UThChronology
+    a owl:Class ;
+    rdfs:subClassOf geolod:Chronology ;
+    rdfs:label   "U-Th Chronology"@en ;
+    rdfs:comment "A depth-age model for a speleothem, built on U-Th dating points: the seven SISAL v3 models and the chronology as originally published. geo_lod_core.ttl names this class as the SISAL counterpart of geolod:IceCoreChronology but does not define it; defined here, so that the eight chronology individuals reach crmsci:S4_Observation through geolod:Chronology like every other class in the graph."@en .
+
 geolod:screenedForArchaeology
     a owl:DatatypeProperty ;
     rdfs:domain  geolod:Cave ;
@@ -510,6 +568,15 @@ def add_vocabularies(g: Graph) -> None:
     # Unit and source sit here, not on each of the 50 456 observations: both
     # hold for every measurement of the property, and repeating them per node
     # is 100 000 triples that say the same thing over and over.
+    for local, label in [
+        ("MeasurementType_d18O", "δ¹⁸O measurement"),
+        ("MeasurementType_d13C", "δ¹³C measurement"),
+    ]:
+        node = GEOLOD[local]
+        g.add((node, RDF.type, GEOLOD["MeasurementType"]))
+        g.add((node, RDF.type, OWL.NamedIndividual))
+        g.add((node, RDFS.label, Literal(label, lang="en")))
+
     for local, cls, label in [
         ("Delta18OProperty_speleothem", "Delta18OProperty", "δ¹⁸O of speleothem calcite"),
         ("Delta13CProperty_speleothem", "Delta13CProperty", "δ¹³C of speleothem calcite"),
@@ -640,6 +707,9 @@ def add_annotation_source(g: Graph) -> None:
                    "SISAL cave sites by the geo-lod project. Not part of "
                    "SISAL v3 and not reproducible from it.", lang="en")))
     g.add((source, DCT.creator, ORCID_FLO))
+    g.add((source, DCT.source, URIRef(
+        "https://github.com/Research-Squirrel-Engineers/"
+        "GeoScience-FAIRification-LOD")))
     g.add((source, DCT.license, URIRef(
         "https://creativecommons.org/licenses/by/4.0/")))
 
@@ -673,8 +743,11 @@ def add_site_annotation(g: Graph, site: URIRef, note: dict,
         if value("arch_note"):
             g.add((site, SKOS.note, Literal(value("arch_note"), lang="en")))
         if value("arch_confidence"):
+            # No language tag. The shape constrains this with
+            # sh:in ( "high" "medium" "low" ), and "high"@en is not "high" -
+            # it is a controlled value, not prose.
             g.add((site, GEOLOD["archaeologicalConfidence"],
-                   Literal(value("arch_confidence"), lang="en")))
+                   Literal(value("arch_confidence"))))
 
     if value("wikidata_qid"):
         g.add((site, OWL.sameAs,
@@ -753,17 +826,32 @@ def add_samples(g: Graph, samples: list[dict],
 
 
 def add_isotopes(g: Graph, rows: list[dict], sample_uris: dict[str, URIRef],
-                 isotope: str) -> int:
-    """δ¹⁸O or δ¹³C observations, one per measured sample."""
+                 isotope: str,
+                 leading_by_sample: dict[str, tuple[str, float]]) -> tuple[int, int]:
+    """δ¹⁸O or δ¹³C observations, one per measured sample.
+
+    The age is repeated here from the sample. SISAL states it once, per
+    sample, and that is where it belongs - but ontology/shapes asks for it on
+    the observation, EPICA writes it there, and a consumer plotting a series
+    should not have to join through the sample to get an x-axis.
+
+    Returns the number written and the number left without an age. The second
+    figure is not a defect: 4688 δ¹⁸O and 3093 δ¹³C measurements sit on
+    samples no chronology reached, and the old v_data_*.csv simply never
+    contained them.
+    """
     meta = {
         "d18o": ("Delta18OSpeleothemObservation", "Delta18OProperty_speleothem",
+                 "MeasurementType_d18O",
                  "d18o_measurement", "d18o_precision", "δ¹⁸O"),
         "d13c": ("Delta13CSpeleothemObservation", "Delta13CProperty_speleothem",
+                 "MeasurementType_d13C",
                  "d13c_measurement", "d13c_precision", "δ¹³C"),
     }[isotope]
-    cls, prop, value_col, precision_col, label = meta
+    cls, prop, mtype, value_col, precision_col, label = meta
 
     written = 0
+    undated = 0
     for row in rows:
         value = num(row[value_col])
         if value is None:
@@ -777,23 +865,81 @@ def add_isotopes(g: Graph, rows: list[dict], sample_uris: dict[str, URIRef],
         g.add((obs, RDF.type, GEOLOD[cls]))
         g.add((obs, SOSA["hasFeatureOfInterest"], sample))
         g.add((obs, SOSA["observedProperty"], GEOLOD[prop]))
-        # One value, one property. geolod:measuredValue used to carry the same
-        # number a second time; at 50 456 observations that is 50 456 triples
-        # asserting nothing new. The unit and the source moved to the
-        # observable property, where they hold for every observation of it.
+        # Both properties, as EPICA/epica_rdf.py writes them. They look like
+        # a duplicate and are not: geolod:measuredValue is what
+        # ontology/shapes/core_shapes.ttl requires exactly one of, and
+        # sosa:hasSimpleResult is what a SOSA consumer reads. Dropping either
+        # breaks one of the two.
         g.add((obs, SOSA["hasSimpleResult"], dec(value, DEC_VALUE)))
+        g.add((obs, GEOLOD["measuredValue"], dec(value, DEC_VALUE)))
+        g.add((obs, GEOLOD["measurementType"], GEOLOD[mtype]))
+        g.add((obs, PROV.wasDerivedFrom, GEOLOD["SISALv3_DataSource"]))
         g.add((sample, GEOLOD["hasObservation"], obs))
+
+        chosen = leading_by_sample.get(row["sample_id"])
+        if chosen is None:
+            undated += 1
+        else:
+            model, age_ka = chosen
+            g.add((obs, GEOLOD["ageKaBP"], dec(age_ka, DEC_AGE)))
+            g.add((obs, GEOLOD["ageChronology"], TRS[f"SISALv3-{model}"]))
 
         precision = num(row.get(precision_col))
         if precision is not None:
             g.add((obs, GEOLOD["standardDeviation"], dec(precision, DEC_VALUE)))
         written += 1
-    return written
+    return written, undated
 
 
-def add_ages(core: Graph, alt: Graph, chronology: list[dict],
-             original: list[dict], sample_uris: dict[str, URIRef],
-             superseded: set[str]) -> dict[str, int]:
+def collect_ages(chronology: list[dict], original: list[dict]) -> dict:
+    """Every model's age per sample, read once and reused twice.
+
+    Its own pass because the observations need the leading age too: SISAL
+    hangs the age on the sample, the shapes ask for it on the observation, and
+    a second read of the two chronology tables to answer that would be a
+    second chance to answer it differently.
+    """
+    by_sample: dict[str, list[tuple[str, float, float | None, float | None]]] = \
+        defaultdict(list)
+    for row in chronology:
+        for key, column, _ in CHRONOLOGY_MODELS:
+            age = num(row[column])
+            if age is None:
+                continue
+            by_sample[row["sample_id"]].append(
+                (key, age, num(row.get(f"{column}_uncert_pos")),
+                 num(row.get(f"{column}_uncert_neg"))))
+    for row in original:
+        age = num(row[ORIGINAL_MODEL[1]])
+        if age is None:
+            continue
+        by_sample[row["sample_id"]].append(
+            ("original", age, num(row.get("interp_age_uncert_pos")),
+             num(row.get("interp_age_uncert_neg"))))
+    return by_sample
+
+
+def leading_ages(by_sample: dict, superseded: set[str]) -> dict[str, tuple[str, float]]:
+    """The one age per sample geo-lod follows, in ka BP.
+
+    lin_interp where the sample has one, otherwise the original_chronology
+    age, and never for a sample of a superseded speleothem: those hold no
+    lin_interp age at all but 3621 original ages, and letting them lead would
+    return records SISAL has retired to any query asking for the leading age.
+    """
+    leading: dict[str, tuple[str, float]] = {}
+    for sample_id, entries in by_sample.items():
+        ages = {key: value for key, value, _, _ in entries}
+        if "lin_interp" in ages:
+            leading[sample_id] = ("lin_interp", ages["lin_interp"] / 1000.0)
+        elif "original" in ages and sample_id not in superseded:
+            leading[sample_id] = ("original", ages["original"] / 1000.0)
+    return leading
+
+
+def add_ages(core: Graph, alt: Graph, by_sample: dict,
+             sample_uris: dict[str, URIRef],
+             leading_by_sample: dict[str, tuple[str, float]]) -> dict[str, int]:
     """Every model's age for every sample, with exactly one marked leading.
 
     The leading rule, and the reason it stops at entity_status:
@@ -806,26 +952,6 @@ def add_ages(core: Graph, alt: Graph, chronology: list[dict],
          has retired to any query that asks for the leading age.
       3. otherwise nothing leads, and the sample carries only alternatives.
     """
-    by_sample: dict[str, list[tuple[str, float, float | None, float | None]]] = \
-        defaultdict(list)
-
-    for row in chronology:
-        for key, column, _ in CHRONOLOGY_MODELS:
-            age = num(row[column])
-            if age is None:
-                continue
-            by_sample[row["sample_id"]].append(
-                (key, age, num(row.get(f"{column}_uncert_pos")),
-                 num(row.get(f"{column}_uncert_neg"))))
-
-    for row in original:
-        age = num(row[ORIGINAL_MODEL[1]])
-        if age is None:
-            continue
-        by_sample[row["sample_id"]].append(
-            ("original", age, num(row.get("interp_age_uncert_pos")),
-             num(row.get("interp_age_uncert_neg"))))
-
     tally = {"assignments": 0, "leading_lin_interp": 0, "leading_original": 0,
              "no_leading": 0, "extrapolated": 0}
 
@@ -833,15 +959,13 @@ def add_ages(core: Graph, alt: Graph, chronology: list[dict],
         sample = sample_uris.get(sample_id)
         if sample is None:
             continue
-        models = {key for key, _, _, _ in entries}
-        if "lin_interp" in models:
-            leading = "lin_interp"
+        chosen = leading_by_sample.get(sample_id)
+        leading = chosen[0] if chosen else None
+        if leading == "lin_interp":
             tally["leading_lin_interp"] += 1
-        elif "original" in models and sample_id not in superseded:
-            leading = "original"
+        elif leading == "original":
             tally["leading_original"] += 1
         else:
-            leading = None
             tally["no_leading"] += 1
 
         for key, age_years, uncert_pos, uncert_neg in entries:
@@ -905,97 +1029,156 @@ def add_ages(core: Graph, alt: Graph, chronology: list[dict],
 # Entry point
 # --------------------------------------------------------------------------
 
-def build() -> bool:
+# Development format first. N-Triples writes the two large graphs four times
+# faster than Turtle (12s against 57s here) at three times the size, so it is
+# what a development run gets and .gitignore keeps it out. Turtle is the
+# release format: smaller, readable, versioned. Neither carries a blank node,
+# so both are byte-stable across runs.
+DATA_FORMATS: dict[str, tuple[str, str]] = {
+    "nt": ("nt", ".nt"),
+    "turtle": ("turtle", ".ttl"),
+}
+DEFAULT_DATA_FORMAT = "nt"
+
+STEPS = [
+    "reading the cut",
+    "vocabularies",
+    "cave catalogue",
+    "speleothems and samples",
+    "isotope observations",
+    "age assignments",
+    "provenance",
+    "writing the annotations",
+    "writing the core graph",
+    "writing the chronologies",
+]
+
+
+def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
+    serializer, suffix = DATA_FORMATS[data_format]
+
     print("\n" + "=" * 72)
     print("  S3c.2 - SISAL cut to RDF")
     print("=" * 72)
     print(f"  Input:  {TABLES_DIR}")
+    print(f"  Format: {data_format} ({suffix}) for the two large graphs, "
+          f"Turtle for the rest")
 
-    sites = read_table("site")
-    entities = read_table("entity")
-    samples = read_table("sample")
-    d18o = read_table("d18o")
-    d13c = read_table("d13c")
-    chronology = read_table("sisal_chronology")
-    original = read_table("original_chronology")
+    beat = Heartbeat(len(STEPS)).start()
+    try:
+        beat.step(STEPS[0])
+        sites = read_table("site")
+        entities = read_table("entity")
+        samples = read_table("sample")
+        d18o = read_table("d18o")
+        d13c = read_table("d13c")
+        chronology = read_table("sisal_chronology")
+        original = read_table("original_chronology")
 
-    print(f"  {len(sites)} sites, {len(entities)} speleothems, "
-          f"{len(samples)} samples")
+        print(f"  {len(sites)} sites, {len(entities)} speleothems, "
+              f"{len(samples)} samples")
 
-    superseded_entities = {row["entity_id"] for row in entities
-                           if (row.get("entity_status") or "").strip() == "superseded"}
-    superseded_samples = {row["sample_id"] for row in samples
-                          if row["entity_id"] in superseded_entities}
-    print(f"  {len(superseded_entities)} superseded speleothems, "
-          f"{len(superseded_samples)} of their samples")
+        superseded_entities = {
+            row["entity_id"] for row in entities
+            if (row.get("entity_status") or "").strip() == "superseded"}
+        superseded_samples = {row["sample_id"] for row in samples
+                              if row["entity_id"] in superseded_entities}
+        print(f"  {len(superseded_entities)} superseded speleothems, "
+              f"{len(superseded_samples)} of their samples")
 
-    g = Graph()
-    bind_prefixes(g)
+        beat.step(STEPS[1])
+        g = Graph()
+        bind_prefixes(g)
+        add_vocabularies(g)
 
-    add_vocabularies(g)
-    ann = Graph()
-    bind_prefixes(ann)
-    n_catalogue, n_screened, n_arch = add_cave_catalogue(g, ann)
-    print(f"  {n_catalogue} cave sites in the catalogue; "
-          f"{n_screened} screened for archaeology, {n_arch} positive, "
-          f"{n_catalogue - n_screened} not yet screened")
-    site_uris = add_sites(g, sites)
-    entity_uris = add_entities(g, entities, site_uris)
-    sample_uris = add_samples(g, samples, entity_uris)
+        beat.step(STEPS[2])
+        ann = Graph()
+        bind_prefixes(ann)
+        n_catalogue, n_screened, n_arch = add_cave_catalogue(g, ann)
+        print(f"  {n_catalogue} cave sites in the catalogue; "
+              f"{n_screened} screened for archaeology, {n_arch} positive, "
+              f"{n_catalogue - n_screened} not yet screened")
 
-    n_d18o = add_isotopes(g, d18o, sample_uris, "d18o")
-    n_d13c = add_isotopes(g, d13c, sample_uris, "d13c")
-    print(f"  {n_d18o} δ¹⁸O and {n_d13c} δ¹³C observations")
+        beat.step(STEPS[3])
+        site_uris = add_sites(g, sites)
+        entity_uris = add_entities(g, entities, site_uris)
+        sample_uris = add_samples(g, samples, entity_uris)
 
-    alt = Graph()
-    bind_prefixes(alt)
-    tally = add_ages(g, alt, chronology, original, sample_uris, superseded_samples)
-    print(f"  {tally['assignments']} age assignments over eight models")
-    print(f"    leading, lin_interp        {tally['leading_lin_interp']:>7d}")
-    print(f"    leading, original          {tally['leading_original']:>7d}")
-    print(f"    no leading age             {tally['no_leading']:>7d}")
-    print(f"    extrapolated past 1950     {tally['extrapolated']:>7d}")
+        beat.step(STEPS[4])
+        by_sample = collect_ages(chronology, original)
+        leading = leading_ages(by_sample, superseded_samples)
+        n_d18o, undated_d18o = add_isotopes(g, d18o, sample_uris, "d18o", leading)
+        n_d13c, undated_d13c = add_isotopes(g, d13c, sample_uris, "d13c", leading)
+        print(f"  {n_d18o} δ¹⁸O and {n_d13c} δ¹³C observations "
+              f"({undated_d18o} and {undated_d13c} of them undated)")
 
-    add_generation_provenance(
-        g,
-        GEOLOD["SISAL_Dataset"],
-        GEOLOD["SISAL_Generation"],
-        inputs=[str(TABLES_DIR / f"{t}.csv") for t in
-                ("site", "entity", "sample", "d18o", "d13c",
-                 "sisal_chronology", "original_chronology")] + [__file__],
-        agents=[ORCID_FLO],
-        label="SISAL v3 RDF generation (S3c.2)",
-    )
+        beat.step(STEPS[5])
+        alt = Graph()
+        bind_prefixes(alt)
+        tally = add_ages(g, alt, by_sample, sample_uris, leading)
+        print(f"  {tally['assignments']} age assignments over eight models")
+        print(f"    leading, lin_interp        {tally['leading_lin_interp']:>7d}")
+        print(f"    leading, original          {tally['leading_original']:>7d}")
+        print(f"    no leading age             {tally['no_leading']:>7d}")
+        print(f"    extrapolated past 1950     {tally['extrapolated']:>7d}")
 
-    onto_path = write_ontology()
-    print(f"\n  ✓ {onto_path.relative_to(ROOT)}")
+        beat.step(STEPS[6])
+        add_generation_provenance(
+            g,
+            GEOLOD["SISAL_Dataset"],
+            GEOLOD["SISAL_Generation"],
+            inputs=[str(TABLES_DIR / f"{name}.csv") for name in
+                    ("site", "entity", "sample", "d18o", "d13c",
+                     "sisal_chronology", "original_chronology")] + [__file__],
+            agents=[ORCID_FLO],
+            label="SISAL v3 RDF generation (S3c.2)",
+        )
+        add_generation_provenance(
+            ann,
+            GEOLOD["SISAL_Site_Annotations_Dataset"],
+            GEOLOD["SISAL_Site_Annotations_Generation"],
+            inputs=[str(CURATED_DIR / "sisal_site_annotations.csv"), __file__],
+            agents=[ORCID_FLO],
+            label="geo-lod cave site annotations (S3c.2)",
+        )
 
-    add_generation_provenance(
-        ann,
-        GEOLOD["SISAL_Site_Annotations_Dataset"],
-        GEOLOD["SISAL_Site_Annotations_Generation"],
-        inputs=[str(CURATED_DIR / "sisal_site_annotations.csv"), __file__],
-        agents=[ORCID_FLO],
-        label="geo-lod cave site annotations (S3c.2)",
-    )
+        onto_path = write_ontology()
+        print(f"\n  ✓ {onto_path.relative_to(ROOT)}")
 
-    ann_path = RDF_DIR / "sisal_site_annotations.ttl"
-    ann.serialize(destination=str(ann_path), format="turtle")
-    print(f"  ✓ {ann_path.relative_to(ROOT)}  ({len(ann):,} triples)")
+        # The annotations stay Turtle whatever the run: 933 triples, read by
+        # people as often as by machines, and small enough that the format
+        # costs nothing.
+        beat.step(STEPS[7])
+        ann_path = RDF_DIR / "sisal_site_annotations.ttl"
+        ann.serialize(destination=str(ann_path), format="turtle")
+        print(f"  ✓ {ann_path.relative_to(ROOT)}  ({len(ann):,} triples)")
 
-    core_path = RDF_DIR / "sisal_v3_core.ttl"
-    g.serialize(destination=str(core_path), format="turtle")
-    print(f"  ✓ {core_path.relative_to(ROOT)}  ({len(g):,} triples)")
+        beat.step(STEPS[8])
+        core_path = RDF_DIR / f"sisal_v3_core{suffix}"
+        g.serialize(destination=str(core_path), format=serializer,
+                    encoding="utf-8")
+        print(f"  ✓ {core_path.relative_to(ROOT)}  ({len(g):,} triples)")
 
-    alt_path = RDF_DIR / "sisal_v3_chronologies.ttl"
-    alt.serialize(destination=str(alt_path), format="turtle")
-    print(f"  ✓ {alt_path.relative_to(ROOT)}  ({len(alt):,} triples)")
+        beat.step(STEPS[9])
+        alt_path = RDF_DIR / f"sisal_v3_chronologies{suffix}"
+        alt.serialize(destination=str(alt_path), format=serializer,
+                      encoding="utf-8")
+        print(f"  ✓ {alt_path.relative_to(ROOT)}  ({len(alt):,} triples)")
+    finally:
+        beat.stop()
     return True
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    parser.add_argument("--format", dest="data_format",
+                        choices=sorted(DATA_FORMATS), default=DEFAULT_DATA_FORMAT,
+                        help="serialisation of the two large graphs. "
+                             "nt is fast and git-ignored, turtle is the "
+                             "release format. Default: " + DEFAULT_DATA_FORMAT)
+    args = parser.parse_args(argv)
     try:
-        return 0 if build() else 1
+        return 0 if build(args.data_format) else 1
     except Exception:
         import traceback
         traceback.print_exc()

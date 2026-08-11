@@ -295,8 +295,13 @@ geolod:Delta18OSpeleothemObservationShape
     ] ;
 
     sh:property [
+        # No sh:minCount. Written when the SISAL input was v_data_*.csv, where
+        # every row carried a lin_interp age because the export could not
+        # produce one without it. The full cut has 4688 δ¹⁸O and 3093 δ¹³C
+        # measurements on samples no chronology reached, and they are data,
+        # not defects. sh:maxCount stays: two ages on one observation would be
+        # ambiguous, and the competing models hang on the sample.
         sh:path geolod:ageKaBP ;
-        sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:or (
             [ sh:datatype xsd:decimal ]
@@ -335,8 +340,13 @@ geolod:Delta13CSpeleothemObservationShape
     ] ;
 
     sh:property [
+        # No sh:minCount. Written when the SISAL input was v_data_*.csv, where
+        # every row carried a lin_interp age because the export could not
+        # produce one without it. The full cut has 4688 δ¹⁸O and 3093 δ¹³C
+        # measurements on samples no chronology reached, and they are data,
+        # not defects. sh:maxCount stays: two ages on one observation would be
+        # ambiguous, and the competing models hang on the sample.
         sh:path geolod:ageKaBP ;
-        sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:or (
             [ sh:datatype xsd:decimal ]

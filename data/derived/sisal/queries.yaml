@@ -256,6 +256,37 @@ per_site: |
    ORDER BY age_bp ASC, sa.sample_id ASC
 
 # --------------------------------------------------------------------------
+# Catalogue: the full site list, outside the cut
+# --------------------------------------------------------------------------
+# Not restricted to `sites`. geo-lod carries a node for every cave SISAL knows,
+# not only for the six it draws, and until now that list came from a hand-kept
+# CSV whose counts nobody could re-derive. This is the same list, straight out
+# of the database.
+#
+# The counts are recomputed here rather than copied: a sample counts towards a
+# site when it carries the measurement, whatever the status of the speleothem
+# it belongs to. Where the old CSV disagrees, this statement is the definition.
+catalogue:
+  sites: |
+    SELECT s.site_id,
+           s.site_name,
+           s.latitude,
+           s.longitude,
+           s.elevation,
+           s.monitoring,
+           COUNT(DISTINCT d18.sample_id) AS n_d18o_samples,
+           COUNT(DISTINCT d13.sample_id) AS n_d13c_samples,
+           COUNT(DISTINCT e.entity_id)   AS n_entities
+      FROM site s
+      LEFT JOIN entity e   ON e.site_id    = s.site_id
+      LEFT JOIN sample sa  ON sa.entity_id = e.entity_id
+      LEFT JOIN d18o d18   ON d18.sample_id = sa.sample_id
+      LEFT JOIN d13c d13   ON d13.sample_id = sa.sample_id
+     GROUP BY s.site_id, s.site_name, s.latitude, s.longitude,
+              s.elevation, s.monitoring
+     ORDER BY s.site_id
+
+# --------------------------------------------------------------------------
 # Checks
 # --------------------------------------------------------------------------
 # Referential closure of the written cut, one entry per foreign key in
