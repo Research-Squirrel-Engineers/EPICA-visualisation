@@ -281,6 +281,9 @@ lesen hier ab, statt neu zu diskutieren.
 | `geolod:UThChronology` | in der SISAL-Erweiterung definiert, als Unterklasse von `geolod:Chronology`. `geo_lod_core.ttl` nannte die Klasse nur in einem Kommentar als Gegenstück zu `IceCoreChronology`; ohne Definition kein CRM-Anker | 2026-08-11 |
 | `geolod:measuredValue` neben `sosa:hasSimpleResult` | beide, wie EPICA es schreibt. Sie sehen aus wie eine Dublette und sind keine: `core_shapes.ttl` verlangt genau ein `measuredValue`, `hasSimpleResult` liest ein SOSA-Konsument | 2026-08-11 |
 | SQL-Ablage | `postgres/queries.yaml` in `sisal-db-v3`, mit dem Ausschnitt nach geo-lod kopiert. Das Skript trägt kein SQL mehr; was die Daten sind, steht in der Datei, die neben ihnen liegt | 2026-08-11 |
+| Ort der SQL in `wdttest-sisal` | Kopie in `data.yaml`, kein Verweis auf `queries.yaml`. Das Repo muss aus seinem eigenen Klon laufen; ein Pfad in eine Nachbararbeitskopie bricht für jeden, der keine hat. `copied_from` nennt Datei und Stand, damit ein Auseinanderlaufen datierbar ist statt geraten. Eine eigene `queries.yaml` schied auch deshalb aus, weil der Name in der Familie schon die SPARQL-Beispiele der Query-Seite bezeichnet | 2026-08-11 |
+| Ort der CSV in `wdttest-sisal` | `data/derived/`, versioniert. Erzeugt und zugleich Eingabe des Zeichenschritts, dieselbe Lage und dieselbe Begründung wie beim Ausschnitt in geo-lod. `data.yaml` weist sie über `derived:` aus, womit `make_metadata` sie als Ergebnis führt und nicht als mitgeliefertes Rohdatum | 2026-08-11 |
+| Abruf bei jedem Lauf | ja, mit Rückfall. Eine nicht erreichbare Datenbank bricht `main.py` nicht ab, sondern wird gemeldet, und gezeichnet wird aus den eingecheckten CSV — sonst wäre das Supplementary ohne Postgres nicht mehr nachrechenbar. Abweichende Zeilenzahl ist etwas anderes und bricht unter `--strict` ab: dann hat sich der Datensatz geändert | 2026-08-11 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -335,7 +338,7 @@ noch nicht entschieden.
 | S3c.2 | SISAL nach RDF: Kern | geo-lod | S0, S1, S3c.1 | erledigt 2026-08-11 |
 | S3c.3 | SISAL nach RDF: Datierungen und Lücken | geo-lod | S3c.2 | offen |
 | S3c.4 | SISAL-Abbildungen und Captions | geo-lod | S3c.2 | offen |
-| S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | offen |
+| S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | erledigt 2026-08-11 |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c.3 | offen |
 | S5 | ELSA | geo-lod | S4 | offen |
 
@@ -1304,28 +1307,39 @@ gegen 1178.
 **Ziel:** die Abbildungen des Repos entstehen aus der vollständigen Datenbank
 statt aus einem mitgelieferten Ausschnitt. Eine Quelle, und zwar die geprüfte.
 
-**Gute Nachricht vorweg, geprüft 2026-08-11.** `wdttest-sisal` zeichnet drei
-Sites, und seine drei CSV sind **byte-gleich** mit dem, was `queries.yaml` heute
-aus `sisal_v3` schreibt. Die Umstellung ändert also, woher die Datei kommt, und
-nicht die Abbildungen. Die flache Abfrage bleibt unangetastet.
+**Stand:** erledigt 2026-08-11.
 
-**Uploads:** `wdttest-sisal` als ZIP ohne Abbildungen; dazu `postgres/NAMING.md`
-und `py/export_sites.py` aus `sisal-db-v3`, weil dort die
-Spaltennamen und die Abfrage stehen, gegen die umgestellt wird.
+**Warum das sauberer ist.** Der bisherige Weg lief über einen mitgelieferten
+Ausschnitt. Mit dem vollen Restore gibt es keinen Grund mehr für einen zweiten,
+engeren Stand derselben Daten: was die Abbildung zeigt, steht in derselben
+Datenbank, gegen die auch geo-lod arbeitet.
 
-**Ergebnis:** angepasste Plot-Skripte, aktualisierte README-Kette,
-byte-identische oder begründet abweichende Abbildungen.
+**Was gebaut wurde.** `py/fetch_data.py` schreibt `data/derived/*.csv`, je Site
+ein `COPY (SELECT …) TO STDOUT`, und prüft jede Datei gegen die Zeilenzahl der
+Release. Der Schritt läuft als erster von vier in `py/main.py`, `--no-refresh`
+überspringt ihn. Abfrage, Site-IDs, Zielpfade und Sollzahlen stehen in
+`data.yaml`; das Skript trägt kein SQL, wie in `sisal-db-v3` auch. Die
+Verbindung kommt aus `config.ini` nach demselben Muster, mit
+`config.example.ini` als Vorlage. Dazu `.gitattributes`, `psycopg2-binary` in
+`requirements.txt` und die nachgezogene README-Kette.
 
-**Fertig, wenn:** die Abbildungen aus `sisal_v3` erzeugt sind und der Vergleich
-mit dem bisherigen Stand entweder Gleichheit zeigt oder jede Abweichung
-benannt ist.
+**Ergebnis, gemessen am Lauf.**
 
-**Warum das sauberer ist.** Der bisherige Weg lief über `data/derived/`, erzeugt
-aus einem Sechs-Tabellen-Ausschnitt. Mit dem vollen Restore gibt es keinen
-Grund mehr für einen zweiten, engeren Stand derselben Daten: was die Abbildung
-zeigt, steht dann in derselben Datenbank, gegen die auch geo-lod arbeitet.
+- Die drei CSV sind byte-gleich mit dem, was vorher im Repo lag: nach dem Abruf
+  meldet `git status` keine Änderung an `data/derived/`. Die Vorabprüfung ist
+  damit am laufenden Ergebnis bestätigt.
+- Die zwölf JPG sind unverändert. Die zwölf SVG unterscheiden sich in genau
+  einer Zeile — `git diff --numstat` zeigt überall `1 1` —, dem
+  Matplotlib-Versionsstempel im Kopf. Eingecheckt waren sie mit 3.9.2
+  gezeichnet, `requirements.txt` pinnt 3.9.4. Ein Nachzug, kein Befund.
+- `metadata/metadata.ttl` ändert sechs Zeilen, nicht drei: `make_metadata`
+  schreibt den Pfad je Eintrag zweimal, als `dcat:downloadURL` und als
+  `dct:identifier`.
+- Der zweite Lauf lässt `git status` sauber. Die Ausgabe ist byte-stabil.
 
-**Was dabei zu beachten ist.**
+**Was zu beachten war.** Die ersten drei Punkte waren mit S3c.1 bereits in
+`queries.yaml` gelöst und mussten nur mitkopiert werden; die Umstellung ändert
+tatsächlich nur, woher die Datei kommt.
 
 - Spaltennamen. Die Messtabellen heissen `d18o_measurement` und
   `d13c_measurement`, nicht `d18o` und `d13c`; `NAMING.md` ist die Zuordnung.
@@ -1335,8 +1349,8 @@ zeigt, steht dann in derselben Datenbank, gegen die auch geo-lod arbeitet.
   über tausend δ¹⁸O-Punkte ohne Meldung.
 - Zahlformat. Die alte DDL hatte `numeric`, `schema.sql` hat
   `double precision`; Postgres schreibt beide unterschiedlich aus. Ein Diff in
-  `data/derived/` ist deshalb erwartbar und heisst nicht, dass ein Wert
-  abweicht.
+  `data/derived/` war deshalb erwartbar und hätte nicht geheissen, dass ein Wert
+  abweicht. Eingetreten ist er nicht.
 - Nachrechenbarkeit. Das Abfrageergebnis bleibt im Repo, damit das
   Supplementary ohne Datenbank prüfbar bleibt. Es ist Ergebnis, nicht Quelle,
   und wird bei jedem Lauf neu geschrieben.
@@ -1344,7 +1358,31 @@ zeigt, steht dann in derselben Datenbank, gegen die auch geo-lod arbeitet.
 **Verhältnis zu A2.** A2 verbietet Laufzeitkopplung zwischen geo-lod und der
 WD1-Familie. Hier koppelt `wdttest-sisal` an `sisal-db-v3`, das A1
 ausdrücklich als Zugriffsschicht für beide Familien führt. Die Grenze aus A2
-bleibt unberührt.
+bleibt unberührt. Gekoppelt wird ausserdem an die Datenbank, nicht an den
+Nachbar-Arbeitsbaum: die SQL ist kopiert, kein Pfad zeigt aus dem Repo hinaus.
+
+Was dabei herauskam und über S3d hinaus wirkt:
+
+- **`.gitattributes` fehlte im Figuren-Repo.** Matplotlib öffnet die SVG im
+  Textmodus, unter Windows entsteht CRLF; der Export schreibt LF. Ohne
+  Normalisierung sähe jede Aktualisierung wie ein Diff über die ganze Datei aus,
+  und ein Diff, den niemand mehr liest, verdeckt die, die etwas bedeuten. Die
+  Datei liegt jetzt dort, mit demselben Inhalt wie in `sisal-db-v3`. Jedes Repo
+  der Familie, das erzeugte Textdateien versioniert, braucht sie.
+- **Der Matplotlib-Versionsstempel bleibt in den SVG.** Ihn abzuschalten wäre
+  eine Zeile an den `savefig`-Aufrufen. Dagegen spricht die README des Repos:
+  sie führt die Nebenversion als tragend für die Ausrichtung der Collage in
+  `wdttest-pollen`, die den Datenbereich über seine exakte Höhe in Punkt
+  findet. Wo die Version zählt, soll die Datei sagen, womit sie gezeichnet
+  wurde.
+- **Der Name `queries.yaml` ist in der Familie vergeben.** Er steht für die
+  SPARQL-Beispiele der Query-Seite. Neue Konfiguration in einem `wdttest-*`-Repo
+  gehört deshalb in eine Datei, die ihren Gegenstand nennt, oder in eine, die
+  ihn schon führt.
+- **Der flache Export in `sisal-db-v3` hat keinen Abnehmer mehr.** `per_site`
+  schrieb die sechs Dateien für `wdttest-sisal`, geo-lod liest `tables/`. Ob der
+  Block bleibt, ist zu entscheiden: er ist zugleich die Vergleichsbasis, an der
+  die Byte-Gleichheit hängt.
 
 **Nicht in diesem Schritt:** RDF, geo-lod anfassen.
 
@@ -1465,6 +1503,13 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   `geo_lod_figures.nice_ticks` stellen und die Wertebereiche vergleichen.
 - `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
   `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
+- Matplotlib schreibt SVG im Textmodus; unter Windows steht CRLF in der Datei,
+  im Index LF. Kein Diff, aber bei jedem `git status` eine Warnzeile je Datei.
+  Ein binärer Dateihandle an den `savefig`-Stellen räumt das auf — in
+  `wdttest-sisal` sind es zwei, in geo-lod ist es seit S2 gelöst.
+- `per_site` in `postgres/queries.yaml` von `sisal-db-v3` schreibt sechs flache
+  CSV, die seit S3d niemand mehr liest. Behalten als Vergleichsbasis oder
+  streichen — zu entscheiden, wenn das Repo eine DOI bekommt.
 - Der Bundle-Schritt bleibt der grösste Posten und ist es nach S3c.2 noch
   deutlicher: 486 s von 723 s, davon 161 s SHACL und 10 s Serialisierung. Die
   restlichen rund 310 s sind das Einlesen von 1,43 Mio. Tripeln aus zehn
