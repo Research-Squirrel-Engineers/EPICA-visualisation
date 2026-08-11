@@ -176,9 +176,9 @@ lesen hier ab, statt neu zu diskutieren.
 | Alter direkt in `[ka]` abfragbar | ja — `time:TimePosition` mit `time:numericPosition` und `time:hasTRS`, keine Umrechnung in der Query | 2026-08-08 |
 | TRS-IRI für `ka BP` | eigene TRS je Chronologie unter `…/trs/`; keine passende externe vorhanden (Recherche 2026-08-08) | 2026-08-08 |
 | Verhältnis `geolod:ageKaBP` zu `time:TimePosition` | beides parallel, kein Deprecation | 2026-08-08 |
-| Auslieferung `sisalv3_csv.zip` vs. Download | in S3b entscheiden — keine Rückwirkung auf IRIs | 2026-08-08 |
+| Auslieferung `sisalv3_csv.zip` vs. Download | ZIP im Repo unter `data/sisalv3_csv.zip` (36 MB), der Build entpackt beim ersten Lauf nach `data/sisalv3_csv/`; das entpackte Verzeichnis ist git-ignoriert. Das Archiv trägt ein datiertes Oberverzeichnis (`sisalv3_csv_4.3.2024/`), das beim Entpacken abgeschnitten wird, damit der Pfad releaseunabhängig bleibt | 2026-08-11 |
 | SISAL-Site-Auswahl für RDF | in S3 entscheiden, wenn die vollständige Datenbank vorliegt | 2026-08-08 |
-| Waisen bei FK-Aktivierung: abweisen oder laden | in S3b entscheiden — zeigt sich erst beim Ladelauf | 2026-08-08 |
+| Waisen bei FK-Aktivierung: abweisen oder laden | hinfällig: der vollständige Ladelauf hat keine gefunden, alle 21 Fremdschlüssel sind validiert. `--orphans report` bleibt als Schalter im Loader, für den Fall, dass ein späteres Release welche mitbringt | 2026-08-11 |
 | PRIMER.md-Sprache | deutsch — internes Arbeitsdokument | 2026-08-08 |
 | MIS-Leitschema | Railsback et al. 2015, durchgehend. Auch die WD1-Familie zieht darauf um; `wdttest-wd1--ager-corg` ist bereits dort, `wdttest-tables` folgt in S4 | 2026-08-08 |
 | Umfang des MIS-Schemas | vollständig bis TG5/TG6 (5315 ka). Bis 1013,1 ka Railsback, darüber hinaus LR04 als einzige Quelle; Herkunft steht als `dct:source` am Konzept | 2026-08-08 |
@@ -250,6 +250,9 @@ lesen hier ab, statt neu zu diskutieren.
 | Isotopenspalten in `dating` | Massenzahl hinter das Elementsymbol: `238U_content` → `u238_content`, `230Th_232Th_ratio` → `th230_th232_ratio`, `14C_correction` → `c14_correction`. Postgres akzeptiert keinen unquotierten Bezeichner, der mit einer Ziffer beginnt; dauerhaftes Quoten war nach A4 ausgeschlossen. 13 Spalten, alle in `postgres/NAMING.md` | 2026-08-10 |
 | Constraint-Benennung | Postgres-Konvention statt Release: `<tabelle>_pkey`, `<tabelle>_<spalte>_fkey`, `…_chk`, `…_idx`. Die Namen des Dumps (`fk_entity_id`, `fk_Sample_entity1_idx`) sind über Tabellen hinweg nicht eindeutig | 2026-08-10 |
 | Herkunft des Schemas | `postgres/schema.sql` ist ab sofort die gepflegte Quelle. Der Einmal-Übersetzer aus dem Dump-DDL wandert nicht ins Repo — er liefe ohne `ddl.sql` gar nicht, und die liegt nicht im Repo | 2026-08-10 |
+| Datenquelle für `wdttest-sisal` | direkt gegen `sisal_v3`, keine CSV-Zwischenschicht. Das Abfrageergebnis bleibt trotzdem als CSV im Repo, nicht als Quelle, sondern als archiviertes Ergebnis — sonst braucht jede Nachrechnung des Supplementary einen laufenden Postgres | 2026-08-11 |
+| `site.geom` | nicht in `schema.sql`, sondern in `postgres/postgis.sql`, angewendet über `--postgis`. `schema.sql` bleibt damit exakt die Übersetzung des Release-Dumps, und die Geometrie ist sichtbar eine Zutat dieses Repos | 2026-08-11 |
+| Trennzeichen in `schema.sql` | Statements werden literalbewusst getrennt. Vier CHECK-Listen enthalten Semikolons in ihren Werten (`'Event; hiatus'`); ein Split auf `;` erzeugt 25 statt 21 Statements und scheitert | 2026-08-11 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -299,14 +302,16 @@ noch nicht entschieden.
 | S1 | Gemeinsame Vokabulare | geo-lod | S0 | erledigt 2026-08-08 |
 | S2 | EPICA nach RDF | geo-lod | S0, S1 | erledigt 2026-08-09 |
 | S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | erledigt 2026-08-10 |
-| S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | offen |
+| S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | erledigt 2026-08-11 |
 | S3c | SISAL nach RDF | geo-lod | S0, S1, S3b | offen |
+| S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c | offen |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c | offen |
 | S5 | ELSA | geo-lod | S4 | offen |
 
 S2 und S3a/S3b laufen unabhängig voneinander und können in beliebiger
 Reihenfolge oder parallel gemacht werden. S3a hängt an keiner Festlegung aus S0
-und kann sofort beginnen.
+und kann sofort beginnen. S3d hängt an S3c nur insofern, als beide dieselbe
+Datenbank lesen; fachlich sind sie unabhängig.
 
 ---
 
@@ -984,6 +989,90 @@ diese Punkte ziehen mit:
 
 **Nicht in diesem Chat:** RDF, geo-lod anfassen.
 
+### Erledigt 2026-08-11
+
+Ein Lauf von leerer Datenbank bis vollständiger v3-DB läuft durch, der Guard
+meldet grün. 21 Tabellen, 448 573 Samples, 19,5 s für den Ladelauf, 5,2 s für
+die Prüfung.
+
+Ausgeliefert: neu geschriebenes `py/build_database.py`, neues `py/guard.py` als
+dritte Phase `verify` zwischen `build` und `export`, `postgres/postgis.sql`,
+`data/README.md`, `.gitattributes`, überarbeitetes README.
+
+**Der Ladeweg.** `schema.sql` anwenden, 21 CSVs per
+`COPY … (FORMAT csv, HEADER true, NULL 'NA')` ohne Spaltenliste, danach
+`constraints.sql`. Alles in einer Transaktion. Die eigene Sechs-Tabellen-DDL im
+Skript ist entfallen; `schema.sql` ist jetzt auch praktisch die einzige Quelle
+des Schemas, nicht nur nominell.
+
+**Zwei Wege für die Waisenfrage sind eingebaut, gebraucht wurde keiner.** Der
+vollständige Lauf fand null Waisen, alle 21 Fremdschlüssel sind validiert.
+`--orphans report` bleibt als Schalter: er hängt die betroffenen Schlüssel
+`NOT VALID` an, statt den Lauf abzuweisen. Ebenfalls neu ist `--survey`: jede
+Tabelle lädt in einem Savepoint, am Ende wird immer zurückgerollt, ein Lauf
+zeigt damit alle fehlerhaften Tabellen statt einer pro Versuch.
+
+**Erwartete CHECK-Verletzungen blieben aus.** Die 75 Constraints deklarieren
+tatsächlich die Wertelisten der CSVs, und `NA` ist überall Fehlstelle und
+nirgends Wert. Auch die drei `NOT NULL`-Spalten ohne Schlüsselfunktion
+(`entity.persist_id`, `dating_lamina.lam_age`, `notes.notes`) sind vollständig
+belegt.
+
+**Was der Guard prüft.** Zeilenzahl je Tabelle gegen die zugehörige CSV,
+gezählt mit `csv.reader` statt über Zeilenumbrüche, weil `notes.notes` Freitext
+mit Umbrüchen in gequoteten Feldern enthält. Wertebereiche je Spalte mit
+Schweregrad. Waisen über alle Fremdschlüssel plus die Zahl der `NOT VALID`
+angelegten. Und die Form des Schemas: 21 Tabellen, 19 Primärschlüssel, 75
+CHECKs, 21 Fremdschlüssel. Die WD1-Sites sind raus, `SITE_EXPECTATIONS` ist
+leer.
+
+**Zwei weiche Warnungen**, siehe Teil D: 150 negative Alter aus
+Modell-Extrapolation, 483 Alter über 1,5 Ma in Buffalo cave 323.
+
+Was dabei herauskam und über S3b hinaus wirkt:
+
+- **Semikolons in CHECK-Listen.** Vier Constraints in `schema.sql` enthalten
+  Semikolons in ihren Werten, `'Event; hiatus'` und drei weitere. Ein Split auf
+  `;` erzeugt 25 statt 21 Statements. Der Splitter kennt jetzt String-Literale
+  einschliesslich `''`. Gilt für jedes Werkzeug, das diese Datei zerlegt.
+- **Datiertes Oberverzeichnis im Release-ZIP.** Das Archiv packt nach
+  `sisalv3_csv_4.3.2024/`. Beim Entpacken wird die oberste Ebene abgeschnitten,
+  damit der Pfad releaseunabhängig bleibt; entpackt wird nach `.part` und erst
+  am Ende umbenannt, sonst hielte ein abgebrochener Lauf ein halbvolles
+  Verzeichnis für fertig.
+- **Der Restore ist verlustfrei gegenüber dem alten Ausschnitt.** `git diff` auf
+  `data/derived/` ist nach vollständigem Neuaufbau leer: die drei Site-CSVs sind
+  byte-identisch mit dem eingecheckten Stand. Die befürchtete
+  Formatierungsdifferenz zwischen `numeric` und `double precision` tritt bei
+  diesen Werten nicht auf. Damit hat S3d eine feste Vergleichsbasis.
+- **Gegenprobe ausserhalb des Skripts.** Der Vier-Tabellen-Join für die drei
+  WD1-Sites liefert direkt in psql 7869, 1178 und 781 — dieselben Zahlen wie der
+  Export, auf anderem Weg.
+- **Passwort liegt in `pgpass.conf`**, nicht mehr in `config.ini`. psql und
+  psycopg2 lesen beide daraus. Die Datei muss ohne BOM geschrieben sein, sonst
+  wird die Zeile nicht gefunden — dieselbe Falle wie bei `findstr` in S3a.
+- **`site.geom` ist optional geworden.** Es steht nicht in `schema.sql`, sondern
+  in `postgres/postgis.sql` und wird nur mit `--postgis` angewendet. Damit ist
+  die wiederhergestellte Datenbank exakt der Release, und die Geometrie sichtbar
+  eine Zutat dieses Repos. PostGIS ist für den Ladelauf nicht mehr nötig.
+
+**Offen geblieben, bewusst:**
+
+- **ER-Diagramm.** `datamodel.gml` und `datamodel.jpg` waren bereits vor diesem
+  Chat aus dem Arbeitsbaum verschwunden. Das offizielle Diagramm aus der
+  ESSD-Veröffentlichung ist noch nicht eingesetzt.
+- **Historie.** `postgres/sisal-v3.sql` ist aus dem Arbeitsbaum entfernt, liegt
+  aber weiter in der Historie; `git count-objects -vH` meldet 93,86 MiB in losen
+  Objekten bei `in-pack: 0`. `git gc` packt das erheblich zusammen, entfernt die
+  Blobs aber nicht. Echtes Entfernen hiesse Historie umschreiben und
+  Force-Push. Zu entscheiden, bevor das Repo eine DOI bekommt — danach ist es
+  keine Option mehr.
+- **Site-Auswahl in `export_sites.py`.** `SITES` und `EXPECTED_ROWS` kodieren
+  weiter die drei WD1-Sites. Nicht parametrisiert, weil S3d die Rolle der Datei
+  ohnehin ändert: `wdttest-sisal` fragt dann direkt die Datenbank, und der
+  Export wird vom Zulieferer zum archivierten Ergebnis. Vorher umzubauen hiesse,
+  zweimal dasselbe zu entscheiden.
+
 ---
 
 ## S3c — SISAL nach RDF
@@ -1030,6 +1119,52 @@ laufenden Datenbank noch am anderen Repo.
   konkurrierende Altersmodelle. Dasselbe Muster wie bei den MIS-Grenzen, passt
   zu `strat:AgeControlPoint`. Nicht Pflicht für S3c, aber der Grund, den Restore
   überhaupt vollständig zu machen.
+
+---
+
+## S3d — `wdttest-sisal` auf `sisal_v3`
+
+**Ziel:** die Abbildungen des Repos entstehen aus der vollständigen Datenbank
+statt aus einem mitgelieferten Ausschnitt. Eine Quelle, und zwar die geprüfte.
+
+**Uploads:** `wdttest-sisal` als ZIP ohne Abbildungen; dazu `postgres/NAMING.md`
+und `py/export_sites.py` aus `squirrels-sisal-db-v3`, weil dort die
+Spaltennamen und die Abfrage stehen, gegen die umgestellt wird.
+
+**Ergebnis:** angepasste Plot-Skripte, aktualisierte README-Kette,
+byte-identische oder begründet abweichende Abbildungen.
+
+**Fertig, wenn:** die Abbildungen aus `sisal_v3` erzeugt sind und der Vergleich
+mit dem bisherigen Stand entweder Gleichheit zeigt oder jede Abweichung
+benannt ist.
+
+**Warum das sauberer ist.** Der bisherige Weg lief über `data/derived/`, erzeugt
+aus einem Sechs-Tabellen-Ausschnitt. Mit dem vollen Restore gibt es keinen
+Grund mehr für einen zweiten, engeren Stand derselben Daten: was die Abbildung
+zeigt, steht dann in derselben Datenbank, gegen die auch geo-lod arbeitet.
+
+**Was dabei zu beachten ist.**
+
+- Spaltennamen. Die Messtabellen heissen `d18o_measurement` und
+  `d13c_measurement`, nicht `d18o` und `d13c`; `NAMING.md` ist die Zuordnung.
+- Kein Altersfenster in der SQL. Das Fenster gehört weiter allein in das
+  Plot-Skript, aus dem in A1 genannten Grund.
+- `LEFT JOIN` auf `d13c` bleibt zwingend. Ein Inner Join verliert bei Spannagel
+  über tausend δ¹⁸O-Punkte ohne Meldung.
+- Zahlformat. Die alte DDL hatte `numeric`, `schema.sql` hat
+  `double precision`; Postgres schreibt beide unterschiedlich aus. Ein Diff in
+  `data/derived/` ist deshalb erwartbar und heisst nicht, dass ein Wert
+  abweicht.
+- Nachrechenbarkeit. Das Abfrageergebnis bleibt im Repo, damit das
+  Supplementary ohne Datenbank prüfbar bleibt. Es ist Ergebnis, nicht Quelle,
+  und wird bei jedem Lauf neu geschrieben.
+
+**Verhältnis zu A2.** A2 verbietet Laufzeitkopplung zwischen geo-lod und der
+WD1-Familie. Hier koppelt `wdttest-sisal` an `squirrels-sisal-db-v3`, das A1
+ausdrücklich als Zugriffsschicht für beide Familien führt. Die Grenze aus A2
+bleibt unberührt.
+
+**Nicht in diesem Schritt:** RDF, geo-lod anfassen.
 
 ---
 
@@ -1152,3 +1287,38 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   `cisite_59` auf fehlenden Pleiades-/Wikidata-Link prüfen. Von den DOIs an den
   `DataSource`-Instanzen sind die beiden PANGAEA-Quellen mit S2 erledigt, offen
   bleibt `SISALv3_DataSource` (S3c).
+
+- **Zwei weiche Warnungen im SISAL-Guard, beide kein Fehler.** Der Ladelauf vom
+  2026-08-11 ist in allen harten Prüfungen grün: 21 Tabellen zeilengleich mit
+  den Release-CSVs, keine Waisen über 21 Fremdschlüssel, δ¹⁸O und δ¹³C
+  vollständig innerhalb der physikalischen Bereiche. Die Altersprüfungen melden
+  zwei Auffälligkeiten, die auf die Quelle zurückgehen und nicht auf den
+  Ladeweg:
+
+  `sisal_chronology.lin_interp_age` hat 150 Werte unter −100 a BP, also nach
+  1950, bis hinunter zu −7090. Das sind keine Messungen, sondern
+  Extrapolationen des Altersmodells über den obersten Datierungspunkt hinaus;
+  lineare Interpolation läuft am Rand weiter. Betroffen sind fünf Entitäten,
+  125 der 150 Werte liegen zwischen −553 und −102, den Rest stellen Katalekhor
+  793, Qadisha 721 und Nova Grgosova 831. Führend sind Bunker cave 886 und 885.
+
+  `original_chronology.interp_age` hat 483 Werte über 1,5 Ma, alle in einer
+  einzigen Entität, Buffalo cave 323, zwischen 1,52 und 1,99 Ma. Buffalo Cave
+  ist eine plio-pleistozäne Flowstone-Sequenz, deren Alter aus Paläomagnetik
+  stammt und nicht aus U/Th. Der Wert ist echt.
+
+  **Beschluss:** die Grenzen bleiben eng, die beiden Prüfungen laufen als
+  Warnung statt als Fehler. Weiten, bis beide grün sind, würde die Prüfung
+  entwerten — bei einer Obergrenze von 5 Ma läge ein um den Faktor tausend
+  verfälschtes 2-ka-Alter bequem im erlaubten Bereich. Der 1000×-Detektor hängt
+  damit an δ¹⁸O und δ¹³C, wo die Grenzen physikalisch eng sind; die
+  Altersprüfungen sind eine grobe Plausibilitätskontrolle, deren Zahlen sich
+  bei einer Änderung im Bestand sichtbar verschieben. Die Zählungen 150 und 483
+  stehen als Sollwerte im Kommentar von `PLAUSIBLE_RANGE`.
+
+  **Was daran offen bleibt:** die negativen Alter sind für eine RDF-Abbildung in
+  S3c eine Entscheidung. Ein extrapoliertes Alter nach 1950 ist keine Aussage
+  über die Probe, sondern über das Modell. Ob solche Beobachtungen in den
+  Graphen wandern, und wenn ja, mit welchem `geolod:assignmentStatus` oder einer
+  eigenen Kennzeichnung, ist in S3c zu klären. Vorher nicht stillschweigend
+  filtern.
