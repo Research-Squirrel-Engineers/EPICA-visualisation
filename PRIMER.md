@@ -157,7 +157,9 @@ der Grössenfilter, nicht die `.gitignore`.
 zum Bundle; dann sehe ich den aktuellen Stand und den Kontext gleichzeitig.
 
 **Nicht hochladen:** `config.ini`, `.venv/`, `.git/`, generierte Abbildungen,
-die grossen Daten-TTL, die SISAL-CSVs.
+die grossen Daten-TTL, die SISAL-CSVs. Für die Teilschritte ab S3c.2 genügt das
+Bundle: der Ausschnitt unter `data/derived/sisal/` liegt mit 10 MB unter dem
+Grössenfilter und kommt automatisch mit.
 
 ## A4. Beschlusslage
 
@@ -253,6 +255,17 @@ lesen hier ab, statt neu zu diskutieren.
 | Datenquelle für `wdttest-sisal` | direkt gegen `sisal_v3`, keine CSV-Zwischenschicht. Das Abfrageergebnis bleibt trotzdem als CSV im Repo, nicht als Quelle, sondern als archiviertes Ergebnis — sonst braucht jede Nachrechnung des Supplementary einen laufenden Postgres | 2026-08-11 |
 | `site.geom` | nicht in `schema.sql`, sondern in `postgres/postgis.sql`, angewendet über `--postgis`. `schema.sql` bleibt damit exakt die Übersetzung des Release-Dumps, und die Geometrie ist sichtbar eine Zutat dieses Repos | 2026-08-11 |
 | Trennzeichen in `schema.sql` | Statements werden literalbewusst getrennt. Vier CHECK-Listen enthalten Semikolons in ihren Werten (`'Event; hiatus'`); ein Split auf `;` erzeugt 25 statt 21 Statements und scheitert | 2026-08-11 |
+| SISAL-Site-Auswahl für RDF | sechs: 58, 140, 144, 145, 202, 275. Vereinigung des geo-lod-Bestands mit Fionas WD1-Auswahl. Weitere Sites brauchen ein Kriterium, sonst ist die Auswahl beliebig; der Ausschnitt ist über `queries.yaml` parametrisiert | 2026-08-11 |
+| Ort des SISAL-Ausschnitts in geo-lod | `data/derived/sisal/`, nicht `data/raw/`. Der Ausschnitt ist erzeugt und zugleich Eingabe des nächsten Schritts. Unter `data/raw/` behauptete er eine Herkunft, die er nicht hat — bezogen wurde `sisalv3_csv.zip`, und das liegt im Schwester-Repo. `dist/` ist für die zitierbaren Tabellen. Damit kennt A3 eine dritte Sorte | 2026-08-11 |
+| Kopplung geo-lod an `sisal-db-v3` | über einen Checkout, nicht von Hand. `SISAL/sisal_import.py` holt den Ausschnitt und schreibt `MANIFEST.json`; die Pipeline prüft nur dagegen. Holen braucht den Checkout und Postgres, Prüfen keins von beidem. A1 führt `sisal-db-v3` als Zugriffsschicht für beide Familien, die Grenze aus A2 bleibt unberührt | 2026-08-11 |
+| Ort des Exports | in `sisal-db-v3`, feste Phase in dessen `py/main.py`. Die Datenbank ist dort, und mit ihr die volle SQL-Fähigkeit über alle 21 Tabellen. geo-lods `main.py` bleibt datenbankfrei | 2026-08-11 |
+| Schnitt der Exportdateien | beides aus derselben Auswahl: `tables/*.csv` je Tabelle mit erhaltenen Schlüsseln für den Generator, `sites/*.csv` flach gejoint für Abbildungen und S3d. Aus einem flachen Join liesse sich die Hierarchie nicht zurückgewinnen, ohne sie zu erraten | 2026-08-11 |
+| Umfang des Exports | alle 21 Tabellen, auf die Sites gefiltert. Auf sechs Sites sind das 10,0 MB, und S3c.3 braucht dann keinen zweiten Gang an die Datenbank | 2026-08-11 |
+| Abgeschlossenheit des Ausschnitts | wird gegen die geschriebenen CSV geprüft, nicht gegen die Datenbank. Dass die Datenbank stimmt, weiss der Verify-Schritt seit S3b; offen war, ob der Site-Filter durch eine Beziehung schneidet. 21 Prüfungen, eine je Fremdschlüssel | 2026-08-11 |
+| Site-übergreifende Composite-Entitäten | beide Enden müssen im Ausschnitt liegen, sonst fällt die Zeile. Gemessen 2026-08-11: keine betroffen | 2026-08-11 |
+| Extrapolierte Alter nach 1950 | kommen in den Graphen, mit `geolod:assignmentStatus`. Nicht stillschweigend filtern: ein Alter nach 1950 ist eine Aussage über das Modell, nicht über die Probe. In der Auswahl sind es zwei | 2026-08-11 |
+| Alte `v_data_*.csv` | werden durch den Ausschnitt ersetzt und gelöscht, sobald S3c.2 grün ist | 2026-08-11 |
+| SQL-Ablage | `postgres/queries.yaml` in `sisal-db-v3`, mit dem Ausschnitt nach geo-lod kopiert. Das Skript trägt kein SQL mehr; was die Daten sind, steht in der Datei, die neben ihnen liegt | 2026-08-11 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -303,15 +316,19 @@ noch nicht entschieden.
 | S2 | EPICA nach RDF | geo-lod | S0, S1 | erledigt 2026-08-09 |
 | S3a | SISAL: DDL MySQL → Postgres | sisal-db-v3 | — | erledigt 2026-08-10 |
 | S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | erledigt 2026-08-11 |
-| S3c | SISAL nach RDF | geo-lod | S0, S1, S3b | offen |
-| S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c | offen |
-| S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c | offen |
+| S3c.1 | SISAL: CSV-Ausschnitt aus der Datenbank | sisal-db-v3 + geo-lod | S3b | erledigt 2026-08-11 |
+| S3c.2 | SISAL nach RDF: Kern | geo-lod | S0, S1, S3c.1 | offen |
+| S3c.3 | SISAL nach RDF: Datierungen, Lücken, zweite Chronologie | geo-lod | S3c.2 | offen |
+| S3c.4 | SISAL-Abbildungen und Captions | geo-lod | S3c.2 | offen |
+| S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | offen |
+| S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c.3 | offen |
 | S5 | ELSA | geo-lod | S4 | offen |
 
 S2 und S3a/S3b laufen unabhängig voneinander und können in beliebiger
 Reihenfolge oder parallel gemacht werden. S3a hängt an keiner Festlegung aus S0
-und kann sofort beginnen. S3d hängt an S3c nur insofern, als beide dieselbe
-Datenbank lesen; fachlich sind sie unabhängig.
+und kann sofort beginnen. S3d hängt an S3c.1 nur insofern, als beide
+denselben Ausschnitt lesen; fachlich sind sie unabhängig. S3c.4 hängt an S3c.2,
+nicht an S3c.3: die Abbildungen brauchen den Kern, nicht die Datierungen.
 
 ---
 
@@ -1077,48 +1094,160 @@ Was dabei herauskam und über S3b hinaus wirkt:
 
 ## S3c — SISAL nach RDF
 
-**Ziel:** Neuaufbau der SISAL-Tripel aus der restaurierten Datenbank, statt aus
-den bestehenden `v_data_*.csv`. Der Generator läuft in geo-lod.
+Vier Teilschritte. Der erste beschafft die Daten, der zweite baut den Kern des
+Graphen, der dritte erweitert das Modell, der vierte die Abbildungen. Geschnitten
+ist so, dass jeder Teil für sich lauffähig endet.
 
-**Uploads:** geo-lod-Bundle (A5); der Exportcode aus `sisal-db-v3`; eine
-strukturerhaltende Exportdatei für die gewählten Sites.
+**Warum Neuaufbau, nicht Weiterrechnen.** Die alten geo-lod-CSVs tragen genau
+den Fehler, gegen den `sisal-db-v3` gebaut wurde. Beide Belege sind mit S3c.1
+gegengeprüft:
+
+- Sample 328059 (Sanbao): in `v_data_140_sanbao.csv` steht
+  `lin_interp_age_uncert_pos = 1884137.0`, im Ausschnitt aus der Datenbank
+  steht `1884.137`. Dezimaltrenner-Signatur, Faktor 1000, behoben.
+- Buraca Gloriosa hatte in geo-lod 1137 Proben statt 1178. Der Ausschnitt
+  liefert 1178, gleich der Zahl aus dem Release.
+
+---
+
+### S3c.1 — CSV-Ausschnitt aus der Datenbank
+
+**Ziel:** die sechs gewählten Sites strukturerhaltend aus `sisal_v3`
+herausschreiben und nach geo-lod übergeben, ohne von Hand zu kopieren.
+
+**Ergebnis:** `postgres/queries.yaml` und ein umgebautes `py/export_sites.py` in
+`sisal-db-v3`; `SISAL/sisal_import.py`, `requirements.txt` und
+`data/derived/sisal/` in geo-lod.
+
+**Erledigt 2026-08-11.** 21 Tabellen-CSV und sechs flache Site-CSV, zusammen
+10,0 MB, alle 21 Abgeschlossenheitsprüfungen grün, zwei Läufe ohne Diff.
+
+**Wie es aufgeteilt ist.** Der Export läuft in `sisal-db-v3`, weil dort die
+Datenbank steht und die volle SQL-Fähigkeit über alle 21 Tabellen gebraucht
+wird. Der Graph entsteht in geo-lod, aus den übernommenen CSV. Beide Repos
+tragen dieselben Zahlen, aber nur eines braucht dafür einen laufenden Postgres.
+
+- **`postgres/queries.yaml`** ist die einzige Stelle, an der steht, was
+  exportiert wird: Site-Liste, eine Anweisung je Tabelle, die flache
+  Site-Abfrage, die Fremdschlüssel für die Prüfung und drei Diagnosen. Damit ist
+  `export_sites.py` frei von SQL, und eine Änderung am Ausschnitt ist im Diff
+  dieser Datei zu sehen statt irgendwo im Skript. Die Begründung aus S3b, eine
+  Parametrisierung lohne sich nicht, ist damit überholt.
+- **Zwei Schnitte aus derselben Auswahl.** `tables/*.csv` je Tabelle mit
+  erhaltenen Schlüsseln, für den Generator; `sites/*.csv` flach gejoint, für die
+  Abbildungen und für S3d.
+- **`SISAL/sisal_import.py`** holt den Ausschnitt aus einem Checkout des
+  Schwester-Repos, kopiert `queries.yaml` mit und schreibt `MANIFEST.json` mit
+  SHA-256 und Zeilenzahl je Datei sowie dem Commit der Quelle. `--verify` prüft
+  ohne Checkout und ohne Datenbank; die späteren Schritte prüfen nur, sie holen
+  nicht. Ein Klon von geo-lod baut damit den Graphen ohne Postgres.
+- **Jede Anweisung hat ein `ORDER BY`.** Ohne Sortierung darf Postgres die
+  Zeilen in beliebiger Reihenfolge liefern, und der zweite Lauf schriebe
+  dieselben Daten anders angeordnet — ein Diff, der nichts bedeutet, und der
+  die verdeckt, die etwas bedeuten. Die flache Abfrage sortiert zusätzlich nach
+  `sample_id`, weil Proben mit gleichem modelliertem Alter sonst frei stehen.
+
+Was dabei herauskam und über S3c.1 hinaus wirkt:
+
+- **Die Sanbao-Zahl ist erklärt.** Offen war, warum geo-lod 5832 Proben führte,
+  während im Release 9535 stehen. Sanbao hat 10 063 Proben, davon 10 061 mit
+  δ¹⁸O; zwei seiner 24 Entitäten sind `superseded`, und ohne deren 526 Proben
+  bleiben genau 9535. Die 9535 sind also δ¹⁸O-Messungen ohne die abgelösten
+  Entitäten, nicht die Zahl der datierten Proben. Datiert nach `lin_interp_age`
+  sind 6085, und das ist die Zahl im neuen Ausschnitt. Kein Zeilenverlust.
+- **`lin_interp_age` ist nicht die ganze Chronologie.** `sisal_chronology`
+  führt sieben Altersmodelle. Im Ausschnitt haben 24 390 Proben eine
+  Chronologiezeile, aber nur 18 213 ein `lin_interp_age`. Die übrigen 6177
+  tragen alle mindestens ein anderes Modell, meist `stalage` (5107) oder
+  `bacon` (4602). Der bisherige Weg über die flachen CSV sieht keine davon.
+  Welche Modelle in den Graphen gehen, ist in S3c.2 zu entscheiden; bisher war
+  die Frage nicht sichtbar.
+- **Zwei negative Alter, beide harmlos.** Von den 150 extrapolierten Altern
+  nach 1950 im Gesamtbestand entfallen auf die sechs Sites nur zwei: −10,9 a bei
+  SB-43 und −50,0 a bei BT-2. Die Bunker-Cave-Werte, die den Befund in S3b
+  bestimmt haben, liegen ausserhalb der Auswahl. Die Kennzeichnung über
+  `geolod:assignmentStatus` bleibt beschlossen, betrifft aber zwei
+  Beobachtungen.
+- **Keine site-übergreifende Composite-Entity.** `composite_link_split` ist
+  null; der Filter über beide Enden verliert nichts. Die eine Composite-Entität
+  im Ausschnitt, COMNISPA II, fasst vier Spannagel-Entitäten zusammen, die
+  alle im Ausschnitt liegen.
+- **11 387 Proben ohne Chronologiezeile** und weitere 6177 ohne
+  `lin_interp_age`. Zusammen 17 564 der 35 777 Proben, die ein Alter aus
+  `sisal_chronology` nicht hätten; 16 469 davon stehen in
+  `original_chronology`. Auch das ist eine Entscheidung in S3c.2 und kein
+  Fehler des Ausschnitts.
+
+---
+
+### S3c.2 — SISAL nach RDF: Kern
+
+**Ziel:** Site, Entität, Probe, δ¹⁸O, δ¹³C und Chronologie aus dem Ausschnitt
+in den Graphen, an den bestehenden `geolod:Cave_site_NNNN`-Knoten.
+
+**Uploads:** geo-lod-Bundle (A5).
 
 **Ergebnis:** neues Sub-Skript im geo-lod-`main.py`, Ausgabe nach `SISAL/rdf/`.
 
-**Fertig, wenn:** die Pipeline grün ist, SHACL sauber, und die drei unten
-belegten Fehler nachweislich nicht mehr auftreten.
+**Fertig, wenn:** die Pipeline grün ist, SHACL sauber, und die alten
+`v_data_*.csv` gelöscht werden können.
 
-**Warum Neuaufbau, nicht Weiterrechnen.** Die aktuellen geo-lod-CSVs tragen
-genau den Fehler, gegen den `sisal-db-v3` gebaut wurde:
-
-- Sample 328059 (Sanbao): im Release `lin_interp_age_uncert_pos = 1884.137`, in
-  `v_data_140_sanbao.csv` steht `1884137.0`. Dezimaltrenner-Signatur, Wert mit
-  exakt drei Nachkommastellen, Faktor 1000. Drei betroffene Werte über die vier
-  Dateien; die Isotopenwerte selbst sind sauber.
-- Zeilenverlust: Buraca Gloriosa hat im Release 1178 Samples mit δ¹⁸O und
-  Chronologie, in geo-lod stehen 1137 — 41 fehlen, ohne gesetztes Fenster. Bei
-  Sanbao 5832 gegenüber 9535; dort kann zusätzlich ein anderer Join oder eine
-  Deduplizierung mitspielen und ist hier zu klären.
-
-**Vorgehen.** Der Code aus `sisal-db-v3` wird nachgenutzt (kopiert, nicht
-referenziert): Export aus der Datenbank nach CSV, und diese CSVs sind die Basis
-für den geo-lod-Generator. Damit bleibt die Struktur
-Site → Entity → Sample → Chronology erhalten, und geo-lod hängt weder an einer
-laufenden Datenbank noch am anderen Repo.
-
-- Mitwandern muss der `COPY`-Weg **und** der Zeilenzahl-Abgleich.
 - Die Sites hängen an bestehenden `geolod:Cave_site_NNNN`-Knoten (A1).
-- `age_uncert_pos` / `age_uncert_neg` stehen in den CSVs bereits, werden aber
-  beim TTL-Schreiben verworfen. Kein neuer Datenweg nötig, nur zwei Properties
-  mehr im Modell.
-- Site-Auswahl nach A4. geo-lod hat Beobachtungen für 140, 144, 145, 275,
-  Fionas Auswahl ist 58, 202, 275; die Site-Ebene liegt für alle 305 vor.
-- Mit dem vollen Restore kommen Tabellen in Reichweite, die modelliert werden
-  wollen: `dating` (U/Th-Datierungen als eigene Messereignisse), `hiatus` und
-  `gap` (Lücken im Archiv), `original_chronology` neben `sisal_chronology` als
-  konkurrierende Altersmodelle. Dasselbe Muster wie bei den MIS-Grenzen, passt
-  zu `strat:AgeControlPoint`. Nicht Pflicht für S3c, aber der Grund, den Restore
-  überhaupt vollständig zu machen.
+- `age_uncert_pos` / `age_uncert_neg` stehen im Ausschnitt und werden bisher
+  beim TTL-Schreiben verworfen. Kein neuer Datenweg nötig, zwei Properties mehr
+  im Modell.
+- Zu entscheiden: welche der sieben Altersmodelle in den Graphen gehen, und was
+  mit den 17 564 Proben ohne `lin_interp_age` geschieht.
+- Zu entscheiden: ob `entity_status` im Graphen steht. `superseded` und
+  `current partially modified` sind Aussagen über die Daten, nicht über die
+  Höhle, und ohne sie liesse sich nicht sagen, warum zwei Entitäten dieselbe
+  Lamelle beschreiben.
+- Die beiden negativen Alter tragen `geolod:assignmentStatus` (A4).
+
+---
+
+### S3c.3 — Datierungen, Lücken, zweite Chronologie
+
+**Ziel:** `dating`, `hiatus`, `gap` und `original_chronology` modellieren.
+
+**Uploads:** geo-lod-Bundle (A5).
+
+**Ergebnis:** erweiterte Ontologie und Shapes, zusätzliche Tripel.
+
+**Fertig, wenn:** SHACL sauber ist und eine Abfrage die konkurrierenden
+Altersmodelle je Probe auseinanderhalten kann.
+
+- 1200 U/Th-Datierungen werden eigene Messereignisse, nach dem Muster von
+  `strat:AgeControlPoint`. Dasselbe Muster wie bei den MIS-Grenzen.
+- 21 Hiaten und 4 Lücken sind Aussagen über das Archiv, nicht über die
+  Messreihe. Der Unterschied zur Darstellungskonvention aus S2 ist zu wahren:
+  ein gestrichelter Abschnitt heisst „hier keine Proben", ein Hiatus heisst
+  „hier kein Eintrag".
+- `original_chronology` mit 31 352 Altern ist das konkurrierende Altersmodell.
+  Dieselbe Unterscheidung wie bei den MIS-Quellen aus S1: beide Lesarten
+  bleiben, `geolod:assignmentStatus` sagt, welche führt.
+
+---
+
+### S3c.4 — Abbildungen und Captions
+
+**Ziel:** die SISAL-Abbildungen entstehen aus dem Ausschnitt und tragen
+dieselben Konventionen wie EPICA.
+
+**Uploads:** geo-lod-Bundle (A5).
+
+**Ergebnis:** umgebautes `SISAL/plot_sisal_from_csv.py`, `SISAL/captions.yaml`.
+
+**Fertig, wenn:** die Abbildungen aus `data/derived/sisal/sites/` entstehen und
+keine MIS-Grenze mehr im Code steht.
+
+- `MIS_INTERVALS` durch `dist/mis_stages.csv` ersetzen — die letzte
+  hartcodierte MIS-Stelle.
+- Achsen auf `geo_lod_figures.nice_ticks`. Ob dort dasselbe Abschneiden
+  passiert wie bei δ¹⁸O in S2, ist ungeprüft; die Wertebereiche vergleichen.
+- `captions.yaml` für die 36 Abbildungen, Mechanik liegt in
+  `ontology/geo_lod_captions.py` bereit.
+- Das doppelte `geo_lod_core.ttl` in `SISAL/rdf/` entfällt.
 
 ---
 
@@ -1241,8 +1370,9 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 - ~~Zeitbasis-Auszeichnung in `mis_stage_boundaries.csv` prüfen (S0.3).~~
   Erledigt 2026-08-08: beide Quellen sind BP, die `b2k`-Deklaration ist zu
   korrigieren.
-- Sanbao: 5832 gegenüber 9535 Samples im Release. Beim Neuaufbau klären, ob
-  Zeilenverlust oder bewusster Join (S3c).
+- ~~Sanbao: 5832 gegenüber 9535 Samples im Release.~~ Erledigt 2026-08-11:
+  kein Zeilenverlust. 9535 sind die δ¹⁸O-Messungen ohne die beiden abgelösten
+  Entitäten, 6085 die nach `lin_interp_age` datierten Proben.
 - Skripte, die unter Windows Dateien für andere Werkzeuge erzeugen, auf
   `utf8NoBOM` stellen. Das BOM aus PowerShell 5.1 hat in S3a zweimal wie eine
   fehlende Tabelle ausgesehen (S3b).
@@ -1252,17 +1382,23 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   `MIS_INTERVALS` dagegen abgleichen (S1).~~ Erledigt 2026-08-08: Parität mit
   Railsback et al. 2015 als Beleg, eine Abweichung (MIS 3).
 - `MIS_INTERVALS` in `SISAL/plot_sisal_from_csv.py` durch `dist/mis_stages.csv`
-  ersetzen — die letzte hartcodierte MIS-Stelle (S3c).
+  ersetzen — die letzte hartcodierte MIS-Stelle (S3c.4).
+- **Sechs von sieben Altersmodellen sind bisher unsichtbar.** `sisal_chronology`
+  führt `lin_interp`, `lin_reg`, `bchron`, `bacon`, `oxcal`, `copra` und
+  `stalage`. Im Ausschnitt haben 24 390 Proben eine Chronologiezeile, 18 213
+  ein `lin_interp_age`; die übrigen 6177 tragen ausschliesslich andere Modelle.
+  Der Weg über die flachen CSV sieht keine davon. Entscheidung in S3c.2.
 - ~~Die übrigen Rohdaten nach `data/raw/` nachziehen: `src/EPICA_Dome_C_*.csv`
   und die `.tab` in S2~~ — für EPICA erledigt 2026-08-09. Offen bleiben die
-  SISAL-CSVs (S3c) und `CI/cifindspots_part_full.csv` (S4).
+  `CI/cifindspots_part_full.csv` (S4). Die SISAL-CSV sind mit S3c.1 nach
+  `data/derived/sisal/` gezogen, nicht nach `data/raw/` — siehe A4.
 - `src/plot_epica_115--250.py` liest fünf CSVs, von denen nur zwei je in `src/`
   lagen; das Skript war schon vorher nicht lauffähig und hängt in keiner
   Pipeline. Entweder auf `EPICA/epica_data.py` umstellen oder löschen — in S2
   bewusst nicht angefasst.
 - ~~Die mehrteiligen Tafeln aus S2~~ — erledigt 2026-08-09, sieben Tafeln.
 - ~~`MIS_INTERVALS` in `EPICA/plot_epica_from_tab.py`~~ — erledigt 2026-08-09.
-  Offen bleibt die Stelle in `SISAL/plot_sisal_from_csv.py` (S3c); danach ist
+  Offen bleibt die Stelle in `SISAL/plot_sisal_from_csv.py` (S3c.4); danach ist
   keine MIS-Grenze mehr im Code hinterlegt.
 - ~~Die Tiefenplots tragen keine MIS-Bänder.~~ Erledigt 2026-08-09.
 - Die Fünfer-Collage zeigt nur die Altersachse. Eine Tiefenvariante ist eine
@@ -1271,9 +1407,9 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   `ontology/geo_lod_figures.py` neben `geo_lod_utils.py`, SISAL nutzt es.
 - SISAL hat noch keine `captions.yaml`. Die Mechanik liegt in
   `ontology/geo_lod_captions.py` bereit; einzutragen sind die Unterschriften
-  der 36 Abbildungen, das gehört in S3c.
+  der 36 Abbildungen, das gehört in S3c.4.
 - Die SISAL-Achsen laufen weiter über handgesetzte Grenzen. Ob dort dasselbe
-  Abschneiden passiert wie bei δ¹⁸O, ist ungeprüft — beim Umbau in S3c gegen
+  Abschneiden passiert wie bei δ¹⁸O, ist ungeprüft — beim Umbau in S3c.4 gegen
   `geo_lod_figures.nice_ticks` stellen und die Wertebereiche vergleichen.
 - `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
   `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
@@ -1283,10 +1419,10 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   die das Bundle dann schneller einliest.
 - Aus den bestehenden Pipeline-Todos: doppeltes Schreiben von
   `geo_lod_core.ttl` — für EPICA erledigt 2026-08-09, für SISAL offen
-  (`SISAL/plot_sisal_from_csv.py` legt weiter eine Kopie in `SISAL/rdf/`);
+  (`SISAL/plot_sisal_from_csv.py` legt weiter eine Kopie in `SISAL/rdf/`, S3c.4);
   `cisite_59` auf fehlenden Pleiades-/Wikidata-Link prüfen. Von den DOIs an den
   `DataSource`-Instanzen sind die beiden PANGAEA-Quellen mit S2 erledigt, offen
-  bleibt `SISALv3_DataSource` (S3c).
+  bleibt `SISALv3_DataSource` (S3c.2).
 
 - **Zwei weiche Warnungen im SISAL-Guard, beide kein Fehler.** Der Ladelauf vom
   2026-08-11 ist in allen harten Prüfungen grün: 21 Tabellen zeilengleich mit
@@ -1321,4 +1457,7 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   über die Probe, sondern über das Modell. Ob solche Beobachtungen in den
   Graphen wandern, und wenn ja, mit welchem `geolod:assignmentStatus` oder einer
   eigenen Kennzeichnung, ist in S3c zu klären. Vorher nicht stillschweigend
-  filtern.
+  filtern. **Entschieden 2026-08-11**: sie kommen mit
+  `geolod:assignmentStatus` in den Graphen. In der Site-Auswahl sind es zwei,
+  −10,9 a bei SB-43 und −50,0 a bei BT-2; die Bunker-Cave-Werte liegen
+  ausserhalb.

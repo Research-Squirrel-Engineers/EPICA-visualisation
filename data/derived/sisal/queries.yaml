@@ -38,11 +38,17 @@ per_site_stems:
   275: buraca_gloriosa
 
 # Known-good row counts for the flat per-site files, from the pristine SISAL v3
-# release. A mismatch means the database is not what we think it is. The three
-# established counts were verified in S3b; the other three are recorded on the
-# first run rather than guessed, so leave them out until then.
+# release. A mismatch means the database is not what we think it is.
+#
+# 58, 202 and 275 were verified in S3b. The other three were recorded from the
+# first full run rather than guessed: Sanbao 6085 is the number of samples
+# carrying both d18O and a lin_interp_age, not the 9535 d18O measurements of its
+# non-superseded entities and not its 10063 samples.
 expected_rows:
   58: 7869
+  140: 6085
+  144: 920
+  145: 1345
   202: 781
   275: 1178
 
