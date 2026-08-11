@@ -8,8 +8,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "MeasurementType Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/MeasurementType_d13C>,
-        <http://w3id.org/geo-lod/MeasurementType_d18O> ;
     dcat:dataset <http://w3id.org/geo-lod/epica/measurement_type_ch4>,
         <http://w3id.org/geo-lod/epica/measurement_type_d18o>,
         <http://w3id.org/geo-lod/epica/measurement_type_dd>,

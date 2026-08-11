@@ -8,6 +8,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "SavitzkyGolayFilter Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/SavitzkyGolay_w11_p2> ;
     dcat:dataset <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> .
 

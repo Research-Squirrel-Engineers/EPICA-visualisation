@@ -7,8 +7,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: comment"@en ;
     void:property rdfs:comment ;
-    void:triples 1,
-        2,
-        74,
+    void:triples 74,
         85 .
 

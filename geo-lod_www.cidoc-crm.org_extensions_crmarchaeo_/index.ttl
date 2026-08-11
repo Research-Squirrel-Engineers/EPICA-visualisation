@@ -6,10 +6,9 @@
 <http://w3id.org/geo-lod/geo-lod_www.cidoc-crm.org_extensions_crmarchaeo_> a void:Linkset,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
-    rdfs:label "Linkset: geo-lod - crmarchaeo:"@en ;
+    rdfs:label "Linkset: geo-lod - crmarchaeo"@en ;
     void:linkPredicate rdf:type ;
     void:objectsTarget <http://www.cidoc-crm.org/extensions/crmarchaeo/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 9,
-        37 .
+    void:triples 9 .
 

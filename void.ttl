@@ -193,7 +193,7 @@
         37 .
 
 <http://w3id.org/geo-lod/geo-lod_www.cidoc-crm.org_extensions_crmarchaeo_> a void:Linkset ;
-    rdfs:label "Linkset: geo-lod - crmarchaeo:"@en ;
+    rdfs:label "Linkset: geo-lod - crmarchaeo"@en ;
     void:linkPredicate rdf:type ;
     void:objectsTarget <http://www.cidoc-crm.org/extensions/crmarchaeo/> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
@@ -451,22 +451,6 @@ doap: a voaf:Vocabulary ;
     rdfs:label "Class Partition: Dataset"@en ;
     void:class dcat:Dataset .
 
-<http://w3id.org/geo-lod/geo-lod_Delta13CProperty> a void:Dataset ;
-    rdfs:label "Class Partition: Delta13CProperty"@en ;
-    void:class <http://w3id.org/geo-lod/Delta13CProperty> .
-
-<http://w3id.org/geo-lod/geo-lod_Delta13CSpeleothemObservation> a void:Dataset ;
-    rdfs:label "Class Partition: Delta13CSpeleothemObservation"@en ;
-    void:class <http://w3id.org/geo-lod/Delta13CSpeleothemObservation> .
-
-<http://w3id.org/geo-lod/geo-lod_Delta18OProperty> a void:Dataset ;
-    rdfs:label "Class Partition: Delta18OProperty"@en ;
-    void:class <http://w3id.org/geo-lod/Delta18OProperty> .
-
-<http://w3id.org/geo-lod/geo-lod_Delta18OSpeleothemObservation> a void:Dataset ;
-    rdfs:label "Class Partition: Delta18OSpeleothemObservation"@en ;
-    void:class <http://w3id.org/geo-lod/Delta18OSpeleothemObservation> .
-
 <http://w3id.org/geo-lod/geo-lod_DepthPosition> a void:Dataset ;
     rdfs:label "Class Partition: DepthPosition"@en ;
     void:class <http://w3id.org/geo-lod/DepthPosition> .
@@ -577,17 +561,9 @@ doap: a voaf:Vocabulary ;
     rdfs:label "Class Partition: SpatialObjectCollection"@en ;
     void:class geo:SpatialObjectCollection .
 
-<http://w3id.org/geo-lod/geo-lod_Speleothem> a void:Dataset ;
-    rdfs:label "Class Partition: Speleothem"@en ;
-    void:class <http://w3id.org/geo-lod/Speleothem> .
-
 <http://w3id.org/geo-lod/geo-lod_TimePosition> a void:Dataset ;
     rdfs:label "Class Partition: TimePosition"@en ;
     void:class time:TimePosition .
-
-<http://w3id.org/geo-lod/geo-lod_UThChronology> a void:Dataset ;
-    rdfs:label "Class Partition: UThChronology"@en ;
-    void:class <http://w3id.org/geo-lod/UThChronology> .
 
 <http://w3id.org/geo-lod/geo-lod_activityDesc> a void:Dataset ;
     rdfs:label "Property Partition: activityDesc"@en ;
@@ -910,7 +886,7 @@ foaf:Person rdfs:label "Person"@en .
     vext:languages 0 ;
     vext:propertyClasses 0 ;
     dc:language <http://www.lexvo.org/page/iso639-1/en> ;
-    dcterms:modified "2026-08-11T12:27:25"^^xsd:dateTime ;
+    dcterms:modified "2026-08-11T15:04:49"^^xsd:dateTime ;
     dcterms:subject <http://dbpedia.org/resource/Location>,
         <http://dbpedia.org/resource/OGC_GeoSPARQL>,
         <http://dbpedia.org/resource/Time>,
@@ -927,10 +903,6 @@ foaf:Person rdfs:label "Person"@en .
         <http://w3id.org/geo-lod/geo-lod_Collection>,
         <http://w3id.org/geo-lod/geo-lod_DataSource>,
         <http://w3id.org/geo-lod/geo-lod_Dataset>,
-        <http://w3id.org/geo-lod/geo-lod_Delta13CProperty>,
-        <http://w3id.org/geo-lod/geo-lod_Delta13CSpeleothemObservation>,
-        <http://w3id.org/geo-lod/geo-lod_Delta18OProperty>,
-        <http://w3id.org/geo-lod/geo-lod_Delta18OSpeleothemObservation>,
         <http://w3id.org/geo-lod/geo-lod_DepthPosition>,
         <http://w3id.org/geo-lod/geo-lod_DrillingCampaign>,
         <http://w3id.org/geo-lod/geo-lod_Entity>,
@@ -954,9 +926,7 @@ foaf:Person rdfs:label "Person"@en .
         <http://w3id.org/geo-lod/geo-lod_SavitzkyGolayFilter>,
         <http://w3id.org/geo-lod/geo-lod_Site>,
         <http://w3id.org/geo-lod/geo-lod_SpatialObjectCollection>,
-        <http://w3id.org/geo-lod/geo-lod_Speleothem>,
-        <http://w3id.org/geo-lod/geo-lod_TimePosition>,
-        <http://w3id.org/geo-lod/geo-lod_UThChronology> ;
+        <http://w3id.org/geo-lod/geo-lod_TimePosition> ;
     void:classes 16 ;
     void:dataDump "https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//index.ttl"^^xsd:anyURI ;
     void:distinctObjects 653 ;

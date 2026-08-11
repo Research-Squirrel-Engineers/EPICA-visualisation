@@ -11,6 +11,5 @@
     void:objectsTarget <http://www.opengis.net/ont/sf#> ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
     void:triples 2,
-        74,
-        305 .
+        74 .
 
