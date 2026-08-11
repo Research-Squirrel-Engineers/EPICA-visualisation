@@ -9,8 +9,9 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 import subprocess
-import shutil
 import time
+
+import clean
 
 # Paths
 SCRIPT_DIR = Path(__file__).parent.absolute()
@@ -21,12 +22,8 @@ CI_SCRIPT    = SCRIPT_DIR / "CI" / "ci_pipeline.py"
 ONTOLOGY_DIR = SCRIPT_DIR / "ontology"
 DIST_DIR     = SCRIPT_DIR / "dist"
 
-EPICA_PLOTS_DIR = SCRIPT_DIR / "EPICA" / "plots"
 EPICA_RDF_DIR = SCRIPT_DIR / "EPICA" / "rdf"
-EPICA_REPORT_DIR = SCRIPT_DIR / "EPICA" / "report"
-SISAL_PLOTS_DIR = SCRIPT_DIR / "SISAL" / "plots"
 SISAL_RDF_DIR = SCRIPT_DIR / "SISAL" / "rdf"
-SISAL_REPORT_DIR = SCRIPT_DIR / "SISAL" / "report"
 CI_RDF_DIR = SCRIPT_DIR / "CI" / "rdf"
 
 # Global log file
@@ -106,65 +103,51 @@ def check_directory_exists(dirpath: Path, description: str) -> bool:
     return True
 
 
-def clean_directory(dirpath: Path, description: str) -> int:
-    if not dirpath.exists():
-        return 0
-    count = 0
-    try:
-        for item in dirpath.iterdir():
-            if item.is_file():
-                item.unlink()
-                count += 1
-            elif item.is_dir():
-                shutil.rmtree(item)
-                count += 1
-        if count > 0:
-            print(f"  ✓ Cleaned {description}: {count} items removed")
-    except Exception as e:
-        print(f"  ⚠  Error cleaning {description}: {e}")
-    return count
+def clean_groups_for(args) -> list[str]:
+    """Which clean groups belong to the steps this run will actually execute.
+
+    Scoped deliberately: `--sisal-only` must not remove the EPICA figures.
+    They would not be redrawn in that run, and half an hour of plotting would
+    be gone for nothing. Steps 2 and 3 always run, so their groups are always
+    in; the diagrams are written by EPICA and by SISAL, so they go only if one
+    of the two is on.
+    """
+    groups = ["vocab", "cache"]
+    epica = not (args.sisal_only or args.ci_only)
+    sisal = not (args.epica_only or args.ci_only)
+    ci = not (args.epica_only or args.sisal_only)
+    if epica:
+        groups.append("epica")
+    if sisal:
+        groups.append("sisal")
+    if ci:
+        groups.append("ci")
+    if epica or sisal:
+        groups.append("diagrams")
+    if not args.no_bundle:
+        groups.append("bundle")
+    return groups
 
 
-def clean_pycache(root_dir: Path) -> int:
-    count = 0
-    for pycache in root_dir.rglob("__pycache__"):
-        try:
-            shutil.rmtree(pycache)
-            count += 1
-        except:
-            pass
-    if count > 0:
-        print(f"  ✓ Removed {count} __pycache__ directories")
-    return count
+def clean_before_run(args) -> None:
+    """Remove what this run is about to rewrite, and name what it will not.
 
-
-def clean_all_outputs() -> None:
-    print_section("Cleaning Output Directories")
-    total = 0
-    total += clean_directory(EPICA_PLOTS_DIR, "EPICA plots")
-    total += clean_directory(EPICA_RDF_DIR, "EPICA RDF")
-    total += clean_directory(EPICA_REPORT_DIR, "EPICA reports")
-    total += clean_directory(SISAL_PLOTS_DIR, "SISAL plots")
-    total += clean_directory(SISAL_RDF_DIR, "SISAL RDF")
-    total += clean_directory(SISAL_REPORT_DIR, "SISAL reports")
-    total += clean_directory(CI_RDF_DIR, "CI RDF")
-    total += clean_directory(DIST_DIR, "dist (bundle)")
-
-    if ONTOLOGY_DIR.exists():
-        count = 0
-        for f in ONTOLOGY_DIR.glob("*.mermaid"):
-            try:
-                f.unlink()
-                count += 1
-            except:
-                pass
-        if count > 0:
-            print(f"  ✓ Removed {count} Mermaid files from ontology/")
-            total += count
-
-    print("\n  Python cache cleanup:")
-    total += clean_pycache(SCRIPT_DIR)
-    print(f"\n  Total items removed: {total}")
+    Sweeping first is what keeps an orphan out of the repository. A figure
+    whose proxy has been renamed is not overwritten by the next run - it is
+    simply never written again, and without the sweep it would stay in
+    plots/ indistinguishable from a current one. The inventory itself lives
+    in clean.py, together with the two registers this step does not touch.
+    """
+    print_section("0. Clean generated outputs")
+    groups = clean_groups_for(args)
+    print(f"  Groups: {', '.join(groups)}")
+    result = clean.sweep(groups, delete=True, verbose=True)
+    if result.removed:
+        print(f"\n  Removed {result.removed} item(s), "
+              f"{clean.human(result.bytes_freed)} freed.")
+    else:
+        print("  Nothing to remove.")
+    end_section()
 
 
 def regenerate_canonical_ontology() -> bool:
@@ -368,6 +351,13 @@ def print_summary(epica: bool, sisal: bool, ci: bool, bundle: bool, start: datet
     print(f"\n  Total duration: {duration.total_seconds():.1f} seconds")
     print(f"  Log saved to: {LOG_FILE}")
 
+    # Was der Sweep nicht anfasst: Reste, die kein Schritt mehr schreibt, und
+    # Dateien, die noch gebraucht werden und mit einem benannten Schritt
+    # entfallen. Eine Zeile, damit die Liste im Blick bleibt, ohne den Bericht
+    # zu fluten - Einzelheiten liefert clean.py.
+    print()
+    print(clean.summarise())
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -376,7 +366,23 @@ def main():
     parser.add_argument("--epica-only", action="store_true")
     parser.add_argument("--sisal-only", action="store_true")
     parser.add_argument("--ci-only", action="store_true")
-    parser.add_argument("--clean", action="store_true")
+    parser.add_argument(
+        "--clean",
+        action="store_true",
+        help=(
+            "Generierte Ausgaben vor dem Lauf entfernen. Voreingestellt an; "
+            "die Option bleibt, damit bestehende Aufrufe weiter gelten."
+        ),
+    )
+    parser.add_argument(
+        "--no-clean",
+        action="store_true",
+        help=(
+            "Schritt 0 überspringen und in die vorhandenen Ausgaben "
+            "hineinschreiben. Dann kann eine Datei überleben, die kein "
+            "Schritt mehr schreibt."
+        ),
+    )
     parser.add_argument(
         "--no-bundle",
         action="store_true",
@@ -414,8 +420,8 @@ def main():
     print(f"  Directory: {SCRIPT_DIR}")
     print()
 
-    if args.clean:
-        clean_all_outputs()
+    if not args.no_clean:
+        clean_before_run(args)
 
     print_section("1. Preparation")
     print("\n  Directory structure:")
