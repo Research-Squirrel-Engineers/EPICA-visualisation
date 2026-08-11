@@ -1128,7 +1128,7 @@ laufenden Datenbank noch am anderen Repo.
 statt aus einem mitgelieferten Ausschnitt. Eine Quelle, und zwar die geprüfte.
 
 **Uploads:** `wdttest-sisal` als ZIP ohne Abbildungen; dazu `postgres/NAMING.md`
-und `py/export_sites.py` aus `squirrels-sisal-db-v3`, weil dort die
+und `py/export_sites.py` aus `sisal-db-v3`, weil dort die
 Spaltennamen und die Abfrage stehen, gegen die umgestellt wird.
 
 **Ergebnis:** angepasste Plot-Skripte, aktualisierte README-Kette,
@@ -1160,7 +1160,7 @@ zeigt, steht dann in derselben Datenbank, gegen die auch geo-lod arbeitet.
   und wird bei jedem Lauf neu geschrieben.
 
 **Verhältnis zu A2.** A2 verbietet Laufzeitkopplung zwischen geo-lod und der
-WD1-Familie. Hier koppelt `wdttest-sisal` an `squirrels-sisal-db-v3`, das A1
+WD1-Familie. Hier koppelt `wdttest-sisal` an `sisal-db-v3`, das A1
 ausdrücklich als Zugriffsschicht für beide Familien führt. Die Grenze aus A2
 bleibt unberührt.
 
