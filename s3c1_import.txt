@@ -1,0 +1,67 @@
+  source : C:\git\squirrels-sisal-db-v3
+  target : data\derived\sisal
+
+  tables/ba_ca.csv                              0 rows
+  tables/composite_link_entity.csv              4 rows
+  tables/d13c.csv                           14743 rows
+  tables/d18o.csv                           35713 rows
+  tables/dating.csv                          1200 rows
+  tables/dating_lamina.csv                      0 rows
+  tables/entity.csv                            60 rows
+  tables/entity_link_reference.csv             61 rows
+  tables/gap.csv                                4 rows
+  tables/hiatus.csv                            21 rows
+  tables/mg_ca.csv                            851 rows
+  tables/notes.csv                              4 rows
+  tables/original_chronology.csv            31352 rows
+  tables/p_ca.csv                               0 rows
+  tables/reference.csv                         20 rows
+  tables/sample.csv                         35777 rows
+  tables/sisal_chronology.csv               24390 rows
+  tables/site.csv                               6 rows
+  tables/sr_ca.csv                            664 rows
+  tables/sr_isotopes.csv                        0 rows
+  tables/u_ca.csv                               0 rows
+
+  sites/spannagel_all.csv                    7869 rows  site 58
+  sites/sanbao.csv                           6085 rows  site 140
+  sites/botuvera.csv                          920 rows  site 144
+  sites/corchia.csv                          1345 rows  site 145
+  sites/piani_eterni_karst_system.csv         781 rows  site 202
+  sites/buraca_gloriosa.csv                  1178 rows  site 275
+
+  manifest: data\derived\sisal\MANIFEST.json
+  origin  : squirrels-sisal-db-v3 @ 5c647230b98b
+  target : data\derived\sisal
+
+  queries.yaml                                  OK
+  sites/botuvera.csv                            OK
+  sites/buraca_gloriosa.csv                     OK
+  sites/corchia.csv                             OK
+  sites/piani_eterni_karst_system.csv           OK
+  sites/sanbao.csv                              OK
+  sites/spannagel_all.csv                       OK
+  tables/ba_ca.csv                              OK
+  tables/composite_link_entity.csv              OK
+  tables/d13c.csv                               OK
+  tables/d18o.csv                               OK
+  tables/dating.csv                             OK
+  tables/dating_lamina.csv                      OK
+  tables/entity.csv                             OK
+  tables/entity_link_reference.csv              OK
+  tables/gap.csv                                OK
+  tables/hiatus.csv                             OK
+  tables/mg_ca.csv                              OK
+  tables/notes.csv                              OK
+  tables/original_chronology.csv                OK
+  tables/p_ca.csv                               OK
+  tables/reference.csv                          OK
+  tables/sample.csv                             OK
+  tables/sisal_chronology.csv                   OK
+  tables/site.csv                               OK
+  tables/sr_ca.csv                              OK
+  tables/sr_isotopes.csv                        OK
+  tables/u_ca.csv                               OK
+
+  origin  : squirrels-sisal-db-v3 @ 5c647230b98b
+  sites   : 58, 140, 144, 145, 202, 275

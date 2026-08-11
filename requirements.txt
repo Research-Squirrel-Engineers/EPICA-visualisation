@@ -1,0 +1,19 @@
+# Runtime dependencies of the geo-lod pipeline.
+#
+# Lower bounds only, no upper pins: this is an application run from a checkout,
+# not a library other code resolves against, and a pinned ceiling here would age
+# into a false constraint. The floors are the versions the pipeline is known to
+# run on.
+
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+scipy>=1.10
+
+rdflib>=7.0
+pyshacl>=0.25
+
+# Read as well as written: EPICA/captions.yaml is parsed back to tell a
+# hand-written caption from a generated one, and SISAL/sisal_import.py reads the
+# export definition that came with the cut.
+pyyaml>=6.0
