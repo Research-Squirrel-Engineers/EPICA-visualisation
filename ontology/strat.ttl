@@ -1,0 +1,157 @@
+# ==========================================================================
+# strat.ttl   —   prefix strat:   <http://w3id.org/geo-lod/strat/>
+# LAYER 1 (standalone). NO CIDOC-CRM in name or dependency.
+#
+# Litho- and tephrostratigraphy of a drill core. The class SHAPE mirrors
+# CRMarchaeo (StratigraphicUnit <-> A2, Boundary <-> A3, Eruption <-> E5)
+# so the optional Layer-2 bridge (crm_bridge.ttl) is a clean 1:1 — but this
+# file needs only SKOS + GeoSPARQL and runs on its own.
+#
+# Connection to the analysis motor is a SINGLE hook: strat:hostsSpecimen.
+# That is where stratigraphy and analyses become one SPARQL-able graph.
+#
+# Community standards: SKOS (lithology / tephra-marker vocabularies),
+# GeoSPARQL (localities). License: MIT.
+# ==========================================================================
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo:  <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix an:   <http://w3id.org/geo-lod/analysis/> .
+@prefix strat: <http://w3id.org/geo-lod/strat/> .
+
+<http://w3id.org/geo-lod/strat/> a owl:Ontology ;
+    rdfs:label "Core stratigraphy"@en ;
+    rdfs:comment "Litho- and tephrostratigraphy of a drill core. CRMarchaeo-shaped, but standalone and CRM-free."@en ;
+    dcterms:license <https://opensource.org/licenses/MIT> ; owl:versionInfo "0.1.0" .
+
+# ---- classes  (comments note the CRMarchaeo counterpart for the bridge) ---
+strat:Core a owl:Class ; rdfs:label "Core"@en ;
+    rdfs:comment "The recovered drill core (e.g. WD1)."@en .
+
+strat:StratigraphicUnit a owl:Class ; rdfs:label "Stratigraphic Unit"@en ;
+    rdfs:comment "A body of sediment in the core. ~ crmarchaeo:A2_Stratigraphic_Volume_Unit."@en .
+
+strat:LithologicalUnit a owl:Class ; rdfs:subClassOf strat:StratigraphicUnit ;
+    rdfs:label "Lithological Unit"@en ; rdfs:comment "A depositional unit of the litho-log (Table 1)."@en .
+
+strat:TephraLayer a owl:Class ; rdfs:subClassOf strat:LithologicalUnit ;
+    rdfs:label "Tephra Layer"@en ; rdfs:comment "An isochronous volcanic marker bed (Table 3)."@en .
+
+strat:Boundary a owl:Class ; rdfs:label "Boundary"@en ;
+    rdfs:comment "Contact between two units. ~ crmarchaeo:A3_Stratigraphic_Interface."@en .
+
+strat:Eruption a owl:Class ; rdfs:label "Volcanic Eruption"@en ;
+    rdfs:comment "The event that produced a tephra; carries the age. ~ crm:E5_Event."@en .
+
+strat:Locality a owl:Class ; rdfs:subClassOf geo:Feature ;
+    rdfs:label "Locality"@en ;
+    rdfs:comment "A field reference/provenance site (tuff wall, Goßberg, Mäuseberg) for Tables 4-6."@en .
+
+# ---- object properties ---------------------------------------------------
+strat:partOfCore a owl:ObjectProperty ; rdfs:domain strat:StratigraphicUnit ; rdfs:range strat:Core ;
+    rdfs:label "part of core"@en .
+strat:overlies a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain strat:StratigraphicUnit ; rdfs:range strat:StratigraphicUnit ;
+    rdfs:label "overlies"@en ; rdfs:comment "Coarse superposition: the subject unit lies stratigraphically above the object (shallower). Transitive; the union of 'directly meets' and 'entirely above'."@en .
+strat:underlies a owl:ObjectProperty, owl:TransitiveProperty ; owl:inverseOf strat:overlies ; rdfs:label "underlies"@en .
+
+# ---- Allen interval algebra on the depth axis (aligned to OWL-Time) -------
+# A stratigraphic unit's depth extent [depthTop, depthBottom] is a 1D interval.
+# Superposition and inclusion are exactly Allen's interval relations, so each
+# strat relation below is a sub-property of its OWL-Time counterpart: a
+# reasoner (or any OWL-Time-aware consumer) inherits the full interval calculus,
+# while the domain stays geological. Depth increases downward; the SHALLOWER
+# (smaller-depth) unit is the subject of the directional relations. The precise
+# relations (meets, contains/within, overlaps, coincides) are materialised from
+# the depths by build_rdf.py, so they are queryable in plain SPARQL; the coarse
+# transitive overlies/underlies carries the rest of the order.
+strat:depthBelowSurface a time:TRS ;
+    rdfs:label "depth below core top (m)"@en ;
+    rdfs:comment "The 1D reference system for all depth intervals: metres below the core top, increasing downward."@en .
+strat:depthReferenceSystem a owl:ObjectProperty ; rdfs:domain strat:Core ; rdfs:range time:TRS ;
+    rdfs:label "depth reference system"@en .
+
+strat:meets a owl:ObjectProperty ; rdfs:subPropertyOf strat:overlies, time:intervalMeets ;
+    owl:inverseOf strat:metBy ; rdfs:label "meets"@en ;
+    rdfs:comment "Conformable contact: the subject's depthBottom equals the object's depthTop (subject directly overlies object)."@en .
+strat:metBy a owl:ObjectProperty ; rdfs:subPropertyOf strat:underlies, time:intervalMetBy ;
+    rdfs:label "met by"@en .
+strat:contains a owl:ObjectProperty, owl:TransitiveProperty ; rdfs:subPropertyOf time:intervalContains ;
+    owl:inverseOf strat:within ; rdfs:label "contains"@en ;
+    rdfs:comment "The subject's depth span fully encloses the object's (e.g. a lithological unit containing a tephra layer or point sample)."@en .
+strat:within a owl:ObjectProperty, owl:TransitiveProperty ; rdfs:subPropertyOf time:intervalDuring ;
+    rdfs:label "within"@en .
+strat:overlaps a owl:ObjectProperty ; rdfs:subPropertyOf time:intervalOverlaps ;
+    owl:inverseOf strat:overlappedBy ; rdfs:label "overlaps"@en ;
+    rdfs:comment "Partial depth overlap: subject starts shallower and ends inside the object (non-conformable)."@en .
+strat:overlappedBy a owl:ObjectProperty ; rdfs:subPropertyOf time:intervalOverlappedBy ;
+    rdfs:label "overlapped by"@en .
+strat:coincidesWith a owl:ObjectProperty, owl:SymmetricProperty ; rdfs:subPropertyOf time:intervalEquals ;
+    rdfs:label "coincides with"@en ;
+    rdfs:comment "Identical depth span."@en .
+strat:producedByEruption a owl:ObjectProperty ; rdfs:domain strat:TephraLayer ; rdfs:range strat:Eruption ;
+    rdfs:label "produced by eruption"@en .
+strat:hasLithology a owl:ObjectProperty ; rdfs:domain strat:StratigraphicUnit ; rdfs:range skos:Concept ;
+    rdfs:label "has lithology"@en ; rdfs:comment "→ descriptor vocabulary (vocab_descriptor.ttl) / GeoSciML/CGI lithology."@en .
+strat:hasColour a owl:ObjectProperty ; rdfs:domain strat:StratigraphicUnit ; rdfs:range skos:Concept ;
+    rdfs:label "has colour"@en ; rdfs:comment "Described colour of the unit → descriptor vocabulary."@en .
+strat:hasStructure a owl:ObjectProperty ; rdfs:domain strat:StratigraphicUnit ; rdfs:range skos:Concept ;
+    rdfs:label "has structure"@en ; rdfs:comment "Sedimentary structure / fabric / clast angularity → descriptor vocabulary."@en .
+strat:hasComponent a owl:ObjectProperty ; rdfs:domain strat:StratigraphicUnit ; rdfs:range skos:Concept ;
+    rdfs:label "has component"@en ; rdfs:comment "A discrete component/clast within the unit → descriptor vocabulary."@en .
+strat:markerTephra a owl:ObjectProperty ; rdfs:domain strat:TephraLayer ; rdfs:range skos:Concept ;
+    rdfs:label "marker tephra"@en ; rdfs:comment "The named marker (UT6, JWT, GLT, HBT …) from Table 3."@en .
+
+# THE hook to the analysis motor -------------------------------------------
+strat:hostsSpecimen a owl:ObjectProperty ; rdfs:range an:Specimen ;
+    rdfs:label "hosts specimen"@en ;
+    rdfs:comment "Domain is a StratigraphicUnit (core) or a Locality (field). Links stratigraphy to the analysed specimens — the join that makes the two modules one system."@en .
+strat:sampledAt a owl:ObjectProperty ; rdfs:domain an:Specimen ; rdfs:range strat:Locality ;
+    rdfs:label "sampled at"@en ; rdfs:comment "For field/provenance specimens (Tables 4-6)."@en .
+
+# ---- datatype properties -------------------------------------------------
+strat:depthTop a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "depth top (m)"@en .
+strat:depthBottom a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "depth bottom (m)"@en .
+strat:ageKaBP a owl:DatatypeProperty ; rdfs:range xsd:decimal ; rdfs:label "age (ka BP)"@en .
+
+# ---- age model (depth -> age) --------------------------------------------
+# Ages are MODELLED: a piecewise-linear age-depth model interpolates between
+# dated tephra tie points (data/age_model.csv). They are interpolations, not
+# direct measurements. Scale: years b2k (before AD 2000). Because the model is
+# monotonic, the depth-axis Allen relations above hold on the age axis too.
+strat:ageB2k a time:TRS ;
+    rdfs:label "years before AD 2000 (b2k)"@en ;
+    rdfs:comment "Reference system for modelled ages: years before AD 2000, increasing into the past."@en .
+strat:ageReferenceSystem a owl:ObjectProperty ; rdfs:domain strat:Core ; rdfs:range time:TRS ;
+    rdfs:label "age reference system"@en .
+strat:ageTop a owl:DatatypeProperty ; rdfs:domain strat:StratigraphicUnit ; rdfs:range xsd:decimal ;
+    rdfs:label "age top (years b2k)"@en ;
+    rdfs:comment "Modelled age of the unit's top (shallower) depth, interpolated from the age-depth model. Not a direct measurement."@en .
+strat:ageBottom a owl:DatatypeProperty ; rdfs:domain strat:StratigraphicUnit ; rdfs:range xsd:decimal ;
+    rdfs:label "age bottom (years b2k)"@en ;
+    rdfs:comment "Modelled age of the unit's bottom (deeper) depth, interpolated from the age-depth model."@en .
+strat:age a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "age (years b2k)"@en ;
+    rdfs:comment "The age at a single depth (e.g. a control point)."@en .
+
+strat:AgeDepthModel a owl:Class ; rdfs:label "Age-Depth Model"@en ;
+    rdfs:comment "A depth->age model for the core (here: piecewise-linear interpolation between dated tephra tie points)."@en .
+strat:AgeControlPoint a owl:Class ; rdfs:label "Age Control Point"@en ;
+    rdfs:comment "A dated tie point (depth + age) that constrains the age-depth model."@en .
+strat:hasAgeModel a owl:ObjectProperty ; rdfs:domain strat:Core ; rdfs:range strat:AgeDepthModel ;
+    rdfs:label "has age model"@en .
+strat:hasControlPoint a owl:ObjectProperty ; rdfs:domain strat:AgeDepthModel ; rdfs:range strat:AgeControlPoint ;
+    rdfs:label "has control point"@en .
+
+# ---- controlled values ---------------------------------------------------
+strat:TephraClass a owl:Class ; rdfs:subClassOf skos:Concept ; rdfs:label "Tephra Class"@en .
+strat:Primary   a strat:TephraClass ; skos:prefLabel "primary (in-situ isochron)"@en .   # Table 7
+strat:Secondary a strat:TephraClass ; skos:prefLabel "secondary (reworked)"@en .
+strat:tephraClass a owl:ObjectProperty ; rdfs:domain strat:StratigraphicUnit ; rdfs:range strat:TephraClass ;
+    rdfs:label "tephra class"@en .

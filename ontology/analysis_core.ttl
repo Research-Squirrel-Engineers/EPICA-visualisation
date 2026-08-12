@@ -1,0 +1,84 @@
+# ==========================================================================
+# analysis_core.ttl   —   prefix an:   <http://w3id.org/geo-lod/analysis/>
+# LAYER 1 (standalone application ontology). NO CIDOC-CRM dependency.
+#
+# The "motor": every analytical row in the WD1 tables — EPMA, LA-ICP-MS,
+# modal point-counts, macerals, brGDGT, bulk — is ONE of these:
+#     an:Specimen  --(sosa)-->  an:Analysis  -->  qudt QuantityValue
+# Method and property are just controlled-vocabulary references (SKOS),
+# so a new analysis type = a new vocab module, never a new motor.
+#
+# Community standards: SOSA/SSN (W3C/OGC), QUDT, PROV-O.
+# License: MIT.
+# ==========================================================================
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix an:   <http://w3id.org/geo-lod/analysis/> .
+
+<http://w3id.org/geo-lod/analysis/> a owl:Ontology ;
+    rdfs:label "Analysis core (SOSA-based)"@en ;
+    rdfs:comment "Standalone motor for single analytical measurements on specimens. No CRM."@en ;
+    dcterms:license <https://opensource.org/licenses/MIT> ; owl:versionInfo "0.1.0" .
+
+# ---- classes -------------------------------------------------------------
+an:Specimen a owl:Class ; rdfs:subClassOf sosa:Sample ;
+    rdfs:label "Specimen"@en ;
+    rdfs:comment "A physical specimen under analysis (mineral grain, core subsample, tephra sample)."@en .
+
+an:Analysis a owl:Class ; rdfs:subClassOf sosa:Observation ;
+    rdfs:label "Analysis"@en ;
+    rdfs:comment "A single measured/observed value of one property on one specimen."@en .
+
+an:DerivedValue a owl:Class ; rdfs:subClassOf an:Analysis ;
+    rdfs:label "Derived Value"@en ;
+    rdfs:comment "A value computed from other analyses (fraction from counts, TMAF from indices). Record inputs with prov:wasDerivedFrom."@en .
+
+an:Property a owl:Class ; rdfs:subClassOf sosa:ObservableProperty ;
+    rdfs:label "Property"@en ;
+    rdfs:comment "A measurable property (oxide wt%, element ppm, count, %). Lives in a vocab module."@en .
+
+an:Method a owl:Class ; rdfs:subClassOf sosa:Procedure , skos:Concept ;
+    rdfs:label "Method"@en ;
+    rdfs:comment "An analytical method concept (EPMA, LA-ICP-MS, point-counting). Bind to CHMO via skos:exactMatch."@en .
+
+# ---- properties ----------------------------------------------------------
+an:sampleDepth a owl:DatatypeProperty ; rdfs:domain an:Specimen ; rdfs:range xsd:decimal ;
+    rdfs:label "sample depth (m)"@en ; rdfs:comment "Depth below core top, metres."@en .
+
+an:analyte a owl:ObjectProperty ; rdfs:domain an:Property ;
+    rdfs:label "analyte"@en ; rdfs:comment "The chemical entity a property quantifies (→ ChEBI)."@en .
+
+# reused as-is (documentary, no re-declaration needed):
+#   sosa:hasFeatureOfInterest  an:Analysis -> an:Specimen
+#   sosa:observedProperty      an:Analysis -> an:Property
+#   sosa:usedProcedure         an:Analysis -> an:Method
+#   sosa:hasResult             an:Analysis -> qudt:QuantityValue
+#   qudt:numericValue / qudt:unit on the QuantityValue
+
+# ---- detection-limit handling (EPMA b.d.l.) ------------------------------
+an:belowDetectionLimit a owl:DatatypeProperty ; rdfs:domain an:Analysis ; rdfs:range xsd:boolean ;
+    rdfs:label "below detection limit"@en .
+an:workingDetectionLimit a owl:DatatypeProperty ; rdfs:domain an:Analysis ; rdfs:range xsd:decimal ;
+    rdfs:label "working detection limit"@en ;
+    rdfs:comment "Uniform threshold used when instrument 3-sigma limits are unavailable (Goldstein 2003; Reed 2005)."@en .
+
+# ---- data-quality flags (referenceable) ----------------------------------
+# A cell without a numeric result is not silently dropped: the analysis is
+# still recorded and points, via an:qualityFlag, at a shared, referenceable
+# an:QualityFlag concept (below-detection-limit, not-determined, ...). This
+# keeps "a measurement was attempted, no value" queryable and FAIR.
+an:QualityFlag a owl:Class ; rdfs:subClassOf skos:Concept ;
+    rdfs:label "Quality Flag"@en ;
+    rdfs:comment "A controlled reason a result value is absent (below detection limit, not determined). Referenceable so analyses can point at the same node."@en .
+
+an:qualityFlag a owl:ObjectProperty ; rdfs:domain an:Analysis ; rdfs:range an:QualityFlag ;
+    rdfs:label "quality flag"@en ;
+    rdfs:comment "Links an analysis with no numeric result to the reason for its absence."@en .

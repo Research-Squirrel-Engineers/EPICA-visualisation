@@ -447,6 +447,21 @@ def validate_crm_coverage(g: Graph) -> bool:
         RDFS.Datatype,
         RDF.Property,
         RDF.List,
+        # Eigenschaftscharakteristiken. Sie stehen als zweiter rdf:type neben
+        # owl:ObjectProperty und sagen aus, wie eine Property sich verhält -
+        # keine Entität, die einen CRM-Vorfahren haben könnte. Aufgefallen mit
+        # S3c.3: strat.ttl deklariert die Allen-Relationen auf der Tiefenachse
+        # als transitiv beziehungsweise symmetrisch, und der Check las das als
+        # fünf Instanzen zweier nicht verankerter Klassen.
+        OWL.TransitiveProperty,
+        OWL.SymmetricProperty,
+        OWL.AsymmetricProperty,
+        OWL.ReflexiveProperty,
+        OWL.IrreflexiveProperty,
+        OWL.FunctionalProperty,
+        OWL.InverseFunctionalProperty,
+        OWL.DeprecatedClass,
+        OWL.DeprecatedProperty,
     }
     instance_classes -= skip
 

@@ -16,12 +16,14 @@
 @prefix time:    <http://www.w3.org/2006/time#> .
 @prefix qudt:    <http://qudt.org/schema/qudt/> .
 @prefix geolod:  <http://w3id.org/geo-lod/> .
+@prefix strat:   <http://w3id.org/geo-lod/strat/> .
 
 <http://w3id.org/geo-lod/sisal/>
     a owl:Ontology ;
     rdfs:label   "geo-lod SISAL Extension"@en ;
     rdfs:comment "Speleothem records from SISAL v3: caves, speleothems, samples, stable-isotope observations and their competing age models."@en ;
-    owl:imports  <http://w3id.org/geo-lod/> .
+    owl:imports  <http://w3id.org/geo-lod/> ;
+    owl:imports  <http://w3id.org/geo-lod/strat/> .
 
 # -- Physical things -------------------------------------------------------
 
@@ -111,6 +113,96 @@ geolod:extrapolatedBeyondDatingRange
     rdfs:range   xsd:boolean ;
     rdfs:label   "extrapolated beyond dating range"@en ;
     rdfs:comment "True where the model ran past its outermost dating point, which is how an age younger than 1950 arises in a record with no modern control point. Deliberately not expressed through geolod:assignmentStatus: the status says whether geo-lod follows this age, this says whether the model had anything to stand on."@en .
+
+geolod:beyondOutermostAgeControlPoint
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:AgeAssignment ;
+    rdfs:range   xsd:boolean ;
+    rdfs:label   "beyond outermost age control point"@en ;
+    rdfs:comment "True where the sample lies outside the depth span this model's own dating points cover, so its age rests on extrapolation and not on interpolation. Stands next to geolod:extrapolatedBeyondDatingRange, which infers the same thing from a negative age; that inference misfires on a still-growing speleothem, where an age of -50 a is the outermost control point rather than a step past it."@en .
+
+# -- Dating points ---------------------------------------------------------
+# The class is strat:AgeControlPoint from <http://w3id.org/geo-lod/strat/>,
+# not a geolod: one: the WD1 core and a speleothem constrain their age models
+# with the same kind of thing, and two names for it would have to be merged
+# again in S4. The quantities stay geolod:, because strat: states depths in
+# metres and ages in years b2k while SISAL states millimetres and geo-lod
+# follows ka BP.
+
+geolod:DatingMethod
+    a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label   "Dating Method"@en ;
+    rdfs:comment "How a control point was obtained. Four values in the cut: two mass-spectrometric U/Th methods, a combination of methods, and the observation that the speleothem is still growing."@en .
+
+geolod:datingMethod
+    a owl:ObjectProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   geolod:DatingMethod ;
+    rdfs:label   "dating method"@en .
+
+geolod:constrainsSpeleothem
+    a owl:ObjectProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   geolod:Speleothem ;
+    rdfs:label   "constrains speleothem"@en ;
+    rdfs:comment "The record this control point dates. Sits on the speleothem and not on a sample: a dating point has its own depth and rarely coincides with a sampling position."@en .
+
+geolod:usedInAgeModel
+    a owl:ObjectProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   geolod:AgeModel ;
+    rdfs:label   "used in age model"@en ;
+    rdfs:comment "The models that took this point as a constraint. The models disagree on that: of 1177 dating points in the cut, StalAge used 822 and OxCal 109. Without it, a query asking what an age rests on would answer with points the model never saw."@en .
+
+geolod:datingLabId
+    a owl:DatatypeProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   xsd:string ;
+    rdfs:label   "laboratory identifier"@en .
+
+geolod:materialDated
+    a owl:DatatypeProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   xsd:string ;
+    rdfs:label   "material dated"@en .
+
+# -- Hiatus and gap --------------------------------------------------------
+# Two different statements, and the difference is the one the figures already
+# draw: a dashed section means no samples were taken, a hiatus means nothing
+# was deposited. The first is about the record, the second about the archive,
+# so they get different classes rather than one class with a type.
+
+geolod:GrowthHiatus
+    a owl:Class ;
+    rdfs:subClassOf crmarchaeo:A3_Stratigraphic_Interface ;
+    rdfs:label   "Growth Hiatus"@en ;
+    rdfs:comment "A surface inside a speleothem across which nothing was deposited. A statement about the archive: the time above and the time below it do not join up, however densely either is sampled."@en .
+
+geolod:RecordGap
+    a owl:Class ;
+    rdfs:subClassOf crm:E13_Attribute_Assignment ;
+    rdfs:label   "Record Gap"@en ;
+    rdfs:comment "SISAL's statement that the isotope record does not cover this position. An assignment, not an interface: the carbonate is there, the measurements are not, and a later study can close the gap without changing the speleothem."@en .
+
+geolod:inSpeleothem
+    a owl:ObjectProperty ;
+    rdfs:range   geolod:Speleothem ;
+    rdfs:label   "in speleothem"@en ;
+    rdfs:comment "The record a hiatus or a gap belongs to."@en .
+
+geolod:markedBySample
+    a owl:ObjectProperty ;
+    rdfs:range   geolod:SpeleothemSample ;
+    rdfs:label   "marked by sample"@en ;
+    rdfs:comment "The sample row that carries the mark in SISAL. Kept so that the depth in the graph can be traced to the row it came from; the hiatus itself is not that sample."@en .
+
+geolod:respectedByAgeModel
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:GrowthHiatus ;
+    rdfs:range   geolod:AgeModel ;
+    rdfs:label   "respected by age model"@en ;
+    rdfs:comment "The models that treated this hiatus as a break instead of interpolating across it. Of the 21 hiatuses in the cut, linear interpolation respected 16 and OxCal none, which is a property of the chronologies and not of the cave."@en .
 
 # -- Entity status ---------------------------------------------------------
 

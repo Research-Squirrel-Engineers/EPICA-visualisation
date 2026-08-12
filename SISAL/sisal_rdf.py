@@ -72,6 +72,7 @@ SF = Namespace("http://www.opengis.net/ont/sf#")
 GEOLOD = Namespace("http://w3id.org/geo-lod/")
 SISAL = Namespace("http://w3id.org/geo-lod/sisal/")
 TRS = Namespace("http://w3id.org/geo-lod/trs/")
+STRAT = Namespace("http://w3id.org/geo-lod/strat/")
 SOSA = Namespace("http://www.w3.org/ns/sosa/")
 QUDT = Namespace("http://qudt.org/schema/qudt/")
 UNIT = Namespace("http://qudt.org/vocab/unit/")
@@ -239,12 +240,14 @@ SISAL_ONTOLOGY_TTL = """\
 @prefix time:    <http://www.w3.org/2006/time#> .
 @prefix qudt:    <http://qudt.org/schema/qudt/> .
 @prefix geolod:  <http://w3id.org/geo-lod/> .
+@prefix strat:   <http://w3id.org/geo-lod/strat/> .
 
 <http://w3id.org/geo-lod/sisal/>
     a owl:Ontology ;
     rdfs:label   "geo-lod SISAL Extension"@en ;
     rdfs:comment "Speleothem records from SISAL v3: caves, speleothems, samples, stable-isotope observations and their competing age models."@en ;
-    owl:imports  <http://w3id.org/geo-lod/> .
+    owl:imports  <http://w3id.org/geo-lod/> ;
+    owl:imports  <http://w3id.org/geo-lod/strat/> .
 
 # -- Physical things -------------------------------------------------------
 
@@ -334,6 +337,96 @@ geolod:extrapolatedBeyondDatingRange
     rdfs:range   xsd:boolean ;
     rdfs:label   "extrapolated beyond dating range"@en ;
     rdfs:comment "True where the model ran past its outermost dating point, which is how an age younger than 1950 arises in a record with no modern control point. Deliberately not expressed through geolod:assignmentStatus: the status says whether geo-lod follows this age, this says whether the model had anything to stand on."@en .
+
+geolod:beyondOutermostAgeControlPoint
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:AgeAssignment ;
+    rdfs:range   xsd:boolean ;
+    rdfs:label   "beyond outermost age control point"@en ;
+    rdfs:comment "True where the sample lies outside the depth span this model's own dating points cover, so its age rests on extrapolation and not on interpolation. Stands next to geolod:extrapolatedBeyondDatingRange, which infers the same thing from a negative age; that inference misfires on a still-growing speleothem, where an age of -50 a is the outermost control point rather than a step past it."@en .
+
+# -- Dating points ---------------------------------------------------------
+# The class is strat:AgeControlPoint from <http://w3id.org/geo-lod/strat/>,
+# not a geolod: one: the WD1 core and a speleothem constrain their age models
+# with the same kind of thing, and two names for it would have to be merged
+# again in S4. The quantities stay geolod:, because strat: states depths in
+# metres and ages in years b2k while SISAL states millimetres and geo-lod
+# follows ka BP.
+
+geolod:DatingMethod
+    a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label   "Dating Method"@en ;
+    rdfs:comment "How a control point was obtained. Four values in the cut: two mass-spectrometric U/Th methods, a combination of methods, and the observation that the speleothem is still growing."@en .
+
+geolod:datingMethod
+    a owl:ObjectProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   geolod:DatingMethod ;
+    rdfs:label   "dating method"@en .
+
+geolod:constrainsSpeleothem
+    a owl:ObjectProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   geolod:Speleothem ;
+    rdfs:label   "constrains speleothem"@en ;
+    rdfs:comment "The record this control point dates. Sits on the speleothem and not on a sample: a dating point has its own depth and rarely coincides with a sampling position."@en .
+
+geolod:usedInAgeModel
+    a owl:ObjectProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   geolod:AgeModel ;
+    rdfs:label   "used in age model"@en ;
+    rdfs:comment "The models that took this point as a constraint. The models disagree on that: of 1177 dating points in the cut, StalAge used 822 and OxCal 109. Without it, a query asking what an age rests on would answer with points the model never saw."@en .
+
+geolod:datingLabId
+    a owl:DatatypeProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   xsd:string ;
+    rdfs:label   "laboratory identifier"@en .
+
+geolod:materialDated
+    a owl:DatatypeProperty ;
+    rdfs:domain  strat:AgeControlPoint ;
+    rdfs:range   xsd:string ;
+    rdfs:label   "material dated"@en .
+
+# -- Hiatus and gap --------------------------------------------------------
+# Two different statements, and the difference is the one the figures already
+# draw: a dashed section means no samples were taken, a hiatus means nothing
+# was deposited. The first is about the record, the second about the archive,
+# so they get different classes rather than one class with a type.
+
+geolod:GrowthHiatus
+    a owl:Class ;
+    rdfs:subClassOf crmarchaeo:A3_Stratigraphic_Interface ;
+    rdfs:label   "Growth Hiatus"@en ;
+    rdfs:comment "A surface inside a speleothem across which nothing was deposited. A statement about the archive: the time above and the time below it do not join up, however densely either is sampled."@en .
+
+geolod:RecordGap
+    a owl:Class ;
+    rdfs:subClassOf crm:E13_Attribute_Assignment ;
+    rdfs:label   "Record Gap"@en ;
+    rdfs:comment "SISAL's statement that the isotope record does not cover this position. An assignment, not an interface: the carbonate is there, the measurements are not, and a later study can close the gap without changing the speleothem."@en .
+
+geolod:inSpeleothem
+    a owl:ObjectProperty ;
+    rdfs:range   geolod:Speleothem ;
+    rdfs:label   "in speleothem"@en ;
+    rdfs:comment "The record a hiatus or a gap belongs to."@en .
+
+geolod:markedBySample
+    a owl:ObjectProperty ;
+    rdfs:range   geolod:SpeleothemSample ;
+    rdfs:label   "marked by sample"@en ;
+    rdfs:comment "The sample row that carries the mark in SISAL. Kept so that the depth in the graph can be traced to the row it came from; the hiatus itself is not that sample."@en .
+
+geolod:respectedByAgeModel
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:GrowthHiatus ;
+    rdfs:range   geolod:AgeModel ;
+    rdfs:label   "respected by age model"@en ;
+    rdfs:comment "The models that treated this hiatus as a break instead of interpolating across it. Of the 21 hiatuses in the cut, linear interpolation respected 16 and OxCal none, which is a property of the chronologies and not of the cave."@en .
 
 # -- Entity status ---------------------------------------------------------
 
@@ -518,6 +611,7 @@ def bind_prefixes(g: Graph) -> None:
     for prefix, ns in [
         ("crm", CRM), ("crmsci", CRMSCI), ("crmarchaeo", CRMARCHAEO), ("geo", GEO), ("sf", SF),
         ("geolod", GEOLOD), ("sisal", SISAL), ("trs", TRS), ("sosa", SOSA),
+        ("strat", STRAT),
         ("qudt", QUDT), ("unit", UNIT), ("prov", PROV), ("time", TIME),
         ("dct", DCT), ("skos", SKOS), ("owl", OWL),
     ]:
@@ -891,6 +985,223 @@ def add_isotopes(g: Graph, rows: list[dict], sample_uris: dict[str, URIRef],
     return written, undated
 
 
+def split_dating(dating: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
+    """The dating table holds three kinds of row, and they are not alike.
+
+    1177 laboratory measurements, 2 rows stating the speleothem is still
+    growing, and 21 rows marking a hiatus. Only the first two carry an age.
+    The third is the age models' view of a hiatus that the hiatus table states
+    on its own, and running the date_used filter over it would answer a
+    question it was never asked: date_used says whether a point entered a
+    chronology, not whether a hiatus exists. SB61 proves the point - its row
+    reads no, and the hiatus is in the hiatus table all the same.
+    """
+    measurements, forming, hiatus_events = [], [], []
+    for row in dating:
+        date_type = (row.get("date_type") or "").strip()
+        if date_type == "Event; hiatus":
+            hiatus_events.append(row)
+        elif date_type.startswith("Event;"):
+            forming.append(row)
+        else:
+            measurements.append(row)
+    return measurements, forming, hiatus_events
+
+
+DATING_METHODS = {
+    "MC-ICP-MS U/Th": ("DatingMethod_mc_icp_ms_u_th", "MC-ICP-MS U/Th",
+                       "Uranium-thorium disequilibrium dating on a multi-collector "
+                       "inductively coupled plasma mass spectrometer."),
+    "TIMS": ("DatingMethod_tims", "TIMS",
+             "Uranium-thorium disequilibrium dating on a thermal ionisation "
+             "mass spectrometer."),
+    "Multiple methods": ("DatingMethod_multiple", "multiple methods",
+                         "More than one method combined into a single reported age."),
+    "Event; actively forming": ("DatingMethod_actively_forming", "actively forming",
+                                "Not a laboratory measurement: the top of the record "
+                                "was observed to be growing, which dates it to the "
+                                "year of collection."),
+}
+
+
+def add_dating_methods(g: Graph) -> None:
+    for _, (local, label, comment) in sorted(DATING_METHODS.items()):
+        node = GEOLOD[local]
+        g.add((node, RDF.type, GEOLOD["DatingMethod"]))
+        g.add((node, RDF.type, OWL.NamedIndividual))
+        g.add((node, SKOS.prefLabel, Literal(label, lang="en")))
+        g.add((node, SKOS.definition, Literal(comment, lang="en")))
+
+
+def models_using(row: dict) -> list[str]:
+    """The models that took this row as a constraint.
+
+    An empty cell is not a no: it means the model was not run for that
+    speleothem at all. Only an explicit yes counts, which is why the counts
+    per model differ so widely.
+    """
+    return [key for key, _, _ in CHRONOLOGY_MODELS
+            if (row.get(f"date_used_{key}") or "").strip() == "yes"]
+
+
+def add_dating(g: Graph, measurements: list[dict], forming: list[dict],
+               entity_uris: dict[str, URIRef]) -> dict[str, int]:
+    """The dating points, as strat:AgeControlPoint.
+
+    date_used = 'yes' filters the measurements (A4). The two actively-forming
+    rows pass unfiltered: both read yes, and a record whose top is dated by
+    observation has no other point up there.
+    """
+    tally = {"points": 0, "dropped": 0, "forming": 0, "with_age": 0}
+
+    for row in measurements + forming:
+        is_forming = row in forming
+        if not is_forming and (row.get("date_used") or "").strip() != "yes":
+            tally["dropped"] += 1
+            continue
+
+        entity = entity_uris.get(row["entity_id"])
+        if entity is None:
+            continue
+
+        point = SISAL[f"datingpoint_{int(row['dating_id']):06d}"]
+        g.add((point, RDF.type, STRAT["AgeControlPoint"]))
+        g.add((point, GEOLOD["constrainsSpeleothem"], entity))
+        g.add((point, PROV.wasDerivedFrom, GEOLOD["SISALv3_DataSource"]))
+
+        method = DATING_METHODS.get((row.get("date_type") or "").strip())
+        if method:
+            g.add((point, GEOLOD["datingMethod"], GEOLOD[method[0]]))
+
+        depth = num(row.get("depth_dating"))
+        if depth is not None:
+            g.add((point, GEOLOD["atDepth_mm"], dec(depth, DEC_DEPTH)))
+
+        age = num(row.get("corr_age"))
+        if age is not None:
+            g.add((point, GEOLOD["ageKaBP"], dec(age / 1000.0, DEC_AGE)))
+            tally["with_age"] += 1
+            for column, prop in [("corr_age_uncert_pos", "ageUncertaintyPos_ka"),
+                                 ("corr_age_uncert_neg", "ageUncertaintyNeg_ka")]:
+                value = num(row.get(column))
+                if value is not None:
+                    g.add((point, GEOLOD[prop], dec(value / 1000.0, DEC_AGE)))
+
+        for column, prop in [("lab_num", "datingLabId"),
+                             ("material_dated", "materialDated")]:
+            text = (row.get(column) or "").strip()
+            if text:
+                g.add((point, GEOLOD[prop], Literal(text)))
+
+        for key in models_using(row):
+            g.add((point, GEOLOD["usedInAgeModel"], GEOLOD[f"AgeModel_{key}"]))
+
+        tally["points"] += 1
+        if is_forming:
+            tally["forming"] += 1
+    return tally
+
+
+def add_hiatus_and_gaps(g: Graph, hiatus: list[dict], gaps: list[dict],
+                        hiatus_events: list[dict], samples_by_id: dict[str, dict],
+                        entity_uris: dict[str, URIRef],
+                        sample_uris: dict[str, URIRef]) -> dict[str, int]:
+    """The 21 hiatuses and 4 gaps, anchored at the sample row that marks them.
+
+    The hiatus table and the Event; hiatus rows of the dating table are the
+    same 21, one to one over entity and depth, checked 2026-08-12. The dating
+    row is not a second hiatus; it carries which models respected it, and that
+    is what is taken from it here.
+    """
+    tally = {"hiatus": 0, "gaps": 0, "model_statements": 0,
+             "no_model_statement": 0, "unmatched_events": 0}
+
+    events_by_key: dict[tuple[str, float], dict] = {}
+    for row in hiatus_events:
+        depth = num(row.get("depth_dating"))
+        if depth is not None:
+            events_by_key[(row["entity_id"], round(depth, 3))] = row
+
+    matched: set[tuple[str, float]] = set()
+
+    for rows, cls, counter in [(hiatus, "GrowthHiatus", "hiatus"),
+                               (gaps, "RecordGap", "gaps")]:
+        for row in rows:
+            sample_id = row["sample_id"]
+            sample_row = samples_by_id.get(sample_id)
+            if sample_row is None:
+                continue
+
+            prefix = "hiatus" if cls == "GrowthHiatus" else "gap"
+            node = SISAL[f"{prefix}_{int(sample_id):07d}"]
+            g.add((node, RDF.type, GEOLOD[cls]))
+            g.add((node, PROV.wasDerivedFrom, GEOLOD["SISALv3_DataSource"]))
+
+            entity = entity_uris.get(sample_row["entity_id"])
+            if entity is not None:
+                g.add((node, GEOLOD["inSpeleothem"], entity))
+
+            sample = sample_uris.get(sample_id)
+            if sample is not None:
+                g.add((node, GEOLOD["markedBySample"], sample))
+                if cls == "RecordGap":
+                    g.add((node, CRM["P140_assigned_attribute_to"], sample))
+
+            depth = num(sample_row.get("depth_sample"))
+            if depth is not None:
+                g.add((node, GEOLOD["atDepth_mm"], dec(depth, DEC_DEPTH)))
+
+            if cls == "GrowthHiatus" and depth is not None:
+                key = (sample_row["entity_id"], round(depth, 3))
+                event = events_by_key.get(key)
+                if event is not None:
+                    matched.add(key)
+                    models = models_using(event)
+                    if not models:
+                        tally["no_model_statement"] += 1
+                    for model in models:
+                        g.add((node, GEOLOD["respectedByAgeModel"],
+                               GEOLOD[f"AgeModel_{model}"]))
+                        tally["model_statements"] += 1
+            tally[counter] += 1
+
+    tally["unmatched_events"] = len(events_by_key) - len(matched)
+    return tally
+
+
+def control_point_depths(measurements: list[dict], forming: list[dict],
+                         samples_by_id: dict[str, dict]) -> dict[tuple[str, str],
+                                                                tuple[float, float]]:
+    """The depth span each model's own control points cover, per speleothem.
+
+    Depth and not age, because extrapolation is a statement about where a
+    sample sits relative to the dated part of the record. Measured in ages it
+    would test the model against its own output.
+
+    The seven SISAL models read their own date_used_* column. original gets no
+    span at all: those columns belong to sisal_chronology and say nothing about
+    what the original authors had in front of them. Falling back to the overall
+    date_used would put a span under original built from points no triple in
+    the graph attributes to it, and the claim would be about someone else's
+    publication rather than about this release. Its assignments therefore carry
+    no geolod:beyondOutermostAgeControlPoint and count as untestable instead.
+    """
+    spans: dict[tuple[str, str], tuple[float, float]] = {}
+
+    def extend(entity_id: str, model: str, depth: float) -> None:
+        key = (entity_id, model)
+        low, high = spans.get(key, (depth, depth))
+        spans[key] = (min(low, depth), max(high, depth))
+
+    for row in measurements + forming:
+        depth = num(row.get("depth_dating"))
+        if depth is None:
+            continue
+        for model in models_using(row):
+            extend(row["entity_id"], model, depth)
+    return spans
+
+
 def collect_ages(chronology: list[dict], original: list[dict]) -> dict:
     """Every model's age per sample, read once and reused twice.
 
@@ -939,7 +1250,9 @@ def leading_ages(by_sample: dict, superseded: set[str]) -> dict[str, tuple[str, 
 
 def add_ages(core: Graph, alt: Graph, by_sample: dict,
              sample_uris: dict[str, URIRef],
-             leading_by_sample: dict[str, tuple[str, float]]) -> dict[str, int]:
+             leading_by_sample: dict[str, tuple[str, float]],
+             spans: dict[tuple[str, str], tuple[float, float]] | None = None,
+             samples_by_id: dict[str, dict] | None = None) -> dict[str, int]:
     """Every model's age for every sample, with exactly one marked leading.
 
     The leading rule, and the reason it stops at entity_status:
@@ -953,7 +1266,8 @@ def add_ages(core: Graph, alt: Graph, by_sample: dict,
       3. otherwise nothing leads, and the sample carries only alternatives.
     """
     tally = {"assignments": 0, "leading_lin_interp": 0, "leading_original": 0,
-             "no_leading": 0, "extrapolated": 0}
+             "no_leading": 0, "extrapolated": 0,
+             "beyond_control": 0, "within_control": 0, "no_control_span": 0}
 
     for sample_id, entries in by_sample.items():
         sample = sample_uris.get(sample_id)
@@ -1003,6 +1317,28 @@ def add_ages(core: Graph, alt: Graph, by_sample: dict,
                             Literal(True, datatype=XSD.boolean)))
                 tally["extrapolated"] += 1
 
+            # The second reading, from the dating points themselves (S3c.3).
+            # It answers the question the first one only guesses at: does this
+            # sample lie inside the depth span this model's own control points
+            # cover? Written for both answers, because a false here is a
+            # statement and its absence is not - and left off entirely where
+            # there is no span, which is every original_chronology age and
+            # every model that never reached this speleothem.
+            if spans is not None and samples_by_id is not None:
+                sample_row = samples_by_id.get(sample_id)
+                depth = num(sample_row.get("depth_sample")) if sample_row else None
+                span = spans.get((sample_row["entity_id"], key)) if sample_row else None
+                if depth is not None and span is not None:
+                    beyond = depth < span[0] or depth > span[1]
+                    target.add((node, GEOLOD["beyondOutermostAgeControlPoint"],
+                                Literal(beyond, datatype=XSD.boolean)))
+                    if beyond:
+                        tally["beyond_control"] += 1
+                    else:
+                        tally["within_control"] += 1
+                else:
+                    tally["no_control_span"] += 1
+
             if is_leading:
                 # The time position is written for the leading age only. For
                 # an alternative, geolod:ageKaBP with geolod:inChronology says
@@ -1046,11 +1382,13 @@ STEPS = [
     "cave catalogue",
     "speleothems and samples",
     "isotope observations",
+    "dating points, hiatuses and gaps",
     "age assignments",
     "provenance",
     "writing the annotations",
     "writing the core graph",
     "writing the chronologies",
+    "writing the dating points",
 ]
 
 
@@ -1058,7 +1396,7 @@ def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
     serializer, suffix = DATA_FORMATS[data_format]
 
     print("\n" + "=" * 72)
-    print("  S3c.2 - SISAL cut to RDF")
+    print("  S3c.2/S3c.3 - SISAL cut to RDF")
     print("=" * 72)
     print(f"  Input:  {TABLES_DIR}")
     print(f"  Format: {data_format} ({suffix}) for the two large graphs, "
@@ -1074,6 +1412,10 @@ def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
         d13c = read_table("d13c")
         chronology = read_table("sisal_chronology")
         original = read_table("original_chronology")
+        dating = read_table("dating")
+        hiatus = read_table("hiatus")
+        gaps = read_table("gap")
+        samples_by_id = {row["sample_id"]: row for row in samples}
 
         print(f"  {len(sites)} sites, {len(entities)} speleothems, "
               f"{len(samples)} samples")
@@ -1113,23 +1455,49 @@ def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
               f"({undated_d18o} and {undated_d13c} of them undated)")
 
         beat.step(STEPS[5])
+        dat = Graph()
+        bind_prefixes(dat)
+        add_dating_methods(dat)
+        measurements, forming, hiatus_events = split_dating(dating)
+        dating_tally = add_dating(dat, measurements, forming, entity_uris)
+        break_tally = add_hiatus_and_gaps(dat, hiatus, gaps, hiatus_events,
+                                          samples_by_id, entity_uris, sample_uris)
+        spans = control_point_depths(measurements, forming, samples_by_id)
+        print(f"  {dating_tally['points']} dating points "
+              f"({dating_tally['forming']} of them observed growth, "
+              f"{dating_tally['dropped']} measurements not used by any chronology)")
+        print(f"  {break_tally['hiatus']} hiatuses and {break_tally['gaps']} gaps, "
+              f"{break_tally['model_statements']} model statements on them")
+        if break_tally["no_model_statement"]:
+            print(f"  {break_tally['no_model_statement']} hiatuses without a "
+                  f"model statement (superseded Corchia records)")
+        if break_tally["unmatched_events"]:
+            print(f"  ⚠  {break_tally['unmatched_events']} Event; hiatus rows "
+                  f"without a matching hiatus row")
+
+        beat.step(STEPS[6])
         alt = Graph()
         bind_prefixes(alt)
-        tally = add_ages(g, alt, by_sample, sample_uris, leading)
+        tally = add_ages(g, alt, by_sample, sample_uris, leading,
+                         spans=spans, samples_by_id=samples_by_id)
         print(f"  {tally['assignments']} age assignments over eight models")
         print(f"    leading, lin_interp        {tally['leading_lin_interp']:>7d}")
         print(f"    leading, original          {tally['leading_original']:>7d}")
         print(f"    no leading age             {tally['no_leading']:>7d}")
         print(f"    extrapolated past 1950     {tally['extrapolated']:>7d}")
+        print(f"    beyond its control points  {tally['beyond_control']:>7d}")
+        print(f"    inside its control points  {tally['within_control']:>7d}")
+        print(f"    no control span to test    {tally['no_control_span']:>7d}")
 
-        beat.step(STEPS[6])
+        beat.step(STEPS[7])
         add_generation_provenance(
             g,
             GEOLOD["SISAL_Dataset"],
             GEOLOD["SISAL_Generation"],
             inputs=[str(TABLES_DIR / f"{name}.csv") for name in
                     ("site", "entity", "sample", "d18o", "d13c",
-                     "sisal_chronology", "original_chronology")] + [__file__],
+                     "sisal_chronology", "original_chronology",
+                     "dating", "hiatus", "gap")] + [__file__],
             agents=[ORCID_FLO],
             label="SISAL v3 RDF generation (S3c.2)",
         )
@@ -1148,22 +1516,30 @@ def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
         # The annotations stay Turtle whatever the run: 933 triples, read by
         # people as often as by machines, and small enough that the format
         # costs nothing.
-        beat.step(STEPS[7])
+        beat.step(STEPS[8])
         ann_path = RDF_DIR / "sisal_site_annotations.ttl"
         ann.serialize(destination=str(ann_path), format="turtle")
         print(f"  ✓ {ann_path.relative_to(ROOT)}  ({len(ann):,} triples)")
 
-        beat.step(STEPS[8])
+        beat.step(STEPS[9])
         core_path = RDF_DIR / f"sisal_v3_core{suffix}"
         g.serialize(destination=str(core_path), format=serializer,
                     encoding="utf-8")
         print(f"  ✓ {core_path.relative_to(ROOT)}  ({len(g):,} triples)")
 
-        beat.step(STEPS[9])
+        beat.step(STEPS[10])
         alt_path = RDF_DIR / f"sisal_v3_chronologies{suffix}"
         alt.serialize(destination=str(alt_path), format=serializer,
                       encoding="utf-8")
         print(f"  ✓ {alt_path.relative_to(ROOT)}  ({len(alt):,} triples)")
+
+        # Turtle whatever the run, like the annotations: at some fifteen
+        # thousand triples the format costs nothing, and the file is one a
+        # person reads to find out what an age rests on.
+        beat.step(STEPS[10])
+        dat_path = RDF_DIR / "sisal_v3_dating.ttl"
+        dat.serialize(destination=str(dat_path), format="turtle")
+        print(f"  ✓ {dat_path.relative_to(ROOT)}  ({len(dat):,} triples)")
     finally:
         beat.stop()
     return True

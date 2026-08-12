@@ -23,6 +23,7 @@
 #                           Observation, plus generic sosa:Observation
 #   C. Geometry shapes    — geo:Geometry / sf:Point with WKT literal
 #   D. Provenance shapes  — DataSource, prov:Activity
+#   E. Dating shapes      — strat:AgeControlPoint, GrowthHiatus, RecordGap
 #
 # Validation
 #   The bundle_rdf.py SHACL step picks up *.ttl files from ontology/shapes/
@@ -42,6 +43,7 @@
 @prefix sf:         <http://www.opengis.net/ont/sf#> .
 @prefix dct:        <http://purl.org/dc/terms/> .
 @prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix strat:      <http://w3id.org/geo-lod/strat/> .
 
 <http://w3id.org/geo-lod/shapes>
     a owl:Ontology ;
@@ -447,4 +449,131 @@ geolod:ProvActivityShape
         sh:datatype xsd:dateTime ;
         sh:severity sh:Warning ;
         sh:message "prov:Activity should have at most one prov:generatedAtTime (xsd:dateTime)."@en ;
+    ] .
+
+
+# ============================================================================
+# E. DATING SHAPES  (S3c.3)
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# E.1  strat:AgeControlPoint
+# ----------------------------------------------------------------------------
+# A control point is only useful if it says where it sits and what record it
+# constrains. The age is a warning and not a violation: the two actively
+# forming rows are control points by observation, and a future release may
+# hold others that fix a depth without dating it.
+
+geolod:AgeControlPointShape
+    a sh:NodeShape ;
+    sh:targetClass strat:AgeControlPoint ;
+    rdfs:label "strat:AgeControlPoint shape"@en ;
+
+    sh:property [
+        sh:path geolod:constrainsSpeleothem ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Every dating point must name the speleothem it constrains."@en ;
+    ] ;
+
+    sh:property [
+        sh:path geolod:atDepth_mm ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "Every dating point must carry exactly one depth in mm."@en ;
+    ] ;
+
+    sh:property [
+        sh:path geolod:datingMethod ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:severity sh:Warning ;
+        sh:message "A dating point should name its method; without it a consumer cannot tell a laboratory age from an observed one."@en ;
+    ] ;
+
+    sh:property [
+        sh:path geolod:ageKaBP ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:severity sh:Warning ;
+        sh:message "A dating point should carry at most one age in ka BP."@en ;
+    ] .
+
+
+# ----------------------------------------------------------------------------
+# E.2  geolod:GrowthHiatus
+# ----------------------------------------------------------------------------
+# The back-reference to the sample row is required, not decorative: the depth
+# in the graph comes from that row, and without it the number cannot be traced.
+
+geolod:GrowthHiatusShape
+    a sh:NodeShape ;
+    sh:targetClass geolod:GrowthHiatus ;
+    rdfs:label "geolod:GrowthHiatus shape"@en ;
+
+    sh:property [
+        sh:path geolod:inSpeleothem ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Every hiatus must name the speleothem it interrupts."@en ;
+    ] ;
+
+    sh:property [
+        sh:path geolod:markedBySample ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Every hiatus must name the sample row that marks it in SISAL."@en ;
+    ] ;
+
+    sh:property [
+        sh:path geolod:atDepth_mm ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "Every hiatus must carry exactly one depth in mm."@en ;
+    ] ;
+ .
+
+# No constraint on geolod:respectedByAgeModel. Four of the 21 hiatuses carry
+# none, all of them in Corchia records SISAL has since superseded, and a
+# warning that fires five times per run on a known and explained set trains
+# the reader to skip the warnings. The count is in the pipeline report instead.
+
+
+# ----------------------------------------------------------------------------
+# E.3  geolod:RecordGap
+# ----------------------------------------------------------------------------
+# A gap says nothing about deposition, so it carries no model statement and
+# nothing about the archive - only where the record stops covering.
+
+geolod:RecordGapShape
+    a sh:NodeShape ;
+    sh:targetClass geolod:RecordGap ;
+    rdfs:label "geolod:RecordGap shape"@en ;
+
+    sh:property [
+        sh:path geolod:inSpeleothem ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Every record gap must name the speleothem whose record it interrupts."@en ;
+    ] ;
+
+    sh:property [
+        sh:path geolod:markedBySample ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Every record gap must name the sample row that marks it in SISAL."@en ;
+    ] ;
+
+    sh:property [
+        sh:path geolod:atDepth_mm ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "A record gap carries at most one depth in mm. Not required: all four gaps in the cut sit in the CC_stack composite, where an uncovered position has no single depth to name - 1538 of its 1542 samples have one, and the four that do not are these."@en ;
     ] .

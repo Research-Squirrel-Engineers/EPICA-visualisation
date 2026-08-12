@@ -37,6 +37,8 @@
 @prefix dcterms:    <http://purl.org/dc/terms/> .
 @prefix foaf:       <http://xmlns.com/foaf/0.1/> .
 @prefix pleiades:   <https://pleiades.stoa.org/places/vocab#> .
+@prefix strat:      <http://w3id.org/geo-lod/strat/> .
+@prefix an:         <http://w3id.org/geo-lod/analysis/> .
 @prefix fuzzysl:    <http://fuzzy-sl.squirrel.link/ontology/> .
 
 @prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
@@ -165,3 +167,24 @@ time:TimePosition
 
 time:TRS
     rdfs:subClassOf crm:E29_Design_or_Procedure .
+
+# ============================================================================
+# strat: / an:  →  CRM
+# ============================================================================
+# The two Layer-1 modules moved into geo-lod with S3c.3. They are deliberately
+# CRM-free so that wdttest-tables can keep importing them unchanged; the
+# anchoring lives here, which is the same split the WD1 family used between
+# strat.ttl and its own crm_bridge.ttl.
+#
+# Only the classes geo-lod instantiates are anchored. The rest of strat: is
+# waiting for its data (ELSA, S5) and for the merge with geolod: (S4); a
+# subClassOf axiom written now would have to be argued twice.
+
+strat:AgeControlPoint
+    rdfs:subClassOf crm:E13_Attribute_Assignment .
+
+# A dated tie point assigns an age to a depth. E13 rather than crmsci:S21,
+# because SISAL states two kinds under one heading: 1177 laboratory
+# measurements and two observations that the speleothem is still growing.
+# Both constrain the age-depth model, only the first is a measurement, and
+# geolod:datingMethod says which is which.
