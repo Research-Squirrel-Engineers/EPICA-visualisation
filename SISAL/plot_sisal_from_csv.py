@@ -19,6 +19,11 @@
 #      Liste war LR04 bis MIS 12; sie endete bei 533 ka und fuehrte MIS 3 als
 #      Interstadial, waehrend das Leitschema Railsback es als warm fuehrt.
 #   3. Achsen aus geo_lod_figures.nice_ticks statt aus handgesetzten Ticks.
+#
+# Mit S3c.6 stehen zwoelf Sites statt sechs im Ausschnitt, und jede traegt
+# ihr Klimasystem: Europa, ostasiatischer und suedamerikanischer Monsun. Fuer
+# die Einzelabbildungen aendert das nichts ausser der Anzahl; die Tafeln in
+# sisal_plates.py gruppieren danach.
 
 import os
 import sys
@@ -164,16 +169,29 @@ CAPTIONS = CaptionFile(
 # ──────────────────────────────────────────────
 # Input
 # ──────────────────────────────────────────────
-#: Which cuts are drawn, and under which name. The slug keeps the site_id in
-#: front, as the published figures do; the file name of the cut is not the
-#: figure name, because sites/spannagel_all.csv would give "spannagel_all".
+#: Which cuts are drawn, under which name, and in which climate system. The
+#: slug keeps the site_id in front, as the published figures do; the file name
+#: of the cut is not the figure name, because sites/spannagel_all.csv would
+#: give "spannagel_all".
+#:
+#: *cluster* is read by sisal_plates only. It stands here and not there
+#: because it is a property of the site, and the plate module should not hold
+#: a second list of which sites exist. The three keys are the ones
+#: sisal_plates.CLUSTERS names; a site whose key is unknown to that module
+#: gets its single figures and no plate.
 SITES = [
-    {"file": "spannagel_all.csv", "slug": "58_spannagel"},
-    {"file": "sanbao.csv", "slug": "140_sanbao"},
-    {"file": "botuvera.csv", "slug": "144_botuvera"},
-    {"file": "corchia.csv", "slug": "145_corchia"},
-    {"file": "piani_eterni_karst_system.csv", "slug": "202_pianieterni"},
-    {"file": "buraca_gloriosa.csv", "slug": "275_buracagloriosa"},
+    {"file": "jaragua.csv", "slug": "10_jaragua", "cluster": "south_american_monsoon"},
+    {"file": "lapa_sem_fim.csv", "slug": "24_lapasemfim", "cluster": "south_american_monsoon"},
+    {"file": "dongge.csv", "slug": "39_dongge", "cluster": "east_asian_monsoon"},
+    {"file": "spannagel_all.csv", "slug": "58_spannagel", "cluster": "europe"},
+    {"file": "heshang.csv", "slug": "122_heshang", "cluster": "east_asian_monsoon"},
+    {"file": "xiaobailong.csv", "slug": "127_xiaobailong", "cluster": "east_asian_monsoon"},
+    {"file": "sanbao.csv", "slug": "140_sanbao", "cluster": "east_asian_monsoon"},
+    {"file": "botuvera.csv", "slug": "144_botuvera", "cluster": "south_american_monsoon"},
+    {"file": "corchia.csv", "slug": "145_corchia", "cluster": "europe"},
+    {"file": "piani_eterni_karst_system.csv", "slug": "202_pianieterni", "cluster": "europe"},
+    {"file": "buraca_gloriosa.csv", "slug": "275_buracagloriosa", "cluster": "europe"},
+    {"file": "huagapo.csv", "slug": "277_huagapo", "cluster": "south_american_monsoon"},
 ]
 
 
@@ -482,6 +500,7 @@ def collect_site(cfg, entity_names) -> dict:
 
     return {
         "slug": cfg["slug"],
+        "cluster": cfg["cluster"],
         "site_name": df["site_name"].iloc[0],
         "site_id": int(df["site_id"].iloc[0]),
         "rows": len(df),
