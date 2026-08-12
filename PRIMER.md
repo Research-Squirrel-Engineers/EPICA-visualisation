@@ -284,6 +284,16 @@ lesen hier ab, statt neu zu diskutieren.
 | Ort der SQL in `wdttest-sisal` | Kopie in `data.yaml`, kein Verweis auf `queries.yaml`. Das Repo muss aus seinem eigenen Klon laufen; ein Pfad in eine Nachbararbeitskopie bricht für jeden, der keine hat. `copied_from` nennt Datei und Stand, damit ein Auseinanderlaufen datierbar ist statt geraten. Eine eigene `queries.yaml` schied auch deshalb aus, weil der Name in der Familie schon die SPARQL-Beispiele der Query-Seite bezeichnet | 2026-08-11 |
 | Ort der CSV in `wdttest-sisal` | `data/derived/`, versioniert. Erzeugt und zugleich Eingabe des Zeichenschritts, dieselbe Lage und dieselbe Begründung wie beim Ausschnitt in geo-lod. `data.yaml` weist sie über `derived:` aus, womit `make_metadata` sie als Ergebnis führt und nicht als mitgeliefertes Rohdatum | 2026-08-11 |
 | Abruf bei jedem Lauf | ja, mit Rückfall. Eine nicht erreichbare Datenbank bricht `main.py` nicht ab, sondern wird gemeldet, und gezeichnet wird aus den eingecheckten CSV — sonst wäre das Supplementary ohne Postgres nicht mehr nachrechenbar. Abweichende Zeilenzahl ist etwas anderes und bricht unter `--strict` ab: dann hat sich der Datensatz geändert | 2026-08-11 |
+| Klasse der SISAL-Datierungspunkte | `strat:AgeControlPoint`, kein eigenes `geolod:`-Pendant. Ein Bohrkern und ein Speläothem stützen ihr Altersmodell mit derselben Art Ding, und zwei Namen dafür wären in S4 wieder zusammenzuführen | 2026-08-12 |
+| Ort von `strat.ttl` und `analysis_core.ttl` | geo-lod, `ontology/`. Vorgriff auf S4: wenn geo-lod die Hauptontologie ist, kann sie nicht in einem Konsumenten-Repo gepflegt werden. Beide bleiben CRM-frei, die Verankerung steht in `crm_bridging.ttl`; `analysis_core.ttl` kommt mit, weil `strat:hostsSpecimen` auf `an:Specimen` zeigt. `wdttest-tables` hält bis S4 seine Kopie, führend ist ab jetzt geo-lod | 2026-08-12 |
+| Einheiten an den Datierungspunkten | Klasse aus `strat:`, Grössen aus `geolod:`. `strat:depthTop` ist in Metern und `strat:age` in Jahren b2k, SISAL rechnet in Millimetern und geo-lod in ka BP; gemischt stünden zwei Skalen unter einem Prädikat | 2026-08-12 |
+| Umfang der `dating`-Zeilen | die Tabelle führt drei Sorten. `date_used = 'yes'` gilt für die 1177 Messzeilen, 1150 bleiben. Die 2 `Event; actively forming` sind Stützpunkte und passieren ungefiltert. Die 21 `Event; hiatus` sind keine Datierungen: `date_used` sagt dort nicht, ob ein Hiatus existiert, sondern ob ein Punkt in eine Chronologie einging | 2026-08-12 |
+| Hiatus und Lücke | zwei Klassen. `geolod:GrowthHiatus` unter `crmarchaeo:A3_Stratigraphic_Interface` ist eine Aussage über das Archiv, `geolod:RecordGap` unter `crm:E13_Attribute_Assignment` eine über die Messreihe. Beide mit `geolod:markedBySample` auf die Probenzeile zurück | 2026-08-12 |
+| Quelle der Hiaten | `hiatus.csv`. Die 21 `Event; hiatus` in `dating` sind dieselben 21, eins zu eins über Entität und Tiefe geprüft; aus ihnen kommt allein `geolod:respectedByAgeModel` | 2026-08-12 |
+| `beyondOutermostAgeControlPoint` | Tiefenbereich je Entität und Modell, aus den `date_used_*`-Spalten. Tiefe und nicht Alter, weil Extrapolation eine Aussage darüber ist, wo eine Probe relativ zum datierten Abschnitt liegt; in Altern gemessen prüfte man das Modell gegen sein eigenes Ergebnis. `original` bekommt keine Spanne und kein Kennzeichen: die Spalten gehören zu `sisal_chronology` und sagen über die Originalpublikation nichts. Steht neben `geolod:extrapolatedBeyondDatingRange`, ersetzt es nicht | 2026-08-12 |
+| Format von `sisal_v3_dating.ttl` | immer Turtle, wie die Annotationen. 15 220 Tripel sind klein genug, und die Datei wird gelesen, wenn jemand wissen will, worauf ein Alter beruht | 2026-08-12 |
+| Eigenschaftscharakteristiken im Coverage-Check | `owl:TransitiveProperty` und die acht verwandten kommen in die Ausnahmeliste von `validate_crm_coverage`. Eine Charakteristik ist keine Entität, die einen CRM-Vorfahren haben könnte; ein Bridging-Axiom dafür diente allein dazu, eine Ampel grün zu bekommen | 2026-08-12 |
+| Versionsstempel in den SVG | `dc:creator` trägt einen festen String aus `GEO_LOD_RELEASE` statt der matplotlib-Version. Die Konstante ist dafür nach `ontology/geo_lod_release.py` gewandert, weil `geo_lod_figures` rdflib-frei bleibt; `geo_lod_utils` re-exportiert sie | 2026-08-12 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -297,7 +307,8 @@ noch nicht entschieden.
 | Pfad | Inhalt | Ziel des Redirects | Status |
 |---|---|---|---|
 | `/geo-lod/` | Kernontologie: Klassen und Properties, flach | `geo_lod_core.ttl` | aktiv |
-| `/geo-lod/strat/` | `strat:` — Semantic Layer der WD1-Familie | `strat.ttl` in `wdttest-tables` | aktiv |
+| `/geo-lod/strat/` | `strat:` — Stratigraphie eines Bohrkerns, CRM-frei | `ontology/strat.ttl` | aktiv (S3c.3 übernommen) |
+| `/geo-lod/analysis/` | `an:` — Analysemotor, CRM-frei | `ontology/analysis_core.ttl` | aktiv (S3c.3 übernommen) |
 | `/geo-lod/vocab/mis/` | MIS-Stadien und -Substadien, Grenzen als E13 | `ontology/vocab/mis.ttl` | aktiv (S1) |
 | `/geo-lod/vocab/tephra/` | Marker-Tephren, Join zwischen WD1, ELSA und CI | `ontology/vocab/tephra.ttl` | reserviert (S5) |
 | `/geo-lod/epica/` | Instanzdaten Eiskern | `EPICA/rdf/` | aktiv (S2) |
@@ -336,7 +347,7 @@ noch nicht entschieden.
 | S3b | SISAL: Loader, Guard, Aufräumen | sisal-db-v3 | S3a | erledigt 2026-08-11 |
 | S3c.1 | SISAL: CSV-Ausschnitt aus der Datenbank | sisal-db-v3 + geo-lod | S3b | erledigt 2026-08-11 |
 | S3c.2 | SISAL nach RDF: Kern | geo-lod | S0, S1, S3c.1 | erledigt 2026-08-11 |
-| S3c.3 | SISAL nach RDF: Datierungen und Lücken | geo-lod | S3c.2 | offen |
+| S3c.3 | SISAL nach RDF: Datierungen und Lücken | geo-lod | S3c.2 | erledigt 2026-08-12 |
 | S3c.4 | SISAL-Abbildungen und Captions | geo-lod | S3c.2 | offen |
 | S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | erledigt 2026-08-11 |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c.3 | offen |
@@ -1250,25 +1261,112 @@ verlorenen Zeit, nicht die Prüfung selbst.
 
 **Ziel:** `dating`, `hiatus` und `gap` modellieren.
 
-**Uploads:** geo-lod-Bundle (A5).
+**Uploads:** geo-lod-Bundle (A5), dazu `data/derived/sisal/tables/sample.csv`
+einzeln — sie liegt mit 1,4 MB über dem Grössenfilter, und `hiatus` und `gap`
+führen nichts als `sample_id`.
 
-**Ergebnis:** erweiterte Ontologie und Shapes, zusätzliche Tripel.
+**Ergebnis:** `ontology/strat.ttl` und `ontology/analysis_core.ttl` aus
+`wdttest-tables` übernommen, `crm_bridging.ttl` und `core_shapes.ttl`
+erweitert, `SISAL/sisal_rdf.py` um drei Funktionen und einen vierten
+Ausgabegraphen ergänzt, `bundle_rdf.py` an einer Stelle korrigiert.
 
-**Fertig, wenn:** SHACL sauber ist und eine Abfrage sagen kann, worauf ein
-Alter an einer bestimmten Tiefe beruht.
+**Erledigt 2026-08-12.** Bundle grün, CRM-Coverage 60/60, SHACL null Verstösse
+und die bekannte `cisite_59`-Warnung. `sisal_v3_dating.ttl` über zwei Läufe
+byte-identisch.
 
-- 1200 U/Th-Datierungen werden eigene Messereignisse, nach dem Muster von
-  `strat:AgeControlPoint`. Dasselbe Muster wie bei den MIS-Grenzen.
-- 21 Hiaten und 4 Lücken sind Aussagen über das Archiv, nicht über die
-  Messreihe. Der Unterschied zur Darstellungskonvention aus S2 ist zu wahren:
-  ein gestrichelter Abschnitt heisst „hier keine Proben", ein Hiatus heisst
-  „hier kein Eintrag".
-- `original_chronology` ist mit S3c.2 erledigt: es ist als achtes Altersmodell
-  im Graphen, mit `geolod:assignmentStatus` wie die anderen sieben.
-- Die Datierungspunkte machen `geolod:extrapolatedBeyondDatingRange` prüfbar.
-  Bisher steht das Kennzeichen an den 30 Altern vor 1950, hergeleitet aus dem
-  Vorzeichen; mit `dating` liesse sich sagen, wo der äusserste Stützpunkt
-  wirklich liegt.
+```
+1152 dating points (2 of them observed growth, 27 measurements not used by any chronology)
+21 hiatuses and 4 gaps, 72 model statements on them
+4 hiatuses without a model statement (superseded Corchia records)
+132 531 age assignments over eight models
+  extrapolated past 1950        30
+  beyond its control points   6150
+  inside its control points  95029
+  no control span to test    31352
+```
+
+`sisal_v3_dating.ttl` 15 220 Tripel. `sisal_v3_core.nt` wächst von 1 230 751
+auf 1 248 976, `sisal_v3_chronologies.nt` von 884 822 auf 967 788 — das neue
+Kennzeichen steht an jeder Weisung, die eine Spanne hat, mit beiden Antworten.
+Entwicklungsbundle 1 467 841 Tripel.
+
+**Wie `dating` zerlegt ist.** Die Tabelle führt drei Sorten unter einer
+Überschrift: 1177 Labormessungen, 2 Zeilen `Event; actively forming` und 21
+`Event; hiatus`. Nur die ersten beiden tragen ein Alter. Ein Filter über alle
+hätte die Kategorien vermischt — `date_used` sagt, ob ein Punkt in eine
+Chronologie einging, und auf eine Ereigniszeile angewandt beantwortet es eine
+Frage, die niemand gestellt hat. SB61 belegt es: die Zeile steht auf `no`, und
+der Hiatus steht unbestritten in `hiatus.csv`.
+
+**Was die Ereigniszeilen beitragen.** Nicht den Hiatus — den führt
+`hiatus.csv`, eins zu eins über Entität und Tiefe geprüft, ohne Rest auf
+beiden Seiten. Sie tragen die sieben `date_used_*`-Spalten, und die sagen je
+Modell, ob es den Hiatus respektiert oder darüber hinweg interpoliert hat: bei
+den 21 respektiert `stalage` 17, `lin_interp` 16, `bacon` einen und `oxcal`
+keinen. Das ist eine Eigenschaft der Chronologien und keine der Höhle, und sie
+ginge verloren, wenn man die Zeilen als Dubletten wegwürfe.
+
+**Der Fehler im alten Extrapolationskennzeichen.** Die zwei `actively
+forming`-Zeilen gehören zu BT-2 und BT-2_2007 und datieren die Spitze auf
+−50 a, also 2000 CE. Genau dieses Alter trug bisher
+`geolod:extrapolatedBeyondDatingRange`, hergeleitet aus dem Vorzeichen — dabei
+ist es kein Schritt über den obersten Stützpunkt hinaus, sondern der
+Stützpunkt selbst. Von den 30 Treffern des alten Kennzeichens sind nach der
+Gegenprobe 4 falsch, 19 bestätigt und 7 ohne Gegenaussage. Die 4 sind eine
+Probe von BT-2 in vier Modellen.
+
+In der anderen Richtung findet das neue Kennzeichen 6150 Weisungen, die dem
+alten entgehen mussten, weil ihr Alter positiv ist: Buraca Gloriosa, wo die
+Modelle unterhalb des tiefsten Stützpunkts weiterrechnen, BG66 mit 67 Proben
+je Modell.
+
+**Was dabei sonst herauskam.**
+
+- 982 der 1152 Punkte tragen `geolod:usedInAgeModel`. Die übrigen 170 haben
+  ein globales `date_used = 'yes'`, aber keine der sieben Modellspalten — sie
+  gehören zu Entitäten ohne `sisal_chronology`-Zeile. Ein erster Entwurf liess
+  `original` auf diese Punkte zurückfallen; das war eine Annahme über eine
+  fremde Publikation und ist entfallen.
+- Die vier Lücken sitzen alle in `CC_stack` und tragen keine Tiefe. Von deren
+  1542 Proben haben 1538 eine; die vier ohne sind genau die Lücken. Eine
+  Composite-Entität hat an einer unbedeckten Stelle keine Tiefe, die man
+  nennen könnte, und die Shape verlangt sie deshalb nicht.
+- Der Coverage-Check las die fünf Allen-Relationen aus `strat.ttl` als
+  Instanzen zweier nicht verankerter Klassen, weil sie neben
+  `owl:ObjectProperty` ihre Charakteristik als zweiten `rdf:type` tragen. Der
+  Prüfer hatte für so etwas schon eine Ausnahmeliste, nur ohne diese neun
+  Klassen.
+- `strat.ttl` bleibt CRM-frei. Das ist keine Nachlässigkeit, sondern die
+  Schichtung, die `wdttest-tables` gewählt hat, und sie ist die Bedingung
+  dafür, dass die Datei dort unverändert weiter importierbar bleibt.
+
+**Was S4 damit abnimmt und was nicht.** Der Umzug von `strat.ttl` und
+`analysis_core.ttl` ist erledigt. Offen bleiben die beiden Bridges — geo-lods
+`crm_bridging.ttl` und das `crm_bridge.ttl` der WD1-Familie stehen weiter
+nebeneinander, samt der CRMarchaeo-Namensraumkollision — sowie
+`strat:ageKaBP` gegen `geolod:ageKaBP` und der A2-Umbau an
+`geolod:CIArchaeologicalSite`.
+
+**Abfrage, die den Schritt abnimmt.**
+
+```sparql
+PREFIX geolod: <http://w3id.org/geo-lod/>
+PREFIX strat:  <http://w3id.org/geo-lod/strat/>
+
+SELECT ?sample ?depth ?age ?beyond (COUNT(?point) AS ?points)
+WHERE {
+  ?sample geolod:hasAgeAssignment ?a ;
+          geolod:collectedFrom ?entity ;
+          geolod:atDepth_mm ?depth .
+  ?a geolod:ageModel geolod:AgeModel_lin_interp ;
+     geolod:ageKaBP ?age ;
+     geolod:beyondOutermostAgeControlPoint ?beyond .
+  ?point a strat:AgeControlPoint ;
+         geolod:constrainsSpeleothem ?entity ;
+         geolod:usedInAgeModel geolod:AgeModel_lin_interp .
+}
+GROUP BY ?sample ?depth ?age ?beyond
+```
 
 ---
 
@@ -1507,6 +1605,14 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   im Index LF. Kein Diff, aber bei jedem `git status` eine Warnzeile je Datei.
   Ein binärer Dateihandle an den `savefig`-Stellen räumt das auf — in
   `wdttest-sisal` sind es zwei, in geo-lod ist es seit S2 gelöst.
+- ~~Matplotlib schreibt seine Version in `dc:creator`, was jede Abbildung bei
+  jedem Versionswechsel als geändert meldet.~~ Erledigt 2026-08-12 für
+  geo-lod: fester String aus `GEO_LOD_RELEASE`, die Konstante dafür nach
+  `ontology/geo_lod_release.py` gezogen. Aufgefallen beim Abschluss von
+  S3c.3, als ein Sprung von 3.9.2 auf 3.9.4 vierzig unveränderte Abbildungen
+  als geändert meldete. Die `wdttest-*`-Familie hat den Stempel ebenfalls
+  drin; ob sie nachzieht, ist dort zu entscheiden — der Wert müsste ein
+  anderer sein, geo-lods Release passt nicht auf ein WD1-Repository.
 - `per_site` in `postgres/queries.yaml` von `sisal-db-v3` schreibt sechs flache
   CSV, die seit S3d niemand mehr liest. Behalten als Vergleichsbasis oder
   streichen — zu entscheiden, wenn das Repo eine DOI bekommt.
@@ -1577,3 +1683,19 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   `geolod:assignmentStatus` in den Graphen. In der Site-Auswahl sind es zwei,
   −10,9 a bei SB-43 und −50,0 a bei BT-2; die Bunker-Cave-Werte liegen
   ausserhalb.
+
+- Die 27 Messzeilen mit `date_used = 'no'` sind im Graphen nicht sichtbar.
+  Nach dem Beschluss aus S3c.3 richtig, aber es ist eine Aussage über die
+  Chronologien, die damit verloren geht: eine Datierung, die keine benutzt
+  hat. Falls sie gebraucht wird, kämen sie mit eigenem Status zurück.
+- `geolod:extrapolatedBeyondDatingRange` hat vier belegte Falschtreffer, alle
+  an BT-2. Ob es nach einer Weile Doppelbetrieb entfällt, ist in S4 zu
+  entscheiden — es ist eine publizierte Eigenschaft und unterliegt derselben
+  Zurückhaltung wie die unbenutzten Vokabularterme.
+- 31 352 Altersweisungen tragen kein `geolod:beyondOutermostAgeControlPoint`.
+  Der grösste Teil sind `original`-Alter, die keine Spanne bekommen; der Rest
+  sind Modelle, die eine Entität nie erreicht haben. Aufschlüsseln lohnt erst,
+  wenn jemand die Zahl braucht.
+- `wdttest-tables` hält weiter eine eigene Kopie von `strat.ttl` und
+  `analysis_core.ttl`. Bis S4 existieren beide doppelt; führend ist seit
+  S3c.3 geo-lod, und die w3id-Redirects zeigen entsprechend dorthin (A6).
