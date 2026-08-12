@@ -1,5 +1,5 @@
-@prefix ns1: <http://w3id.org/geo-lod/> .
-@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://w3id.org/geo-lod/> .
 @prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -8,24 +8,24 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/geo-lod/epica/obs_d18o_0105> a ns1:IceCoreObservation,
+<http://w3id.org/geo-lod/epica/obs_d18o_0105> a ns2:IceCoreObservation,
         owl:NamedIndividual,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "δ¹⁸O of O₂ observation 0105 (123.2 ka BP, 1628.0 m)"@en ;
-    ns2:unit <http://qudt.org/vocab/unit/PERMILLE> ;
-    void:inDataset ns1:geo-lod ;
-    ns1:ageChronology <http://w3id.org/geo-lod/trs/AICC2023-gas> ;
-    ns1:ageKaBP 123.1502 ;
-    ns1:atDepth_m 1628.020 ;
-    ns1:fallsWithinStage <http://w3id.org/geo-lod/vocab/mis/MIS_5> ;
-    ns1:hasTimePosition <http://w3id.org/geo-lod/epica/tp_d18o_0105> ;
-    ns1:measuredValue -0.31050 ;
-    ns1:measurementType <http://w3id.org/geo-lod/epica/measurement_type_d18o> ;
-    ns1:smoothedValue_rollingMedian -0.30990 ;
-    ns1:smoothedValue_savgol -0.31326 ;
-    ns1:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
-    ns1:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
+    ns1:unit <http://qudt.org/vocab/unit/PERMILLE> ;
+    void:inDataset ns2:geo-lod ;
+    ns2:ageChronology <http://w3id.org/geo-lod/trs/AICC2023-gas> ;
+    ns2:ageKaBP 123.1502 ;
+    ns2:atDepth_m 1628.020 ;
+    ns2:fallsWithinStage <http://w3id.org/geo-lod/vocab/mis/MIS_5> ;
+    ns2:hasTimePosition <http://w3id.org/geo-lod/epica/tp_d18o_0105> ;
+    ns2:measuredValue -0.31050 ;
+    ns2:measurementType <http://w3id.org/geo-lod/epica/measurement_type_d18o> ;
+    ns2:smoothedValue_rollingMedian -0.30990 ;
+    ns2:smoothedValue_savgol -0.31326 ;
+    ns2:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
+    ns2:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
     ns3:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;
     prov:wasDerivedFrom <http://w3id.org/geo-lod/epica/source_d18o> ;
     sosa:hasFeatureOfInterest <http://w3id.org/geo-lod/epica/core_edc> ;
