@@ -221,3 +221,4 @@ dist/geo-lod-bundle.nt
 # dreimal so gross (143 MB gegen 46 MB). Versioniert wird Turtle, das ein
 # Release-Lauf schreibt:  python main.py --bundle-format release
 SISAL/rdf/*.nt
+dist/*-bundle.ttl

@@ -303,8 +303,25 @@ lesen hier ab, statt neu zu diskutieren.
 | Legendenposition | selbst gesucht und einmal je Site und Messgrösse bestimmt, dann an alle drei Glättungsvarianten gereicht. Gewertet wird die am stärksten verdeckte **einzelne** Reihe, nicht die Summe: bei Sanbao verdeckt die Ecke mit den wenigsten Punkten 90 % von SB-58, der einzigen Reihe in MIS 11 und 12, und das sind 2 % der Site. Über 10 % geht die Legende unter die Achse | 2026-08-12 |
 | Legendengrösse | gemessen, nicht geschätzt. Sanbaos drei Spalten sind 0,59 breit; eine angenommene 0,42 erklärte eine Ecke für frei, durch die eine Reihe lief | 2026-08-12 |
 | `Tee` und Ausgabekodierung | `Tee.__init__` stellt `stdout` einmal auf UTF-8. Ohne Konsole nimmt Python die Locale-Kodierung, auf Windows cp1252, und der Lauf stirbt an der ersten Abschnittsüberschrift. Betrifft beide Plotskripte | 2026-08-12 |
-| SISAL-Tafeln | zwei. `plate_coverage` hat bei EPICA kein Gegenstück, weil ein Bohrkern eine Reihe ist und eine Höhle mehrere; `plate_pipeline_outputs` folgt `plate_pipeline_outputs_five`. Ohne Gegenstück bleibt `plate_boundary_depths`: die Tiefe je Probe steht im Graphen, aber nicht im flachen Ausschnitt | 2026-08-12 |
+| SISAL-Tafeln (überholt durch S3c.6, siehe unten) | zwei. `plate_coverage` hat bei EPICA kein Gegenstück, weil ein Bohrkern eine Reihe ist und eine Höhle mehrere; `plate_pipeline_outputs` folgt `plate_pipeline_outputs_five`. Ohne Gegenstück bleibt `plate_boundary_depths`: die Tiefe je Probe steht im Graphen, aber nicht im flachen Ausschnitt | 2026-08-12 |
 | Cluster für S3c.5 | drei Klimasysteme statt sechs Einzelsites. Europa bleibt bei Spannagel, Corchia, Piani Eterni und Buraca Gloriosa; der ostasiatische Monsun bekommt Dongge (39), Xiaobailong (127) und Heshang (122) zu Sanbao; der südamerikanische Jaraguá (10), Lapa sem fim (24) und Huagapo (277) zu Botuverá. Zwölf Sites, drei Tafeln zu je vier | 2026-08-12 |
+| Zahl der SISAL-Abbildungen, zweite Fassung | 63 Einzelbilder ab zwölf Sites: δ¹⁸O für alle zwölf, δ¹³C für neun. Sanbao, Dongge und Xiaobailong führen keines. Dazu sechs Tafeln | 2026-08-12 |
+| `plate_pipeline_outputs` | entfällt, ersetzt durch drei `plate_cluster_*`. Sechs Spalten mit je eigener Altersachse sind sechs Bilder nebeneinander; vier Sites eines Klimasystems auf einer Achse sind eine Aussage | 2026-08-12 |
+| Altersachse der Cluster-Tafeln | je Cluster eine gemeinsame, lineare. Der Preis steht im Ostasien-Cluster: Heshang endet bei 9,5 ka und füllt zwei Prozent einer Achse, die bis 464,8 ka läuft. Dafür liegt ein Ausschlag bei 130 ka in Sanbao und in Dongge auf derselben Höhe. Die Werteachse bleibt je Feld skaliert; δ¹⁸O einer europäischen und einer Monsunhöhle liegen mehrere ‰ auseinander | 2026-08-12 |
+| Messgrösse der Cluster-Tafeln | nur δ¹⁸O, drei Tafeln. Eine δ¹³C-Tafel des ostasiatischen Clusters wäre ein Feld breit | 2026-08-12 |
+| `plate_coverage` | drei Tafeln, eine je Cluster, statt einer über alle zwölf Sites. 72 Balken sind zwei Fuss Bild, und die Achse einer solchen Tafel wäre für jede Zeile Sanbaos 465 ka | 2026-08-12 |
+| Reihenfolge der Felder und Balkengruppen | nach Reichweite, das älteste Archiv zuerst — dieselbe Richtung, in der die Legende einer Einzelabbildung ihre Speläotheme führt | 2026-08-12 |
+| Sehr kurze Aufzeichnungen in `plate_coverage` | als Punkt statt als Balken, unterhalb von 0,4 % der Achsenlänge. HS4_2013 deckt 171 Jahre und DA_2009 332; als Balken auf einer 465-ka-Achse sind beide schmaler als ein Pixel, und die Zeile läse sich, als gäbe es die Aufzeichnung nicht | 2026-08-12 |
+| Umfang der Entwicklungsläufe | fünf Sites, gewählt nach Prüfabdeckung statt nach Geografie: Spannagel (Grundlage der WD1-Auswertung, SPA127 doppelt, δ¹³C auf zwei von acht), Corchia (abgelöste Aufzeichnungen, Hiaten ohne Modellaussage), Piani Eterni (tief, nichts jünger als MIS 5), Huagapo (Composite ohne Tiefe, Alter nach 1950 extrapoliert), Xiaobailong (kein δ¹³C, `ICP-MS U/Th Other`). Ein Europa-Vierer wäre grösser gewesen und hätte drei dieser Prüfpfade nie erreicht | 2026-08-12 |
+| Schalter dafür | `--sisal-sites`, Voreinstellung `dev`. Ein Release-Lauf setzt `all` durch, auch wenn die Voreinstellung geerbt wurde; ein Teilgraph unter vollständigem Namen im Bundle ist der Fehler, der erst beim DOI auffällt. `--sites spannagel` baut eine einzelne Höhle, für die `wdttest-*`-Familie | 2026-08-12 |
+| Kennzeichnung eines Teilgraphen | im Report und in `owl:versionInfo` von `geolod:SISAL_Dataset`. Die Datei heisst so oder so `sisal_v3_core`, und der Report ist nicht, was ein Konsument liest | 2026-08-12 |
+| Tiefe an Datierungspunkten | Pflicht bleibt, ausser der Punkt stützt ein Composite. Huagapos `PeruMIS6Composite` trägt 37 Punkte und für keinen eine Tiefe, weil ein Composite keine eigene Tiefenskala hat. Als `sh:or` formuliert, nicht durch Streichen der Regel — fehlt die Tiefe sonstwo, bleibt es ein Verstoss | 2026-08-12 |
+| Composites im Graphen | `geolod:isComposite` und `geolod:composedOf` aus `composite_link_entity`. Ohne die Tabelle ist ein Composite von einem gewöhnlichen Speläothem nicht zu unterscheiden: `entity_status` nennt es `current` wie jedes andere. Zwei Properties, keine neue Klasse — eine Klasse bräuchte einen CRM-Anker, und die Aussage ist keine über die Art des Dings | 2026-08-12 |
+| Fehlende Datierungsmethoden | `ICP-MS U/Th Other` und `U/Th unspecified` in `DATING_METHODS` ergänzt. Nur die zwei im Ausschnitt belegten; die übrige SISAL-Werteliste wird eingetragen, wenn ein Ausschnitt sie führt | 2026-08-12 |
+| Profil des Site-Bundles | schlank: ohne die konkurrierenden Chronologien, ohne die `geolod:AgeAssignment`-Knoten und ihre `time:TimePosition`. Für Abbildung und Abfrageseite geht nichts verloren — das führende Alter steht materialisiert an der Probe, genau dafür schreibt `sisal_rdf.py` es dorthin. Verloren geht der Weg über den Zuweisungsknoten; `geolod:ageChronology` an der Probe nennt das Modell weiterhin | 2026-08-12 |
+| MIS-Vokabular im Site-Bundle | vollständig. Eine auf eine Site zugeschnittene Fassung wäre eine private Variante eines unter w3id veröffentlichten Vokabulars, und 564 KB sind das neben einer Viertelmillion Tripel nicht wert | 2026-08-12 |
+| Höhlenkatalog im Site-Bundle | nur die eine Höhle. Die übrigen 364 sind der Katalog von geo-lod, nicht Kontext dieser Site; ihre Geometrien fallen als verwaiste Knoten mit weg | 2026-08-12 |
+| Aufruf und Schutz | `bundle_rdf.py --sites spannagel`, dieselbe Schreibweise wie bei `sisal_rdf.py`. Gebaut wird nur aus einem Graphen, der genau eine Höhle mit Daten trägt, und der Name muss zu ihr passen — ein Bundle, das nach einer Site heisst und fünf enthält, ist die Datei, die niemand zweimal prüft. Ausgabe nach `dist/<site>-bundle.ttl`, mit CRM-Check und SHACL davor | 2026-08-12 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -360,8 +377,10 @@ noch nicht entschieden.
 | S3c.2 | SISAL nach RDF: Kern | geo-lod | S0, S1, S3c.1 | erledigt 2026-08-11 |
 | S3c.3 | SISAL nach RDF: Datierungen und Lücken | geo-lod | S3c.2 | erledigt 2026-08-12 |
 | S3c.4 | SISAL-Abbildungen und Captions | geo-lod | S3c.2 | erledigt 2026-08-12 |
-| S3c.5 | Ausschnitt auf zwölf Sites erweitern | sisal-db-v3 + geo-lod | S3c.1 | offen |
-| S3c.6 | Cluster-Tafeln aus den drei Klimasystemen | geo-lod | S3c.4, S3c.5 | offen |
+| S3c.5 | Ausschnitt auf zwölf Sites erweitern | sisal-db-v3 + geo-lod | S3c.1 | erledigt 2026-08-12 |
+| S3c.6 | Cluster-Tafeln aus den drei Klimasystemen | geo-lod | S3c.4, S3c.5 | erledigt 2026-08-12 |
+| S3c.7 | Site-Auswahl für Entwicklungsläufe, zwei Befunde aus dem ersten Zwölf-Site-Lauf | geo-lod | S3c.5 | erledigt 2026-08-12 |
+| S3c.8 | Site-Bundle für ein Konsumenten-Repo | geo-lod | S3c.7 | erledigt 2026-08-12 |
 | S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | erledigt 2026-08-11 |
 | S3e | CI-Strang auf den Stand von EPICA und SISAL bringen | geo-lod | S3c.4 | offen |
 | S3f | Archäologie-Komponente durchsehen | geo-lod | S3e | offen |
@@ -1449,8 +1468,27 @@ Sites belegen.
 
 **Uploads:** `sisal-db-v3`-Bundle; `postgres/queries.yaml`.
 
+**Stand:** erledigt 2026-08-12.
+
 **Ergebnis:** erweiterter Ausschnitt unter `data/derived/sisal/`, sechs weitere
-Sites in `sites/` und `tables/`, MANIFEST neu.
+Sites in `sites/` und `tables/`, MANIFEST neu. Zwölf Sites, 72 Speläotheme,
+34 662 Zeilen in den flachen Ausschnitten.
+
+**Wie weit die neuen Sites zurückreichen.** Die Frage aus der Ausgangslage ist
+beantwortet: Dongge 224,8 ka, Xiaobailong 252,5 ka. Beide stehen neben Sanbaos
+464,8 ka. Der Ausreisser ist Heshang mit 9,5 ka auf 2086 Messungen — ein
+hochaufgelöstes Holozänprofil, kein Langzeitarchiv. Südamerika streut ähnlich:
+Botuverá 116,3 ka, Lapa sem fim 84,1 ka, Jaraguá 27,9 ka, Huagapo 7,2 ka.
+Europa liegt eng beieinander, 140,1 bis 289,2 ka.
+
+**δ¹³C, wie erwartet.** Neun der zwölf Sites führen es. Sanbao, Dongge und
+Xiaobailong nicht; bei Lapa sem fim nur vier von neun Entitäten, bei Spannagel
+nur zwei von acht. Damit hat der ostasiatische Cluster keine δ¹³C-Tafel (A4).
+
+**Was der Ausschnitt sonst noch bewegt.** `SISAL/sisal_rdf.py` liest denselben
+Ausschnitt und ist auf keine Site-Liste festgelegt. Der nächste vollständige
+`main.py`-Lauf schreibt den SISAL-Graphen also über zwölf Sites statt über
+sechs — Laufzeit, SHACL und CRM-Abdeckung sind dabei einmal gegenzulesen.
 
 **Ausgangslage.** Die sechs Sites aus S3c.1 fallen bereits in drei Systeme, nur
 sehr ungleich: Europa hat vier, der ostasiatische Monsun einen, der
@@ -1475,12 +1513,131 @@ mit sechs unverbundenen Spalten.
 
 **Uploads:** geo-lod-Bundle (A5) nach S3c.5.
 
-**Ergebnis:** `plate_cluster_*` in `SISAL/sisal_plates.py`,
-`plate_coverage` auf zwölf Sites erweitert.
+**Stand:** erledigt 2026-08-12, in einem Patch.
+
+**Ergebnis:** `SISAL/sisal_plates.py` neu geschnitten — `CLUSTERS`,
+`plate_cluster` und `plate_coverage` je Cluster, `plate_pipeline_outputs`
+entfallen; `SISAL/plot_sisal_from_csv.py` führt zwölf Sites, jede mit ihrem
+Klimasystem. 63 Einzelabbildungen und sechs Tafeln, über zwei Läufe
+byte-identisch.
 
 **Warum getrennt von S3c.4.** Die Tafeln brauchen die flachen Ausschnitte, und
 die gibt es nur für Sites, die S3c.5 exportiert hat. Fachlich ist es dieselbe
 Zeichenmechanik.
+
+**Wo das Klimasystem steht.** In `SITES`, neben Datei und Slug, nicht in
+`sisal_plates`. Sonst hielten zwei Dateien eine Liste davon, welche Sites es
+gibt, und die eine wäre beim nächsten Ausschnitt die veraltete. Der Cluster ist
+eine Eigenschaft der Site; `sisal_plates.CLUSTERS` hält nur die drei Schlüssel,
+ihre Titel und die Reihenfolge der Tafeln. Ein Site mit unbekanntem Schlüssel
+bekommt seine Einzelabbildungen und wird im Lauf gemeldet.
+
+**Was dabei aufgefallen ist.**
+
+- Zwei Aufzeichnungen verschwanden in `plate_coverage`, ohne dass etwas
+  gefehlt hätte: HS4_2013 deckt 171 Jahre, DA_2009 332. Auf einer Achse bis
+  465 ka ist das schmaler als ein Pixel. Sie werden jetzt als Punkt gezeichnet
+  (A4). Der Fall tritt erst mit dem gemeinsamen Massstab auf — in einer
+  Einzelabbildung füllt HS4_2013 die halbe Höhe.
+- Die gemeinsame Achse macht die MIS-Bänder aussagekräftig: Heshangs Feld ist
+  von MIS 2 abwärts durchgehend umrissen statt gefüllt, und das ist genau die
+  Aussage "reicht nicht so weit". Ohne die Konvention aus S3c.4 wäre dasselbe
+  Feld einfach leer.
+- Die Trennung der Achsen ist der eigentliche Beschluss: Alter gemeinsam,
+  Werte je Feld. Botuverás δ¹⁸O liegt bei −4 ‰, Huagapos bei −13 ‰; auf einer
+  gemeinsamen Werteachse wären beide Kurven Striche.
+
+---
+
+### S3c.7 — Site-Auswahl für Entwicklungsläufe
+
+**Ziel:** ein Prüflauf, der klein genug ist, um ihn wirklich zu machen, und
+nicht so klein, dass er grün wird, weil er die schwierigen Fälle nicht sieht.
+
+**Uploads:** geo-lod-Bundle (A5), dazu `pipeline_report.txt` des letzten
+vollständigen Laufs.
+
+**Stand:** erledigt 2026-08-12.
+
+**Ergebnis:** `--sites` in `SISAL/sisal_rdf.py`, `--sisal-sites` in `main.py`
+mit Voreinstellung `dev`, `geolod:isComposite` und `geolod:composedOf` im
+Graphen, bedingte Tiefenregel in `core_shapes.ttl`, zwei ergänzte
+Datierungsmethoden.
+
+**Was der erste Zwölf-Site-Lauf gekostet hat.** 27 Minuten für
+`--sisal-only`: RDF 315 s, Abbildungen 99 s, Bundle und Validierung 1222 s.
+Im Bundle-Schritt entfallen rund 790 s auf Parse und Merge, 389 s auf SHACL,
+36 s auf das Serialisieren von 306 MB. Der Graph umfasst 2 234 349 Tripel.
+
+**Was der Lauf gefunden hat.** Beides in den sechs neuen Sites, beides echte
+Befunde und keine Folge des Tafel-Schritts:
+
+- 37 Verstösse, alle an Huagapos `PeruMIS6Composite`: Datierungspunkte mit
+  `date_used = yes` und ohne `depth_dating`. Ein Composite hat keine eigene
+  Tiefenskala; die Regel war zu streng, nicht die Daten falsch (A4).
+- 298 Warnungen: `ICP-MS U/Th Other` und `U/Th unspecified` fehlten in
+  `DATING_METHODS`. Xiaobailong 91, Dongge 81 und 49, Jaraguá 77.
+
+Beide Zahlen stehen nach dem Schritt bei null, gegengeprüft an genau den
+Sites, die sie erzeugt haben.
+
+**Warum nicht die vier europäischen Sites.** Sie waren der naheliegende
+Zuschnitt und der falsche. Die 218 Fälle "extrapolated past 1950" kommen
+ausschliesslich von Sanbao, Botuverá, Huagapo und Jaraguá; der tiefenlose
+Datierungspunkt von Huagapo; die nicht zugeordneten `date_type` von Dongge,
+Xiaobailong und Jaraguá. Ein Prüflauf, der grün ist, weil er die Fälle nie
+erreicht, kostet mehr als die gesparte Zeit. Der gewählte Fünfer ist mit
+13 057 Proben kleiner als der Europa-Vierer und sieht alle drei.
+
+**Was der Schalter nicht tut.** Die Abbildungen. Die entstehen aus den flachen
+Ausschnitten unter `data/derived/sisal/sites/` und zeigen weiter alle zwölf
+Sites; die Cluster-Tafeln aus S3c.6 brauchen das auch. Betroffen ist allein
+der RDF-Schritt und, über dessen Ausgabe, das Bundle.
+
+**Was offen bleibt.** Ein Prüflauf über die ganze Pipeline, nicht nur über
+SISAL. `--no-bundle` spart schon 75 % eines SISAL-Laufs, und EPICA hat mit
+seinen Abbildungen einen eigenen grossen Posten. Ob ein `--check` daraus wird,
+das Auswahl, Formatwahl und ausgelassene Abbildungen zusammenfasst, ist noch
+zu entscheiden.
+
+---
+
+### S3c.8 — Site-Bundle
+
+**Ziel:** eine Datei, die eine Höhle vollständig beschreibt und in ein Repo der
+`wdttest`-Familie umziehen kann, ohne den Rest des Graphen mitzunehmen.
+
+**Uploads:** geo-lod-Bundle (A5), dazu der Report eines Laufs mit
+`--sites <site>`.
+
+**Stand:** erledigt 2026-08-12.
+
+**Ergebnis:** `--sites` an `bundle_rdf.py`, `build_site_bundle` und
+`run_site_bundle_step`, Ausgabe nach `dist/<site>-bundle.ttl`.
+
+**Wo der Schnitt zweimal fällt.** `sisal_rdf.py --sites spannagel` entscheidet,
+welche Zeilen zu Tripeln werden; `bundle_rdf.py --sites spannagel` entscheidet,
+welche dieser Tripel mitreisen. Die Trennung ist keine Doppelung: das erste ist
+eine Aussage über den Ausschnitt, das zweite eine über den Empfänger.
+
+**Was der Zuschnitt entfernt.** Gemessen an einem Spannagel-Graphen: der
+Katalog schrumpft um 364 Höhlen und ihre Geometrien, das schlanke Profil nimmt
+die Zuweisungsknoten und Zeitpositionen. Was bleibt, beantwortet die
+Abbildungsfrage in derselben Form wie vorher:
+
+```sparql
+?s geolod:ageChronology trs:SISALv3-lin_interp ;
+   geolod:ageKaBP ?age .
+```
+
+**Was geprüft wird, bevor die Datei entsteht.** CRM-Abdeckung und SHACL, wie
+beim Gesamtbundle. Es ist die Datei, die das Repositorium verlässt, und bei
+einer Site kosten beide Prüfungen Sekunden statt Minuten.
+
+**Der Schutz davor.** Gebaut wird nur aus einem Graphen mit genau einer Höhle
+mit Daten, und der Name auf der Kommandozeile muss zu ihr passen. Nach einem
+Lauf mit `--sisal-sites dev` bricht der Schritt ab und nennt die fünf Höhlen,
+die er vorgefunden hat, statt ein Bundle unter falschem Namen zu schreiben.
 
 ---
 
@@ -1708,6 +1865,12 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 - ~~Sanbao: 5832 gegenüber 9535 Samples im Release.~~ Erledigt 2026-08-11:
   kein Zeilenverlust. 9535 sind die δ¹⁸O-Messungen ohne die beiden abgelösten
   Entitäten, 6085 die nach `lin_interp_age` datierten Proben.
+- ~~**Vollständiger Lauf über zwölf Sites steht aus.**~~ Erledigt 2026-08-12:
+  `--sisal-only` über zwölf Sites, 27 Minuten, 2 234 349 Tripel, CRM-Abdeckung
+  37 von 37. Die 37 Verstösse und 298 Warnungen des Laufs sind in S3c.7
+  behoben. Der Bundle-Schritt bleibt mit 1222 s der grösste Posten, davon rund
+  790 s Parse und Merge — das ist derselbe Datei-E/A-Posten, der weiter unten
+  schon steht.
 - Skripte, die unter Windows Dateien für andere Werkzeuge erzeugen, auf
   `utf8NoBOM` stellen. Das BOM aus PowerShell 5.1 hat in S3a zweimal wie eine
   fehlende Tabelle ausgesehen (S3b).
