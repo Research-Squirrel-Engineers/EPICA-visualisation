@@ -34,9 +34,17 @@ on geolod:LeadingAssignment instead answers a different and equally valid
 question, and returns about 31 000 samples. Both readings stay in the graph;
 that is the whole point of keeping eight models rather than one.
 
+**Not every run needs every site.** ``--sites dev`` builds the five-site
+selection in DEV_SITES, chosen so that every guard this generator has still
+fires; ``--sites spannagel`` builds one cave, which is what a consumer
+repository asks for. A partial graph says so in the report and in
+``owl:versionInfo``, because the file name is the same either way.
+
 Run through main.py, or standalone from the repository root:
 
-    python SISAL/sisal_rdf.py
+    python SISAL/sisal_rdf.py                  the whole cut
+    python SISAL/sisal_rdf.py --sites dev      the development selection
+    python SISAL/sisal_rdf.py --sites spannagel
 """
 
 from __future__ import annotations
@@ -192,6 +200,113 @@ def read_table(name: str) -> list[dict]:
         )
     with open(path, newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+# --------------------------------------------------------------------------
+# Which sites the run reads
+# --------------------------------------------------------------------------
+# A development run does not need all twelve sites. The graph over twelve is
+# 2.2 million triples and takes five minutes to build and twenty more to
+# bundle and validate; a check that costs half an hour is a check that gets
+# skipped. What a smaller selection must not do is go green because it never
+# saw the awkward cases, so the members are chosen by which guard they
+# exercise and not by geography.
+
+#: site_id -> why it is in the development selection.
+DEV_SITES = {
+    58: "Spannagel - the WD1 evaluation the wdttest family builds on, plus "
+        "SPA127 in two versions and δ¹³C on two of eight speleothems",
+    145: "Antro del Corchia - the superseded records and their four hiatuses "
+         "without a model statement",
+    202: "Piani Eterni - the deep end, 84 to 289 ka, and no sample younger "
+         "than MIS 5",
+    277: "Huagapo - a composite whose dating points carry no depth, and ages "
+         "extrapolated past 1950",
+    127: "Xiaobailong - no δ¹³C at all, and ICP-MS U/Th Other in date_type",
+}
+
+
+def plain(text: str) -> str:
+    """Lower case and without accents, for matching a name on the command line.
+
+    Jaraguá is spelled with an accent in SISAL and without one on a Windows
+    console. Matching the two would otherwise be an error message about a
+    site that is plainly there.
+    """
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", text.strip().lower())
+                   if not unicodedata.combining(c))
+
+
+def resolve_sites(spec: str, sites: list[dict]) -> tuple[set[str] | None, str]:
+    """The site_ids to keep and a label for the report.
+
+    *spec* is ``all``, ``dev``, or a comma-separated list of site ids and
+    site names - ``--sites spannagel`` builds the graph of one cave, which is
+    what a consumer repository needs when it wants that cave and nothing else.
+    Names are matched case-insensitively and by prefix, so "spannagel" finds
+    "Spannagel cave" without anyone having to type the word cave.
+    """
+    spec = (spec or "all").strip()
+    if spec.lower() == "all":
+        return None, f"all {len(sites)} sites of the cut"
+
+    by_id = {row["site_id"]: row["site_name"] for row in sites}
+    listing = ", ".join(f"{sid} {by_id[sid]}"
+                        for sid in sorted(by_id, key=lambda v: int(v)))
+    if spec.lower() == "dev":
+        wanted = {str(site_id) for site_id in DEV_SITES}
+        missing = wanted - set(by_id)
+        if missing:
+            raise SystemExit(
+                f"  ✗ development selection asks for site(s) "
+                f"{', '.join(sorted(missing))}, which the cut does not hold. "
+                f"Re-export the cut or adjust DEV_SITES.")
+        return wanted, f"development selection, {len(wanted)} of {len(sites)} sites"
+
+    keep: set[str] = set()
+    for token in (t.strip() for t in spec.split(",") if t.strip()):
+        if token in by_id:
+            keep.add(token)
+            continue
+        matches = [sid for sid, name in by_id.items()
+                   if plain(name).startswith(plain(token))]
+        if len(matches) == 1:
+            keep.add(matches[0])
+        elif not matches:
+            raise SystemExit(
+                f"  ✗ no site called {token!r} in the cut. Available: {listing}")
+        else:
+            raise SystemExit(
+                f"  ✗ {token!r} matches several sites: "
+                + ", ".join(f"{sid} {by_id[sid]}" for sid in sorted(matches)))
+    return keep, f"{len(keep)} of {len(sites)} sites, named on the command line"
+
+
+def restrict_to_sites(keep: set[str], tables: dict[str, list[dict]]) -> None:
+    """Cut every table down to the chosen sites, in place.
+
+    Done here and not by the guards downstream. Most of them would skip an
+    orphan row anyway - add_ages looks its sample up and moves on - but the
+    tables that cost the time are read and walked all the same, and the
+    savings this whole selection is about would not materialise.
+    """
+    tables["site"][:] = [r for r in tables["site"] if r["site_id"] in keep]
+    tables["entity"][:] = [r for r in tables["entity"] if r["site_id"] in keep]
+    entity_ids = {r["entity_id"] for r in tables["entity"]}
+    tables["sample"][:] = [r for r in tables["sample"]
+                           if r["entity_id"] in entity_ids]
+    sample_ids = {r["sample_id"] for r in tables["sample"]}
+
+    for name in ("d18o", "d13c", "sisal_chronology", "original_chronology",
+                 "hiatus", "gap"):
+        tables[name][:] = [r for r in tables[name]
+                           if r["sample_id"] in sample_ids]
+    tables["dating"][:] = [r for r in tables["dating"]
+                           if r["entity_id"] in entity_ids]
+    tables["composite_link_entity"][:] = [
+        r for r in tables["composite_link_entity"]
+        if r["composite_entity_id"] in entity_ids]
 
 
 def num(value) -> float | None:
@@ -448,6 +563,20 @@ geolod:correspondingCurrentSpeleothem
     rdfs:range   geolod:Speleothem ;
     rdfs:label   "corresponding current speleothem"@en ;
     rdfs:comment "The record that replaced a superseded one. Without it there is no way to say why two speleothems describe the same lamina."@en .
+
+geolod:isComposite
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Speleothem ;
+    rdfs:range   xsd:boolean ;
+    rdfs:label   "is composite"@en ;
+    rdfs:comment "True where the record is assembled from several speleothems. A composite has no depth scale of its own - its dating points may carry an age and no depth, and the shapes make that exception explicit."@en .
+
+geolod:composedOf
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:Speleothem ;
+    rdfs:range   geolod:Speleothem ;
+    rdfs:label   "composed of"@en ;
+    rdfs:comment "A record the composite is built from. SISAL keeps the relation in composite_link_entity; without it a composite looks like an ordinary speleothem whose samples come from nowhere."@en .
 
 # -- Identifiers and depth -------------------------------------------------
 
@@ -858,8 +987,17 @@ def add_site_annotation(g: Graph, site: URIRef, note: dict,
 
 
 def add_entities(g: Graph, entities: list[dict],
-                 site_uris: dict[str, URIRef]) -> dict[str, URIRef]:
-    """The speleothems, with their status and, where superseded, their successor."""
+                 site_uris: dict[str, URIRef],
+                 composite_links: list[dict] | None = None) -> dict[str, URIRef]:
+    """The speleothems, with their status and, where superseded, their successor.
+
+    Composites are marked here rather than inferred later. SISAL keeps them in
+    composite_link_entity and nowhere else: entity_status calls a composite
+    "current" like any other record, so without this table a composite is
+    indistinguishable from an ordinary speleothem - and the difference matters
+    at the dating points, where a composite carries ages without depths
+    because it has no depth scale of its own.
+    """
     uris = {row["entity_id"]: SISAL[f"entity_{int(row['entity_id']):05d}"]
             for row in entities}
 
@@ -884,6 +1022,16 @@ def add_entities(g: Graph, entities: list[dict],
         successor = (row.get("corresponding_current") or "").strip()
         if successor and successor in uris:
             g.add((entity, GEOLOD["correspondingCurrentSpeleothem"], uris[successor]))
+
+    for link in composite_links or []:
+        composite = uris.get(link["composite_entity_id"])
+        member = uris.get(link["single_entity_id"])
+        if composite is None:
+            continue
+        g.add((composite, GEOLOD["isComposite"],
+               Literal(True, datatype=XSD.boolean)))
+        if member is not None:
+            g.add((composite, GEOLOD["composedOf"], member))
     return uris
 
 
@@ -1015,6 +1163,13 @@ DATING_METHODS = {
     "TIMS": ("DatingMethod_tims", "TIMS",
              "Uranium-thorium disequilibrium dating on a thermal ionisation "
              "mass spectrometer."),
+    "ICP-MS U/Th Other": ("DatingMethod_icp_ms_u_th_other", "ICP-MS U/Th (other)",
+                    "Uranium-thorium disequilibrium dating on an inductively "
+                    "coupled plasma mass spectrometer other than a "
+                    "multi-collector one."),
+    "U/Th unspecified": ("DatingMethod_u_th_unspecified", "U/Th unspecified",
+                         "Uranium-thorium disequilibrium dating; the source "
+                         "does not say on which instrument."),
     "Multiple methods": ("DatingMethod_multiple", "multiple methods",
                          "More than one method combined into a single reported age."),
     "Event; actively forming": ("DatingMethod_actively_forming", "actively forming",
@@ -1392,7 +1547,8 @@ STEPS = [
 ]
 
 
-def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
+def build(data_format: str = DEFAULT_DATA_FORMAT,
+          sites_spec: str = "all") -> bool:
     serializer, suffix = DATA_FORMATS[data_format]
 
     print("\n" + "=" * 72)
@@ -1405,16 +1561,33 @@ def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
     beat = Heartbeat(len(STEPS)).start()
     try:
         beat.step(STEPS[0])
-        sites = read_table("site")
-        entities = read_table("entity")
-        samples = read_table("sample")
-        d18o = read_table("d18o")
-        d13c = read_table("d13c")
-        chronology = read_table("sisal_chronology")
-        original = read_table("original_chronology")
-        dating = read_table("dating")
-        hiatus = read_table("hiatus")
-        gaps = read_table("gap")
+        tables = {name: read_table(name) for name in
+                  ("site", "entity", "sample", "d18o", "d13c",
+                   "sisal_chronology", "original_chronology", "dating",
+                   "hiatus", "gap", "composite_link_entity")}
+
+        keep, selection_label = resolve_sites(sites_spec, tables["site"])
+        partial = keep is not None
+        if partial:
+            restrict_to_sites(keep, tables)
+        print(f"  Sites:  {selection_label}")
+        if partial:
+            names = ", ".join(sorted(row["site_name"] for row in tables["site"]))
+            print(f"          {names}")
+            print("  ⚠  PARTIAL GRAPH - not a release. Run with --sites all "
+                  "before publishing anything from SISAL/rdf/.")
+
+        sites = tables["site"]
+        entities = tables["entity"]
+        samples = tables["sample"]
+        d18o = tables["d18o"]
+        d13c = tables["d13c"]
+        chronology = tables["sisal_chronology"]
+        original = tables["original_chronology"]
+        dating = tables["dating"]
+        hiatus = tables["hiatus"]
+        gaps = tables["gap"]
+        composite_links = tables["composite_link_entity"]
         samples_by_id = {row["sample_id"]: row for row in samples}
 
         print(f"  {len(sites)} sites, {len(entities)} speleothems, "
@@ -1443,7 +1616,7 @@ def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
 
         beat.step(STEPS[3])
         site_uris = add_sites(g, sites)
-        entity_uris = add_entities(g, entities, site_uris)
+        entity_uris = add_entities(g, entities, site_uris, composite_links)
         sample_uris = add_samples(g, samples, entity_uris)
 
         beat.step(STEPS[4])
@@ -1497,10 +1670,19 @@ def build(data_format: str = DEFAULT_DATA_FORMAT) -> bool:
             inputs=[str(TABLES_DIR / f"{name}.csv") for name in
                     ("site", "entity", "sample", "d18o", "d13c",
                      "sisal_chronology", "original_chronology",
-                     "dating", "hiatus", "gap")] + [__file__],
+                     "dating", "hiatus", "gap",
+                     "composite_link_entity")] + [__file__],
             agents=[ORCID_FLO],
             label="SISAL v3 RDF generation (S3c.2)",
         )
+        if partial:
+            # In the graph and not only in the report. A partial file carries
+            # the same name as a complete one, and the report is not what a
+            # consumer reads.
+            g.add((GEOLOD["SISAL_Dataset"], OWL.versionInfo,
+                   Literal(f"Partial graph: {selection_label} "
+                           f"({', '.join(sorted(row['site_name'] for row in sites))}). "
+                           f"Not a release.", lang="en")))
         add_generation_provenance(
             ann,
             GEOLOD["SISAL_Site_Annotations_Dataset"],
@@ -1552,9 +1734,14 @@ def main(argv: list[str] | None = None) -> int:
                         help="serialisation of the two large graphs. "
                              "nt is fast and git-ignored, turtle is the "
                              "release format. Default: " + DEFAULT_DATA_FORMAT)
+    parser.add_argument("--sites", dest="sites_spec", default="all",
+                        help="which sites go into the graph: 'all', 'dev' "
+                             "(the guard-covering selection, see DEV_SITES), "
+                             "or a comma-separated list of site ids or names, "
+                             "e.g. --sites spannagel. Default: all")
     args = parser.parse_args(argv)
     try:
-        return 0 if build(args.data_format) else 1
+        return 0 if build(args.data_format, args.sites_spec) else 1
     except Exception:
         import traceback
         traceback.print_exc()

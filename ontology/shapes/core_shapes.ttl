@@ -479,10 +479,9 @@ geolod:AgeControlPointShape
 
     sh:property [
         sh:path geolod:atDepth_mm ;
-        sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:decimal ;
-        sh:message "Every dating point must carry exactly one depth in mm."@en ;
+        sh:message "A dating point carries at most one depth in mm."@en ;
     ] ;
 
     sh:property [
@@ -500,6 +499,33 @@ geolod:AgeControlPointShape
         sh:severity sh:Warning ;
         sh:message "A dating point should carry at most one age in ka BP."@en ;
     ] .
+
+
+# ----------------------------------------------------------------------------
+# E.1a  The depth of a control point, and the one case where it is absent
+# ----------------------------------------------------------------------------
+# The depth stays required. It is what makes a control point a point: an age
+# without a position constrains nothing. The exception is the composite - a
+# record assembled from several speleothems has no depth scale of its own,
+# and SISAL accordingly leaves depth_dating empty on all 37 points of
+# Huagapo's PeruMIS6Composite. Written as a disjunction rather than by
+# dropping the rule, so that a missing depth remains a violation everywhere
+# it is one, and so that the exception names its reason in the data:
+# geolod:isComposite comes from composite_link_entity, not from a list here.
+
+geolod:AgeControlPointDepthShape
+    a sh:NodeShape ;
+    sh:targetClass strat:AgeControlPoint ;
+    rdfs:label "strat:AgeControlPoint depth shape"@en ;
+
+    sh:or (
+        [ sh:property [ sh:path geolod:atDepth_mm ; sh:minCount 1 ] ]
+        [ sh:property [
+            sh:path ( geolod:constrainsSpeleothem geolod:isComposite ) ;
+            sh:hasValue true ;
+        ] ]
+    ) ;
+    sh:message "Every dating point must carry a depth in mm, unless it constrains a composite speleothem."@en .
 
 
 # ----------------------------------------------------------------------------

@@ -225,6 +225,20 @@ geolod:correspondingCurrentSpeleothem
     rdfs:label   "corresponding current speleothem"@en ;
     rdfs:comment "The record that replaced a superseded one. Without it there is no way to say why two speleothems describe the same lamina."@en .
 
+geolod:isComposite
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Speleothem ;
+    rdfs:range   xsd:boolean ;
+    rdfs:label   "is composite"@en ;
+    rdfs:comment "True where the record is assembled from several speleothems. A composite has no depth scale of its own - its dating points may carry an age and no depth, and the shapes make that exception explicit."@en .
+
+geolod:composedOf
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:Speleothem ;
+    rdfs:range   geolod:Speleothem ;
+    rdfs:label   "composed of"@en ;
+    rdfs:comment "A record the composite is built from. SISAL keeps the relation in composite_link_entity; without it a composite looks like an ordinary speleothem whose samples come from nowhere."@en .
+
 # -- Identifiers and depth -------------------------------------------------
 
 geolod:entityId

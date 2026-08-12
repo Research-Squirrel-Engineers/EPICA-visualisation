@@ -420,6 +420,17 @@ def main():
             + " - schnell für Entwicklungsläufe."
         ),
     )
+    parser.add_argument(
+        "--sisal-sites",
+        default="dev",
+        help=(
+            "Welche SISAL-Sites in den Graphen gehen: 'dev' (fünf Sites, so "
+            "gewählt, dass jede Prüfung des Generators noch feuert), 'all', "
+            "oder eine Liste von site_ids bzw. Namen, z. B. --sisal-sites "
+            "spannagel. Ein Release-Lauf setzt 'all' durch. "
+            "Voreinstellung: dev - schnell für Entwicklungsläufe."
+        ),
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
 
@@ -433,6 +444,13 @@ def main():
     # One notion of "this is a release run", read off the bundle formats and
     # passed down. Two independent switches would eventually disagree.
     release_run = set(bundle_formats) >= set(RELEASE_BUNDLE_FORMATS)
+
+    # Ein Release darf keinen Teilgraphen enthalten. Die Voreinstellung des
+    # Schalters ist 'dev', und ein Release-Lauf, der sie erbt, wäre ein
+    # unvollständiges Bundle unter einem vollständigen Namen.
+    sisal_sites = args.sisal_sites.strip()
+    if release_run and sisal_sites.lower() != "all":
+        sisal_sites = "all"
 
     # Set up logging
     tee = TeeOutput(LOG_FILE)
@@ -506,8 +524,11 @@ def main():
         # size, and .gitignore keeps them out. A release run asks for Turtle,
         # which is the format that gets versioned.
         sisal_format = ["--format", "turtle" if release_run else "nt"]
+        if release_run and args.sisal_sites.strip().lower() != "all":
+            print(f"  ℹ  --sisal-sites {args.sisal_sites.strip()} wird für "
+                  f"diesen Release-Lauf auf 'all' gesetzt.")
         sisal_ok = run_script(SISAL_RDF_SCRIPT, "SISAL v3 RDF generation",
-                              sisal_format)
+                              sisal_format + ["--sites", sisal_sites])
         end_section()
 
         print_section("7. SISAL (figures)")
