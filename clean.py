@@ -114,6 +114,8 @@ GENERATED: dict[str, list[Entry]] = {
         # data/curated/ is NOT here: it is hand-maintained input, not output.
         Entry("SISAL/report", "SISAL/plot_sisal_from_csv.py", contents=True),
         Entry("SISAL/plots", "SISAL/plot_sisal_from_csv.py", contents=True),
+        Entry("SISAL/captions.yaml",
+              "SISAL/plot_sisal_from_csv.py, one entry per figure"),
     ],
     "ci": [
         Entry("CI/rdf", "CI/ci_pipeline.py", contents=True),
@@ -165,6 +167,11 @@ STALE: list[Entry] = [
     Entry("archaeo-connect/cifindspots_part_full.csv",
           "identical to CI/cifindspots_part_full.csv",
           note="one input, two copies; the CI copy is the one the pipeline reads"),
+    Entry("SISAL/v_data_*.csv",
+          "the old figure input, replaced by data/derived/sisal/sites/",
+          note="carried the decimal-separator error - 907 rows for Botuvera "
+               "against 920, 5832 for Sanbao against 6085. Nothing reads them "
+               "since S3c.4"),
 ]
 
 
@@ -174,11 +181,6 @@ STALE: list[Entry] = [
 # Listed, never removed. Each line names the step that ends it, so that the
 # report answers "why is this still here" without a look into PRIMER.md.
 PENDING: list[Entry] = [
-    Entry("SISAL/v_data_*.csv",
-          "figure input of plot_sisal_from_csv.py",
-          note="carries the decimal-separator error; replaced by "
-               "data/derived/sisal/ once S3c.2 is green"),
-
     Entry("archaeo-connect/v_sites_all.csv",
           "input of sisal_arch_html.py",
           note="an older cut than SISAL/v_sites_all.csv, not a copy of it"),

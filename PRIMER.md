@@ -294,6 +294,17 @@ lesen hier ab, statt neu zu diskutieren.
 | Format von `sisal_v3_dating.ttl` | immer Turtle, wie die Annotationen. 15 220 Tripel sind klein genug, und die Datei wird gelesen, wenn jemand wissen will, worauf ein Alter beruht | 2026-08-12 |
 | Eigenschaftscharakteristiken im Coverage-Check | `owl:TransitiveProperty` und die acht verwandten kommen in die Ausnahmeliste von `validate_crm_coverage`. Eine Charakteristik ist keine Entität, die einen CRM-Vorfahren haben könnte; ein Bridging-Axiom dafür diente allein dazu, eine Ampel grün zu bekommen | 2026-08-12 |
 | Versionsstempel in den SVG | `dc:creator` trägt einen festen String aus `GEO_LOD_RELEASE` statt der matplotlib-Version. Die Konstante ist dafür nach `ontology/geo_lod_release.py` gewandert, weil `geo_lod_figures` rdflib-frei bleibt; `geo_lod_utils` re-exportiert sie | 2026-08-12 |
+| Kurve je Site oder je Entität | je Entität, alle in einer Abbildung, mit Farben und Legende. Eine nach Alter sortierte Site-Kurve ist keine Messreihe, sondern die Sortierung: bei Sanbao liegen zwischen 0,4 und 13,6 ka sechs Speläotheme übereinander, und die Linie sprang zwischen ihnen hin und her | 2026-08-12 |
+| Lücken zwischen Entitäten | werden nicht gezeichnet, auch nicht gestrichelt. Eine gestrichelte Strecke behauptet eine unterbrochene Reihe; zwischen zwei Speläothemen gibt es keine Reihe, die unterbrochen sein könnte | 2026-08-12 |
+| Lückenschwelle SISAL | relativ statt fest: mehr als 2 kyr **und** mehr als das Zehnfache des lokalen Medianabstands (Fenster ±25). Eine feste Zahl kann bei drei Grössenordnungen Unterschied in der Beprobungsdichte nicht in allen Reihen dasselbe bedeuten — SB61 ist zwischen 260 und 318 ka regelmässig alle 1,8 kyr beprobt, SPA121_2021 zwischen 164 und 191 ka regelmässig alle 5,1. `find_breaks` mit fester Schwelle bleibt für EPICA | 2026-08-12 |
+| SPA127 in doppelter Fassung | beide gezeichnet, 141 und 732. Gleiche δ¹⁸O-Werte bis auf 5·10⁻¹², Chronologien bis 28 a auseinander, und nur die 2023er trägt δ¹³C. Die Abweichung sichtbar zu lassen ist der Punkt | 2026-08-12 |
+| Ort des MIS-Lesers | `ontology/geo_lod_mis.py`, aus `EPICA/epica_data.py` herausgelöst und dort re-exportiert. Ein Speläothem fällt in MIS 5e wie ein Eiskern; mit dem Leser im EPICA-Paket hätte SISAL aus einem Nachbarstrang importieren müssen | 2026-08-12 |
+| Zahl der SISAL-Abbildungen | 33 Einzelbilder statt der früher genannten 36: Sanbao trägt kein δ¹³C. Dazu zwei Tafeln | 2026-08-12 |
+| Legendenposition | selbst gesucht und einmal je Site und Messgrösse bestimmt, dann an alle drei Glättungsvarianten gereicht. Gewertet wird die am stärksten verdeckte **einzelne** Reihe, nicht die Summe: bei Sanbao verdeckt die Ecke mit den wenigsten Punkten 90 % von SB-58, der einzigen Reihe in MIS 11 und 12, und das sind 2 % der Site. Über 10 % geht die Legende unter die Achse | 2026-08-12 |
+| Legendengrösse | gemessen, nicht geschätzt. Sanbaos drei Spalten sind 0,59 breit; eine angenommene 0,42 erklärte eine Ecke für frei, durch die eine Reihe lief | 2026-08-12 |
+| `Tee` und Ausgabekodierung | `Tee.__init__` stellt `stdout` einmal auf UTF-8. Ohne Konsole nimmt Python die Locale-Kodierung, auf Windows cp1252, und der Lauf stirbt an der ersten Abschnittsüberschrift. Betrifft beide Plotskripte | 2026-08-12 |
+| SISAL-Tafeln | zwei. `plate_coverage` hat bei EPICA kein Gegenstück, weil ein Bohrkern eine Reihe ist und eine Höhle mehrere; `plate_pipeline_outputs` folgt `plate_pipeline_outputs_five`. Ohne Gegenstück bleibt `plate_boundary_depths`: die Tiefe je Probe steht im Graphen, aber nicht im flachen Ausschnitt | 2026-08-12 |
+| Cluster für S3c.5 | drei Klimasysteme statt sechs Einzelsites. Europa bleibt bei Spannagel, Corchia, Piani Eterni und Buraca Gloriosa; der ostasiatische Monsun bekommt Dongge (39), Xiaobailong (127) und Heshang (122) zu Sanbao; der südamerikanische Jaraguá (10), Lapa sem fim (24) und Huagapo (277) zu Botuverá. Zwölf Sites, drei Tafeln zu je vier | 2026-08-12 |
 
 ## A6. IRI-Landkarte unter `http://w3id.org/geo-lod/`
 
@@ -348,8 +359,12 @@ noch nicht entschieden.
 | S3c.1 | SISAL: CSV-Ausschnitt aus der Datenbank | sisal-db-v3 + geo-lod | S3b | erledigt 2026-08-11 |
 | S3c.2 | SISAL nach RDF: Kern | geo-lod | S0, S1, S3c.1 | erledigt 2026-08-11 |
 | S3c.3 | SISAL nach RDF: Datierungen und Lücken | geo-lod | S3c.2 | erledigt 2026-08-12 |
-| S3c.4 | SISAL-Abbildungen und Captions | geo-lod | S3c.2 | offen |
+| S3c.4 | SISAL-Abbildungen und Captions | geo-lod | S3c.2 | erledigt 2026-08-12 |
+| S3c.5 | Ausschnitt auf zwölf Sites erweitern | sisal-db-v3 + geo-lod | S3c.1 | offen |
+| S3c.6 | Cluster-Tafeln aus den drei Klimasystemen | geo-lod | S3c.4, S3c.5 | offen |
 | S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | erledigt 2026-08-11 |
+| S3e | CI-Strang auf den Stand von EPICA und SISAL bringen | geo-lod | S3c.4 | offen |
+| S3f | Archäologie-Komponente durchsehen | geo-lod | S3e | offen |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c.3 | offen |
 | S5 | ELSA | geo-lod | S4 | offen |
 
@@ -358,6 +373,9 @@ Reihenfolge oder parallel gemacht werden. S3a hängt an keiner Festlegung aus S0
 und kann sofort beginnen. S3d hängt an S3c.1 nur insofern, als beide
 denselben Ausschnitt lesen; fachlich sind sie unabhängig. S3c.4 hängt an S3c.2,
 nicht an S3c.3: die Abbildungen brauchen den Kern, nicht die Datierungen.
+S3c.5 und S3c.6 sind nachgereicht: die Cluster-Idee entstand erst beim
+Betrachten der fertigen Tafeln aus S3c.4. S3e und S3f stehen hinter S3c.4,
+weil beide dieselben geteilten Module benutzen, die dort entstanden sind.
 
 ---
 
@@ -1375,28 +1393,94 @@ GROUP BY ?sample ?depth ?age ?beyond
 **Ziel:** die SISAL-Abbildungen entstehen aus dem Ausschnitt und tragen
 dieselben Konventionen wie EPICA.
 
-**Uploads:** geo-lod-Bundle (A5).
+**Uploads:** geo-lod-Bundle (A5), dazu `dist/mis_stages.csv` einzeln — der
+Grössenfilter des Bundles schliesst `dist/` aus, und der Schritt ersetzt die
+letzte hartcodierte MIS-Liste durch genau diese Tabelle.
 
-**Ergebnis:** umgebautes `SISAL/plot_sisal_from_csv.py`, `SISAL/captions.yaml`.
+**Stand:** erledigt 2026-08-12, in vier Patches.
 
-**Fertig, wenn:** die Abbildungen aus `data/derived/sisal/sites/` entstehen und
-keine MIS-Grenze mehr im Code steht.
+**Ergebnis:** `ontology/geo_lod_mis.py` neu, `SISAL/sisal_plates.py` neu,
+`SISAL/plot_sisal_from_csv.py` neu geschrieben, `ontology/geo_lod_figures.py`
+und `EPICA/epica_data.py` erweitert, `clean.py` nachgezogen,
+`SISAL/captions.yaml` erzeugt. 33 Einzelabbildungen und zwei Tafeln, über zwei
+Läufe byte-identisch.
 
-**Ausgangslage nach S3c.2.** Der RDF-Teil ist schon draussen, das Skript zeichnet
-nur noch. Was bleibt, ist die Eingabe: es liest weiter die `v_data_*.csv` mit dem
-Dezimaltrenner-Fehler, und das steht seit S3c.2 im selben Log neben den richtigen
-Zahlen — Botuverá 907 gegen 920, Sanbao 5832 gegen 6085, Buraca Gloriosa 1137
-gegen 1178.
+**Was der Schritt wirklich behoben hat.** Die Aufgabe hiess Eingabe umstellen,
+Achsen und Captions. Der schwerere Fehler lag daneben: das Skript sortierte
+alle Proben einer Site nach Alter und verband sie zu einer Kurve. Sanbao hat
+achtzehn Speläotheme mit überlappenden Altersbereichen, und was in der
+publizierten Abbildung wie ein verrauschtes Signal aussah, war die Sortierung.
+Seit S3c.4 ist jede Entität eine eigene Linie.
 
-- `MIS_INTERVALS` durch `dist/mis_stages.csv` ersetzen — die letzte
-  hartcodierte MIS-Stelle.
-- Achsen auf `geo_lod_figures.nice_ticks`. Ob dort dasselbe Abschneiden
-  passiert wie bei δ¹⁸O in S2, ist ungeprüft; die Wertebereiche vergleichen.
-- `captions.yaml` für die 36 Abbildungen, Mechanik liegt in
-  `ontology/geo_lod_captions.py` bereit.
-- ~~Das doppelte `geo_lod_core.ttl` in `SISAL/rdf/`~~ — mit S3c.2 entfallen.
-- Sieben Proben tragen δ¹³C ohne δ¹⁸O. Die flache Abfrage geht `FROM d18o` und
-  verliert sie stillschweigend; im Graphen sind sie.
+**Lücken.** Je Entität gesucht, nie über die Site. Die grossen Abstände liegen
+zwischen Speläothemen, und dort gehört keine Linie hin, auch keine gestrichelte.
+Die Schwelle ist relativ (A4): 15 Lücken über die sechs Sites, bei jeder ist
+der Nachbarabstand 33- bis 196-mal kleiner.
+
+**Was dabei aufgefallen ist.**
+
+- SPA127 liegt zweimal im Ausschnitt, als 141 und als 732. Dieselben
+  δ¹⁸O-Werte bis auf 5·10⁻¹², Chronologien bis 28 a auseinander, δ¹³C nur in
+  der 2023er Fassung. SISAL verknüpft beide über `corresponding_current`.
+- Spannagels δ¹⁸O-Achse läuft bis −16 ‰, weil SPA146 und SPA183 bei −15 liegen
+  und die übrigen sechs bei −8. Zwei Speläotheme aus einem anderen Teil der
+  Höhle, kein Achsenfehler.
+- `Tee` starb an der ersten Abschnittsüberschrift, sobald die Ausgabe umgeleitet
+  wurde (A4). Derselbe Fehler steckte in `plot_epica_from_tab.py` und ist dort
+  mit behoben.
+- Der ursprüngliche Lückentest mit fester Schwelle und die erste
+  Legendensuche waren beide falsch und mussten je einen Patch später korrigiert
+  werden. Beide Male war die Ursache dieselbe: eine Annahme über die Daten
+  statt einer Messung an den Daten.
+
+**Was dieser Schritt nicht anfasst.** Die von SISAL selbst deklarierten Hiaten
+und Lücken — 21 und 4 Zeilen, seit S3c.3 als `geolod:GrowthHiatus` und
+`geolod:RecordGap` im Graphen — tragen keine Chronologie und erscheinen im
+flachen Ausschnitt nicht. Die Abbildung zeigt damit Beprobungslücken, der Graph
+Wachstumsunterbrechungen. Das sind zwei verschiedene Aussagen; ob beide ins
+selbe Bild gehören, ist offen.
+
+---
+
+### S3c.5 — Ausschnitt auf zwölf Sites erweitern
+
+**Ziel:** die drei Klimasysteme, die der Bestand nur andeutet, mit je vier
+Sites belegen.
+
+**Uploads:** `sisal-db-v3`-Bundle; `postgres/queries.yaml`.
+
+**Ergebnis:** erweiterter Ausschnitt unter `data/derived/sisal/`, sechs weitere
+Sites in `sites/` und `tables/`, MANIFEST neu.
+
+**Ausgangslage.** Die sechs Sites aus S3c.1 fallen bereits in drei Systeme, nur
+sehr ungleich: Europa hat vier, der ostasiatische Monsun einen, der
+südamerikanische einen. Die Auswahl der sechs neuen steht in A4. Ausgewählt
+nach Probenzahl aus dem Katalog der 365 Sites; die Altersbereiche stehen dort
+nicht und sind nach dem Export zu prüfen — ob Dongge und Xiaobailong weit
+genug zurückreichen, um neben Sanbaos 465 ka zu stehen, entscheidet sich erst
+dann.
+
+**Zu beachten.** Der ostasiatische Cluster wird ein reiner δ¹⁸O-Cluster:
+Sanbao, Dongge und Xiaobailong führen in SISAL kein δ¹³C, nur Heshang hat
+welches. Der Weg ist derselbe wie in S3c.1, einschliesslich `sisal_import.py`
+und der Prüfung gegen die Zeilenzahlen der Release. Die pgAdmin-Importmaske
+bleibt verboten (A3).
+
+---
+
+### S3c.6 — Cluster-Tafeln
+
+**Ziel:** drei Tafeln zu je vier Sites, je Klimasystem eine, statt einer Tafel
+mit sechs unverbundenen Spalten.
+
+**Uploads:** geo-lod-Bundle (A5) nach S3c.5.
+
+**Ergebnis:** `plate_cluster_*` in `SISAL/sisal_plates.py`,
+`plate_coverage` auf zwölf Sites erweitert.
+
+**Warum getrennt von S3c.4.** Die Tafeln brauchen die flachen Ausschnitte, und
+die gibt es nur für Sites, die S3c.5 exportiert hat. Fachlich ist es dieselbe
+Zeichenmechanik.
 
 ---
 
@@ -1486,6 +1570,68 @@ Was dabei herauskam und über S3d hinaus wirkt:
 
 ---
 
+## S3e — CI-Strang auf den Stand von EPICA und SISAL bringen
+
+**Ziel:** der CI-Strang benutzt dieselben geteilten Module wie die beiden
+anderen, statt seinen eigenen Weg zu gehen.
+
+**Uploads:** geo-lod-Bundle (A5).
+
+**Ausgangslage.** `CI/ci_pipeline.py` ist seit S2 und S3c nicht nachgezogen
+worden. Bekannte Punkte, vor dem Schritt zu prüfen und zu ergänzen:
+
+- Keine `captions.yaml`. Die Mechanik liegt in `ontology/geo_lod_captions.py`
+  und wird jetzt von beiden anderen Strängen benutzt.
+- `archaeo-connect/ci_findspots_html.py` und `sisal_arch_html.py` lesen beide
+  `_HERE / "cifindspots_part_full.csv"`, also die Kopie im eigenen
+  Verzeichnis. Die Kopie steht seit S3c.4 in der STALE-Liste von `clean.py`
+  und ist byte-gleich mit `CI/cifindspots_part_full.csv`; gelöscht werden kann
+  sie erst, wenn beide Skripte auf das Original zeigen.
+- `CI/cifindspots_part_full.csv` liegt nicht unter `data/raw/`, anders als die
+  EPICA- und MIS-Rohdaten (Teil D).
+- Die IRI-Migration der CI-Findspots auf das Zweigmuster `…/ci/` ist in S0
+  beschlossen und noch nicht ausgeführt; die Abbildung alt → neu gehört zu S4.
+
+**Zu klären im Schritt.** Ob der CI-Strang eigene Abbildungen bekommt. Bisher
+erzeugt er nur RDF und zwei HTML-Seiten, und ob eine Karte oder eine
+Tephra-Tafel dazugehört, ist keine Formfrage, sondern hängt daran, was der
+ECEASST-Beitrag und die spätere ELSA-Integration brauchen.
+
+---
+
+## S3f — Archäologie-Komponente durchsehen
+
+**Ziel:** die archäologische Brücke einmal im Ganzen ansehen, statt sie in drei
+Strängen weiterzuschreiben.
+
+**Uploads:** geo-lod-Bundle (A5); `data/curated/sisal_site_annotations.csv`.
+
+**Ausgangslage.** Die Brücke besteht aus mehreren Teilen, die zu verschiedenen
+Zeiten entstanden sind und nie zusammen geprüft wurden:
+`geolod:ArchaeologicalCaveSite` und `geolod:CIArchaeologicalSite`, die 305
+`Cave_site_NNNN`, `geolod:screenedForArchaeology`, die kuratierte Anreicherung
+mit 37 archäologischen Sites und 27 Wikidata-QIDs, und die beiden HTML-Seiten
+unter `archaeo-connect/`.
+
+**Bekannte Punkte.**
+
+- `cisite_59` ohne `skos:closeMatch` auf Pleiades oder Wikidata, die einzige
+  stehende SHACL-Warnung (Teil D).
+- Der Schlüssel der Anreicherung ist `site_id`, ein SISAL-interner Zähler;
+  `wikidata_qid` als stabilerer Schlüssel liegt nur für 27 der 37 vor
+  (Teil D).
+- Die OSM-Spalten sind bis auf eine Zeile leer (Teil D).
+- `geolod:CIArchaeologicalSite` und `geolod:Cave_site_0275` hängen unter
+  `crmarchaeo:A2_Stratigraphic_Volume_Unit`. Ein Ort ist keine
+  stratigraphische Volumeneinheit, er enthält welche — in S4 als
+  umzubauen vermerkt, gehört fachlich hierher.
+- Die Anreicherung deckt nur die SISAL-Höhlen ab. Ob die zwölf Sites aus
+  S3c.5 nachgezogen werden, ist zu entscheiden; `geolod:screenedForArchaeology`
+  unterscheidet geprüft-ohne-Befund von nie-geprüft, also fällt das nicht
+  stillschweigend unter den Tisch.
+
+---
+
 ## S4 — Ontologie-Angleichung
 
 **Ziel:** `geolod:` und `strat:` so zusammenführen, dass ein gemeinsames Bundle
@@ -1570,8 +1716,11 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 - ~~Beleg für die Warm/Kalt-Einstufung suchen und den hartcodierten Bestand in
   `MIS_INTERVALS` dagegen abgleichen (S1).~~ Erledigt 2026-08-08: Parität mit
   Railsback et al. 2015 als Beleg, eine Abweichung (MIS 3).
-- `MIS_INTERVALS` in `SISAL/plot_sisal_from_csv.py` durch `dist/mis_stages.csv`
-  ersetzen — die letzte hartcodierte MIS-Stelle (S3c.4).
+- ~~`MIS_INTERVALS` in `SISAL/plot_sisal_from_csv.py` durch
+  `dist/mis_stages.csv` ersetzen.~~ Erledigt 2026-08-12. Damit steht keine
+  MIS-Grenze mehr im Code dieses Repositoriums. Nebenbefund: die alte Liste
+  führte MIS 3 als Interstadial, das Leitschema führt es als warm, und die
+  dritte Bänderfarbe hat damit ihren einzigen Nutzer verloren.
 - ~~**Sechs von sieben Altersmodellen sind bisher unsichtbar.**~~ Erledigt
   2026-08-11: alle acht sind im Graphen, jede Zuweisung nennt ihr Modell (A4).
   Die 6177 Proben, die ausschliesslich `stalage` oder `bacon` tragen, sind damit
@@ -1585,20 +1734,19 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   Pipeline. Entweder auf `EPICA/epica_data.py` umstellen oder löschen — in S2
   bewusst nicht angefasst.
 - ~~Die mehrteiligen Tafeln aus S2~~ — erledigt 2026-08-09, sieben Tafeln.
-- ~~`MIS_INTERVALS` in `EPICA/plot_epica_from_tab.py`~~ — erledigt 2026-08-09.
-  Offen bleibt die Stelle in `SISAL/plot_sisal_from_csv.py` (S3c.4); danach ist
-  keine MIS-Grenze mehr im Code hinterlegt.
+- ~~`MIS_INTERVALS` in `EPICA/plot_epica_from_tab.py`~~ — erledigt 2026-08-09,
+  die SISAL-Stelle 2026-08-12. Keine MIS-Grenze mehr im Code.
 - ~~Die Tiefenplots tragen keine MIS-Bänder.~~ Erledigt 2026-08-09.
 - Die Fünfer-Collage zeigt nur die Altersachse. Eine Tiefenvariante ist eine
   Zeile in `build_all`, falls der Text sie braucht.
 - ~~`epica_style.py` gilt nur für EPICA.~~ Erledigt 2026-08-09: liegt als
   `ontology/geo_lod_figures.py` neben `geo_lod_utils.py`, SISAL nutzt es.
-- SISAL hat noch keine `captions.yaml`. Die Mechanik liegt in
-  `ontology/geo_lod_captions.py` bereit; einzutragen sind die Unterschriften
-  der 36 Abbildungen, das gehört in S3c.4.
-- Die SISAL-Achsen laufen weiter über handgesetzte Grenzen. Ob dort dasselbe
-  Abschneiden passiert wie bei δ¹⁸O, ist ungeprüft — beim Umbau in S3c.4 gegen
-  `geo_lod_figures.nice_ticks` stellen und die Wertebereiche vergleichen.
+- ~~SISAL hat noch keine `captions.yaml`.~~ Erledigt 2026-08-12: 35 Einträge,
+  33 Einzelabbildungen und zwei Tafeln. Nicht 36 — Sanbao trägt kein δ¹³C.
+  Offen bleibt sie für den CI-Strang (S3e).
+- ~~Die SISAL-Achsen laufen weiter über handgesetzte Grenzen.~~ Erledigt
+  2026-08-12, und es wurde abgeschnitten: die δ¹³C-Liste von Buraca Gloriosa
+  endete bei −10, während der Datensatz bis −11,76 reicht.
 - `wdttest-tables` auf Railsback umstellen und per `skos:exactMatch` auf
   `…/vocab/mis/` zeigen lassen (S4). `wdttest-wd1--ager-corg` ist bereits dort.
 - Matplotlib schreibt SVG im Textmodus; unter Windows steht CRLF in der Datei,
@@ -1627,11 +1775,11 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   `SISALv3_DataSource`. Offen bleibt `cisite_59` ohne `skos:closeMatch` auf
   Pleiades oder Wikidata — die einzige SHACL-Warnung des Laufs vom 2026-08-11
   und älter als S3c. **Bewusst zurückgestellt 2026-08-11.**
-- Vier tote Dateien meldet `clean.py` in geo-lod: `SISAL/v_sites_all.csv`,
-  `EPICA/epica_ontology.ttl` und die beiden JPG ausserhalb von `EPICA/plots/`,
-  dazu die Kopie von `cifindspots_part_full.csv` in `archaeo-connect/`. Alle
-  geprüft und, wo Kopie, byte-gleich mit ihrem Original. Entfernen von Hand mit
-  `clean.py --stale --delete`.
+- Tote Dateien in geo-lod: mit S3c.4 sind `SISAL/v_sites_all.csv`,
+  `EPICA/epica_ontology.ttl` und die vier `SISAL/v_data_*.csv` per `git rm`
+  entfernt. Offen bleibt die Kopie von `cifindspots_part_full.csv` in
+  `archaeo-connect/`: byte-gleich mit dem Original, aber von beiden Skripten
+  dort gelesen — sie kann erst weg, wenn diese auf `CI/` zeigen (S3e).
 - In `sisal-db-v3` liegt `data/sisalv3_database_mysql_csv` mit 303 MB, das
   MySQL-Verzeichnis aus der Zeit vor S3a. In `.gitignore` genannt, von nichts
   gelesen.
@@ -1699,3 +1847,16 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 - `wdttest-tables` hält weiter eine eigene Kopie von `strat.ttl` und
   `analysis_core.ttl`. Bis S4 existieren beide doppelt; führend ist seit
   S3c.3 geo-lod, und die w3id-Redirects zeigen entsprechend dorthin (A6).
+- Die Abbildungen zeigen Beprobungslücken, der Graph Wachstumsunterbrechungen.
+  Die 21 Hiaten und 4 Lücken aus S3c.3 tragen keine Chronologie und erscheinen
+  im flachen Ausschnitt nicht; um sie zu zeichnen, müsste `sites/*.csv` die
+  Markerzeilen mitführen oder das Skript `sample.csv` dazulesen. Ob das
+  gewollt ist, ist eine fachliche Frage und keine technische.
+- `plate_boundary_depths` hat im SISAL-Strang kein Gegenstück. Die Tiefe je
+  Probe steht seit S3c.2 als `geolod:atDepth_mm` im Graphen, aber nicht im
+  flachen Ausschnitt.
+- Die `wdttest-*`-Familie zeichnet Speläothem-Reihen weiter mit fester
+  Lückenschwelle von 5 kyr. Nach dem Beschluss aus S3c.4 ist das für
+  SPA121_2021 nachweislich falsch. Ob sie auf den relativen Test nachzieht,
+  ist dort zu entscheiden — es wäre ein Kopiervorgang, kein Verweis (A3).
+

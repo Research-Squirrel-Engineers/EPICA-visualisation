@@ -1,33 +1,48 @@
 # Datei: plot_sisal_from_csv.py
-# Visualisierung von SISAL-Speleothem-Daten (d18O, d13C) analog zum EPICA-Script
-# Basiert auf: plot_epica_from_tab.py
+# Abbildungen des SISAL-Speleothem-Strangs (d18O, d13C gegen Alter).
 #
 # Reines Abbildungsskript. Der RDF-Export ist mit S3c.2 nach SISAL/sisal_rdf.py
-# gewandert, das aus dem geprueften Ausschnitt in data/derived/sisal/ schreibt
-# statt aus den v_*-CSV. Die Cave-Sites, die hier frueher aus v_sites_all.csv
-# entstanden, kommen jetzt aus der Datenbank; die archaeologische Anreicherung
-# liegt in data/curated/sisal_site_annotations.csv.
+# gewandert; mit S3c.4 liest auch dieses Skript aus dem geprueften Ausschnitt
+# unter data/derived/sisal/sites/ statt aus den v_data_*.csv. Die alten CSV
+# trugen den Dezimaltrenner-Fehler und einen engeren Stand: Botuvera 907 statt
+# 920 Zeilen, Sanbao 5832 statt 6085, Buraca Gloriosa 1137 statt 1178.
 #
-# Offen und fuer S3c.4 vorgemerkt: die Eingabe dieses Skripts sind weiterhin die
-# v_data_*.csv mit dem Dezimaltrenner-Fehler.
+# Drei Dinge, die sich mit S3c.4 geaendert haben:
+#
+#   1. Eine Linie je Entitaet, nicht je Site. Vorher wurden alle Proben einer
+#      Site nach Alter sortiert und zu einer Kurve verbunden. Sanbao hat
+#      achtzehn Speleotheme mit ueberlappenden Altersbereichen - zwischen 0,4
+#      und 13,6 ka liegen sechs uebereinander -, und die Linie sprang zwischen
+#      ihnen hin und her. Was wie ein verrauschtes Signal aussah, war die
+#      Sortierung.
+#   2. MIS-Baender aus dist/mis_stages.csv statt aus einer Liste im Code. Die
+#      Liste war LR04 bis MIS 12; sie endete bei 533 ka und fuehrte MIS 3 als
+#      Interstadial, waehrend das Leitschema Railsback es als warm fuehrt.
+#   3. Achsen aus geo_lod_figures.nice_ticks statt aus handgesetzten Ticks.
 
 import os
 import sys
+
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib.ticker import MultipleLocator, FuncFormatter, FixedLocator
 import matplotlib.transforms as transforms
+from matplotlib.ticker import FixedLocator, FuncFormatter, MultipleLocator
 
-sys.path.insert(
-    0,
-    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "ontology"),
-)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_DIR = os.path.dirname(SCRIPT_DIR)
+ONTOLOGY_DIR = os.path.join(REPO_DIR, "ontology")
+sys.path.insert(0, ONTOLOGY_DIR)
+
 import geo_lod_figures as gf  # noqa: E402
-from scipy.signal import savgol_filter
+import geo_lod_mis as gm  # noqa: E402
+from geo_lod_captions import CaptionFile  # noqa: E402
 
-# Byte-identical SVG across runs. Two things vary otherwise: the <dc:date>
-# in the SVG metadata, and the random ids matplotlib gives clip paths. The
-# salt fixes the ids, metadata={"Date": None} at save time drops the date.
+sys.path.insert(0, SCRIPT_DIR)
+import sisal_plates  # noqa: E402
+
+# Byte-identical SVG across runs: the salt fixes the ids matplotlib gives clip
+# paths, save_figure drops the date from the metadata.
 plt.rcParams["svg.hashsalt"] = "geo-lod"
 
 
@@ -37,6 +52,16 @@ class Tee:
     def __init__(self, filepath):
         self.file = open(filepath, "w", encoding="utf-8", newline="\n")
         self.stdout = sys.stdout
+        # The report holds box-drawing rules and delta signs, and the console
+        # is not always what receives them: redirect the run to a file or to
+        # nul and Python falls back to the locale encoding, cp1252 on Windows,
+        # which has no U+2500. The run then dies on its first section header,
+        # before a single figure is written - and a byte-stability check that
+        # redirects output would compare a file against itself.
+        try:
+            self.stdout.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
         sys.stdout = self
 
     def write(self, data):
@@ -52,104 +77,134 @@ class Tee:
         self.file.close()
 
 
-# Set working directory to the script's folder
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-# Create output directories
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SITES_DIR = os.path.join(REPO_DIR, "data", "derived", "sisal", "sites")
+ENTITY_CSV = os.path.join(
+    REPO_DIR, "data", "derived", "sisal", "tables", "entity.csv"
+)
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "plots")
 REPORT_DIR = os.path.join(SCRIPT_DIR, "report")
-ONTOLOGY_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), "ontology")
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(REPORT_DIR, exist_ok=True)
-os.makedirs(ONTOLOGY_DIR, exist_ok=True)
 
 # ──────────────────────────────────────────────
 # Shared plot settings
 # ──────────────────────────────────────────────
 FIGURE_SIZE = (10, 20)
 DPI = 100
-LINE_COLOR = "black"
-LINE_WIDTH = 1
+LINE_WIDTH = 1.0
+LINE_WIDTH_SMOOTH = 1.6
+RAW_ALPHA = 0.35  # measured series behind a smoothed one
 GRID_COLOR = "#cccccc"
 GRID_WIDTH = 1
 
-# Y-axis ticks (age in ka BP)
-AGE_MAJOR_TICK_INTERVAL = 20  # major tick every 20 ka
-AGE_MINOR_TICK_INTERVAL = 5  # minor tick every 5 ka
+AGE_MAJOR_TICK_INTERVAL = 20  # ka
+AGE_MINOR_TICK_INTERVAL = 5
 
 FONT_SIZE_LABEL = 26
 FONT_SIZE_TICK = 22
 TITLE_FONTSIZE = 26
 FONT_SIZE_MIS = 14
+FONT_SIZE_LEGEND = 13
+LABEL_PAD = 12
 
-# Smoothing
 ROLLING_WINDOW = 11
 SG_WINDOW = 11
 SG_POLYORDER = 2
-LINE_COLOR_FADED = "#aaaaaa"
-LINE_WIDTH_SMOOTH = 1.5
-LABEL_PAD = 12
 
-# ──────────────────────────────────────────────
-# MIS intervals (boundaries in ka BP, LR04)
-# ──────────────────────────────────────────────
 MIS_COLOR_WARM = "#fddbc7"
-MIS_COLOR_INTERSTADIAL = "#fef0e6"
 MIS_COLOR_COLD = "#d6e8f7"
+MIS_LABEL_COLOR_WARM = "#8b1a00"
+MIS_LABEL_COLOR_COLD = "#003f6b"
 
-MIS_INTERVALS = [
-    (0, 14, "MIS 1", "warm"),
-    (14, 29, "MIS 2", "cold"),
-    (29, 57, "MIS 3", "inter"),
-    (57, 71, "MIS 4", "cold"),
-    (71, 130, "MIS 5", "warm"),
-    (130, 191, "MIS 6", "cold"),
-    (191, 243, "MIS 7", "warm"),
-    (243, 300, "MIS 8", "cold"),
-    (300, 337, "MIS 9", "warm"),
-    (337, 374, "MIS 10", "cold"),
-    (374, 424, "MIS 11", "warm"),
-    (424, 533, "MIS 12", "cold"),
+FIGURE_LICENSE = "CC BY 4.0, Florian Thiery"
+SISAL_DOI = "https://doi.org/10.5194/essd-16-1933-2024"
+
+MEASURES = {
+    "d18o": {
+        "column": "d18o",
+        "label": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
+        "prose": "\u03b4\u00b9\u2078O",
+    },
+    "d13c": {
+        "column": "d13c",
+        "label": r"$\boldsymbol{\delta}^{\mathbf{13}}\mathbf{C}\ \mathbf{[‰]}$",
+        "prose": "\u03b4\u00b9\u00b3C",
+    },
+}
+
+VARIANTS = [
+    ("unsmoothed", {}),
+    (f"smooth{ROLLING_WINDOW}", {"rolling_window": ROLLING_WINDOW}),
+    (f"savgol{SG_WINDOW}p{SG_POLYORDER}", {"use_savgol": True}),
 ]
 
+VARIANT_PROSE = {
+    "unsmoothed": "The measured series is shown unsmoothed.",
+    f"smooth{ROLLING_WINDOW}": (
+        f"A rolling median over {ROLLING_WINDOW} points is drawn over the "
+        f"measured series."
+    ),
+    f"savgol{SG_WINDOW}p{SG_POLYORDER}": (
+        f"A Savitzky-Golay filter over {SG_WINDOW} points at polynomial order "
+        f"{SG_POLYORDER} is drawn over the measured series."
+    ),
+}
+
+CAPTIONS = CaptionFile(
+    os.path.join(SCRIPT_DIR, "captions.yaml"),
+    header=(
+        "captions.yaml - one entry per generated figure of the SISAL strand.\n"
+        "\n"
+        "Written by SISAL/plot_sisal_from_csv.py.\n"
+        "Edit 'caption' freely: an entry whose caption differs from 'generated'\n"
+        "is treated as hand-written and kept on the next run, while 'generated'\n"
+        "is refreshed so the diff shows what the code would say now."
+    ),
+)
+
+
 # ──────────────────────────────────────────────
-# Load SISAL CSV
+# Input
 # ──────────────────────────────────────────────
+#: Which cuts are drawn, and under which name. The slug keeps the site_id in
+#: front, as the published figures do; the file name of the cut is not the
+#: figure name, because sites/spannagel_all.csv would give "spannagel_all".
+SITES = [
+    {"file": "spannagel_all.csv", "slug": "58_spannagel"},
+    {"file": "sanbao.csv", "slug": "140_sanbao"},
+    {"file": "botuvera.csv", "slug": "144_botuvera"},
+    {"file": "corchia.csv", "slug": "145_corchia"},
+    {"file": "piani_eterni_karst_system.csv", "slug": "202_pianieterni"},
+    {"file": "buraca_gloriosa.csv", "slug": "275_buracagloriosa"},
+]
 
 
-def load_sisal_csv(filepath):
+def load_site(filename: str) -> pd.DataFrame:
+    """One site of the cut, ages in ka BP, sorted per entity.
+
+    Sorted by entity first and age second, and never by age alone: the age
+    order across entities is what the old script drew, and it is not a series.
     """
-    Liest eine SISAL-CSV-Datei ein.
-    Erwartet Spalten: site_id, site_name, entity_id, entity_name,
-                      sample_id, age_bp, d18o_permille, d13c_permille
-    Returns age in ka BP (age_bp / 1000).
+    path = os.path.join(SITES_DIR, filename)
+    df = pd.read_csv(path)
+    for column in ("age_bp", "d18o", "d13c"):
+        df[column] = pd.to_numeric(df[column], errors="coerce")
+    df["age_ka"] = df["age_bp"] / 1000.0
+    df = df.dropna(subset=["age_ka"])
+    return df.sort_values(["entity_id", "age_ka"]).reset_index(drop=True)
+
+
+def legend_columns(count: int) -> int:
+    """Columns of the legend. Eighteen names in one column fill the figure."""
+    return 1 if count <= 6 else 2 if count <= 12 else 3
+
+
+def entity_order(df: pd.DataFrame) -> list[int]:
+    """Entities of a site, the one reaching furthest back first.
+
+    Ordered by age rather than by id, so the legend reads in the same
+    direction as the axis and the colours do not jump about.
     """
-    df = pd.read_csv(filepath)
-
-    df["age_bp"] = pd.to_numeric(df["age_bp"], errors="coerce")
-    df["d18o_permille"] = pd.to_numeric(df["d18o_permille"], errors="coerce")
-    df["d13c_permille"] = pd.to_numeric(df["d13c_permille"], errors="coerce")
-
-    df["age_ka"] = df["age_bp"] / 1000.0  # in ka BP umrechnen
-
-    df = df.dropna(subset=["age_ka"]).sort_values("age_ka").reset_index(drop=True)
-
-    site_name = df["site_name"].iloc[0]
-    entity_ids = df["entity_id"].nunique()
-    print(f"  Loaded: {site_name}")
-    print(f"  Data points: {len(df)}, entities: {entity_ids}")
-    print(f"  Age: {df['age_ka'].min():.1f} – {df['age_ka'].max():.1f} ka BP")
-    if df["d18o_permille"].notna().any():
-        print(
-            f"  d18O: {df['d18o_permille'].min():.2f} – {df['d18o_permille'].max():.2f} ‰"
-        )
-    if df["d13c_permille"].notna().any():
-        print(
-            f"  d13C: {df['d13c_permille'].min():.2f} – {df['d13c_permille'].max():.2f} ‰"
-        )
-
-    return df
+    reach = df.groupby("entity_id")["age_ka"].max()
+    return list(reach.sort_values(ascending=False).index)
 
 
 # ──────────────────────────────────────────────
@@ -157,138 +212,153 @@ def load_sisal_csv(filepath):
 # ──────────────────────────────────────────────
 
 
-def draw_mis_bands(ax, y_min_ka, y_max_ka):
-    mis_trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
+def draw_mis_bands(ax, y_min_ka, y_max_ka, covered=None):
+    """Stage bands on the age axis, from dist/mis_stages.csv.
 
-    type_config = {
-        "warm": (MIS_COLOR_WARM, "#8b1a00", False),
-        "inter": (MIS_COLOR_INTERSTADIAL, "#8b1a00", False),
-        "cold": (MIS_COLOR_COLD, "#003f6b", False),
-    }
+    A stage with no measurement anywhere in the site is outlined instead of
+    filled, the same convention as EPICA: the band then reads as a stretch the
+    record does not cover rather than as one it covers flatly.
+    """
+    stages = gm.read_mis_stages()
+    y_lo, y_hi = min(y_min_ka, y_max_ka), max(y_min_ka, y_max_ka)
+    ages = sorted(covered) if covered is not None else None
+    trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
 
-    for age_top, age_bot, label, mis_type in MIS_INTERVALS:
-        y_lo = min(y_min_ka, y_max_ka)
-        y_hi = max(y_min_ka, y_max_ka)
-        visible_top = max(age_top, y_lo)
-        visible_bot = min(age_bot, y_hi)
+    for st in stages:
+        top, bot = st["end"], st["begin"]
+        visible_top, visible_bot = max(top, y_lo), min(bot, y_hi)
         if visible_top >= visible_bot:
             continue
 
-        color, label_color, _ = type_config.get(
-            mis_type, (MIS_COLOR_COLD, "#003f6b", False)
-        )
-        ax.axhspan(age_top, age_bot, facecolor=color, alpha=1.0, zorder=0)
+        warm = st["mode"] == "warm"
+        color = MIS_COLOR_WARM if warm else MIS_COLOR_COLD
+        label_color = MIS_LABEL_COLOR_WARM if warm else MIS_LABEL_COLOR_COLD
 
-        y_label = (visible_top + visible_bot) / 2.0
+        has_data = True
+        if ages is not None:
+            has_data = any(top <= a < bot for a in ages)
+
+        if has_data:
+            ax.axhspan(top, bot, facecolor=color, alpha=1.0, zorder=0)
+        else:
+            ax.axhspan(
+                top, bot, facecolor=color, alpha=0.35, edgecolor=label_color,
+                linestyle=(0, (4, 3)), linewidth=1.2, zorder=0,
+            )
+
+        middle = (visible_top + visible_bot) / 2.0
         ax.text(
-            0.99,
-            y_label,
-            label,
-            transform=mis_trans,
-            ha="right",
-            va="center",
-            fontsize=FONT_SIZE_MIS,
-            fontweight="bold",
-            color=label_color,
-            zorder=2,
+            0.99, middle, st["label"], transform=trans, ha="right",
+            va="center", fontsize=FONT_SIZE_MIS, fontweight="bold",
+            color=label_color, zorder=2,
         )
 
 
 # ──────────────────────────────────────────────
-# Generic plot function (mirrors EPICA script)
+# One figure
 # ──────────────────────────────────────────────
 
 
 def create_plot(
-    x_values,
-    y_values,
+    series,
     xlabel,
     ylabel,
     title_text,
     output_filename,
-    y_major_interval,
-    y_minor_interval,
-    x_ticks=None,
-    x_padding=0.05,
-    invert_y=True,
-    show_mis=False,
+    legend_loc,
     rolling_window=None,
     use_savgol=False,
 ):
+    """One figure, one line per entity.
+
+    *series* is a list of (name, colour, values, ages, breaks), each already
+    sorted by age within the entity.
+    """
     fig = plt.figure(figsize=FIGURE_SIZE, dpi=DPI)
     ax = fig.add_subplot(111)
 
-    y_min, y_max = y_values.min(), y_values.max()
-    if invert_y:
-        ax.set_ylim(y_max, y_min)
-    else:
-        ax.set_ylim(y_min, y_max)
+    all_ages = np.concatenate([ages for _, _, _, ages, _ in series])
+    all_values = np.concatenate([values for _, _, values, _, _ in series])
+    y_min, y_max = float(all_ages.min()), float(all_ages.max())
+    ax.set_ylim(y_max, y_min)  # oldest at the bottom
     ax.margins(y=0)
 
-    if show_mis:
-        draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max)
+    draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max, covered=all_ages)
 
-    if use_savgol:
-        ax.plot(
-            x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
-        )
-        smooth = savgol_filter(
-            x_values.values, window_length=SG_WINDOW, polyorder=SG_POLYORDER
-        )
-        ax.plot(
-            smooth, y_values, linewidth=LINE_WIDTH_SMOOTH, color=LINE_COLOR, zorder=3
-        )
-    elif rolling_window is not None:
-        ax.plot(
-            x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR_FADED, zorder=2
-        )
-        smooth = (
-            pd.Series(x_values.values)
-            .rolling(window=rolling_window, center=True, min_periods=1)
-            .median()
-        )
-        ax.plot(
-            smooth.values,
-            y_values,
-            linewidth=LINE_WIDTH_SMOOTH,
-            color=LINE_COLOR,
-            zorder=3,
-        )
-    else:
-        ax.plot(x_values, y_values, linewidth=LINE_WIDTH, color=LINE_COLOR, zorder=2)
+    # Breaks are found per entity and never across the site: the wide age
+    # spans between two speleothems are not gaps in a record, they are two
+    # records. Drawing anything across them - dashed or otherwise - would
+    # assert a continuity that does not exist.
+    for index, (name, colour, values, ages, breaks) in enumerate(series):
+        if use_savgol or rolling_window is not None:
+            # Measured series behind, faded but in the same colour, so it is
+            # readable which specimen a smoothed curve belongs to. It carries
+            # the rings too: the ring marks the last measured sample before a
+            # break, which is a statement about the series, not the filter.
+            before = len(ax.lines)
+            gf.draw_profile(
+                ax, values, ages, breaks, colour=colour,
+                linewidth=LINE_WIDTH, zorder=2 + 2 * index,
+            )
+            # Counted, not calculated: draw_profile lays down one line per run,
+            # one per break and one marker line only if there is a break at
+            # all, and an arithmetic guess at that number left part of the
+            # measured series at full strength.
+            for artist in ax.lines[before:]:
+                artist.set_alpha(RAW_ALPHA)
+            # Smoothed run by run, so a centred window cannot mix values from
+            # either side of a break.
+            if use_savgol:
+                smooth = gf.smooth_by_run(
+                    values, breaks, "savgol", SG_WINDOW, SG_POLYORDER
+                )
+            else:
+                smooth = gf.smooth_by_run(
+                    values, breaks, "median", rolling_window
+                )
+            gf.draw_profile(
+                ax, smooth, ages, breaks, colour=colour,
+                linewidth=LINE_WIDTH_SMOOTH, zorder=3 + 2 * index,
+            )
+        else:
+            gf.draw_profile(
+                ax, values, ages, breaks, colour=colour,
+                linewidth=LINE_WIDTH, zorder=2 + 2 * index,
+            )
+        ax.plot([], [], color=colour, linewidth=2.0, label=name)
 
-    ax.yaxis.set_major_locator(MultipleLocator(y_major_interval))
-    ax.yaxis.set_minor_locator(MultipleLocator(y_minor_interval))
+    ax.yaxis.set_major_locator(MultipleLocator(AGE_MAJOR_TICK_INTERVAL))
+    ax.yaxis.set_minor_locator(MultipleLocator(AGE_MINOR_TICK_INTERVAL))
     ax.yaxis.set_major_formatter(FuncFormatter(lambda val, pos: f"{val:.0f}"))
     ax.grid(axis="y", which="major", color=GRID_COLOR, linewidth=GRID_WIDTH)
     ax.tick_params(axis="y", which="minor", length=4, width=0.8)
 
-    # X-Achse oben
     ax.xaxis.tick_top()
     ax.xaxis.set_label_position("top")
 
-    x_min, x_max = x_values.min(), x_values.max()
-    x_range = x_max - x_min
-
-    if x_ticks is not None:
-        ax.xaxis.set_major_locator(FixedLocator(x_ticks))
-        t_min, t_max = min(x_ticks), max(x_ticks)
-        span = t_max - t_min
-        pad = span * 0.05 if span > 0 else 0.5
-        ax.set_xlim(t_min - pad, t_max + pad)
-    else:
-        ax.set_xlim(x_min - x_range * x_padding, x_max + x_range * x_padding)
-
-    ax.xaxis.set_major_formatter(FuncFormatter(lambda val, pos: f"{val:.1f}"))
+    # Ticks from the data, over the range of all entities of the site, so the
+    # three smoothing variants of one measure share a scale. The hand-written
+    # lists this replaces were per site and could clip: the d13c list of
+    # Buraca Gloriosa ran to -10 while the record reaches -11.76.
+    ticks, (lo, hi), decimals = gf.nice_ticks(
+        float(all_values.min()), float(all_values.max())
+    )
+    ax.xaxis.set_major_locator(FixedLocator(ticks))
+    ax.set_xlim(lo, hi)
+    ax.xaxis.set_major_formatter(
+        FuncFormatter(lambda val, pos: gf.format_tick(val, decimals))
+    )
 
     ax.set_xlabel(xlabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD)
     ax.set_ylabel(
         ylabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD, fontweight="bold"
     )
 
-    # Smoothing subtitle
     if use_savgol:
-        subtitle = f"Savitzky-Golay filter  |  window = {SG_WINDOW} pts  |  polyorder = {SG_POLYORDER}"
+        subtitle = (
+            f"Savitzky-Golay filter  |  window = {SG_WINDOW} pts  |  "
+            f"polyorder = {SG_POLYORDER}"
+        )
     elif rolling_window is not None:
         subtitle = f"Rolling median filter  |  window = {rolling_window} pts"
     else:
@@ -296,120 +366,187 @@ def create_plot(
 
     ax.set_title(title_text, fontsize=TITLE_FONTSIZE, fontweight="bold", pad=8)
     ax.annotate(
-        subtitle,
-        xy=(0.5, -0.01),
-        xycoords="axes fraction",
-        ha="center",
-        va="top",
-        fontsize=TITLE_FONTSIZE * 0.55,
-        fontstyle="italic",
+        subtitle, xy=(0.5, -0.01), xycoords="axes fraction", ha="center",
+        va="top", fontsize=TITLE_FONTSIZE * 0.55, fontstyle="italic",
         color="#777777",
     )
+
+    # The legend is drawn once to be measured and then placed. Its footprint
+    # cannot be guessed from the number of entries: Sanbao's three columns of
+    # speleothem names cover 60 per cent of the axis width, and an assumed
+    # 42 per cent let the search declare the lower left corner empty while
+    # SB-58 ran right through it.
+    #
+    # *legend_loc* is None for the first variant of a measure and the answer
+    # is handed back to the caller, so all three variants of one record put
+    # their legend in the same place.
+    columns = legend_columns(len(series))
+    style = dict(
+        fontsize=FONT_SIZE_LEGEND, ncol=columns, framealpha=0.9,
+        edgecolor="#999999", borderpad=0.6, labelspacing=0.4,
+        columnspacing=1.2, handlelength=1.6,
+    )
+    legend = ax.legend(loc="upper left", **style)
+    if legend_loc is None:
+        fig.canvas.draw()
+        box = legend.get_window_extent().transformed(ax.transAxes.inverted())
+        legend_loc = gf.best_legend_loc(
+            [(v, p) for _, _, v, p, _ in series],
+            (lo, hi),
+            (y_max, y_min),
+            width=min(box.width + 0.03, 0.95),
+            height=min(box.height + 0.03, 0.95),
+        )
+    legend.remove()
+    if legend_loc == gf.LEGEND_OUTSIDE:
+        # No room inside: below the axes, under the smoothing subtitle. Laid
+        # out flat in three rows rather than as a tall block, so it takes
+        # height from the margin and not from the record.
+        style["ncol"] = max(1, -(-len(series) // 3))
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.022), **style)
+    else:
+        ax.legend(loc=legend_loc, **style)
 
     ax.tick_params(axis="x", labelsize=FONT_SIZE_TICK)
     ax.tick_params(axis="y", labelsize=FONT_SIZE_TICK)
 
-    # Über geo_lod_figures, nicht über plt.savefig: matplotlib öffnet die
-    # Zieldatei sonst im Textmodus, und Python schreibt auf Windows CRLF,
-    # während .gitattributes LF ablegt - jedes SVG wiche dann dauerhaft von
-    # seiner eigenen abgelegten Form ab. Dieselbe Stelle wie in EPICA (S2).
-    gf.save_figure(plt.gcf(), output_filename, dpi=DPI)
-    plt.close()
+    # Over geo_lod_figures, not plt.savefig: matplotlib otherwise opens the
+    # target in text mode and Python writes CRLF on Windows, while
+    # .gitattributes stores LF.
+    gf.save_figure(fig, output_filename, dpi=DPI)
+    plt.close(fig)
+    return legend_loc
 
 
 # ──────────────────────────────────────────────
-# Helper: generate plots for one cave
+# One site
 # ──────────────────────────────────────────────
 
 
-def generate_cave_plots(df, site_name, site_slug, d18o_ticks=None, d13c_ticks=None):
-    """
-    Generates up to 6 plots per cave:
-      d18O vs Age ka BP  – unsmoothed, rolling median, Savitzky-Golay
-      d13C vs Age ka BP  – unsmoothed, rolling median, Savitzky-Golay
-    """
+def caption_for(site_name, measure, variant, series):
+    """The facts the drawing code knows and prose does not keep up with."""
+    info = MEASURES[measure]
+    points = sum(len(values) for _, _, values, _, _ in series)
+    ages = np.concatenate([a for _, _, _, a, _ in series])
+    names = ", ".join(name for name, _, _, _, _ in series)
+    breaks_total = sum(len(b) for _, _, _, _, b in series)
 
-    # Saubere Teilsets ohne NaN
-    mask_d18o = df["d18o_permille"].notna() & df["age_ka"].notna()
-    mask_d13c = df["d13c_permille"].notna() & df["age_ka"].notna()
-
-    df_d18o = df[mask_d18o].copy()
-    df_d13c = df[mask_d13c].copy()
-
-    plots = []
-
-    # ── d18O ────────────────────────────────────────────────────────────
-    for sm_label, sm_kwargs in [
-        ("unsmoothed", {}),
-        (f"smooth{ROLLING_WINDOW}", {"rolling_window": ROLLING_WINDOW}),
-        (f"savgol{SG_WINDOW}p{SG_POLYORDER}", {"use_savgol": True}),
-    ]:
-        if df_d18o.empty:
-            print(f"  ⚠  No d18O data for {site_name}, skipping.")
-            break
-        plots.append(
-            {
-                "x": df_d18o["d18o_permille"],
-                "y": df_d18o["age_ka"],
-                "xlabel": r"$\boldsymbol{\delta}^{\mathbf{18}}\mathbf{O}\ \mathbf{[‰]}$",
-                "ylabel": "Age [ka BP]",
-                "title": f"SISAL – {site_name}",
-                "filename": os.path.join(
-                    OUTPUT_DIR, f"{site_slug}_d18o_age_{sm_label}"
-                ),
-                "x_ticks": d18o_ticks,
-                "show_mis": True,
-                **sm_kwargs,
-            }
+    gaps = ""
+    if breaks_total:
+        gaps = (
+            f" {breaks_total} break{'s' if breaks_total != 1 else ''} in "
+            f"sampling {'are' if breaks_total != 1 else 'is'} drawn dashed, "
+            f"with the last sample before and the first after it ringed."
         )
 
-    # ── d13C ────────────────────────────────────────────────────────────
-    if d13c_ticks is None or df_d13c.empty:
-        print(f"  ⚠  No d13C data for {site_name} – skipping.")
-    else:
-        for sm_label, sm_kwargs in [
-            ("unsmoothed", {}),
-            (f"smooth{ROLLING_WINDOW}", {"rolling_window": ROLLING_WINDOW}),
-            (f"savgol{SG_WINDOW}p{SG_POLYORDER}", {"use_savgol": True}),
-        ]:
-            plots.append(
-                {
-                    "x": df_d13c["d13c_permille"],
-                    "y": df_d13c["age_ka"],
-                    "xlabel": r"$\boldsymbol{\delta}^{\mathbf{13}}\mathbf{C}\ \mathbf{[‰]}$",
-                    "ylabel": "Age [ka BP]",
-                    "title": f"SISAL – {site_name}",
-                    "filename": os.path.join(
-                        OUTPUT_DIR, f"{site_slug}_d13c_age_{sm_label}"
-                    ),
-                    "x_ticks": d13c_ticks,
-                    "show_mis": True,
-                    **sm_kwargs,
-                }
+    return (
+        f"{info['prose']} of {site_name} from the SISAL v3 database, "
+        f"{points} measurements on {len(series)} speleothem"
+        f"{'s' if len(series) != 1 else ''} ({names}), ages from "
+        # format_tick and not an f-string: Sanbao's SB-43 reaches -0.01 ka, a
+        # post-1950 extrapolation the loader already flags, and plain
+        # formatting prints that as "-0.0".
+        f"{gf.format_tick(float(ages.min()), 1)} to "
+        f"{gf.format_tick(float(ages.max()), 1)} ka BP on the linear "
+        f"interpolation age model. Each speleothem is drawn as its own line; "
+        f"together they are not one record. {VARIANT_PROSE[variant]}{gaps} "
+        f"Marine Isotope Stage bands follow Railsback et al. (2015); an "
+        f"outlined band marks a stage without a measurement in this site."
+    )
+
+
+def collect_site(cfg, entity_names) -> dict:
+    """Everything the figures and the plates need from one site, read once.
+
+    The plates draw the same curves as the single figures, and reading the cut
+    twice would let the two drift apart at the first change to the loader.
+    """
+    df = load_site(cfg["file"])
+    order = entity_order(df)
+    colours = gf.series_colours(len(order))
+
+    by_measure = {}
+    for measure, info in MEASURES.items():
+        series = []
+        for colour, eid in zip(colours, order):
+            g = df[(df.entity_id == eid) & df[info["column"]].notna()]
+            if g.empty:
+                continue
+            ages = g["age_ka"].to_numpy(dtype=float)
+            values = g[info["column"]].to_numpy(dtype=float)
+            breaks = gf.find_breaks_relative(ages)
+            series.append(
+                (entity_names.get(eid, str(eid)), colour, values, ages, breaks)
             )
+        by_measure[measure] = series
 
-    print(f"\n  Generating {len(plots)} plots for {site_name} …")
-    for cfg in plots:
-        print(f"    → {os.path.basename(cfg['filename'])}")
-        create_plot(
-            x_values=cfg["x"],
-            y_values=cfg["y"],
-            xlabel=cfg["xlabel"],
-            ylabel=cfg["ylabel"],
-            title_text=cfg["title"],
-            output_filename=cfg["filename"],
-            y_major_interval=AGE_MAJOR_TICK_INTERVAL,
-            y_minor_interval=AGE_MINOR_TICK_INTERVAL,
-            x_ticks=cfg.get("x_ticks"),
-            show_mis=cfg.get("show_mis", False),
-            rolling_window=cfg.get("rolling_window"),
-            use_savgol=cfg.get("use_savgol", False),
+    return {
+        "slug": cfg["slug"],
+        "site_name": df["site_name"].iloc[0],
+        "site_id": int(df["site_id"].iloc[0]),
+        "rows": len(df),
+        "entities": len(order),
+        "age_min": float(df["age_ka"].min()),
+        "age_max": float(df["age_ka"].max()),
+        "series": by_measure,
+    }
+
+
+def plot_site(site):
+    site_name = site["site_name"]
+
+    print(f"\n{'─' * 60}")
+    print(f"Loading: {site_name}")
+    print("─" * 60)
+    print(f"  Loaded: {site_name} (site_id {site['site_id']})")
+    print(f"  Data points: {site['rows']}, entities: {site['entities']}")
+    print(f"  Age: {site['age_min']:.1f} – {site['age_max']:.1f} ka BP")
+
+    made = 0
+    for measure, info in MEASURES.items():
+        series = site["series"][measure]
+        if not series:
+            print(f"\n  ⚠  No {info['prose']} for {site_name} – skipping.")
+            continue
+
+        # Decided by the first figure of this measure and reused by the other
+        # two, so the legend does not move between the variants of one record.
+        legend_loc = None
+
+        carried = sum(len(v) for _, _, v, _, _ in series)
+        breaks_total = sum(len(b) for _, _, _, _, b in series)
+        print(
+            f"\n  {info['prose']}: {carried} measurements on {len(series)} of "
+            f"{site['entities']} speleothems, "
+            f"{breaks_total} break{'s' if breaks_total != 1 else ''}"
         )
-
+        for variant, kwargs in VARIANTS:
+            key = f"{site['slug']}_{measure}_age_{variant}"
+            print(f"    → {key}")
+            legend_loc = create_plot(
+                series=series,
+                xlabel=info["label"],
+                ylabel="Age [ka]",
+                title_text=f"SISAL – {site_name}",
+                output_filename=os.path.join(OUTPUT_DIR, key),
+                legend_loc=legend_loc,
+                **kwargs,
+            )
+            if variant == VARIANTS[0][0]:
+                print(f"      legend: {legend_loc}")
+            CAPTIONS.add(
+                key,
+                caption=caption_for(site_name, measure, variant, series),
+                license=FIGURE_LICENSE,
+                sources=[SISAL_DOI],
+            )
+            made += 1
+    return made
 
 
 def main():
-    from datetime import datetime
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(REPORT_DIR, exist_ok=True)
 
     report_path = os.path.join(REPORT_DIR, "report.txt")
     tee = Tee(report_path)
@@ -418,66 +555,30 @@ def main():
     print("SISAL Speleothem – Plot Generator")
     print("=" * 60)
 
-    # ── Configure SISAL input files ───────────────────────────────────────────
-    # Adjust paths if needed (relative to the script directory)
-    SISAL_FILES = [
-        {
-            "path": "v_data_144_botuvera.csv",
-            "slug": "144_botuvera",
-            "d18o_ticks": [-6, -5, -4, -3, -2, -1],
-            "d13c_ticks": [-10, -9, -8, -7, -6, -5, -4, -3],
-        },
-        {
-            "path": "v_data_145_corchia.csv",
-            "slug": "145_corchia",
-            "d18o_ticks": [-6, -5, -4, -3],
-            "d13c_ticks": [-3, -2, -1, 0, 1, 2, 3, 4],
-        },
-        {
-            "path": "v_data_140_sanbao.csv",
-            "slug": "140_sanbao",
-            "d18o_ticks": [-10, -9, -8, -7, -6, -5, -4],
-            "d13c_ticks": None,  # no d13C data in SISAL for Sanbao
-        },
-        {
-            "path": "v_data_275_buracagloriosa.csv",
-            "slug": "275_buracagloriosa",
-            "d18o_ticks": [-6, -5, -4, -3, -2, -1, 0],
-            "d13c_ticks": [-10, -8, -6, -4, -2, 0],
-        },
-    ]
+    # Names for the legend. entity_name is in the flat cut as well, but the
+    # entity table is where an entity is described, and the flat cut is meant
+    # to stay a convenience, not a second source.
+    entity = pd.read_csv(ENTITY_CSV)
+    entity_names = dict(zip(entity.entity_id, entity.entity_name))
 
-    total_plots = 0
-
-    for cfg in SISAL_FILES:
-        print(f"\n{'─' * 60}")
-        print(f"Loading: {cfg['path']}")
-        print("─" * 60)
-
-        filepath = cfg["path"]
-        if not os.path.isabs(filepath):
-            filepath = os.path.join(SCRIPT_DIR, filepath)
-
-        if not os.path.exists(filepath):
-            print(f"  ⚠  File not found: {filepath} – skipping.")
+    sites = []
+    for cfg in SITES:
+        if not os.path.exists(os.path.join(SITES_DIR, cfg["file"])):
+            print(f"  ⚠  Missing cut: {cfg['file']} – skipping.")
             continue
+        sites.append(collect_site(cfg, entity_names))
 
-        df = load_sisal_csv(filepath)
-        site_name = df["site_name"].iloc[0]
+    total = sum(plot_site(site) for site in sites)
 
-        generate_cave_plots(
-            df=df,
-            site_name=site_name,
-            site_slug=cfg["slug"],
-            d18o_ticks=cfg.get("d18o_ticks"),
-            d13c_ticks=cfg.get("d13c_ticks"),
-        )
-        total_plots += 6
+    # The plates come last and share the caption file: two collectors would
+    # overwrite each other, and the file has to be complete after one run.
+    total += sisal_plates.build_all(sites, CAPTIONS)
 
     print("\n" + "=" * 60)
     print(f"Done! Plots saved to '{OUTPUT_DIR}/'")
-    print(f"Total: {total_plots} plots")
+    print(f"Total: {total} plots")
     print("=" * 60)
+    CAPTIONS.write()
     print(f"Report saved: {report_path}")
     tee.close()
 

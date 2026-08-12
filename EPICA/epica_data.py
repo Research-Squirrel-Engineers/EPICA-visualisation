@@ -47,6 +47,7 @@ plus, where the file provides them, the record-specific extras named in
 from __future__ import annotations
 
 import os
+import sys
 from typing import Iterator
 
 import pandas as pd
@@ -54,6 +55,14 @@ import pandas as pd
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(SCRIPT_DIR)
 RAW_DIR = os.path.join(REPO_DIR, "data", "raw", "epica")
+
+# This module re-exports the MIS reader from ontology/geo_lod_mis.py, so it
+# puts that directory on the path itself rather than relying on every caller
+# to have done it. epica_rdf and plot_epica_from_tab already do; a bare
+# `import epica_data` from a scratch script did not.
+_ONTOLOGY_DIR = os.path.join(REPO_DIR, "ontology")
+if _ONTOLOGY_DIR not in sys.path:
+    sys.path.insert(0, _ONTOLOGY_DIR)
 
 
 # ===========================================================================
@@ -369,58 +378,16 @@ def load_all() -> Iterator[tuple[str, pd.DataFrame]]:
 # ===========================================================================
 # 3.  MARINE ISOTOPE STAGES
 # ===========================================================================
-# Read from dist/mis_stages.csv, the table the vocabulary step writes from the
-# same values it puts in the RDF. Nothing about stage boundaries is defined in
-# this repository outside that one generator any more: the hard-coded
-# MIS_INTERVALS list that used to sit in the plot script carried boundaries of
-# its own - LR04 with two hand-adjusted transitions and MIS 14 dropped
-# entirely - so a band in a figure and a membership triple in the graph could
-# disagree without anything noticing.
+# Moved to ontology/geo_lod_mis.py in S3c.4 and re-exported here. The stages
+# are not an EPICA matter - SISAL draws the same bands - and a reader living
+# inside this package would have made the SISAL script import from a sibling
+# strand. The four call sites in this repository keep using ed.read_mis_stages.
 
-MIS_STAGES_CSV = os.path.join(REPO_DIR, "dist", "mis_stages.csv")
-
-
-def read_mis_stages() -> list[dict]:
-    """Leading stage boundaries, oldest bound first.
-
-    Stages only, no substages: Railsback et al. (2015) resolve substages over
-    part of their range only, so substage bands would be present for some
-    intervals and absent for others.
-    """
-    import csv
-
-    if not os.path.exists(MIS_STAGES_CSV):
-        raise FileNotFoundError(
-            f"{MIS_STAGES_CSV} missing - run the vocabulary step "
-            f"(main.py step 3) first."
-        )
-
-    stages: list[dict] = []
-    with open(MIS_STAGES_CSV, encoding="utf-8", newline="") as fh:
-        for row in csv.DictReader(fh):
-            if row["kind"] != "stage" or not row["begin_ka"]:
-                continue
-            stages.append(
-                {
-                    "stage": row["stage"],
-                    "label": row["label"],
-                    # begin = older bound, end = younger bound. MIS 1 has no
-                    # younger bound; it reaches the present.
-                    "begin": float(row["begin_ka"]),
-                    "end": float(row["end_ka"]) if row["end_ka"] else 0.0,
-                    "mode": row["climate_mode"] or None,
-                }
-            )
-    stages.sort(key=lambda s: s["begin"])
-    return stages
-
-
-def stage_for_age(stages: list[dict], age_ka: float) -> dict | None:
-    """The stage an age falls in: end <= age < begin."""
-    for st in stages:
-        if st["end"] <= age_ka < st["begin"]:
-            return st
-    return None
+from geo_lod_mis import (  # noqa: E402,F401
+    MIS_STAGES_CSV,
+    read_mis_stages,
+    stage_for_age,
+)
 
 
 #: Longest gap between two measurements that interpolation will still bridge.

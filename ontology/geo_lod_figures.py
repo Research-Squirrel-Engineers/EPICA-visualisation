@@ -255,6 +255,197 @@ def find_breaks(positions: np.ndarray, threshold: float) -> list[tuple[int, int]
     ]
 
 
+#: Absolute floor and relative factor of ``find_breaks_relative``. See there
+#: for why a speleothem needs both where an ice core needs neither.
+RELATIVE_BREAK_FLOOR_KYR = 2.0
+RELATIVE_BREAK_FACTOR = 10.0
+RELATIVE_BREAK_WINDOW = 25
+
+
+def find_breaks_relative(
+    positions: np.ndarray,
+    floor: float = RELATIVE_BREAK_FLOOR_KYR,
+    factor: float = RELATIVE_BREAK_FACTOR,
+    window: int = RELATIVE_BREAK_WINDOW,
+) -> list[tuple[int, int]]:
+    """Index pairs bounding each break, judged against the record's own pace.
+
+    A spacing counts as a break when it is both wider than *floor* and more
+    than *factor* times the median spacing of its *window* neighbours on
+    either side. *positions* must be sorted ascending.
+
+    Why not the fixed threshold of ``find_breaks``. Speleothem sampling
+    density varies by three orders of magnitude between the records in this
+    repository - SPA133 samples every 1.4 years, BG67 every 1060 - and a
+    single number cannot mean the same thing in both. Two records show what
+    goes wrong. SB61 is sampled at a steady 1.6 to 1.85 kyr between 260 and
+    318 ka; at a 1 kyr threshold that regular stretch dissolves into thirty
+    dashed segments. SPA121_2021 is sampled at a steady 5.09, 5.21, 5.11,
+    5.13, 4.98 kyr between 164 and 191 ka; at a 5 kyr threshold four of those
+    five equal steps are dashed and the fifth is not, which is visibly
+    arbitrary and impossible to defend in a caption.
+
+    Each term does its own work. The floor keeps a finely sampled record from
+    reporting breaks that are merely a few centuries wide: Corchia's CC-1_2018
+    has a 0.45 kyr spacing that is 32 times its median, and 450 years is not a
+    gap in a 12 kyr record. The factor keeps a uniformly coarse record from
+    reporting its own resolution as a break: BG67 samples every 1.06 kyr and
+    twice reaches 2.0, which clears the floor but is the record behaving
+    normally. Over the six sites the two together mark fifteen breaks, and
+    every one of them is a stretch where the neighbouring spacing is 33 to 196
+    times smaller.
+
+    The caveat is the same as for ``find_breaks`` and travels with it: a
+    dashed segment states "no samples here", not "no growth here". SISAL does
+    record growth interruptions - the ``hiatus`` and ``gap`` tables, in the
+    graph since S3c.3 as ``geolod:GrowthHiatus`` and ``geolod:RecordGap`` -
+    but those rows carry no chronology and therefore never reach a figure.
+    """
+    positions = np.asarray(positions, dtype=float)
+    if len(positions) < 3:
+        return []
+
+    spacing = np.diff(positions)
+    breaks = []
+    for i, width in enumerate(spacing):
+        if width <= floor:
+            continue
+        lo = max(0, i - window)
+        hi = min(len(spacing), i + window + 1)
+        local = float(np.median(spacing[lo:hi]))
+        if local > 0 and width > factor * local:
+            breaks.append((i, i + 1))
+    return breaks
+
+
+# ---------------------------------------------------------------------------
+# Telling several records apart in one figure
+# ---------------------------------------------------------------------------
+# A SISAL site holds up to eighteen speleothems, and they overlap in age.
+# Drawing them as one series sorted by age produces a curve that jumps between
+# specimens; drawing them as one colour produces a thicket. Colours come from
+# matplotlib's qualitative maps in a fixed order, so the same speleothem keeps
+# the same colour across the three smoothing variants of a site.
+
+def series_colours(n: int) -> list[str]:
+    """*n* distinguishable colours, in a fixed order.
+
+    tab10 up to ten series. Beyond that tab20, but with its ten saturated
+    shades taken first and the ten pale ones only afterwards: tab20 alternates
+    dark and light shades of one hue, and a pale line is hard to follow across
+    the pastel MIS bands these figures carry behind the curves. Taken in the
+    map's own order, Sanbao's second-longest record came out in the palest
+    blue available.
+    """
+    from matplotlib.colors import to_hex
+    import matplotlib.pyplot as plt
+
+    if n <= 10:
+        cmap = plt.get_cmap("tab10")
+        return [to_hex(cmap(i)) for i in range(n)]
+
+    cmap = plt.get_cmap("tab20")
+    order = list(range(0, 20, 2)) + list(range(1, 20, 2))
+    return [to_hex(cmap(order[i % 20])) for i in range(n)]
+
+
+#: Candidate legend anchors, in the order a tie is broken. The three right
+#: hand positions are missing on purpose: in the portrait figures of this
+#: repository the right edge carries the MIS labels, and a legend there
+#: collides with text rather than with a curve, which is worse - the curve
+#: shows through, the label does not.
+LEGEND_ANCHORS = (
+    ("upper left", 0.0, 1.0),
+    ("lower left", 0.0, 0.0),
+    ("upper center", 0.5, 1.0),
+    ("lower center", 0.5, 0.0),
+    ("center left", 0.0, 0.5),
+    ("center", 0.5, 0.5),
+)
+
+#: Returned instead of an anchor when every anchor would bury a series. The
+#: caller is expected to put the legend outside the axes.
+LEGEND_OUTSIDE = "outside"
+
+#: A series counts as buried above this share of its points. Ten per cent is
+#: well above what a legend covers when it sits in genuinely empty space -
+#: every uncrowded site in this repository lands on zero - and well below the
+#: 27 per cent that is the best any interior anchor manages at Sanbao.
+LEGEND_MAX_COVERED = 0.10
+
+
+def best_legend_loc(
+    points: list[tuple[np.ndarray, np.ndarray]],
+    xlim: tuple[float, float],
+    ylim: tuple[float, float],
+    width: float = 0.42,
+    height: float = 0.10,
+    max_covered: float = LEGEND_MAX_COVERED,
+) -> str:
+    """The anchor that buries the least of any one series.
+
+    *points* is a list of (values, positions) pairs in data coordinates, one
+    per series; *xlim* and *ylim* are the axis limits in the order they were
+    set, so an inverted age axis works unchanged. *width* and *height* are the
+    footprint of the legend as a fraction of the axes - measure it, do not
+    guess: Sanbao's three columns of speleothem names are 0.59 wide, and an
+    assumed 0.42 declared a corner empty that a record ran straight through.
+
+    Scored per series and not over all points. Sanbao has eighteen
+    speleothems, and the corner with the fewest points under it hides 140 of
+    SB-58's 155 - ninety per cent of the only record covering MIS 11 and 12 -
+    while amounting to two per cent of the site. A legend that hides a little
+    of each of eighteen long records costs nothing; one that hides a whole
+    short record costs the record.
+
+    Returns ``LEGEND_OUTSIDE`` when even the best anchor buries more than
+    *max_covered* of some series. At a site as densely covered as Sanbao there
+    is no free space inside the axes, and pretending otherwise only picks the
+    least bad place to lose a speleothem.
+
+    Why not matplotlib's ``loc="best"``. It does a similar search, but at draw
+    time, over whatever artists are on the axes, and by area rather than by
+    series. The smoothed variants carry twice as many lines as the unsmoothed
+    one, so the three figures of a record could land on different corners, and
+    three figures whose legend jumps about read as three unrelated figures.
+    """
+    x0, x1 = float(xlim[0]), float(xlim[1])
+    y0, y1 = float(ylim[0]), float(ylim[1])
+    if x1 == x0 or y1 == y0 or not points:
+        return LEGEND_ANCHORS[0][0]
+
+    fractions = [
+        ((np.asarray(v, dtype=float) - x0) / (x1 - x0),
+         (np.asarray(p, dtype=float) - y0) / (y1 - y0))
+        for v, p in points
+    ]
+
+    best, best_score = LEGEND_ANCHORS[0][0], None
+    for name, ax_x, ax_y in LEGEND_ANCHORS:
+        left = min(max(ax_x - width / 2 if ax_x == 0.5 else ax_x, 0.0),
+                   max(1.0 - width, 0.0))
+        bottom = min(max(ax_y - height / 2 if ax_y == 0.5 else
+                         (ax_y - height if ax_y == 1.0 else ax_y), 0.0),
+                     max(1.0 - height, 0.0))
+        worst, total = 0.0, 0.0
+        for fx, fy in fractions:
+            covered = np.count_nonzero(
+                (fx >= left) & (fx <= left + width)
+                & (fy >= bottom) & (fy <= bottom + height)
+            )
+            worst = max(worst, covered / len(fx))
+            total += covered
+        score = (worst, total)
+        if best_score is None or score < best_score:
+            best, best_score = name, score
+        if score == (0.0, 0.0):
+            break
+
+    if best_score is not None and best_score[0] > max_covered:
+        return LEGEND_OUTSIDE
+    return best
+
+
 def draw_profile(
     ax,
     values: np.ndarray,

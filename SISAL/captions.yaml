@@ -1,0 +1,251 @@
+# captions.yaml - one entry per generated figure of the SISAL strand.
+#
+# Written by SISAL/plot_sisal_from_csv.py.
+# Edit 'caption' freely: an entry whose caption differs from 'generated'
+# is treated as hand-written and kept on the next run, while 'generated'
+# is refreshed so the diff shows what the code would say now.
+
+140_sanbao_d18o_age_savgol11p2:
+  caption: "δ¹⁸O of Sanbao cave from the SISAL v3 database, 6085 measurements on 18 speleothems (SB-58, SB61, SB11, SB42, SB41, SB25-2, SB23, TF, SB34, SB22, SB25-1, SB3, SB-49, SB-44, SB-43, SB-10_2009, SB-27, SB-26_2009), ages from 0.0 to 464.8 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Sanbao cave from the SISAL v3 database, 6085 measurements on 18 speleothems (SB-58, SB61, SB11, SB42, SB41, SB25-2, SB23, TF, SB34, SB22, SB25-1, SB3, SB-49, SB-44, SB-43, SB-10_2009, SB-27, SB-26_2009), ages from 0.0 to 464.8 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+140_sanbao_d18o_age_smooth11:
+  caption: "δ¹⁸O of Sanbao cave from the SISAL v3 database, 6085 measurements on 18 speleothems (SB-58, SB61, SB11, SB42, SB41, SB25-2, SB23, TF, SB34, SB22, SB25-1, SB3, SB-49, SB-44, SB-43, SB-10_2009, SB-27, SB-26_2009), ages from 0.0 to 464.8 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Sanbao cave from the SISAL v3 database, 6085 measurements on 18 speleothems (SB-58, SB61, SB11, SB42, SB41, SB25-2, SB23, TF, SB34, SB22, SB25-1, SB3, SB-49, SB-44, SB-43, SB-10_2009, SB-27, SB-26_2009), ages from 0.0 to 464.8 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+140_sanbao_d18o_age_unsmoothed:
+  caption: "δ¹⁸O of Sanbao cave from the SISAL v3 database, 6085 measurements on 18 speleothems (SB-58, SB61, SB11, SB42, SB41, SB25-2, SB23, TF, SB34, SB22, SB25-1, SB3, SB-49, SB-44, SB-43, SB-10_2009, SB-27, SB-26_2009), ages from 0.0 to 464.8 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Sanbao cave from the SISAL v3 database, 6085 measurements on 18 speleothems (SB-58, SB61, SB11, SB42, SB41, SB25-2, SB23, TF, SB34, SB22, SB25-1, SB3, SB-49, SB-44, SB-43, SB-10_2009, SB-27, SB-26_2009), ages from 0.0 to 464.8 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+144_botuvera_d13c_age_savgol11p2:
+  caption: "δ¹³C of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+144_botuvera_d13c_age_smooth11:
+  caption: "δ¹³C of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+144_botuvera_d13c_age_unsmoothed:
+  caption: "δ¹³C of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+144_botuvera_d18o_age_savgol11p2:
+  caption: "δ¹⁸O of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+144_botuvera_d18o_age_smooth11:
+  caption: "δ¹⁸O of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+144_botuvera_d18o_age_unsmoothed:
+  caption: "δ¹⁸O of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Botuverá cave from the SISAL v3 database, 920 measurements on 2 speleothems (BT-2, BTV21a), ages from -0.1 to 116.3 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+145_corchia_d13c_age_savgol11p2:
+  caption: "δ¹³C of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+145_corchia_d13c_age_smooth11:
+  caption: "δ¹³C of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+145_corchia_d13c_age_unsmoothed:
+  caption: "δ¹³C of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+145_corchia_d18o_age_savgol11p2:
+  caption: "δ¹⁸O of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+145_corchia_d18o_age_smooth11:
+  caption: "δ¹⁸O of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+145_corchia_d18o_age_unsmoothed:
+  caption: "δ¹⁸O of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Antro del Corchia from the SISAL v3 database, 1345 measurements on 4 speleothems (CC-1_2018, CC-7_2018, CC-28_2018, CC27), ages from 2.5 to 140.1 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+202_pianieterni_d13c_age_savgol11p2:
+  caption: "δ¹³C of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+202_pianieterni_d13c_age_smooth11:
+  caption: "δ¹³C of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+202_pianieterni_d13c_age_unsmoothed:
+  caption: "δ¹³C of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+202_pianieterni_d18o_age_savgol11p2:
+  caption: "δ¹⁸O of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+202_pianieterni_d18o_age_smooth11:
+  caption: "δ¹⁸O of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+202_pianieterni_d18o_age_unsmoothed:
+  caption: "δ¹⁸O of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Piani Eterni karst system from the SISAL v3 database, 781 measurements on 2 speleothems (GG1, MN1), ages from 84.3 to 289.2 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 3 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+275_buracagloriosa_d13c_age_savgol11p2:
+  caption: "δ¹³C of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+275_buracagloriosa_d13c_age_smooth11:
+  caption: "δ¹³C of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+275_buracagloriosa_d13c_age_unsmoothed:
+  caption: "δ¹³C of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+275_buracagloriosa_d18o_age_savgol11p2:
+  caption: "δ¹⁸O of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+275_buracagloriosa_d18o_age_smooth11:
+  caption: "δ¹⁸O of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+275_buracagloriosa_d18o_age_unsmoothed:
+  caption: "δ¹⁸O of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Buraca Gloriosa from the SISAL v3 database, 1178 measurements on 5 speleothems (BG66, BG67, BG611, BG6LR, BG41), ages from 1.3 to 220.7 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 7 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+58_spannagel_d13c_age_savgol11p2:
+  caption: "δ¹³C of Spannagel cave from the SISAL v3 database, 2477 measurements on 2 speleothems (SPA121_2021, SPA127_2023), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Spannagel cave from the SISAL v3 database, 2477 measurements on 2 speleothems (SPA121_2021, SPA127_2023), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+58_spannagel_d13c_age_smooth11:
+  caption: "δ¹³C of Spannagel cave from the SISAL v3 database, 2477 measurements on 2 speleothems (SPA121_2021, SPA127_2023), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Spannagel cave from the SISAL v3 database, 2477 measurements on 2 speleothems (SPA121_2021, SPA127_2023), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+58_spannagel_d13c_age_unsmoothed:
+  caption: "δ¹³C of Spannagel cave from the SISAL v3 database, 2477 measurements on 2 speleothems (SPA121_2021, SPA127_2023), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹³C of Spannagel cave from the SISAL v3 database, 2477 measurements on 2 speleothems (SPA121_2021, SPA127_2023), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+58_spannagel_d18o_age_savgol11p2:
+  caption: "δ¹⁸O of Spannagel cave from the SISAL v3 database, 7869 measurements on 8 speleothems (SPA121_2021, SPA183, SPA146, SPA70, SPA133, SPA127_2023, SPA127, SPA128), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Spannagel cave from the SISAL v3 database, 7869 measurements on 8 speleothems (SPA121_2021, SPA183, SPA146, SPA70, SPA133, SPA127_2023, SPA127, SPA128), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A Savitzky-Golay filter over 11 points at polynomial order 2 is drawn over the measured series. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+58_spannagel_d18o_age_smooth11:
+  caption: "δ¹⁸O of Spannagel cave from the SISAL v3 database, 7869 measurements on 8 speleothems (SPA121_2021, SPA183, SPA146, SPA70, SPA133, SPA127_2023, SPA127, SPA128), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Spannagel cave from the SISAL v3 database, 7869 measurements on 8 speleothems (SPA121_2021, SPA183, SPA146, SPA70, SPA133, SPA127_2023, SPA127, SPA128), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. A rolling median over 11 points is drawn over the measured series. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+58_spannagel_d18o_age_unsmoothed:
+  caption: "δ¹⁸O of Spannagel cave from the SISAL v3 database, 7869 measurements on 8 speleothems (SPA121_2021, SPA183, SPA146, SPA70, SPA133, SPA127_2023, SPA127, SPA128), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  generated: "δ¹⁸O of Spannagel cave from the SISAL v3 database, 7869 measurements on 8 speleothems (SPA121_2021, SPA183, SPA146, SPA70, SPA133, SPA127_2023, SPA127, SPA128), ages from 2.4 to 247.4 ka BP on the linear interpolation age model. Each speleothem is drawn as its own line; together they are not one record. The measured series is shown unsmoothed. 5 breaks in sampling are drawn dashed, with the last sample before and the first after it ringed. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in this site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+plate_coverage:
+  caption: "Age coverage of the 39 speleothems of the six SISAL sites in this repository, one bar per speleothem, grouped by site and coloured as in the site figures. A bar is interrupted where the record is: 4 of them carry a break in sampling. Overlapping bars within a site are why the samples of a site are not drawn as one curve - at Sanbao six speleothems cover the interval between 0.4 and 13.6 ka. Marine Isotope Stage bands follow Railsback et al. (2015)."
+  generated: "Age coverage of the 39 speleothems of the six SISAL sites in this repository, one bar per speleothem, grouped by site and coloured as in the site figures. A bar is interrupted where the record is: 4 of them carry a break in sampling. Overlapping bars within a site are why the samples of a site are not drawn as one curve - at Sanbao six speleothems cover the interval between 0.4 and 13.6 ka. Marine Isotope Stage bands follow Railsback et al. (2015)."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+
+plate_pipeline_outputs:
+  caption: "δ¹⁸O of the six SISAL sites of this repository, one panel per site: Spannagel cave, Sanbao cave, Botuverá cave, Antro del Corchia, Piani Eterni karst system, Buraca Gloriosa. Each panel shows the measured series in grey behind a rolling median over 11 points, one line per speleothem, coloured as in the site figures. The panels do not share an age axis: each is scaled to its own record, and the age range is stated on the axis. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in that site."
+  generated: "δ¹⁸O of the six SISAL sites of this repository, one panel per site: Spannagel cave, Sanbao cave, Botuverá cave, Antro del Corchia, Piani Eterni karst system, Buraca Gloriosa. Each panel shows the measured series in grey behind a rolling median over 11 points, one line per speleothem, coloured as in the site figures. The panels do not share an age axis: each is scaled to its own record, and the age range is stated on the axis. Marine Isotope Stage bands follow Railsback et al. (2015); an outlined band marks a stage without a measurement in that site."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024

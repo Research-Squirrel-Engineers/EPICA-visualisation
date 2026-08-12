@@ -37,6 +37,16 @@ class Tee:
     def __init__(self, filepath):
         self.file = open(filepath, "w", encoding="utf-8", newline="\n")
         self.stdout = sys.stdout
+        # The report holds box-drawing rules and delta signs, and the console
+        # is not always what receives them: redirect the run to a file or to
+        # nul and Python falls back to the locale encoding, cp1252 on Windows,
+        # which has no U+2500. The run then dies on its first section header,
+        # before a single figure is written - and a byte-stability check that
+        # redirects output would compare a file against itself.
+        try:
+            self.stdout.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
         sys.stdout = self
 
     def write(self, data):
