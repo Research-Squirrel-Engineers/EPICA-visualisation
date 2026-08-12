@@ -274,7 +274,10 @@ def add_feature_collection(
 # Daneben steht ein von Hand gepflegtes Release-Datum für dct:created, weil
 # in einem Katalog ein Datum stehen soll und kein Hash.
 
-GEO_LOD_RELEASE: str = "2026-08-08"
+# Lives in geo_lod_release.py so that geo_lod_figures can read it without
+# importing rdflib through this module. Re-exported here, because every
+# generator already imports it from geo_lod_utils.
+from geo_lod_release import GEO_LOD_RELEASE  # noqa: E402,F401
 
 FINGERPRINT_LENGTH: int = 12
 

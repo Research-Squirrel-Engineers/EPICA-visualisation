@@ -123,17 +123,30 @@ def format_tick(value: float, decimals: int) -> str:
     return f"{value:.{decimals}f}"
 
 
+from geo_lod_release import GEO_LOD_RELEASE
+
+# What matplotlib would otherwise write here is its own version number, and
+# that is a property of the machine the run happened on, not of the figure.
+# A2 already rules out a clock in the output; a version stamp is the same
+# thing one step removed - it turned 40 unchanged figures into a diff when
+# matplotlib went from 3.9.2 to 3.9.4. The release date changes when geo-lod
+# decides it does.
+SVG_CREATOR = f"geo-lod, release {GEO_LOD_RELEASE}, https://w3id.org/geo-lod/"
+
+
 def save_figure(fig, base_path: str, dpi: int = 100, verbose: bool = True) -> None:
     """Write *fig* as .svg and .jpg next to each other.
 
     The SVG goes through a binary handle so that the file holds the bytes
     matplotlib produced, with LF endings, on every platform. ``Date: None``
-    drops the timestamp matplotlib would otherwise put in the metadata; the
-    deterministic element ids come from ``plt.rcParams["svg.hashsalt"]``,
+    drops the timestamp matplotlib would otherwise put in the metadata,
+    ``Creator`` replaces the matplotlib version string with a fixed one, and
+    the deterministic element ids come from ``plt.rcParams["svg.hashsalt"]``,
     which the calling script sets.
     """
     with open(base_path + ".svg", "wb") as fh:
-        fig.savefig(fh, format="svg", bbox_inches="tight", metadata={"Date": None})
+        fig.savefig(fh, format="svg", bbox_inches="tight",
+                    metadata={"Date": None, "Creator": SVG_CREATOR})
     fig.savefig(base_path + ".jpg", format="jpg", dpi=dpi, bbox_inches="tight")
     if verbose:
         print(f"  ✓ Saved: {base_path}.svg / .jpg")

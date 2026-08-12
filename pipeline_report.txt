@@ -3,41 +3,14 @@
                           EPICA + SISAL + CI Pipeline                           
 ════════════════════════════════════════════════════════════════════════════════
 
-  Timestamp: 2026-08-12 11:10:38
+  Timestamp: 2026-08-12 11:42:30
   Directory: C:\git\GeoScience-FAIRification-LOD
 
 
 ────────────────────────────────────────────────────────────────────────────────
-  0. Clean generated outputs
-────────────────────────────────────────────────────────────────────────────────
-  Start: 11:10:38
-  Groups: vocab, cache, epica, sisal, ci, diagrams, bundle
-  ✓ ontology/geo_lod_core.ttl             1 gone       25.6 KB
-  ✓ ontology/vocab/mis.ttl                1 gone      564.4 KB
-  ✓ ontology/trs.ttl                      1 gone        5.9 KB
-  ✓ dist/mis_stages.csv                   1 gone       15.5 KB
-  ✓ dist/mis_assignments.csv              1 gone       63.7 KB
-  ✓ **/__pycache__                        3 gone      165.2 KB
-  ✓ EPICA/rdf                             2 gone        8.1 MB
-  ✓ EPICA/report                          2 gone        7.5 KB
-  ✓ EPICA/plots                          78 gone       12.7 MB
-  ✓ EPICA/captions.yaml                   1 gone       37.2 KB
-  ✓ SISAL/rdf                             5 gone      307.8 MB
-  ✓ SISAL/report                          1 gone        5.7 KB
-  ✓ SISAL/plots                          42 gone        4.4 MB
-  ✓ CI/rdf                                1 gone      172.9 KB
-  ✓ CI/report                             1 gone         691 B
-  ✓ ontology/*.mermaid                    4 gone       15.8 KB
-  ✓ dist/geo-lod-bundle.*                 1 gone      201.1 MB
-
-  Removed 146 item(s), 535.2 MB freed.
-
-  ⏱  0. Clean generated outputs: 0.2s
-
-────────────────────────────────────────────────────────────────────────────────
   1. Preparation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 11:10:38
+  Start: 11:42:30
 
   Directory structure:
   ✓ EPICA directory found: EPICA/
@@ -57,7 +30,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   2. Regenerate canonical ontology
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 11:10:38
+  Start: 11:42:30
 
   ▶ Regeneriere kanonische Ontologie-Dateien aus geo_lod_utils.py ...
   ✓ geo_lod_core.ttl geschrieben (25.6 KB)
@@ -67,7 +40,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   3. Regenerate controlled vocabularies
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 11:10:38
+  Start: 11:42:30
 
   ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...
   ✓ ontology\vocab\mis.ttl: 228 stages, 87 substages, 792 assignments (564.4 KB)
@@ -80,7 +53,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   4. EPICA Dome C (RDF)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 11:10:38
+  Start: 11:42:30
 
   ▶ Starting EPICA Dome C RDF generation ...
     Path: C:\git\GeoScience-FAIRification-LOD\EPICA\epica_rdf.py
@@ -113,12 +86,12 @@ Done.
 ============================================================
   ✓ EPICA Dome C RDF generation completed successfully
 
-  ⏱  4. EPICA Dome C (RDF): 19.2s
+  ⏱  4. EPICA Dome C (RDF): 16.2s
 
 ────────────────────────────────────────────────────────────────────────────────
   5. EPICA Dome C (figures)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 11:10:57
+  Start: 11:42:46
 
   ▶ Starting EPICA Dome C figures ...
     Path: C:\git\GeoScience-FAIRification-LOD\EPICA\plot_epica_from_tab.py
@@ -241,12 +214,12 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
 ============================================================
   ✓ EPICA Dome C figures completed successfully
 
-  ⏱  5. EPICA Dome C (figures): 71.1s
+  ⏱  5. EPICA Dome C (figures): 36.9s
 
 ────────────────────────────────────────────────────────────────────────────────
   6. SISAL (RDF)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 11:12:08
+  Start: 11:43:23
 
   ▶ Starting SISAL v3 RDF generation ...
     Path: C:\git\GeoScience-FAIRification-LOD\SISAL\sisal_rdf.py
@@ -261,13 +234,13 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
   6 sites, 60 speleothems, 35777 samples
   8 superseded speleothems, 3625 of their samples
   365 cave sites in the catalogue; 305 screened for archaeology, 37 positive, 60 not yet screened
-    … still running: step 5/12 isotope observations, 21s in this step, 30s total
   35713 δ¹⁸O and 14743 δ¹³C observations (4688 and 3093 of them undated)
   1152 dating points (2 of them observed growth, 27 measurements not used by any chronology)
   21 hiatuses and 4 gaps, 72 model statements on them
   4 hiatuses without a model statement (superseded Corchia records)
-    … still running: step 7/12 age assignments, 28s in this step, 60s total
-    … still running: step 7/12 age assignments, 58s in this step, 90s total
+    … still running: step 7/12 age assignments, 5s in this step, 30s total
+    … still running: step 7/12 age assignments, 35s in this step, 60s total
+    … still running: step 7/12 age assignments, 65s in this step, 90s total
   132531 age assignments over eight models
     leading, lin_interp          18213
     leading, original            12848
@@ -280,17 +253,17 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
   ✓ SISAL\rdf\sisal_ontology.ttl
   ✓ SISAL\rdf\sisal_site_annotations.ttl  (934 triples)
   ✓ SISAL\rdf\sisal_v3_core.nt  (1,248,976 triples)
-    … still running: step 11/12 writing the chronologies, 11s in this step, 120s total
+    … still running: step 11/12 writing the chronologies, 2s in this step, 120s total
   ✓ SISAL\rdf\sisal_v3_chronologies.nt  (967,788 triples)
   ✓ SISAL\rdf\sisal_v3_dating.ttl  (15,220 triples)
   ✓ SISAL v3 RDF generation completed successfully
 
-  ⏱  6. SISAL (RDF): 133.3s
+  ⏱  6. SISAL (RDF): 144.7s
 
 ────────────────────────────────────────────────────────────────────────────────
   7. SISAL (figures)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 11:14:21
+  Start: 11:45:48
 
   ▶ Starting SISAL figures ...
     Path: C:\git\GeoScience-FAIRification-LOD\SISAL\plot_sisal_from_csv.py
@@ -392,12 +365,12 @@ Total: 24 plots
 Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt
   ✓ SISAL figures completed successfully
 
-  ⏱  7. SISAL (figures): 28.4s
+  ⏱  7. SISAL (figures): 31.3s
 
 ────────────────────────────────────────────────────────────────────────────────
   8. Campanian Ignimbrite (CI Findspots)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 11:14:50
+  Start: 11:46:19
 
   ▶ Starting CI Findspot Processing ...
     Path: C:\git\GeoScience-FAIRification-LOD\CI\ci_pipeline.py
@@ -423,105 +396,7 @@ SUCCESS
 Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
   ✓ CI Findspot Processing completed successfully
 
-  ⏱  8. Campanian Ignimbrite (CI Findspots): 1.4s
-
-────────────────────────────────────────────────────────────────────────────────
-  9. RDF Bundle & Validation
-────────────────────────────────────────────────────────────────────────────────
-  Start: 11:14:51
-
-  ▶ Sammle TTL-Quellen ...
-  ℹ  sisal_v3_chronologies.nt übersprungen - nur im Release-Bundle. Mit --bundle-format release ist es dabei.
-    Ontologie-Dateien: 6
-      • ontology\analysis_core.ttl
-      • ontology\crm_bridging.ttl
-      • ontology\geo_lod_core.ttl
-      • ontology\strat.ttl
-      • ontology\trs.ttl
-      • ontology\vocab\mis.ttl
-    Instanz-Dateien:   7
-      • EPICA\rdf\epica_dome_c.ttl
-      • EPICA\rdf\epica_ontology.ttl
-      • SISAL\rdf\sisal_ontology.ttl
-      • SISAL\rdf\sisal_site_annotations.ttl
-      • SISAL\rdf\sisal_v3_core.nt
-      • SISAL\rdf\sisal_v3_dating.ttl
-      • CI\rdf\ci_findspots.ttl
-
-  ▶ Parse & merge ...
-    + analysis_core.ttl:       53 Triples
-    + crm_bridging.ttl:       27 Triples
-    + geo_lod_core.ttl:      338 Triples
-    + strat.ttl:      176 Triples
-    + trs.ttl:       50 Triples
-    + mis.ttl:   10,933 Triples
-    + epica_dome_c.ttl:  187,554 Triples
-    + epica_ontology.ttl:       81 Triples (78 new, 3 dup)
-    + sisal_ontology.ttl:      219 Triples (198 new, 21 dup)
-    + sisal_site_annotations.ttl:      934 Triples
-    + sisal_v3_core.nt: 1,248,976 Triples (1,248,973 new, 3 dup)
-    + sisal_v3_dating.ttl:   15,220 Triples
-    + ci_findspots.ttl:    3,307 Triples
-
-  ▶ Serialisiere Bundle (1,467,841 Triples) ...
-  ✓ geo-lod-bundle.nt           201.1 MB   16.0s  (N-Triples - eine Zeile je Tripel, am schnellsten)
-
-  ▶ CIDOC-CRM Coverage-Check (strict CRM-family) ...
-    Instanz-Klassen geprüft: 60
-    ✓ mit CRM-Anker:         60
-    ✗ ohne CRM-Anker:        0
-
-  ▶ SHACL-Validierung ...
-    + lade Shapes: core_shapes.ttl
-    + lade Shapes: mis_shapes.ttl
-    Dauer: 202.0s
-    SHACL-Ergebnis: 0 Violation(s), 1 Warning(s)
-      Validation Report
-      Conforms: False
-      Results (1):
-      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-      	Severity: sh:Warning
-      	Source Shape: [ sh:message Literal("CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path skos:closeMatch ; sh:severity sh:Warning ]
-      	Focus Node: ci:cisite_59
-      	Result Path: skos:closeMatch
-      	Message: CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).
-
-    ⚠  Nur Warnings - Bundle gilt als gültig.
-
-  ▶ Sanity-Report ...
-    Triples:         1,467,841
-    Subjekte:        168,450
-    Distinkte Typen: 68
-    Distinkte Props: 146
-
-    Top-10 Klassen nach Instanzzahl:
-      36,648  http://www.w3.org/2006/time#TimePosition
-      35,777  http://w3id.org/geo-lod/SpeleothemSample
-      35,713  http://w3id.org/geo-lod/Delta18OSpeleothemObservation
-      31,061  http://w3id.org/geo-lod/AgeAssignment
-      14,743  http://w3id.org/geo-lod/Delta13CSpeleothemObservation
-       6,231  http://www.w3.org/2002/07/owl#NamedIndividual
-       4,904  http://w3id.org/geo-lod/MISMembershipAssignment
-       4,904  http://w3id.org/geo-lod/IceCoreObservation
-       1,152  http://w3id.org/geo-lod/strat/AgeControlPoint
-         869  http://w3id.org/geo-lod/MISAttributeAssignment
-
-    Top-10 Properties nach Vorkommen:
-      175,444  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-      147,501  http://w3id.org/geo-lod/ageKaBP
-      78,645  http://w3id.org/geo-lod/ageChronology
-      57,671  http://www.w3.org/ns/prov#wasDerivedFrom
-      55,360  http://www.w3.org/ns/sosa/hasSimpleResult
-      55,360  http://w3id.org/geo-lod/hasObservation
-      55,360  http://www.w3.org/ns/sosa/hasFeatureOfInterest
-      55,360  http://w3id.org/geo-lod/measurementType
-      55,360  http://www.w3.org/ns/sosa/observedProperty
-      55,360  http://w3id.org/geo-lod/measuredValue
-
-    CRM-Coverage:   ✓
-    SHACL:          ✓
-
-  ⏱  9. RDF Bundle & Validation: 588.2s
+  ⏱  8. Campanian Ignimbrite (CI Findspots): 2.0s
 
 ════════════════════════════════════════════════════════════════════════════════
                                     Summary                                     
@@ -530,21 +405,19 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
   EPICA:   ✓ Success
   SISAL:   ✓ Success
   CI:      ✓ Success
-  Bundle:  ✓ Success
+  Bundle:  – Not requested
 
   Duration per step:
-    0. Clean generated outputs                   0.2s    0.0%
     1. Preparation                               0.0s    0.0%
     2. Regenerate canonical ontology             0.0s    0.0%
     3. Regenerate controlled vocabularies        0.0s    0.0%
-    4. EPICA Dome C (RDF)                       19.2s    2.3%
-    5. EPICA Dome C (figures)                   71.1s    8.5%
-    6. SISAL (RDF)                             133.3s   15.8%
-    7. SISAL (figures)                          28.4s    3.4%
-    8. Campanian Ignimbrite (CI Findspots)       1.4s    0.2%
-    9. RDF Bundle & Validation                 588.2s   69.9%
+    4. EPICA Dome C (RDF)                       16.2s    7.0%
+    5. EPICA Dome C (figures)                   36.9s   15.9%
+    6. SISAL (RDF)                             144.7s   62.6%
+    7. SISAL (figures)                          31.3s   13.6%
+    8. Campanian Ignimbrite (CI Findspots)       2.0s    0.9%
 
-  Total duration: 841.8 seconds
+  Total duration: 231.2 seconds
   Log saved to: C:\git\GeoScience-FAIRification-LOD\pipeline_report.txt
 
   ℹ  5 unused leftover(s), 5 file(s) scheduled for removal - details: python clean.py
