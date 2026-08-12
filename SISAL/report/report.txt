@@ -3,6 +3,74 @@ SISAL Speleothem – Plot Generator
 ============================================================
 
 ────────────────────────────────────────────────────────────
+Loading: Jaraguá cave
+────────────────────────────────────────────────────────────
+  Loaded: Jaraguá cave (site_id 10)
+  Data points: 4358, entities: 6
+  Age: -0.1 – 27.9 ka BP
+
+  δ¹⁸O: 4358 measurements on 6 of 6 speleothems, 0 breaks
+    → 10_jaragua_d18o_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_unsmoothed.svg / .jpg
+      legend: upper left
+    → 10_jaragua_d18o_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_smooth11.svg / .jpg
+    → 10_jaragua_d18o_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_savgol11p2.svg / .jpg
+
+  δ¹³C: 4358 measurements on 6 of 6 speleothems, 0 breaks
+    → 10_jaragua_d13c_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_unsmoothed.svg / .jpg
+      legend: lower left
+    → 10_jaragua_d13c_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_smooth11.svg / .jpg
+    → 10_jaragua_d13c_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_savgol11p2.svg / .jpg
+
+────────────────────────────────────────────────────────────
+Loading: Lapa sem fim cave
+────────────────────────────────────────────────────────────
+  Loaded: Lapa sem fim cave (site_id 24)
+  Data points: 3684, entities: 9
+  Age: 1.0 – 84.1 ka BP
+
+  δ¹⁸O: 3684 measurements on 9 of 9 speleothems, 4 breaks
+    → 24_lapasemfim_d18o_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_unsmoothed.svg / .jpg
+      legend: lower left
+    → 24_lapasemfim_d18o_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_smooth11.svg / .jpg
+    → 24_lapasemfim_d18o_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_savgol11p2.svg / .jpg
+
+  δ¹³C: 1807 measurements on 4 of 9 speleothems, 0 breaks
+    → 24_lapasemfim_d13c_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_unsmoothed.svg / .jpg
+      legend: upper left
+    → 24_lapasemfim_d13c_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_smooth11.svg / .jpg
+    → 24_lapasemfim_d13c_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_savgol11p2.svg / .jpg
+
+────────────────────────────────────────────────────────────
+Loading: Dongge cave
+────────────────────────────────────────────────────────────
+  Loaded: Dongge cave (site_id 39)
+  Data points: 3294, entities: 7
+  Age: 0.1 – 224.8 ka BP
+
+  δ¹⁸O: 3294 measurements on 7 of 7 speleothems, 2 breaks
+    → 39_dongge_d18o_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_unsmoothed.svg / .jpg
+      legend: lower center
+    → 39_dongge_d18o_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_smooth11.svg / .jpg
+    → 39_dongge_d18o_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_savgol11p2.svg / .jpg
+
+  ⚠  No δ¹³C for Dongge cave – skipping.
+
+────────────────────────────────────────────────────────────
 Loading: Spannagel cave
 ────────────────────────────────────────────────────────────
   Loaded: Spannagel cave (site_id 58)
@@ -26,6 +94,49 @@ Loading: Spannagel cave
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_smooth11.svg / .jpg
     → 58_spannagel_d13c_age_savgol11p2
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_savgol11p2.svg / .jpg
+
+────────────────────────────────────────────────────────────
+Loading: Heshang cave
+────────────────────────────────────────────────────────────
+  Loaded: Heshang cave (site_id 122)
+  Data points: 2086, entities: 2
+  Age: 0.1 – 9.5 ka BP
+
+  δ¹⁸O: 2086 measurements on 2 of 2 speleothems, 0 breaks
+    → 122_heshang_d18o_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_unsmoothed.svg / .jpg
+      legend: upper left
+    → 122_heshang_d18o_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_smooth11.svg / .jpg
+    → 122_heshang_d18o_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_savgol11p2.svg / .jpg
+
+  δ¹³C: 2086 measurements on 2 of 2 speleothems, 0 breaks
+    → 122_heshang_d13c_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_unsmoothed.svg / .jpg
+      legend: lower left
+    → 122_heshang_d13c_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_smooth11.svg / .jpg
+    → 122_heshang_d13c_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_savgol11p2.svg / .jpg
+
+────────────────────────────────────────────────────────────
+Loading: Xiaobailong cave
+────────────────────────────────────────────────────────────
+  Loaded: Xiaobailong cave (site_id 127)
+  Data points: 1719, entities: 7
+  Age: 5.3 – 252.5 ka BP
+
+  δ¹⁸O: 1719 measurements on 7 of 7 speleothems, 4 breaks
+    → 127_xiaobailong_d18o_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_unsmoothed.svg / .jpg
+      legend: lower left
+    → 127_xiaobailong_d18o_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_smooth11.svg / .jpg
+    → 127_xiaobailong_d18o_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_savgol11p2.svg / .jpg
+
+  ⚠  No δ¹³C for Xiaobailong cave – skipping.
 
 ────────────────────────────────────────────────────────────
 Loading: Sanbao cave
@@ -146,16 +257,55 @@ Loading: Buraca Gloriosa
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg / .jpg
 
 ────────────────────────────────────────────────────────────
+Loading: Huagapo cave
+────────────────────────────────────────────────────────────
+  Loaded: Huagapo cave (site_id 277)
+  Data points: 1343, entities: 2
+  Age: -0.1 – 7.1 ka BP
+
+  δ¹⁸O: 1343 measurements on 2 of 2 speleothems, 0 breaks
+    → 277_huagapo_d18o_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_unsmoothed.svg / .jpg
+      legend: lower left
+    → 277_huagapo_d18o_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_smooth11.svg / .jpg
+    → 277_huagapo_d18o_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_savgol11p2.svg / .jpg
+
+  δ¹³C: 1340 measurements on 2 of 2 speleothems, 0 breaks
+    → 277_huagapo_d13c_age_unsmoothed
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_unsmoothed.svg / .jpg
+      legend: lower left
+    → 277_huagapo_d13c_age_smooth11
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_smooth11.svg / .jpg
+    → 277_huagapo_d13c_age_savgol11p2
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_savgol11p2.svg / .jpg
+
+────────────────────────────────────────────────────────────
 Generating plates …
 ────────────────────────────────────────────────────────────
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage.svg / .jpg
-    → plate_coverage
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_pipeline_outputs.svg / .jpg
-    → plate_pipeline_outputs
+
+  Europe: 4 sites, 19 speleothems
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_europe.svg / .jpg
+    → plate_coverage_europe
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_europe.svg / .jpg
+    → plate_cluster_europe
+
+  East Asian monsoon: 4 sites, 34 speleothems
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_east_asian_monsoon.svg / .jpg
+    → plate_coverage_east_asian_monsoon
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_east_asian_monsoon.svg / .jpg
+    → plate_cluster_east_asian_monsoon
+
+  South American monsoon: 4 sites, 19 speleothems
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_south_american_monsoon.svg / .jpg
+    → plate_coverage_south_american_monsoon
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_south_american_monsoon.svg / .jpg
+    → plate_cluster_south_american_monsoon
 
 ============================================================
 Done! Plots saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\plots/'
-Total: 35 plots
+Total: 69 plots
 ============================================================
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\SISAL\captions.yaml (35 entries)
+  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\SISAL\captions.yaml (69 entries)
 Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt
