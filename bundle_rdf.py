@@ -27,7 +27,7 @@ from pathlib import Path
 from typing import Iterable
 
 try:
-    from rdflib import Graph, Namespace, RDF, RDFS, OWL, URIRef
+    from rdflib import Graph, Literal, Namespace, RDF, RDFS, OWL, URIRef
 except ImportError as e:
     print(f"  ✗ rdflib nicht verfügbar: {e}")
     print("    Installiere mit:  pip install rdflib")
@@ -665,19 +665,254 @@ def run_bundle_step(
 
 
 # ---------------------------------------------------------------------------
+# Site bundle: one cave, handed to a consumer repository
+# ---------------------------------------------------------------------------
+# What a repository of the wdttest family needs is one cave and the vocabulary
+# to read it, not the whole graph. The cut for that is made twice and in two
+# places, and the division of labour matters:
+#
+#   sisal_rdf.py --sites spannagel   decides which rows become triples
+#   bundle_rdf.py --sites spannagel  decides which of those triples travel
+#
+# This function does the second half only. It refuses to run on a graph that
+# holds more than one cave with data, because a bundle named after one site
+# and holding five is the kind of file nobody checks twice.
+#
+# The profile is "slim": the competing chronologies stay out, as they do in
+# every development bundle, and so do the age assignment nodes and their time
+# positions. Nothing is lost for a figure or a query page - sisal_rdf.py
+# materialises the leading age on the sample itself, exactly so that
+#
+#   ?s geolod:ageChronology trs:SISALv3-lin_interp ; geolod:ageKaBP ?age .
+#
+# answers without a join. What is lost is the ability to ask which model an
+# age came from through the assignment node; the property geolod:ageChronology
+# on the sample still says it.
+#
+# The MIS vocabulary travels whole. Spannagel touches a part of it, and a
+# vocabulary cut to one site would be a private variant of something published
+# under w3id - the 564 KB are not worth that.
+
+SISAL_NS = "http://w3id.org/geo-lod/sisal/"
+TIME_NS = Namespace("http://www.w3.org/2006/time#")
+GEOSPARQL_NS = Namespace("http://www.opengis.net/ont/geosparql#")
+SF_NS = Namespace("http://www.opengis.net/ont/sf#")
+
+#: Dropped by the slim profile, but only in the SISAL instance namespace:
+#: time:TimePosition is also what the MIS vocabulary hangs its stage
+#: boundaries on, and those stay.
+SLIM_DROP_CLASSES: tuple[URIRef, ...] = (
+    GEO_LOD["AgeAssignment"],
+    TIME_NS["TimePosition"],
+)
+
+
+def _plain(text: str) -> str:
+    """Lower case and without accents, for matching a name on the command line."""
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", str(text).strip().lower())
+                   if not unicodedata.combining(c))
+
+
+def _drop_nodes(g: Graph, nodes: Iterable[URIRef]) -> int:
+    """Remove every triple in which one of *nodes* stands as subject or object."""
+    removed = 0
+    for node in nodes:
+        for triple in list(g.triples((node, None, None))):
+            g.remove(triple)
+            removed += 1
+        for triple in list(g.triples((None, None, node))):
+            g.remove(triple)
+            removed += 1
+    return removed
+
+
+def _drop_orphans(g: Graph, classes: Iterable[URIRef]) -> int:
+    """Drop nodes of *classes* that nothing points at any more.
+
+    The geometries of the 364 caves the bundle does not carry: they are their
+    own nodes, and removing the cave leaves them behind as a sf:Point that
+    belongs to nothing.
+    """
+    doomed = [node for cls in classes for node in g.subjects(RDF.type, cls)
+              if not any(g.triples((None, None, node)))]
+    return _drop_nodes(g, doomed)
+
+
+def resolve_site_cave(g: Graph, spec: str) -> tuple[URIRef, str]:
+    """The one cave this graph carries data for, checked against *spec*."""
+    with_data = {cave for cave in g.objects(None, GEO_LOD["extractedFrom"])}
+    if not with_data:
+        raise SystemExit(
+            "  ✗ no cave in SISAL/rdf carries a speleothem. Build the site "
+            "graph first:\n"
+            "      python SISAL/sisal_rdf.py --format turtle --sites <site>")
+
+    labels = {cave: str(next(g.objects(cave, RDFS.label), cave)) for cave in with_data}
+    if len(with_data) > 1:
+        listing = ", ".join(sorted(labels.values()))
+        raise SystemExit(
+            f"  ✗ SISAL/rdf holds {len(with_data)} caves with data ({listing}).\n"
+            f"    A site bundle is built from a single-site graph. Run:\n"
+            f"      python SISAL/sisal_rdf.py --format turtle --sites {spec}")
+
+    cave = next(iter(with_data))
+    label = labels[cave]
+    if not _plain(label).startswith(_plain(spec)) and _plain(spec) not in str(cave).lower():
+        raise SystemExit(
+            f"  ✗ SISAL/rdf holds {label!r}, not {spec!r}. Rebuild the site "
+            f"graph:\n"
+            f"      python SISAL/sisal_rdf.py --format turtle --sites {spec}")
+    return cave, label
+
+
+def build_site_bundle(
+    ontology_dir: Path,
+    sisal_rdf_dir: Path,
+    dist_dir: Path,
+    site_spec: str,
+    formats: Iterable[str] = ("turtle",),
+) -> Graph | None:
+    """One cave, slim profile, ontology and vocabulary whole."""
+    print(f"\n  ▶ Site-Bundle für {site_spec!r} ...")
+
+    ontology_files = _collect_ttl_files([ontology_dir, ontology_dir / "vocab"])
+    # release=True so that the collector neither skips the chronologies nor
+    # points at --bundle-format release for them: they are dropped here on
+    # purpose and for a different reason, and one message per decision is
+    # enough.
+    instance_files = _collect_ttl_files([sisal_rdf_dir], release=True,
+                                        suffixes=INSTANCE_SUFFIXES)
+    instance_files = _dedupe_core_copies(instance_files, ontology_dir)
+    left_out = [f for f in instance_files
+                if f.name in AGGREGATE_FILENAMES or f.stem in RELEASE_ONLY_STEMS]
+    instance_files = [f for f in instance_files if f not in left_out]
+    for f in left_out:
+        print(f"    ~ {f.name} bleibt draussen (schlankes Profil)")
+    if not instance_files:
+        print(f"  ✗ Keine Instanzdateien in {sisal_rdf_dir}.")
+        return None
+
+    g = Graph()
+    g.bind("crm", Namespace(CRM_FAMILY_PREFIXES[0]))
+    g.bind("crmsci", Namespace("http://www.ics.forth.gr/isl/CRMsci/"))
+    g.bind("crmarchaeo", Namespace("http://www.cidoc-crm.org/extensions/crmarchaeo/"))
+    g.bind("geo-lod", GEO_LOD)
+    g.bind("time", TIME_NS)
+
+    print("\n  ▶ Parse & merge ...")
+    for f in ontology_files + instance_files:
+        added, file_triples, _ = _parse_with_repair(g, f)
+        print(f"    + {f.name}: {file_triples:>8,} Triples")
+
+    before = len(g)
+    cave, label = resolve_site_cave(g, site_spec)
+    print(f"\n  ▶ Zuschnitt auf {label} ...")
+
+    other_caves = [c for c in g.subjects(RDF.type, GEO_LOD["Cave"]) if c != cave]
+    dropped_catalogue = _drop_nodes(g, other_caves)
+    dropped_catalogue += _drop_orphans(g, (GEOSPARQL_NS["Geometry"], SF_NS["Point"]))
+    print(f"    − Katalog: {len(other_caves)} weitere Höhlen, "
+          f"{dropped_catalogue:,} Triples")
+
+    slim_nodes = [node for cls in SLIM_DROP_CLASSES
+                  for node in g.subjects(RDF.type, cls)
+                  if str(node).startswith(SISAL_NS)]
+    dropped_slim = _drop_nodes(g, slim_nodes)
+    print(f"    − schlankes Profil: {len(slim_nodes):,} Knoten "
+          f"(geolod:AgeAssignment, time:TimePosition), {dropped_slim:,} Triples")
+
+    note = (f"Site bundle: {label} only, slim profile. The competing "
+            f"chronologies, the age assignment nodes and their time positions "
+            f"are left out; the leading age is on the sample itself as "
+            f"geolod:ageKaBP with geolod:ageChronology. The cave catalogue is "
+            f"reduced to this one site. Ontology and MIS vocabulary are "
+            f"complete. Derived from the geo-lod SISAL graph, not a "
+            f"replacement for it.")
+    g.add((GEO_LOD["SISAL_Dataset"], OWL.versionInfo, Literal(note, lang="en")))
+
+    print(f"    = {len(g):,} Triples, von {before:,}")
+
+    dist_dir.mkdir(parents=True, exist_ok=True)
+    slug = re.sub(r"[^a-z0-9]+", "-", _plain(site_spec)).strip("-")
+    output_path = dist_dir / f"{slug}-bundle.ttl"
+
+    for key in formats:
+        if key not in BUNDLE_FORMATS:
+            print(f"    ⚠  Unbekanntes Format übersprungen: {key}")
+            continue
+        rdflib_format, suffix, description = BUNDLE_FORMATS[key]
+        target = output_path.with_suffix(suffix)
+        t_start = time.perf_counter()
+        g.serialize(destination=target, format=rdflib_format, encoding="utf-8")
+        print(f"  ✓ {target.name:<26} {target.stat().st_size / 1048576:6.1f} MB  "
+              f"{time.perf_counter() - t_start:5.1f}s  ({description})")
+    return g
+
+
+def run_site_bundle_step(
+    script_dir: Path,
+    ontology_dir: Path,
+    site_spec: str,
+    formats: Iterable[str] = ("turtle",),
+) -> bool:
+    """Build and validate. The file leaves the repository, so it is checked."""
+    g = build_site_bundle(ontology_dir, script_dir / "SISAL" / "rdf",
+                          script_dir / "dist", site_spec, formats)
+    if g is None:
+        return False
+
+    crm_ok = validate_crm_coverage(g)
+    shacl_ok = validate_shacl(g, ontology_dir)
+    sanity_report(g)
+
+    print()
+    print(f"    CRM-Coverage:   {'✓' if crm_ok   else '✗'}")
+    print(f"    SHACL:          {'✓' if shacl_ok else '✗'}")
+    return crm_ok and shacl_ok
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
 
 def _main() -> int:
+    import argparse
+
+    parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    parser.add_argument(
+        "--sites", dest="site_spec", default=None,
+        help="Statt des Gesamtbundles ein Site-Bundle bauen, z. B. "
+             "--sites spannagel. Setzt einen Graphen voraus, den "
+             "SISAL/sisal_rdf.py --sites <dieselbe Site> geschrieben hat, "
+             "und schreibt dist/<site>-bundle.ttl.")
+    parser.add_argument(
+        "--format", dest="formats", default=None,
+        help="Ausgabeformate, kommagetrennt. Verfügbar: "
+             + ", ".join(BUNDLE_FORMATS)
+             + ". Voreinstellung: nt für das Gesamtbundle, turtle für ein "
+               "Site-Bundle.")
+    args = parser.parse_args()
+
     here = Path(__file__).parent.absolute()
     ontology_dir = here / "ontology"
+
+    if args.formats:
+        formats = [f.strip() for f in args.formats.split(",") if f.strip()]
+    else:
+        formats = ["turtle"] if args.site_spec else list(DEFAULT_BUNDLE_FORMATS)
+
+    if args.site_spec:
+        ok = run_site_bundle_step(here, ontology_dir, args.site_spec, formats)
+        return 0 if ok else 1
+
     rdf_dirs = [
         here / "EPICA" / "rdf",
         here / "SISAL" / "rdf",
         here / "CI" / "rdf",
     ]
-    ok = run_bundle_step(here, ontology_dir, rdf_dirs, formats=DEFAULT_BUNDLE_FORMATS)
+    ok = run_bundle_step(here, ontology_dir, rdf_dirs, formats=formats)
     return 0 if ok else 1
 
 
