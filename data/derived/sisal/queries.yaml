@@ -24,33 +24,69 @@
 # same content in a different sequence -- a diff that means nothing and hides
 # the ones that do.
 
-sites: [58, 140, 144, 145, 202, 275]
+# Twelve sites in three climate systems, four each. The cut itself knows
+# nothing of the grouping -- it is recorded here because the selection is only
+# intelligible with it, and because the plates in geo-lod read this file.
+#
+#   Europe          58 Spannagel, 145 Corchia, 202 Piani Eterni, 275 Buraca
+#   East Asian      140 Sanbao, 39 Dongge, 127 Xiaobailong, 122 Heshang
+#   monsoon
+#   South American  144 Botuvera, 10 Jaragua, 24 Lapa sem fim, 277 Huagapo
+#   monsoon
+#
+# Dongge and Xiaobailong carry no d13c at all and Sanbao none either, so the
+# East Asian cluster is a d18o cluster with one exception, Heshang.
+sites: [10, 24, 39, 58, 122, 127, 140, 144, 145, 202, 275, 277]
 
-# site_id -> output stem for the flat per-site files. The three names already
-# in data/derived/ are kept exactly as they are: wdttest-sisal reads them, and
-# a rename would look like new data.
+# site_id -> output stem for the flat per-site files. The six names already
+# in data/derived/ are kept exactly as they are: wdttest-sisal and geo-lod read
+# them, and a rename would look like new data. The six added here follow the
+# same short form: the site name without the generic "cave", which is in the
+# site_name column of the file anyway.
 per_site_stems:
+  10: jaragua
+  24: lapa_sem_fim
+  39: dongge
   58: spannagel_all
+  122: heshang
+  127: xiaobailong
   140: sanbao
   144: botuvera
   145: corchia
   202: piani_eterni_karst_system
   275: buraca_gloriosa
+  277: huagapo
 
 # Known-good row counts for the flat per-site files, from the pristine SISAL v3
 # release. A mismatch means the database is not what we think it is.
 #
-# 58, 202 and 275 were verified in S3b. The other three were recorded from the
-# first full run rather than guessed: Sanbao 6085 is the number of samples
-# carrying both d18O and a lin_interp_age, not the 9535 d18O measurements of its
+# 58, 202 and 275 were verified in S3b. The others were recorded from the first
+# full run rather than guessed: Sanbao 6085 is the number of samples carrying
+# both d18O and a lin_interp_age, not the 9535 d18O measurements of its
 # non-superseded entities and not its 10063 samples.
+#
+# A site without an entry here is exported and reported as "no recorded count".
+#
+# The six sites added in S3c.5 were recorded from their first run on 2026-08-12.
+# Several are far below their d18O count in the catalogue: the flat file holds
+# samples carrying d18O *and* a lin_interp_age, and at Huagapo that is 1343 of
+# 4220. The shortfall falls on whole entities rather than scattered samples --
+# at Jaragua on exactly one, the composite JAR_composite with 3386 undated
+# values, while its six single entities are dated throughout. Nothing is lost:
+# the per-table cut carries every sample of every selected site.
 expected_rows:
+  10: 4358
+  24: 3684
+  39: 3294
   58: 7869
+  122: 2086
+  127: 1719
   140: 6085
   144: 920
   145: 1345
   202: 781
   275: 1178
+  277: 1343
 
 # --------------------------------------------------------------------------
 # Per-table cut

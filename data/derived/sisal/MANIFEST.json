@@ -6,8 +6,8 @@
       "sha256": "291f52b5e003e8441179b60f20fec979e48bf690c66ed53d71027f79cdb13449"
     },
     "queries.yaml": {
-      "bytes": 14092,
-      "sha256": "806699663695d0b13ec30a06e93d851c09a19c8185a22b3999e35c69ee2ce5cc"
+      "bytes": 15676,
+      "sha256": "805b82fbc4e63a234c6bdc7ec5aaf41ce038f7415c2a11cde55580e5f0689163"
     },
     "sites/botuvera.csv": {
       "bytes": 76433,
@@ -24,6 +24,31 @@
       "rows": 1345,
       "sha256": "87e480115a5f4f15a3fb2a70b5dae8cbf7617e9919749b94ad63528581641dae"
     },
+    "sites/dongge.csv": {
+      "bytes": 278799,
+      "rows": 3294,
+      "sha256": "da9574216d02fe5c0c27a05a7ea4d3b815d53e191c227c29ffb657ed752ee324"
+    },
+    "sites/heshang.csv": {
+      "bytes": 177532,
+      "rows": 2086,
+      "sha256": "333206e7c3da2cbc180b3d66e567a291058e73be6f8fbbb8402adb86dc2304ed"
+    },
+    "sites/huagapo.csv": {
+      "bytes": 112095,
+      "rows": 1343,
+      "sha256": "c1432f7cbb37751636c781debe604791e9dd966e298e262e91fe69ff64e40aad"
+    },
+    "sites/jaragua.csv": {
+      "bytes": 363803,
+      "rows": 4358,
+      "sha256": "ef1a1791cc8d751cd7d3be0d5ad7aeeabb901e0c84741f051624b00b8ba219e2"
+    },
+    "sites/lapa_sem_fim.csv": {
+      "bytes": 371656,
+      "rows": 3684,
+      "sha256": "f4147324f72ff4b2a048321b73ec2e390989c91878194c608d80963c89b0eb05"
+    },
     "sites/piani_eterni_karst_system.csv": {
       "bytes": 75577,
       "rows": 781,
@@ -39,30 +64,35 @@
       "rows": 7869,
       "sha256": "63fd57c8dc90cf58ca1579785282d35bd273e259c080848b45978e82dfffb7ba"
     },
+    "sites/xiaobailong.csv": {
+      "bytes": 141444,
+      "rows": 1719,
+      "sha256": "a62788e55b97fb80340134b8e50738186b2a584247c57ca92f51e64466a2c1e8"
+    },
     "tables/ba_ca.csv": {
       "bytes": 44,
       "rows": 0,
       "sha256": "9d43010542f7575ddbb70e42b04428037ec70afd97394070e1518459b177e372"
     },
     "tables/composite_link_entity.csv": {
-      "bytes": 69,
-      "rows": 4,
-      "sha256": "bb49c73a4a1d64389d92c830784ab8c119ec4e04d7b0738cfef60942cb5d5c2c"
+      "bytes": 130,
+      "rows": 12,
+      "sha256": "195e50c5a1050ddf6a659281eccab68b0b09399bd8b1d43fa20a9009c7f55762"
     },
     "tables/d13c.csv": {
-      "bytes": 304910,
-      "rows": 14743,
-      "sha256": "be349fe87db38f8644f236431850ca54d68d964bcc1513795412c59186357655"
+      "bytes": 482622,
+      "rows": 24752,
+      "sha256": "93edfac530b5e19ac04707103950e114a7866b4e5d0d228c284acd6246d91025"
     },
     "tables/d18o.csv": {
-      "bytes": 734535,
-      "rows": 35713,
-      "sha256": "debd40e15545743d4eaa4c3f7f8d323aa910e258127e050fec334674054c8100"
+      "bytes": 1254075,
+      "rows": 61303,
+      "sha256": "2986f2b6d005eae4dfbcfd57b67ca8addb591a02fff222a4a93d34a7dd64eb06"
     },
     "tables/dating.csv": {
-      "bytes": 238747,
-      "rows": 1200,
-      "sha256": "8c3a34aab5aa1bf04e376e7600322bbe46cfb74667dd09ed6d5610cf50407513"
+      "bytes": 396882,
+      "rows": 1923,
+      "sha256": "96c0c4127cb4296668d18e55ea97191551790f5ae9c60b25acc29ad58999e01c"
     },
     "tables/dating_lamina.csv": {
       "bytes": 97,
@@ -70,24 +100,24 @@
       "sha256": "0a2d2d79ab78a0b611106224dcca2a2ab424f47817268f6ed686b810037c0b0c"
     },
     "tables/entity.csv": {
-      "bytes": 21061,
-      "rows": 60,
-      "sha256": "e60b29015904bee58fb207d304d4fff56c75a30c15fa7517999c95dc1198cd4a"
+      "bytes": 34687,
+      "rows": 102,
+      "sha256": "b0cad6096c888ab745ac804b9cc0ae3dc5c8b949797ab73b67de8376d21f2d77"
     },
     "tables/entity_link_reference.csv": {
-      "bytes": 498,
-      "rows": 61,
-      "sha256": "9dc58402b6c19cea02fc420825d9b86dff97a20aa13f86c61d524405e6755f7d"
+      "bytes": 905,
+      "rows": 114,
+      "sha256": "93b3a6ac1b43769626786344b9ff2c2eebd57b2eff0bd9dab4d1133ca054083b"
     },
     "tables/gap.csv": {
-      "bytes": 50,
-      "rows": 4,
-      "sha256": "8f92f627e08a0c12f7cb924b0c8bd207f37cdc3620370a9d795605bfe074c638"
+      "bytes": 68,
+      "rows": 6,
+      "sha256": "2ecc0afd579d4d16f23a464e710e8cd4fba6b7ccb165f04d0b945fb6948a2f2f"
     },
     "tables/hiatus.csv": {
-      "bytes": 206,
-      "rows": 21,
-      "sha256": "e05d5072b75189b02b194bc022cd9a4d233a1071e6af7596bbac75392dd162a7"
+      "bytes": 349,
+      "rows": 37,
+      "sha256": "1513e14d4d9f5d11c5857546ede60a9a18a88516c6e81e82cca98dd6f8f2c182"
     },
     "tables/mg_ca.csv": {
       "bytes": 17614,
@@ -95,14 +125,14 @@
       "sha256": "8c397abf49870bb906bd362176bdb33212cf17234de21b7fe8ecb0f9df3882e5"
     },
     "tables/notes.csv": {
-      "bytes": 2105,
-      "rows": 4,
-      "sha256": "9c332886432808a19473b1ad7762efb6e511451416d895fdf8d879b60b9e1c11"
+      "bytes": 3527,
+      "rows": 9,
+      "sha256": "be1023d383f412ddca186460aac58c2d7ae75ba255d7a42e591f565e51cc638c"
     },
     "tables/original_chronology.csv": {
-      "bytes": 2040402,
-      "rows": 31352,
-      "sha256": "f9771af3c519fe1db7ad39220dd20fe05afb1062c6f550f007f24e37fca13eaa"
+      "bytes": 3726064,
+      "rows": 56946,
+      "sha256": "d3619a8e3142aa385fadf01e20ee98337815caac44570c05ea345772ac799e01"
     },
     "tables/p_ca.csv": {
       "bytes": 42,
@@ -110,24 +140,24 @@
       "sha256": "0681ca5f76fb7400a9ddaa669f76178a41af876b76fee60d95804a2085a9feb2"
     },
     "tables/reference.csv": {
-      "bytes": 5849,
-      "rows": 20,
-      "sha256": "264bf8504858b748f27bb465401e36801c1a08b2fc140aff64c9f859126f61c2"
+      "bytes": 11047,
+      "rows": 37,
+      "sha256": "4fa5cfa5449d765c1206211828e454028c7dfd325f44e1283134c520a65d5ded"
     },
     "tables/sample.csv": {
-      "bytes": 1437072,
-      "rows": 35777,
-      "sha256": "b75c232aa5216a7a2a568d7194deedbd3fb3acedaf9d0140821c02c4845f5e78"
+      "bytes": 2363741,
+      "rows": 61389,
+      "sha256": "09d5bcf0507998176b3235c2d3fb04d8990c9d31101757a368aa7daea43c6f2d"
     },
     "tables/sisal_chronology.csv": {
-      "bytes": 4013475,
-      "rows": 24390,
-      "sha256": "346d4cf888062f6dbd4d7daeaa9abb116c8169fd11e5ed8ff1a8baf537a7fde5"
+      "bytes": 7487539,
+      "rows": 43694,
+      "sha256": "084d569ca8334b9da87216a52e6afb774fffdb3fddde059f0fb3b5946e23fbf8"
     },
     "tables/site.csv": {
-      "bytes": 342,
-      "rows": 6,
-      "sha256": "ba0b2e686b8500e118e547605f6ccb58dd35eaa16178a97a3d69ddd863463b90"
+      "bytes": 613,
+      "rows": 12,
+      "sha256": "daf088f51a44a473572df3922d3c7cbabc83ba0d4261ba0a766748aa57257d04"
     },
     "tables/sr_ca.csv": {
       "bytes": 10591,
@@ -135,9 +165,9 @@
       "sha256": "eb37cc8c7810099955f6ea357002851c1d4a08b1b8600a6355d0b8696dcb768d"
     },
     "tables/sr_isotopes.csv": {
-      "bytes": 56,
-      "rows": 0,
-      "sha256": "e8756c0be64f09beaf4690eef286680d7e39472dfdb646f740c960243a6c266a"
+      "bytes": 693,
+      "rows": 38,
+      "sha256": "95a1479367aa281bf3ac37dd431193f79e8d4f38a7df48ec9a5705797be76119"
     },
     "tables/u_ca.csv": {
       "bytes": 42,
@@ -146,15 +176,21 @@
     }
   },
   "sites": [
+    10,
+    24,
+    39,
     58,
+    122,
+    127,
     140,
     144,
     145,
     202,
-    275
+    275,
+    277
   ],
   "source": {
-    "commit": "01218f26bea2e94503cef8f36861bfad5a207498",
+    "commit": "0b2a6405ba824c9e23090b0d309cea3c8b0c15cd",
     "repository": "squirrels-sisal-db-v3"
   }
 }

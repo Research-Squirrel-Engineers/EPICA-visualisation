@@ -1,7 +1,13 @@
 site_id,site_name,latitude,longitude,elevation,monitoring
+10,Jaraguá cave,-21.0830,-56.5830,570.0,yes
+24,Lapa sem fim cave,-16.1503,-44.6281,341.0,yes
+39,Dongge cave,25.2833,108.0833,680.0,no
 58,Spannagel cave,47.0800,11.6700,2310.0,no
+122,Heshang cave,30.4500,110.4167,294.0,no
+127,Xiaobailong cave,24.2000,103.3600,1500.0,no
 140,Sanbao cave,31.6670,110.4333,1900.0,no
 144,Botuverá cave,-27.2247,-49.1569,180.0,yes
 145,Antro del Corchia,43.9833,10.2167,840.0,yes
 202,Piani Eterni karst system,46.1600,11.9900,1893.0,no
 275,Buraca Gloriosa,39.5333,-8.7833,420.0,yes
+277,Huagapo cave,-11.2700,-75.7900,3850.0,no
