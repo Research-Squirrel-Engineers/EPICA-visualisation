@@ -3,27 +3,19 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:Cave_site_0071 a ns1:ArchaeologicalCaveSite,
-        ns1:Cave,
-        <http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit>,
+ns1:Cave_site_0071 a ns1:Cave,
+        owl:NamedIndividual,
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Baradla cave"@en ;
     void:inDataset ns1:geo-lod ;
-    ns1:archaeologicalBroaderContext ns1:PrehistoricContext ;
-    ns1:archaeologicalCategory "Neolithic / Bronze Age"@en ;
-    ns1:archaeologicalConfidence "high" ;
-    ns1:countD13CSamples 559 ;
-    ns1:countD18OSamples 559 ;
-    ns1:isUNESCOWorldHeritage true ;
+    ns1:countD13CSamples 680 ;
+    ns1:countD18OSamples 680 ;
+    ns1:elevation_m 375.0 ;
     ns1:siteId 71 ;
-    ns1:unescoWHId <https://whc.unesco.org/en/list/171> ;
-    geo:hasGeometry ns1:Cave_site_0071_Geometry ;
-    owl:sameAs <https://www.wikidata.org/entity/Q816830> ;
-    skos:note "Neolithic–Bronze Age finds, UNESCO World Heritage"@en ;
+    geo:hasGeometry <http://w3id.org/geo-lod/sisal/geom_site_0071> ;
     prov:wasDerivedFrom ns1:SISALv3_DataSource .
 

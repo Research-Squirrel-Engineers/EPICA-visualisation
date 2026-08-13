@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Generation_input_sites_csv> a <http://www.w3.org/ns/ldp#Resource>,
+        prov:Entity,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "sites.csv" ;
+    dcterms:identifier "sha256:291f52b5e003e8441179b60f20fec979e48bf690c66ed53d71027f79cdb13449" ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> .
+

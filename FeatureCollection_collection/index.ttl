@@ -8,6 +8,8 @@
     rdfs:label "FeatureCollection Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
     rdfs:member <http://w3id.org/geo-lod/AllPalaeoclimateSites_Collection>,
+        <http://w3id.org/geo-lod/SISAL_Archaeological_Cave_Collection>,
+        <http://w3id.org/geo-lod/SISAL_Cave_Collection>,
         <http://w3id.org/geo-lod/ci/CIFindspotCollection>,
         <http://w3id.org/geo-lod/epica/collection_drilling_sites> .
 

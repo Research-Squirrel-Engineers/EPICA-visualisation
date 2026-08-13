@@ -1,0 +1,1 @@
+{"http://purl.org/dc/terms/identifier": ["sha256:291f52b5e003e8441179b60f20fec979e48bf690c66ed53d71027f79cdb13449"], "http://rdfs.org/ns/void#inDataset": ["http://w3id.org/geo-lod/geo-lod"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/ns/prov#Entity"], "http://www.w3.org/2000/01/rdf-schema#label": ["sites.csv"]}
