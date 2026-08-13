@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""sisal_rdf.py - S3c.2: the SISAL cut to RDF.
+"""sisal_rdf.py - the SISAL cut to RDF.
 
 Reads the structure-preserving cut in data/derived/sisal/tables/ and writes
 
@@ -659,38 +659,11 @@ geolod:MesoamericanContext
     a geolod:ArchaeologicalContext, owl:NamedIndividual ;
     rdfs:label "Mesoamerican Context"@en .
 
-geolod:archaeologicalCategory
-    a owl:DatatypeProperty ;
-    rdfs:domain  geolod:ArchaeologicalCaveSite ;
-    rdfs:range   xsd:string ;
-    rdfs:label   "archaeological category"@en ;
-    rdfs:comment "Free-text classification of the archaeological character, e.g. 'Palaeolithic Art', 'Prehistoric Occupation'."@en .
-
-geolod:archaeologicalBroaderContext
-    a owl:ObjectProperty ;
-    rdfs:domain  geolod:ArchaeologicalCaveSite ;
-    rdfs:range   geolod:ArchaeologicalContext ;
-    rdfs:label   "archaeological broader context"@en .
-
-geolod:archaeologicalConfidence
-    a owl:DatatypeProperty ;
-    rdfs:domain  geolod:ArchaeologicalCaveSite ;
-    rdfs:range   xsd:string ;
-    rdfs:label   "archaeological confidence"@en ;
-    rdfs:comment "Confidence of the archaeological attribution: high, medium or low."@en .
-
 geolod:UThChronology
     a owl:Class ;
     rdfs:subClassOf geolod:Chronology ;
     rdfs:label   "U-Th Chronology"@en ;
     rdfs:comment "A depth-age model for a speleothem, built on U-Th dating points: the seven SISAL v3 models and the chronology as originally published. geo_lod_core.ttl names this class as the SISAL counterpart of geolod:IceCoreChronology but does not define it; defined here, so that the eight chronology individuals reach crmsci:S4_Observation through geolod:Chronology like every other class in the graph."@en .
-
-geolod:screenedForArchaeology
-    a owl:DatatypeProperty ;
-    rdfs:domain  geolod:Cave ;
-    rdfs:range   xsd:boolean ;
-    rdfs:label   "screened for archaeology"@en ;
-    rdfs:comment "True where geo-lod checked this cave against the archaeological literature, whatever the outcome. Absence of the property means the cave has not been looked at, which is a different statement from a negative result and has to stay distinguishable."@en .
 
 geolod:isUNESCOWorldHeritage
     a owl:DatatypeProperty ;
@@ -1547,12 +1520,25 @@ STEPS = [
 ]
 
 
+def partial_note(selection_label: str, sites: list[dict]) -> Literal:
+    """The one sentence that keeps a partial graph from passing as a release.
+
+    Written into every data graph of a partial run rather than into the core
+    graph alone: the files are separable, and a consumer who picks up
+    sisal_v3_dating.ttl on its own has no other way to find out that the cut
+    behind it is five caves rather than 365.
+    """
+    names = ", ".join(sorted(row["site_name"] for row in sites))
+    return Literal(f"Partial graph: {selection_label} ({names}). "
+                   f"Not a release.", lang="en")
+
+
 def build(data_format: str = DEFAULT_DATA_FORMAT,
           sites_spec: str = "all") -> bool:
     serializer, suffix = DATA_FORMATS[data_format]
 
     print("\n" + "=" * 72)
-    print("  S3c.2/S3c.3 - SISAL cut to RDF")
+    print("  SISAL cut to RDF")
     print("=" * 72)
     print(f"  Input:  {TABLES_DIR}")
     print(f"  Format: {data_format} ({suffix}) for the two large graphs, "
@@ -1673,23 +1659,24 @@ def build(data_format: str = DEFAULT_DATA_FORMAT,
                      "dating", "hiatus", "gap",
                      "composite_link_entity")] + [__file__],
             agents=[ORCID_FLO],
-            label="SISAL v3 RDF generation (S3c.2)",
+            label="SISAL v3 RDF generation",
         )
         if partial:
-            # In the graph and not only in the report. A partial file carries
-            # the same name as a complete one, and the report is not what a
-            # consumer reads.
-            g.add((GEOLOD["SISAL_Dataset"], OWL.versionInfo,
-                   Literal(f"Partial graph: {selection_label} "
-                           f"({', '.join(sorted(row['site_name'] for row in sites))}). "
-                           f"Not a release.", lang="en")))
+            # In the graph and not only in the report, and on every file this
+            # run writes. A partial file carries the same name as a complete
+            # one, the report is not what a consumer reads, and the three data
+            # graphs travel separately - sisal_v3_dating.ttl in particular is
+            # versioned Turtle whatever the run.
+            note = partial_note(selection_label, sites)
+            for graph in (g, alt, dat):
+                graph.add((GEOLOD["SISAL_Dataset"], OWL.versionInfo, note))
         add_generation_provenance(
             ann,
             GEOLOD["SISAL_Site_Annotations_Dataset"],
             GEOLOD["SISAL_Site_Annotations_Generation"],
             inputs=[str(CURATED_DIR / "sisal_site_annotations.csv"), __file__],
             agents=[ORCID_FLO],
-            label="geo-lod cave site annotations (S3c.2)",
+            label="geo-lod cave site annotations",
         )
 
         onto_path = write_ontology()

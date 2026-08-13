@@ -11,14 +11,16 @@ __update__ = "2026-03-28"
 # ci_findspots_html.py
 # Campanian Ignimbrite findspots → interactive HTML (Leaflet map + table)
 #
-# Input:  cifindspots_part_full.csv
+# Input:  data/raw/ci/cifindspots_part_full.csv
+#         data/curated/ci_site_annotations.csv
 # Output: CI_findspots_CAA.html
 #
 # Archaeological site logic (mirrors ci_pipeline.py):
-#   is_arch = id ∈ ARCHAEOLOGICAL_IDS  OR  spatialtype contains "ArchaeologicalSite"
+#   is_arch = spatialtype contains "ArchaeologicalSite"  OR  listed as
+#            isArchaeologicalSite in data/curated/ci_site_annotations.csv
 #
 # Update instructions:
-#   ARCHAEOLOGICAL_IDS — add/remove IDs as curation progresses
+#   data/curated/ci_site_annotations.csv — add rows as curation progresses
 #   CSV columns used:
 #     id, label, wkt, spatialtype, certainty, certaintyinfo,
 #     relatedto, relatedtohow, literature, source, sourcetype
@@ -31,17 +33,16 @@ import pandas as pd
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
-# Paths — relative to script location (works regardless of VS Code cwd)
+# Paths — one source, shared with CI/ci_pipeline.py
 # ---------------------------------------------------------------------------
-_HERE    = Path(__file__).parent
-CSV_FILE = _HERE / "cifindspots_part_full.csv"
+# There used to be a copy of the findspot table in this directory, and the
+# copy was what this script read. It was byte-identical, which is exactly why
+# it was dangerous: nothing would have shown that the two had drifted apart.
+_HERE = Path(__file__).parent
+ROOT = _HERE.parent
+CSV_FILE = ROOT / "data" / "raw" / "ci" / "cifindspots_part_full.csv"
+CURATED_CSV = ROOT / "data" / "curated" / "ci_site_annotations.csv"
 OUT_FILE = _HERE / "CI_findspots_CAA.html"
-
-# ---------------------------------------------------------------------------
-# Archaeological IDs (mirrors ci_pipeline.py ARCHAEOLOGICAL_IDS)
-# IDs 5, 42, 43 added as confirmed pending pipeline curation
-# ---------------------------------------------------------------------------
-ARCHAEOLOGICAL_IDS = {5, 19, 42, 43, 44, 45, 50, 51, 59, 62, 63, 65}
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -79,8 +80,23 @@ def parse_related(val: str):
 # ---------------------------------------------------------------------------
 # Data loading
 # ---------------------------------------------------------------------------
+def curated_archaeological_ids(path: Path) -> set:
+    """The ids geo-lod adds on top of what the source table states.
+
+    Same file and same rule as CI/ci_pipeline.py. The map and the graph used
+    to hold two hand-written sets that had drifted apart - twelve sites here,
+    nine there - and neither file said which was right.
+    """
+    if not path.exists():
+        return set()
+    df = pd.read_csv(path)
+    flag = df["isArchaeologicalSite"].astype(str).str.strip().str.lower()
+    return {int(v) for v in df.loc[flag == "true", "ci_id"]}
+
+
 def load_data(csv_path: Path) -> list:
     df = pd.read_csv(csv_path, na_values=[".", "??", "NULL"])
+    curated = curated_archaeological_ids(CURATED_CSV)
 
     sites = []
     for _, row in df.iterrows():
@@ -89,7 +105,7 @@ def load_data(csv_path: Path) -> list:
         spatial_types = [s.strip() for s in spatial_types]
 
         is_arch = (
-            sid in ARCHAEOLOGICAL_IDS
+            sid in curated
             or "fsl:ArchaeologicalSite" in spatial_types
         )
 
@@ -109,6 +125,7 @@ def load_data(csv_path: Path) -> list:
             "osm":          osm,
             "wp":           wp,
             "is_arch":      is_arch,
+            "curated":      sid in curated and "fsl:ArchaeologicalSite" not in spatial_types,
             "proposed":     False,   # no longer used — all arch are confirmed
         })
 
@@ -376,7 +393,9 @@ def build_html(sites: list) -> str:
     n_other = sum(1 for s in sites if not s["is_arch"])
     n_qid   = sum(1 for s in sites if s["qid"])
     n_osm   = sum(1 for s in sites if s["osm"])
-    arch_ids_str = ", ".join(str(i) for i in sorted(ARCHAEOLOGICAL_IDS))
+    arch_ids_str = ", ".join(
+        str(i) for i in sorted(s["id"] for s in sites if s["is_arch"]))
+    n_curated = sum(1 for s in sites if s["curated"])
 
     sites_json = json.dumps(sites, ensure_ascii=False)
     js_final   = JS.replace("SITES_JSON_PLACEHOLDER", sites_json)
@@ -403,8 +422,9 @@ def build_html(sites: list) -> str:
         '  <div>\n'
         '    <strong>Archaeological site logic (ci_pipeline.py)</strong>\n'
         '    <code style="font-size:11px;background:#f4f3ef;padding:2px 6px;border-radius:4px">'
-        'is_arch = id \u2208 ARCHAEOLOGICAL_IDS  OR  spatialtype contains \u201cArchaeologicalSite\u201d</code>\n'
-        f'    <div style="font-size:11px;margin-top:5px;color:#5f5e5a">IDs 5 (Castelcivita), 42 (Kozarnika), 43 (Temnata) treated as confirmed \u2014 pending curation of ARCHAEOLOGICAL_IDS in pipeline.</div>\n'
+        'is_arch = spatialtype contains \u201cArchaeologicalSite\u201d  OR  '
+        'listed in data/curated/ci_site_annotations.csv</code>\n'
+        f'    <div style="font-size:11px;margin-top:5px;color:#5f5e5a">The same two files decide it for the RDF graph, so this map and the graph cannot disagree. {n_curated} of the {n_arch} come from the curated annotations rather than from the source table.</div>\n'
         '  </div>\n'
         f'  <div><strong>Confirmed ({n_arch} sites)</strong>IDs: {arch_ids_str}</div>\n'
         f'  <div><strong>Linked Data coverage</strong>Wikidata QID: {n_qid}/{len(sites)} \u00b7 OSM: {n_osm}/{len(sites)}</div>\n'
@@ -477,14 +497,21 @@ def main():
     print("\n-> Building HTML ...")
     html = build_html(sites)
 
-    OUT_FILE.write_text(html, encoding="utf-8")
+    # newline="\n": matplotlib is not the only thing on Windows that turns LF
+    # into CRLF on the way out. .gitattributes stores LF, so a page written in
+    # text mode differs from its own committed form on every checkout.
+    with open(OUT_FILE, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(html)
     print(f"  OK  Written: {OUT_FILE}  ({len(html):,} chars)")
     print("\n" + "=" * 60)
     print("SUCCESS")
     print("=" * 60)
-    print("\nTo update archaeological IDs:  edit ARCHAEOLOGICAL_IDS set")
-    print("To update Wikidata/OSM:        edit relatedto column in CSV")
+    print("\nTo mark a findspot archaeological:  data/curated/"
+          "ci_site_annotations.csv, or spatialtype in the source table")
+    print("To update Wikidata/OSM:             relatedto column in the "
+          "source table")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

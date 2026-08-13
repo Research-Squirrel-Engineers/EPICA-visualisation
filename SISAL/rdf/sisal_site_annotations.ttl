@@ -851,7 +851,7 @@ geolod:SISAL_Archaeological_Cave_Collection rdfs:member geolod:Cave_site_0004,
 
 geolod:SISAL_Site_Annotations_Dataset a prov:Entity ;
     dct:created "2026-08-08"^^xsd:date ;
-    owl:versionInfo "sha256:2ce15e164e1d" ;
+    owl:versionInfo "sha256:00b017be893a" ;
     prov:wasGeneratedBy geolod:SISAL_Site_Annotations_Generation .
 
 geolod:Cave_site_0004 a geolod:ArchaeologicalCaveSite,
@@ -1230,15 +1230,15 @@ geolod:Cave_site_0364 a geolod:ArchaeologicalCaveSite,
     prov:wasDerivedFrom geolod:GeoLodSiteAnnotations_DataSource .
 
 geolod:SISAL_Site_Annotations_Generation a prov:Activity ;
-    rdfs:label "geo-lod cave site annotations (S3c.2)"@en ;
-    owl:versionInfo "sha256:2ce15e164e1d" ;
+    rdfs:label "geo-lod cave site annotations"@en ;
+    owl:versionInfo "sha256:00b017be893a" ;
     prov:used geolod:SISAL_Site_Annotations_Generation_input_sisal_rdf_py,
         geolod:SISAL_Site_Annotations_Generation_input_sisal_site_annotations_csv ;
     prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
 
 geolod:SISAL_Site_Annotations_Generation_input_sisal_rdf_py a prov:Entity ;
     rdfs:label "sisal_rdf.py" ;
-    dct:identifier "sha256:33a02206f71279a23d3968ad1f22fdce7a66c29458183f99bf89d27d7eb1a400" .
+    dct:identifier "sha256:ae57d12a4bf07a6fdd4daf4c5e3cd425472520e610e90e7dc6986b0e0b350ab0" .
 
 geolod:SISAL_Site_Annotations_Generation_input_sisal_site_annotations_csv a prov:Entity ;
     rdfs:label "sisal_site_annotations.csv" ;

@@ -1,0 +1,4 @@
+ci_id,label,screened,isArchaeologicalSite,arch_category,arch_broader_context,arch_note,arch_confidence,wikidata_qid
+5,Castelcivita Cave,true,true,Cave Site,PalaeolithicContext,Uluzzian and Protoaurignacian layers sealed by the CI tephra,high,Q3777120
+42,Kozarnika Cave (Bulgaria),true,true,Cave Site,PalaeolithicContext,Long Palaeolithic sequence carrying the CI tephra,high,Q2037533
+43,Temnata Cave (Bulgaria),true,true,Cave Site,PalaeolithicContext,Aurignacian layers associated with the CI tephra,high,Q12296153

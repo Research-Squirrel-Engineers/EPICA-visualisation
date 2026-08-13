@@ -42,8 +42,11 @@ project/
 │   └── report/
 │
 ├── CI/                           ← Campanian Ignimbrite findspots
-│   ├── ci_pipeline.py
-│   ├── rdf/ci_findspots.ttl
+│   ├── ci_pipeline.py            ← findspots to RDF
+│   ├── plot_ci_findspots.py      ← map and certainty plate
+│   ├── captions.yaml
+│   ├── rdf/                      ← ci_findspots.ttl, ci_site_annotations.ttl
+│   ├── plots/
 │   └── report/
 │
 ├── ontology/                     ← shared, on every sub-script's PYTHONPATH
@@ -212,8 +215,8 @@ where prose and data have drifted apart.
 
 
 **CI (Campanian Ignimbrite):**
-- `CI/rdf/geo_lod_ci.ttl` — CI ontology extension (CIFindspot, CIArchaeologicalSite, etc.)
 - `CI/rdf/ci_findspots.ttl` — Findspot data with GeoSPARQL geometries and PROV-O provenance
+- `CI/rdf/ci_site_annotations.ttl` — geo-lod's archaeological reading, kept apart from the source data
 
 ### Mermaid Diagrams (Ontology Visualisation)
 

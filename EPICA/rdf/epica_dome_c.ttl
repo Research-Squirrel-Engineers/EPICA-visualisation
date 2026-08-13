@@ -45666,7 +45666,7 @@ epica:depth_position_dust_9_begin a geolod:DepthPosition ;
 
 epica:generation_ch4 a prov:Activity ;
     rdfs:label "EPICA Dome C CH4 RDF generation"@en ;
-    owl:versionInfo "sha256:99c356f616d0" ;
+    owl:versionInfo "sha256:7bb64f00c40a" ;
     prov:used epica:generation_ch4_input_EDC_CH4_tab,
         epica:generation_ch4_input_epica_data_py,
         epica:generation_ch4_input_epica_rdf_py ;
@@ -45678,7 +45678,7 @@ epica:generation_ch4_input_EDC_CH4_tab a prov:Entity ;
 
 epica:generation_ch4_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
+    dct:identifier "sha256:dc2437182fbf33734b299974ecf70eb11a0601d29005978d9df876efc1999d9b" .
 
 epica:generation_ch4_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
@@ -45686,7 +45686,7 @@ epica:generation_ch4_input_epica_rdf_py a prov:Entity ;
 
 epica:generation_d18o a prov:Activity ;
     rdfs:label "EPICA Dome C d18O RDF generation"@en ;
-    owl:versionInfo "sha256:aea08aabe15f" ;
+    owl:versionInfo "sha256:18a6c40ef411" ;
     prov:used epica:generation_d18o_input_EPICA_Dome_C_d18O_tab,
         epica:generation_d18o_input_epica_data_py,
         epica:generation_d18o_input_epica_rdf_py ;
@@ -45698,7 +45698,7 @@ epica:generation_d18o_input_EPICA_Dome_C_d18O_tab a prov:Entity ;
 
 epica:generation_d18o_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
+    dct:identifier "sha256:dc2437182fbf33734b299974ecf70eb11a0601d29005978d9df876efc1999d9b" .
 
 epica:generation_d18o_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
@@ -45706,7 +45706,7 @@ epica:generation_d18o_input_epica_rdf_py a prov:Entity ;
 
 epica:generation_dd a prov:Activity ;
     rdfs:label "EPICA Dome C dD RDF generation"@en ;
-    owl:versionInfo "sha256:8211264173e0" ;
+    owl:versionInfo "sha256:5b3ba7d28be0" ;
     prov:used epica:generation_dd_input_EPICA_Dome_C_dD_tab,
         epica:generation_dd_input_epica_data_py,
         epica:generation_dd_input_epica_rdf_py ;
@@ -45718,7 +45718,7 @@ epica:generation_dd_input_EPICA_Dome_C_dD_tab a prov:Entity ;
 
 epica:generation_dd_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
+    dct:identifier "sha256:dc2437182fbf33734b299974ecf70eb11a0601d29005978d9df876efc1999d9b" .
 
 epica:generation_dd_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
@@ -45726,7 +45726,7 @@ epica:generation_dd_input_epica_rdf_py a prov:Entity ;
 
 epica:generation_do2n2 a prov:Activity ;
     rdfs:label "EPICA Dome C dO2N2 RDF generation"@en ;
-    owl:versionInfo "sha256:03ac49839997" ;
+    owl:versionInfo "sha256:e3def00599d1" ;
     prov:used epica:generation_do2n2_input_EPICA_Dome_C_do2n2_tab,
         epica:generation_do2n2_input_epica_data_py,
         epica:generation_do2n2_input_epica_rdf_py ;
@@ -45738,7 +45738,7 @@ epica:generation_do2n2_input_EPICA_Dome_C_do2n2_tab a prov:Entity ;
 
 epica:generation_do2n2_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
+    dct:identifier "sha256:dc2437182fbf33734b299974ecf70eb11a0601d29005978d9df876efc1999d9b" .
 
 epica:generation_do2n2_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
@@ -45746,7 +45746,7 @@ epica:generation_do2n2_input_epica_rdf_py a prov:Entity ;
 
 epica:generation_dust a prov:Activity ;
     rdfs:label "EPICA Dome C dust RDF generation"@en ;
-    owl:versionInfo "sha256:a60727461745" ;
+    owl:versionInfo "sha256:ccc1793eff3c" ;
     prov:used epica:generation_dust_input_EPICA_Dome_C_dust_tab,
         epica:generation_dust_input_epica_data_py,
         epica:generation_dust_input_epica_rdf_py ;
@@ -45758,7 +45758,7 @@ epica:generation_dust_input_EPICA_Dome_C_dust_tab a prov:Entity ;
 
 epica:generation_dust_input_epica_data_py a prov:Entity ;
     rdfs:label "epica_data.py" ;
-    dct:identifier "sha256:c112e3f9d2b442f4d329709e5cfc47ee8415c06b10cc33b73c62a620d1ab2a29" .
+    dct:identifier "sha256:dc2437182fbf33734b299974ecf70eb11a0601d29005978d9df876efc1999d9b" .
 
 epica:generation_dust_input_epica_rdf_py a prov:Entity ;
     rdfs:label "epica_rdf.py" ;
@@ -194261,7 +194261,7 @@ epica:dataset_ch4 a geolod:IceCoreDataset,
         epica:obs_ch4_0734,
         epica:obs_ch4_0735,
         epica:obs_ch4_0736 ;
-    owl:versionInfo "sha256:99c356f616d0" ;
+    owl:versionInfo "sha256:7bb64f00c40a" ;
     dcat:record epica:obs_ch4_0001,
         epica:obs_ch4_0002,
         epica:obs_ch4_0003,
@@ -196389,7 +196389,7 @@ epica:dataset_d18o a geolod:IceCoreDataset,
         epica:obs_d18o_1376,
         epica:obs_d18o_1377,
         epica:obs_d18o_1378 ;
-    owl:versionInfo "sha256:aea08aabe15f" ;
+    owl:versionInfo "sha256:18a6c40ef411" ;
     dcat:record epica:obs_d18o_0001,
         epica:obs_d18o_0002,
         epica:obs_d18o_0003,
@@ -198603,7 +198603,7 @@ epica:dataset_do2n2 a geolod:IceCoreDataset,
         epica:obs_do2n2_0820,
         epica:obs_do2n2_0821,
         epica:obs_do2n2_0822 ;
-    owl:versionInfo "sha256:03ac49839997" ;
+    owl:versionInfo "sha256:e3def00599d1" ;
     dcat:record epica:obs_do2n2_0001,
         epica:obs_do2n2_0002,
         epica:obs_do2n2_0003,
@@ -200253,7 +200253,7 @@ epica:dataset_dd a geolod:IceCoreDataset,
         epica:obs_dd_0812,
         epica:obs_dd_0813,
         epica:obs_dd_0814 ;
-    owl:versionInfo "sha256:8211264173e0" ;
+    owl:versionInfo "sha256:5b3ba7d28be0" ;
     dcat:record epica:obs_dd_0001,
         epica:obs_dd_0002,
         epica:obs_dd_0003,
@@ -202235,7 +202235,7 @@ epica:dataset_dust a geolod:IceCoreDataset,
         epica:obs_dust_1152,
         epica:obs_dust_1153,
         epica:obs_dust_1154 ;
-    owl:versionInfo "sha256:a60727461745" ;
+    owl:versionInfo "sha256:ccc1793eff3c" ;
     dcat:record epica:obs_dust_0001,
         epica:obs_dust_0002,
         epica:obs_dust_0003,

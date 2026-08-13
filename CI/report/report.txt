@@ -1,18 +1,26 @@
-************************************************************
-CI Pipeline — Campanian Ignimbrite Findspots → RDF
-************************************************************
 
-→ Reading C:\git\GeoScience-FAIRification-LOD\CI\cifindspots_part_full.csv
-   Rows loaded: 74
-   Archaeological sites: 9 (IDs: [19, 44, 45, 50, 51, 59, 62, 63, 65])
+========================================================================
+  Campanian Ignimbrite findspots to RDF
+========================================================================
+  Input:  data\raw\ci\cifindspots_part_full.csv
+          data\curated\ci_site_annotations.csv
 
-→ Building RDF graph ...
+  ▶ reading the findspot table
+    74 findspots, 74 with a geometry
 
-→ Writing TTL ...
-  ✓  Written: C:\git\GeoScience-FAIRification-LOD\CI\rdf\ci_findspots.ttl
-     Triples: 3307
+  ▶ reading the annotations
+    3 annotated findspots
+    12 archaeological: 9 from spatialtype, 3 added by curation
 
-************************************************************
-SUCCESS
-************************************************************
-Report saved: C:\git\GeoScience-FAIRification-LOD\CI\report\report.txt
+  ▶ findspots
+
+  ▶ annotations
+    3 archaeological findspots from the annotation table
+
+  ▶ provenance
+
+  ▶ writing
+  ✓ CI\rdf\ci_findspots.ttl  (3,237 triples)
+  ✓ CI\rdf\ci_site_annotations.ttl  (55 triples)
+
+  Duration: 0.2s

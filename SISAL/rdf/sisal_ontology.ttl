@@ -320,38 +320,11 @@ geolod:MesoamericanContext
     a geolod:ArchaeologicalContext, owl:NamedIndividual ;
     rdfs:label "Mesoamerican Context"@en .
 
-geolod:archaeologicalCategory
-    a owl:DatatypeProperty ;
-    rdfs:domain  geolod:ArchaeologicalCaveSite ;
-    rdfs:range   xsd:string ;
-    rdfs:label   "archaeological category"@en ;
-    rdfs:comment "Free-text classification of the archaeological character, e.g. 'Palaeolithic Art', 'Prehistoric Occupation'."@en .
-
-geolod:archaeologicalBroaderContext
-    a owl:ObjectProperty ;
-    rdfs:domain  geolod:ArchaeologicalCaveSite ;
-    rdfs:range   geolod:ArchaeologicalContext ;
-    rdfs:label   "archaeological broader context"@en .
-
-geolod:archaeologicalConfidence
-    a owl:DatatypeProperty ;
-    rdfs:domain  geolod:ArchaeologicalCaveSite ;
-    rdfs:range   xsd:string ;
-    rdfs:label   "archaeological confidence"@en ;
-    rdfs:comment "Confidence of the archaeological attribution: high, medium or low."@en .
-
 geolod:UThChronology
     a owl:Class ;
     rdfs:subClassOf geolod:Chronology ;
     rdfs:label   "U-Th Chronology"@en ;
     rdfs:comment "A depth-age model for a speleothem, built on U-Th dating points: the seven SISAL v3 models and the chronology as originally published. geo_lod_core.ttl names this class as the SISAL counterpart of geolod:IceCoreChronology but does not define it; defined here, so that the eight chronology individuals reach crmsci:S4_Observation through geolod:Chronology like every other class in the graph."@en .
-
-geolod:screenedForArchaeology
-    a owl:DatatypeProperty ;
-    rdfs:domain  geolod:Cave ;
-    rdfs:range   xsd:boolean ;
-    rdfs:label   "screened for archaeology"@en ;
-    rdfs:comment "True where geo-lod checked this cave against the archaeological literature, whatever the outcome. Absence of the property means the cave has not been looked at, which is a different statement from a negative result and has to stay distinguishable."@en .
 
 geolod:isUNESCOWorldHeritage
     a owl:DatatypeProperty ;

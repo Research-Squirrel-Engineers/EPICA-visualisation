@@ -131,11 +131,14 @@ Upload.
 die kleinen Eingabedaten und die kleinen TTL. Ein Grössenfilter erledigt die
 Auswahl zuverlässiger als eine Dateiliste:
 
+Jeder Befehl steht auf **einer** Zeile — keine Fortsetzungszeichen. Ein über
+mehrere Zeilen verteilter Befehl überlebt das Kopieren in ein CMD-Fenster nicht
+zuverlässig, und die Fehlermeldung sagt dann etwas über das Zeilenende und
+nichts über die Sache.
+
 ```cmd
 cd /d C:\git
-robocopy GeoScience-FAIRification-LOD bundle\geo-lod /E /MAX:1000000 ^
-  /XD plots img dist .git .venv __pycache__ example_query ^
-  /XF *.jpg *.svg *.png
+robocopy GeoScience-FAIRification-LOD bundle\geo-lod /E /MAX:1000000 /XD plots img dist .git .venv __pycache__ example_query /XF *.jpg *.svg *.png
 powershell -NoProfile -Command "Compress-Archive -Path 'bundle\geo-lod' -DestinationPath 'geo-lod_bundle.zip' -Force"
 ```
 
@@ -197,6 +200,16 @@ lesen hier ab, statt neu zu diskutieren.
 | Log der Sub-Skripte | eingefangen und zeilenweise durchgereicht: `pipeline_report.txt` und Terminal zeigen dasselbe. `PYTHONIOENCODING=utf-8` im Kindprozess, sonst scheitern ✓, ‰ und δ an der Pipe | 2026-08-08 |
 | Zeitstempel im RDF | keine. `dct:created` aus `GEO_LOD_RELEASE`, dazu `owl:versionInfo` mit einem SHA-256-Fingerabdruck über Eingabedaten und Generator-Skript. Die Aktivitätszeiten in `ci_findspots.ttl` sind entfallen — die Laufzeit eines Konvertierungsskripts ist keine Aussage über die Daten | 2026-08-08 |
 | Umfang des Fingerabdrucks | Eingabedaten **und** Generator-Skript. Ein geänderter Kommentar im Code ändert ihn mit; das ist gewollt, weil der Datensatz nur für den Codestand gilt, aus dem er stammt | 2026-08-08 |
+| Ort der CI-Fundstellentabelle | `data/raw/ci/cifindspots_part_full.csv`, unverändert. Die Kopie in `archaeo-connect/` ist entfallen, beide Skripte lesen das Original | 2026-08-13 |
+| Was eine CI-Fundstelle archäologisch macht | `spatialtype` in der Quelltabelle **plus** `data/curated/ci_site_annotations.csv`. Keine hartcodierte ID-Liste mehr in irgendeinem Skript | 2026-08-13 |
+| Die drei zusätzlichen CI-Sites (5 Castelcivita, 42 Kozarnika, 43 Temnata) | über die kuratierte Anreicherung, nicht durch Ändern der Rohdatei. Der Graph zählt zwölf, und jede Aussage trägt ihre Herkunft; Karte und Graph lesen dieselben zwei Dateien | 2026-08-13 |
+| Domain der vier Anreicherungs-Properties | `crm:E27_Site` statt `geolod:Cave` / `geolod:ArchaeologicalCaveSite`, und Umzug von `sisal_ontology.ttl` nach `geo_lod_core.ttl`. Sonst folgert jeder Reasoner aus einer annotierten CI-Fundstelle eine Höhle. Vorgezogener Teil von S4 | 2026-08-13 |
+| Georeferenzierung im CI-Strang | die Aktivität erzeugt die **Geometrie**, nicht die Fundstelle. Vorher `site prov:wasGeneratedBy act` zusammen mit `act prov:used site` — ein Zyklus | 2026-08-13 |
+| Abbildungen des CI-Strangs | zwei: eine Fundstellenkarte und eine Sicherheits-Tafel, beide mit `captions.yaml` | 2026-08-13 |
+| Basiskarte für die CI-Karte | keine. Kein `cartopy`, kein `geopandas` — der Hintergrund sind Grosskreisringe im 500-km-Abstand um die Phlegräischen Felder. Was eine CI-Karte zeigen muss, ist eine Entfernung, keine Küstenlinie | 2026-08-13 |
+| `archaeo-connect` im Pipelinelauf | eigener Schritt in `main.py`, nach dem CI-Strang. Dazu ein `--<strang>-only` je Strang, und die Schalter sind kombinierbar | 2026-08-13 |
+| S-Nummern in der Ausgabe | keine. Weder im Terminal noch in einem `rdfs:label` im Graphen. Kommentare im Code behalten sie, dort erklären sie etwas | 2026-08-13 |
+| `Partial graph`-Vermerk | in alle drei SISAL-Datengraphen, nicht nur in den Kerngraphen. Die Dateien reisen getrennt, und `sisal_v3_dating.ttl` ist versioniertes Turtle | 2026-08-13 |
 | `pipeline_report.txt` | wird weiter versioniert; er ändert sich als einzige Datei bei jedem Lauf, das ist der Preis für den Laufprotokoll-Charakter | 2026-08-08 |
 | Zeilenenden | `.gitattributes` mit `eol=lf`. Ohne sie schreibt Git auf Windows beim Checkout um, und die Byte-Gleichheit gilt nur lokal | 2026-08-08 |
 | Bundle-Format | Turtle als Voreinstellung, weil byte-stabil und versioniert; N-Triples spart gemessen nur 13 von 187 Sekunden und lohnt den möglichen Versatz zwischen `.ttl` und Code nicht. Über `--bundle-format` sind `nt`, `jsonld`, `xml` und `longturtle` erreichbar, `release` schreibt alle | 2026-08-08 |
@@ -382,7 +395,7 @@ noch nicht entschieden.
 | S3c.7 | Site-Auswahl für Entwicklungsläufe, zwei Befunde aus dem ersten Zwölf-Site-Lauf | geo-lod | S3c.5 | erledigt 2026-08-12 |
 | S3c.8 | Site-Bundle für ein Konsumenten-Repo | geo-lod | S3c.7 | erledigt 2026-08-12 |
 | S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | erledigt 2026-08-11 |
-| S3e | CI-Strang auf den Stand von EPICA und SISAL bringen | geo-lod | S3c.4 | offen |
+| S3e | CI-Strang auf den Stand von EPICA und SISAL bringen | geo-lod | S3c.4 | erledigt 2026-08-13 |
 | S3f | Archäologie-Komponente durchsehen | geo-lod | S3e | offen |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c.3 | offen |
 | S5 | ELSA | geo-lod | S4 | offen |
@@ -1734,25 +1747,58 @@ anderen, statt seinen eigenen Weg zu gehen.
 
 **Uploads:** geo-lod-Bundle (A5).
 
-**Ausgangslage.** `CI/ci_pipeline.py` ist seit S2 und S3c nicht nachgezogen
-worden. Bekannte Punkte, vor dem Schritt zu prüfen und zu ergänzen:
+**Stand:** erledigt 2026-08-13.
 
-- Keine `captions.yaml`. Die Mechanik liegt in `ontology/geo_lod_captions.py`
-  und wird jetzt von beiden anderen Strängen benutzt.
-- `archaeo-connect/ci_findspots_html.py` und `sisal_arch_html.py` lesen beide
-  `_HERE / "cifindspots_part_full.csv"`, also die Kopie im eigenen
-  Verzeichnis. Die Kopie steht seit S3c.4 in der STALE-Liste von `clean.py`
-  und ist byte-gleich mit `CI/cifindspots_part_full.csv`; gelöscht werden kann
-  sie erst, wenn beide Skripte auf das Original zeigen.
-- `CI/cifindspots_part_full.csv` liegt nicht unter `data/raw/`, anders als die
-  EPICA- und MIS-Rohdaten (Teil D).
-- Die IRI-Migration der CI-Findspots auf das Zweigmuster `…/ci/` ist in S0
-  beschlossen und noch nicht ausgeführt; die Abbildung alt → neu gehört zu S4.
+**Ergebnis.** Der CI-Strang läuft auf denselben Modulen wie EPICA und SISAL:
+`geo_lod_utils` für Graph, Provenienz und Fingerabdruck, `geo_lod_figures` für
+das Schreiben der Abbildungen, `geo_lod_captions` für die Bildunterschriften.
+Er ist wie die anderen zweigeteilt — `CI/ci_pipeline.py` schreibt die Tripel,
+`CI/plot_ci_findspots.py` zeichnet —, damit ein Fehler in der Tabelle auffällt,
+bevor etwas gezeichnet wird.
 
-**Zu klären im Schritt.** Ob der CI-Strang eigene Abbildungen bekommt. Bisher
-erzeugt er nur RDF und zwei HTML-Seiten, und ob eine Karte oder eine
-Tephra-Tafel dazugehört, ist keine Formfrage, sondern hängt daran, was der
-ECEASST-Beitrag und die spätere ELSA-Integration brauchen.
+**Zwei Eingaben statt einer.** Die Fundstellentabelle liegt unverändert unter
+`data/raw/ci/`, die archäologische Lesart in
+`data/curated/ci_site_annotations.csv` mit eigenem `DataSource`-Knoten und
+eigenem Graphen `CI/rdf/ci_site_annotations.ttl` — dieselbe Trennung wie bei
+den SISAL-Höhlen, und aus demselben Grund: eine Aussage, die nicht in der
+Quelle steht, darf nicht an deren Provenienzknoten hängen.
+
+**Der Befund, der den Schritt gerechtfertigt hat.** Drei Skripte führten je
+eine hartcodierte `ARCHAEOLOGICAL_IDS`-Menge, und die Mengen waren
+auseinandergelaufen: der Graph zählte neun archäologische Fundstellen, die
+Karte zwölf, und keine Datei sagte, welche stimmte. Beide lesen jetzt dieselben
+zwei Dateien; die Antwort steht damit in den Daten und nicht in zwei
+Python-Literalen. Nach Beschluss sind es zwölf.
+
+**Was am Modell falsch war.** `site prov:wasGeneratedBy act` zusammen mit
+`act prov:used site` — eine Fundstelle, erzeugt von einer Aktivität, die sie
+benutzt. Die Georeferenzierung erzeugt jetzt die Geometrie; ein Ort existiert
+unabhängig davon, ob jemand einen Punkt darauf gesetzt hat. Dazu zwei
+`skos:exactMatch` eines Agenten auf sich selbst, entfallen.
+
+**Zahlen des Laufs.** 74 Fundstellen, alle mit Geometrie, 3 237 Tripel im
+Fundstellengraphen und 55 in den Annotationen. CRM-Abdeckung grün, SHACL
+0 Verstösse und die eine bekannte Warnung zu `cisite_59`. Zwei Läufe
+byte-identisch, SVG wie Turtle.
+
+**Abbildungen.** Zwei: `ci_findspots_map` und `ci_findspots_certainty`. Ohne
+Basiskarte, siehe A4 — der Hintergrund sind Grosskreisringe um die
+Phlegräischen Felder, deren Anzahl aus den Daten folgt, damit keine Fundstelle
+ausserhalb des äussersten Rings liegt.
+
+**`main.py`.** CI zweigeteilt, `archaeo-connect` als eigener Schritt danach,
+und ein `--<strang>-only` je Strang statt drei einzeln ausgeschriebener
+Bedingungen an vier Stellen. Die Schalter sind kombinierbar:
+`--ci-only --archaeo-only` läuft die beiden zusammengehörigen Schritte, ohne
+EPICA und SISAL anzufassen.
+
+**Mitgenommen aus S3c.8.** Der `Partial graph`-Vermerk steht jetzt in allen
+drei SISAL-Datengraphen, und die S-Nummern sind aus der Ausgabe verschwunden —
+auch aus den beiden Aktivitätslabels, die im RDF standen.
+
+**Nicht in diesem Schritt:** die SISAL-Archäologieseite unter
+`archaeo-connect/` (S3f, siehe dort), die IRI-Migration und die
+Content-Negotiation (S4).
 
 ---
 
@@ -1772,8 +1818,18 @@ unter `archaeo-connect/`.
 
 **Bekannte Punkte.**
 
+- **Die SISAL-Archäologieseite hat keinen Generator mehr.**
+  `archaeo-connect/sisal_arch_html.py` ist keine SISAL-Datei: sie ist eine
+  umformatierte Kopie von `ci_findspots_html.py`, liest die Fundstellentabelle
+  und schreibt die CI-Seite. `SISAL_arch_sites_CAA.html` liegt weiter im Repo,
+  aber nichts erzeugt sie. Aufgefallen in S3e, dort bewusst nicht angefasst.
+  Neu bauen aus `data/curated/sisal_site_annotations.csv` — die Nachfolgerin
+  von `archaeo-connect/v_sites_all.csv`, die die Seite ursprünglich las — oder
+  Seite und Skript streichen. Beides hier zu entscheiden.
 - `cisite_59` ohne `skos:closeMatch` auf Pleiades oder Wikidata, die einzige
-  stehende SHACL-Warnung (Teil D).
+  stehende SHACL-Warnung (Teil D). Kostenki-Borschtschewo trägt nur einen
+  Wikipedia-Link mit `fsl:dubiousMatch`; eine Zeile in
+  `data/curated/ci_site_annotations.csv` mit `wikidata_qid` schliesst sie.
 - Der Schlüssel der Anreicherung ist `site_id`, ein SISAL-interner Zähler;
   `wikidata_qid` als stabilerer Schlüssel liegt nur für 27 der 37 vor
   (Teil D).
@@ -1782,6 +1838,10 @@ unter `archaeo-connect/`.
   `crmarchaeo:A2_Stratigraphic_Volume_Unit`. Ein Ort ist keine
   stratigraphische Volumeneinheit, er enthält welche — in S4 als
   umzubauen vermerkt, gehört fachlich hierher.
+- Die CI-Anreicherung deckt bisher drei Fundstellen ab, die aus S3e. Die
+  übrigen 71 sind nie geprüft worden, und nach Beschlusslage sollen weitere
+  archäologische Fundstellen dort auftauchen — bei CI wie bei SISAL hängt die
+  Information am Ort, nicht am Skript.
 - Die Anreicherung deckt nur die SISAL-Höhlen ab. Ob die zwölf Sites aus
   S3c.5 nachgezogen werden, ist zu entscheiden; `geolod:screenedForArchaeology`
   unterscheidet geprüft-ohne-Befund von nie-geprüft, also fällt das nicht
@@ -1890,7 +1950,8 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   zum ersten Mal sichtbar.
 - ~~Die übrigen Rohdaten nach `data/raw/` nachziehen: `src/EPICA_Dome_C_*.csv`
   und die `.tab` in S2~~ — für EPICA erledigt 2026-08-09. Offen bleiben die
-  `CI/cifindspots_part_full.csv` (S4). Die SISAL-CSV sind mit S3c.1 nach
+  ~~`CI/cifindspots_part_full.csv`~~ — erledigt 2026-08-13, sie liegt unter
+  `data/raw/ci/`. Die SISAL-CSV sind mit S3c.1 nach
   `data/derived/sisal/` gezogen, nicht nach `data/raw/` — siehe A4.
 - `src/plot_epica_115--250.py` liest fünf CSVs, von denen nur zwei je in `src/`
   lagen; das Skript war schon vorher nicht lauffähig und hängt in keiner
@@ -1906,7 +1967,7 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   `ontology/geo_lod_figures.py` neben `geo_lod_utils.py`, SISAL nutzt es.
 - ~~SISAL hat noch keine `captions.yaml`.~~ Erledigt 2026-08-12: 35 Einträge,
   33 Einzelabbildungen und zwei Tafeln. Nicht 36 — Sanbao trägt kein δ¹³C.
-  Offen bleibt sie für den CI-Strang (S3e).
+  ~~Offen bleibt sie für den CI-Strang.~~ Erledigt 2026-08-13, zwei Einträge.
 - ~~Die SISAL-Achsen laufen weiter über handgesetzte Grenzen.~~ Erledigt
   2026-08-12, und es wurde abgeschnitten: die δ¹³C-Liste von Buraca Gloriosa
   endete bei −10, während der Datensatz bis −11,76 reicht.
@@ -1940,9 +2001,21 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   und älter als S3c. **Bewusst zurückgestellt 2026-08-11.**
 - Tote Dateien in geo-lod: mit S3c.4 sind `SISAL/v_sites_all.csv`,
   `EPICA/epica_ontology.ttl` und die vier `SISAL/v_data_*.csv` per `git rm`
-  entfernt. Offen bleibt die Kopie von `cifindspots_part_full.csv` in
-  `archaeo-connect/`: byte-gleich mit dem Original, aber von beiden Skripten
-  dort gelesen — sie kann erst weg, wenn diese auf `CI/` zeigen (S3e).
+  entfernt. ~~Offen bleibt die Kopie von `cifindspots_part_full.csv` in
+  `archaeo-connect/`.~~ Erledigt 2026-08-13: beide Skripte lesen
+  `data/raw/ci/`, die Kopie ist entfernt.
+- `geolod:ArchaeologicalContext` und seine fünf Individuen stehen doppelt: in
+  `geo_lod_core.ttl` und in `sisal_ontology.ttl`. Identisch, also folgenlos,
+  aber eine der beiden Stellen ist die falsche. Aufgefallen 2026-08-13 beim
+  Umzug der vier Anreicherungs-Properties; gehört in denselben Aufräumzug
+  wie diese (S4).
+- Die CI-Karte hat keine Basiskarte, siehe A4. Wenn eine gebraucht wird —
+  etwa für den ECEASST-Beitrag —, ist das eine Zeile in `requirements.txt`
+  und ein Nachpatch in `CI/plot_ci_findspots.py`; die Entscheidung wäre, eine
+  Geo-Abhängigkeit ins Repo zu holen.
+- `archaeo-connect/v_sites_all.csv` liest seit dem Verlust des
+  SISAL-Generators niemand mehr. Mit der Seite zusammen zu entscheiden (S3f).
+
 - In `sisal-db-v3` liegt `data/sisalv3_database_mysql_csv` mit 303 MB, das
   MySQL-Verzeichnis aus der Zeit vor S3a. In `.gitignore` genannt, von nichts
   gelesen.

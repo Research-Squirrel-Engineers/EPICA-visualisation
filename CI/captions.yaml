@@ -1,0 +1,20 @@
+# captions.yaml - one entry per generated figure of the CI strand.
+#
+# Written by CI/plot_ci_findspots.py.
+# Edit 'caption' freely: an entry whose caption differs from 'generated'
+# is treated as hand-written and kept on the next run, while 'generated'
+# is refreshed so the diff shows what the code would say now.
+
+ci_findspots_certainty:
+  caption: "74 documented findspots of Campanian Ignimbrite tephra, 12 of them archaeological sites (3 of those added by geo-lod's curated annotations, the rest stated in the source table). Distances from the Phlegraean Fields run to 2752 km. Left: the findspot map, coloured by certainty, triangles are archaeological sites. Top right: how many findspots carry each certainty level (high 14, representative 2, medium 47, low 6, dubious 5). Bottom right: the same levels against great-circle distance from the source, which is where a distant findspot that is only weakly attested becomes visible as such."
+  generated: "74 documented findspots of Campanian Ignimbrite tephra, 12 of them archaeological sites (3 of those added by geo-lod's curated annotations, the rest stated in the source table). Distances from the Phlegraean Fields run to 2752 km. Left: the findspot map, coloured by certainty, triangles are archaeological sites. Top right: how many findspots carry each certainty level (high 14, representative 2, medium 47, low 6, dubious 5). Bottom right: the same levels against great-circle distance from the source, which is where a distant findspot that is only weakly attested becomes visible as such."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo
+
+ci_findspots_map:
+  caption: "74 documented findspots of Campanian Ignimbrite tephra, 12 of them archaeological sites (3 of those added by geo-lod's curated annotations, the rest stated in the source table). Distances from the Phlegraean Fields run to 2752 km. Positions are drawn on an equirectangular grid without a basemap; the dashed rings mark great-circle distances at 500 km intervals around the source. Colour is the certainty of the findspot, triangles are archaeological sites."
+  generated: "74 documented findspots of Campanian Ignimbrite tephra, 12 of them archaeological sites (3 of those added by geo-lod's curated annotations, the rest stated in the source table). Distances from the Phlegraean Fields run to 2752 km. Positions are drawn on an equirectangular grid without a basemap; the dashed rings mark great-circle distances at 500 km intervals around the source. Colour is the certainty of the findspot, triangles are archaeological sites."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo

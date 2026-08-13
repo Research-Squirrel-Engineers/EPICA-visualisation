@@ -119,7 +119,18 @@ GENERATED: dict[str, list[Entry]] = {
     ],
     "ci": [
         Entry("CI/rdf", "CI/ci_pipeline.py", contents=True),
-        Entry("CI/report", "CI/ci_pipeline.py", contents=True),
+        Entry("CI/report", "CI/ci_pipeline.py, plot_ci_findspots.py",
+              contents=True),
+        Entry("CI/plots", "CI/plot_ci_findspots.py", contents=True),
+        Entry("CI/captions.yaml",
+              "CI/plot_ci_findspots.py, one entry per figure"),
+    ],
+    "archaeo": [
+        # The HTML pages, not their inputs: the findspot table lives under
+        # data/raw/ and the annotations under data/curated/, and neither is
+        # written by a step.
+        Entry("archaeo-connect/CI_findspots_CAA.html",
+              "archaeo-connect/ci_findspots_html.py"),
     ],
     "bundle": [
         # Only the bundle itself. dist/ also holds the MIS tables, and those
@@ -138,7 +149,7 @@ GENERATED: dict[str, list[Entry]] = {
 # is the record of the run that is writing it, and removing it from a
 # standalone call would only puzzle whoever reads the directory next.
 DEFAULT_GROUPS: tuple[str, ...] = (
-    "vocab", "diagrams", "epica", "sisal", "ci", "bundle", "cache",
+    "vocab", "diagrams", "epica", "sisal", "ci", "archaeo", "bundle", "cache",
 )
 
 
@@ -164,9 +175,6 @@ STALE: list[Entry] = [
     Entry("EPICA/ch4_vs_depth_full_smooth11.jpg",
           "figure outside plots/, identical to EPICA/plots/",
           note="predates the plots/ directory"),
-    Entry("archaeo-connect/cifindspots_part_full.csv",
-          "identical to CI/cifindspots_part_full.csv",
-          note="one input, two copies; the CI copy is the one the pipeline reads"),
     Entry("SISAL/v_data_*.csv",
           "the old figure input, replaced by data/derived/sisal/sites/",
           note="carried the decimal-separator error - 907 rows for Botuvera "
@@ -182,8 +190,21 @@ STALE: list[Entry] = [
 # report answers "why is this still here" without a look into PRIMER.md.
 PENDING: list[Entry] = [
     Entry("archaeo-connect/v_sites_all.csv",
-          "input of sisal_arch_html.py",
-          note="an older cut than SISAL/v_sites_all.csv, not a copy of it"),
+          "the last input the SISAL archaeology page had",
+          note="an older cut than SISAL/v_sites_all.csv, not a copy of it. "
+               "Nothing reads it today - see sisal_arch_html.py below - and "
+               "whether it stays is decided in S3f with the page itself"),
+    Entry("archaeo-connect/sisal_arch_html.py",
+          "a copy of ci_findspots_html.py, not a SISAL script",
+          note="the generator of SISAL_arch_sites_CAA.html was overwritten "
+               "with a reformatted copy of the CI script at some point: it "
+               "reads the findspot table and writes the CI page. The SISAL "
+               "page in the same directory therefore has no generator. "
+               "Rebuilt or dropped in S3f, not here"),
+    Entry("archaeo-connect/SISAL_arch_sites_CAA.html",
+          "a page no script writes any more",
+          note="kept because it is the only surviving statement of what the "
+               "lost generator produced"),
     Entry("s3c1_import.txt",
           "run log of the S3c.1 import",
           note="evidence, not an input; keep or remove by hand"),

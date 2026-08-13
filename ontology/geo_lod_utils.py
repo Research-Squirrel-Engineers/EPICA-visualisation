@@ -539,6 +539,41 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         a geolod:ArchaeologicalContext, owl:NamedIndividual ;
         rdfs:label   "Mesoamerican Context"@en .
 
+    # The four properties of the curated archaeological reading. They were
+    # declared in sisal_ontology.ttl while only caves carried them; since the
+    # CI strand annotates findspots the same way, they belong here, and their
+    # domain is the class both branches already share. A domain of
+    # geolod:Cave would have made every annotated CI findspot a cave under
+    # any reasoner - the enrichment says what a place is known for, not what
+    # kind of place it is.
+
+    geolod:screenedForArchaeology
+        a owl:DatatypeProperty ;
+        rdfs:domain  crm:E27_Site ;
+        rdfs:range   xsd:boolean ;
+        rdfs:label   "screened for archaeology"@en ;
+        rdfs:comment "True where geo-lod checked this site against the archaeological literature, whatever the outcome. Absence of the property means the site has not been looked at, which is a different statement from a negative result and has to stay distinguishable."@en .
+
+    geolod:archaeologicalCategory
+        a owl:DatatypeProperty ;
+        rdfs:domain  crm:E27_Site ;
+        rdfs:range   xsd:string ;
+        rdfs:label   "archaeological category"@en ;
+        rdfs:comment "Free-text classification of the archaeological character, e.g. 'Palaeolithic Art', 'Cave Site'."@en .
+
+    geolod:archaeologicalBroaderContext
+        a owl:ObjectProperty ;
+        rdfs:domain  crm:E27_Site ;
+        rdfs:range   geolod:ArchaeologicalContext ;
+        rdfs:label   "archaeological broader context"@en .
+
+    geolod:archaeologicalConfidence
+        a owl:DatatypeProperty ;
+        rdfs:domain  crm:E27_Site ;
+        rdfs:range   xsd:string ;
+        rdfs:label   "archaeological confidence"@en ;
+        rdfs:comment "Confidence of the archaeological attribution: high, medium or low."@en .
+
     # -- CI Findspots  (Campanian Ignimbrite tephra documentation sites) -------
 
     geolod:CIFindspot

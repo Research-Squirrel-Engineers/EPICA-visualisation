@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-main.py - EPICA + SISAL + CI Pipeline with logging and bundle step
+main.py - the geo-lod pipeline: EPICA, SISAL, CI, the archaeological
+HTML pages, and the RDF bundle, with a run log over all of them.
 """
 
 import os
@@ -19,7 +20,9 @@ EPICA_RDF_SCRIPT  = SCRIPT_DIR / "EPICA" / "epica_rdf.py"
 EPICA_PLOT_SCRIPT = SCRIPT_DIR / "EPICA" / "plot_epica_from_tab.py"
 SISAL_RDF_SCRIPT = SCRIPT_DIR / "SISAL" / "sisal_rdf.py"
 SISAL_SCRIPT = SCRIPT_DIR / "SISAL" / "plot_sisal_from_csv.py"
-CI_SCRIPT    = SCRIPT_DIR / "CI" / "ci_pipeline.py"
+CI_RDF_SCRIPT  = SCRIPT_DIR / "CI" / "ci_pipeline.py"
+CI_PLOT_SCRIPT = SCRIPT_DIR / "CI" / "plot_ci_findspots.py"
+ARCHAEO_SCRIPTS = [SCRIPT_DIR / "archaeo-connect" / "ci_findspots_html.py"]
 ONTOLOGY_DIR = SCRIPT_DIR / "ontology"
 DIST_DIR     = SCRIPT_DIR / "dist"
 
@@ -104,6 +107,20 @@ def check_directory_exists(dirpath: Path, description: str) -> bool:
     return True
 
 
+#: The strands main.py can run, in the order it runs them. Each has an
+#: --only switch of its own, and naming them once is what keeps the switch,
+#: the clean group and the summary from drifting apart - the old code spelled
+#: the same three conditions out at four call sites.
+STRANDS = ("epica", "sisal", "ci", "archaeo")
+
+
+def strand_requested(args, strand: str) -> bool:
+    """True unless another strand's --only switch excludes this one."""
+    only = [name for name in STRANDS
+            if getattr(args, f"{name}_only", False)]
+    return not only or strand in only
+
+
 def clean_groups_for(args) -> list[str]:
     """Which clean groups belong to the steps this run will actually execute.
 
@@ -118,17 +135,15 @@ def clean_groups_for(args) -> list[str]:
     them deleted.
     """
     groups = ["vocab", "cache"]
-    epica = not (args.sisal_only or args.ci_only)
-    sisal = not (args.epica_only or args.ci_only)
-    ci = not (args.epica_only or args.sisal_only)
-    if epica:
+    if strand_requested(args, "epica"):
         groups.append("epica")
-    if sisal:
-        groups.append("sisal")
-    if ci:
-        groups.append("ci")
-    if epica:
         groups.append("diagrams")
+    if strand_requested(args, "sisal"):
+        groups.append("sisal")
+    if strand_requested(args, "ci"):
+        groups.append("ci")
+    if strand_requested(args, "archaeo"):
+        groups.append("archaeo")
     if not args.no_bundle:
         groups.append("bundle")
     return groups
@@ -352,14 +367,24 @@ def _status(ok: bool, requested: bool) -> str:
     return "✓ Success" if ok else "✗ Failed"
 
 
-def print_summary(epica: bool, sisal: bool, ci: bool, bundle: bool,
-                  requested: dict[str, bool], start: datetime):
+#: How a strand is named in the summary. Longest label sets the column.
+SUMMARY_LABELS = {
+    "epica": "EPICA",
+    "sisal": "SISAL",
+    "ci": "CI",
+    "archaeo": "Archaeo HTML",
+    "bundle": "Bundle",
+}
+
+
+def print_summary(results: dict[str, bool], requested: dict[str, bool],
+                  start: datetime):
     print_header("Summary", char="═")
     duration = datetime.now() - start
-    print(f"  EPICA:   {_status(epica,  requested['epica'])}")
-    print(f"  SISAL:   {_status(sisal,  requested['sisal'])}")
-    print(f"  CI:      {_status(ci,     requested['ci'])}")
-    print(f"  Bundle:  {_status(bundle, requested['bundle'])}")
+    width = max(len(label) for label in SUMMARY_LABELS.values()) + 2
+    for name, label in SUMMARY_LABELS.items():
+        print(f"  {(label + ':').ljust(width)} "
+              f"{_status(results[name], requested[name])}")
 
     if STEP_TIMES:
         print("\n  Duration per step:")
@@ -382,11 +407,18 @@ def print_summary(epica: bool, sisal: bool, ci: bool, bundle: bool,
 
 def main():
     parser = argparse.ArgumentParser(
-        description="EPICA + SISAL + CI Palaeoclimate Data Processing Pipeline"
+        description="geo-lod pipeline: EPICA, SISAL and CI palaeoclimate data "
+                    "to RDF, figures, the archaeological HTML pages, and "
+                    "the validated bundle"
     )
-    parser.add_argument("--epica-only", action="store_true")
-    parser.add_argument("--sisal-only", action="store_true")
-    parser.add_argument("--ci-only", action="store_true")
+    # One --<strand>-only switch per strand, and they combine: --ci-only
+    # --archaeo-only runs the two that belong together without touching the
+    # long-running EPICA and SISAL steps.
+    for strand in STRANDS:
+        parser.add_argument(
+            f"--{strand}-only", action="store_true",
+            help=f"run only the {strand} strand. Several --only switches may "
+                 f"be given; the run then covers exactly those strands.")
     parser.add_argument(
         "--clean",
         action="store_true",
@@ -407,7 +439,7 @@ def main():
     parser.add_argument(
         "--no-bundle",
         action="store_true",
-        help="Schritt 5 (RDF-Bundle + Validierung) überspringen",
+        help="den Bundle-Schritt (RDF-Bundle + Validierung) überspringen",
     )
     parser.add_argument(
         "--bundle-format",
@@ -458,7 +490,7 @@ def main():
 
     start = datetime.now()
 
-    print_header("EPICA + SISAL + CI Pipeline", char="═")
+    print_header("geo-lod pipeline", char="═")
     print(f"  Timestamp: {start.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"  Directory: {SCRIPT_DIR}")
     print()
@@ -480,13 +512,20 @@ def main():
     sisal_rdf_exists = check_file_exists(SISAL_RDF_SCRIPT, "SISAL RDF script")
     sisal_plot_exists = check_file_exists(SISAL_SCRIPT, "SISAL plot script")
     sisal_exists = sisal_rdf_exists and sisal_plot_exists
-    ci_exists    = check_file_exists(CI_SCRIPT,    "CI script")
+    ci_rdf_exists = check_file_exists(CI_RDF_SCRIPT, "CI RDF script")
+    ci_plot_exists = check_file_exists(CI_PLOT_SCRIPT, "CI plot script")
+    ci_exists = ci_rdf_exists and ci_plot_exists
+    archaeo_exists = all(
+        check_file_exists(script, f"archaeo-connect: {script.name}")
+        for script in ARCHAEO_SCRIPTS
+    )
     end_section()
 
-    epica_ok  = False
-    sisal_ok  = False
-    ci_ok     = False
-    bundle_ok = False
+    epica_ok   = False
+    sisal_ok   = False
+    ci_ok      = False
+    archaeo_ok = False
+    bundle_ok  = False
 
     print_section("2. Regenerate canonical ontology")
     canonical_ok = regenerate_canonical_ontology()
@@ -536,34 +575,51 @@ def main():
         end_section()
         sisal_ok = sisal_ok and sisal_plots_ok
 
-    if not args.epica_only and not args.sisal_only and ci_exists:
-        print_section("8. Campanian Ignimbrite (CI Findspots)")
-        ci_ok = run_script(CI_SCRIPT, "CI Findspot Processing")
+    # CI is split the way EPICA and SISAL are: triples first, figures after,
+    # so that a fault in the findspot table shows up before anything is drawn.
+    if strand_requested(args, "ci") and ci_exists:
+        print_section("8. Campanian Ignimbrite (RDF)")
+        ci_ok = run_script(CI_RDF_SCRIPT, "CI findspot RDF generation")
+        end_section()
+
+        print_section("9. Campanian Ignimbrite (figures)")
+        ci_plots_ok = run_script(CI_PLOT_SCRIPT, "CI findspot figures")
+        end_section()
+        ci_ok = ci_ok and ci_plots_ok
+
+    # The archaeological HTML pages read the same two files the CI graph is
+    # built from, so they run after it: a page that disagrees with the graph
+    # it illustrates is worse than no page.
+    if strand_requested(args, "archaeo") and archaeo_exists:
+        print_section("10. Archaeological connection (HTML)")
+        archaeo_ok = all(
+            run_script(script, f"archaeo-connect: {script.stem}")
+            for script in ARCHAEO_SCRIPTS
+        )
         end_section()
 
     if not args.no_bundle:
-        print_section("9. RDF Bundle & Validation")
+        print_section("11. RDF Bundle & Validation")
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok, bundle_formats)
         end_section()
 
     # Was dieser Lauf überhaupt vorhatte. Ein nicht angeforderter Schritt ist
     # nicht fehlgeschlagen; vorher gab `--sisal-only` selbst bei fehlerfreiem
     # Lauf Exit-Code 1 zurück, was einen CI-Job reihenweise rot färbt.
-    requested = {
-        "epica": not (args.sisal_only or args.ci_only) and epica_exists,
-        "sisal": not (args.epica_only or args.ci_only) and sisal_exists,
-        "ci": not (args.epica_only or args.sisal_only) and ci_exists,
-        "bundle": not args.no_bundle,
-    }
+    exists = {"epica": epica_exists, "sisal": sisal_exists, "ci": ci_exists,
+              "archaeo": archaeo_exists}
+    requested = {name: strand_requested(args, name) and exists[name]
+                 for name in STRANDS}
+    requested["bundle"] = not args.no_bundle
 
-    print_summary(epica_ok, sisal_ok, ci_ok, bundle_ok, requested, start)
+    results = {"epica": epica_ok, "sisal": sisal_ok, "ci": ci_ok,
+               "archaeo": archaeo_ok, "bundle": bundle_ok}
+    print_summary(results, requested, start)
 
     overall_ok = (
         canonical_ok
         and vocab_ok
-        and all(ok for name, ok in [("epica", epica_ok), ("sisal", sisal_ok),
-                                    ("ci", ci_ok), ("bundle", bundle_ok)]
-                if requested[name])
+        and all(ok for name, ok in results.items() if requested[name])
     )
 
     # Schlusszeile noch durch den Tee, damit Log und Terminal Zeile für Zeile
