@@ -2839,18 +2839,42 @@ var vowlresult={
   },
   {
    "id": 689,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 690,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 691,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 692,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 693,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 694,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 695,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 696,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 697,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 698,
    "type": "http://www.w3.org/ns/prov#Agent"
   }
  ],
@@ -2876,7 +2900,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2002/07/owl#versionInfo",
       "language": "undefined",
-      "value": "sha256:bf282f412066",
+      "value": "sha256:c694d14dfa63",
       "type": "label"
      }
     ],
@@ -2905,7 +2929,7 @@ var vowlresult={
      {
       "identifier": "http://purl.org/dc/terms/identifier",
       "language": "undefined",
-      "value": "sha256:cf8cf7a57432fd3c4c02c687e20ddf40b3db769b38b49afcc69c42269d56a673",
+      "value": "sha256:f083660895cd41aaf9edd8a917c2715dd54b235549331733ee16018648a00e6f",
       "type": "label"
      }
     ]
@@ -5057,14 +5081,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_101",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -5157,14 +5173,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Obreht, I. et al. (2017), Fig. 1",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_102",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -5261,14 +5269,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_103",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -5361,14 +5361,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Obreht, I. et al. (2017), Fig. 1",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_104",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -5465,14 +5457,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_105",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -5565,14 +5549,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Panagiotopoulos, K. (2014)",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_106",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -5669,14 +5645,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_10",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -5769,14 +5737,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Rosi et al., 1999",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_11",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -5873,14 +5833,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_12",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -5973,14 +5925,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Narcisi, 1996",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_13",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -6077,14 +6021,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_14",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -6177,14 +6113,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Fedele et al., 2003",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_15",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -6281,14 +6209,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_16",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -6381,14 +6301,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Orsi et al., 1996",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_17",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -6485,14 +6397,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_18",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -6585,14 +6489,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Giaccio et al., 2008",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_19",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -6689,14 +6585,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_1",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -6789,14 +6677,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Schenk et al. (2024)",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_201",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -6893,14 +6773,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_202",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -6993,14 +6865,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Schenk et al. (2024)",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_203",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -7097,14 +6961,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_20",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -7197,14 +7053,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Rosi et al., 1999",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_21",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -7301,14 +7149,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_22",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -7401,14 +7241,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Pappalardo et al., 1999",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_23",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -7505,14 +7337,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_24",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -7605,14 +7429,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Civetta et al., 1997",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_25",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -7709,14 +7525,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_26",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -7809,14 +7617,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Civetta et al., 1997",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_27",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -7913,14 +7713,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_28",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -8013,14 +7805,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Civetta et al., 1997",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_29",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -8117,14 +7901,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_2",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -8217,14 +7993,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Civetta et al., 1997",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_30",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -8321,14 +8089,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_31",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -8421,14 +8181,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Lowe et al., 2012",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_32",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -8525,14 +8277,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_33",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -8625,14 +8369,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Pappalardo et al., 1999",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_34",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -8729,14 +8465,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_35",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -8829,14 +8557,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Rosi et al., 1999",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_36",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -8933,14 +8653,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_37",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -9033,14 +8745,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Rosi et al., 1999",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_38",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -9137,14 +8841,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_39",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -9237,14 +8933,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Rosi et al., 1999",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_3",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -9341,14 +9029,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_40",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -9441,14 +9121,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Leicher et al., 2019, 2016",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_41",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -9545,14 +9217,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_42",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -9645,14 +9309,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Giaccio et al., 2008",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_43",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -9749,14 +9405,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_44",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -9849,14 +9497,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Fedele et al., 2003",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_45",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -9953,14 +9593,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_46",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -10053,14 +9685,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Wulf et al., 2018",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_47",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -10157,14 +9781,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_48",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -10257,14 +9873,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Leicher et al., 2019",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_49",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -10361,14 +9969,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_4",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -10461,14 +10061,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Lowe et al., 2012",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_50",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -10565,14 +10157,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_51",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -10665,14 +10249,6 @@ var vowlresult={
       "language": "undefined",
       "value": "P\u00f6tter et al., 2021",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_52",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -10769,14 +10345,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_53",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -10869,14 +10437,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Obreht et al., 2017",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_54",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -10973,14 +10533,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_55",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -11073,14 +10625,6 @@ var vowlresult={
       "language": "undefined",
       "value": "P\u00f6tter et al., 2021",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_56",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -11177,14 +10721,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_57",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -11277,14 +10813,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Fitzsimmons et al., 2013",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_58",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -11381,14 +10909,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_59",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -11481,14 +11001,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Giaccio et al., 2008",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_5",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -11585,14 +11097,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_60",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -11685,14 +11189,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Baykal et al., 2018",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_61",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -11789,14 +11285,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_62",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -11889,14 +11377,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Baykal et al., 2018",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_63",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -11993,14 +11473,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_64",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -12093,14 +11565,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Lowe et al., 2012",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_65",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -12197,14 +11661,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_6",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -12297,14 +11753,6 @@ var vowlresult={
       "language": "undefined",
       "value": "Pappalardo et al., 1999",
       "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_7",
-      "type": "iri"
      }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
@@ -12401,14 +11849,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_8",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -12503,14 +11943,6 @@ var vowlresult={
       "type": "label"
      }
     ],
-    "http://www.w3.org/ns/prov#used": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#used",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_9",
-      "type": "iri"
-     }
-    ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
      {
       "identifier": "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -12567,7 +11999,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2002/07/owl#versionInfo",
       "language": "undefined",
-      "value": "sha256:bf282f412066",
+      "value": "sha256:c694d14dfa63",
       "type": "label"
      }
     ],
@@ -13661,6 +13093,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(20.5809 45.2417)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_101_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -13699,6 +13139,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(21.4058 43.6728)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_102_activity",
+      "type": "iri"
      }
     ]
    },
@@ -13739,6 +13187,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(18.7587 46.0874)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_103_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -13777,6 +13233,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(20.2802 44.9032)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_104_activity",
+      "type": "iri"
      }
     ]
    },
@@ -13817,6 +13281,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(27.9347 44.2462)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_105_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -13855,6 +13327,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(21.0000 40.9167)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_106_activity",
+      "type": "iri"
      }
     ]
    },
@@ -13895,6 +13375,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.3998 40.6385)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_10_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -13933,6 +13421,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.4476 40.6619)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_11_activity",
+      "type": "iri"
      }
     ]
    },
@@ -13973,6 +13469,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.2479 40.8312)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_12_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14011,6 +13515,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.6057 40.9315)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_13_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14051,6 +13563,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.5699 40.9490)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_14_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14089,6 +13609,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT (15.6098 40.9319)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_15_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14129,6 +13657,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(16.2833 41.0047)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_16_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14167,6 +13703,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.2080 40.8537)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_17_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14207,6 +13751,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.4347 40.6484)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_18_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14245,6 +13797,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.6150 41.6541)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_19_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14285,6 +13845,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.3624 40.9489)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_1_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14323,6 +13891,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(6.5951 50.2825)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_201_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14363,6 +13939,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(6.5949 50.2821)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_202_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14401,6 +13985,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(6.5066 50.2928)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_203_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14441,6 +14033,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.7546 40.7249)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_20_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14479,6 +14079,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.7979 40.7615)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_21_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14519,6 +14127,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1402 40.8275)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_22_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14557,6 +14173,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.2594 40.8731)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_23_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14597,6 +14221,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.0890 40.8215)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_24_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14635,6 +14267,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.6459 40.6783)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_25_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14675,6 +14315,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1489 40.8888)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_26_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14713,6 +14361,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.3733 40.6070)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_27_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14753,6 +14409,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.7402 40.9746)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_28_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14791,6 +14455,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.3381 41.0369)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_29_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14831,6 +14503,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.6983 40.9285)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_2_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14869,6 +14549,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.3313 41.0518)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_30_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14909,6 +14597,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1560 40.9346)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_31_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -14947,6 +14643,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.8706 40.8567)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_32_activity",
+      "type": "iri"
      }
     ]
    },
@@ -14987,6 +14691,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.7567 41.0075)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_33_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15025,6 +14737,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.0477 40.8111)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_34_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15065,6 +14785,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1486 40.8926)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_35_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15103,6 +14831,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.7069 41.0577)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_36_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15143,6 +14879,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.7906 40.7616)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_37_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15181,6 +14925,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.4273 40.6622)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_38_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15221,6 +14973,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1607 41.0000)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_39_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15259,6 +15019,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.7680 40.7119)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_3_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15299,6 +15067,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.5194 40.8005)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_40_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15337,6 +15113,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(20.6749 40.9874)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_41_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15377,6 +15161,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.7024 43.6519)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_42_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15415,6 +15207,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(23.3848 43.0892)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_43_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15455,6 +15255,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(24.0053 43.1907)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_44_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15493,6 +15301,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(23.1311 37.4226)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_45_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15533,6 +15349,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(21.4672 40.5361)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_46_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15571,6 +15395,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(24.2274 40.9794)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_47_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15611,6 +15443,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.2921 44.5104)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_48_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15649,6 +15489,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(20.7409 41.0467)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_49_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15689,6 +15537,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.5259 40.6993)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_4_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15727,6 +15583,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(21.1617 41.8117)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_50_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15767,6 +15631,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(18.4815 42.7790)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_51_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15805,6 +15677,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(27.9021 44.0947)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_52_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15845,6 +15725,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(28.2329 43.9996)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_53_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15883,6 +15771,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(27.8491 44.3921)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_54_activity",
+      "type": "iri"
      }
     ]
    },
@@ -15923,6 +15819,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(25.2920 43.6550)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_55_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -15961,6 +15865,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(27.3271 44.1891)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_56_activity",
+      "type": "iri"
      }
     ]
    },
@@ -16001,6 +15913,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(27.2478 45.3037)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_57_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -16039,6 +15959,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(45.0000 55.0000)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_58_activity",
+      "type": "iri"
      }
     ]
    },
@@ -16079,6 +16007,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(39.0517 51.3858)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_59_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -16117,6 +16053,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.2092 40.4956)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_5_activity",
+      "type": "iri"
      }
     ]
    },
@@ -16157,6 +16101,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(39.0473 51.3858)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_60_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -16195,6 +16147,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(21.3912 44.7397)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_61_activity",
+      "type": "iri"
      }
     ]
    },
@@ -16235,6 +16195,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.3094 44.6568)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_62_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -16273,6 +16241,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(20.3026 45.2034)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_63_activity",
+      "type": "iri"
      }
     ]
    },
@@ -16313,6 +16289,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(31.8000 47.4300)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_64_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -16351,6 +16335,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.0516 32.9002)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_65_activity",
+      "type": "iri"
      }
     ]
    },
@@ -16391,6 +16383,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.7662 40.7198)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_6_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -16429,6 +16429,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.0560 40.8381)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_7_activity",
+      "type": "iri"
      }
     ]
    },
@@ -16469,6 +16477,14 @@ var vowlresult={
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.2559 40.7192)",
       "type": "label"
      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_8_activity",
+      "type": "iri"
+     }
     ]
    },
    "range": [],
@@ -16507,6 +16523,14 @@ var vowlresult={
       "language": "undefined",
       "value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.0366 40.9260)",
       "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_9_activity",
+      "type": "iri"
      }
     ]
    },
@@ -24458,129 +24482,10 @@ var vowlresult={
    "iri": "http://w3id.org/geo-lod/ci/cisite_41",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
-   "label": "Kozarnika Cave (Bulgaria)",
-   "annotations": {
-    "http://purl.org/dc/terms/creator": [
-     {
-      "identifier": "http://purl.org/dc/terms/creator",
-      "language": "undefined",
-      "value": "https://orcid.org/0000-0003-1100-6494",
-      "type": "iri"
-     }
-    ],
-    "http://purl.org/dc/terms/license": [
-     {
-      "identifier": "http://purl.org/dc/terms/license",
-      "language": "undefined",
-      "value": "https://creativecommons.org/licenses/by/4.0/",
-      "type": "iri"
-     }
-    ],
-    "http://purl.org/dc/terms/rightsHolder": [
-     {
-      "identifier": "http://purl.org/dc/terms/rightsHolder",
-      "language": "undefined",
-      "value": "https://orcid.org/0000-0003-1100-6494",
-      "type": "iri"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasCertaintyDescription": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasCertaintyDescription",
-      "language": "undefined",
-      "value": "findspot mentioned in a scientific paper",
-      "type": "label"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasCertaintyLevel": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasCertaintyLevel",
-      "language": "undefined",
-      "value": "http://fuzzy-sl.squirrel.link/ontology/high",
-      "type": "iri"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasLiteratureReference": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasLiteratureReference",
-      "language": "undefined",
-      "value": "Lowe et al., 2012",
-      "type": "label"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasSpatialType": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasSpatialType",
-      "language": "undefined",
-      "value": "http://fuzzy-sl.squirrel.link/ontology/Cave",
-      "type": "iri"
-     }
-    ],
-    "http://www.opengis.net/ont/geosparql#hasGeometry": [
-     {
-      "identifier": "http://www.opengis.net/ont/geosparql#hasGeometry",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_42_geom",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-     {
-      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
-      "language": "undefined",
-      "value": "CI findspot related from literature",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#closeMatch": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
-      "language": "undefined",
-      "value": "http://wikidata.org/entity/Q2037533",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "language": "undefined",
-      "value": "Kozarnika Cave (Bulgaria)",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#scopeNote",
-      "language": "undefined",
-      "value": "CI findspot related from literature",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasAttributedTo": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasAttributedTo",
-      "language": "undefined",
-      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
-      "language": "undefined",
-      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_42_pyscript",
-      "type": "iri"
-     }
-    ]
+   "label": {
+    "IRI-based": "cisite_41"
    },
+   "annotations": {},
    "range": [],
    "domain": [],
    "subProperties": [],
@@ -24591,129 +24496,10 @@ var vowlresult={
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
-   "label": "Temnata Cave (Bulgaria)",
-   "annotations": {
-    "http://purl.org/dc/terms/creator": [
-     {
-      "identifier": "http://purl.org/dc/terms/creator",
-      "language": "undefined",
-      "value": "https://orcid.org/0000-0003-1100-6494",
-      "type": "iri"
-     }
-    ],
-    "http://purl.org/dc/terms/license": [
-     {
-      "identifier": "http://purl.org/dc/terms/license",
-      "language": "undefined",
-      "value": "https://creativecommons.org/licenses/by/4.0/",
-      "type": "iri"
-     }
-    ],
-    "http://purl.org/dc/terms/rightsHolder": [
-     {
-      "identifier": "http://purl.org/dc/terms/rightsHolder",
-      "language": "undefined",
-      "value": "https://orcid.org/0000-0003-1100-6494",
-      "type": "iri"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasCertaintyDescription": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasCertaintyDescription",
-      "language": "undefined",
-      "value": "findspot mentioned in a scientific paper",
-      "type": "label"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasCertaintyLevel": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasCertaintyLevel",
-      "language": "undefined",
-      "value": "http://fuzzy-sl.squirrel.link/ontology/high",
-      "type": "iri"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasLiteratureReference": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasLiteratureReference",
-      "language": "undefined",
-      "value": "Giaccio et al., 2008",
-      "type": "label"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasSpatialType": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasSpatialType",
-      "language": "undefined",
-      "value": "http://fuzzy-sl.squirrel.link/ontology/Cave",
-      "type": "iri"
-     }
-    ],
-    "http://www.opengis.net/ont/geosparql#hasGeometry": [
-     {
-      "identifier": "http://www.opengis.net/ont/geosparql#hasGeometry",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_43_geom",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-     {
-      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
-      "language": "undefined",
-      "value": "CI findspot related from literature",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#closeMatch": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
-      "language": "undefined",
-      "value": "http://wikidata.org/entity/Q12296153",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "language": "undefined",
-      "value": "Temnata Cave (Bulgaria)",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#scopeNote",
-      "language": "undefined",
-      "value": "CI findspot related from literature",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasAttributedTo": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasAttributedTo",
-      "language": "undefined",
-      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
-      "language": "undefined",
-      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_43_pyscript",
-      "type": "iri"
-     }
-    ]
+   "label": {
+    "IRI-based": "cisite_42"
    },
+   "annotations": {},
    "range": [],
    "domain": [],
    "subProperties": [],
@@ -25284,129 +25070,10 @@ var vowlresult={
    "iri": "http://w3id.org/geo-lod/ci/cisite_49",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
-   "label": "Castelcivita Cave",
-   "annotations": {
-    "http://purl.org/dc/terms/creator": [
-     {
-      "identifier": "http://purl.org/dc/terms/creator",
-      "language": "undefined",
-      "value": "https://orcid.org/0000-0003-1100-6494",
-      "type": "iri"
-     }
-    ],
-    "http://purl.org/dc/terms/license": [
-     {
-      "identifier": "http://purl.org/dc/terms/license",
-      "language": "undefined",
-      "value": "https://creativecommons.org/licenses/by/4.0/",
-      "type": "iri"
-     }
-    ],
-    "http://purl.org/dc/terms/rightsHolder": [
-     {
-      "identifier": "http://purl.org/dc/terms/rightsHolder",
-      "language": "undefined",
-      "value": "https://orcid.org/0000-0003-1100-6494",
-      "type": "iri"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasCertaintyDescription": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasCertaintyDescription",
-      "language": "undefined",
-      "value": "findspot mentioned in a scientific paper",
-      "type": "label"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasCertaintyLevel": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasCertaintyLevel",
-      "language": "undefined",
-      "value": "http://fuzzy-sl.squirrel.link/ontology/high",
-      "type": "iri"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasLiteratureReference": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasLiteratureReference",
-      "language": "undefined",
-      "value": "Giaccio et al., 2008",
-      "type": "label"
-     }
-    ],
-    "http://w3id.org/geo-lod/hasSpatialType": [
-     {
-      "identifier": "http://w3id.org/geo-lod/hasSpatialType",
-      "language": "undefined",
-      "value": "http://fuzzy-sl.squirrel.link/ontology/Cave",
-      "type": "iri"
-     }
-    ],
-    "http://www.opengis.net/ont/geosparql#hasGeometry": [
-     {
-      "identifier": "http://www.opengis.net/ont/geosparql#hasGeometry",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_5_geom",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-     {
-      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
-      "language": "undefined",
-      "value": "CI findspot related from literature",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#closeMatch": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
-      "language": "undefined",
-      "value": "http://wikidata.org/entity/Q3777120",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "language": "undefined",
-      "value": "Castelcivita Cave",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#scopeNote",
-      "language": "undefined",
-      "value": "CI findspot related from literature",
-      "type": "label"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasAttributedTo": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasAttributedTo",
-      "language": "undefined",
-      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
-      "language": "undefined",
-      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo",
-      "type": "iri"
-     }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-     {
-      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
-      "language": "undefined",
-      "value": "http://w3id.org/geo-lod/ci/cisite_5_pyscript",
-      "type": "iri"
-     }
-    ]
+   "label": {
+    "IRI-based": "cisite_49"
    },
+   "annotations": {},
    "range": [],
    "domain": [],
    "subProperties": [],
@@ -27388,6 +27055,34 @@ var vowlresult={
   },
   {
    "id": 672,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_42",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_42"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 673,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_43",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_43"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 674,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27401,7 +27096,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 673,
+   "id": 675,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27415,7 +27110,21 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 674,
+   "id": 676,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_5",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": {
+    "IRI-based": "cisite_5"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 677,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27429,7 +27138,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 675,
+   "id": 678,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27443,7 +27152,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 676,
+   "id": 679,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27457,7 +27166,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 677,
+   "id": 680,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27471,7 +27180,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 678,
+   "id": 681,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27485,7 +27194,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 679,
+   "id": 682,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27618,8 +27327,274 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 680,
+   "id": 683,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": "Kozarnika Cave (Bulgaria)",
+   "annotations": {
+    "http://purl.org/dc/terms/creator": [
+     {
+      "identifier": "http://purl.org/dc/terms/creator",
+      "language": "undefined",
+      "value": "https://orcid.org/0000-0003-1100-6494",
+      "type": "iri"
+     }
+    ],
+    "http://purl.org/dc/terms/license": [
+     {
+      "identifier": "http://purl.org/dc/terms/license",
+      "language": "undefined",
+      "value": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "iri"
+     }
+    ],
+    "http://purl.org/dc/terms/rightsHolder": [
+     {
+      "identifier": "http://purl.org/dc/terms/rightsHolder",
+      "language": "undefined",
+      "value": "https://orcid.org/0000-0003-1100-6494",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasCertaintyDescription": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasCertaintyDescription",
+      "language": "undefined",
+      "value": "findspot mentioned in a scientific paper",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasCertaintyLevel": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasCertaintyLevel",
+      "language": "undefined",
+      "value": "http://fuzzy-sl.squirrel.link/ontology/high",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasLiteratureReference": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasLiteratureReference",
+      "language": "undefined",
+      "value": "Lowe et al., 2012",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasSpatialType": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasSpatialType",
+      "language": "undefined",
+      "value": "http://fuzzy-sl.squirrel.link/ontology/Cave",
+      "type": "iri"
+     }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+     {
+      "identifier": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_42_geom",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+     {
+      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "language": "undefined",
+      "value": "CI findspot related from literature",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "language": "undefined",
+      "value": "http://wikidata.org/entity/Q2037533",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "language": "undefined",
+      "value": "Kozarnika Cave (Bulgaria)",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#scopeNote",
+      "language": "undefined",
+      "value": "CI findspot related from literature",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasAttributedTo": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasAttributedTo",
+      "language": "undefined",
+      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "language": "undefined",
+      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_42_pyscript",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 684,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_42",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": "Temnata Cave (Bulgaria)",
+   "annotations": {
+    "http://purl.org/dc/terms/creator": [
+     {
+      "identifier": "http://purl.org/dc/terms/creator",
+      "language": "undefined",
+      "value": "https://orcid.org/0000-0003-1100-6494",
+      "type": "iri"
+     }
+    ],
+    "http://purl.org/dc/terms/license": [
+     {
+      "identifier": "http://purl.org/dc/terms/license",
+      "language": "undefined",
+      "value": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "iri"
+     }
+    ],
+    "http://purl.org/dc/terms/rightsHolder": [
+     {
+      "identifier": "http://purl.org/dc/terms/rightsHolder",
+      "language": "undefined",
+      "value": "https://orcid.org/0000-0003-1100-6494",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasCertaintyDescription": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasCertaintyDescription",
+      "language": "undefined",
+      "value": "findspot mentioned in a scientific paper",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasCertaintyLevel": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasCertaintyLevel",
+      "language": "undefined",
+      "value": "http://fuzzy-sl.squirrel.link/ontology/high",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasLiteratureReference": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasLiteratureReference",
+      "language": "undefined",
+      "value": "Giaccio et al., 2008",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasSpatialType": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasSpatialType",
+      "language": "undefined",
+      "value": "http://fuzzy-sl.squirrel.link/ontology/Cave",
+      "type": "iri"
+     }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+     {
+      "identifier": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_43_geom",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+     {
+      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "language": "undefined",
+      "value": "CI findspot related from literature",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "language": "undefined",
+      "value": "http://wikidata.org/entity/Q12296153",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "language": "undefined",
+      "value": "Temnata Cave (Bulgaria)",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#scopeNote",
+      "language": "undefined",
+      "value": "CI findspot related from literature",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasAttributedTo": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasAttributedTo",
+      "language": "undefined",
+      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "language": "undefined",
+      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_43_pyscript",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 685,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
    "label": "Toplitsa Cave (Bulgaria)",
@@ -27751,7 +27726,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 681,
+   "id": 686,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27884,8 +27859,141 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 682,
+   "id": 687,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
+   "baseIRI": "http://w3id.org/geo-lod/ci",
+   "instances": 0,
+   "label": "Castelcivita Cave",
+   "annotations": {
+    "http://purl.org/dc/terms/creator": [
+     {
+      "identifier": "http://purl.org/dc/terms/creator",
+      "language": "undefined",
+      "value": "https://orcid.org/0000-0003-1100-6494",
+      "type": "iri"
+     }
+    ],
+    "http://purl.org/dc/terms/license": [
+     {
+      "identifier": "http://purl.org/dc/terms/license",
+      "language": "undefined",
+      "value": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "iri"
+     }
+    ],
+    "http://purl.org/dc/terms/rightsHolder": [
+     {
+      "identifier": "http://purl.org/dc/terms/rightsHolder",
+      "language": "undefined",
+      "value": "https://orcid.org/0000-0003-1100-6494",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasCertaintyDescription": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasCertaintyDescription",
+      "language": "undefined",
+      "value": "findspot mentioned in a scientific paper",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasCertaintyLevel": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasCertaintyLevel",
+      "language": "undefined",
+      "value": "http://fuzzy-sl.squirrel.link/ontology/high",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasLiteratureReference": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasLiteratureReference",
+      "language": "undefined",
+      "value": "Giaccio et al., 2008",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasSpatialType": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasSpatialType",
+      "language": "undefined",
+      "value": "http://fuzzy-sl.squirrel.link/ontology/Cave",
+      "type": "iri"
+     }
+    ],
+    "http://www.opengis.net/ont/geosparql#hasGeometry": [
+     {
+      "identifier": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_5_geom",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+     {
+      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "language": "undefined",
+      "value": "CI findspot related from literature",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "language": "undefined",
+      "value": "http://wikidata.org/entity/Q3777120",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "language": "undefined",
+      "value": "Castelcivita Cave",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#scopeNote",
+      "language": "undefined",
+      "value": "CI findspot related from literature",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasAttributedTo": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasAttributedTo",
+      "language": "undefined",
+      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "language": "undefined",
+      "value": "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_5_pyscript",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 688,
+   "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
    "label": "Golema Pesht Cave near Zdunje (Macedonia)",
@@ -28017,7 +28125,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 683,
+   "id": 689,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28150,7 +28258,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 684,
+   "id": 690,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28283,7 +28391,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 685,
+   "id": 691,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28416,7 +28524,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 686,
+   "id": 692,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28549,7 +28657,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 687,
+   "id": 693,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28682,7 +28790,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 688,
+   "id": 694,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28696,7 +28804,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 689,
+   "id": 695,
    "iri": "http://orcid.org/0000-0002-3246-3531",
    "baseIRI": "http://orcid.org",
    "instances": 0,
@@ -28710,53 +28818,35 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 690,
+   "id": 696,
    "iri": "http://orcid.org/0009-0008-2877-3204",
    "baseIRI": "http://orcid.org",
    "instances": 0,
    "label": {
     "IRI-based": "0009-0008-2877-3204"
    },
-   "annotations": {
-    "http://www.w3.org/2004/02/skos/core#exactMatch": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#exactMatch",
-      "language": "undefined",
-      "value": "http://orcid.org/0000-0002-3246-3531",
-      "type": "iri"
-     }
-    ]
-   },
+   "annotations": {},
    "range": [],
    "domain": [],
    "subProperties": [],
    "superProperties": []
   },
   {
-   "id": 691,
+   "id": 697,
    "iri": "http://orcid.org/0000-0002-3246-3531",
    "baseIRI": "http://orcid.org",
    "instances": 0,
    "label": {
     "IRI-based": "0000-0002-3246-3531"
    },
-   "annotations": {
-    "http://www.w3.org/2004/02/skos/core#exactMatch": [
-     {
-      "identifier": "http://www.w3.org/2004/02/skos/core#exactMatch",
-      "language": "undefined",
-      "value": "http://orcid.org/0009-0008-2877-3204",
-      "type": "iri"
-     }
-    ]
-   },
+   "annotations": {},
    "range": [],
    "domain": [],
    "subProperties": [],
    "superProperties": []
   },
   {
-   "id": 692,
+   "id": 698,
    "iri": "http://orcid.org/0009-0008-2877-3204",
    "baseIRI": "http://orcid.org",
    "instances": 0,

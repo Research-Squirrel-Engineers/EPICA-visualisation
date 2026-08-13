@@ -7,5 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: P12_occurred_in_the_presence_of"@en ;
     void:property <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> ;
-    void:triples 65 .
+    void:triples 62 .
 

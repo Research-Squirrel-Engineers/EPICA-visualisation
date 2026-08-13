@@ -14,6 +14,5 @@
     ns1:hasCertaintyLevel ns2:medium ;
     ns1:hasLiteratureReference "Obreht, I. et al. (2016)",
         "Obreht, I. et al. (2017), Fig. 1" ;
-    prov:used <http://w3id.org/geo-lod/ci/cisite_102> ;
     prov:wasAssociatedWith <http://orcid.org/0000-0002-3246-3531> .
 

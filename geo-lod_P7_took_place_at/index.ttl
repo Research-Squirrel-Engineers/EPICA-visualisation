@@ -7,6 +7,6 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: P7_took_place_at"@en ;
     void:property <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ;
-    void:triples 9,
+    void:triples 12,
         4904 .
 

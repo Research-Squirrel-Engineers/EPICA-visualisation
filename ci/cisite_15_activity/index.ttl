@@ -14,6 +14,5 @@
     ns2:hasCertaintyLevel ns1:high ;
     ns2:hasLiteratureReference "Brauer et al., 2000",
         "Fedele et al., 2003" ;
-    prov:used <http://w3id.org/geo-lod/ci/cisite_15> ;
     prov:wasAssociatedWith <http://orcid.org/0009-0008-2877-3204> .
 

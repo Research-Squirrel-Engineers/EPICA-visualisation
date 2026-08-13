@@ -515,6 +515,8 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_42_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_42_suniv2_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_42_suniv3_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_42_suniv4_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_42_suniv5_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_activity_suniv0_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_activity_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_geom_suniv0_>,
@@ -524,6 +526,8 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_suniv2_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_suniv3_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_suniv4_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_suniv5_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_44_activity_suniv0_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_44_activity_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_44_geom_suniv0_>,
@@ -696,6 +700,8 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_5_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_5_suniv2_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_5_suniv3_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_5_suniv4_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_5_suniv5_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_60_activity_suniv0_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_60_activity_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_60_geom_suniv0_>,
@@ -18212,6 +18218,12 @@ void:Linkset a owl:Class .
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_42_suniv3_> ns1:forClass <https://pleiades.stoa.org/places/vocab#Place> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_42_suniv3_> .
 
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_42_suniv4_> ns1:forClass <http://w3id.org/geo-lod/CIArchaeologicalSite> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_42_suniv4_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_42_suniv5_> ns1:forClass <http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_42_suniv5_> .
+
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_activity_suniv0_> ns1:forClass <http://fuzzy-sl.squirrel.link/ontology/Georeferencing> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_43_activity_suniv0_> .
 
@@ -18238,6 +18250,12 @@ void:Linkset a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_suniv3_> ns1:forClass <https://pleiades.stoa.org/places/vocab#Place> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_43_suniv3_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_suniv4_> ns1:forClass <http://w3id.org/geo-lod/CIArchaeologicalSite> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_43_suniv4_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_43_suniv5_> ns1:forClass <http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_43_suniv5_> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_44_activity_suniv0_> ns1:forClass <http://fuzzy-sl.squirrel.link/ontology/Georeferencing> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_44_activity_suniv0_> .
@@ -18754,6 +18772,12 @@ void:Linkset a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_5_suniv3_> ns1:forClass <https://pleiades.stoa.org/places/vocab#Place> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_5_suniv3_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_5_suniv4_> ns1:forClass <http://w3id.org/geo-lod/CIArchaeologicalSite> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_5_suniv4_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_5_suniv5_> ns1:forClass <http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_5_suniv5_> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//settings/publicTypeIndex.ttl#cisite_60_activity_suniv0_> ns1:forClass <http://fuzzy-sl.squirrel.link/ontology/Georeferencing> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD//cisite_60_activity_suniv0_> .
@@ -66939,12 +66963,12 @@ foaf:Person a owl:Class .
 geo:SpatialObjectCollection a owl:Class ;
     rdfs:subClassOf skos:Collection .
 
+geo:FeatureCollection a owl:Class ;
+    rdfs:subClassOf geo:SpatialObjectCollection .
+
 <http://w3id.org/geo-lod/CIArchaeologicalSite> a owl:Class .
 
 <http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit> a owl:Class .
-
-geo:FeatureCollection a owl:Class ;
-    rdfs:subClassOf geo:SpatialObjectCollection .
 
 skos:Collection a owl:Class .
 

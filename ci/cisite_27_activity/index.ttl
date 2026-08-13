@@ -13,6 +13,5 @@
     void:inDataset ns2:geo-lod ;
     ns2:hasCertaintyLevel ns1:medium ;
     ns2:hasLiteratureReference "Civetta et al., 1997" ;
-    prov:used <http://w3id.org/geo-lod/ci/cisite_27> ;
     prov:wasAssociatedWith <http://orcid.org/0000-0002-3246-3531> .
 

@@ -13,6 +13,5 @@
     void:inDataset ns2:geo-lod ;
     ns2:hasCertaintyLevel ns1:dubious ;
     ns2:hasLiteratureReference "Pötter et al., 2021" ;
-    prov:used <http://w3id.org/geo-lod/ci/cisite_56> ;
     prov:wasAssociatedWith <http://orcid.org/0009-0008-2877-3204> .
 

@@ -14,6 +14,5 @@
     ns1:hasCertaintyLevel ns2:medium ;
     ns1:hasLiteratureReference "Civetta et al., 1997",
         "Scandone et al., 1991" ;
-    prov:used <http://w3id.org/geo-lod/ci/cisite_9> ;
     prov:wasAssociatedWith <http://orcid.org/0000-0002-3246-3531> .
 

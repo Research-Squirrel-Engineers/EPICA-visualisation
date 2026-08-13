@@ -31,6 +31,5 @@
     prov:wasAttributedTo <http://orcid.org/0009-0008-2877-3204>,
         <https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/py/CI.py> ;
     prov:wasDerivedFrom <https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo> ;
-    prov:wasGeneratedBy <http://w3id.org/geo-lod/ci/cisite_202_activity>,
-        <http://w3id.org/geo-lod/ci/cisite_202_pyscript> .
+    prov:wasGeneratedBy <http://w3id.org/geo-lod/ci/cisite_202_pyscript> .
 

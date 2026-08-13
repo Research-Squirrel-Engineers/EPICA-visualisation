@@ -1,5 +1,6 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix ns1: <http://w3id.org/geo-lod/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 
 <http://w3id.org/geo-lod/ci/cisite_22_geom> a <http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place>,
@@ -9,5 +10,6 @@
     void:inDataset ns1:geo-lod ;
     ns1:hasCertaintyDescription "findspot mentioned in a scientific paper"@en ;
     ns1:hasCertaintyLevel <http://fuzzy-sl.squirrel.link/ontology/medium> ;
-    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1402 40.8275)"^^geo:wktLiteral .
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1402 40.8275)"^^geo:wktLiteral ;
+    prov:wasGeneratedBy <http://w3id.org/geo-lod/ci/cisite_22_activity> .
 

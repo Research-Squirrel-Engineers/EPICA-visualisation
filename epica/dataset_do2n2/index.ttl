@@ -843,7 +843,7 @@
         <http://w3id.org/geo-lod/epica/obs_do2n2_0820>,
         <http://w3id.org/geo-lod/epica/obs_do2n2_0821>,
         <http://w3id.org/geo-lod/epica/obs_do2n2_0822> ;
-    owl:versionInfo "sha256:03ac49839997" ;
+    owl:versionInfo "sha256:e3def00599d1" ;
     dcat:record <http://w3id.org/geo-lod/epica/obs_do2n2_0001>,
         <http://w3id.org/geo-lod/epica/obs_do2n2_0002>,
         <http://w3id.org/geo-lod/epica/obs_do2n2_0003>,

@@ -13,6 +13,5 @@
     void:inDataset ns2:geo-lod ;
     ns2:hasCertaintyLevel ns1:high ;
     ns2:hasLiteratureReference "Lowe et al., 2012" ;
-    prov:used <http://w3id.org/geo-lod/ci/cisite_42> ;
     prov:wasAssociatedWith <http://orcid.org/0009-0008-2877-3204> .
 

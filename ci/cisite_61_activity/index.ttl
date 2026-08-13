@@ -13,6 +13,5 @@
     void:inDataset ns2:geo-lod ;
     ns2:hasCertaintyLevel ns1:medium ;
     ns2:hasLiteratureReference "Baykal et al., 2018" ;
-    prov:used <http://w3id.org/geo-lod/ci/cisite_61> ;
     prov:wasAssociatedWith <http://orcid.org/0009-0008-2877-3204> .
 
