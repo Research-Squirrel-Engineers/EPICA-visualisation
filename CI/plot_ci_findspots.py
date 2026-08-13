@@ -9,18 +9,30 @@ Split from ci_pipeline.py the way EPICA and SISAL are split: the triples are
 written first, the figures afterwards, so that an error in the data shows up
 at the RDF step rather than after the drawing.
 
-No basemap, and that is a decision, not an omission
----------------------------------------------------
-There is no cartopy and no geopandas in this repository, and adding a geo
-stack for two figures would be a dependency decision of its own. What a
-Campanian Ignimbrite map has to show is not a coastline but a distance: how
-far the ash travelled from the Phlegraean Fields. So the background is a
-graticule with rings at 500 km intervals around the source, and the reader can
-measure off the figure what a coastline would only suggest.
+    CI/plots/ci_findspots_campania       the cluster around the source
 
-The positions are drawn on a plain equirectangular grid with the aspect ratio
-corrected at the mean latitude of the data, which for a 6-45 degree longitude
-window is close enough that no point moves visibly.
+Three maps, because the record has two scales. Two thirds of the findspots
+sit within 500 km of the Phlegraean Fields, and on a map that reaches Kostenki
+they are a blob. The third figure is that blob at its own scale.
+
+Background
+----------
+Land polygons from ``geo_lod_basemap`` - Natural Earth, clipped to the window
+and thinned to the size the figure is drawn at. No country borders: the
+eruption is 39 ka old and a modern boundary drawn across it states something
+that was not there.
+
+Over the land go rings of constant great-circle distance from the source, at
+500 km intervals, as many as the furthest findspot needs. What a Campanian
+Ignimbrite map has to show is a distance, and a coastline alone would only
+suggest it.
+
+One thing the background cannot say, and the caption therefore does: the
+coastline is the modern one. At the time of the eruption sea level stood some
+80 m lower, and the northern Adriatic in particular was dry land.
+
+The positions are drawn on an equirectangular grid with the aspect corrected
+at the mean latitude of the window.
 """
 
 from __future__ import annotations
@@ -45,6 +57,7 @@ OUTPUT_DIR = SCRIPT_DIR / "plots"
 REPORT_PATH = SCRIPT_DIR / "report" / "figures_report.txt"
 
 sys.path.insert(0, str(ROOT / "ontology"))
+import geo_lod_basemap as gb  # noqa: E402
 import geo_lod_figures as gf  # noqa: E402
 from geo_lod_captions import CaptionFile  # noqa: E402
 
@@ -86,8 +99,20 @@ CERTAINTY_LABEL = {
 
 CAPTION_LICENSE = "CC BY 4.0, Florian Thiery"
 CAPTION_SOURCES = [
-    "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo"
+    "https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo",
+    gb.LAND_SOURCE,
 ]
+
+#: The window of the close-up, as a margin in degrees around the source. Two
+#: thirds of the findspots fall inside it.
+CAMPANIA_MARGIN = 2.2
+
+#: What the caption has to say about a modern coastline under a 39 ka event.
+SEA_LEVEL_NOTE = (
+    "The coastline is the modern one; at the time of the eruption sea level "
+    "stood some 80 m lower and the shelf areas, the northern Adriatic above "
+    "all, were dry land."
+)
 
 CAPTIONS = CaptionFile(
     str(SCRIPT_DIR / "captions.yaml"),
@@ -228,14 +253,85 @@ def ring(lon0: float, lat0: float, radius_km: float,
 # Drawing
 # ---------------------------------------------------------------------------
 
-def draw_map(ax, sites: list[dict], source: dict, legend: bool = True) -> None:
+
+#: Label placement. Four offsets are tried per point, in this order; a label
+#: that collides with one already placed is dropped rather than moved further,
+#: because a label three centimetres from its point is worse than no label.
+LABEL_OFFSETS = ((7, 4), (7, -10), (-7, 4), (-7, -10))
+LABEL_FONTSIZE = 7
+#: Rough width of a character at LABEL_FONTSIZE, in points. Matplotlib can
+#: measure the real thing, but only after a draw, and the estimate is close
+#: enough for a collision test.
+LABEL_CHAR_WIDTH = 0.52
+
+
+def place_labels(ax, sites: list[dict], bbox) -> int:
+    """Label as many findspots as fit without overlapping. Returns the count.
+
+    Twenty-five of the findspots lie within half a degree of Naples, and no
+    scale makes twenty-five labels fit there. Rather than drawing them on top
+    of each other, or leaving all of them off, the greedy pass keeps whatever
+    it can place - archaeological sites first, because those are the ones a
+    reader looks for by name.
+    """
+    lon_lo, lat_lo, lon_hi, lat_hi = bbox
+    width_points = ax.get_window_extent().width * 72.0 / ax.figure.dpi or 700.0
+    height_points = ax.get_window_extent().height * 72.0 / ax.figure.dpi or 700.0
+    per_x = (lon_hi - lon_lo) / width_points
+    per_y = (lat_hi - lat_lo) / height_points
+
+    placed: list[tuple[float, float, float, float]] = []
+    count = 0
+    # Archaeological first, then west to east: a stable order, so the same
+    # labels survive from one run to the next.
+    order = sorted(sites, key=lambda s: (not s["is_arch"], s["lon"], s["id"]))
+    for site in order:
+        text_width = len(site["label"]) * LABEL_FONTSIZE * LABEL_CHAR_WIDTH
+        for dx, dy in LABEL_OFFSETS:
+            x0 = site["lon"] + dx * per_x
+            if dx < 0:
+                x0 -= text_width * per_x
+            y0 = site["lat"] + dy * per_y
+            pad_x, pad_y = 2.5 * per_x, 2.0 * per_y
+            box = (x0 - pad_x, y0 - pad_y,
+                   x0 + text_width * per_x + pad_x,
+                   y0 + LABEL_FONTSIZE * 1.25 * per_y + pad_y)
+            if any(not (box[2] < other[0] or box[0] > other[2]
+                        or box[3] < other[1] or box[1] > other[3])
+                   for other in placed):
+                continue
+            ax.annotate(site["label"], (site["lon"], site["lat"]),
+                        textcoords="offset points", xytext=(dx, dy),
+                        fontsize=LABEL_FONTSIZE, color="#3a3833", zorder=6,
+                        ha="right" if dx < 0 else "left")
+            placed.append(box)
+            count += 1
+            break
+    return count
+
+
+def draw_map(ax, sites: list[dict], source: dict, legend: bool = True,
+             bbox: tuple[float, float, float, float] | None = None,
+             ring_labels: bool = True, label_sites: bool = False) -> None:
+    """The findspot map. *bbox* overrides the window derived from the data."""
     lons = [s["lon"] for s in sites]
     lats = [s["lat"] for s in sites]
-    lon_lo, lon_hi = min(lons) - 2.5, max(lons) + 2.5
-    lat_lo, lat_hi = min(lats) - 2.0, max(lats) + 2.0
+    if bbox is None:
+        lon_lo, lon_hi = min(lons) - 2.5, max(lons) + 2.5
+        lat_lo, lat_hi = min(lats) - 2.0, max(lats) + 2.0
+    else:
+        lon_lo, lat_lo, lon_hi, lat_hi = bbox
+
+    # Limits before the land: the simplification tolerance follows the drawn
+    # width of the axes, and that is only known once they are sized.
+    ax.set_xlim(lon_lo, lon_hi)
+    ax.set_ylim(lat_lo, lat_hi)
+    ax.set_aspect(gb.aspect_for(lat_lo, lat_hi))
+    gb.draw_land(ax, (lon_lo, lat_lo, lon_hi, lat_hi), str(ROOT), zorder=0)
 
     furthest = max(haversine_km(source["lon"], source["lat"], s["lon"], s["lat"])
-                   for s in sites)
+                   for s in sites
+                   if lon_lo <= s["lon"] <= lon_hi and lat_lo <= s["lat"] <= lat_hi)
     for step in range(1, math.ceil(furthest / RING_STEP_KM) + 1):
         radius = step * RING_STEP_KM
         rx, ry = ring(source["lon"], source["lat"], radius)
@@ -245,6 +341,8 @@ def draw_map(ax, sites: list[dict], source: dict, legend: bool = True) -> None:
         # A ring whose northern arc is off the window is labelled where it
         # crosses the top edge instead - otherwise the outer rings, which are
         # the ones a reader actually needs, would be the unlabelled ones.
+        if not ring_labels:
+            continue
         north_lat = source["lat"] + radius / 111.32
         if north_lat < lat_hi - 0.5:
             ax.text(source["lon"], north_lat - 0.35, f"{radius} km",
@@ -257,7 +355,7 @@ def draw_map(ax, sites: list[dict], source: dict, legend: bool = True) -> None:
                         color="#8a857c", ha="center", va="top", zorder=1)
                 break
 
-    ax.grid(True, color="#e5e1d8", linewidth=0.6, zorder=0)
+    gb.draw_graticule(ax, step=gf.nice_step(lon_hi - lon_lo, 6), zorder=1)
 
     for level in CERTAINTY_ORDER:
         group = [s for s in sites if s["certainty"] == level and not s["is_arch"]]
@@ -279,13 +377,14 @@ def draw_map(ax, sites: list[dict], source: dict, legend: bool = True) -> None:
                facecolor="#a02c2c", edgecolor="#1a1a18", linewidth=0.8,
                zorder=5, label="Phlegraean Fields" if legend else None)
 
-    ax.set_xlim(lon_lo, lon_hi)
-    ax.set_ylim(lat_lo, lat_hi)
+    if label_sites:
+        inside = [s for s in sites
+                  if lon_lo <= s["lon"] <= lon_hi
+                  and lat_lo <= s["lat"] <= lat_hi]
+        place_labels(ax, inside, (lon_lo, lat_lo, lon_hi, lat_hi))
+
     ax.set_xlabel("Longitude [°E]")
     ax.set_ylabel("Latitude [°N]")
-    # Equirectangular: one degree of longitude is shorter than one of latitude
-    # by the cosine of the latitude. Without this the map is stretched east.
-    ax.set_aspect(1.0 / math.cos(math.radians(sum(lats) / len(lats))))
     if legend:
         ax.legend(loc="lower right", fontsize=9, framealpha=0.92)
 
@@ -360,7 +459,7 @@ def figure_map(sites: list[dict], source: dict) -> None:
                  "equirectangular grid without a basemap; the dashed rings "
                  f"mark great-circle distances at {RING_STEP_KM} km intervals "
                  "around the source. Colour is the certainty of the findspot, "
-                 "triangles are archaeological sites."),
+                 "triangles are archaeological sites. " + SEA_LEVEL_NOTE),
         license=CAPTION_LICENSE,
         sources=CAPTION_SOURCES,
     )
@@ -394,6 +493,39 @@ def figure_certainty(sites: list[dict], source: dict) -> None:
     )
 
 
+def figure_campania(sites: list[dict], source: dict) -> None:
+    """The close-up: the cluster the wide map cannot resolve.
+
+    The window follows the source rather than the data - a close-up whose
+    extent moved with every findspot added would not be comparable between
+    two releases of the table.
+    """
+    bbox = (source["lon"] - CAMPANIA_MARGIN, source["lat"] - CAMPANIA_MARGIN,
+            source["lon"] + CAMPANIA_MARGIN, source["lat"] + CAMPANIA_MARGIN)
+    inside = [s for s in sites
+              if bbox[0] <= s["lon"] <= bbox[2] and bbox[1] <= s["lat"] <= bbox[3]]
+
+    fig, ax = plt.subplots(figsize=(10, 9), dpi=DPI)
+    draw_map(ax, sites, source, bbox=bbox, ring_labels=False, label_sites=True)
+    fig.tight_layout()
+    gf.save_figure(fig, str(OUTPUT_DIR / "ci_findspots_campania"), dpi=DPI)
+    plt.close(fig)
+
+    arch = sum(1 for s in inside if s["is_arch"])
+    CAPTIONS.add(
+        "ci_findspots_campania",
+        caption=(f"The {len(inside)} findspots within {CAMPANIA_MARGIN:.0f} "
+                 f"degrees of the Phlegraean Fields, {arch} of them "
+                 f"archaeological sites, at a scale the overview map cannot "
+                 f"resolve. Colour is the certainty of the findspot, the star "
+                 f"is the source of the eruption, the dashed rings are the "
+                 f"same {RING_STEP_KM} km great-circle intervals. "
+                 + SEA_LEVEL_NOTE),
+        license=CAPTION_LICENSE,
+        sources=CAPTION_SOURCES,
+    )
+
+
 def build() -> bool:
     print("\n" + "=" * 72)
     print("  Campanian Ignimbrite findspots - figures")
@@ -414,6 +546,7 @@ def build() -> bool:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     print()
     figure_map(sites, source)
+    figure_campania(sites, source)
     figure_certainty(sites, source)
 
     print()

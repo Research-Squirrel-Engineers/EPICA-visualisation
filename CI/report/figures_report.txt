@@ -7,6 +7,7 @@
   source: Phlegraean Fields (14.1402, 40.8275)
 
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_map.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_campania.svg / .jpg
   ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_certainty.svg / .jpg
 
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\CI\captions.yaml (2 entries)
+  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\CI\captions.yaml (3 entries)

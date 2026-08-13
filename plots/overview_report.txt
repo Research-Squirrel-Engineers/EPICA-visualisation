@@ -1,0 +1,13 @@
+
+========================================================================
+  All palaeoclimate sites - overview map from the graph
+========================================================================
+  EPICA     3 sites  (EPICA/rdf/epica_dome_c.ttl)
+  SISAL   365 sites  (SISAL/rdf/sisal_sites.ttl)
+  CI       74 sites  (CI/rdf/ci_findspots.ttl)
+  ·  ELSA: planned, no graph yet
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\plots\geo_lod_sites_map.svg / .jpg
+
+  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\captions.yaml (1 entries)
+
+  Duration: 14.8s

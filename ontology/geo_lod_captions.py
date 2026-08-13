@@ -30,6 +30,20 @@ shows what the machine would say now. Editing a caption therefore means
 editing ``caption`` and nothing else, and the file still tells you where prose
 and data have drifted apart.
 
+Two scripts, one file
+---------------------
+A strand can be drawn by more than one script - SISAL has its profiles and its
+maps - and both write into the same ``captions.yaml``. An entry that this run
+did not produce is therefore carried over rather than dropped: the second
+script would otherwise delete the first script's 35 entries and leave a file
+that describes four figures out of 39.
+
+That leaves one way for a stale entry to survive: a figure that is no longer
+drawn keeps its caption. ``clean.py`` closes it by removing the caption file
+before a run, so a full run rebuilds the file from nothing and only ``--no-clean``
+can carry an orphan - which the write step reports by counting what it took
+over.
+
 The file is written in a fixed key order with sorted entries, so two runs on
 unchanged inputs produce identical bytes like everything else here.
 """
@@ -97,6 +111,11 @@ class CaptionFile:
         existing = self._load_existing()
         kept = 0
 
+        # Entries from an earlier script of the same strand. Written back
+        # unchanged; this run knows nothing about the figures they describe.
+        carried = {key: value for key, value in existing.items()
+                   if key not in self.entries and isinstance(value, dict)}
+
         for key, entry in self.entries.items():
             old = existing.get(key)
             if not isinstance(old, dict):
@@ -112,13 +131,16 @@ class CaptionFile:
                 if field in old and field not in entry:
                     entry[field] = old[field]
 
+        out = dict(carried)
+        out.update(self.entries)
+
         lines = []
         if self.header:
             lines.extend(f"# {line}".rstrip() for line in self.header.split("\n"))
             lines.append("")
 
-        for key in sorted(self.entries):
-            entry = self.entries[key]
+        for key in sorted(out):
+            entry = out[key]
             lines.append(f"{key}:")
             for field in FIELD_ORDER:
                 if field not in entry:
@@ -135,8 +157,13 @@ class CaptionFile:
             fh.write("\n".join(lines).rstrip("\n") + "\n")
 
         if verbose:
-            note = f", {kept} hand-written kept" if kept else ""
-            print(f"  ✓ Captions: {self.path} ({len(self.entries)} entries{note})")
+            notes = []
+            if kept:
+                notes.append(f"{kept} hand-written kept")
+            if carried:
+                notes.append(f"{len(carried)} from an earlier step")
+            note = ", " + ", ".join(notes) if notes else ""
+            print(f"  ✓ Captions: {self.path} ({len(out)} entries{note})")
         return kept
 
 

@@ -1,0 +1,13 @@
+
+========================================================================
+  SISAL cave sites - maps
+========================================================================
+  365 catalogue sites, 37 with an archaeological record
+  12 sites of the cut, in 3 climate systems
+
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_europe.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_east_asian_monsoon.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_south_american_monsoon.svg / .jpg
+
+  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\SISAL\captions.yaml (73 entries, 69 from an earlier step)

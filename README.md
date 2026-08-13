@@ -37,13 +37,13 @@ project/
 │   ├── plots/                    ← 24 plots × 2 formats
 │   ├── rdf/
 │   │   ├── sisal_ontology.ttl
-│   │   ├── sisal_sites.ttl       ← all 305 caves
+│   │   ├── sisal_sites.ttl       ← all 365 caves, positions only
 │   │   └── sisal_<id>_<cave>_data.ttl
 │   └── report/
 │
 ├── CI/                           ← Campanian Ignimbrite findspots
 │   ├── ci_pipeline.py            ← findspots to RDF
-│   ├── plot_ci_findspots.py      ← map and certainty plate
+│   ├── plot_ci_findspots.py      ← maps and certainty plate
 │   ├── captions.yaml
 │   ├── rdf/                      ← ci_findspots.ttl, ci_site_annotations.ttl
 │   ├── plots/
@@ -52,6 +52,7 @@ project/
 ├── ontology/                     ← shared, on every sub-script's PYTHONPATH
 │   ├── geo_lod_utils.py          ← core ontology, provenance, Mermaid
 │   ├── geo_lod_figures.py        ← saving, axes, the data-gap convention
+│   ├── geo_lod_basemap.py        ← coastlines, clipping, polar projection
 │   ├── geo_lod_captions.py       ← caption files
 │   ├── build_mis_vocab.py        ← MIS vocabulary and TRS generator
 │   ├── geo_lod_core.ttl          ← base ontology (generated)
@@ -206,13 +207,16 @@ where prose and data have drifted apart.
 
 **SISAL:**
 - `SISAL/rdf/sisal_ontology.ttl` — SISAL-specific classes (SpeleothemObservation, Cave, etc.)
-- `SISAL/rdf/sisal_sites.ttl` — All 305 SISAL caves with WGS84 geometries and archaeological enrichment (3,663 triples)
+- `SISAL/rdf/sisal_sites.ttl` — All 365 SISAL v3 caves with WGS84 geometries and measurement counts (4,765 triples). Separate from the core graph so that a consumer after positions does not have to parse the measurements
+- `SISAL/rdf/sisal_site_annotations.ttl` — geo-lod's archaeological, Wikidata and UNESCO reading of those caves, with its own source node
 - `SISAL/rdf/sisal_144_botuvera_data.ttl` — 907 δ¹⁸O + 907 δ¹³C observations (21,795 triples)
 - `SISAL/rdf/sisal_145_corchia_data.ttl` — 1,234 δ¹⁸O + 1,234 δ¹³C observations (29,651 triples)
 - `SISAL/rdf/sisal_140_sanbao_data.ttl` — 5,832 δ¹⁸O observations (70,075 triples)
 - `SISAL/rdf/sisal_275_buracagloriosa_data.ttl` — 1,137 δ¹⁸O + 1,137 δ¹³C observations (27,327 triples)
 - `SISAL/rdf/sisal_all_data.ttl` — Combined file (**152,169 triples total**)
 
+
+**Maps:** every strand carries one. `EPICA/plots/epica_dome_c_map` (Antarctica, polar stereographic), `SISAL/plots/sisal_sites_map*` (world and one per climate system), `CI/plots/ci_findspots_map` and `ci_findspots_campania`, and `plots/geo_lod_sites_map`, which is read from the RDF rather than from the input tables. Land polygons: Natural Earth 1:50m, public domain, in `data/raw/basemap/`.
 
 **CI (Campanian Ignimbrite):**
 - `CI/rdf/ci_findspots.ttl` — Findspot data with GeoSPARQL geometries and PROV-O provenance

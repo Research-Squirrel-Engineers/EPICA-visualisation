@@ -88,11 +88,11 @@ class Entry:
 GENERATED: dict[str, list[Entry]] = {
     "vocab": [
         Entry("ontology/geo_lod_core.ttl",
-              "step 2, from geo_lod_utils.GEO_LOD_CORE_TTL"),
-        Entry("ontology/vocab/mis.ttl", "step 3, build_mis_vocab"),
-        Entry("ontology/trs.ttl", "step 3, build_mis_vocab"),
-        Entry("dist/mis_stages.csv", "step 3, build_mis_vocab"),
-        Entry("dist/mis_assignments.csv", "step 3, build_mis_vocab"),
+              "ontology step, from geo_lod_utils.GEO_LOD_CORE_TTL"),
+        Entry("ontology/vocab/mis.ttl", "vocabulary step, build_mis_vocab"),
+        Entry("ontology/trs.ttl", "vocabulary step, build_mis_vocab"),
+        Entry("dist/mis_stages.csv", "vocabulary step, build_mis_vocab"),
+        Entry("dist/mis_assignments.csv", "vocabulary step, build_mis_vocab"),
     ],
     "diagrams": [
         # write_mermaid writes all four in one call, and since S3c.2 only the
@@ -102,9 +102,11 @@ GENERATED: dict[str, list[Entry]] = {
     ],
     "epica": [
         Entry("EPICA/rdf", "EPICA/epica_rdf.py", contents=True),
-        Entry("EPICA/report", "EPICA/epica_rdf.py, plot_epica_from_tab.py", contents=True),
+        Entry("EPICA/report",
+              "EPICA/epica_rdf.py, plot_epica_from_tab.py, plot_epica_map.py", contents=True),
         Entry("EPICA/plots", "EPICA/plot_epica_from_tab.py", contents=True),
-        Entry("EPICA/captions.yaml", "EPICA/epica_plates.py, one entry per figure"),
+        Entry("EPICA/captions.yaml",
+              "EPICA/epica_plates.py, plot_epica_map.py; one entry per figure"),
     ],
     "sisal": [
         # Both .ttl and .nt: the directory is swept whole, so a release run's
@@ -112,10 +114,16 @@ GENERATED: dict[str, list[Entry]] = {
         # and be picked up as if it were current.
         Entry("SISAL/rdf", "SISAL/sisal_rdf.py", contents=True),
         # data/curated/ is NOT here: it is hand-maintained input, not output.
-        Entry("SISAL/report", "SISAL/plot_sisal_from_csv.py", contents=True),
+        Entry("SISAL/report",
+              "SISAL/plot_sisal_from_csv.py, plot_sisal_maps.py",
+              contents=True),
         Entry("SISAL/plots", "SISAL/plot_sisal_from_csv.py", contents=True),
         Entry("SISAL/captions.yaml",
               "SISAL/plot_sisal_from_csv.py, one entry per figure"),
+    ],
+    "overview": [
+        Entry("plots", "plot_overview_map.py", contents=True),
+        Entry("captions.yaml", "plot_overview_map.py, the cross-strand figure"),
     ],
     "ci": [
         Entry("CI/rdf", "CI/ci_pipeline.py", contents=True),
@@ -135,7 +143,7 @@ GENERATED: dict[str, list[Entry]] = {
     "bundle": [
         # Only the bundle itself. dist/ also holds the MIS tables, and those
         # belong to the vocab step: a --no-bundle run must not lose them.
-        Entry("dist/geo-lod-bundle.*", "bundle_rdf.py, step 8"),
+        Entry("dist/geo-lod-bundle.*", "bundle_rdf.py, bundle step"),
     ],
     "log": [
         Entry("pipeline_report.txt", "main.py, TeeOutput"),
@@ -149,7 +157,8 @@ GENERATED: dict[str, list[Entry]] = {
 # is the record of the run that is writing it, and removing it from a
 # standalone call would only puzzle whoever reads the directory next.
 DEFAULT_GROUPS: tuple[str, ...] = (
-    "vocab", "diagrams", "epica", "sisal", "ci", "archaeo", "bundle", "cache",
+    "vocab", "diagrams", "epica", "sisal", "ci", "archaeo", "overview",
+    "bundle", "cache",
 )
 
 

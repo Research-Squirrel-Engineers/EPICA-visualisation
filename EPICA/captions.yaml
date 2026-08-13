@@ -1,6 +1,6 @@
 # captions.yaml - one entry per generated figure of the EPICA strand.
 #
-# Written by EPICA/epica_plates.py and EPICA/plot_epica_from_tab.py.
+# Written by EPICA/epica_plates.py and EPICA/plot_epica_map.py.
 # Edit 'caption' freely: an entry whose caption differs from 'generated'
 # is treated as hand-written and kept on the next run, while 'generated'
 # is refreshed so the diff shows what the code would say now.
@@ -214,6 +214,14 @@ dust_vs_depth_full_smooth11:
   license: "CC BY 4.0, Florian Thiery"
   sources:
     - https://doi.org/10.1594/PANGAEA.695984
+
+epica_dome_c_map:
+  caption: "EPICA Dome C on the Antarctic ice sheet, 75.10°S 123.35°E at 3233 m, in south polar stereographic projection; parallels at 60, 70 and 80°S. The inset shows the two PANGAEA events of this core at their own scale: EDC99, which carries the methane, deuterium and dust records, and DomeC, which carries the two 2023 gas datasets. Their headers place them 1.3 km apart although the material is from the same core - a difference between metadata records, not a second borehole."
+  generated: "EPICA Dome C on the Antarctic ice sheet, 75.10°S 123.35°E at 3233 m, in south polar stereographic projection; parallels at 60, 70 and 80°S. The inset shows the two PANGAEA events of this core at their own scale: EDC99, which carries the methane, deuterium and dust records, and DomeC, which carries the two 2023 gas datasets. Their headers place them 1.3 km apart although the material is from the same core - a difference between metadata records, not a second borehole."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://www.pangaea.de/
+    - https://www.naturalearthdata.com/
 
 plate_boundary_depths:
   caption: "Marine Isotope Stage boundaries of Railsback et al. (2015) carried into the depth axis of each of the five EPICA Dome C records by linear interpolation in that record's own chronology. Left: the depth of every boundary. Right: the departure of each record from the mean depth of the same boundary, across the records that cover it. Boundaries falling inside a data gap are omitted rather than interpolated across it."

@@ -1,0 +1,14 @@
+# captions.yaml - the figures that do not belong to a single strand.
+#
+# Written by plot_overview_map.py.
+# Edit 'caption' freely: an entry whose caption differs from 'generated'
+# is treated as hand-written and kept on the next run, while 'generated'
+# is refreshed so the diff shows what the code would say now.
+
+geo_lod_sites_map:
+  caption: "All 442 sites geo-lod publishes with a position (EPICA 3, SISAL 365, CI 74), drawn from the RDF rather than from the input tables: every point on this map is a subject in the published graph carrying a geo:hasGeometry with a point geometry. Aspect is plate carrée at the equator, which exaggerates the high latitudes; the Antarctic site is drawn in its own projection in the EPICA map."
+  generated: "All 442 sites geo-lod publishes with a position (EPICA 3, SISAL 365, CI 74), drawn from the RDF rather than from the input tables: every point on this map is a subject in the published graph carrying a geo:hasGeometry with a point geometry. Aspect is plate carrée at the equator, which exaggerates the high latitudes; the Antarctic site is drawn in its own projection in the EPICA map."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - http://w3id.org/geo-lod/
+    - https://www.naturalearthdata.com/

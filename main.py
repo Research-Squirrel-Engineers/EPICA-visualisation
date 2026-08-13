@@ -23,6 +23,9 @@ SISAL_SCRIPT = SCRIPT_DIR / "SISAL" / "plot_sisal_from_csv.py"
 CI_RDF_SCRIPT  = SCRIPT_DIR / "CI" / "ci_pipeline.py"
 CI_PLOT_SCRIPT = SCRIPT_DIR / "CI" / "plot_ci_findspots.py"
 ARCHAEO_SCRIPTS = [SCRIPT_DIR / "archaeo-connect" / "ci_findspots_html.py"]
+EPICA_MAP_SCRIPT = SCRIPT_DIR / "EPICA" / "plot_epica_map.py"
+SISAL_MAP_SCRIPT = SCRIPT_DIR / "SISAL" / "plot_sisal_maps.py"
+OVERVIEW_SCRIPT = SCRIPT_DIR / "plot_overview_map.py"
 ONTOLOGY_DIR = SCRIPT_DIR / "ontology"
 DIST_DIR     = SCRIPT_DIR / "dist"
 
@@ -114,6 +117,26 @@ def check_directory_exists(dirpath: Path, description: str) -> bool:
 STRANDS = ("epica", "sisal", "ci", "archaeo")
 
 
+class StepNumber:
+    """Hands out the next section number.
+
+    The numbers used to be written into the section titles by hand, and every
+    step inserted in the middle meant renumbering the ones after it - which
+    was done wrongly at least once. A counter cannot drift from the order the
+    steps actually run in.
+    """
+
+    def __init__(self):
+        self.value = -1
+
+    def __call__(self, title: str) -> str:
+        self.value += 1
+        return f"{self.value}. {title}"
+
+
+step = StepNumber()
+
+
 def strand_requested(args, strand: str) -> bool:
     """True unless another strand's --only switch excludes this one."""
     only = [name for name in STRANDS
@@ -144,6 +167,8 @@ def clean_groups_for(args) -> list[str]:
         groups.append("ci")
     if strand_requested(args, "archaeo"):
         groups.append("archaeo")
+    if not args.no_overview:
+        groups.append("overview")
     if not args.no_bundle:
         groups.append("bundle")
     return groups
@@ -158,7 +183,7 @@ def clean_before_run(args) -> None:
     plots/ indistinguishable from a current one. The inventory itself lives
     in clean.py, together with the two registers this step does not touch.
     """
-    print_section("0. Clean generated outputs")
+    print_section(step("Clean generated outputs"))
     groups = clean_groups_for(args)
     print(f"  Groups: {', '.join(groups)}")
     result = clean.sweep(groups, delete=True, verbose=True)
@@ -437,6 +462,10 @@ def main():
         ),
     )
     parser.add_argument(
+        "--no-overview", action="store_true",
+        help="die Übersichtskarte überspringen. Sie liest die frisch "
+             "geschriebenen TTL und braucht dafür ein paar Sekunden mehr.")
+    parser.add_argument(
         "--no-bundle",
         action="store_true",
         help="den Bundle-Schritt (RDF-Bundle + Validierung) überspringen",
@@ -498,7 +527,7 @@ def main():
     if not args.no_clean:
         clean_before_run(args)
 
-    print_section("1. Preparation")
+    print_section(step("Preparation"))
     print("\n  Directory structure:")
     check_directory_exists(SCRIPT_DIR / "EPICA", "EPICA directory")
     check_directory_exists(SCRIPT_DIR / "SISAL", "SISAL directory")
@@ -514,6 +543,9 @@ def main():
     sisal_exists = sisal_rdf_exists and sisal_plot_exists
     ci_rdf_exists = check_file_exists(CI_RDF_SCRIPT, "CI RDF script")
     ci_plot_exists = check_file_exists(CI_PLOT_SCRIPT, "CI plot script")
+    epica_map_exists = check_file_exists(EPICA_MAP_SCRIPT, "EPICA map script")
+    sisal_map_exists = check_file_exists(SISAL_MAP_SCRIPT, "SISAL map script")
+    overview_exists = check_file_exists(OVERVIEW_SCRIPT, "overview map script")
     ci_exists = ci_rdf_exists and ci_plot_exists
     archaeo_exists = all(
         check_file_exists(script, f"archaeo-connect: {script.name}")
@@ -521,20 +553,21 @@ def main():
     )
     end_section()
 
+    overview_ok = True
     epica_ok   = False
     sisal_ok   = False
     ci_ok      = False
     archaeo_ok = False
     bundle_ok  = False
 
-    print_section("2. Regenerate canonical ontology")
+    print_section(step("Regenerate canonical ontology"))
     canonical_ok = regenerate_canonical_ontology()
     if not canonical_ok:
         print("\n  ⚠  Ontologie konnte nicht regeneriert werden - Bundle wird")
         print("     vermutlich mit veralteter ontology/geo_lod_core.ttl arbeiten.")
     end_section()
 
-    print_section("3. Regenerate controlled vocabularies")
+    print_section(step("Regenerate controlled vocabularies"))
     vocab_ok = regenerate_vocabularies()
     if not vocab_ok:
         print("\n  ⚠  Vokabulare konnten nicht regeneriert werden - das Bundle")
@@ -547,17 +580,23 @@ def main():
     # dass ein Fehler in den Daten am RDF-Schritt auffaellt, bevor eine halbe
     # Stunde Abbildungen entsteht.
     if not args.sisal_only and not args.ci_only and epica_exists:
-        print_section("4. EPICA Dome C (RDF)")
+        print_section(step("EPICA Dome C (RDF)"))
         epica_ok = run_script(EPICA_RDF_SCRIPT, "EPICA Dome C RDF generation")
         end_section()
 
-        print_section("5. EPICA Dome C (figures)")
+        print_section(step("EPICA Dome C (figures)"))
         epica_plots_ok = run_script(EPICA_PLOT_SCRIPT, "EPICA Dome C figures")
         end_section()
         epica_ok = epica_ok and epica_plots_ok
 
+        if epica_map_exists:
+            print_section(step("EPICA Dome C (map)"))
+            epica_ok = run_script(EPICA_MAP_SCRIPT,
+                                  "EPICA Dome C locator map") and epica_ok
+            end_section()
+
     if not args.epica_only and not args.ci_only and sisal_exists:
-        print_section("6. SISAL (RDF)")
+        print_section(step("SISAL (RDF)"))
         # The two large SISAL graphs are written as N-Triples in a development
         # run: four times faster to write and to parse, at three times the
         # size, and .gitignore keeps them out. A release run asks for Turtle,
@@ -570,19 +609,27 @@ def main():
                               sisal_format + ["--sites", sisal_sites])
         end_section()
 
-        print_section("7. SISAL (figures)")
+        print_section(step("SISAL (figures)"))
         sisal_plots_ok = run_script(SISAL_SCRIPT, "SISAL figures")
         end_section()
         sisal_ok = sisal_ok and sisal_plots_ok
 
+        # After the profiles, not before: both write into SISAL/captions.yaml,
+        # and the maps carry over what the profiles put there.
+        if sisal_map_exists:
+            print_section(step("SISAL (maps)"))
+            sisal_ok = run_script(SISAL_MAP_SCRIPT,
+                                  "SISAL cave site maps") and sisal_ok
+            end_section()
+
     # CI is split the way EPICA and SISAL are: triples first, figures after,
     # so that a fault in the findspot table shows up before anything is drawn.
     if strand_requested(args, "ci") and ci_exists:
-        print_section("8. Campanian Ignimbrite (RDF)")
+        print_section(step("Campanian Ignimbrite (RDF)"))
         ci_ok = run_script(CI_RDF_SCRIPT, "CI findspot RDF generation")
         end_section()
 
-        print_section("9. Campanian Ignimbrite (figures)")
+        print_section(step("Campanian Ignimbrite (figures)"))
         ci_plots_ok = run_script(CI_PLOT_SCRIPT, "CI findspot figures")
         end_section()
         ci_ok = ci_ok and ci_plots_ok
@@ -591,15 +638,24 @@ def main():
     # built from, so they run after it: a page that disagrees with the graph
     # it illustrates is worse than no page.
     if strand_requested(args, "archaeo") and archaeo_exists:
-        print_section("10. Archaeological connection (HTML)")
+        print_section(step("Archaeological connection (HTML)"))
         archaeo_ok = all(
             run_script(script, f"archaeo-connect: {script.stem}")
             for script in ARCHAEO_SCRIPTS
         )
         end_section()
 
+    # Last of the figures, because it reads the RDF the strands have just
+    # written rather than their input tables. A strand that did not run is
+    # reported as absent instead of silently dropped.
+    if overview_exists and not args.no_overview:
+        print_section(step("Overview map (from the graph)"))
+        overview_ok = run_script(OVERVIEW_SCRIPT,
+                                 "all sites, read from the RDF")
+        end_section()
+
     if not args.no_bundle:
-        print_section("11. RDF Bundle & Validation")
+        print_section(step("RDF Bundle & Validation"))
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok, bundle_formats)
         end_section()
 

@@ -210,6 +210,16 @@ lesen hier ab, statt neu zu diskutieren.
 | `archaeo-connect` im Pipelinelauf | eigener Schritt in `main.py`, nach dem CI-Strang. Dazu ein `--<strang>-only` je Strang, und die Schalter sind kombinierbar | 2026-08-13 |
 | S-Nummern in der Ausgabe | keine. Weder im Terminal noch in einem `rdfs:label` im Graphen. Kommentare im Code behalten sie, dort erklären sie etwas | 2026-08-13 |
 | `Partial graph`-Vermerk | in alle drei SISAL-Datengraphen, nicht nur in den Kerngraphen. Die Dateien reisen getrennt, und `sisal_v3_dating.ttl` ist versioniertes Turtle | 2026-08-13 |
+| Kartengrundlage | Natural Earth 1:50m Landflächen als GeoJSON in `data/raw/basemap/`, gezeichnet mit `json` und Matplotlib. Kein `cartopy`, kein `geopandas`, keine neue Zeile in `requirements.txt` | 2026-08-13 |
+| Eine Auflösung für alles | die 50-m-Datei, und die Vereinfachung folgt dem Zeichenmassstab (Douglas-Peucker, Toleranz aus Grad je Punkt). Gemessen: Weltkarte 60 669 Stützpunkte und 1,6 MB gegen 10 428 und 353 KB, im Bild ununterscheidbar. Regional fällt fast nichts weg | 2026-08-13 |
+| Keine Ländergrenzen | die Aufzeichnungen reichen bis 800 ka; eine moderne Staatsgrenze darüber behauptet etwas, das es nicht gab. Land, Küste, Gradnetz — sonst nichts | 2026-08-13 |
+| Küstenlinie und Meeresspiegel | gezeichnet wird die heutige. Wo es zählt — die CI-Karte, Meeresspiegel rund 80 m tiefer — steht es in der Bildunterschrift statt in einer stillschweigenden Näherung | 2026-08-13 |
+| Antarktis | südlich-polarstereographisch, zehn Zeilen in `geo_lod_basemap`. Plattkarte ist für einen Kontinent um den Pol die falsche Projektion | 2026-08-13 |
+| Zwei Skripte, eine `captions.yaml` | Einträge eines früheren Skripts desselben Strangs werden übernommen statt überschrieben. Vorher hätte `plot_sisal_maps.py` die 69 Einträge von `plot_sisal_from_csv.py` gelöscht | 2026-08-13 |
+| Schrittnummern in `main.py` | aus einem Zähler, nicht von Hand. Sie folgen damit dem Lauf: ein `--ci-only`-Lauf zählt 0 bis 8, ein voller bis 14 | 2026-08-13 |
+| Neue Stränge auf der Übersichtskarte | stehen als geplant in `SOURCES` von `plot_overview_map.py`, mit `expected=False`. Solange ihr Turtle fehlt, schweigt die Karte über sie; sobald es da ist, erscheint die Ebene von selbst. ELSA ist so schon eingetragen. Ein erwarteter Strang, dessen Datei fehlt, wird dagegen im Lauf gemeldet und in der Bildunterschrift genannt | 2026-08-13 |
+| Höhlenkatalog als eigene Datei | `SISAL/rdf/sisal_sites.ttl`, 4 765 Tripel Turtle, aus dem Kerngraphen herausgelöst. Die Vereinigung im Bundle ist unverändert; wer nur Standorte will, fasst nicht mehr 563 MB an | 2026-08-13 |
+| Übersichtskarte | liest die frisch geschriebenen TTL per SPARQL, nicht die Eingabetabellen. Damit zeigt sie den Graphen und nicht die Vorlage; ein Strang, dessen TTL fehlt, wird als fehlend gemeldet und in der Bildunterschrift genannt | 2026-08-13 |
 | `pipeline_report.txt` | wird weiter versioniert; er ändert sich als einzige Datei bei jedem Lauf, das ist der Preis für den Laufprotokoll-Charakter | 2026-08-08 |
 | Zeilenenden | `.gitattributes` mit `eol=lf`. Ohne sie schreibt Git auf Windows beim Checkout um, und die Byte-Gleichheit gilt nur lokal | 2026-08-08 |
 | Bundle-Format | Turtle als Voreinstellung, weil byte-stabil und versioniert; N-Triples spart gemessen nur 13 von 187 Sekunden und lohnt den möglichen Versatz zwischen `.ttl` und Code nicht. Über `--bundle-format` sind `nt`, `jsonld`, `xml` und `longturtle` erreichbar, `release` schreibt alle | 2026-08-08 |
@@ -396,6 +406,7 @@ noch nicht entschieden.
 | S3c.8 | Site-Bundle für ein Konsumenten-Repo | geo-lod | S3c.7 | erledigt 2026-08-12 |
 | S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | erledigt 2026-08-11 |
 | S3e | CI-Strang auf den Stand von EPICA und SISAL bringen | geo-lod | S3c.4 | erledigt 2026-08-13 |
+| S3g | Kartengrundlage für alle Stränge | geo-lod | S3e | erledigt 2026-08-13 |
 | S3f | Archäologie-Komponente durchsehen | geo-lod | S3e | offen |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c.3 | offen |
 | S5 | ELSA | geo-lod | S4 | offen |
@@ -1802,6 +1813,60 @@ Content-Negotiation (S4).
 
 ---
 
+## S3g — Kartengrundlage für alle Stränge
+
+**Ziel:** jede Karte des Repositoriums bekommt eine Küstenlinie, ohne dass eine
+Geo-Abhängigkeit dazukommt.
+
+**Uploads:** geo-lod-Bundle (A5). Achtung: die Kartendatei ist 1,6 MB gross und
+fällt durch den Grössenfilter — sie muss einzeln mitgeschickt werden, wenn an
+ihr etwas zu klären ist.
+
+**Stand:** erledigt 2026-08-13.
+
+**Wie es ohne cartopy geht.** `ontology/geo_lod_basemap.py` liest die
+Landflächen als GeoJSON, schneidet sie mit Sutherland-Hodgman auf das
+Kartenfenster zu und dünnt sie mit Douglas-Peucker auf den Massstab aus, in dem
+sie gezeichnet werden. Beides ist eine Frage der Dateigrösse, nicht des Bildes:
+ohne Zuschnitt trägt eine Mittelmeerkarte ganz Eurasien in ihren Bytes, ohne
+Ausdünnung wiegt eine Weltkarte 1,6 MB. Die Toleranz kommt aus der Achse — Grad
+je gezeichnetem Punkt —, nach demselben Prinzip wie die Achsenteilungen.
+
+**Neun Abbildungen.**
+
+- CI: die Fundstellenkarte und die Sicherheits-Tafel bekommen die Grundlage
+  darunter, dazu eine dritte Karte, der Ausschnitt um die Phlegräischen Felder.
+  Zwei Drittel der Fundstellen liegen innerhalb von 500 km, auf einer Karte bis
+  Kostenki sind sie ein Fleck. Die Beschriftung setzt so viele Namen, wie ohne
+  Überlappung Platz haben, archäologische Fundstellen zuerst.
+- SISAL: vier neue Karten — die Welt und je eine je Klimasystem. Drei Ebenen:
+  die 365 Katalog-Höhlen in Grau, die 37 archäologischen mit Ring, die zwölf
+  des Ausschnitts in den Farben ihrer Cluster-Tafel. Damit zeigt eine Abbildung
+  Auswahl und Grundgesamtheit zugleich.
+- EPICA: die Antarktis polarstereographisch mit Dome C, und als Einsatz die
+  beiden PANGAEA-Ereignisse EDC99 und DomeC im eigenen Massstab — 1,31 km
+  auseinander, ein Unterschied zwischen Metadatensätzen und kein zweites
+  Bohrloch.
+- `plot_overview_map.py`: alle Sites aller Stränge, per SPARQL aus den TTL.
+
+**Ein Fehler, den der Schritt aufgedeckt hat.** `CaptionFile.write()` schrieb
+nur die Einträge des laufenden Prozesses. Sobald ein zweites Skript desselben
+Strangs zeichnet, löschte es die Einträge des ersten — `plot_sisal_maps.py`
+hätte 69 Einträge auf vier reduziert. Fremde Einträge werden jetzt übernommen
+und beim Schreiben gezählt.
+
+**Nachtrag am selben Tag: der Höhlenkatalog zieht aus.** Im ersten Lauf fehlte
+SISAL auf der Übersichtskarte, weil die Höhlengeometrien im Kerngraphen neben
+einer Million Messtripel lagen und der im Alltagslauf N-Triples ist.
+`add_cave_catalogue` schreibt jetzt in einen eigenen Graphen, der als
+`SISAL/rdf/sisal_sites.ttl` herauskommt: 4 765 Tripel, 188 KB, Turtle in jedem
+Lauf. Der Kerngraph verliert sie, das Bundle vereinigt beides wie zuvor, und
+`README.md` versprach diese Datei ohnehin seit Langem. Der Katalog trägt keinen
+`Partial graph`-Vermerk — er ist das ganze SISAL v3, was auch immer `--sites`
+verlangt.
+
+---
+
 ## S3f — Archäologie-Komponente durchsehen
 
 **Ziel:** die archäologische Brücke einmal im Ganzen ansehen, statt sie in drei
@@ -2015,6 +2080,12 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
   Geo-Abhängigkeit ins Repo zu holen.
 - `archaeo-connect/v_sites_all.csv` liest seit dem Verlust des
   SISAL-Generators niemand mehr. Mit der Seite zusammen zu entscheiden (S3f).
+
+- ~~Die SISAL-Höhlen haben kein eigenes kleines Turtle.~~ Erledigt 2026-08-13
+  als Nachtrag zu S3g: `SISAL/rdf/sisal_sites.ttl`, 4 765 Tripel.
+- Die Kartendatei `data/raw/basemap/ne_50m_land.geojson` ist 1,6 MB gross und
+  fällt damit durch den Grössenfilter aus A5. Sie reist nicht im Chat-Bundle
+  mit; wer an ihr etwas klären will, schickt sie einzeln.
 
 - In `sisal-db-v3` liegt `data/sisalv3_database_mysql_csv` mit 303 MB, das
   MySQL-Verzeichnis aus der Zeit vor S3a. In `.gitignore` genannt, von nichts

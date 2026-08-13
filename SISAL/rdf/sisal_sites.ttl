@@ -1,0 +1,5512 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix geolod: <http://w3id.org/geo-lod/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix sisal: <http://w3id.org/geo-lod/sisal/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+geolod:AllPalaeoclimateSites_Collection rdfs:member geolod:Cave_site_0001,
+        geolod:Cave_site_0002,
+        geolod:Cave_site_0003,
+        geolod:Cave_site_0004,
+        geolod:Cave_site_0005,
+        geolod:Cave_site_0006,
+        geolod:Cave_site_0007,
+        geolod:Cave_site_0008,
+        geolod:Cave_site_0009,
+        geolod:Cave_site_0010,
+        geolod:Cave_site_0011,
+        geolod:Cave_site_0012,
+        geolod:Cave_site_0013,
+        geolod:Cave_site_0014,
+        geolod:Cave_site_0015,
+        geolod:Cave_site_0016,
+        geolod:Cave_site_0017,
+        geolod:Cave_site_0018,
+        geolod:Cave_site_0019,
+        geolod:Cave_site_0020,
+        geolod:Cave_site_0021,
+        geolod:Cave_site_0022,
+        geolod:Cave_site_0023,
+        geolod:Cave_site_0024,
+        geolod:Cave_site_0025,
+        geolod:Cave_site_0026,
+        geolod:Cave_site_0027,
+        geolod:Cave_site_0028,
+        geolod:Cave_site_0029,
+        geolod:Cave_site_0030,
+        geolod:Cave_site_0031,
+        geolod:Cave_site_0032,
+        geolod:Cave_site_0033,
+        geolod:Cave_site_0034,
+        geolod:Cave_site_0035,
+        geolod:Cave_site_0036,
+        geolod:Cave_site_0037,
+        geolod:Cave_site_0038,
+        geolod:Cave_site_0039,
+        geolod:Cave_site_0040,
+        geolod:Cave_site_0041,
+        geolod:Cave_site_0042,
+        geolod:Cave_site_0043,
+        geolod:Cave_site_0044,
+        geolod:Cave_site_0045,
+        geolod:Cave_site_0046,
+        geolod:Cave_site_0047,
+        geolod:Cave_site_0048,
+        geolod:Cave_site_0049,
+        geolod:Cave_site_0050,
+        geolod:Cave_site_0051,
+        geolod:Cave_site_0052,
+        geolod:Cave_site_0053,
+        geolod:Cave_site_0054,
+        geolod:Cave_site_0055,
+        geolod:Cave_site_0056,
+        geolod:Cave_site_0057,
+        geolod:Cave_site_0058,
+        geolod:Cave_site_0059,
+        geolod:Cave_site_0060,
+        geolod:Cave_site_0061,
+        geolod:Cave_site_0062,
+        geolod:Cave_site_0063,
+        geolod:Cave_site_0064,
+        geolod:Cave_site_0065,
+        geolod:Cave_site_0066,
+        geolod:Cave_site_0067,
+        geolod:Cave_site_0068,
+        geolod:Cave_site_0069,
+        geolod:Cave_site_0070,
+        geolod:Cave_site_0071,
+        geolod:Cave_site_0072,
+        geolod:Cave_site_0073,
+        geolod:Cave_site_0074,
+        geolod:Cave_site_0075,
+        geolod:Cave_site_0076,
+        geolod:Cave_site_0077,
+        geolod:Cave_site_0078,
+        geolod:Cave_site_0079,
+        geolod:Cave_site_0080,
+        geolod:Cave_site_0081,
+        geolod:Cave_site_0082,
+        geolod:Cave_site_0083,
+        geolod:Cave_site_0084,
+        geolod:Cave_site_0085,
+        geolod:Cave_site_0086,
+        geolod:Cave_site_0087,
+        geolod:Cave_site_0088,
+        geolod:Cave_site_0089,
+        geolod:Cave_site_0090,
+        geolod:Cave_site_0091,
+        geolod:Cave_site_0092,
+        geolod:Cave_site_0093,
+        geolod:Cave_site_0094,
+        geolod:Cave_site_0095,
+        geolod:Cave_site_0096,
+        geolod:Cave_site_0097,
+        geolod:Cave_site_0098,
+        geolod:Cave_site_0099,
+        geolod:Cave_site_0100,
+        geolod:Cave_site_0101,
+        geolod:Cave_site_0102,
+        geolod:Cave_site_0103,
+        geolod:Cave_site_0104,
+        geolod:Cave_site_0105,
+        geolod:Cave_site_0106,
+        geolod:Cave_site_0107,
+        geolod:Cave_site_0108,
+        geolod:Cave_site_0109,
+        geolod:Cave_site_0110,
+        geolod:Cave_site_0111,
+        geolod:Cave_site_0112,
+        geolod:Cave_site_0113,
+        geolod:Cave_site_0114,
+        geolod:Cave_site_0115,
+        geolod:Cave_site_0116,
+        geolod:Cave_site_0117,
+        geolod:Cave_site_0118,
+        geolod:Cave_site_0119,
+        geolod:Cave_site_0120,
+        geolod:Cave_site_0121,
+        geolod:Cave_site_0122,
+        geolod:Cave_site_0123,
+        geolod:Cave_site_0124,
+        geolod:Cave_site_0125,
+        geolod:Cave_site_0126,
+        geolod:Cave_site_0127,
+        geolod:Cave_site_0128,
+        geolod:Cave_site_0129,
+        geolod:Cave_site_0130,
+        geolod:Cave_site_0131,
+        geolod:Cave_site_0132,
+        geolod:Cave_site_0133,
+        geolod:Cave_site_0134,
+        geolod:Cave_site_0135,
+        geolod:Cave_site_0136,
+        geolod:Cave_site_0137,
+        geolod:Cave_site_0138,
+        geolod:Cave_site_0139,
+        geolod:Cave_site_0140,
+        geolod:Cave_site_0141,
+        geolod:Cave_site_0142,
+        geolod:Cave_site_0143,
+        geolod:Cave_site_0144,
+        geolod:Cave_site_0145,
+        geolod:Cave_site_0146,
+        geolod:Cave_site_0147,
+        geolod:Cave_site_0148,
+        geolod:Cave_site_0149,
+        geolod:Cave_site_0150,
+        geolod:Cave_site_0151,
+        geolod:Cave_site_0152,
+        geolod:Cave_site_0153,
+        geolod:Cave_site_0154,
+        geolod:Cave_site_0155,
+        geolod:Cave_site_0156,
+        geolod:Cave_site_0157,
+        geolod:Cave_site_0158,
+        geolod:Cave_site_0159,
+        geolod:Cave_site_0160,
+        geolod:Cave_site_0161,
+        geolod:Cave_site_0162,
+        geolod:Cave_site_0163,
+        geolod:Cave_site_0164,
+        geolod:Cave_site_0165,
+        geolod:Cave_site_0166,
+        geolod:Cave_site_0167,
+        geolod:Cave_site_0168,
+        geolod:Cave_site_0169,
+        geolod:Cave_site_0170,
+        geolod:Cave_site_0171,
+        geolod:Cave_site_0172,
+        geolod:Cave_site_0173,
+        geolod:Cave_site_0174,
+        geolod:Cave_site_0175,
+        geolod:Cave_site_0176,
+        geolod:Cave_site_0177,
+        geolod:Cave_site_0178,
+        geolod:Cave_site_0179,
+        geolod:Cave_site_0180,
+        geolod:Cave_site_0181,
+        geolod:Cave_site_0182,
+        geolod:Cave_site_0183,
+        geolod:Cave_site_0184,
+        geolod:Cave_site_0185,
+        geolod:Cave_site_0186,
+        geolod:Cave_site_0187,
+        geolod:Cave_site_0188,
+        geolod:Cave_site_0189,
+        geolod:Cave_site_0190,
+        geolod:Cave_site_0191,
+        geolod:Cave_site_0192,
+        geolod:Cave_site_0193,
+        geolod:Cave_site_0194,
+        geolod:Cave_site_0195,
+        geolod:Cave_site_0196,
+        geolod:Cave_site_0197,
+        geolod:Cave_site_0198,
+        geolod:Cave_site_0199,
+        geolod:Cave_site_0200,
+        geolod:Cave_site_0201,
+        geolod:Cave_site_0202,
+        geolod:Cave_site_0203,
+        geolod:Cave_site_0204,
+        geolod:Cave_site_0205,
+        geolod:Cave_site_0206,
+        geolod:Cave_site_0207,
+        geolod:Cave_site_0208,
+        geolod:Cave_site_0209,
+        geolod:Cave_site_0210,
+        geolod:Cave_site_0211,
+        geolod:Cave_site_0212,
+        geolod:Cave_site_0213,
+        geolod:Cave_site_0214,
+        geolod:Cave_site_0215,
+        geolod:Cave_site_0216,
+        geolod:Cave_site_0217,
+        geolod:Cave_site_0218,
+        geolod:Cave_site_0219,
+        geolod:Cave_site_0220,
+        geolod:Cave_site_0221,
+        geolod:Cave_site_0222,
+        geolod:Cave_site_0223,
+        geolod:Cave_site_0224,
+        geolod:Cave_site_0225,
+        geolod:Cave_site_0226,
+        geolod:Cave_site_0227,
+        geolod:Cave_site_0228,
+        geolod:Cave_site_0229,
+        geolod:Cave_site_0230,
+        geolod:Cave_site_0231,
+        geolod:Cave_site_0232,
+        geolod:Cave_site_0233,
+        geolod:Cave_site_0234,
+        geolod:Cave_site_0235,
+        geolod:Cave_site_0236,
+        geolod:Cave_site_0237,
+        geolod:Cave_site_0238,
+        geolod:Cave_site_0239,
+        geolod:Cave_site_0240,
+        geolod:Cave_site_0241,
+        geolod:Cave_site_0242,
+        geolod:Cave_site_0243,
+        geolod:Cave_site_0244,
+        geolod:Cave_site_0245,
+        geolod:Cave_site_0246,
+        geolod:Cave_site_0247,
+        geolod:Cave_site_0248,
+        geolod:Cave_site_0249,
+        geolod:Cave_site_0250,
+        geolod:Cave_site_0251,
+        geolod:Cave_site_0252,
+        geolod:Cave_site_0253,
+        geolod:Cave_site_0254,
+        geolod:Cave_site_0255,
+        geolod:Cave_site_0256,
+        geolod:Cave_site_0257,
+        geolod:Cave_site_0258,
+        geolod:Cave_site_0259,
+        geolod:Cave_site_0260,
+        geolod:Cave_site_0261,
+        geolod:Cave_site_0262,
+        geolod:Cave_site_0263,
+        geolod:Cave_site_0264,
+        geolod:Cave_site_0265,
+        geolod:Cave_site_0266,
+        geolod:Cave_site_0267,
+        geolod:Cave_site_0268,
+        geolod:Cave_site_0269,
+        geolod:Cave_site_0270,
+        geolod:Cave_site_0271,
+        geolod:Cave_site_0272,
+        geolod:Cave_site_0273,
+        geolod:Cave_site_0274,
+        geolod:Cave_site_0275,
+        geolod:Cave_site_0276,
+        geolod:Cave_site_0277,
+        geolod:Cave_site_0278,
+        geolod:Cave_site_0279,
+        geolod:Cave_site_0280,
+        geolod:Cave_site_0281,
+        geolod:Cave_site_0282,
+        geolod:Cave_site_0283,
+        geolod:Cave_site_0284,
+        geolod:Cave_site_0285,
+        geolod:Cave_site_0286,
+        geolod:Cave_site_0287,
+        geolod:Cave_site_0288,
+        geolod:Cave_site_0289,
+        geolod:Cave_site_0290,
+        geolod:Cave_site_0292,
+        geolod:Cave_site_0293,
+        geolod:Cave_site_0294,
+        geolod:Cave_site_0295,
+        geolod:Cave_site_0296,
+        geolod:Cave_site_0297,
+        geolod:Cave_site_0298,
+        geolod:Cave_site_0299,
+        geolod:Cave_site_0300,
+        geolod:Cave_site_0301,
+        geolod:Cave_site_0302,
+        geolod:Cave_site_0303,
+        geolod:Cave_site_0304,
+        geolod:Cave_site_0305,
+        geolod:Cave_site_0306,
+        geolod:Cave_site_0307,
+        geolod:Cave_site_0308,
+        geolod:Cave_site_0309,
+        geolod:Cave_site_0310,
+        geolod:Cave_site_0311,
+        geolod:Cave_site_0312,
+        geolod:Cave_site_0313,
+        geolod:Cave_site_0314,
+        geolod:Cave_site_0315,
+        geolod:Cave_site_0316,
+        geolod:Cave_site_0317,
+        geolod:Cave_site_0318,
+        geolod:Cave_site_0319,
+        geolod:Cave_site_0320,
+        geolod:Cave_site_0321,
+        geolod:Cave_site_0322,
+        geolod:Cave_site_0323,
+        geolod:Cave_site_0324,
+        geolod:Cave_site_0325,
+        geolod:Cave_site_0326,
+        geolod:Cave_site_0327,
+        geolod:Cave_site_0328,
+        geolod:Cave_site_0329,
+        geolod:Cave_site_0330,
+        geolod:Cave_site_0331,
+        geolod:Cave_site_0332,
+        geolod:Cave_site_0333,
+        geolod:Cave_site_0334,
+        geolod:Cave_site_0335,
+        geolod:Cave_site_0336,
+        geolod:Cave_site_0337,
+        geolod:Cave_site_0338,
+        geolod:Cave_site_0339,
+        geolod:Cave_site_0340,
+        geolod:Cave_site_0341,
+        geolod:Cave_site_0342,
+        geolod:Cave_site_0343,
+        geolod:Cave_site_0344,
+        geolod:Cave_site_0345,
+        geolod:Cave_site_0346,
+        geolod:Cave_site_0347,
+        geolod:Cave_site_0348,
+        geolod:Cave_site_0349,
+        geolod:Cave_site_0350,
+        geolod:Cave_site_0351,
+        geolod:Cave_site_0352,
+        geolod:Cave_site_0353,
+        geolod:Cave_site_0354,
+        geolod:Cave_site_0355,
+        geolod:Cave_site_0356,
+        geolod:Cave_site_0357,
+        geolod:Cave_site_0358,
+        geolod:Cave_site_0359,
+        geolod:Cave_site_0360,
+        geolod:Cave_site_0361,
+        geolod:Cave_site_0362,
+        geolod:Cave_site_0363,
+        geolod:Cave_site_0364,
+        geolod:Cave_site_0365,
+        geolod:Cave_site_0366 .
+
+geolod:SISAL_Archaeological_Cave_Collection a geo:FeatureCollection ;
+    rdfs:label "SISAL caves with an archaeological record"@en .
+
+geolod:SISAL_Cave_Catalogue_Dataset a prov:Entity ;
+    dct:created "2026-08-08"^^xsd:date ;
+    owl:versionInfo "sha256:2ffafadeccb1" ;
+    prov:wasGeneratedBy geolod:SISAL_Cave_Catalogue_Generation .
+
+geolod:SISAL_Cave_Collection a geo:FeatureCollection ;
+    rdfs:label "SISAL cave collection"@en ;
+    rdfs:member geolod:Cave_site_0001,
+        geolod:Cave_site_0002,
+        geolod:Cave_site_0003,
+        geolod:Cave_site_0004,
+        geolod:Cave_site_0005,
+        geolod:Cave_site_0006,
+        geolod:Cave_site_0007,
+        geolod:Cave_site_0008,
+        geolod:Cave_site_0009,
+        geolod:Cave_site_0010,
+        geolod:Cave_site_0011,
+        geolod:Cave_site_0012,
+        geolod:Cave_site_0013,
+        geolod:Cave_site_0014,
+        geolod:Cave_site_0015,
+        geolod:Cave_site_0016,
+        geolod:Cave_site_0017,
+        geolod:Cave_site_0018,
+        geolod:Cave_site_0019,
+        geolod:Cave_site_0020,
+        geolod:Cave_site_0021,
+        geolod:Cave_site_0022,
+        geolod:Cave_site_0023,
+        geolod:Cave_site_0024,
+        geolod:Cave_site_0025,
+        geolod:Cave_site_0026,
+        geolod:Cave_site_0027,
+        geolod:Cave_site_0028,
+        geolod:Cave_site_0029,
+        geolod:Cave_site_0030,
+        geolod:Cave_site_0031,
+        geolod:Cave_site_0032,
+        geolod:Cave_site_0033,
+        geolod:Cave_site_0034,
+        geolod:Cave_site_0035,
+        geolod:Cave_site_0036,
+        geolod:Cave_site_0037,
+        geolod:Cave_site_0038,
+        geolod:Cave_site_0039,
+        geolod:Cave_site_0040,
+        geolod:Cave_site_0041,
+        geolod:Cave_site_0042,
+        geolod:Cave_site_0043,
+        geolod:Cave_site_0044,
+        geolod:Cave_site_0045,
+        geolod:Cave_site_0046,
+        geolod:Cave_site_0047,
+        geolod:Cave_site_0048,
+        geolod:Cave_site_0049,
+        geolod:Cave_site_0050,
+        geolod:Cave_site_0051,
+        geolod:Cave_site_0052,
+        geolod:Cave_site_0053,
+        geolod:Cave_site_0054,
+        geolod:Cave_site_0055,
+        geolod:Cave_site_0056,
+        geolod:Cave_site_0057,
+        geolod:Cave_site_0058,
+        geolod:Cave_site_0059,
+        geolod:Cave_site_0060,
+        geolod:Cave_site_0061,
+        geolod:Cave_site_0062,
+        geolod:Cave_site_0063,
+        geolod:Cave_site_0064,
+        geolod:Cave_site_0065,
+        geolod:Cave_site_0066,
+        geolod:Cave_site_0067,
+        geolod:Cave_site_0068,
+        geolod:Cave_site_0069,
+        geolod:Cave_site_0070,
+        geolod:Cave_site_0071,
+        geolod:Cave_site_0072,
+        geolod:Cave_site_0073,
+        geolod:Cave_site_0074,
+        geolod:Cave_site_0075,
+        geolod:Cave_site_0076,
+        geolod:Cave_site_0077,
+        geolod:Cave_site_0078,
+        geolod:Cave_site_0079,
+        geolod:Cave_site_0080,
+        geolod:Cave_site_0081,
+        geolod:Cave_site_0082,
+        geolod:Cave_site_0083,
+        geolod:Cave_site_0084,
+        geolod:Cave_site_0085,
+        geolod:Cave_site_0086,
+        geolod:Cave_site_0087,
+        geolod:Cave_site_0088,
+        geolod:Cave_site_0089,
+        geolod:Cave_site_0090,
+        geolod:Cave_site_0091,
+        geolod:Cave_site_0092,
+        geolod:Cave_site_0093,
+        geolod:Cave_site_0094,
+        geolod:Cave_site_0095,
+        geolod:Cave_site_0096,
+        geolod:Cave_site_0097,
+        geolod:Cave_site_0098,
+        geolod:Cave_site_0099,
+        geolod:Cave_site_0100,
+        geolod:Cave_site_0101,
+        geolod:Cave_site_0102,
+        geolod:Cave_site_0103,
+        geolod:Cave_site_0104,
+        geolod:Cave_site_0105,
+        geolod:Cave_site_0106,
+        geolod:Cave_site_0107,
+        geolod:Cave_site_0108,
+        geolod:Cave_site_0109,
+        geolod:Cave_site_0110,
+        geolod:Cave_site_0111,
+        geolod:Cave_site_0112,
+        geolod:Cave_site_0113,
+        geolod:Cave_site_0114,
+        geolod:Cave_site_0115,
+        geolod:Cave_site_0116,
+        geolod:Cave_site_0117,
+        geolod:Cave_site_0118,
+        geolod:Cave_site_0119,
+        geolod:Cave_site_0120,
+        geolod:Cave_site_0121,
+        geolod:Cave_site_0122,
+        geolod:Cave_site_0123,
+        geolod:Cave_site_0124,
+        geolod:Cave_site_0125,
+        geolod:Cave_site_0126,
+        geolod:Cave_site_0127,
+        geolod:Cave_site_0128,
+        geolod:Cave_site_0129,
+        geolod:Cave_site_0130,
+        geolod:Cave_site_0131,
+        geolod:Cave_site_0132,
+        geolod:Cave_site_0133,
+        geolod:Cave_site_0134,
+        geolod:Cave_site_0135,
+        geolod:Cave_site_0136,
+        geolod:Cave_site_0137,
+        geolod:Cave_site_0138,
+        geolod:Cave_site_0139,
+        geolod:Cave_site_0140,
+        geolod:Cave_site_0141,
+        geolod:Cave_site_0142,
+        geolod:Cave_site_0143,
+        geolod:Cave_site_0144,
+        geolod:Cave_site_0145,
+        geolod:Cave_site_0146,
+        geolod:Cave_site_0147,
+        geolod:Cave_site_0148,
+        geolod:Cave_site_0149,
+        geolod:Cave_site_0150,
+        geolod:Cave_site_0151,
+        geolod:Cave_site_0152,
+        geolod:Cave_site_0153,
+        geolod:Cave_site_0154,
+        geolod:Cave_site_0155,
+        geolod:Cave_site_0156,
+        geolod:Cave_site_0157,
+        geolod:Cave_site_0158,
+        geolod:Cave_site_0159,
+        geolod:Cave_site_0160,
+        geolod:Cave_site_0161,
+        geolod:Cave_site_0162,
+        geolod:Cave_site_0163,
+        geolod:Cave_site_0164,
+        geolod:Cave_site_0165,
+        geolod:Cave_site_0166,
+        geolod:Cave_site_0167,
+        geolod:Cave_site_0168,
+        geolod:Cave_site_0169,
+        geolod:Cave_site_0170,
+        geolod:Cave_site_0171,
+        geolod:Cave_site_0172,
+        geolod:Cave_site_0173,
+        geolod:Cave_site_0174,
+        geolod:Cave_site_0175,
+        geolod:Cave_site_0176,
+        geolod:Cave_site_0177,
+        geolod:Cave_site_0178,
+        geolod:Cave_site_0179,
+        geolod:Cave_site_0180,
+        geolod:Cave_site_0181,
+        geolod:Cave_site_0182,
+        geolod:Cave_site_0183,
+        geolod:Cave_site_0184,
+        geolod:Cave_site_0185,
+        geolod:Cave_site_0186,
+        geolod:Cave_site_0187,
+        geolod:Cave_site_0188,
+        geolod:Cave_site_0189,
+        geolod:Cave_site_0190,
+        geolod:Cave_site_0191,
+        geolod:Cave_site_0192,
+        geolod:Cave_site_0193,
+        geolod:Cave_site_0194,
+        geolod:Cave_site_0195,
+        geolod:Cave_site_0196,
+        geolod:Cave_site_0197,
+        geolod:Cave_site_0198,
+        geolod:Cave_site_0199,
+        geolod:Cave_site_0200,
+        geolod:Cave_site_0201,
+        geolod:Cave_site_0202,
+        geolod:Cave_site_0203,
+        geolod:Cave_site_0204,
+        geolod:Cave_site_0205,
+        geolod:Cave_site_0206,
+        geolod:Cave_site_0207,
+        geolod:Cave_site_0208,
+        geolod:Cave_site_0209,
+        geolod:Cave_site_0210,
+        geolod:Cave_site_0211,
+        geolod:Cave_site_0212,
+        geolod:Cave_site_0213,
+        geolod:Cave_site_0214,
+        geolod:Cave_site_0215,
+        geolod:Cave_site_0216,
+        geolod:Cave_site_0217,
+        geolod:Cave_site_0218,
+        geolod:Cave_site_0219,
+        geolod:Cave_site_0220,
+        geolod:Cave_site_0221,
+        geolod:Cave_site_0222,
+        geolod:Cave_site_0223,
+        geolod:Cave_site_0224,
+        geolod:Cave_site_0225,
+        geolod:Cave_site_0226,
+        geolod:Cave_site_0227,
+        geolod:Cave_site_0228,
+        geolod:Cave_site_0229,
+        geolod:Cave_site_0230,
+        geolod:Cave_site_0231,
+        geolod:Cave_site_0232,
+        geolod:Cave_site_0233,
+        geolod:Cave_site_0234,
+        geolod:Cave_site_0235,
+        geolod:Cave_site_0236,
+        geolod:Cave_site_0237,
+        geolod:Cave_site_0238,
+        geolod:Cave_site_0239,
+        geolod:Cave_site_0240,
+        geolod:Cave_site_0241,
+        geolod:Cave_site_0242,
+        geolod:Cave_site_0243,
+        geolod:Cave_site_0244,
+        geolod:Cave_site_0245,
+        geolod:Cave_site_0246,
+        geolod:Cave_site_0247,
+        geolod:Cave_site_0248,
+        geolod:Cave_site_0249,
+        geolod:Cave_site_0250,
+        geolod:Cave_site_0251,
+        geolod:Cave_site_0252,
+        geolod:Cave_site_0253,
+        geolod:Cave_site_0254,
+        geolod:Cave_site_0255,
+        geolod:Cave_site_0256,
+        geolod:Cave_site_0257,
+        geolod:Cave_site_0258,
+        geolod:Cave_site_0259,
+        geolod:Cave_site_0260,
+        geolod:Cave_site_0261,
+        geolod:Cave_site_0262,
+        geolod:Cave_site_0263,
+        geolod:Cave_site_0264,
+        geolod:Cave_site_0265,
+        geolod:Cave_site_0266,
+        geolod:Cave_site_0267,
+        geolod:Cave_site_0268,
+        geolod:Cave_site_0269,
+        geolod:Cave_site_0270,
+        geolod:Cave_site_0271,
+        geolod:Cave_site_0272,
+        geolod:Cave_site_0273,
+        geolod:Cave_site_0274,
+        geolod:Cave_site_0275,
+        geolod:Cave_site_0276,
+        geolod:Cave_site_0277,
+        geolod:Cave_site_0278,
+        geolod:Cave_site_0279,
+        geolod:Cave_site_0280,
+        geolod:Cave_site_0281,
+        geolod:Cave_site_0282,
+        geolod:Cave_site_0283,
+        geolod:Cave_site_0284,
+        geolod:Cave_site_0285,
+        geolod:Cave_site_0286,
+        geolod:Cave_site_0287,
+        geolod:Cave_site_0288,
+        geolod:Cave_site_0289,
+        geolod:Cave_site_0290,
+        geolod:Cave_site_0292,
+        geolod:Cave_site_0293,
+        geolod:Cave_site_0294,
+        geolod:Cave_site_0295,
+        geolod:Cave_site_0296,
+        geolod:Cave_site_0297,
+        geolod:Cave_site_0298,
+        geolod:Cave_site_0299,
+        geolod:Cave_site_0300,
+        geolod:Cave_site_0301,
+        geolod:Cave_site_0302,
+        geolod:Cave_site_0303,
+        geolod:Cave_site_0304,
+        geolod:Cave_site_0305,
+        geolod:Cave_site_0306,
+        geolod:Cave_site_0307,
+        geolod:Cave_site_0308,
+        geolod:Cave_site_0309,
+        geolod:Cave_site_0310,
+        geolod:Cave_site_0311,
+        geolod:Cave_site_0312,
+        geolod:Cave_site_0313,
+        geolod:Cave_site_0314,
+        geolod:Cave_site_0315,
+        geolod:Cave_site_0316,
+        geolod:Cave_site_0317,
+        geolod:Cave_site_0318,
+        geolod:Cave_site_0319,
+        geolod:Cave_site_0320,
+        geolod:Cave_site_0321,
+        geolod:Cave_site_0322,
+        geolod:Cave_site_0323,
+        geolod:Cave_site_0324,
+        geolod:Cave_site_0325,
+        geolod:Cave_site_0326,
+        geolod:Cave_site_0327,
+        geolod:Cave_site_0328,
+        geolod:Cave_site_0329,
+        geolod:Cave_site_0330,
+        geolod:Cave_site_0331,
+        geolod:Cave_site_0332,
+        geolod:Cave_site_0333,
+        geolod:Cave_site_0334,
+        geolod:Cave_site_0335,
+        geolod:Cave_site_0336,
+        geolod:Cave_site_0337,
+        geolod:Cave_site_0338,
+        geolod:Cave_site_0339,
+        geolod:Cave_site_0340,
+        geolod:Cave_site_0341,
+        geolod:Cave_site_0342,
+        geolod:Cave_site_0343,
+        geolod:Cave_site_0344,
+        geolod:Cave_site_0345,
+        geolod:Cave_site_0346,
+        geolod:Cave_site_0347,
+        geolod:Cave_site_0348,
+        geolod:Cave_site_0349,
+        geolod:Cave_site_0350,
+        geolod:Cave_site_0351,
+        geolod:Cave_site_0352,
+        geolod:Cave_site_0353,
+        geolod:Cave_site_0354,
+        geolod:Cave_site_0355,
+        geolod:Cave_site_0356,
+        geolod:Cave_site_0357,
+        geolod:Cave_site_0358,
+        geolod:Cave_site_0359,
+        geolod:Cave_site_0360,
+        geolod:Cave_site_0361,
+        geolod:Cave_site_0362,
+        geolod:Cave_site_0363,
+        geolod:Cave_site_0364,
+        geolod:Cave_site_0365,
+        geolod:Cave_site_0366 .
+
+geolod:SISAL_Cave_Catalogue_Generation a prov:Activity ;
+    rdfs:label "SISAL v3 cave catalogue"@en ;
+    owl:versionInfo "sha256:2ffafadeccb1" ;
+    prov:used geolod:SISAL_Cave_Catalogue_Generation_input_sisal_rdf_py,
+        geolod:SISAL_Cave_Catalogue_Generation_input_sites_csv ;
+    prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
+
+geolod:SISAL_Cave_Catalogue_Generation_input_sisal_rdf_py a prov:Entity ;
+    rdfs:label "sisal_rdf.py" ;
+    dct:identifier "sha256:656bc1a0de3d94c6e18d5f2b3911cbad6c9e8d6d5dc42a3c58b9e9a9ecc18105" .
+
+geolod:SISAL_Cave_Catalogue_Generation_input_sites_csv a prov:Entity ;
+    rdfs:label "sites.csv" ;
+    dct:identifier "sha256:291f52b5e003e8441179b60f20fec979e48bf690c66ed53d71027f79cdb13449" .
+
+sisal:geom_site_0001 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(77.7764 30.7903)"^^geo:wktLiteral .
+
+sisal:geom_site_0002 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(81.7500 42.8700)"^^geo:wktLiteral .
+
+sisal:geom_site_0003 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-55.4500 -4.0667)"^^geo:wktLiteral .
+
+sisal:geom_site_0004 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(0.7800 45.4300)"^^geo:wktLiteral .
+
+sisal:geom_site_0005 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(107.1833 29.0333)"^^geo:wktLiteral .
+
+sisal:geom_site_0006 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(119.1700 32.5000)"^^geo:wktLiteral .
+
+sisal:geom_site_0007 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(29.1833 -24.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0008 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-2.5168 54.2209)"^^geo:wktLiteral .
+
+sisal:geom_site_0009 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(67.2300 38.4000)"^^geo:wktLiteral .
+
+sisal:geom_site_0010 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-56.5830 -21.0830)"^^geo:wktLiteral .
+
+sisal:geom_site_0011 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(35.6500 33.9500)"^^geo:wktLiteral .
+
+sisal:geom_site_0012 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(91.8817 25.2622)"^^geo:wktLiteral .
+
+sisal:geom_site_0013 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(125.0000 -17.0300)"^^geo:wktLiteral .
+
+sisal:geom_site_0014 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-114.2200 39.0100)"^^geo:wktLiteral .
+
+sisal:geom_site_0015 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(9.6667 47.2501)"^^geo:wktLiteral .
+
+sisal:geom_site_0016 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(5.1884 50.1164)"^^geo:wktLiteral .
+
+sisal:geom_site_0017 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(105.1167 33.5833)"^^geo:wktLiteral .
+
+sisal:geom_site_0018 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-37.6659 -5.5642)"^^geo:wktLiteral .
+
+sisal:geom_site_0019 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(35.6069 33.9069)"^^geo:wktLiteral .
+
+sisal:geom_site_0020 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(114.8503 4.0848)"^^geo:wktLiteral .
+
+sisal:geom_site_0021 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-4.9300 58.1400)"^^geo:wktLiteral .
+
+sisal:geom_site_0022 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(40.3772 8.6036)"^^geo:wktLiteral .
+
+sisal:geom_site_0023 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-44.2800 -14.3700)"^^geo:wktLiteral .
+
+sisal:geom_site_0024 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-44.6281 -16.1503)"^^geo:wktLiteral .
+
+sisal:geom_site_0025 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-77.3500 -5.9200)"^^geo:wktLiteral .
+
+sisal:geom_site_0026 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.0000 67.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0027 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-47.0000 -16.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0028 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(77.8167 15.1500)"^^geo:wktLiteral .
+
+sisal:geom_site_0029 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(138.8300 -32.1600)"^^geo:wktLiteral .
+
+sisal:geom_site_0030 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(25.6800 -25.2100)"^^geo:wktLiteral .
+
+sisal:geom_site_0031 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(18.1167 46.1333)"^^geo:wktLiteral .
+
+sisal:geom_site_0032 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(46.7344 -15.5784)"^^geo:wktLiteral .
+
+sisal:geom_site_0033 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(40.3073 8.4241)"^^geo:wktLiteral .
+
+sisal:geom_site_0034 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-99.9210 18.1920)"^^geo:wktLiteral .
+
+sisal:geom_site_0035 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-56.7839 -15.2002)"^^geo:wktLiteral .
+
+sisal:geom_site_0036 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(106.3000 33.1330)"^^geo:wktLiteral .
+
+sisal:geom_site_0037 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-86.3667 33.3722)"^^geo:wktLiteral .
+
+sisal:geom_site_0038 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-41.5733 -12.3819)"^^geo:wktLiteral .
+
+sisal:geom_site_0039 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(108.0833 25.2833)"^^geo:wktLiteral .
+
+sisal:geom_site_0040 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-7.7700 37.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0041 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(137.8000 36.9917)"^^geo:wktLiteral .
+
+sisal:geom_site_0042 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-9.3275 30.7080)"^^geo:wktLiteral .
+
+sisal:geom_site_0043 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(74.4258 33.2219)"^^geo:wktLiteral .
+
+sisal:geom_site_0044 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.3539 37.6233)"^^geo:wktLiteral .
+
+sisal:geom_site_0045 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(115.6500 39.6800)"^^geo:wktLiteral .
+
+sisal:geom_site_0046 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.6800 66.0600)"^^geo:wktLiteral .
+
+sisal:geom_site_0047 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1822 66.4381)"^^geo:wktLiteral .
+
+sisal:geom_site_0048 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-115.5800 37.8900)"^^geo:wktLiteral .
+
+sisal:geom_site_0049 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-120.4200 38.0700)"^^geo:wktLiteral .
+
+sisal:geom_site_0050 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-120.4655 38.0717)"^^geo:wktLiteral .
+
+sisal:geom_site_0051 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-98.3400 29.6900)"^^geo:wktLiteral .
+
+sisal:geom_site_0052 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-56.8000 -15.2055)"^^geo:wktLiteral .
+
+sisal:geom_site_0053 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-2.5123 54.2143)"^^geo:wktLiteral .
+
+sisal:geom_site_0054 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(77.8667 30.6000)"^^geo:wktLiteral .
+
+sisal:geom_site_0055 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(7.8100 46.7500)"^^geo:wktLiteral .
+
+sisal:geom_site_0056 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(24.5144 40.6387)"^^geo:wktLiteral .
+
+sisal:geom_site_0057 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.0000 66.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0058 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(11.6700 47.0800)"^^geo:wktLiteral .
+
+sisal:geom_site_0059 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(107.1700 32.4300)"^^geo:wktLiteral .
+
+sisal:geom_site_0060 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(167.0167 -15.5333)"^^geo:wktLiteral .
+
+sisal:geom_site_0061 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(82.0336 29.8381)"^^geo:wktLiteral .
+
+sisal:geom_site_0062 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-41.6038 -12.3495)"^^geo:wktLiteral .
+
+sisal:geom_site_0063 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-89.7160 20.7300)"^^geo:wktLiteral .
+
+sisal:geom_site_0064 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(91.8667 25.2500)"^^geo:wktLiteral .
+
+sisal:geom_site_0065 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(114.8600 4.1500)"^^geo:wktLiteral .
+
+sisal:geom_site_0066 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-2.4419 54.1656)"^^geo:wktLiteral .
+
+sisal:geom_site_0067 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(114.8300 4.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0068 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(35.1500 31.7833)"^^geo:wktLiteral .
+
+sisal:geom_site_0069 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(117.5000 40.5000)"^^geo:wktLiteral .
+
+sisal:geom_site_0070 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-77.1600 26.2300)"^^geo:wktLiteral .
+
+sisal:geom_site_0071 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(20.5000 48.4667)"^^geo:wktLiteral .
+
+sisal:geom_site_0072 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.6000 45.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0073 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(0.5133 45.6678)"^^geo:wktLiteral .
+
+sisal:geom_site_0074 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.2147 -33.3925)"^^geo:wktLiteral .
+
+sisal:geom_site_0075 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-98.6208 29.8852)"^^geo:wktLiteral .
+
+sisal:geom_site_0076 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(21.6500 44.4000)"^^geo:wktLiteral .
+
+sisal:geom_site_0077 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(4.2600 44.2300)"^^geo:wktLiteral .
+
+sisal:geom_site_0078 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-79.6164 9.1741)"^^geo:wktLiteral .
+
+sisal:geom_site_0079 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(32.1056 36.5340)"^^geo:wktLiteral .
+
+sisal:geom_site_0080 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(107.9036 29.2289)"^^geo:wktLiteral .
+
+sisal:geom_site_0081 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(4.5667 36.4333)"^^geo:wktLiteral .
+
+sisal:geom_site_0082 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(171.4700 -41.9500)"^^geo:wktLiteral .
+
+sisal:geom_site_0083 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(9.6800 36.0300)"^^geo:wktLiteral .
+
+sisal:geom_site_0084 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(18.8400 47.7000)"^^geo:wktLiteral .
+
+sisal:geom_site_0085 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-89.1080 16.8830)"^^geo:wktLiteral .
+
+sisal:geom_site_0086 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.5372 44.2568)"^^geo:wktLiteral .
+
+sisal:geom_site_0087 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-4.5300 43.4000)"^^geo:wktLiteral .
+
+sisal:geom_site_0088 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.2000 45.7700)"^^geo:wktLiteral .
+
+sisal:geom_site_0089 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-5.3455 36.1261)"^^geo:wktLiteral .
+
+sisal:geom_site_0090 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(18.1500 46.1100)"^^geo:wktLiteral .
+
+sisal:geom_site_0091 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.5695 46.5537)"^^geo:wktLiteral .
+
+sisal:geom_site_0092 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(72.5833 40.4833)"^^geo:wktLiteral .
+
+sisal:geom_site_0093 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(114.9250 4.2333)"^^geo:wktLiteral .
+
+sisal:geom_site_0094 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(46.8800 -15.5300)"^^geo:wktLiteral .
+
+sisal:geom_site_0095 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-82.5186 27.8894)"^^geo:wktLiteral .
+
+sisal:geom_site_0096 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-2.3700 51.3800)"^^geo:wktLiteral .
+
+sisal:geom_site_0097 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(9.6228 40.2467)"^^geo:wktLiteral .
+
+sisal:geom_site_0098 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-9.4300 52.2500)"^^geo:wktLiteral .
+
+sisal:geom_site_0099 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(17.8833 -19.4000)"^^geo:wktLiteral .
+
+sisal:geom_site_0100 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.5500 47.0833)"^^geo:wktLiteral .
+
+sisal:geom_site_0101 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(10.5500 46.9500)"^^geo:wktLiteral .
+
+sisal:geom_site_0102 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(14.1600 64.8900)"^^geo:wktLiteral .
+
+sisal:geom_site_0103 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-41.6043 -12.3344)"^^geo:wktLiteral .
+
+sisal:geom_site_0104 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(120.4300 -8.5300)"^^geo:wktLiteral .
+
+sisal:geom_site_0105 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(9.8667 47.4333)"^^geo:wktLiteral .
+
+sisal:geom_site_0106 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(0.0400 42.4600)"^^geo:wktLiteral .
+
+sisal:geom_site_0107 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-89.0735 16.2086)"^^geo:wktLiteral .
+
+sisal:geom_site_0108 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(3.5500 43.7100)"^^geo:wktLiteral .
+
+sisal:geom_site_0109 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-0.4492 40.7925)"^^geo:wktLiteral .
+
+sisal:geom_site_0110 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(35.3952 32.0660)"^^geo:wktLiteral .
+
+sisal:geom_site_0111 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-37.6432 -5.5782)"^^geo:wktLiteral .
+
+sisal:geom_site_0112 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(109.4700 30.7500)"^^geo:wktLiteral .
+
+sisal:geom_site_0113 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-41.0184 -12.6182)"^^geo:wktLiteral .
+
+sisal:geom_site_0114 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(40.3729 8.6036)"^^geo:wktLiteral .
+
+sisal:geom_site_0115 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(10.1506 47.3781)"^^geo:wktLiteral .
+
+sisal:geom_site_0116 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(114.8000 4.0300)"^^geo:wktLiteral .
+
+sisal:geom_site_0117 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(7.6647 51.3675)"^^geo:wktLiteral .
+
+sisal:geom_site_0118 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(114.8333 4.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0119 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-3.5900 43.3200)"^^geo:wktLiteral .
+
+sisal:geom_site_0120 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-0.5900 40.7600)"^^geo:wktLiteral .
+
+sisal:geom_site_0121 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(13.1500 47.1600)"^^geo:wktLiteral .
+
+sisal:geom_site_0122 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(110.4167 30.4500)"^^geo:wktLiteral .
+
+sisal:geom_site_0123 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(8.0830 46.6167)"^^geo:wktLiteral .
+
+sisal:geom_site_0124 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-115.5000 35.9700)"^^geo:wktLiteral .
+
+sisal:geom_site_0125 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(9.3833 47.2333)"^^geo:wktLiteral .
+
+sisal:geom_site_0126 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(77.6521 30.6419)"^^geo:wktLiteral .
+
+sisal:geom_site_0127 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(103.3600 24.2000)"^^geo:wktLiteral .
+
+sisal:geom_site_0128 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-80.4000 37.9800)"^^geo:wktLiteral .
+
+sisal:geom_site_0129 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(13.1603 38.1665)"^^geo:wktLiteral .
+
+sisal:geom_site_0130 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(82.0000 19.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0131 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(11.6500 45.9667)"^^geo:wktLiteral .
+
+sisal:geom_site_0132 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(11.6700 47.0800)"^^geo:wktLiteral .
+
+sisal:geom_site_0133 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(10.2100 44.0800)"^^geo:wktLiteral .
+
+sisal:geom_site_0134 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-110.7500 31.7500)"^^geo:wktLiteral .
+
+sisal:geom_site_0135 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-4.2460 33.9500)"^^geo:wktLiteral .
+
+sisal:geom_site_0136 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-99.2000 17.4000)"^^geo:wktLiteral .
+
+sisal:geom_site_0137 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(56.8500 54.1500)"^^geo:wktLiteral .
+
+sisal:geom_site_0138 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(54.2000 12.5500)"^^geo:wktLiteral .
+
+sisal:geom_site_0139 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-123.4072 42.0981)"^^geo:wktLiteral .
+
+sisal:geom_site_0140 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(110.4333 31.6670)"^^geo:wktLiteral .
+
+sisal:geom_site_0141 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(31.9333 41.4167)"^^geo:wktLiteral .
+
+sisal:geom_site_0142 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(90.0667 30.9167)"^^geo:wktLiteral .
+
+sisal:geom_site_0143 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-7.0900 42.6100)"^^geo:wktLiteral .
+
+sisal:geom_site_0144 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-49.1569 -27.2247)"^^geo:wktLiteral .
+
+sisal:geom_site_0145 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(10.2167 43.9833)"^^geo:wktLiteral .
+
+sisal:geom_site_0146 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(114.4800 4.0200)"^^geo:wktLiteral .
+
+sisal:geom_site_0147 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-105.4433 33.5067)"^^geo:wktLiteral .
+
+sisal:geom_site_0148 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(29.1770 -24.1428)"^^geo:wktLiteral .
+
+sisal:geom_site_0149 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-127.0700 50.5500)"^^geo:wktLiteral .
+
+sisal:geom_site_0150 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(172.6330 -41.2833)"^^geo:wktLiteral .
+
+sisal:geom_site_0151 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(172.2178 -42.3108)"^^geo:wktLiteral .
+
+sisal:geom_site_0152 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(57.3500 23.0833)"^^geo:wktLiteral .
+
+sisal:geom_site_0153 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(81.8667 18.8667)"^^geo:wktLiteral .
+
+sisal:geom_site_0154 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(109.1000 33.5667)"^^geo:wktLiteral .
+
+sisal:geom_site_0155 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(128.6200 -15.3000)"^^geo:wktLiteral .
+
+sisal:geom_site_0156 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(21.7596 36.7360)"^^geo:wktLiteral .
+
+sisal:geom_site_0157 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(77.9200 15.1500)"^^geo:wktLiteral .
+
+sisal:geom_site_0158 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(172.6800 -41.2300)"^^geo:wktLiteral .
+
+sisal:geom_site_0159 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(54.3000 17.1667)"^^geo:wktLiteral .
+
+sisal:geom_site_0160 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(35.0226 31.7558)"^^geo:wktLiteral .
+
+sisal:geom_site_0161 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(167.6979 -45.2953)"^^geo:wktLiteral .
+
+sisal:geom_site_0162 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(167.7400 -46.0200)"^^geo:wktLiteral .
+
+sisal:geom_site_0163 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(175.0200 -38.2500)"^^geo:wktLiteral .
+
+sisal:geom_site_0164 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(175.0167 -38.2667)"^^geo:wktLiteral .
+
+sisal:geom_site_0165 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(175.0800 -36.2700)"^^geo:wktLiteral .
+
+sisal:geom_site_0166 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(177.5200 -38.8200)"^^geo:wktLiteral .
+
+sisal:geom_site_0167 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(167.7300 -46.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0168 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(171.4000 -42.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0169 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(167.0476 -45.3735)"^^geo:wktLiteral .
+
+sisal:geom_site_0170 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(54.0833 17.1667)"^^geo:wktLiteral .
+
+sisal:geom_site_0171 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-116.2915 36.4254)"^^geo:wktLiteral .
+
+sisal:geom_site_0172 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(29.8800 -24.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0173 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-67.0000 18.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0174 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(104.0950 26.0167)"^^geo:wktLiteral .
+
+sisal:geom_site_0175 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(109.8300 28.8000)"^^geo:wktLiteral .
+
+sisal:geom_site_0176 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(110.3667 31.3333)"^^geo:wktLiteral .
+
+sisal:geom_site_0177 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-83.8400 22.5500)"^^geo:wktLiteral .
+
+sisal:geom_site_0178 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(107.9000 25.4833)"^^geo:wktLiteral .
+
+sisal:geom_site_0179 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.8000 45.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0180 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(144.6000 -17.2000)"^^geo:wktLiteral .
+
+sisal:geom_site_0181 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(159.9740 -9.4890)"^^geo:wktLiteral .
+
+sisal:geom_site_0182 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(82.0000 19.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0183 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-83.9700 22.3800)"^^geo:wktLiteral .
+
+sisal:geom_site_0184 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(114.0000 -22.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0185 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(7.7819 46.6847)"^^geo:wktLiteral .
+
+sisal:geom_site_0186 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(110.6330 -8.0500)"^^geo:wktLiteral .
+
+sisal:geom_site_0187 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(11.0300 46.1300)"^^geo:wktLiteral .
+
+sisal:geom_site_0188 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-87.5700 20.1600)"^^geo:wktLiteral .
+
+sisal:geom_site_0189 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-89.0925 16.6769)"^^geo:wktLiteral .
+
+sisal:geom_site_0190 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-91.9750 43.4678)"^^geo:wktLiteral .
+
+sisal:geom_site_0191 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-92.0500 38.1500)"^^geo:wktLiteral .
+
+sisal:geom_site_0192 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-77.3000 -5.9300)"^^geo:wktLiteral .
+
+sisal:geom_site_0193 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(12.9619 43.4008)"^^geo:wktLiteral .
+
+sisal:geom_site_0194 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-114.7833 40.0333)"^^geo:wktLiteral .
+
+sisal:geom_site_0195 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-59.6000 13.2000)"^^geo:wktLiteral .
+
+sisal:geom_site_0196 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(39.4029 40.5443)"^^geo:wktLiteral .
+
+sisal:geom_site_0197 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(9.5200 47.2600)"^^geo:wktLiteral .
+
+sisal:geom_site_0198 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(109.5333 29.4800)"^^geo:wktLiteral .
+
+sisal:geom_site_0199 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(146.2500 -41.5800)"^^geo:wktLiteral .
+
+sisal:geom_site_0200 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-111.5190 42.0875)"^^geo:wktLiteral .
+
+sisal:geom_site_0201 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(115.0800 -34.2700)"^^geo:wktLiteral .
+
+sisal:geom_site_0202 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(11.9900 46.1600)"^^geo:wktLiteral .
+
+sisal:geom_site_0203 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(21.7469 44.7144)"^^geo:wktLiteral .
+
+sisal:geom_site_0204 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-89.0000 16.5000)"^^geo:wktLiteral .
+
+sisal:geom_site_0205 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-46.3500 -13.8100)"^^geo:wktLiteral .
+
+sisal:geom_site_0206 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-46.3500 -13.8100)"^^geo:wktLiteral .
+
+sisal:geom_site_0207 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-77.9000 -5.7000)"^^geo:wktLiteral .
+
+sisal:geom_site_0208 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(100.7600 -0.3600)"^^geo:wktLiteral .
+
+sisal:geom_site_0209 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(72.3500 40.4000)"^^geo:wktLiteral .
+
+sisal:geom_site_0210 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-122.1830 37.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0211 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(110.9200 25.2500)"^^geo:wktLiteral .
+
+sisal:geom_site_0212 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(35.1900 32.5800)"^^geo:wktLiteral .
+
+sisal:geom_site_0213 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(24.5167 47.4333)"^^geo:wktLiteral .
+
+sisal:geom_site_0214 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(113.9000 -22.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0215 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-4.2461 33.9558)"^^geo:wktLiteral .
+
+sisal:geom_site_0216 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(106.1667 27.2000)"^^geo:wktLiteral .
+
+sisal:geom_site_0217 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(115.5000 29.5000)"^^geo:wktLiteral .
+
+sisal:geom_site_0218 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(124.9167 41.3333)"^^geo:wktLiteral .
+
+sisal:geom_site_0219 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(117.2600 28.7100)"^^geo:wktLiteral .
+
+sisal:geom_site_0220 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(128.5800 37.2700)"^^geo:wktLiteral .
+
+sisal:geom_site_0221 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(63.3703 -19.7572)"^^geo:wktLiteral .
+
+sisal:geom_site_0222 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(63.3864 -19.7583)"^^geo:wktLiteral .
+
+sisal:geom_site_0223 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(105.0000 33.3200)"^^geo:wktLiteral .
+
+sisal:geom_site_0224 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(106.3300 33.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0225 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-65.7739 -18.1222)"^^geo:wktLiteral .
+
+sisal:geom_site_0226 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-77.5000 -5.7300)"^^geo:wktLiteral .
+
+sisal:geom_site_0227 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-133.3190 56.1620)"^^geo:wktLiteral .
+
+sisal:geom_site_0228 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-104.2600 32.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0229 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-88.8500 17.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0230 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-41.0216 -12.6227)"^^geo:wktLiteral .
+
+sisal:geom_site_0231 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-75.8200 -11.2400)"^^geo:wktLiteral .
+
+sisal:geom_site_0232 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-87.1300 20.5900)"^^geo:wktLiteral .
+
+sisal:geom_site_0233 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-107.7000 33.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0234 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-48.7267 -24.5308)"^^geo:wktLiteral .
+
+sisal:geom_site_0235 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-77.3081 -5.9406)"^^geo:wktLiteral .
+
+sisal:geom_site_0236 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-40.8605 -10.1602)"^^geo:wktLiteral .
+
+sisal:geom_site_0237 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-65.7700 -18.1200)"^^geo:wktLiteral .
+
+sisal:geom_site_0238 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(74.5167 14.9833)"^^geo:wktLiteral .
+
+sisal:geom_site_0239 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(84.7330 42.4330)"^^geo:wktLiteral .
+
+sisal:geom_site_0240 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(92.7500 12.0833)"^^geo:wktLiteral .
+
+sisal:geom_site_0241 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(120.0000 -5.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0242 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(109.9833 30.6833)"^^geo:wktLiteral .
+
+sisal:geom_site_0243 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(81.9915 18.8445)"^^geo:wktLiteral .
+
+sisal:geom_site_0244 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(113.7167 38.1667)"^^geo:wktLiteral .
+
+sisal:geom_site_0245 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(77.9900 14.5200)"^^geo:wktLiteral .
+
+sisal:geom_site_0246 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(118.9000 10.2000)"^^geo:wktLiteral .
+
+sisal:geom_site_0247 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(45.2958 35.1469)"^^geo:wktLiteral .
+
+sisal:geom_site_0248 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(103.1000 28.3330)"^^geo:wktLiteral .
+
+sisal:geom_site_0249 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(107.1670 28.1830)"^^geo:wktLiteral .
+
+sisal:geom_site_0250 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(105.4300 33.8200)"^^geo:wktLiteral .
+
+sisal:geom_site_0251 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(113.7000 38.2500)"^^geo:wktLiteral .
+
+sisal:geom_site_0252 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(43.7569 -24.0510)"^^geo:wktLiteral .
+
+sisal:geom_site_0253 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(54.3543 12.5866)"^^geo:wktLiteral .
+
+sisal:geom_site_0254 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.0876 -34.2078)"^^geo:wktLiteral .
+
+sisal:geom_site_0255 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(43.7533 -24.0477)"^^geo:wktLiteral .
+
+sisal:geom_site_0256 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.6000 46.8280)"^^geo:wktLiteral .
+
+sisal:geom_site_0257 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(39.5365 40.4498)"^^geo:wktLiteral .
+
+sisal:geom_site_0258 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(7.0000 49.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0259 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-4.3700 42.9800)"^^geo:wktLiteral .
+
+sisal:geom_site_0260 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(8.4800 39.2800)"^^geo:wktLiteral .
+
+sisal:geom_site_0261 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-4.3937 43.2962)"^^geo:wktLiteral .
+
+sisal:geom_site_0262 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(11.0203 50.4244)"^^geo:wktLiteral .
+
+sisal:geom_site_0263 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(25.9597 43.5937)"^^geo:wktLiteral .
+
+sisal:geom_site_0264 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.0388 44.0049)"^^geo:wktLiteral .
+
+sisal:geom_site_0265 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(2.9683 39.7937)"^^geo:wktLiteral .
+
+sisal:geom_site_0266 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-0.8215 37.6322)"^^geo:wktLiteral .
+
+sisal:geom_site_0267 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-9.2667 39.3000)"^^geo:wktLiteral .
+
+sisal:geom_site_0268 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(5.2000 50.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0269 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(45.1645 35.8000)"^^geo:wktLiteral .
+
+sisal:geom_site_0270 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(52.0000 35.8400)"^^geo:wktLiteral .
+
+sisal:geom_site_0271 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(148.4900 -35.7200)"^^geo:wktLiteral .
+
+sisal:geom_site_0272 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(171.4700 -41.9300)"^^geo:wktLiteral .
+
+sisal:geom_site_0273 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-118.8200 36.5900)"^^geo:wktLiteral .
+
+sisal:geom_site_0274 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-85.3300 10.1700)"^^geo:wktLiteral .
+
+sisal:geom_site_0275 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-8.7833 39.5333)"^^geo:wktLiteral .
+
+sisal:geom_site_0276 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(20.5167 48.4833)"^^geo:wktLiteral .
+
+sisal:geom_site_0277 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-75.7900 -11.2700)"^^geo:wktLiteral .
+
+sisal:geom_site_0278 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-105.2000 32.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0279 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.0899 -34.2071)"^^geo:wktLiteral .
+
+sisal:geom_site_0280 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(7.9000 51.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0281 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-84.7700 10.5500)"^^geo:wktLiteral .
+
+sisal:geom_site_0282 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(31.2833 28.6167)"^^geo:wktLiteral .
+
+sisal:geom_site_0283 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(171.4700 -41.9500)"^^geo:wktLiteral .
+
+sisal:geom_site_0284 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(172.4700 -40.6300)"^^geo:wktLiteral .
+
+sisal:geom_site_0285 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(177.5200 -38.8200)"^^geo:wktLiteral .
+
+sisal:geom_site_0286 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-3.6658 43.4306)"^^geo:wktLiteral .
+
+sisal:geom_site_0287 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(172.4800 -40.6300)"^^geo:wktLiteral .
+
+sisal:geom_site_0288 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(172.4800 -40.7000)"^^geo:wktLiteral .
+
+sisal:geom_site_0289 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(13.8428 47.8228)"^^geo:wktLiteral .
+
+sisal:geom_site_0290 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(12.0272 47.5429)"^^geo:wktLiteral .
+
+sisal:geom_site_0292 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.1403 37.9605)"^^geo:wktLiteral .
+
+sisal:geom_site_0293 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(102.6500 20.7500)"^^geo:wktLiteral .
+
+sisal:geom_site_0294 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-66.5000 18.3500)"^^geo:wktLiteral .
+
+sisal:geom_site_0295 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(36.0364 34.2439)"^^geo:wktLiteral .
+
+sisal:geom_site_0296 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(66.7632 39.4227)"^^geo:wktLiteral .
+
+sisal:geom_site_0297 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(8.2000 44.1300)"^^geo:wktLiteral .
+
+sisal:geom_site_0298 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(78.1000 15.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0299 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-5.1300 43.4500)"^^geo:wktLiteral .
+
+sisal:geom_site_0300 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(148.6600 -35.0700)"^^geo:wktLiteral .
+
+sisal:geom_site_0301 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(148.9400 -32.6170)"^^geo:wktLiteral .
+
+sisal:geom_site_0302 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.0900 -34.2100)"^^geo:wktLiteral .
+
+sisal:geom_site_0303 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(115.0000 -34.1000)"^^geo:wktLiteral .
+
+sisal:geom_site_0304 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-99.0000 23.0000)"^^geo:wktLiteral .
+
+sisal:geom_site_0305 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-5.1403 43.4436)"^^geo:wktLiteral .
+
+sisal:geom_site_0306 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-60.6431 -11.6822)"^^geo:wktLiteral .
+
+sisal:geom_site_0307 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.3400 -33.4100)"^^geo:wktLiteral .
+
+sisal:geom_site_0308 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-21.7468 80.3777)"^^geo:wktLiteral .
+
+sisal:geom_site_0309 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(37.6600 9.4900)"^^geo:wktLiteral .
+
+sisal:geom_site_0310 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(115.0500 -34.0830)"^^geo:wktLiteral .
+
+sisal:geom_site_0311 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(148.5000 -35.7000)"^^geo:wktLiteral .
+
+sisal:geom_site_0312 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(107.1833 29.0167)"^^geo:wktLiteral .
+
+sisal:geom_site_0313 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(8.2058 50.6875)"^^geo:wktLiteral .
+
+sisal:geom_site_0314 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(22.3900 -34.0500)"^^geo:wktLiteral .
+
+sisal:geom_site_0315 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(118.3333 36.6167)"^^geo:wktLiteral .
+
+sisal:geom_site_0316 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(7.6547 51.3689)"^^geo:wktLiteral .
+
+sisal:geom_site_0317 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(104.8167 22.9500)"^^geo:wktLiteral .
+
+sisal:geom_site_0318 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(107.1792 29.0167)"^^geo:wktLiteral .
+
+sisal:geom_site_0319 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(113.9000 27.8000)"^^geo:wktLiteral .
+
+sisal:geom_site_0320 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(48.1600 35.8500)"^^geo:wktLiteral .
+
+sisal:geom_site_0321 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(98.7300 8.3300)"^^geo:wktLiteral .
+
+sisal:geom_site_0322 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(45.3800 35.0900)"^^geo:wktLiteral .
+
+sisal:geom_site_0323 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(85.6560 51.7290)"^^geo:wktLiteral .
+
+sisal:geom_site_0324 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-4.8067 43.4100)"^^geo:wktLiteral .
+
+sisal:geom_site_0325 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-66.8000 18.3200)"^^geo:wktLiteral .
+
+sisal:geom_site_0326 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(110.3167 31.5167)"^^geo:wktLiteral .
+
+sisal:geom_site_0327 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.4754 45.3142)"^^geo:wktLiteral .
+
+sisal:geom_site_0328 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-47.4900 -11.6200)"^^geo:wktLiteral .
+
+sisal:geom_site_0329 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(29.8200 1.2500)"^^geo:wktLiteral .
+
+sisal:geom_site_0330 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(0.5127 40.9488)"^^geo:wktLiteral .
+
+sisal:geom_site_0331 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(35.8100 33.3200)"^^geo:wktLiteral .
+
+sisal:geom_site_0332 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(3.9650 39.9560)"^^geo:wktLiteral .
+
+sisal:geom_site_0333 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(8.2667 46.7833)"^^geo:wktLiteral .
+
+sisal:geom_site_0334 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(15.6783 45.8188)"^^geo:wktLiteral .
+
+sisal:geom_site_0335 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-0.2678 43.1878)"^^geo:wktLiteral .
+
+sisal:geom_site_0336 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(33.4700 35.2700)"^^geo:wktLiteral .
+
+sisal:geom_site_0337 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(57.4200 35.2300)"^^geo:wktLiteral .
+
+sisal:geom_site_0338 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(3.3009 39.5046)"^^geo:wktLiteral .
+
+sisal:geom_site_0339 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(17.1600 40.9000)"^^geo:wktLiteral .
+
+sisal:geom_site_0340 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(118.4000 35.7000)"^^geo:wktLiteral .
+
+sisal:geom_site_0341 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-90.2807 15.4277)"^^geo:wktLiteral .
+
+sisal:geom_site_0342 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(3.3059 39.5145)"^^geo:wktLiteral .
+
+sisal:geom_site_0343 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(17.5000 40.7000)"^^geo:wktLiteral .
+
+sisal:geom_site_0344 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(40.3700 43.3900)"^^geo:wktLiteral .
+
+sisal:geom_site_0345 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(8.2667 46.7833)"^^geo:wktLiteral .
+
+sisal:geom_site_0346 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(105.5000 26.2000)"^^geo:wktLiteral .
+
+sisal:geom_site_0347 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(106.2881 29.6822)"^^geo:wktLiteral .
+
+sisal:geom_site_0348 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(20.7000 -25.3700)"^^geo:wktLiteral .
+
+sisal:geom_site_0349 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(72.3500 40.3900)"^^geo:wktLiteral .
+
+sisal:geom_site_0350 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-40.8600 -10.1600)"^^geo:wktLiteral .
+
+sisal:geom_site_0351 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-37.7000 -5.6000)"^^geo:wktLiteral .
+
+sisal:geom_site_0352 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-86.0500 34.6700)"^^geo:wktLiteral .
+
+sisal:geom_site_0353 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-9.4900 30.7700)"^^geo:wktLiteral .
+
+sisal:geom_site_0354 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(105.0833 26.0500)"^^geo:wktLiteral .
+
+sisal:geom_site_0355 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(110.5700 31.5167)"^^geo:wktLiteral .
+
+sisal:geom_site_0356 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(107.7830 29.7830)"^^geo:wktLiteral .
+
+sisal:geom_site_0357 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(115.6900 -31.5470)"^^geo:wktLiteral .
+
+sisal:geom_site_0358 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(105.0833 32.5833)"^^geo:wktLiteral .
+
+sisal:geom_site_0359 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(11.2829 49.7793)"^^geo:wktLiteral .
+
+sisal:geom_site_0360 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(11.5810 46.0180)"^^geo:wktLiteral .
+
+sisal:geom_site_0361 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(30.7117 37.2325)"^^geo:wktLiteral .
+
+sisal:geom_site_0362 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(115.1000 -34.3000)"^^geo:wktLiteral .
+
+sisal:geom_site_0363 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-122.3040 40.8040)"^^geo:wktLiteral .
+
+sisal:geom_site_0364 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(-87.5400 20.1800)"^^geo:wktLiteral .
+
+sisal:geom_site_0365 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(0.2400 42.5200)"^^geo:wktLiteral .
+
+sisal:geom_site_0366 a sf:Point ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(13.8833 45.6167)"^^geo:wktLiteral .
+
+geolod:Cave_site_0001 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bittoo cave"@en ;
+    geolod:countD13CSamples 4815 ;
+    geolod:countD18OSamples 4815 ;
+    geolod:elevation_m 3000.0 ;
+    geolod:siteId 1 ;
+    geo:hasGeometry sisal:geom_site_0001 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0002 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kesang cave"@en ;
+    geolod:countD13CSamples 2679 ;
+    geolod:countD18OSamples 3843 ;
+    geolod:elevation_m 2000.0 ;
+    geolod:siteId 2 ;
+    geo:hasGeometry sisal:geom_site_0002 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0003 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Paraiso cave"@en ;
+    geolod:countD13CSamples 2187 ;
+    geolod:countD18OSamples 5379 ;
+    geolod:elevation_m 60.0 ;
+    geolod:siteId 3 ;
+    geo:hasGeometry sisal:geom_site_0003 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0004 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Villars cave"@en ;
+    geolod:countD13CSamples 1755 ;
+    geolod:countD18OSamples 1755 ;
+    geolod:elevation_m 175.0 ;
+    geolod:siteId 4 ;
+    geo:hasGeometry sisal:geom_site_0004 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0005 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Yangkou cave"@en ;
+    geolod:countD13CSamples 1104 ;
+    geolod:countD18OSamples 2535 ;
+    geolod:elevation_m 2140.0 ;
+    geolod:siteId 5 ;
+    geo:hasGeometry sisal:geom_site_0005 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0006 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Hulu cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 3054 ;
+    geolod:elevation_m 86.0 ;
+    geolod:siteId 6 ;
+    geo:hasGeometry sisal:geom_site_0006 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0007 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cold Air cave"@en ;
+    geolod:countD13CSamples 3079 ;
+    geolod:countD18OSamples 3079 ;
+    geolod:elevation_m 1420.0 ;
+    geolod:siteId 7 ;
+    geo:hasGeometry sisal:geom_site_0007 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0008 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lancaster Hole"@en ;
+    geolod:countD13CSamples 1206 ;
+    geolod:countD18OSamples 1206 ;
+    geolod:elevation_m 294.0 ;
+    geolod:siteId 8 ;
+    geo:hasGeometry sisal:geom_site_0008 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0009 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Tonnel’naya cave"@en ;
+    geolod:countD13CSamples 6253 ;
+    geolod:countD18OSamples 6253 ;
+    geolod:elevation_m 3226.0 ;
+    geolod:siteId 9 ;
+    geo:hasGeometry sisal:geom_site_0009 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0010 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jaraguá cave"@en ;
+    geolod:countD13CSamples 4358 ;
+    geolod:countD18OSamples 7744 ;
+    geolod:elevation_m 570.0 ;
+    geolod:siteId 10 ;
+    geo:hasGeometry sisal:geom_site_0010 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0011 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jeita cave"@en ;
+    geolod:countD13CSamples 1830 ;
+    geolod:countD18OSamples 1830 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 11 ;
+    geo:hasGeometry sisal:geom_site_0011 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0012 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Mawmluh cave"@en ;
+    geolod:countD13CSamples 2480 ;
+    geolod:countD18OSamples 4701 ;
+    geolod:elevation_m 1160.0 ;
+    geolod:siteId 12 ;
+    geo:hasGeometry sisal:geom_site_0012 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0013 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ball Gown cave"@en ;
+    geolod:countD13CSamples 262 ;
+    geolod:countD18OSamples 502 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 13 ;
+    geo:hasGeometry sisal:geom_site_0013 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0014 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lehman caves"@en ;
+    geolod:countD13CSamples 491 ;
+    geolod:countD18OSamples 491 ;
+    geolod:elevation_m 2080.0 ;
+    geolod:siteId 14 ;
+    geo:hasGeometry sisal:geom_site_0014 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0015 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Baschg cave"@en ;
+    geolod:countD13CSamples 666 ;
+    geolod:countD18OSamples 3156 ;
+    geolod:elevation_m 780.0 ;
+    geolod:siteId 15 ;
+    geo:hasGeometry sisal:geom_site_0015 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0016 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Han-sur-Lesse cave"@en ;
+    geolod:countD13CSamples 984 ;
+    geolod:countD18OSamples 983 ;
+    geolod:elevation_m 180.0 ;
+    geolod:siteId 16 ;
+    geo:hasGeometry sisal:geom_site_0016 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0017 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Huangye cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 543 ;
+    geolod:elevation_m 1650.0 ;
+    geolod:siteId 17 ;
+    geo:hasGeometry sisal:geom_site_0017 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0018 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Abissal cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 188 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 18 ;
+    geo:hasGeometry sisal:geom_site_0018 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0019 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kanaan cave"@en ;
+    geolod:countD13CSamples 1012 ;
+    geolod:countD18OSamples 1012 ;
+    geolod:elevation_m 98.0 ;
+    geolod:siteId 19 ;
+    geo:hasGeometry sisal:geom_site_0019 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0020 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Secret cave"@en ;
+    geolod:countD13CSamples 102 ;
+    geolod:countD18OSamples 791 ;
+    geolod:elevation_m 250.0 ;
+    geolod:siteId 20 ;
+    geo:hasGeometry sisal:geom_site_0020 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0021 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Uamh an Tartair"@en ;
+    geolod:countD13CSamples 596 ;
+    geolod:countD18OSamples 596 ;
+    geolod:elevation_m 220.0 ;
+    geolod:siteId 21 ;
+    geo:hasGeometry sisal:geom_site_0021 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0022 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "RukieSSa cave"@en ;
+    geolod:countD13CSamples 173 ;
+    geolod:countD18OSamples 173 ;
+    geolod:elevation_m 1618.0 ;
+    geolod:siteId 22 ;
+    geo:hasGeometry sisal:geom_site_0022 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0023 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lapa grande cave"@en ;
+    geolod:countD13CSamples 758 ;
+    geolod:countD18OSamples 2670 ;
+    geolod:elevation_m 590.0 ;
+    geolod:siteId 23 ;
+    geo:hasGeometry sisal:geom_site_0023 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0024 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lapa sem fim cave"@en ;
+    geolod:countD13CSamples 2218 ;
+    geolod:countD18OSamples 4232 ;
+    geolod:elevation_m 341.0 ;
+    geolod:siteId 24 ;
+    geo:hasGeometry sisal:geom_site_0024 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0025 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Palestina cave"@en ;
+    geolod:countD13CSamples 435 ;
+    geolod:countD18OSamples 434 ;
+    geolod:elevation_m 870.0 ;
+    geolod:siteId 25 ;
+    geo:hasGeometry sisal:geom_site_0025 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0026 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Okshola cave"@en ;
+    geolod:countD13CSamples 438 ;
+    geolod:countD18OSamples 438 ;
+    geolod:elevation_m 165.0 ;
+    geolod:siteId 26 ;
+    geo:hasGeometry sisal:geom_site_0026 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0027 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Tamboril cave"@en ;
+    geolod:countD13CSamples 866 ;
+    geolod:countD18OSamples 866 ;
+    geolod:elevation_m 200.0 ;
+    geolod:siteId 27 ;
+    geo:hasGeometry sisal:geom_site_0027 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0028 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Valmiki cave "@en ;
+    geolod:countD13CSamples 263 ;
+    geolod:countD18OSamples 485 ;
+    geolod:elevation_m 420.0 ;
+    geolod:siteId 28 ;
+    geo:hasGeometry sisal:geom_site_0028 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0029 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Mairs cave"@en ;
+    geolod:countD13CSamples 878 ;
+    geolod:countD18OSamples 878 ;
+    geolod:elevation_m 475.0 ;
+    geolod:siteId 29 ;
+    geo:hasGeometry sisal:geom_site_0029 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0030 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lobatse cave"@en ;
+    geolod:countD13CSamples 117 ;
+    geolod:countD18OSamples 117 ;
+    geolod:elevation_m 1200.0 ;
+    geolod:siteId 30 ;
+    geo:hasGeometry sisal:geom_site_0030 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0031 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Abaliget cave"@en ;
+    geolod:countD13CSamples 779 ;
+    geolod:countD18OSamples 779 ;
+    geolod:elevation_m 209.0 ;
+    geolod:siteId 31 ;
+    geo:hasGeometry sisal:geom_site_0031 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0032 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Anjokipoty"@en ;
+    geolod:countD13CSamples 286 ;
+    geolod:countD18OSamples 286 ;
+    geolod:elevation_m 43.0 ;
+    geolod:siteId 32 ;
+    geo:hasGeometry sisal:geom_site_0032 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0033 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bero cave"@en ;
+    geolod:countD13CSamples 882 ;
+    geolod:countD18OSamples 882 ;
+    geolod:elevation_m 1363.0 ;
+    geolod:siteId 33 ;
+    geo:hasGeometry sisal:geom_site_0033 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0034 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cueva del Diablo"@en ;
+    geolod:countD13CSamples 150 ;
+    geolod:countD18OSamples 150 ;
+    geolod:elevation_m 1030.0 ;
+    geolod:siteId 34 ;
+    geo:hasGeometry sisal:geom_site_0034 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0035 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Curupira cave"@en ;
+    geolod:countD13CSamples 253 ;
+    geolod:countD18OSamples 253 ;
+    geolod:elevation_m 420.0 ;
+    geolod:siteId 35 ;
+    geo:hasGeometry sisal:geom_site_0035 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0036 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Dayu cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 305 ;
+    geolod:elevation_m 870.0 ;
+    geolod:siteId 36 ;
+    geo:hasGeometry sisal:geom_site_0036 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0037 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "DeSoto caverns"@en ;
+    geolod:countD13CSamples 1459 ;
+    geolod:countD18OSamples 1459 ;
+    geolod:elevation_m 150.0 ;
+    geolod:siteId 37 ;
+    geo:hasGeometry sisal:geom_site_0037 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0038 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Diva cave"@en ;
+    geolod:countD13CSamples 539 ;
+    geolod:countD18OSamples 539 ;
+    geolod:elevation_m 680.0 ;
+    geolod:siteId 38 ;
+    geo:hasGeometry sisal:geom_site_0038 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0039 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Dongge cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 5414 ;
+    geolod:elevation_m 680.0 ;
+    geolod:siteId 39 ;
+    geo:hasGeometry sisal:geom_site_0039 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0040 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Excentrica cave"@en ;
+    geolod:countD13CSamples 32 ;
+    geolod:countD18OSamples 32 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 40 ;
+    geo:hasGeometry sisal:geom_site_0040 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0041 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Fukugaguchi cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 963 ;
+    geolod:elevation_m 170.0 ;
+    geolod:siteId 41 ;
+    geo:hasGeometry sisal:geom_site_0041 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0042 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ifoulki cave"@en ;
+    geolod:countD13CSamples 727 ;
+    geolod:countD18OSamples 727 ;
+    geolod:elevation_m 1250.0 ;
+    geolod:siteId 42 ;
+    geo:hasGeometry sisal:geom_site_0042 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0043 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kalakot cave"@en ;
+    geolod:countD13CSamples 245 ;
+    geolod:countD18OSamples 245 ;
+    geolod:elevation_m 826.0 ;
+    geolod:siteId 43 ;
+    geo:hasGeometry sisal:geom_site_0043 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0044 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kapsia cave"@en ;
+    geolod:countD13CSamples 178 ;
+    geolod:countD18OSamples 178 ;
+    geolod:elevation_m 700.0 ;
+    geolod:siteId 44 ;
+    geo:hasGeometry sisal:geom_site_0044 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0045 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kulishu cave"@en ;
+    geolod:countD13CSamples 234 ;
+    geolod:countD18OSamples 234 ;
+    geolod:elevation_m 610.0 ;
+    geolod:siteId 45 ;
+    geo:hasGeometry sisal:geom_site_0045 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0046 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Labyrintgrottan cave"@en ;
+    geolod:countD13CSamples 46 ;
+    geolod:countD18OSamples 46 ;
+    geolod:elevation_m 730.0 ;
+    geolod:siteId 46 ;
+    geo:hasGeometry sisal:geom_site_0046 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0047 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Larshullet cave"@en ;
+    geolod:countD13CSamples 273 ;
+    geolod:countD18OSamples 273 ;
+    geolod:elevation_m 400.0 ;
+    geolod:siteId 47 ;
+    geo:hasGeometry sisal:geom_site_0047 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0048 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Leviathan cave"@en ;
+    geolod:countD13CSamples 1430 ;
+    geolod:countD18OSamples 1430 ;
+    geolod:elevation_m 2400.0 ;
+    geolod:siteId 48 ;
+    geo:hasGeometry sisal:geom_site_0048 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0049 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "McLean's cave"@en ;
+    geolod:countD13CSamples 900 ;
+    geolod:countD18OSamples 900 ;
+    geolod:elevation_m 300.0 ;
+    geolod:siteId 49 ;
+    geo:hasGeometry sisal:geom_site_0049 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0050 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Moaning cave"@en ;
+    geolod:countD13CSamples 114 ;
+    geolod:countD18OSamples 114 ;
+    geolod:elevation_m 520.0 ;
+    geolod:siteId 50 ;
+    geo:hasGeometry sisal:geom_site_0050 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0051 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Natural Bridge caverns"@en ;
+    geolod:countD13CSamples 257 ;
+    geolod:countD18OSamples 255 ;
+    geolod:elevation_m 306.0 ;
+    geolod:siteId 51 ;
+    geo:hasGeometry sisal:geom_site_0051 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0052 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pau d'Alho cave"@en ;
+    geolod:countD13CSamples 1170 ;
+    geolod:countD18OSamples 1170 ;
+    geolod:elevation_m 340.0 ;
+    geolod:siteId 52 ;
+    geo:hasGeometry sisal:geom_site_0052 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0053 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pippikin Pot cave"@en ;
+    geolod:countD13CSamples 483 ;
+    geolod:countD18OSamples 483 ;
+    geolod:elevation_m 320.0 ;
+    geolod:siteId 53 ;
+    geo:hasGeometry sisal:geom_site_0053 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0054 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Sahiya cave"@en ;
+    geolod:countD13CSamples 7580 ;
+    geolod:countD18OSamples 7580 ;
+    geolod:elevation_m 1190.0 ;
+    geolod:siteId 54 ;
+    geo:hasGeometry sisal:geom_site_0054 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0055 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Sieben Hengste cave"@en ;
+    geolod:countD13CSamples 1439 ;
+    geolod:countD18OSamples 20974 ;
+    geolod:elevation_m 1955.0 ;
+    geolod:siteId 55 ;
+    geo:hasGeometry sisal:geom_site_0055 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0056 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Skala Marion cave"@en ;
+    geolod:countD13CSamples 209 ;
+    geolod:countD18OSamples 209 ;
+    geolod:elevation_m 41.0 ;
+    geolod:siteId 56 ;
+    geo:hasGeometry sisal:geom_site_0056 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0057 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Soylegrotta cave"@en ;
+    geolod:countD13CSamples 477 ;
+    geolod:countD18OSamples 477 ;
+    geolod:elevation_m 280.0 ;
+    geolod:siteId 57 ;
+    geo:hasGeometry sisal:geom_site_0057 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0058 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Spannagel cave"@en ;
+    geolod:countD13CSamples 3401 ;
+    geolod:countD18OSamples 14199 ;
+    geolod:elevation_m 2310.0 ;
+    geolod:siteId 58 ;
+    geo:hasGeometry sisal:geom_site_0058 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0059 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Suozi cave"@en ;
+    geolod:countD13CSamples 183 ;
+    geolod:countD18OSamples 183 ;
+    geolod:elevation_m 700.0 ;
+    geolod:siteId 59 ;
+    geo:hasGeometry sisal:geom_site_0059 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0060 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Taurius cave"@en ;
+    geolod:countD13CSamples 1630 ;
+    geolod:countD18OSamples 1630 ;
+    geolod:elevation_m 230.0 ;
+    geolod:siteId 60 ;
+    geo:hasGeometry sisal:geom_site_0060 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0061 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Timta cave"@en ;
+    geolod:countD13CSamples 362 ;
+    geolod:countD18OSamples 362 ;
+    geolod:elevation_m 1900.0 ;
+    geolod:siteId 61 ;
+    geo:hasGeometry sisal:geom_site_0061 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0062 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Torrinha cave"@en ;
+    geolod:countD13CSamples 91 ;
+    geolod:countD18OSamples 91 ;
+    geolod:elevation_m 680.0 ;
+    geolod:siteId 62 ;
+    geo:hasGeometry sisal:geom_site_0062 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0063 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Tzabnah cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 709 ;
+    geolod:elevation_m 20.0 ;
+    geolod:siteId 63 ;
+    geo:hasGeometry sisal:geom_site_0063 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0064 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wah Shikhar cave"@en ;
+    geolod:countD13CSamples 602 ;
+    geolod:countD18OSamples 625 ;
+    geolod:elevation_m 1290.0 ;
+    geolod:siteId 64 ;
+    geo:hasGeometry sisal:geom_site_0064 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0065 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Whiterock cave"@en ;
+    geolod:countD13CSamples 189 ;
+    geolod:countD18OSamples 1142 ;
+    geolod:elevation_m 250.0 ;
+    geolod:siteId 65 ;
+    geo:hasGeometry sisal:geom_site_0065 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0066 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "White Scar cave"@en ;
+    geolod:countD13CSamples 160 ;
+    geolod:countD18OSamples 160 ;
+    geolod:elevation_m 255.0 ;
+    geolod:siteId 66 ;
+    geo:hasGeometry sisal:geom_site_0066 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0067 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Clearwater/Wind caves connection"@en ;
+    geolod:countD13CSamples 407 ;
+    geolod:countD18OSamples 407 ;
+    geolod:elevation_m 224.0 ;
+    geolod:siteId 67 ;
+    geo:hasGeometry sisal:geom_site_0067 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0068 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jerusalem west cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 308 ;
+    geolod:elevation_m 700.0 ;
+    geolod:siteId 68 ;
+    geo:hasGeometry sisal:geom_site_0068 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0069 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Xinglong cave"@en ;
+    geolod:countD13CSamples 395 ;
+    geolod:countD18OSamples 569 ;
+    geolod:elevation_m 710.0 ;
+    geolod:siteId 69 ;
+    geo:hasGeometry sisal:geom_site_0069 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0070 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Abaco Island cave"@en ;
+    geolod:countD13CSamples 2650 ;
+    geolod:countD18OSamples 2650 ;
+    geolod:elevation_m -45.0 ;
+    geolod:siteId 70 ;
+    geo:hasGeometry sisal:geom_site_0070 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0071 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Baradla cave"@en ;
+    geolod:countD13CSamples 680 ;
+    geolod:countD18OSamples 680 ;
+    geolod:elevation_m 375.0 ;
+    geolod:siteId 71 ;
+    geo:hasGeometry sisal:geom_site_0071 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0072 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ascunsa cave"@en ;
+    geolod:countD13CSamples 890 ;
+    geolod:countD18OSamples 890 ;
+    geolod:elevation_m 1050.0 ;
+    geolod:siteId 72 ;
+    geo:hasGeometry sisal:geom_site_0072 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0073 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bourgeois–Delaunay cave"@en ;
+    geolod:countD13CSamples 358 ;
+    geolod:countD18OSamples 358 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 73 ;
+    geo:hasGeometry sisal:geom_site_0073 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0074 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cango cave"@en ;
+    geolod:countD13CSamples 178 ;
+    geolod:countD18OSamples 178 ;
+    geolod:elevation_m 687.0 ;
+    geolod:siteId 74 ;
+    geo:hasGeometry sisal:geom_site_0074 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0075 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cave Without a Name"@en ;
+    geolod:countD13CSamples 386 ;
+    geolod:countD18OSamples 395 ;
+    geolod:elevation_m 377.0 ;
+    geolod:siteId 75 ;
+    geo:hasGeometry sisal:geom_site_0075 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0076 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ceremosnja cave"@en ;
+    geolod:countD13CSamples 100 ;
+    geolod:countD18OSamples 100 ;
+    geolod:elevation_m 530.0 ;
+    geolod:siteId 76 ;
+    geo:hasGeometry sisal:geom_site_0076 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0077 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Chauvet cave"@en ;
+    geolod:countD13CSamples 210 ;
+    geolod:countD18OSamples 210 ;
+    geolod:elevation_m 240.0 ;
+    geolod:siteId 77 ;
+    geo:hasGeometry sisal:geom_site_0077 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0078 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Chilibrillo cave"@en ;
+    geolod:countD13CSamples 483 ;
+    geolod:countD18OSamples 483 ;
+    geolod:elevation_m 60.0 ;
+    geolod:siteId 78 ;
+    geo:hasGeometry sisal:geom_site_0078 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0079 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Dim cave"@en ;
+    geolod:countD13CSamples 1050 ;
+    geolod:countD18OSamples 1050 ;
+    geolod:elevation_m 232.0 ;
+    geolod:siteId 79 ;
+    geo:hasGeometry sisal:geom_site_0079 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0080 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Furong cave"@en ;
+    geolod:countD13CSamples 299 ;
+    geolod:countD18OSamples 669 ;
+    geolod:elevation_m 480.0 ;
+    geolod:siteId 80 ;
+    geo:hasGeometry sisal:geom_site_0080 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0081 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Gueldaman cave"@en ;
+    geolod:countD13CSamples 425 ;
+    geolod:countD18OSamples 425 ;
+    geolod:elevation_m 507.0 ;
+    geolod:siteId 81 ;
+    geo:hasGeometry sisal:geom_site_0081 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0082 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Hollywood cave"@en ;
+    geolod:countD13CSamples 856 ;
+    geolod:countD18OSamples 856 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 82 ;
+    geo:hasGeometry sisal:geom_site_0082 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0083 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "La Mine cave"@en ;
+    geolod:countD13CSamples 78 ;
+    geolod:countD18OSamples 78 ;
+    geolod:elevation_m 975.0 ;
+    geolod:siteId 83 ;
+    geo:hasGeometry sisal:geom_site_0083 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0084 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Leány cave"@en ;
+    geolod:countD13CSamples 189 ;
+    geolod:countD18OSamples 189 ;
+    geolod:elevation_m 420.0 ;
+    geolod:siteId 84 ;
+    geo:hasGeometry sisal:geom_site_0084 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0085 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Macal Chasm"@en ;
+    geolod:countD13CSamples 660 ;
+    geolod:countD18OSamples 660 ;
+    geolod:elevation_m 530.0 ;
+    geolod:siteId 85 ;
+    geo:hasGeometry sisal:geom_site_0085 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0086 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Modric cave"@en ;
+    geolod:countD13CSamples 218 ;
+    geolod:countD18OSamples 218 ;
+    geolod:elevation_m 32.0 ;
+    geolod:siteId 86 ;
+    geo:hasGeometry sisal:geom_site_0086 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0087 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pindal cave"@en ;
+    geolod:countD13CSamples 1199 ;
+    geolod:countD18OSamples 1217 ;
+    geolod:elevation_m 24.0 ;
+    geolod:siteId 87 ;
+    geo:hasGeometry sisal:geom_site_0087 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0088 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Postojna cave"@en ;
+    geolod:countD13CSamples 10 ;
+    geolod:countD18OSamples 10 ;
+    geolod:elevation_m 529.0 ;
+    geolod:siteId 88 ;
+    geo:hasGeometry sisal:geom_site_0088 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0089 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "New St Michael's cave"@en ;
+    geolod:countD13CSamples 443 ;
+    geolod:countD18OSamples 443 ;
+    geolod:elevation_m 325.0 ;
+    geolod:siteId 89 ;
+    geo:hasGeometry sisal:geom_site_0089 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0090 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Trió cave"@en ;
+    geolod:countD13CSamples 142 ;
+    geolod:countD18OSamples 142 ;
+    geolod:elevation_m 275.0 ;
+    geolod:siteId 90 ;
+    geo:hasGeometry sisal:geom_site_0090 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0091 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ursilor cave"@en ;
+    geolod:countD13CSamples 39 ;
+    geolod:countD18OSamples 39 ;
+    geolod:elevation_m 482.0 ;
+    geolod:siteId 91 ;
+    geo:hasGeometry sisal:geom_site_0091 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0092 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bir-Uja cave"@en ;
+    geolod:countD13CSamples 447 ;
+    geolod:countD18OSamples 447 ;
+    geolod:elevation_m 1435.0 ;
+    geolod:siteId 92 ;
+    geo:hasGeometry sisal:geom_site_0092 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0093 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Green Cathedral cave"@en ;
+    geolod:countD13CSamples 656 ;
+    geolod:countD18OSamples 655 ;
+    geolod:elevation_m 569.0 ;
+    geolod:siteId 93 ;
+    geo:hasGeometry sisal:geom_site_0093 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0094 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Anjohibe"@en ;
+    geolod:countD13CSamples 2556 ;
+    geolod:countD18OSamples 2556 ;
+    geolod:elevation_m 131.0 ;
+    geolod:siteId 94 ;
+    geo:hasGeometry sisal:geom_site_0094 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0095 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Brown's cave"@en ;
+    geolod:countD13CSamples 1476 ;
+    geolod:countD18OSamples 1476 ;
+    geolod:elevation_m 25.0 ;
+    geolod:siteId 95 ;
+    geo:hasGeometry sisal:geom_site_0095 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0096 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Brown's Folly mine"@en ;
+    geolod:countD13CSamples 46 ;
+    geolod:countD18OSamples 46 ;
+    geolod:elevation_m 150.0 ;
+    geolod:siteId 96 ;
+    geo:hasGeometry sisal:geom_site_0096 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0097 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bue Marino cave"@en ;
+    geolod:countD13CSamples 295 ;
+    geolod:countD18OSamples 295 ;
+    geolod:elevation_m 0.0 ;
+    geolod:siteId 97 ;
+    geo:hasGeometry sisal:geom_site_0097 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0098 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Crag cave"@en ;
+    geolod:countD13CSamples 145 ;
+    geolod:countD18OSamples 145 ;
+    geolod:elevation_m 60.0 ;
+    geolod:siteId 98 ;
+    geo:hasGeometry sisal:geom_site_0098 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0099 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Dante cave"@en ;
+    geolod:countD13CSamples 579 ;
+    geolod:countD18OSamples 579 ;
+    geolod:elevation_m 1400.0 ;
+    geolod:siteId 99 ;
+    geo:hasGeometry sisal:geom_site_0099 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0100 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Katerloch cave"@en ;
+    geolod:countD13CSamples 2534 ;
+    geolod:countD18OSamples 2534 ;
+    geolod:elevation_m 900.0 ;
+    geolod:siteId 100 ;
+    geo:hasGeometry sisal:geom_site_0100 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0101 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Klapferloch cave"@en ;
+    geolod:countD13CSamples 2814 ;
+    geolod:countD18OSamples 2814 ;
+    geolod:elevation_m 1140.0 ;
+    geolod:siteId 101 ;
+    geo:hasGeometry sisal:geom_site_0101 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0102 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Korallgrottan cave"@en ;
+    geolod:countD13CSamples 486 ;
+    geolod:countD18OSamples 486 ;
+    geolod:elevation_m 570.0 ;
+    geolod:siteId 102 ;
+    geo:hasGeometry sisal:geom_site_0102 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0103 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lapa Doce cave"@en ;
+    geolod:countD13CSamples 124 ;
+    geolod:countD18OSamples 124 ;
+    geolod:elevation_m 680.0 ;
+    geolod:siteId 103 ;
+    geo:hasGeometry sisal:geom_site_0103 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0104 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Liang Luar"@en ;
+    geolod:countD13CSamples 2050 ;
+    geolod:countD18OSamples 4625 ;
+    geolod:elevation_m 550.0 ;
+    geolod:siteId 104 ;
+    geo:hasGeometry sisal:geom_site_0104 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0105 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Schneckenloch cave"@en ;
+    geolod:countD13CSamples 2481 ;
+    geolod:countD18OSamples 3235 ;
+    geolod:elevation_m 1285.0 ;
+    geolod:siteId 105 ;
+    geo:hasGeometry sisal:geom_site_0105 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0106 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Seso cave"@en ;
+    geolod:countD13CSamples 153 ;
+    geolod:countD18OSamples 153 ;
+    geolod:elevation_m 794.0 ;
+    geolod:siteId 106 ;
+    geo:hasGeometry sisal:geom_site_0106 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0107 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Yok Balum cave"@en ;
+    geolod:countD13CSamples 7589 ;
+    geolod:countD18OSamples 7534 ;
+    geolod:elevation_m 336.0 ;
+    geolod:siteId 107 ;
+    geo:hasGeometry sisal:geom_site_0107 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0108 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Clamouse cave"@en ;
+    geolod:countD13CSamples 309 ;
+    geolod:countD18OSamples 309 ;
+    geolod:elevation_m 110.0 ;
+    geolod:siteId 108 ;
+    geo:hasGeometry sisal:geom_site_0108 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0109 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Molinos cave"@en ;
+    geolod:countD13CSamples 309 ;
+    geolod:countD18OSamples 309 ;
+    geolod:elevation_m 1050.0 ;
+    geolod:siteId 109 ;
+    geo:hasGeometry sisal:geom_site_0109 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0110 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ma'ale Efrayim cave"@en ;
+    geolod:countD13CSamples 392 ;
+    geolod:countD18OSamples 394 ;
+    geolod:elevation_m 250.0 ;
+    geolod:siteId 110 ;
+    geo:hasGeometry sisal:geom_site_0110 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0111 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Rainha cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 955 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 111 ;
+    geo:hasGeometry sisal:geom_site_0111 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0112 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Xinya cave"@en ;
+    geolod:countD13CSamples 800 ;
+    geolod:countD18OSamples 985 ;
+    geolod:elevation_m 1250.0 ;
+    geolod:siteId 112 ;
+    geo:hasGeometry sisal:geom_site_0112 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0113 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Paixão cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1272 ;
+    geolod:elevation_m 598.0 ;
+    geolod:siteId 113 ;
+    geo:hasGeometry sisal:geom_site_0113 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0114 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Achere cave"@en ;
+    geolod:countD13CSamples 209 ;
+    geolod:countD18OSamples 209 ;
+    geolod:elevation_m 1534.0 ;
+    geolod:siteId 114 ;
+    geo:hasGeometry sisal:geom_site_0114 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0115 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Hölloch im Mahdtal"@en ;
+    geolod:countD13CSamples 5604 ;
+    geolod:countD18OSamples 9949 ;
+    geolod:elevation_m 1240.0 ;
+    geolod:siteId 115 ;
+    geo:hasGeometry sisal:geom_site_0115 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0116 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bukit Assam cave"@en ;
+    geolod:countD13CSamples 862 ;
+    geolod:countD18OSamples 4863 ;
+    geolod:elevation_m 150.0 ;
+    geolod:siteId 116 ;
+    geo:hasGeometry sisal:geom_site_0116 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0117 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bunker cave"@en ;
+    geolod:countD13CSamples 6454 ;
+    geolod:countD18OSamples 9131 ;
+    geolod:elevation_m 184.0 ;
+    geolod:siteId 117 ;
+    geo:hasGeometry sisal:geom_site_0117 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0118 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Clearwater cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 689 ;
+    geolod:elevation_m 120.0 ;
+    geolod:siteId 118 ;
+    geo:hasGeometry sisal:geom_site_0118 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0119 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cueva de Asiul"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 2019 ;
+    geolod:elevation_m 285.0 ;
+    geolod:siteId 119 ;
+    geo:hasGeometry sisal:geom_site_0119 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0120 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ejulve cave"@en ;
+    geolod:countD13CSamples 1237 ;
+    geolod:countD18OSamples 1237 ;
+    geolod:elevation_m 1240.0 ;
+    geolod:siteId 120 ;
+    geo:hasGeometry sisal:geom_site_0120 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0121 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Entrische Kirche cave"@en ;
+    geolod:countD13CSamples 1340 ;
+    geolod:countD18OSamples 1340 ;
+    geolod:elevation_m 2119.0 ;
+    geolod:siteId 121 ;
+    geo:hasGeometry sisal:geom_site_0121 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0122 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Heshang cave"@en ;
+    geolod:countD13CSamples 2086 ;
+    geolod:countD18OSamples 2086 ;
+    geolod:elevation_m 294.0 ;
+    geolod:siteId 122 ;
+    geo:hasGeometry sisal:geom_site_0122 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0123 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Milchbach cave"@en ;
+    geolod:countD13CSamples 3135 ;
+    geolod:countD18OSamples 3135 ;
+    geolod:elevation_m 1840.0 ;
+    geolod:siteId 123 ;
+    geo:hasGeometry sisal:geom_site_0123 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0124 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pinnacle cave"@en ;
+    geolod:countD13CSamples 216 ;
+    geolod:countD18OSamples 216 ;
+    geolod:elevation_m 1792.0 ;
+    geolod:siteId 124 ;
+    geo:hasGeometry sisal:geom_site_0124 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0125 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Schafsloch cave "@en ;
+    geolod:countD13CSamples 318 ;
+    geolod:countD18OSamples 318 ;
+    geolod:elevation_m 1890.0 ;
+    geolod:siteId 125 ;
+    geo:hasGeometry sisal:geom_site_0125 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0126 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Tityana cave"@en ;
+    geolod:countD13CSamples 125 ;
+    geolod:countD18OSamples 125 ;
+    geolod:elevation_m 1470.0 ;
+    geolod:siteId 126 ;
+    geo:hasGeometry sisal:geom_site_0126 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0127 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Xiaobailong cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1894 ;
+    geolod:elevation_m 1500.0 ;
+    geolod:siteId 127 ;
+    geo:hasGeometry sisal:geom_site_0127 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0128 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Buckeye creek"@en ;
+    geolod:countD13CSamples 1024 ;
+    geolod:countD18OSamples 3014 ;
+    geolod:elevation_m 600.0 ;
+    geolod:siteId 128 ;
+    geo:hasGeometry sisal:geom_site_0128 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0129 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Grotta di Carburangeli"@en ;
+    geolod:countD13CSamples 1232 ;
+    geolod:countD18OSamples 1232 ;
+    geolod:elevation_m 22.0 ;
+    geolod:siteId 129 ;
+    geo:hasGeometry sisal:geom_site_0129 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0130 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Dandak cave"@en ;
+    geolod:countD13CSamples 1871 ;
+    geolod:countD18OSamples 1874 ;
+    geolod:elevation_m 400.0 ;
+    geolod:siteId 130 ;
+    geo:hasGeometry sisal:geom_site_0130 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0131 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Grotta di Ernesto"@en ;
+    geolod:countD13CSamples 1220 ;
+    geolod:countD18OSamples 1220 ;
+    geolod:elevation_m 1167.0 ;
+    geolod:siteId 131 ;
+    geo:hasGeometry sisal:geom_site_0131 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0132 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kleegruben cave"@en ;
+    geolod:countD13CSamples 3224 ;
+    geolod:countD18OSamples 3224 ;
+    geolod:elevation_m 2165.0 ;
+    geolod:siteId 132 ;
+    geo:hasGeometry sisal:geom_site_0132 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0133 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Buca della Renella"@en ;
+    geolod:countD13CSamples 1619 ;
+    geolod:countD18OSamples 1617 ;
+    geolod:elevation_m 300.0 ;
+    geolod:siteId 133 ;
+    geo:hasGeometry sisal:geom_site_0133 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0134 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cave of the Bells"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1207 ;
+    geolod:elevation_m 1639.0 ;
+    geolod:siteId 134 ;
+    geo:hasGeometry sisal:geom_site_0134 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0135 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Grotte de Piste"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 792 ;
+    geolod:elevation_m 1260.0 ;
+    geolod:siteId 135 ;
+    geo:hasGeometry sisal:geom_site_0135 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0136 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Juxtlahuaca cave"@en ;
+    geolod:countD13CSamples 688 ;
+    geolod:countD18OSamples 2707 ;
+    geolod:elevation_m 934.0 ;
+    geolod:siteId 136 ;
+    geo:hasGeometry sisal:geom_site_0136 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0137 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kinderlinskaya cave"@en ;
+    geolod:countD13CSamples 933 ;
+    geolod:countD18OSamples 1866 ;
+    geolod:elevation_m 240.0 ;
+    geolod:siteId 137 ;
+    geo:hasGeometry sisal:geom_site_0137 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0138 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Moomi cave"@en ;
+    geolod:countD13CSamples 632 ;
+    geolod:countD18OSamples 1521 ;
+    geolod:elevation_m 400.0 ;
+    geolod:siteId 138 ;
+    geo:hasGeometry sisal:geom_site_0138 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0139 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Oregon caves national monument"@en ;
+    geolod:countD13CSamples 2680 ;
+    geolod:countD18OSamples 2680 ;
+    geolod:elevation_m 1300.0 ;
+    geolod:siteId 139 ;
+    geo:hasGeometry sisal:geom_site_0139 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0140 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Sanbao cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 10061 ;
+    geolod:elevation_m 1900.0 ;
+    geolod:siteId 140 ;
+    geo:hasGeometry sisal:geom_site_0140 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0141 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Sofular cave"@en ;
+    geolod:countD13CSamples 3976 ;
+    geolod:countD18OSamples 9358 ;
+    geolod:elevation_m 440.0 ;
+    geolod:siteId 141 ;
+    geo:hasGeometry sisal:geom_site_0141 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0142 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Tianmen"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1399 ;
+    geolod:elevation_m 4800.0 ;
+    geolod:siteId 142 ;
+    geo:hasGeometry sisal:geom_site_0142 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0143 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cova da Arcoia"@en ;
+    geolod:countD13CSamples 100 ;
+    geolod:countD18OSamples 100 ;
+    geolod:elevation_m 1240.0 ;
+    geolod:siteId 143 ;
+    geo:hasGeometry sisal:geom_site_0143 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0144 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Botuverá cave"@en ;
+    geolod:countD13CSamples 1599 ;
+    geolod:countD18OSamples 1599 ;
+    geolod:elevation_m 180.0 ;
+    geolod:siteId 144 ;
+    geo:hasGeometry sisal:geom_site_0144 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0145 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Antro del Corchia"@en ;
+    geolod:countD13CSamples 7379 ;
+    geolod:countD18OSamples 7490 ;
+    geolod:elevation_m 840.0 ;
+    geolod:siteId 145 ;
+    geo:hasGeometry sisal:geom_site_0145 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0146 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Gunung-buda cave (snail shell cave)"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 728 ;
+    geolod:elevation_m 150.0 ;
+    geolod:siteId 146 ;
+    geo:hasGeometry sisal:geom_site_0146 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0147 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Fort Stanton cave"@en ;
+    geolod:countD13CSamples 359 ;
+    geolod:countD18OSamples 1568 ;
+    geolod:elevation_m 1864.0 ;
+    geolod:siteId 147 ;
+    geo:hasGeometry sisal:geom_site_0147 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0148 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Buffalo cave"@en ;
+    geolod:countD13CSamples 483 ;
+    geolod:countD18OSamples 483 ;
+    geolod:elevation_m 1140.0 ;
+    geolod:siteId 148 ;
+    geo:hasGeometry sisal:geom_site_0148 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0149 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Arch cave"@en ;
+    geolod:countD13CSamples 40 ;
+    geolod:countD18OSamples 40 ;
+    geolod:elevation_m 660.0 ;
+    geolod:siteId 149 ;
+    geo:hasGeometry sisal:geom_site_0149 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0150 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Exhaleair cave"@en ;
+    geolod:countD13CSamples 33 ;
+    geolod:countD18OSamples 33 ;
+    geolod:elevation_m 685.0 ;
+    geolod:siteId 150 ;
+    geo:hasGeometry sisal:geom_site_0150 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0151 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Guillotine cave"@en ;
+    geolod:countD13CSamples 187 ;
+    geolod:countD18OSamples 187 ;
+    geolod:elevation_m 130.0 ;
+    geolod:siteId 151 ;
+    geo:hasGeometry sisal:geom_site_0151 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0152 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Hoti cave"@en ;
+    geolod:countD13CSamples 832 ;
+    geolod:countD18OSamples 1219 ;
+    geolod:elevation_m 800.0 ;
+    geolod:siteId 152 ;
+    geo:hasGeometry sisal:geom_site_0152 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0153 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jhumar cave"@en ;
+    geolod:countD13CSamples 572 ;
+    geolod:countD18OSamples 642 ;
+    geolod:elevation_m 600.0 ;
+    geolod:siteId 153 ;
+    geo:hasGeometry sisal:geom_site_0153 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0154 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jiuxian cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1043 ;
+    geolod:elevation_m 1495.0 ;
+    geolod:siteId 154 ;
+    geo:hasGeometry sisal:geom_site_0154 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0155 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "KNI-51"@en ;
+    geolod:countD13CSamples 182 ;
+    geolod:countD18OSamples 2156 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 155 ;
+    geo:hasGeometry sisal:geom_site_0155 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0156 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Mavri Trypa cave"@en ;
+    geolod:countD13CSamples 354 ;
+    geolod:countD18OSamples 354 ;
+    geolod:elevation_m 70.0 ;
+    geolod:siteId 156 ;
+    geo:hasGeometry sisal:geom_site_0156 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0157 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Munagamanu cave"@en ;
+    geolod:countD13CSamples 423 ;
+    geolod:countD18OSamples 423 ;
+    geolod:elevation_m 475.0 ;
+    geolod:siteId 157 ;
+    geo:hasGeometry sisal:geom_site_0157 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0158 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Nettlebed cave"@en ;
+    geolod:countD13CSamples 201 ;
+    geolod:countD18OSamples 201 ;
+    geolod:elevation_m 390.0 ;
+    geolod:siteId 158 ;
+    geo:hasGeometry sisal:geom_site_0158 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0159 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Qunf cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1412 ;
+    geolod:elevation_m 650.0 ;
+    geolod:siteId 159 ;
+    geo:hasGeometry sisal:geom_site_0159 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0160 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Soreq cave"@en ;
+    geolod:countD13CSamples 2631 ;
+    geolod:countD18OSamples 4064 ;
+    geolod:elevation_m 400.0 ;
+    geolod:siteId 160 ;
+    geo:hasGeometry sisal:geom_site_0160 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0161 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Aurora cave"@en ;
+    geolod:countD13CSamples 124 ;
+    geolod:countD18OSamples 124 ;
+    geolod:elevation_m 260.0 ;
+    geolod:siteId 161 ;
+    geo:hasGeometry sisal:geom_site_0161 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0162 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Calcite cave (Mt Luxmore, Fiordland)"@en ;
+    geolod:countD13CSamples 51 ;
+    geolod:countD18OSamples 51 ;
+    geolod:elevation_m 1025.0 ;
+    geolod:siteId 162 ;
+    geo:hasGeometry sisal:geom_site_0162 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0163 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Gardener's Gut"@en ;
+    geolod:countD13CSamples 208 ;
+    geolod:countD18OSamples 208 ;
+    geolod:elevation_m 90.0 ;
+    geolod:siteId 163 ;
+    geo:hasGeometry sisal:geom_site_0163 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0164 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Max's cave"@en ;
+    geolod:countD13CSamples 61 ;
+    geolod:countD18OSamples 61 ;
+    geolod:elevation_m 325.0 ;
+    geolod:siteId 164 ;
+    geo:hasGeometry sisal:geom_site_0164 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0165 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ruakuri cave"@en ;
+    geolod:countD13CSamples 829 ;
+    geolod:countD18OSamples 829 ;
+    geolod:elevation_m 80.0 ;
+    geolod:siteId 165 ;
+    geo:hasGeometry sisal:geom_site_0165 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0166 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Te Reinga cave"@en ;
+    geolod:countD13CSamples 429 ;
+    geolod:countD18OSamples 429 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 166 ;
+    geo:hasGeometry sisal:geom_site_0166 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0167 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Waiau cave"@en ;
+    geolod:countD13CSamples 26 ;
+    geolod:countD18OSamples 26 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 167 ;
+    geo:hasGeometry sisal:geom_site_0167 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0168 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wazpretti cave"@en ;
+    geolod:countD13CSamples 85 ;
+    geolod:countD18OSamples 85 ;
+    geolod:elevation_m 95.0 ;
+    geolod:siteId 168 ;
+    geo:hasGeometry sisal:geom_site_0168 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0169 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Doubtful Xanadu"@en ;
+    geolod:countD13CSamples 96 ;
+    geolod:countD18OSamples 96 ;
+    geolod:elevation_m 960.0 ;
+    geolod:siteId 169 ;
+    geo:hasGeometry sisal:geom_site_0169 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0170 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Defore cave"@en ;
+    geolod:countD13CSamples 603 ;
+    geolod:countD18OSamples 603 ;
+    geolod:elevation_m 150.0 ;
+    geolod:siteId 170 ;
+    geo:hasGeometry sisal:geom_site_0170 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0171 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Devils Hole"@en ;
+    geolod:countD13CSamples 1830 ;
+    geolod:countD18OSamples 1830 ;
+    geolod:elevation_m 719.0 ;
+    geolod:siteId 171 ;
+    geo:hasGeometry sisal:geom_site_0171 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0172 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wolkberg cave"@en ;
+    geolod:countD13CSamples 195 ;
+    geolod:countD18OSamples 195 ;
+    geolod:elevation_m 1450.0 ;
+    geolod:siteId 172 ;
+    geo:hasGeometry sisal:geom_site_0172 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0173 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Perdida cave"@en ;
+    geolod:countD13CSamples 218 ;
+    geolod:countD18OSamples 216 ;
+    geolod:elevation_m 350.0 ;
+    geolod:siteId 173 ;
+    geo:hasGeometry sisal:geom_site_0173 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0174 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Zhuliuping cave"@en ;
+    geolod:countD13CSamples 1128 ;
+    geolod:countD18OSamples 1128 ;
+    geolod:elevation_m 1217.0 ;
+    geolod:siteId 174 ;
+    geo:hasGeometry sisal:geom_site_0174 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0175 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Yaoba Don cave"@en ;
+    geolod:countD13CSamples 189 ;
+    geolod:countD18OSamples 189 ;
+    geolod:elevation_m 420.0 ;
+    geolod:siteId 175 ;
+    geo:hasGeometry sisal:geom_site_0175 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0176 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Qingtian cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1806 ;
+    geolod:elevation_m 1630.0 ;
+    geolod:siteId 176 ;
+    geo:hasGeometry sisal:geom_site_0176 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0177 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Santo Tomas cave"@en ;
+    geolod:countD13CSamples 2010 ;
+    geolod:countD18OSamples 2002 ;
+    geolod:elevation_m 170.0 ;
+    geolod:siteId 177 ;
+    geo:hasGeometry sisal:geom_site_0177 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0178 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Yamen cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1020 ;
+    geolod:elevation_m 570.0 ;
+    geolod:siteId 178 ;
+    geo:hasGeometry sisal:geom_site_0178 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0179 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Closani cave"@en ;
+    geolod:countD13CSamples 1832 ;
+    geolod:countD18OSamples 1832 ;
+    geolod:elevation_m 433.0 ;
+    geolod:siteId 179 ;
+    geo:hasGeometry sisal:geom_site_0179 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0180 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Chillagoe cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 777 ;
+    geolod:elevation_m 489.0 ;
+    geolod:siteId 180 ;
+    geo:hasGeometry sisal:geom_site_0180 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0181 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Forestry cave"@en ;
+    geolod:countD13CSamples 2679 ;
+    geolod:countD18OSamples 2679 ;
+    geolod:elevation_m 200.0 ;
+    geolod:siteId 181 ;
+    geo:hasGeometry sisal:geom_site_0181 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0182 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kotumsar cave"@en ;
+    geolod:countD13CSamples 1546 ;
+    geolod:countD18OSamples 1546 ;
+    geolod:elevation_m 32.0 ;
+    geolod:siteId 182 ;
+    geo:hasGeometry sisal:geom_site_0182 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0183 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Dos Anas cave"@en ;
+    geolod:countD13CSamples 1824 ;
+    geolod:countD18OSamples 1823 ;
+    geolod:elevation_m 120.0 ;
+    geolod:siteId 183 ;
+    geo:hasGeometry sisal:geom_site_0183 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0184 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cape range"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1499 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 184 ;
+    geo:hasGeometry sisal:geom_site_0184 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0185 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Beatus cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 3037 ;
+    geolod:elevation_m 875.0 ;
+    geolod:siteId 185 ;
+    geo:hasGeometry sisal:geom_site_0185 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0186 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bribin cave"@en ;
+    geolod:countD13CSamples 374 ;
+    geolod:countD18OSamples 377 ;
+    geolod:elevation_m 500.0 ;
+    geolod:siteId 186 ;
+    geo:hasGeometry sisal:geom_site_0186 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0187 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cesare Battisti cave"@en ;
+    geolod:countD13CSamples 435 ;
+    geolod:countD18OSamples 435 ;
+    geolod:elevation_m 1880.0 ;
+    geolod:siteId 187 ;
+    geo:hasGeometry sisal:geom_site_0187 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0188 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Chan Hol cave"@en ;
+    geolod:countD13CSamples 117 ;
+    geolod:countD18OSamples 117 ;
+    geolod:elevation_m -8.5 ;
+    geolod:siteId 188 ;
+    geo:hasGeometry sisal:geom_site_0188 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0189 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Chen Ha cave"@en ;
+    geolod:countD13CSamples 1573 ;
+    geolod:countD18OSamples 1573 ;
+    geolod:elevation_m 550.0 ;
+    geolod:siteId 189 ;
+    geo:hasGeometry sisal:geom_site_0189 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0190 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cold Water cave"@en ;
+    geolod:countD13CSamples 483 ;
+    geolod:countD18OSamples 483 ;
+    geolod:elevation_m 356.0 ;
+    geolod:siteId 190 ;
+    geo:hasGeometry sisal:geom_site_0190 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0191 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Devil's Icebox cave"@en ;
+    geolod:countD13CSamples 115 ;
+    geolod:countD18OSamples 115 ;
+    geolod:elevation_m 250.0 ;
+    geolod:siteId 191 ;
+    geo:hasGeometry sisal:geom_site_0191 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0192 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "El Condor cave"@en ;
+    geolod:countD13CSamples 742 ;
+    geolod:countD18OSamples 1797 ;
+    geolod:elevation_m 860.0 ;
+    geolod:siteId 192 ;
+    geo:hasGeometry sisal:geom_site_0192 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0193 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Frasassi cave system - Grotta Grande del Vento"@en ;
+    geolod:countD13CSamples 546 ;
+    geolod:countD18OSamples 544 ;
+    geolod:elevation_m 257.0 ;
+    geolod:siteId 193 ;
+    geo:hasGeometry sisal:geom_site_0193 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0194 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Goshute cave"@en ;
+    geolod:countD13CSamples 119 ;
+    geolod:countD18OSamples 119 ;
+    geolod:elevation_m 2000.0 ;
+    geolod:siteId 194 ;
+    geo:hasGeometry sisal:geom_site_0194 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0195 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Harrison's cave"@en ;
+    geolod:countD13CSamples 344 ;
+    geolod:countD18OSamples 344 ;
+    geolod:elevation_m 300.0 ;
+    geolod:siteId 195 ;
+    geo:hasGeometry sisal:geom_site_0195 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0196 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Karaca cave"@en ;
+    geolod:countD13CSamples 309 ;
+    geolod:countD18OSamples 309 ;
+    geolod:elevation_m 1536.0 ;
+    geolod:siteId 196 ;
+    geo:hasGeometry sisal:geom_site_0196 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0197 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Klaus Cramer cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 850 ;
+    geolod:elevation_m 1964.0 ;
+    geolod:siteId 197 ;
+    geo:hasGeometry sisal:geom_site_0197 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0198 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lianhua cave, Hunan"@en ;
+    geolod:countD13CSamples 818 ;
+    geolod:countD18OSamples 1573 ;
+    geolod:elevation_m 455.0 ;
+    geolod:siteId 198 ;
+    geo:hasGeometry sisal:geom_site_0198 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0199 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lynds cave"@en ;
+    geolod:countD13CSamples 53 ;
+    geolod:countD18OSamples 53 ;
+    geolod:elevation_m 300.0 ;
+    geolod:siteId 199 ;
+    geo:hasGeometry sisal:geom_site_0199 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0200 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Minnetonka cave"@en ;
+    geolod:countD13CSamples 694 ;
+    geolod:countD18OSamples 694 ;
+    geolod:elevation_m 2347.0 ;
+    geolod:siteId 200 ;
+    geo:hasGeometry sisal:geom_site_0200 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0201 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Moondyne cave"@en ;
+    geolod:countD13CSamples 44 ;
+    geolod:countD18OSamples 44 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 201 ;
+    geo:hasGeometry sisal:geom_site_0201 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0202 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Piani Eterni karst system"@en ;
+    geolod:countD13CSamples 964 ;
+    geolod:countD18OSamples 964 ;
+    geolod:elevation_m 1893.0 ;
+    geolod:siteId 202 ;
+    geo:hasGeometry sisal:geom_site_0202 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0203 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Poleva cave"@en ;
+    geolod:countD13CSamples 154 ;
+    geolod:countD18OSamples 154 ;
+    geolod:elevation_m 390.0 ;
+    geolod:siteId 203 ;
+    geo:hasGeometry sisal:geom_site_0203 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0204 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Xibalba cave"@en ;
+    geolod:countD13CSamples 582 ;
+    geolod:countD18OSamples 595 ;
+    geolod:elevation_m 350.0 ;
+    geolod:siteId 204 ;
+    geo:hasGeometry sisal:geom_site_0204 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0205 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "São Bernardo cave"@en ;
+    geolod:countD13CSamples 1714 ;
+    geolod:countD18OSamples 3428 ;
+    geolod:elevation_m 631.0 ;
+    geolod:siteId 205 ;
+    geo:hasGeometry sisal:geom_site_0205 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0206 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "São Matheus cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 576 ;
+    geolod:elevation_m 631.0 ;
+    geolod:siteId 206 ;
+    geo:hasGeometry sisal:geom_site_0206 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0207 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Shatuca cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 3966 ;
+    geolod:elevation_m 1960.0 ;
+    geolod:siteId 207 ;
+    geo:hasGeometry sisal:geom_site_0207 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0208 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Tangga cave"@en ;
+    geolod:countD13CSamples 981 ;
+    geolod:countD18OSamples 981 ;
+    geolod:elevation_m 600.0 ;
+    geolod:siteId 208 ;
+    geo:hasGeometry sisal:geom_site_0208 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0209 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Uluu-Too cave"@en ;
+    geolod:countD13CSamples 1807 ;
+    geolod:countD18OSamples 1807 ;
+    geolod:elevation_m 1490.0 ;
+    geolod:siteId 209 ;
+    geo:hasGeometry sisal:geom_site_0209 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0210 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "White moon cave"@en ;
+    geolod:countD13CSamples 273 ;
+    geolod:countD18OSamples 273 ;
+    geolod:elevation_m 170.0 ;
+    geolod:siteId 210 ;
+    geo:hasGeometry sisal:geom_site_0210 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0211 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Xiangshui cave"@en ;
+    geolod:countD13CSamples 248 ;
+    geolod:countD18OSamples 248 ;
+    geolod:elevation_m 380.0 ;
+    geolod:siteId 211 ;
+    geo:hasGeometry sisal:geom_site_0211 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0212 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Peqiin cave"@en ;
+    geolod:countD13CSamples 569 ;
+    geolod:countD18OSamples 569 ;
+    geolod:elevation_m 650.0 ;
+    geolod:siteId 212 ;
+    geo:hasGeometry sisal:geom_site_0212 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0213 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Tausoare cave"@en ;
+    geolod:countD13CSamples 740 ;
+    geolod:countD18OSamples 740 ;
+    geolod:elevation_m 950.0 ;
+    geolod:siteId 213 ;
+    geo:hasGeometry sisal:geom_site_0213 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0214 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cave C126"@en ;
+    geolod:countD13CSamples 312 ;
+    geolod:countD18OSamples 312 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 214 ;
+    geo:hasGeometry sisal:geom_site_0214 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0215 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Chaara cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 2350 ;
+    geolod:elevation_m 1260.0 ;
+    geolod:siteId 215 ;
+    geo:hasGeometry sisal:geom_site_0215 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0216 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Dark cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 510 ;
+    geolod:elevation_m 1120.0 ;
+    geolod:siteId 216 ;
+    geo:hasGeometry sisal:geom_site_0216 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0217 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "E'mei cave"@en ;
+    geolod:countD13CSamples 779 ;
+    geolod:countD18OSamples 779 ;
+    geolod:elevation_m 53.0 ;
+    geolod:siteId 217 ;
+    geo:hasGeometry sisal:geom_site_0217 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0218 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Nuanhe cave"@en ;
+    geolod:countD13CSamples 687 ;
+    geolod:countD18OSamples 687 ;
+    geolod:elevation_m 500.0 ;
+    geolod:siteId 218 ;
+    geo:hasGeometry sisal:geom_site_0218 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0219 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Shennong cave"@en ;
+    geolod:countD13CSamples 2523 ;
+    geolod:countD18OSamples 2523 ;
+    geolod:elevation_m 383.0 ;
+    geolod:siteId 219 ;
+    geo:hasGeometry sisal:geom_site_0219 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0220 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Baeg-nyong cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 303 ;
+    geolod:elevation_m 250.0 ;
+    geolod:siteId 220 ;
+    geo:hasGeometry sisal:geom_site_0220 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0221 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "La Vierge cave"@en ;
+    geolod:countD13CSamples 2666 ;
+    geolod:countD18OSamples 2666 ;
+    geolod:elevation_m 32.0 ;
+    geolod:siteId 221 ;
+    geo:hasGeometry sisal:geom_site_0221 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0222 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Patate cave"@en ;
+    geolod:countD13CSamples 190 ;
+    geolod:countD18OSamples 190 ;
+    geolod:elevation_m 20.0 ;
+    geolod:siteId 222 ;
+    geo:hasGeometry sisal:geom_site_0222 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0223 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wanxiang cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1448 ;
+    geolod:elevation_m 1200.0 ;
+    geolod:siteId 223 ;
+    geo:hasGeometry sisal:geom_site_0223 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0224 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Xianglong cave"@en ;
+    geolod:countD13CSamples 981 ;
+    geolod:countD18OSamples 981 ;
+    geolod:elevation_m 940.0 ;
+    geolod:siteId 224 ;
+    geo:hasGeometry sisal:geom_site_0224 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0225 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Chiflonkhakha cave"@en ;
+    geolod:countD13CSamples 371 ;
+    geolod:countD18OSamples 702 ;
+    geolod:elevation_m 2660.0 ;
+    geolod:siteId 225 ;
+    geo:hasGeometry sisal:geom_site_0225 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0226 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cueva del Diamante"@en ;
+    geolod:countD13CSamples 1838 ;
+    geolod:countD18OSamples 1835 ;
+    geolod:elevation_m 960.0 ;
+    geolod:siteId 226 ;
+    geo:hasGeometry sisal:geom_site_0226 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0227 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "El Capitan cave"@en ;
+    geolod:countD13CSamples 453 ;
+    geolod:countD18OSamples 453 ;
+    geolod:elevation_m 80.0 ;
+    geolod:siteId 227 ;
+    geo:hasGeometry sisal:geom_site_0227 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0228 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bat cave"@en ;
+    geolod:countD13CSamples 147 ;
+    geolod:countD18OSamples 147 ;
+    geolod:elevation_m 1300.0 ;
+    geolod:siteId 228 ;
+    geo:hasGeometry sisal:geom_site_0228 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0229 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Actun Tunichil Muknal"@en ;
+    geolod:countD13CSamples 1248 ;
+    geolod:countD18OSamples 1248 ;
+    geolod:elevation_m 40.0 ;
+    geolod:siteId 229 ;
+    geo:hasGeometry sisal:geom_site_0229 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0230 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Marota cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 734 ;
+    geolod:elevation_m 560.0 ;
+    geolod:siteId 230 ;
+    geo:hasGeometry sisal:geom_site_0230 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0231 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pacupahuain cave"@en ;
+    geolod:countD13CSamples 1010 ;
+    geolod:countD18OSamples 1009 ;
+    geolod:elevation_m 3800.0 ;
+    geolod:siteId 231 ;
+    geo:hasGeometry sisal:geom_site_0231 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0232 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Rio Secreto cave system"@en ;
+    geolod:countD13CSamples 333 ;
+    geolod:countD18OSamples 1160 ;
+    geolod:elevation_m 20.0 ;
+    geolod:siteId 232 ;
+    geo:hasGeometry sisal:geom_site_0232 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0233 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Robinson cave"@en ;
+    geolod:countD13CSamples 136 ;
+    geolod:countD18OSamples 136 ;
+    geolod:elevation_m 2007.0 ;
+    geolod:siteId 233 ;
+    geo:hasGeometry sisal:geom_site_0233 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0234 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Santana cave"@en ;
+    geolod:countD13CSamples 665 ;
+    geolod:countD18OSamples 665 ;
+    geolod:elevation_m 250.0 ;
+    geolod:siteId 234 ;
+    geo:hasGeometry sisal:geom_site_0234 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0235 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cueva del Tigre Perdido"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 590 ;
+    geolod:elevation_m 1000.0 ;
+    geolod:siteId 235 ;
+    geo:hasGeometry sisal:geom_site_0235 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0236 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Toca da Boa Vista"@en ;
+    geolod:countD13CSamples 61 ;
+    geolod:countD18OSamples 806 ;
+    geolod:elevation_m 600.0 ;
+    geolod:siteId 236 ;
+    geo:hasGeometry sisal:geom_site_0236 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0237 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Umajalanta cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 242 ;
+    geolod:elevation_m 2830.0 ;
+    geolod:siteId 237 ;
+    geo:hasGeometry sisal:geom_site_0237 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0238 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Akalagavi cave"@en ;
+    geolod:countD13CSamples 301 ;
+    geolod:countD18OSamples 301 ;
+    geolod:elevation_m 521.0 ;
+    geolod:siteId 238 ;
+    geo:hasGeometry sisal:geom_site_0238 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0239 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Baluk cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 250 ;
+    geolod:elevation_m 2752.0 ;
+    geolod:siteId 239 ;
+    geo:hasGeometry sisal:geom_site_0239 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0240 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Baratang cave"@en ;
+    geolod:countD13CSamples 226 ;
+    geolod:countD18OSamples 226 ;
+    geolod:elevation_m 20.0 ;
+    geolod:siteId 240 ;
+    geo:hasGeometry sisal:geom_site_0240 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0241 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Gempa bumi cave"@en ;
+    geolod:countD13CSamples 1077 ;
+    geolod:countD18OSamples 1077 ;
+    geolod:elevation_m 140.0 ;
+    geolod:siteId 241 ;
+    geo:hasGeometry sisal:geom_site_0241 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0242 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Haozhu cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 422 ;
+    geolod:elevation_m 1017.0 ;
+    geolod:siteId 242 ;
+    geo:hasGeometry sisal:geom_site_0242 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0243 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kailash cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1186 ;
+    geolod:elevation_m 490.0 ;
+    geolod:siteId 243 ;
+    geo:hasGeometry sisal:geom_site_0243 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0244 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lianhua cave, Shanxi"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1138 ;
+    geolod:elevation_m 1200.0 ;
+    geolod:siteId 244 ;
+    geo:hasGeometry sisal:geom_site_0244 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0245 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Nakarallu cave"@en ;
+    geolod:countD13CSamples 1134 ;
+    geolod:countD18OSamples 1134 ;
+    geolod:elevation_m 280.0 ;
+    geolod:siteId 245 ;
+    geo:hasGeometry sisal:geom_site_0245 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0246 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Palawan cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 335 ;
+    geolod:elevation_m 2.0 ;
+    geolod:siteId 246 ;
+    geo:hasGeometry sisal:geom_site_0246 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0247 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Shalaii cave"@en ;
+    geolod:countD13CSamples 65 ;
+    geolod:countD18OSamples 65 ;
+    geolod:elevation_m 739.0 ;
+    geolod:siteId 247 ;
+    geo:hasGeometry sisal:geom_site_0247 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0248 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Shenqi cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 787 ;
+    geolod:elevation_m 1407.0 ;
+    geolod:siteId 248 ;
+    geo:hasGeometry sisal:geom_site_0248 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0249 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Shigao cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 453 ;
+    geolod:elevation_m 970.0 ;
+    geolod:siteId 249 ;
+    geo:hasGeometry sisal:geom_site_0249 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0250 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wuya cave"@en ;
+    geolod:countD13CSamples 2282 ;
+    geolod:countD18OSamples 2576 ;
+    geolod:elevation_m 1370.0 ;
+    geolod:siteId 250 ;
+    geo:hasGeometry sisal:geom_site_0250 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0251 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Zhenzhu cave"@en ;
+    geolod:countD13CSamples 470 ;
+    geolod:countD18OSamples 470 ;
+    geolod:elevation_m 975.0 ;
+    geolod:siteId 251 ;
+    geo:hasGeometry sisal:geom_site_0251 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0252 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Andriamaniloke"@en ;
+    geolod:countD13CSamples 106 ;
+    geolod:countD18OSamples 106 ;
+    geolod:elevation_m 20.0 ;
+    geolod:siteId 252 ;
+    geo:hasGeometry sisal:geom_site_0252 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0253 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Hoq cave"@en ;
+    geolod:countD13CSamples 1426 ;
+    geolod:countD18OSamples 1426 ;
+    geolod:elevation_m 335.0 ;
+    geolod:siteId 253 ;
+    geo:hasGeometry sisal:geom_site_0253 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0254 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "PP29"@en ;
+    geolod:countD13CSamples 557 ;
+    geolod:countD18OSamples 554 ;
+    geolod:elevation_m 10.0 ;
+    geolod:siteId 254 ;
+    geo:hasGeometry sisal:geom_site_0254 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0255 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Mitoho"@en ;
+    geolod:countD13CSamples 1387 ;
+    geolod:countD18OSamples 1387 ;
+    geolod:elevation_m 20.0 ;
+    geolod:siteId 255 ;
+    geo:hasGeometry sisal:geom_site_0255 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0256 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lithophagus cave"@en ;
+    geolod:countD13CSamples 42 ;
+    geolod:countD18OSamples 42 ;
+    geolod:elevation_m 545.0 ;
+    geolod:siteId 256 ;
+    geo:hasGeometry sisal:geom_site_0256 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0257 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Akcakale cave"@en ;
+    geolod:countD13CSamples 218 ;
+    geolod:countD18OSamples 218 ;
+    geolod:elevation_m 1530.0 ;
+    geolod:siteId 257 ;
+    geo:hasGeometry sisal:geom_site_0257 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0258 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "B7 cave"@en ;
+    geolod:countD13CSamples 227 ;
+    geolod:countD18OSamples 227 ;
+    geolod:elevation_m 185.0 ;
+    geolod:siteId 258 ;
+    geo:hasGeometry sisal:geom_site_0258 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0259 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cobre cave"@en ;
+    geolod:countD13CSamples 252 ;
+    geolod:countD18OSamples 252 ;
+    geolod:elevation_m 1600.0 ;
+    geolod:siteId 259 ;
+    geo:hasGeometry sisal:geom_site_0259 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0260 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Crovassa Azzurra"@en ;
+    geolod:countD13CSamples 737 ;
+    geolod:countD18OSamples 737 ;
+    geolod:elevation_m 410.0 ;
+    geolod:siteId 260 ;
+    geo:hasGeometry sisal:geom_site_0260 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0261 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "El Soplao cave"@en ;
+    geolod:countD13CSamples 329 ;
+    geolod:countD18OSamples 329 ;
+    geolod:elevation_m 550.0 ;
+    geolod:siteId 261 ;
+    geo:hasGeometry sisal:geom_site_0261 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0262 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bleßberg cave"@en ;
+    geolod:countD13CSamples 1957 ;
+    geolod:countD18OSamples 1957 ;
+    geolod:elevation_m 500.0 ;
+    geolod:siteId 262 ;
+    geo:hasGeometry sisal:geom_site_0262 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0263 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bulgarian Orlova Chuka cave"@en ;
+    geolod:countD13CSamples 763 ;
+    geolod:countD18OSamples 763 ;
+    geolod:elevation_m 150.0 ;
+    geolod:siteId 263 ;
+    geo:hasGeometry sisal:geom_site_0263 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0264 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Strašna peć cave"@en ;
+    geolod:countD13CSamples 258 ;
+    geolod:countD18OSamples 258 ;
+    geolod:elevation_m 74.0 ;
+    geolod:siteId 264 ;
+    geo:hasGeometry sisal:geom_site_0264 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0265 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Coves de Campanet"@en ;
+    geolod:countD13CSamples 448 ;
+    geolod:countD18OSamples 448 ;
+    geolod:elevation_m 65.0 ;
+    geolod:siteId 265 ;
+    geo:hasGeometry sisal:geom_site_0265 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0266 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cueva Victoria"@en ;
+    geolod:countD13CSamples 1030 ;
+    geolod:countD18OSamples 1030 ;
+    geolod:elevation_m 75.0 ;
+    geolod:siteId 266 ;
+    geo:hasGeometry sisal:geom_site_0266 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0267 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Gruta do Casal da Lebre"@en ;
+    geolod:countD13CSamples 55 ;
+    geolod:countD18OSamples 55 ;
+    geolod:elevation_m 130.0 ;
+    geolod:siteId 267 ;
+    geo:hasGeometry sisal:geom_site_0267 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0268 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pere Noel cave"@en ;
+    geolod:countD13CSamples 260 ;
+    geolod:countD18OSamples 260 ;
+    geolod:elevation_m 230.0 ;
+    geolod:siteId 268 ;
+    geo:hasGeometry sisal:geom_site_0268 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0269 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Gejkar cave"@en ;
+    geolod:countD13CSamples 841 ;
+    geolod:countD18OSamples 841 ;
+    geolod:elevation_m 650.0 ;
+    geolod:siteId 269 ;
+    geo:hasGeometry sisal:geom_site_0269 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0270 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Gol-E-Zard cave"@en ;
+    geolod:countD13CSamples 259 ;
+    geolod:countD18OSamples 259 ;
+    geolod:elevation_m 2535.0 ;
+    geolod:siteId 270 ;
+    geo:hasGeometry sisal:geom_site_0270 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0271 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jersey cave"@en ;
+    geolod:countD13CSamples 132 ;
+    geolod:countD18OSamples 132 ;
+    geolod:elevation_m 800.0 ;
+    geolod:siteId 271 ;
+    geo:hasGeometry sisal:geom_site_0271 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0272 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Metro cave"@en ;
+    geolod:countD13CSamples 488 ;
+    geolod:countD18OSamples 489 ;
+    geolod:elevation_m 60.0 ;
+    geolod:siteId 272 ;
+    geo:hasGeometry sisal:geom_site_0272 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0273 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Crystal cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1054 ;
+    geolod:elevation_m 1386.0 ;
+    geolod:siteId 273 ;
+    geo:hasGeometry sisal:geom_site_0273 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0274 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Terciopelo cave"@en ;
+    geolod:countD13CSamples 1705 ;
+    geolod:countD18OSamples 1705 ;
+    geolod:elevation_m 370.0 ;
+    geolod:siteId 274 ;
+    geo:hasGeometry sisal:geom_site_0274 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0275 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Buraca Gloriosa"@en ;
+    geolod:countD13CSamples 1400 ;
+    geolod:countD18OSamples 1400 ;
+    geolod:elevation_m 420.0 ;
+    geolod:siteId 275 ;
+    geo:hasGeometry sisal:geom_site_0275 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0276 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Béke cave"@en ;
+    geolod:countD13CSamples 261 ;
+    geolod:countD18OSamples 261 ;
+    geolod:elevation_m 338.0 ;
+    geolod:siteId 276 ;
+    geo:hasGeometry sisal:geom_site_0276 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0277 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Huagapo cave"@en ;
+    geolod:countD13CSamples 1347 ;
+    geolod:countD18OSamples 4220 ;
+    geolod:elevation_m 3850.0 ;
+    geolod:siteId 277 ;
+    geo:hasGeometry sisal:geom_site_0277 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0278 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pink Panther cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 682 ;
+    geolod:elevation_m 1900.0 ;
+    geolod:siteId 278 ;
+    geo:hasGeometry sisal:geom_site_0278 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0279 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Staircase cave"@en ;
+    geolod:countD13CSamples 632 ;
+    geolod:countD18OSamples 632 ;
+    geolod:elevation_m 30.0 ;
+    geolod:siteId 279 ;
+    geo:hasGeometry sisal:geom_site_0279 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0280 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Atta cave"@en ;
+    geolod:countD13CSamples 384 ;
+    geolod:countD18OSamples 384 ;
+    geolod:elevation_m 308.0 ;
+    geolod:siteId 280 ;
+    geo:hasGeometry sisal:geom_site_0280 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0281 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Venado cave"@en ;
+    geolod:countD13CSamples 253 ;
+    geolod:countD18OSamples 253 ;
+    geolod:elevation_m 380.0 ;
+    geolod:siteId 281 ;
+    geo:hasGeometry sisal:geom_site_0281 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0282 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wadi Sannur cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 70 ;
+    geolod:elevation_m 200.0 ;
+    geolod:siteId 282 ;
+    geo:hasGeometry sisal:geom_site_0282 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0283 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Babylon cave"@en ;
+    geolod:countD13CSamples 219 ;
+    geolod:countD18OSamples 219 ;
+    geolod:elevation_m 175.0 ;
+    geolod:siteId 283 ;
+    geo:hasGeometry sisal:geom_site_0283 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0284 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Creighton`s cave"@en ;
+    geolod:countD13CSamples 40 ;
+    geolod:countD18OSamples 40 ;
+    geolod:elevation_m 80.0 ;
+    geolod:siteId 284 ;
+    geo:hasGeometry sisal:geom_site_0284 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0285 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Disbelief cave"@en ;
+    geolod:countD13CSamples 46 ;
+    geolod:countD18OSamples 46 ;
+    geolod:elevation_m 600.0 ;
+    geolod:siteId 285 ;
+    geo:hasGeometry sisal:geom_site_0285 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0286 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "La Garma cave"@en ;
+    geolod:countD13CSamples 497 ;
+    geolod:countD18OSamples 765 ;
+    geolod:elevation_m 85.0 ;
+    geolod:siteId 286 ;
+    geo:hasGeometry sisal:geom_site_0286 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0287 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Twin Forks cave"@en ;
+    geolod:countD13CSamples 34 ;
+    geolod:countD18OSamples 34 ;
+    geolod:elevation_m 80.0 ;
+    geolod:siteId 287 ;
+    geo:hasGeometry sisal:geom_site_0287 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0288 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wet Neck cave"@en ;
+    geolod:countD13CSamples 140 ;
+    geolod:countD18OSamples 140 ;
+    geolod:elevation_m 90.0 ;
+    geolod:siteId 288 ;
+    geo:hasGeometry sisal:geom_site_0288 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0289 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Gassel Tropfsteinhöhle"@en ;
+    geolod:countD13CSamples 3047 ;
+    geolod:countD18OSamples 3047 ;
+    geolod:elevation_m 1225.0 ;
+    geolod:siteId 289 ;
+    geo:hasGeometry sisal:geom_site_0289 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0290 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Grete-Ruth Shaft"@en ;
+    geolod:countD13CSamples 705 ;
+    geolod:countD18OSamples 705 ;
+    geolod:elevation_m 1435.0 ;
+    geolod:siteId 290 ;
+    geo:hasGeometry sisal:geom_site_0290 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0292 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Limnon cave"@en ;
+    geolod:countD13CSamples 177 ;
+    geolod:countD18OSamples 177 ;
+    geolod:elevation_m 820.0 ;
+    geolod:siteId 292 ;
+    geo:hasGeometry sisal:geom_site_0292 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0293 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Tham Doun Mai"@en ;
+    geolod:countD13CSamples 2481 ;
+    geolod:countD18OSamples 2481 ;
+    geolod:elevation_m 352.0 ;
+    geolod:siteId 293 ;
+    geo:hasGeometry sisal:geom_site_0293 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0294 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Palco cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 340 ;
+    geolod:elevation_m 250.0 ;
+    geolod:siteId 294 ;
+    geo:hasGeometry sisal:geom_site_0294 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0295 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Qadisha cave"@en ;
+    geolod:countD13CSamples 228 ;
+    geolod:countD18OSamples 228 ;
+    geolod:elevation_m 1720.0 ;
+    geolod:siteId 295 ;
+    geo:hasGeometry sisal:geom_site_0295 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0296 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Amir Timur cave"@en ;
+    geolod:countD13CSamples 270 ;
+    geolod:countD18OSamples 270 ;
+    geolod:elevation_m 1813.0 ;
+    geolod:siteId 296 ;
+    geo:hasGeometry sisal:geom_site_0296 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0297 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bàsura cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 265 ;
+    geolod:elevation_m 200.0 ;
+    geolod:siteId 297 ;
+    geo:hasGeometry sisal:geom_site_0297 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0298 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Belum cave"@en ;
+    geolod:countD13CSamples 861 ;
+    geolod:countD18OSamples 861 ;
+    geolod:elevation_m 367.0 ;
+    geolod:siteId 298 ;
+    geo:hasGeometry sisal:geom_site_0298 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0299 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Calabrez"@en ;
+    geolod:countD13CSamples 42 ;
+    geolod:countD18OSamples 42 ;
+    geolod:elevation_m 121.0 ;
+    geolod:siteId 299 ;
+    geo:hasGeometry sisal:geom_site_0299 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0300 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Careys cave"@en ;
+    geolod:countD13CSamples 178 ;
+    geolod:countD18OSamples 178 ;
+    geolod:elevation_m 393.0 ;
+    geolod:siteId 300 ;
+    geo:hasGeometry sisal:geom_site_0300 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0301 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cathedral cave"@en ;
+    geolod:countD13CSamples 575 ;
+    geolod:countD18OSamples 575 ;
+    geolod:elevation_m 300.0 ;
+    geolod:siteId 301 ;
+    geo:hasGeometry sisal:geom_site_0301 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0302 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Crevice cave"@en ;
+    geolod:countD13CSamples 352 ;
+    geolod:countD18OSamples 352 ;
+    geolod:elevation_m 14.0 ;
+    geolod:siteId 302 ;
+    geo:hasGeometry sisal:geom_site_0302 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0303 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Crystal cave, Australia"@en ;
+    geolod:countD13CSamples 246 ;
+    geolod:countD18OSamples 246 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 303 ;
+    geo:hasGeometry sisal:geom_site_0303 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0304 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cueva Bonita"@en ;
+    geolod:countD13CSamples 399 ;
+    geolod:countD18OSamples 399 ;
+    geolod:elevation_m 1071.0 ;
+    geolod:siteId 304 ;
+    geo:hasGeometry sisal:geom_site_0304 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0305 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cueva Rosa"@en ;
+    geolod:countD13CSamples 499 ;
+    geolod:countD18OSamples 499 ;
+    geolod:elevation_m 121.0 ;
+    geolod:siteId 305 ;
+    geo:hasGeometry sisal:geom_site_0305 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0306 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Cuíca cave"@en ;
+    geolod:countD13CSamples 1505 ;
+    geolod:countD18OSamples 1509 ;
+    geolod:elevation_m 310.0 ;
+    geolod:siteId 306 ;
+    geo:hasGeometry sisal:geom_site_0306 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0307 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Efflux cave"@en ;
+    geolod:countD13CSamples 1666 ;
+    geolod:countD18OSamples 1657 ;
+    geolod:elevation_m 716.0 ;
+    geolod:siteId 307 ;
+    geo:hasGeometry sisal:geom_site_0307 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0308 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "GD8"@en ;
+    geolod:countD13CSamples 1918 ;
+    geolod:countD18OSamples 1918 ;
+    geolod:elevation_m 520.0 ;
+    geolod:siteId 308 ;
+    geo:hasGeometry sisal:geom_site_0308 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0309 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Goda Mea cave"@en ;
+    geolod:countD13CSamples 1351 ;
+    geolod:countD18OSamples 1354 ;
+    geolod:elevation_m 1574.0 ;
+    geolod:siteId 309 ;
+    geo:hasGeometry sisal:geom_site_0309 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0310 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Golgotha cave"@en ;
+    geolod:countD13CSamples 897 ;
+    geolod:countD18OSamples 897 ;
+    geolod:elevation_m 72.0 ;
+    geolod:siteId 310 ;
+    geo:hasGeometry sisal:geom_site_0310 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0311 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Harrie Wood cave"@en ;
+    geolod:countD13CSamples 580 ;
+    geolod:countD18OSamples 579 ;
+    geolod:elevation_m 965.0 ;
+    geolod:siteId 311 ;
+    geo:hasGeometry sisal:geom_site_0311 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0312 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Heifeng cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 325 ;
+    geolod:elevation_m 2132.0 ;
+    geolod:siteId 312 ;
+    geo:hasGeometry sisal:geom_site_0312 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0313 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Herbstlabyrinth cave"@en ;
+    geolod:countD13CSamples 1598 ;
+    geolod:countD18OSamples 1598 ;
+    geolod:elevation_m 435.0 ;
+    geolod:siteId 313 ;
+    geo:hasGeometry sisal:geom_site_0313 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0314 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Herolds Bay cave"@en ;
+    geolod:countD13CSamples 484 ;
+    geolod:countD18OSamples 477 ;
+    geolod:elevation_m 5.0 ;
+    geolod:siteId 314 ;
+    geo:hasGeometry sisal:geom_site_0314 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0315 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Huangchao cave"@en ;
+    geolod:countD13CSamples 111 ;
+    geolod:countD18OSamples 111 ;
+    geolod:elevation_m 518.0 ;
+    geolod:siteId 315 ;
+    geo:hasGeometry sisal:geom_site_0315 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0316 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Hüttenbläserschachthöhle"@en ;
+    geolod:countD13CSamples 1348 ;
+    geolod:countD18OSamples 1346 ;
+    geolod:elevation_m 430.0 ;
+    geolod:siteId 316 ;
+    geo:hasGeometry sisal:geom_site_0316 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0317 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jiangjun cave"@en ;
+    geolod:countD13CSamples 323 ;
+    geolod:countD18OSamples 323 ;
+    geolod:elevation_m 200.0 ;
+    geolod:siteId 317 ;
+    geo:hasGeometry sisal:geom_site_0317 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0318 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jinfo cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 592 ;
+    geolod:elevation_m 2114.0 ;
+    geolod:siteId 318 ;
+    geo:hasGeometry sisal:geom_site_0318 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0319 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Jiulong cave"@en ;
+    geolod:countD13CSamples 505 ;
+    geolod:countD18OSamples 505 ;
+    geolod:elevation_m 162.0 ;
+    geolod:siteId 319 ;
+    geo:hasGeometry sisal:geom_site_0319 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0320 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Katalekhor"@en ;
+    geolod:countD13CSamples 287 ;
+    geolod:countD18OSamples 287 ;
+    geolod:elevation_m 1719.0 ;
+    geolod:siteId 320 ;
+    geo:hasGeometry sisal:geom_site_0320 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0321 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Klang"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 677 ;
+    geolod:elevation_m 50.0 ;
+    geolod:siteId 321 ;
+    geo:hasGeometry sisal:geom_site_0321 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0322 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kuna Ba"@en ;
+    geolod:countD13CSamples 3082 ;
+    geolod:countD18OSamples 3082 ;
+    geolod:elevation_m 660.0 ;
+    geolod:siteId 322 ;
+    geo:hasGeometry sisal:geom_site_0322 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0323 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kyok-Tash cave"@en ;
+    geolod:countD13CSamples 818 ;
+    geolod:countD18OSamples 818 ;
+    geolod:elevation_m 890.0 ;
+    geolod:siteId 323 ;
+    geo:hasGeometry sisal:geom_site_0323 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0324 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "La Vallina"@en ;
+    geolod:countD13CSamples 969 ;
+    geolod:countD18OSamples 969 ;
+    geolod:elevation_m 70.0 ;
+    geolod:siteId 324 ;
+    geo:hasGeometry sisal:geom_site_0324 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0325 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Larga cave"@en ;
+    geolod:countD13CSamples 2032 ;
+    geolod:countD18OSamples 2049 ;
+    geolod:elevation_m 350.0 ;
+    geolod:siteId 325 ;
+    geo:hasGeometry sisal:geom_site_0325 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0326 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Linzhu cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 356 ;
+    geolod:elevation_m 780.0 ;
+    geolod:siteId 326 ;
+    geo:hasGeometry sisal:geom_site_0326 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0327 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Manita peć cave"@en ;
+    geolod:countD13CSamples 405 ;
+    geolod:countD18OSamples 405 ;
+    geolod:elevation_m 570.0 ;
+    geolod:siteId 327 ;
+    geo:hasGeometry sisal:geom_site_0327 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0328 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Mata Virgem cave"@en ;
+    geolod:countD13CSamples 536 ;
+    geolod:countD18OSamples 536 ;
+    geolod:elevation_m 365.0 ;
+    geolod:siteId 328 ;
+    geo:hasGeometry sisal:geom_site_0328 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0329 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Matupi cave"@en ;
+    geolod:countD13CSamples 363 ;
+    geolod:countD18OSamples 363 ;
+    geolod:elevation_m 1110.0 ;
+    geolod:siteId 329 ;
+    geo:hasGeometry sisal:geom_site_0329 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0330 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Meravelles cave"@en ;
+    geolod:countD13CSamples 250 ;
+    geolod:countD18OSamples 250 ;
+    geolod:elevation_m 125.0 ;
+    geolod:siteId 330 ;
+    geo:hasGeometry sisal:geom_site_0330 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0331 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Mizpe Shelagim"@en ;
+    geolod:countD13CSamples 282 ;
+    geolod:countD18OSamples 279 ;
+    geolod:elevation_m 2180.0 ;
+    geolod:siteId 331 ;
+    geo:hasGeometry sisal:geom_site_0331 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0332 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Murada"@en ;
+    geolod:countD13CSamples 93 ;
+    geolod:countD18OSamples 93 ;
+    geolod:elevation_m 80.0 ;
+    geolod:siteId 332 ;
+    geo:hasGeometry sisal:geom_site_0332 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0333 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Neotektonik cave"@en ;
+    geolod:countD13CSamples 2285 ;
+    geolod:countD18OSamples 2285 ;
+    geolod:elevation_m 1700.0 ;
+    geolod:siteId 333 ;
+    geo:hasGeometry sisal:geom_site_0333 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0334 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Nova Grgosova cave"@en ;
+    geolod:countD13CSamples 839 ;
+    geolod:countD18OSamples 839 ;
+    geolod:elevation_m 239.0 ;
+    geolod:siteId 334 ;
+    geo:hasGeometry sisal:geom_site_0334 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0335 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Ostolo cave"@en ;
+    geolod:countD13CSamples 1307 ;
+    geolod:countD18OSamples 1307 ;
+    geolod:elevation_m 248.0 ;
+    geolod:siteId 335 ;
+    geo:hasGeometry sisal:geom_site_0335 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0336 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pentadactylos"@en ;
+    geolod:countD13CSamples 684 ;
+    geolod:countD18OSamples 685 ;
+    geolod:elevation_m 800.0 ;
+    geolod:siteId 336 ;
+    geo:hasGeometry sisal:geom_site_0336 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0337 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pir Ghar cave"@en ;
+    geolod:countD13CSamples 116 ;
+    geolod:countD18OSamples 116 ;
+    geolod:elevation_m 1600.0 ;
+    geolod:siteId 337 ;
+    geo:hasGeometry sisal:geom_site_0337 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0338 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Coves del pirata"@en ;
+    geolod:countD13CSamples 90 ;
+    geolod:countD18OSamples 90 ;
+    geolod:elevation_m 32.0 ;
+    geolod:siteId 338 ;
+    geo:hasGeometry sisal:geom_site_0338 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0339 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pozzo Cucù cave"@en ;
+    geolod:countD13CSamples 2658 ;
+    geolod:countD18OSamples 2658 ;
+    geolod:elevation_m 276.0 ;
+    geolod:siteId 339 ;
+    geo:hasGeometry sisal:geom_site_0339 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0340 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Qujia cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 95 ;
+    geolod:elevation_m 456.0 ;
+    geolod:siteId 340 ;
+    geo:hasGeometry sisal:geom_site_0340 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0341 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Rey Marcos"@en ;
+    geolod:countD13CSamples 520 ;
+    geolod:countD18OSamples 520 ;
+    geolod:elevation_m 1460.0 ;
+    geolod:siteId 341 ;
+    geo:hasGeometry sisal:geom_site_0341 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0342 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Sa balma des quartó cave"@en ;
+    geolod:countD13CSamples 1008 ;
+    geolod:countD18OSamples 1008 ;
+    geolod:elevation_m 10.5 ;
+    geolod:siteId 342 ;
+    geo:hasGeometry sisal:geom_site_0342 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0343 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Sant'Angelo cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1002 ;
+    geolod:elevation_m 148.0 ;
+    geolod:siteId 343 ;
+    geo:hasGeometry sisal:geom_site_0343 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0344 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Sarma cave"@en ;
+    geolod:countD13CSamples 288 ;
+    geolod:countD18OSamples 288 ;
+    geolod:elevation_m 2150.0 ;
+    geolod:siteId 344 ;
+    geo:hasGeometry sisal:geom_site_0344 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0345 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Schratten cave"@en ;
+    geolod:countD13CSamples 584 ;
+    geolod:countD18OSamples 584 ;
+    geolod:elevation_m 1580.0 ;
+    geolod:siteId 345 ;
+    geo:hasGeometry sisal:geom_site_0345 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0346 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Shijiangjun cave"@en ;
+    geolod:countD13CSamples 959 ;
+    geolod:countD18OSamples 959 ;
+    geolod:elevation_m 1300.0 ;
+    geolod:siteId 346 ;
+    geo:hasGeometry sisal:geom_site_0346 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0347 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Shizi cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 312 ;
+    geolod:elevation_m 401.0 ;
+    geolod:siteId 347 ;
+    geo:hasGeometry sisal:geom_site_0347 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0348 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Sudwala cave"@en ;
+    geolod:countD13CSamples 109 ;
+    geolod:countD18OSamples 109 ;
+    geolod:elevation_m 975.0 ;
+    geolod:siteId 348 ;
+    geo:hasGeometry sisal:geom_site_0348 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0349 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Talisman cave"@en ;
+    geolod:countD13CSamples 1513 ;
+    geolod:countD18OSamples 1513 ;
+    geolod:elevation_m 1486.0 ;
+    geolod:siteId 349 ;
+    geo:hasGeometry sisal:geom_site_0349 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0350 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Toca da Barriguda"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 298 ;
+    geolod:elevation_m 600.0 ;
+    geolod:siteId 350 ;
+    geo:hasGeometry sisal:geom_site_0350 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0351 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Trapiá cave"@en ;
+    geolod:countD13CSamples 855 ;
+    geolod:countD18OSamples 819 ;
+    geolod:elevation_m 72.0 ;
+    geolod:siteId 351 ;
+    geo:hasGeometry sisal:geom_site_0351 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0352 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "War Eagle"@en ;
+    geolod:countD13CSamples 657 ;
+    geolod:countD18OSamples 659 ;
+    geolod:elevation_m 210.0 ;
+    geolod:siteId 352 ;
+    geo:hasGeometry sisal:geom_site_0352 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0353 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wintimdouine"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 3506 ;
+    geolod:elevation_m 1250.0 ;
+    geolod:siteId 353 ;
+    geo:hasGeometry sisal:geom_site_0353 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0354 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Wulu cave"@en ;
+    geolod:countD13CSamples 945 ;
+    geolod:countD18OSamples 1111 ;
+    geolod:elevation_m 1440.0 ;
+    geolod:siteId 354 ;
+    geo:hasGeometry sisal:geom_site_0354 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0355 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Xiniu cave"@en ;
+    geolod:countD13CSamples 1582 ;
+    geolod:countD18OSamples 1582 ;
+    geolod:elevation_m 1900.0 ;
+    geolod:siteId 355 ;
+    geo:hasGeometry sisal:geom_site_0355 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0356 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Yangzi cave"@en ;
+    geolod:countD13CSamples 1298 ;
+    geolod:countD18OSamples 1298 ;
+    geolod:elevation_m 400.0 ;
+    geolod:siteId 356 ;
+    geo:hasGeometry sisal:geom_site_0356 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0357 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Yonderup cave"@en ;
+    geolod:countD13CSamples 183 ;
+    geolod:countD18OSamples 183 ;
+    geolod:elevation_m 100.0 ;
+    geolod:siteId 357 ;
+    geo:hasGeometry sisal:geom_site_0357 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0358 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Zhangjia cave"@en ;
+    geolod:countD13CSamples 0 ;
+    geolod:countD18OSamples 1017 ;
+    geolod:elevation_m 164.0 ;
+    geolod:siteId 358 ;
+    geo:hasGeometry sisal:geom_site_0358 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0359 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Zoolithen cave"@en ;
+    geolod:countD13CSamples 263 ;
+    geolod:countD18OSamples 263 ;
+    geolod:elevation_m 455.0 ;
+    geolod:siteId 359 ;
+    geo:hasGeometry sisal:geom_site_0359 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0360 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Bigonda cave"@en ;
+    geolod:countD13CSamples 758 ;
+    geolod:countD18OSamples 758 ;
+    geolod:elevation_m 370.0 ;
+    geolod:siteId 360 ;
+    geo:hasGeometry sisal:geom_site_0360 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0361 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Kocain cave"@en ;
+    geolod:countD13CSamples 369 ;
+    geolod:countD18OSamples 369 ;
+    geolod:elevation_m 730.0 ;
+    geolod:siteId 361 ;
+    geo:hasGeometry sisal:geom_site_0361 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0362 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Labyrinth cave"@en ;
+    geolod:countD13CSamples 161 ;
+    geolod:countD18OSamples 161 ;
+    geolod:elevation_m 65.0 ;
+    geolod:siteId 362 ;
+    geo:hasGeometry sisal:geom_site_0362 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0363 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Lake Shasta cave"@en ;
+    geolod:countD13CSamples 1025 ;
+    geolod:countD18OSamples 1025 ;
+    geolod:elevation_m 725.0 ;
+    geolod:siteId 363 ;
+    geo:hasGeometry sisal:geom_site_0363 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0364 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Naharon"@en ;
+    geolod:countD13CSamples 419 ;
+    geolod:countD18OSamples 419 ;
+    geolod:elevation_m -17.7 ;
+    geolod:siteId 364 ;
+    geo:hasGeometry sisal:geom_site_0364 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0365 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Pot au Feu"@en ;
+    geolod:countD13CSamples 229 ;
+    geolod:countD18OSamples 229 ;
+    geolod:elevation_m 997.0 ;
+    geolod:siteId 365 ;
+    geo:hasGeometry sisal:geom_site_0365 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+
+geolod:Cave_site_0366 a geolod:Cave,
+        owl:NamedIndividual ;
+    rdfs:label "Savi cave"@en ;
+    geolod:countD13CSamples 609 ;
+    geolod:countD18OSamples 609 ;
+    geolod:elevation_m 350.0 ;
+    geolod:siteId 366 ;
+    geo:hasGeometry sisal:geom_site_0366 ;
+    prov:wasDerivedFrom geolod:SISALv3_DataSource .
+

@@ -1,6 +1,6 @@
 # captions.yaml - one entry per generated figure of the SISAL strand.
 #
-# Written by SISAL/plot_sisal_from_csv.py.
+# Written by SISAL/plot_sisal_from_csv.py and SISAL/plot_sisal_maps.py.
 # Edit 'caption' freely: an entry whose caption differs from 'generated'
 # is treated as hand-written and kept on the next run, while 'generated'
 # is refreshed so the diff shows what the code would say now.
@@ -487,3 +487,35 @@ plate_coverage_south_american_monsoon:
   license: "CC BY 4.0, Florian Thiery"
   sources:
     - https://doi.org/10.5194/essd-16-1933-2024
+
+sisal_sites_map:
+  caption: "The 365 cave sites of the SISAL v3 catalogue, the 37 of them with an archaeological record, and the 12 sites of the geo-lod cut in the colours of their climate system. The cut is a selection; the grey layer is what it was selected from."
+  generated: "The 365 cave sites of the SISAL v3 catalogue, the 37 of them with an archaeological record, and the 12 sites of the geo-lod cut in the colours of their climate system. The cut is a selection; the grey layer is what it was selected from."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+    - https://www.naturalearthdata.com/
+
+sisal_sites_map_east_asian_monsoon:
+  caption: "The 4 sites of the East Asian monsoon cluster, named, with the 45 catalogue caves of the same window behind them and the 1 of those carrying an archaeological record ringed. Colours are the ones the East Asian monsoon cluster plate uses."
+  generated: "The 4 sites of the East Asian monsoon cluster, named, with the 45 catalogue caves of the same window behind them and the 1 of those carrying an archaeological record ringed. Colours are the ones the East Asian monsoon cluster plate uses."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+    - https://www.naturalearthdata.com/
+
+sisal_sites_map_europe:
+  caption: "The 4 sites of the European cluster, named, with the 89 catalogue caves of the same window behind them and the 19 of those carrying an archaeological record ringed. Colours are the ones the European cluster plate uses."
+  generated: "The 4 sites of the European cluster, named, with the 89 catalogue caves of the same window behind them and the 19 of those carrying an archaeological record ringed. Colours are the ones the European cluster plate uses."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+    - https://www.naturalearthdata.com/
+
+sisal_sites_map_south_american_monsoon:
+  caption: "The 4 sites of the South American monsoon cluster, named, with the 32 catalogue caves of the same window behind them and the 1 of those carrying an archaeological record ringed. Colours are the ones the South American monsoon cluster plate uses."
+  generated: "The 4 sites of the South American monsoon cluster, named, with the 32 catalogue caves of the same window behind them and the 1 of those carrying an archaeological record ringed. Colours are the ones the South American monsoon cluster plate uses."
+  license: "CC BY 4.0, Florian Thiery"
+  sources:
+    - https://doi.org/10.5194/essd-16-1933-2024
+    - https://www.naturalearthdata.com/

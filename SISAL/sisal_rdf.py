@@ -1513,6 +1513,7 @@ STEPS = [
     "dating points, hiatuses and gaps",
     "age assignments",
     "provenance",
+    "writing the cave catalogue",
     "writing the annotations",
     "writing the core graph",
     "writing the chronologies",
@@ -1595,7 +1596,16 @@ def build(data_format: str = DEFAULT_DATA_FORMAT,
         beat.step(STEPS[2])
         ann = Graph()
         bind_prefixes(ann)
-        n_catalogue, n_screened, n_arch = add_cave_catalogue(g, ann)
+        # The catalogue gets its own graph, and that is not tidiness. Its 365
+        # cave nodes are what a map, a gazetteer or a consumer looking for
+        # positions wants, and they used to sit in the core graph next to a
+        # million measurement triples - which is N-Triples in an everyday run,
+        # so reaching the positions meant parsing all of it. Split off, they
+        # are a Turtle file of a few thousand triples. The union in the bundle
+        # is unchanged; only the packaging is.
+        cat = Graph()
+        bind_prefixes(cat)
+        n_catalogue, n_screened, n_arch = add_cave_catalogue(cat, ann)
         print(f"  {n_catalogue} cave sites in the catalogue; "
               f"{n_screened} screened for archaeology, {n_arch} positive, "
               f"{n_catalogue - n_screened} not yet screened")
@@ -1670,6 +1680,16 @@ def build(data_format: str = DEFAULT_DATA_FORMAT,
             note = partial_note(selection_label, sites)
             for graph in (g, alt, dat):
                 graph.add((GEOLOD["SISAL_Dataset"], OWL.versionInfo, note))
+        # The catalogue is the whole of SISAL v3 whatever --sites asks for, so
+        # it carries no partial note: it is not a cut of anything.
+        add_generation_provenance(
+            cat,
+            GEOLOD["SISAL_Cave_Catalogue_Dataset"],
+            GEOLOD["SISAL_Cave_Catalogue_Generation"],
+            inputs=[str(CATALOGUE_DIR / "sites.csv"), __file__],
+            agents=[ORCID_FLO],
+            label="SISAL v3 cave catalogue",
+        )
         add_generation_provenance(
             ann,
             GEOLOD["SISAL_Site_Annotations_Dataset"],
@@ -1685,18 +1705,24 @@ def build(data_format: str = DEFAULT_DATA_FORMAT,
         # The annotations stay Turtle whatever the run: 933 triples, read by
         # people as often as by machines, and small enough that the format
         # costs nothing.
+        # Turtle whatever the run, like the annotations that go with it.
         beat.step(STEPS[8])
+        cat_path = RDF_DIR / "sisal_sites.ttl"
+        cat.serialize(destination=str(cat_path), format="turtle")
+        print(f"  ✓ {cat_path.relative_to(ROOT)}  ({len(cat):,} triples)")
+
+        beat.step(STEPS[9])
         ann_path = RDF_DIR / "sisal_site_annotations.ttl"
         ann.serialize(destination=str(ann_path), format="turtle")
         print(f"  ✓ {ann_path.relative_to(ROOT)}  ({len(ann):,} triples)")
 
-        beat.step(STEPS[9])
+        beat.step(STEPS[10])
         core_path = RDF_DIR / f"sisal_v3_core{suffix}"
         g.serialize(destination=str(core_path), format=serializer,
                     encoding="utf-8")
         print(f"  ✓ {core_path.relative_to(ROOT)}  ({len(g):,} triples)")
 
-        beat.step(STEPS[10])
+        beat.step(STEPS[11])
         alt_path = RDF_DIR / f"sisal_v3_chronologies{suffix}"
         alt.serialize(destination=str(alt_path), format=serializer,
                       encoding="utf-8")
@@ -1705,7 +1731,7 @@ def build(data_format: str = DEFAULT_DATA_FORMAT,
         # Turtle whatever the run, like the annotations: at some fifteen
         # thousand triples the format costs nothing, and the file is one a
         # person reads to find out what an age rests on.
-        beat.step(STEPS[10])
+        beat.step(STEPS[12])
         dat_path = RDF_DIR / "sisal_v3_dating.ttl"
         dat.serialize(destination=str(dat_path), format="turtle")
         print(f"  ✓ {dat_path.relative_to(ROOT)}  ({len(dat):,} triples)")

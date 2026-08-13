@@ -1,0 +1,9 @@
+
+========================================================================
+  EPICA Dome C - map
+========================================================================
+  Antarctic coastline: 108 rings, 2399 vertices
+  EDC99 to DomeC: 1.31 km apart in the metadata
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\epica_dome_c_map.svg / .jpg
+
+  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\EPICA\captions.yaml (40 entries, 39 from an earlier step)
