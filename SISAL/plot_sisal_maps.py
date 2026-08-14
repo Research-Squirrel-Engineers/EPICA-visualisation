@@ -45,7 +45,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
 CATALOGUE_CSV = ROOT / "data" / "derived" / "sisal" / "catalogue" / "sites.csv"
 CURATED_CSV = ROOT / "data" / "curated" / "sisal_site_annotations.csv"
-OUTPUT_DIR = SCRIPT_DIR / "plots"
+OUTPUT_DIR = SCRIPT_DIR / "maps"
 REPORT_PATH = SCRIPT_DIR / "report" / "maps_report.txt"
 
 sys.path.insert(0, str(ROOT / "ontology"))
@@ -59,6 +59,10 @@ from plot_sisal_from_csv import SITES  # noqa: E402
 
 plt.rcParams["svg.hashsalt"] = "geo-lod"
 
+#: Screen dpi of the figure while it is being laid out. It is not the
+#: resolution of the JPG - that comes from geo_lod_figures, which reads
+#: it from the environment so that main.py --dpi can reach every
+#: drawing script.
 DPI = 100
 
 #: One colour per climate system. Taken from the same tab10 order the cluster
@@ -185,7 +189,15 @@ def load_sites() -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def draw_map(ax, sites: list[dict], bbox, label_cut: bool = False,
-             graticule_step: float = 30.0) -> None:
+             graticule_step: float = 30.0, focus: str | None = None) -> None:
+    """The three layers. With *focus*, only that cluster is a cluster.
+
+    On a cluster map the other two climate systems have no business in the
+    legend - their sites are thousands of kilometres outside the window, and a
+    legend entry for a symbol that does not appear is a promise the figure
+    does not keep. Sites of another cluster that do fall inside the window are
+    drawn as what they are here: catalogue caves.
+    """
     lon_lo, lat_lo, lon_hi, lat_hi = bbox
     ax.set_xlim(lon_lo, lon_hi)
     ax.set_ylim(lat_lo, lat_hi)
@@ -193,7 +205,9 @@ def draw_map(ax, sites: list[dict], bbox, label_cut: bool = False,
     gb.draw_land(ax, bbox, str(ROOT), zorder=0)
     gb.draw_graticule(ax, step=graticule_step, zorder=1)
 
-    catalogue = [s for s in sites if s["cluster"] is None]
+    catalogue = [s for s in sites
+                 if s["cluster"] is None
+                 or (focus is not None and s["cluster"] != focus)]
     ax.scatter([s["lon"] for s in catalogue], [s["lat"] for s in catalogue],
                s=12, marker="o", facecolor=CATALOGUE_COLOUR, edgecolor="none",
                alpha=0.85, zorder=2, label="SISAL v3 catalogue")
@@ -207,6 +221,8 @@ def draw_map(ax, sites: list[dict], bbox, label_cut: bool = False,
                    label="archaeological record")
 
     for key, label, _ in sisal_plates.CLUSTERS:
+        if focus is not None and key != focus:
+            continue
         group = [s for s in sites if s["cluster"] == key]
         if not group:
             continue
@@ -216,7 +232,7 @@ def draw_map(ax, sites: list[dict], bbox, label_cut: bool = False,
 
     if label_cut:
         for site in sites:
-            if site["cluster"] is None:
+            if site["cluster"] is None or (focus and site["cluster"] != focus):
                 continue
             if not (lon_lo <= site["lon"] <= lon_hi
                     and lat_lo <= site["lat"] <= lat_hi):
@@ -244,7 +260,7 @@ def figure_world(sites: list[dict]) -> None:
     draw_map(ax, sites, (-180.0, -60.0, 180.0, 80.0), graticule_step=30.0)
     ax.legend(loc="lower left", fontsize=9, framealpha=0.92)
     fig.tight_layout()
-    gf.save_figure(fig, str(OUTPUT_DIR / "sisal_sites_map"), dpi=DPI)
+    gf.save_figure(fig, str(OUTPUT_DIR / "sisal_sites_map"))
     plt.close(fig)
 
     total, arch, cut = counts(sites)
@@ -272,11 +288,11 @@ def figure_cluster(sites: list[dict], key: str, label: str,
             max(lons) + CLUSTER_MARGIN, max(lats) + CLUSTER_MARGIN)
 
     fig, ax = plt.subplots(figsize=(11, 8.5), dpi=DPI)
-    draw_map(ax, sites, bbox, label_cut=True,
+    draw_map(ax, sites, bbox, label_cut=True, focus=key,
              graticule_step=gf.nice_step(bbox[2] - bbox[0], 6))
     ax.legend(loc="lower left", fontsize=9, framealpha=0.92)
     fig.tight_layout()
-    gf.save_figure(fig, str(OUTPUT_DIR / f"sisal_sites_map_{key}"), dpi=DPI)
+    gf.save_figure(fig, str(OUTPUT_DIR / f"sisal_sites_map_{key}"))
     plt.close(fig)
 
     inside = [s for s in sites

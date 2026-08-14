@@ -116,6 +116,11 @@ def check_directory_exists(dirpath: Path, description: str) -> bool:
 #: the same three conditions out at four call sites.
 STRANDS = ("epica", "sisal", "ci", "archaeo")
 
+#: Filled in from --dpi before the first step and handed to every drawing
+#: script. Empty means the scripts fall back to their own default, which is
+#: draft.
+RASTER_QUALITY: dict[str, str] = {}
+
 
 class StepNumber:
     """Hands out the next section number.
@@ -288,6 +293,10 @@ def run_script(script_path: Path, description: str,
 
     env["PYTHONIOENCODING"] = "utf-8"
     env["PYTHONUNBUFFERED"] = "1"
+    # Raster quality reaches the drawing scripts through the environment:
+    # every one of them is its own process, and a flag parsed here has no
+    # other way in. RASTER_QUALITY is set once from --dpi before the run.
+    env.update(RASTER_QUALITY)
 
     print(f"    PYTHONPATH: {pythonpath}")
 
@@ -492,6 +501,18 @@ def main():
             "Voreinstellung: dev - schnell für Entwicklungsläufe."
         ),
     )
+    parser.add_argument(
+        "--dpi",
+        default="draft",
+        help=(
+            "Auflösung der JPG: 'draft' (100 dpi, klein und schnell), "
+            "'print' (300 dpi und mindestens 3000 px auf der kürzeren Seite) "
+            "oder eine Zahl. Ab 300 kommt die Pixelgrenze mit, darunter "
+            "nicht. Ein Release-Lauf setzt 'print' durch. Das SVG neben jedem "
+            "JPG hat ohnehin keine Auflösung. "
+            "Voreinstellung: draft - schnell für Entwicklungsläufe."
+        ),
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
 
@@ -509,6 +530,17 @@ def main():
     # Ein Release darf keinen Teilgraphen enthalten. Die Voreinstellung des
     # Schalters ist 'dev', und ein Release-Lauf, der sie erbt, wäre ein
     # unvollständiges Bundle unter einem vollständigen Namen.
+    # A release run is high resolution, whatever --dpi says. The point of the
+    # switch is a fast development run; a release that quietly shipped 100 dpi
+    # rasters would be the one case where the default does real damage.
+    raster = args.dpi.strip().lower()
+    if release_run and raster in ("draft", "dev", ""):
+        if raster:
+            print("  ℹ  --dpi draft wird für den Release-Lauf auf 'print' "
+                  "angehoben")
+        raster = "print"
+    RASTER_QUALITY["GEO_LOD_RASTER_DPI"] = raster
+
     sisal_sites = args.sisal_sites.strip()
     if release_run and sisal_sites.lower() != "all":
         sisal_sites = "all"

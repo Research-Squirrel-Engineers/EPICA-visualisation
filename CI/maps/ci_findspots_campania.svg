@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="532.601167pt" height="639.238978pt" viewBox="0 0 532.601167 639.238978" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="507.114009pt" height="639.238978pt" viewBox="0 0 507.114009 639.238978" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
@@ -21,8 +21,8 @@
  <g id="figure_1">
   <g id="patch_1">
    <path d="M 0 639.238978 
-L 532.601167 639.238978 
-L 532.601167 0 
+L 507.114009 639.238978 
+L 507.114009 0 
 L 0 0 
 z
 " style="fill: #ffffff"/>
@@ -1669,7 +1669,7 @@ z
    </g>
    <g id="text_28">
     <!-- Castelcivita Cave -->
-    <g style="fill: #3a3833" transform="translate(391.302608 345.320038) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(392.302608 343.864256) scale(0.07 -0.07)">
      <defs>
       <path id="DejaVuSans-43" d="M 4122 4306 
 L 4122 3641 
@@ -1714,7 +1714,7 @@ z
    </g>
    <g id="text_29">
     <!-- Paglicci Cave -->
-    <g style="fill: #3a3833" transform="translate(432.783693 188.817614) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(433.783693 187.361833) scale(0.07 -0.07)">
      <use xlink:href="#DejaVuSans-50"/>
      <use xlink:href="#DejaVuSans-61" x="55.802734"/>
      <use xlink:href="#DejaVuSans-67" x="117.082031"/>
@@ -1732,7 +1732,7 @@ z
    </g>
    <g id="text_30">
     <!-- Lago Patria (Naples) -->
-    <g style="fill: #3a3833" transform="translate(271.438834 287.177057) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(272.438834 285.721276) scale(0.07 -0.07)">
      <defs>
       <path id="DejaVuSans-28" d="M 1984 4856 
 Q 1566 4138 1362 3434 
@@ -1785,7 +1785,7 @@ z
    </g>
    <g id="text_31">
     <!-- Torregaveta -->
-    <g style="fill: #3a3833" transform="translate(272.573482 302.698963) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(273.573482 301.243182) scale(0.07 -0.07)">
      <defs>
       <path id="DejaVuSans-54" d="M -19 4666 
 L 3928 4666 
@@ -1812,9 +1812,14 @@ z
      <use xlink:href="#DejaVuSans-61" x="529.683594"/>
     </g>
    </g>
+   <g id="patch_8">
+    <path d="M 277.492632 312.403042 
+Q 273.101913 308.694167 268.711194 304.985293 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
    <g id="text_32">
     <!-- Cuma -->
-    <g style="fill: #3a3833" transform="translate(238.989568 299.051518) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(274.421912 320.370424) scale(0.07 -0.07)">
      <use xlink:href="#DejaVuSans-43"/>
      <use xlink:href="#DejaVuSans-75" x="69.824219"/>
      <use xlink:href="#DejaVuSans-6d" x="133.203125"/>
@@ -1823,7 +1828,7 @@ z
    </g>
    <g id="text_33">
     <!-- Pozzuoli Bay -->
-    <g style="fill: #3a3833" transform="translate(276.795189 315.294022) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(218.128314 299.83824) scale(0.07 -0.07)">
      <defs>
       <path id="DejaVuSans-7a" d="M 353 3500 
 L 3084 3500 
@@ -1902,9 +1907,14 @@ z
      <use xlink:href="#DejaVuSans-79" x="564.636719"/>
     </g>
    </g>
+   <g id="patch_9">
+    <path d="M 250.752762 314.112961 
+Q 261.496544 309.85128 272.240326 305.589599 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
    <g id="text_34">
     <!-- Phlegraean Fields -->
-    <g style="fill: #3a3833" transform="translate(206.445286 314.483478) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(205.445286 321.802384) scale(0.07 -0.07)">
      <use xlink:href="#DejaVuSans-50"/>
      <use xlink:href="#DejaVuSans-68" x="60.302734"/>
      <use xlink:href="#DejaVuSans-6c" x="123.681641"/>
@@ -1924,9 +1934,97 @@ z
      <use xlink:href="#DejaVuSans-73" x="827.662109"/>
     </g>
    </g>
+   <g id="patch_10">
+    <path d="M 256.760864 282.266398 
+Q 265.097262 288.116703 273.433659 293.967007 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
    <g id="text_35">
-    <!-- San Nicola La Strada -->
-    <g style="fill: #3a3833" transform="translate(301.56322 270.182664) scale(0.07 -0.07)">
+    <!-- Trefola -->
+    <g style="fill: #3a3833" transform="translate(236.635501 278.233301) scale(0.07 -0.07)">
+     <defs>
+      <path id="DejaVuSans-66" d="M 2375 4863 
+L 2375 4384 
+L 1825 4384 
+Q 1516 4384 1395 4259 
+Q 1275 4134 1275 3809 
+L 1275 3500 
+L 2222 3500 
+L 2222 3053 
+L 1275 3053 
+L 1275 0 
+L 697 0 
+L 697 3053 
+L 147 3053 
+L 147 3500 
+L 697 3500 
+L 697 3744 
+Q 697 4328 969 4595 
+Q 1241 4863 1831 4863 
+L 2375 4863 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#DejaVuSans-54"/>
+     <use xlink:href="#DejaVuSans-72" x="46.333984"/>
+     <use xlink:href="#DejaVuSans-65" x="85.197266"/>
+     <use xlink:href="#DejaVuSans-66" x="146.720703"/>
+     <use xlink:href="#DejaVuSans-6f" x="181.925781"/>
+     <use xlink:href="#DejaVuSans-6c" x="243.107422"/>
+     <use xlink:href="#DejaVuSans-61" x="270.890625"/>
+    </g>
+   </g>
+   <g id="patch_11">
+    <path d="M 322.59155 268.708587 
+Q 300.546767 281.694492 278.501983 294.680398 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_36">
+    <!-- Punta Marmolite -->
+    <g style="fill: #3a3833" transform="translate(303.918198 264.746645) scale(0.07 -0.07)">
+     <defs>
+      <path id="DejaVuSans-4d" d="M 628 4666 
+L 1569 4666 
+L 2759 1491 
+L 3956 4666 
+L 4897 4666 
+L 4897 0 
+L 4281 0 
+L 4281 4097 
+L 3078 897 
+L 2444 897 
+L 1241 4097 
+L 1241 0 
+L 628 0 
+L 628 4666 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#DejaVuSans-50"/>
+     <use xlink:href="#DejaVuSans-75" x="58.552734"/>
+     <use xlink:href="#DejaVuSans-6e" x="121.931641"/>
+     <use xlink:href="#DejaVuSans-74" x="185.310547"/>
+     <use xlink:href="#DejaVuSans-61" x="224.519531"/>
+     <use xlink:href="#DejaVuSans-20" x="285.798828"/>
+     <use xlink:href="#DejaVuSans-4d" x="317.585938"/>
+     <use xlink:href="#DejaVuSans-61" x="403.865234"/>
+     <use xlink:href="#DejaVuSans-72" x="465.144531"/>
+     <use xlink:href="#DejaVuSans-6d" x="504.507812"/>
+     <use xlink:href="#DejaVuSans-6f" x="601.919922"/>
+     <use xlink:href="#DejaVuSans-6c" x="663.101562"/>
+     <use xlink:href="#DejaVuSans-69" x="690.884766"/>
+     <use xlink:href="#DejaVuSans-74" x="718.667969"/>
+     <use xlink:href="#DejaVuSans-65" x="757.876953"/>
+    </g>
+   </g>
+   <g id="patch_12">
+    <path d="M 321.912123 327.37584 
+Q 300.434337 309.649868 278.956552 291.923896 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_37">
+    <!-- Scarafea Area -->
+    <g style="fill: #3a3833" transform="translate(304.643964 335.334185) scale(0.07 -0.07)">
      <defs>
       <path id="DejaVuSans-53" d="M 3425 4513 
 L 3425 3897 
@@ -1959,42 +2057,6 @@ Q 2388 4750 2728 4690
 Q 3069 4631 3425 4513 
 z
 " transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#DejaVuSans-53"/>
-     <use xlink:href="#DejaVuSans-61" x="63.476562"/>
-     <use xlink:href="#DejaVuSans-6e" x="124.755859"/>
-     <use xlink:href="#DejaVuSans-20" x="188.134766"/>
-     <use xlink:href="#DejaVuSans-4e" x="219.921875"/>
-     <use xlink:href="#DejaVuSans-69" x="294.726562"/>
-     <use xlink:href="#DejaVuSans-63" x="322.509766"/>
-     <use xlink:href="#DejaVuSans-6f" x="377.490234"/>
-     <use xlink:href="#DejaVuSans-6c" x="438.671875"/>
-     <use xlink:href="#DejaVuSans-61" x="466.455078"/>
-     <use xlink:href="#DejaVuSans-20" x="527.734375"/>
-     <use xlink:href="#DejaVuSans-4c" x="559.521484"/>
-     <use xlink:href="#DejaVuSans-61" x="615.234375"/>
-     <use xlink:href="#DejaVuSans-20" x="676.513672"/>
-     <use xlink:href="#DejaVuSans-53" x="708.300781"/>
-     <use xlink:href="#DejaVuSans-74" x="771.777344"/>
-     <use xlink:href="#DejaVuSans-72" x="810.986328"/>
-     <use xlink:href="#DejaVuSans-61" x="852.099609"/>
-     <use xlink:href="#DejaVuSans-64" x="913.378906"/>
-     <use xlink:href="#DejaVuSans-61" x="976.855469"/>
-    </g>
-   </g>
-   <g id="text_36">
-    <!-- Sant‘ Agata dei due Golfi -->
-    <g style="fill: #3a3833" transform="translate(204.319294 344.270948) scale(0.07 -0.07)">
-     <defs>
-      <path id="DejaVuSans-2018" d="M 1203 3128 
-L 544 3128 
-L 544 3669 
-L 1056 4666 
-L 1459 4666 
-L 1203 3669 
-L 1203 3128 
-z
-" transform="scale(0.015625)"/>
       <path id="DejaVuSans-41" d="M 2188 4044 
 L 1331 1722 
 L 3047 1722 
@@ -2011,6 +2073,123 @@ L 50 0
 L 1831 4666 
 z
 " transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#DejaVuSans-53"/>
+     <use xlink:href="#DejaVuSans-63" x="63.476562"/>
+     <use xlink:href="#DejaVuSans-61" x="118.457031"/>
+     <use xlink:href="#DejaVuSans-72" x="179.736328"/>
+     <use xlink:href="#DejaVuSans-61" x="220.849609"/>
+     <use xlink:href="#DejaVuSans-66" x="282.128906"/>
+     <use xlink:href="#DejaVuSans-65" x="317.333984"/>
+     <use xlink:href="#DejaVuSans-61" x="378.857422"/>
+     <use xlink:href="#DejaVuSans-20" x="440.136719"/>
+     <use xlink:href="#DejaVuSans-41" x="471.923828"/>
+     <use xlink:href="#DejaVuSans-72" x="540.332031"/>
+     <use xlink:href="#DejaVuSans-65" x="579.195312"/>
+     <use xlink:href="#DejaVuSans-61" x="640.71875"/>
+    </g>
+   </g>
+   <g id="patch_13">
+    <path d="M 221.085192 253.621571 
+Q 247.758884 266.739075 274.432575 279.856578 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_38">
+    <!-- Villa di Briano (Naples) -->
+    <g style="fill: #3a3833" transform="translate(169.3419 249.724574) scale(0.07 -0.07)">
+     <defs>
+      <path id="DejaVuSans-56" d="M 1831 0 
+L 50 4666 
+L 709 4666 
+L 2188 738 
+L 3669 4666 
+L 4325 4666 
+L 2547 0 
+L 1831 0 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#DejaVuSans-56"/>
+     <use xlink:href="#DejaVuSans-69" x="66.158203"/>
+     <use xlink:href="#DejaVuSans-6c" x="93.941406"/>
+     <use xlink:href="#DejaVuSans-6c" x="121.724609"/>
+     <use xlink:href="#DejaVuSans-61" x="149.507812"/>
+     <use xlink:href="#DejaVuSans-20" x="210.787109"/>
+     <use xlink:href="#DejaVuSans-64" x="242.574219"/>
+     <use xlink:href="#DejaVuSans-69" x="306.050781"/>
+     <use xlink:href="#DejaVuSans-20" x="333.833984"/>
+     <use xlink:href="#DejaVuSans-42" x="365.621094"/>
+     <use xlink:href="#DejaVuSans-72" x="434.224609"/>
+     <use xlink:href="#DejaVuSans-69" x="475.337891"/>
+     <use xlink:href="#DejaVuSans-61" x="503.121094"/>
+     <use xlink:href="#DejaVuSans-6e" x="564.400391"/>
+     <use xlink:href="#DejaVuSans-6f" x="627.779297"/>
+     <use xlink:href="#DejaVuSans-20" x="688.960938"/>
+     <use xlink:href="#DejaVuSans-28" x="720.748047"/>
+     <use xlink:href="#DejaVuSans-4e" x="759.761719"/>
+     <use xlink:href="#DejaVuSans-61" x="834.566406"/>
+     <use xlink:href="#DejaVuSans-70" x="895.845703"/>
+     <use xlink:href="#DejaVuSans-6c" x="959.322266"/>
+     <use xlink:href="#DejaVuSans-65" x="987.105469"/>
+     <use xlink:href="#DejaVuSans-73" x="1048.628906"/>
+     <use xlink:href="#DejaVuSans-29" x="1100.728516"/>
+    </g>
+   </g>
+   <g id="patch_14">
+    <path d="M 247.661786 338.207259 
+Q 263.794281 320.679885 279.926776 303.152511 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_39">
+    <!-- Naples -->
+    <g style="fill: #3a3833" transform="translate(230.090524 346.263011) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-4e"/>
+     <use xlink:href="#DejaVuSans-61" x="74.804688"/>
+     <use xlink:href="#DejaVuSans-70" x="136.083984"/>
+     <use xlink:href="#DejaVuSans-6c" x="199.560547"/>
+     <use xlink:href="#DejaVuSans-65" x="227.34375"/>
+     <use xlink:href="#DejaVuSans-73" x="288.867188"/>
+    </g>
+   </g>
+   <g id="patch_15">
+    <path d="M 355.963235 361.348168 
+Q 322.160432 333.617371 288.35763 305.886574 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_40">
+    <!-- Monte Echia (Naples) -->
+    <g style="fill: #3a3833" transform="translate(326.038029 369.302549) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-4d"/>
+     <use xlink:href="#DejaVuSans-6f" x="86.279297"/>
+     <use xlink:href="#DejaVuSans-6e" x="147.460938"/>
+     <use xlink:href="#DejaVuSans-74" x="210.839844"/>
+     <use xlink:href="#DejaVuSans-65" x="250.048828"/>
+     <use xlink:href="#DejaVuSans-20" x="311.572266"/>
+     <use xlink:href="#DejaVuSans-45" x="343.359375"/>
+     <use xlink:href="#DejaVuSans-63" x="406.542969"/>
+     <use xlink:href="#DejaVuSans-68" x="461.523438"/>
+     <use xlink:href="#DejaVuSans-69" x="524.902344"/>
+     <use xlink:href="#DejaVuSans-61" x="552.685547"/>
+     <use xlink:href="#DejaVuSans-20" x="613.964844"/>
+     <use xlink:href="#DejaVuSans-28" x="645.751953"/>
+     <use xlink:href="#DejaVuSans-4e" x="684.765625"/>
+     <use xlink:href="#DejaVuSans-61" x="759.570312"/>
+     <use xlink:href="#DejaVuSans-70" x="820.849609"/>
+     <use xlink:href="#DejaVuSans-6c" x="884.326172"/>
+     <use xlink:href="#DejaVuSans-65" x="912.109375"/>
+     <use xlink:href="#DejaVuSans-73" x="973.632812"/>
+     <use xlink:href="#DejaVuSans-29" x="1025.732422"/>
+    </g>
+   </g>
+   <g id="patch_16">
+    <path d="M 241.504283 356.474349 
+Q 263.021614 338.748376 284.538946 321.022404 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_41">
+    <!-- Gulf of Naples -->
+    <g style="fill: #3a3833" transform="translate(209.521105 364.432693) scale(0.07 -0.07)">
+     <defs>
       <path id="DejaVuSans-47" d="M 3809 666 
 L 3809 1919 
 L 2778 1919 
@@ -2036,25 +2215,148 @@ Q 3075 428 3337 486
 Q 3600 544 3809 666 
 z
 " transform="scale(0.015625)"/>
-      <path id="DejaVuSans-66" d="M 2375 4863 
-L 2375 4384 
-L 1825 4384 
-Q 1516 4384 1395 4259 
-Q 1275 4134 1275 3809 
-L 1275 3500 
-L 2222 3500 
-L 2222 3053 
-L 1275 3053 
-L 1275 0 
-L 697 0 
-L 697 3053 
-L 147 3053 
-L 147 3500 
-L 697 3500 
-L 697 3744 
-Q 697 4328 969 4595 
-Q 1241 4863 1831 4863 
-L 2375 4863 
+     </defs>
+     <use xlink:href="#DejaVuSans-47"/>
+     <use xlink:href="#DejaVuSans-75" x="77.490234"/>
+     <use xlink:href="#DejaVuSans-6c" x="140.869141"/>
+     <use xlink:href="#DejaVuSans-66" x="168.652344"/>
+     <use xlink:href="#DejaVuSans-20" x="203.857422"/>
+     <use xlink:href="#DejaVuSans-6f" x="235.644531"/>
+     <use xlink:href="#DejaVuSans-66" x="296.826172"/>
+     <use xlink:href="#DejaVuSans-20" x="332.03125"/>
+     <use xlink:href="#DejaVuSans-4e" x="363.818359"/>
+     <use xlink:href="#DejaVuSans-61" x="438.623047"/>
+     <use xlink:href="#DejaVuSans-70" x="499.902344"/>
+     <use xlink:href="#DejaVuSans-6c" x="563.378906"/>
+     <use xlink:href="#DejaVuSans-65" x="591.162109"/>
+     <use xlink:href="#DejaVuSans-73" x="652.685547"/>
+    </g>
+   </g>
+   <g id="patch_17">
+    <path d="M 353.177321 252.892784 
+Q 321.429445 274.758184 289.681569 296.623584 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_42">
+    <!-- Ponti Rossi (Naples) -->
+    <g style="fill: #3a3833" transform="translate(327.213565 248.867567) scale(0.07 -0.07)">
+     <defs>
+      <path id="DejaVuSans-52" d="M 2841 2188 
+Q 3044 2119 3236 1894 
+Q 3428 1669 3622 1275 
+L 4263 0 
+L 3584 0 
+L 2988 1197 
+Q 2756 1666 2539 1819 
+Q 2322 1972 1947 1972 
+L 1259 1972 
+L 1259 0 
+L 628 0 
+L 628 4666 
+L 2053 4666 
+Q 2853 4666 3247 4331 
+Q 3641 3997 3641 3322 
+Q 3641 2881 3436 2590 
+Q 3231 2300 2841 2188 
+z
+M 1259 4147 
+L 1259 2491 
+L 2053 2491 
+Q 2509 2491 2742 2702 
+Q 2975 2913 2975 3322 
+Q 2975 3731 2742 3939 
+Q 2509 4147 2053 4147 
+L 1259 4147 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#DejaVuSans-50"/>
+     <use xlink:href="#DejaVuSans-6f" x="56.677734"/>
+     <use xlink:href="#DejaVuSans-6e" x="117.859375"/>
+     <use xlink:href="#DejaVuSans-74" x="181.238281"/>
+     <use xlink:href="#DejaVuSans-69" x="220.447266"/>
+     <use xlink:href="#DejaVuSans-20" x="248.230469"/>
+     <use xlink:href="#DejaVuSans-52" x="280.017578"/>
+     <use xlink:href="#DejaVuSans-6f" x="345"/>
+     <use xlink:href="#DejaVuSans-73" x="406.181641"/>
+     <use xlink:href="#DejaVuSans-73" x="458.28125"/>
+     <use xlink:href="#DejaVuSans-69" x="510.380859"/>
+     <use xlink:href="#DejaVuSans-20" x="538.164062"/>
+     <use xlink:href="#DejaVuSans-28" x="569.951172"/>
+     <use xlink:href="#DejaVuSans-4e" x="608.964844"/>
+     <use xlink:href="#DejaVuSans-61" x="683.769531"/>
+     <use xlink:href="#DejaVuSans-70" x="745.048828"/>
+     <use xlink:href="#DejaVuSans-6c" x="808.525391"/>
+     <use xlink:href="#DejaVuSans-65" x="836.308594"/>
+     <use xlink:href="#DejaVuSans-73" x="897.832031"/>
+     <use xlink:href="#DejaVuSans-29" x="949.931641"/>
+    </g>
+   </g>
+   <g id="patch_18">
+    <path d="M 350.079003 311.62208 
+Q 323.566354 293.742154 297.053704 275.862227 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_43">
+    <!-- San Nicola La Strada -->
+    <g style="fill: #3a3833" transform="translate(322.56322 319.50157) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-53"/>
+     <use xlink:href="#DejaVuSans-61" x="63.476562"/>
+     <use xlink:href="#DejaVuSans-6e" x="124.755859"/>
+     <use xlink:href="#DejaVuSans-20" x="188.134766"/>
+     <use xlink:href="#DejaVuSans-4e" x="219.921875"/>
+     <use xlink:href="#DejaVuSans-69" x="294.726562"/>
+     <use xlink:href="#DejaVuSans-63" x="322.509766"/>
+     <use xlink:href="#DejaVuSans-6f" x="377.490234"/>
+     <use xlink:href="#DejaVuSans-6c" x="438.671875"/>
+     <use xlink:href="#DejaVuSans-61" x="466.455078"/>
+     <use xlink:href="#DejaVuSans-20" x="527.734375"/>
+     <use xlink:href="#DejaVuSans-4c" x="559.521484"/>
+     <use xlink:href="#DejaVuSans-61" x="615.234375"/>
+     <use xlink:href="#DejaVuSans-20" x="676.513672"/>
+     <use xlink:href="#DejaVuSans-53" x="708.300781"/>
+     <use xlink:href="#DejaVuSans-74" x="771.777344"/>
+     <use xlink:href="#DejaVuSans-72" x="810.986328"/>
+     <use xlink:href="#DejaVuSans-61" x="852.099609"/>
+     <use xlink:href="#DejaVuSans-64" x="913.378906"/>
+     <use xlink:href="#DejaVuSans-61" x="976.855469"/>
+    </g>
+   </g>
+   <g id="patch_19">
+    <path d="M 346.689506 230.853247 
+Q 322.099284 252.532242 297.509061 274.211236 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_44">
+    <!-- San Marco -->
+    <g style="fill: #3a3833" transform="translate(335.258319 226.739732) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-53"/>
+     <use xlink:href="#DejaVuSans-61" x="63.476562"/>
+     <use xlink:href="#DejaVuSans-6e" x="124.755859"/>
+     <use xlink:href="#DejaVuSans-20" x="188.134766"/>
+     <use xlink:href="#DejaVuSans-4d" x="219.921875"/>
+     <use xlink:href="#DejaVuSans-61" x="306.201172"/>
+     <use xlink:href="#DejaVuSans-72" x="367.480469"/>
+     <use xlink:href="#DejaVuSans-63" x="406.34375"/>
+     <use xlink:href="#DejaVuSans-6f" x="461.324219"/>
+    </g>
+   </g>
+   <g id="patch_20">
+    <path d="M 374.707813 391.667333 
+Q 337.977741 363.873842 301.247668 336.08035 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_45">
+    <!-- Sant‘ Agata dei due Golfi -->
+    <g style="fill: #3a3833" transform="translate(338.856481 399.589855) scale(0.07 -0.07)">
+     <defs>
+      <path id="DejaVuSans-2018" d="M 1203 3128 
+L 544 3128 
+L 544 3669 
+L 1056 4666 
+L 1459 4666 
+L 1203 3669 
+L 1203 3128 
 z
 " transform="scale(0.015625)"/>
      </defs>
@@ -2085,20 +2387,51 @@ z
      <use xlink:href="#DejaVuSans-69" x="1222.753906"/>
     </g>
    </g>
-   <g id="text_37">
+   <g id="patch_21">
+    <path d="M 221.970593 387.429681 
+Q 260.552225 359.599584 299.133857 331.769486 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_46">
+    <!-- Marina di Cassano (Naples) -->
+    <g style="fill: #3a3833" transform="translate(165.814075 395.334502) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-4d"/>
+     <use xlink:href="#DejaVuSans-61" x="86.279297"/>
+     <use xlink:href="#DejaVuSans-72" x="147.558594"/>
+     <use xlink:href="#DejaVuSans-69" x="188.671875"/>
+     <use xlink:href="#DejaVuSans-6e" x="216.455078"/>
+     <use xlink:href="#DejaVuSans-61" x="279.833984"/>
+     <use xlink:href="#DejaVuSans-20" x="341.113281"/>
+     <use xlink:href="#DejaVuSans-64" x="372.900391"/>
+     <use xlink:href="#DejaVuSans-69" x="436.376953"/>
+     <use xlink:href="#DejaVuSans-20" x="464.160156"/>
+     <use xlink:href="#DejaVuSans-43" x="495.947266"/>
+     <use xlink:href="#DejaVuSans-61" x="565.771484"/>
+     <use xlink:href="#DejaVuSans-73" x="627.050781"/>
+     <use xlink:href="#DejaVuSans-73" x="679.150391"/>
+     <use xlink:href="#DejaVuSans-61" x="731.25"/>
+     <use xlink:href="#DejaVuSans-6e" x="792.529297"/>
+     <use xlink:href="#DejaVuSans-6f" x="855.908203"/>
+     <use xlink:href="#DejaVuSans-20" x="917.089844"/>
+     <use xlink:href="#DejaVuSans-28" x="948.876953"/>
+     <use xlink:href="#DejaVuSans-4e" x="987.890625"/>
+     <use xlink:href="#DejaVuSans-61" x="1062.695312"/>
+     <use xlink:href="#DejaVuSans-70" x="1123.974609"/>
+     <use xlink:href="#DejaVuSans-6c" x="1187.451172"/>
+     <use xlink:href="#DejaVuSans-65" x="1215.234375"/>
+     <use xlink:href="#DejaVuSans-73" x="1276.757812"/>
+     <use xlink:href="#DejaVuSans-29" x="1328.857422"/>
+    </g>
+   </g>
+   <g id="patch_22">
+    <path d="M 335.254808 348.241739 
+Q 321.046287 338.381869 306.837767 328.521999 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_47">
     <!-- Vico Equense -->
-    <g style="fill: #3a3833" transform="translate(311.376389 336.813949) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(320.376389 356.132855) scale(0.07 -0.07)">
      <defs>
-      <path id="DejaVuSans-56" d="M 1831 0 
-L 50 4666 
-L 709 4666 
-L 2188 738 
-L 3669 4666 
-L 4325 4666 
-L 2547 0 
-L 1831 0 
-z
-" transform="scale(0.015625)"/>
       <path id="DejaVuSans-71" d="M 947 1747 
 Q 947 1113 1208 752 
 Q 1469 391 1925 391 
@@ -2140,9 +2473,65 @@ z
      <use xlink:href="#DejaVuSans-65" x="608.931641"/>
     </g>
    </g>
-   <g id="text_38">
+   <g id="patch_23">
+    <path d="M 288.391327 338.181066 
+Q 295.456188 334.170884 302.521049 330.160702 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_48">
+    <!-- Pacognano -->
+    <g style="fill: #3a3833" transform="translate(258.916102 345.997105) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-50"/>
+     <use xlink:href="#DejaVuSans-61" x="55.802734"/>
+     <use xlink:href="#DejaVuSans-63" x="117.082031"/>
+     <use xlink:href="#DejaVuSans-6f" x="172.0625"/>
+     <use xlink:href="#DejaVuSans-67" x="233.244141"/>
+     <use xlink:href="#DejaVuSans-6e" x="296.720703"/>
+     <use xlink:href="#DejaVuSans-61" x="360.099609"/>
+     <use xlink:href="#DejaVuSans-6e" x="421.378906"/>
+     <use xlink:href="#DejaVuSans-6f" x="484.757812"/>
+    </g>
+   </g>
+   <g id="patch_24">
+    <path d="M 333.617924 308.375987 
+Q 325.265869 314.227781 316.913813 320.079575 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_49">
+    <!-- Casola -->
+    <g style="fill: #3a3833" transform="translate(330.455331 304.346308) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-43"/>
+     <use xlink:href="#DejaVuSans-61" x="69.824219"/>
+     <use xlink:href="#DejaVuSans-73" x="131.103516"/>
+     <use xlink:href="#DejaVuSans-6f" x="183.203125"/>
+     <use xlink:href="#DejaVuSans-6c" x="244.384766"/>
+     <use xlink:href="#DejaVuSans-61" x="272.167969"/>
+    </g>
+   </g>
+   <g id="patch_25">
+    <path d="M 292.43636 361.902145 
+Q 308.563111 344.374771 324.689862 326.847397 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_50">
+    <!-- Pucara -->
+    <g style="fill: #3a3833" transform="translate(274.881324 369.957897) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-50"/>
+     <use xlink:href="#DejaVuSans-75" x="58.552734"/>
+     <use xlink:href="#DejaVuSans-63" x="121.931641"/>
+     <use xlink:href="#DejaVuSans-61" x="176.912109"/>
+     <use xlink:href="#DejaVuSans-72" x="238.191406"/>
+     <use xlink:href="#DejaVuSans-61" x="279.304688"/>
+    </g>
+   </g>
+   <g id="patch_26">
+    <path d="M 292.618594 263.407018 
+Q 311.116464 276.266752 329.614334 289.126486 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_51">
     <!-- Acqua Fidia -->
-    <g style="fill: #3a3833" transform="translate(339.078148 300.839331) scale(0.07 -0.07)">
+    <g style="fill: #3a3833" transform="translate(264.02721 259.383549) scale(0.07 -0.07)">
      <use xlink:href="#DejaVuSans-41"/>
      <use xlink:href="#DejaVuSans-63" x="66.658203"/>
      <use xlink:href="#DejaVuSans-71" x="121.638672"/>
@@ -2156,75 +2545,82 @@ z
      <use xlink:href="#DejaVuSans-61" x="510.873047"/>
     </g>
    </g>
-   <g id="text_39">
-    <!-- Monticchio (Bagni) -->
-    <g style="fill: #3a3833" transform="translate(428.173547 284.069974) scale(0.07 -0.07)">
-     <defs>
-      <path id="DejaVuSans-4d" d="M 628 4666 
-L 1569 4666 
-L 2759 1491 
-L 3956 4666 
-L 4897 4666 
-L 4897 0 
-L 4281 0 
-L 4281 4097 
-L 3078 897 
-L 2444 897 
-L 1241 4097 
-L 1241 0 
-L 628 0 
-L 628 4666 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#DejaVuSans-4d"/>
-     <use xlink:href="#DejaVuSans-6f" x="86.279297"/>
-     <use xlink:href="#DejaVuSans-6e" x="147.460938"/>
-     <use xlink:href="#DejaVuSans-74" x="210.839844"/>
-     <use xlink:href="#DejaVuSans-69" x="250.048828"/>
-     <use xlink:href="#DejaVuSans-63" x="277.832031"/>
-     <use xlink:href="#DejaVuSans-63" x="332.8125"/>
-     <use xlink:href="#DejaVuSans-68" x="387.792969"/>
-     <use xlink:href="#DejaVuSans-69" x="451.171875"/>
-     <use xlink:href="#DejaVuSans-6f" x="478.955078"/>
-     <use xlink:href="#DejaVuSans-20" x="540.136719"/>
-     <use xlink:href="#DejaVuSans-28" x="571.923828"/>
-     <use xlink:href="#DejaVuSans-42" x="610.9375"/>
-     <use xlink:href="#DejaVuSans-61" x="679.541016"/>
-     <use xlink:href="#DejaVuSans-67" x="740.820312"/>
-     <use xlink:href="#DejaVuSans-6e" x="804.296875"/>
-     <use xlink:href="#DejaVuSans-69" x="867.675781"/>
-     <use xlink:href="#DejaVuSans-29" x="895.458984"/>
+   <g id="patch_27">
+    <path d="M 301.183582 246.035352 
+Q 315.933007 258.73143 330.682433 271.427507 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_52">
+    <!-- Tufara -->
+    <g style="fill: #3a3833" transform="translate(283.383026 241.929848) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-54"/>
+     <use xlink:href="#DejaVuSans-75" x="45.958984"/>
+     <use xlink:href="#DejaVuSans-66" x="109.337891"/>
+     <use xlink:href="#DejaVuSans-61" x="144.542969"/>
+     <use xlink:href="#DejaVuSans-72" x="205.822266"/>
+     <use xlink:href="#DejaVuSans-61" x="246.935547"/>
     </g>
    </g>
-   <g id="text_40">
-    <!-- Lago Grande di Monticchio -->
-    <g style="fill: #3a3833" transform="translate(431.833042 300.434059) scale(0.07 -0.07)">
-     <use xlink:href="#DejaVuSans-4c"/>
-     <use xlink:href="#DejaVuSans-61" x="55.712891"/>
-     <use xlink:href="#DejaVuSans-67" x="116.992188"/>
-     <use xlink:href="#DejaVuSans-6f" x="180.46875"/>
-     <use xlink:href="#DejaVuSans-20" x="241.650391"/>
-     <use xlink:href="#DejaVuSans-47" x="273.4375"/>
-     <use xlink:href="#DejaVuSans-72" x="350.927734"/>
-     <use xlink:href="#DejaVuSans-61" x="392.041016"/>
-     <use xlink:href="#DejaVuSans-6e" x="453.320312"/>
-     <use xlink:href="#DejaVuSans-64" x="516.699219"/>
-     <use xlink:href="#DejaVuSans-65" x="580.175781"/>
-     <use xlink:href="#DejaVuSans-20" x="641.699219"/>
-     <use xlink:href="#DejaVuSans-64" x="673.486328"/>
-     <use xlink:href="#DejaVuSans-69" x="736.962891"/>
-     <use xlink:href="#DejaVuSans-20" x="764.746094"/>
-     <use xlink:href="#DejaVuSans-4d" x="796.533203"/>
-     <use xlink:href="#DejaVuSans-6f" x="882.8125"/>
-     <use xlink:href="#DejaVuSans-6e" x="943.994141"/>
-     <use xlink:href="#DejaVuSans-74" x="1007.373047"/>
-     <use xlink:href="#DejaVuSans-69" x="1046.582031"/>
-     <use xlink:href="#DejaVuSans-63" x="1074.365234"/>
-     <use xlink:href="#DejaVuSans-63" x="1129.345703"/>
-     <use xlink:href="#DejaVuSans-68" x="1184.326172"/>
-     <use xlink:href="#DejaVuSans-69" x="1247.705078"/>
-     <use xlink:href="#DejaVuSans-6f" x="1275.488281"/>
+   <g id="patch_28">
+    <path d="M 375.949524 290.92513 
+Q 358.109234 303.758373 340.268944 316.591615 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_53">
+    <!-- Pellezzano -->
+    <g style="fill: #3a3833" transform="translate(365.833163 286.887989) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-50"/>
+     <use xlink:href="#DejaVuSans-65" x="56.677734"/>
+     <use xlink:href="#DejaVuSans-6c" x="118.201172"/>
+     <use xlink:href="#DejaVuSans-6c" x="145.984375"/>
+     <use xlink:href="#DejaVuSans-65" x="173.767578"/>
+     <use xlink:href="#DejaVuSans-7a" x="235.291016"/>
+     <use xlink:href="#DejaVuSans-7a" x="287.78125"/>
+     <use xlink:href="#DejaVuSans-61" x="340.271484"/>
+     <use xlink:href="#DejaVuSans-6e" x="401.550781"/>
+     <use xlink:href="#DejaVuSans-6f" x="464.929688"/>
+    </g>
+   </g>
+   <g id="patch_29">
+    <path d="M 390.324165 273.690467 
+Q 365.794158 295.369461 341.264152 317.048455 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_54">
+    <!-- Copecchia -->
+    <g style="fill: #3a3833" transform="translate(379.018921 269.576951) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-43"/>
+     <use xlink:href="#DejaVuSans-6f" x="69.824219"/>
+     <use xlink:href="#DejaVuSans-70" x="131.005859"/>
+     <use xlink:href="#DejaVuSans-65" x="194.482422"/>
+     <use xlink:href="#DejaVuSans-63" x="256.005859"/>
+     <use xlink:href="#DejaVuSans-63" x="310.986328"/>
+     <use xlink:href="#DejaVuSans-68" x="365.966797"/>
+     <use xlink:href="#DejaVuSans-69" x="429.345703"/>
+     <use xlink:href="#DejaVuSans-61" x="457.128906"/>
+    </g>
+   </g>
+   <g id="patch_30">
+    <path d="M 473.421221 290.122747 
+Q 482.397754 285.964821 491.374288 281.806895 
+" style="fill: none; stroke: #8a857c; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_55">
+    <!-- Murge Plateau -->
+    <g style="fill: #3a3833" transform="translate(435.658287 297.864336) scale(0.07 -0.07)">
+     <use xlink:href="#DejaVuSans-4d"/>
+     <use xlink:href="#DejaVuSans-75" x="86.279297"/>
+     <use xlink:href="#DejaVuSans-72" x="149.658203"/>
+     <use xlink:href="#DejaVuSans-67" x="189.021484"/>
+     <use xlink:href="#DejaVuSans-65" x="252.498047"/>
+     <use xlink:href="#DejaVuSans-20" x="314.021484"/>
+     <use xlink:href="#DejaVuSans-50" x="345.808594"/>
+     <use xlink:href="#DejaVuSans-6c" x="406.111328"/>
+     <use xlink:href="#DejaVuSans-61" x="433.894531"/>
+     <use xlink:href="#DejaVuSans-74" x="495.173828"/>
+     <use xlink:href="#DejaVuSans-65" x="534.382812"/>
+     <use xlink:href="#DejaVuSans-61" x="595.90625"/>
+     <use xlink:href="#DejaVuSans-75" x="657.185547"/>
     </g>
    </g>
   </g>

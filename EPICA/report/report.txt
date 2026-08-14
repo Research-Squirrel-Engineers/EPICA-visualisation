@@ -7,107 +7,107 @@ Generating 30 single figures ...
 ------------------------------------------------------------
 
 [1/30] EPICA - Methane (CH₄) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg / .jpg (3001×7855 px, 315 dpi)
 
 [2/30] EPICA - Methane (CH₄) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg / .jpg (3001×7855 px, 315 dpi)
 
 [3/30] EPICA - Methane (CH₄) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg / .jpg (3001×7855 px, 315 dpi)
 
 [4/30] EPICA - Methane (CH₄) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg / .jpg (3002×8029 px, 322 dpi)
 
 [5/30] EPICA - Methane (CH₄) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg / .jpg (3002×8029 px, 322 dpi)
 
 [6/30] EPICA - Methane (CH₄) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg / .jpg (3002×8029 px, 322 dpi)
 
 [7/30] EPICA - Deuterium (δD) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full.svg / .jpg (3004×7905 px, 317 dpi)
 
 [8/30] EPICA - Deuterium (δD) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_smooth11.svg / .jpg (3004×7905 px, 317 dpi)
 
 [9/30] EPICA - Deuterium (δD) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_savgol11p2.svg / .jpg (3004×7905 px, 317 dpi)
 
 [10/30] EPICA - Deuterium (δD) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full.svg / .jpg (3004×8004 px, 321 dpi)
 
 [11/30] EPICA - Deuterium (δD) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_smooth11.svg / .jpg (3004×8004 px, 321 dpi)
 
 [12/30] EPICA - Deuterium (δD) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_savgol11p2.svg / .jpg (3004×8004 px, 321 dpi)
 
 [13/30] EPICA - Dust concentration - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full.svg / .jpg (3003×8004 px, 321 dpi)
 
 [14/30] EPICA - Dust concentration - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_smooth11.svg / .jpg (3003×8004 px, 321 dpi)
 
 [15/30] EPICA - Dust concentration - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_savgol11p2.svg / .jpg (3003×8004 px, 321 dpi)
 
 [16/30] EPICA - Dust concentration - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full.svg / .jpg (3004×7655 px, 307 dpi)
 
 [17/30] EPICA - Dust concentration - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_smooth11.svg / .jpg (3004×7655 px, 307 dpi)
 
 [18/30] EPICA - Dust concentration - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_savgol11p2.svg / .jpg (3004×7655 px, 307 dpi)
 
 [19/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg / .jpg (3003×8004 px, 321 dpi)
 
 [20/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg / .jpg (3003×8004 px, 321 dpi)
 
 [21/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg / .jpg (3003×8004 px, 321 dpi)
 
 [22/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg / .jpg (3006×8079 px, 324 dpi)
 
 [23/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg / .jpg (3006×8079 px, 324 dpi)
 
 [24/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg / .jpg (3006×8079 px, 324 dpi)
 
 [25/30] EPICA - δO₂/N₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full.svg / .jpg (3003×8004 px, 321 dpi)
 
 [26/30] EPICA - δO₂/N₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_smooth11.svg / .jpg (3003×8004 px, 321 dpi)
 
 [27/30] EPICA - δO₂/N₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_savgol11p2.svg / .jpg (3003×8004 px, 321 dpi)
 
 [28/30] EPICA - δO₂/N₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full.svg / .jpg (3002×8204 px, 329 dpi)
 
 [29/30] EPICA - δO₂/N₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_smooth11.svg / .jpg (3002×8204 px, 329 dpi)
 
 [30/30] EPICA - δO₂/N₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_savgol11p2.svg / .jpg (3002×8204 px, 329 dpi)
 
 ────────────────────────────────────────────────────────────
 Generating plates …
 ────────────────────────────────────────────────────────────
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_unsmoothed.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_unsmoothed.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_smooth11.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_smooth11.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_savgol11p2.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_savgol11p2.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_boundary_depths.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_pipeline_outputs.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_pipeline_outputs_five.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_unsmoothed.svg / .jpg (6530×7710 px, 300 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_unsmoothed.svg / .jpg (5310×5910 px, 300 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_smooth11.svg / .jpg (6510×7710 px, 300 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_smooth11.svg / .jpg (5310×5910 px, 300 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_savgol11p2.svg / .jpg (6510×7710 px, 300 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_savgol11p2.svg / .jpg (5310×5910 px, 300 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_boundary_depths.svg / .jpg (6202×3210 px, 300 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_pipeline_outputs.svg / .jpg (5425×5921 px, 300 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_pipeline_outputs_five.svg / .jpg (6810×5921 px, 300 dpi)
   ✓ Captions: C:\git\GeoScience-FAIRification-LOD\EPICA\captions.yaml (39 entries)
 
 ============================================================

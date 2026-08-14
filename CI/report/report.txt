@@ -22,5 +22,3 @@
   ▶ writing
   ✓ CI\rdf\ci_findspots.ttl  (3,237 triples)
   ✓ CI\rdf\ci_site_annotations.ttl  (55 triples)
-
-  Duration: 0.3s

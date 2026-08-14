@@ -37,7 +37,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
-OUTPUT_DIR = SCRIPT_DIR / "plots"
+OUTPUT_DIR = SCRIPT_DIR / "maps"
 REPORT_PATH = SCRIPT_DIR / "report" / "map_report.txt"
 
 sys.path.insert(0, str(ROOT / "ontology"))
@@ -50,6 +50,10 @@ import epica_data as ed  # noqa: E402
 
 plt.rcParams["svg.hashsalt"] = "geo-lod"
 
+#: Screen dpi of the figure while it is being laid out. It is not the
+#: resolution of the JPG - that comes from geo_lod_figures, which reads
+#: it from the environment so that main.py --dpi can reach every
+#: drawing script.
 DPI = 100
 
 #: How far north the map reaches. Far enough that the Southern Ocean frames
@@ -202,7 +206,7 @@ def build() -> bool:
     print(f"  EDC99 to DomeC: {separation:.2f} km apart in the metadata")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    gf.save_figure(fig, str(OUTPUT_DIR / "epica_dome_c_map"), dpi=DPI)
+    gf.save_figure(fig, str(OUTPUT_DIR / "epica_dome_c_map"))
     plt.close(fig)
 
     site = ed.EVENTS["EDC99"]

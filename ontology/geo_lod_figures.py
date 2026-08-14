@@ -43,6 +43,7 @@ step: an integer step prints integers.
 from __future__ import annotations
 
 import math
+import os
 
 import numpy as np
 
@@ -134,7 +135,100 @@ from geo_lod_release import GEO_LOD_RELEASE
 SVG_CREATOR = f"geo-lod, release {GEO_LOD_RELEASE}, https://w3id.org/geo-lod/"
 
 
-def save_figure(fig, base_path: str, dpi: int = 100, verbose: bool = True) -> None:
+# --------------------------------------------------------------------------
+# Raster quality
+# --------------------------------------------------------------------------
+# Two settings, and they are deliberately not constants: an everyday run wants
+# small files it can look at, a release wants rasters a journal will print.
+# Both come from the environment because main.py starts every drawing script
+# as its own process - a flag parsed in main.py has to reach them somehow, and
+# an environment variable is the one channel that needs no argparse in six
+# scripts. A script run by hand therefore draws draft quality unless told
+# otherwise, which is the right default for the case where somebody is
+# iterating on one figure.
+
+#: Draft: what a development run writes. No pixel floor - the figure is what
+#: it was laid out as.
+DRAFT_DPI = 100
+
+#: Print: 300 dpi, and at least this many pixels on the shorter side of the
+#: cropped image. Dots per inch alone says nothing about the size of an image,
+#: and a four-inch panel at 300 dpi is 1200 px and unusable on a poster.
+PRINT_DPI = 300
+PRINT_MIN_PIXELS = 3000
+
+ENV_DPI = "GEO_LOD_RASTER_DPI"
+ENV_MIN_PIXELS = "GEO_LOD_RASTER_MIN_PX"
+
+
+def raster_quality() -> tuple[int, int]:
+    """(dpi, minimum pixels on the shorter side), from the environment.
+
+    An unreadable value is worth a word rather than a crash: a mistyped
+    variable should not stop a run that is otherwise fine, but it must not
+    quietly produce draft rasters in a release either.
+    """
+    dpi, min_pixels = DRAFT_DPI, 0
+    raw = os.environ.get(ENV_DPI, "").strip().lower()
+    if raw in ("print", "release"):
+        dpi, min_pixels = PRINT_DPI, PRINT_MIN_PIXELS
+    elif raw in ("draft", "dev", ""):
+        pass
+    else:
+        try:
+            dpi = int(float(raw))
+            # From 300 upwards the intent is a printable raster, so the pixel
+            # floor comes with it; below that the caller wants a small file
+            # and a floor would defeat the request.
+            min_pixels = PRINT_MIN_PIXELS if dpi >= PRINT_DPI else 0
+        except ValueError:
+            print(f"  ⚠  {ENV_DPI}={raw!r} is not a number, 'draft' or "
+                  f"'print' - drawing at {DRAFT_DPI} dpi")
+    raw_pixels = os.environ.get(ENV_MIN_PIXELS, "").strip()
+    if raw_pixels:
+        try:
+            min_pixels = int(float(raw_pixels))
+        except ValueError:
+            print(f"  ⚠  {ENV_MIN_PIXELS}={raw_pixels!r} is not a number - "
+                  f"keeping {min_pixels}")
+    return dpi, min_pixels
+
+
+def raster_size_inches(fig) -> tuple[float, float]:
+    """What the saved image will measure, not what the figure was laid out as.
+
+    Everything here is written with ``bbox_inches="tight"``, which crops the
+    margins away - a 10 by 9 inch figure came out as 8.9 by 9.8 after
+    cropping, and a pixel floor computed from the uncropped size misses it.
+    Falls back to the figure size where no renderer is available yet.
+    """
+    try:
+        fig.canvas.draw()
+        box = fig.get_tightbbox(fig.canvas.get_renderer())
+        if box.width > 0 and box.height > 0:
+            return float(box.width), float(box.height)
+    except Exception:
+        pass
+    width, height = fig.get_size_inches()
+    return float(width), float(height)
+
+
+def raster_dpi(fig) -> int:
+    """The dpi at which *fig* satisfies whatever quality was asked for.
+
+    Where a pixel floor applies, whichever of the two binds is the one that
+    counts: a wide, short figure is driven by the floor on its short side, a
+    large one by the dots per inch.
+    """
+    dpi, min_pixels = raster_quality()
+    shorter_inches = min(raster_size_inches(fig))
+    if shorter_inches <= 0 or min_pixels <= 0:
+        return dpi
+    return int(max(dpi, math.ceil(min_pixels / shorter_inches)))
+
+
+def save_figure(fig, base_path: str, dpi: int | None = None,
+                verbose: bool = True) -> None:
     """Write *fig* as .svg and .jpg next to each other.
 
     The SVG goes through a binary handle so that the file holds the bytes
@@ -143,13 +237,23 @@ def save_figure(fig, base_path: str, dpi: int = 100, verbose: bool = True) -> No
     ``Creator`` replaces the matplotlib version string with a fixed one, and
     the deterministic element ids come from ``plt.rcParams["svg.hashsalt"]``,
     which the calling script sets.
+
+    *dpi* is worked out from the figure and the requested quality unless a
+    caller insists on a value. Passing one is almost always a mistake: it was
+    the per-script ``DPI = 100`` that made every raster in this repository too
+    small to print, and it made the setting unreachable from outside.
     """
     with open(base_path + ".svg", "wb") as fh:
         fig.savefig(fh, format="svg", bbox_inches="tight",
                     metadata={"Date": None, "Creator": SVG_CREATOR})
-    fig.savefig(base_path + ".jpg", format="jpg", dpi=dpi, bbox_inches="tight")
+    effective = dpi if dpi is not None else raster_dpi(fig)
+    fig.savefig(base_path + ".jpg", format="jpg", dpi=effective,
+                bbox_inches="tight")
     if verbose:
-        print(f"  ✓ Saved: {base_path}.svg / .jpg")
+        width, height = raster_size_inches(fig)
+        print(f"  ✓ Saved: {base_path}.svg / .jpg "
+              f"({round(width * effective)}×{round(height * effective)} px, "
+              f"{effective} dpi)")
 
 
 def runs(n: int, breaks: list[tuple[int, int]]) -> list[tuple[int, int]]:

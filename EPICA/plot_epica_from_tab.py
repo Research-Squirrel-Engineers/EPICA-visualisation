@@ -80,6 +80,10 @@ os.makedirs(REPORT_DIR, exist_ok=True)
 # Gemeinsame Plot-Einstellungen
 # ──────────────────────────────────────────────
 FIGURE_SIZE = (10, 30)
+#: Screen dpi of the figure while it is being laid out. It is not the
+#: resolution of the JPG - that comes from geo_lod_figures, which reads
+#: it from the environment so that main.py --dpi can reach every
+#: drawing script.
 DPI = 100
 LINE_COLOR = "black"
 LINE_WIDTH = 1
@@ -533,7 +537,7 @@ def create_plot(
 
     # Speichern - SVG über ein binär geöffnetes Handle, sonst schreibt Python
     # auf Windows CRLF, während .gitattributes LF ablegt.
-    st.save_figure(fig, output_filename, dpi=DPI)
+    st.save_figure(fig, output_filename)
     plt.close(fig)
 
 

@@ -30,7 +30,6 @@ from __future__ import annotations
 
 import re
 import sys
-import time
 from pathlib import Path
 
 import matplotlib
@@ -40,8 +39,12 @@ import matplotlib.pyplot as plt  # noqa: E402
 from rdflib import Graph  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent
-OUTPUT_DIR = ROOT / "plots"
-REPORT_PATH = ROOT / "plots" / "overview_report.txt"
+#: At the root, because the figure belongs to no strand - and as maps/ rather
+#: than plots/, because a map is what it is. dist/ would be the other
+#: candidate and is wrong: that directory holds what a release ships, and
+#: this is a figure of the repository about itself.
+OUTPUT_DIR = ROOT / "maps"
+REPORT_PATH = ROOT / "maps" / "overview_report.txt"
 
 sys.path.insert(0, str(ROOT / "ontology"))
 import geo_lod_basemap as gb  # noqa: E402
@@ -50,6 +53,10 @@ from geo_lod_captions import CaptionFile  # noqa: E402
 
 plt.rcParams["svg.hashsalt"] = "geo-lod"
 
+#: Screen dpi of the figure while it is being laid out. It is not the
+#: resolution of the JPG - that comes from geo_lod_figures, which reads
+#: it from the environment so that main.py --dpi can reach every
+#: drawing script.
 DPI = 100
 
 #: Which files are read, in order of preference, how a point out of each
@@ -91,7 +98,7 @@ POINT = re.compile(r"POINT\s*\(\s*(-?[\d.]+)\s+(-?[\d.]+)\s*\)", re.IGNORECASE)
 CAPTION_LICENSE = "CC BY 4.0, Florian Thiery"
 
 CAPTIONS = CaptionFile(
-    str(ROOT / "captions.yaml"),
+    str(OUTPUT_DIR / "captions.yaml"),
     header=(
         "captions.yaml - the figures that do not belong to a single strand.\n"
         "\n"
@@ -153,11 +160,11 @@ def sites_of(path: Path) -> list[dict]:
 
 
 def build() -> bool:
-    started = time.perf_counter()
     print("\n" + "=" * 72)
     print("  All palaeoclimate sites - overview map from the graph")
     print("=" * 72)
 
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     layers, missing = [], []
     for name, candidates, colour, marker, size, expected in SOURCES:
         path = next((ROOT / c for c in candidates if (ROOT / c).exists()), None)
@@ -197,8 +204,7 @@ def build() -> bool:
     ax.legend(loc="lower left", fontsize=10, framealpha=0.92)
     fig.tight_layout()
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    gf.save_figure(fig, str(OUTPUT_DIR / "geo_lod_sites_map"), dpi=DPI)
+    gf.save_figure(fig, str(OUTPUT_DIR / "geo_lod_sites_map"))
     plt.close(fig)
 
     total = sum(len(sites) for _, sites, _, _, _ in layers)
@@ -224,7 +230,6 @@ def build() -> bool:
     )
     print()
     CAPTIONS.write()
-    print(f"\n  Duration: {time.perf_counter() - started:.1f}s")
     return True
 
 

@@ -59,6 +59,10 @@ FIGURE_LICENSE = "CC BY 4.0, Florian Thiery"
 SISAL_DOI = "https://doi.org/10.5194/essd-16-1933-2024"
 ROLLING_WINDOW = 11
 
+#: Screen dpi of the figure while it is being laid out. It is not the
+#: resolution of the JPG - that comes from geo_lod_figures, which reads
+#: it from the environment so that main.py --dpi can reach every
+#: drawing script.
 DPI = 100
 
 
@@ -250,7 +254,7 @@ def plate_coverage(key, label, phrase, sites, stages, captions) -> None:
                         bottom=0.65 / height)
 
     name = f"plate_coverage_{key}"
-    gf.save_figure(fig, os.path.join(OUTPUT_DIR, name), dpi=DPI)
+    gf.save_figure(fig, os.path.join(OUTPUT_DIR, name))
     plt.close(fig)
 
     with_breaks = sum(1 for _, _, _, _, b in rows if b)
@@ -363,7 +367,7 @@ def plate_cluster(key, label, phrase, sites, stages, captions) -> None:
                         wspace=0.18)
 
     name = f"plate_cluster_{key}"
-    gf.save_figure(fig, os.path.join(OUTPUT_DIR, name), dpi=DPI)
+    gf.save_figure(fig, os.path.join(OUTPUT_DIR, name))
     plt.close(fig)
 
     panels = ", ".join(site["site_name"] for site in sites)

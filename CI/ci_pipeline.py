@@ -50,7 +50,6 @@ from __future__ import annotations
 
 import csv
 import sys
-import time
 from pathlib import Path
 
 from rdflib import Graph, Literal, Namespace, URIRef
@@ -433,7 +432,6 @@ class Tee:
 # ---------------------------------------------------------------------------
 
 def build() -> bool:
-    started = time.perf_counter()
     step = iter(STEPS)
 
     print("\n" + "=" * 72)
@@ -524,7 +522,6 @@ def build() -> bool:
           "CI findspots",
           [CURATED_CSV, Path(__file__)])
 
-    print(f"\n  Duration: {time.perf_counter() - started:.1f}s")
     return True
 
 

@@ -220,6 +220,14 @@ lesen hier ab, statt neu zu diskutieren.
 | Neue Stränge auf der Übersichtskarte | stehen als geplant in `SOURCES` von `plot_overview_map.py`, mit `expected=False`. Solange ihr Turtle fehlt, schweigt die Karte über sie; sobald es da ist, erscheint die Ebene von selbst. ELSA ist so schon eingetragen. Ein erwarteter Strang, dessen Datei fehlt, wird dagegen im Lauf gemeldet und in der Bildunterschrift genannt | 2026-08-13 |
 | Höhlenkatalog als eigene Datei | `SISAL/rdf/sisal_sites.ttl`, 4 765 Tripel Turtle, aus dem Kerngraphen herausgelöst. Die Vereinigung im Bundle ist unverändert; wer nur Standorte will, fasst nicht mehr 563 MB an | 2026-08-13 |
 | Übersichtskarte | liest die frisch geschriebenen TTL per SPARQL, nicht die Eingabetabellen. Damit zeigt sie den Graphen und nicht die Vorlage; ein Strang, dessen TTL fehlt, wird als fehlend gemeldet und in der Bildunterschrift genannt | 2026-08-13 |
+| Karten getrennt von Diagrammen | `<Strang>/maps/` für alles, was gegen eine Küstenlinie gezeichnet wird, `<Strang>/plots/` für alles gegen eine Achse. Die Übersichtskarte liegt in `maps/` im Wurzelverzeichnis — sie gehört zu keinem Strang, und `dist/` wäre falsch, dort liegt, was ein Release ausliefert | 2026-08-14 |
+| Auflösung der Rastergrafiken | über `main.py --dpi`: `draft` (100 dpi, Voreinstellung), `print` (300 dpi **und** mindestens 3 000 px auf der kürzeren Seite) oder eine Zahl; ab 300 kommt die Pixelgrenze mit. Gerechnet wird aus dem beschnittenen Bild, nicht aus der Figurgrösse | 2026-08-14 |
+| Weg der Einstellung zu den Skripten | Umgebungsvariable `GEO_LOD_RASTER_DPI`, gesetzt von `main.py`. Jedes Zeichenskript ist ein eigener Prozess; ein hier geparster Schalter hat sonst keinen Weg hinein, und sechs Skripte um argparse zu erweitern wäre der teurere Kanal | 2026-08-14 |
+| Ein Release-Lauf ist immer hochauflösend | `--bundle-format release` hebt `draft` auf `print` an und sagt es. Der Schalter existiert für schnelle Entwicklungsläufe; ein Release, das stillschweigend 100 dpi ausliefert, wäre der eine Fall, in dem die Voreinstellung wirklich schadet | 2026-08-14 |
+| Preis der Druckauflösung | gemessen an den SISAL-Profilen: JPG von 7,5 MB auf 46 MB, das Verzeichnis von 18 MB auf 56 MB. Deshalb `draft` als Voreinstellung — der Alltagslauf bleibt klein, und die grossen Dateien entstehen, wenn sie gebraucht werden. Das SVG daneben ist ohnehin auflösungsfrei | 2026-08-14 |
+| Legende der Cluster-Karten | zeigt nur das eigene Klimasystem. Sites der anderen beiden liegen ausserhalb des Fensters; ein Legendeneintrag für ein Symbol, das nicht vorkommt, ist ein Versprechen, das die Abbildung nicht hält | 2026-08-14 |
+| Beschriftung im CI-Ausschnitt | mehrere Ringe von Versätzen, ab 14 pt mit Anschlusslinie, nur innerhalb des Rahmens, und der Rest wird gezählt statt verschwiegen: 28 von 40 beschriftet | 2026-08-14 |
+| Laufzeit in den Skriptberichten | steht dort nicht mehr. Sie war das Einzige, was zwei sonst gleiche Läufe unterschied, und `main.py` misst ohnehin jeden Schritt | 2026-08-14 |
 | `pipeline_report.txt` | wird weiter versioniert; er ändert sich als einzige Datei bei jedem Lauf, das ist der Preis für den Laufprotokoll-Charakter | 2026-08-08 |
 | Zeilenenden | `.gitattributes` mit `eol=lf`. Ohne sie schreibt Git auf Windows beim Checkout um, und die Byte-Gleichheit gilt nur lokal | 2026-08-08 |
 | Bundle-Format | Turtle als Voreinstellung, weil byte-stabil und versioniert; N-Triples spart gemessen nur 13 von 187 Sekunden und lohnt den möglichen Versatz zwischen `.ttl` und Code nicht. Über `--bundle-format` sind `nt`, `jsonld`, `xml` und `longturtle` erreichbar, `release` schreibt alle | 2026-08-08 |
@@ -2086,6 +2094,18 @@ Nicht einem Schritt zugeordnet, aber nicht zu vergessen:
 - Die Kartendatei `data/raw/basemap/ne_50m_land.geojson` ist 1,6 MB gross und
   fällt damit durch den Grössenfilter aus A5. Sie reist nicht im Chat-Bundle
   mit; wer an ihr etwas klären will, schickt sie einzeln.
+
+- **Welche JPG-Auflösung versioniert wird, ist offen.** Zurzeit die des jeweils
+  letzten Laufs: nach `--dpi print` liegen rund 110 MB im Arbeitsbaum, nach
+  einem Alltagslauf rund 30 MB, und jeder Wechsel ändert etwa 200 Dateien und
+  landet vollständig in der Historie. Vier Wege stehen zur Wahl — Entwurf
+  versionieren und Druckauflösung bei Bedarf erzeugen (die naheliegende
+  Variante, weil das SVG daneben ohnehin auflösungsfrei ist); Druckauflösung
+  versionieren und den schmutzigen Arbeitsbaum in Kauf nehmen; die
+  Druckfassung in ein gitignoriertes Verzeichnis schreiben (ein paar Zeilen in
+  `geo_lod_figures`); oder JPG gar nicht versionieren (eine Zeile in
+  `.gitignore`). Zu entscheiden, wenn der ECEASST-Beitrag klarer ist —
+  aufgeschoben 2026-08-14, nicht vergessen.
 
 - In `sisal-db-v3` liegt `data/sisalv3_database_mysql_csv` mit 303 MB, das
   MySQL-Verzeichnis aus der Zeit vor S3a. In `.gitignore` genannt, von nichts

@@ -6,8 +6,9 @@
   12 archaeological, 3 of them from the curated annotations
   source: Phlegraean Fields (14.1402, 40.8275)
 
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_map.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_campania.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_certainty.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\maps\ci_findspots_map.svg / .jpg (859×720 px, 100 dpi)
+    28 of 40 findspots labelled, 12 had no room
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\maps\ci_findspots_campania.svg / .jpg (685×869 px, 100 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\maps\ci_findspots_certainty.svg / .jpg (1207×621 px, 100 dpi)
 
   ✓ Captions: C:\git\GeoScience-FAIRification-LOD\CI\captions.yaml (3 entries)

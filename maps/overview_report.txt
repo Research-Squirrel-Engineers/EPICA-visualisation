@@ -6,8 +6,6 @@
   SISAL   365 sites  (SISAL/rdf/sisal_sites.ttl)
   CI       74 sites  (CI/rdf/ci_findspots.ttl)
   ·  ELSA: planned, no graph yet
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\plots\geo_lod_sites_map.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\maps\geo_lod_sites_map.svg / .jpg (1470×725 px, 100 dpi)
 
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\captions.yaml (1 entries)
-
-  Duration: 14.8s
+  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\maps\captions.yaml (1 entries)

@@ -3,47 +3,36 @@
                                 geo-lod pipeline                                
 ════════════════════════════════════════════════════════════════════════════════
 
-  Timestamp: 2026-08-13 14:19:56
+  Timestamp: 2026-08-14 10:11:13
   Directory: C:\git\GeoScience-FAIRification-LOD
 
 
 ────────────────────────────────────────────────────────────────────────────────
   0. Clean generated outputs
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 14:19:56
-  Groups: vocab, cache, epica, diagrams, sisal, ci, archaeo, overview, bundle
+  Start: 10:11:13
+  Groups: vocab, cache, ci, archaeo, overview
   ✓ ontology/geo_lod_core.ttl             1 gone       27.2 KB
   ✓ ontology/vocab/mis.ttl                1 gone      564.4 KB
   ✓ ontology/trs.ttl                      1 gone        5.9 KB
   ✓ dist/mis_stages.csv                   1 gone       15.5 KB
   ✓ dist/mis_assignments.csv              1 gone       63.7 KB
-  ✓ **/__pycache__                        3 gone      199.7 KB
-  ✓ EPICA/rdf                             2 gone        8.1 MB
-  ✓ EPICA/report                          3 gone        8.0 KB
-  ✓ EPICA/plots                          80 gone       12.9 MB
-  ✓ EPICA/captions.yaml                   1 gone       38.3 KB
-  ✓ ontology/*.mermaid                    4 gone       15.8 KB
-  ✓ SISAL/rdf                             6 gone      230.7 MB
-  ✓ SISAL/report                          2 gone       19.2 KB
-  ✓ SISAL/plots                         146 gone       16.7 MB
-  ✓ SISAL/captions.yaml                   1 gone       83.3 KB
+  ✓ **/__pycache__                        2 gone      168.6 KB
   ✓ CI/rdf                                2 gone      176.3 KB
-  ✓ CI/report                             2 gone        1.4 KB
-  ✓ CI/plots                              6 gone      466.9 KB
+  ✓ CI/report                             2 gone        1.5 KB
+  ✓ CI/maps                               6 gone      489.8 KB
   ✓ CI/captions.yaml                      1 gone        4.2 KB
   ✓ archaeo-connect/CI_findspots_CAA.html    1 gone       39.1 KB
-  ✓ plots                                 3 gone      397.0 KB
-  ✓ captions.yaml                         1 gone        1.2 KB
-  ✓ dist/geo-lod-bundle.*                 1 gone      332.6 MB
+  ✓ maps                                  4 gone      398.3 KB
 
-  Removed 270 item(s), 603.1 MB freed.
+  Removed 23 item(s), 1.9 MB freed.
 
-  ⏱  0. Clean generated outputs: 0.3s
+  ⏱  0. Clean generated outputs: 0.1s
 
 ────────────────────────────────────────────────────────────────────────────────
   1. Preparation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 14:19:56
+  Start: 10:11:13
 
   Directory structure:
   ✓ EPICA directory found: EPICA/
@@ -68,7 +57,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   2. Regenerate canonical ontology
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 14:19:56
+  Start: 10:11:13
 
   ▶ Regeneriere kanonische Ontologie-Dateien aus geo_lod_utils.py ...
   ✓ geo_lod_core.ttl geschrieben (27.2 KB)
@@ -78,7 +67,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   3. Regenerate controlled vocabularies
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 14:19:56
+  Start: 10:11:13
 
   ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...
   ✓ ontology\vocab\mis.ttl: 228 stages, 87 substages, 792 assignments (564.4 KB)
@@ -89,590 +78,9 @@
   ⏱  3. Regenerate controlled vocabularies: 0.0s
 
 ────────────────────────────────────────────────────────────────────────────────
-  4. EPICA Dome C (RDF)
+  4. Campanian Ignimbrite (RDF)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 14:19:56
-
-  ▶ Starting EPICA Dome C RDF generation ...
-    Path: C:\git\GeoScience-FAIRification-LOD\EPICA\epica_rdf.py
-    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
-============================================================
-EPICA Dome C - RDF generator (five records from PANGAEA .tab)
-============================================================
-
-Building graph ...
-  ch4      736 observations,   736 stage memberships,  11 boundary depths  (EDC2-gas)
-  dd       814 observations,   814 stage memberships,  17 boundary depths  (EDC2-ice)
-  dust    1154 observations,  1154 stage memberships,  19 boundary depths  (EDC3-ice)
-  d18o    1378 observations,  1378 stage memberships,  15 boundary depths  (AICC2023-gas)
-  do2n2    822 observations,   822 stage memberships,  15 boundary depths  (AICC2023-ice)
-
-  187,554 triples
-  4,904 observations over 5 records
-  4,904 stage memberships
-  77 stage boundaries carried into depth
-
-  Turtle:   C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\epica_dome_c.ttl
-  Ontology: C:\git\GeoScience-FAIRification-LOD\EPICA\rdf\epica_ontology.ttl
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_taxonomy.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_epica.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_sisal.mermaid
-  ✓ Mermaid       : C:\git\GeoScience-FAIRification-LOD\ontology\mermaid_instance_ci.mermaid
-
-============================================================
-Done.
-============================================================
-  ✓ EPICA Dome C RDF generation completed successfully
-
-  ⏱  4. EPICA Dome C (RDF): 20.3s
-
-────────────────────────────────────────────────────────────────────────────────
-  5. EPICA Dome C (figures)
-────────────────────────────────────────────────────────────────────────────────
-  Start: 14:20:17
-
-  ▶ Starting EPICA Dome C figures ...
-    Path: C:\git\GeoScience-FAIRification-LOD\EPICA\plot_epica_from_tab.py
-    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
-============================================================
-EPICA Dome C - figure generator (five records)
-============================================================
-
-------------------------------------------------------------
-Generating 30 single figures ...
-------------------------------------------------------------
-
-[1/30] EPICA - Methane (CH₄) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full.svg / .jpg
-
-[2/30] EPICA - Methane (CH₄) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_smooth11.svg / .jpg
-
-[3/30] EPICA - Methane (CH₄) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_depth_full_savgol11p2.svg / .jpg
-
-[4/30] EPICA - Methane (CH₄) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full.svg / .jpg
-
-[5/30] EPICA - Methane (CH₄) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_smooth11.svg / .jpg
-
-[6/30] EPICA - Methane (CH₄) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\ch4_vs_age_ka_full_savgol11p2.svg / .jpg
-
-[7/30] EPICA - Deuterium (δD) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full.svg / .jpg
-
-[8/30] EPICA - Deuterium (δD) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_smooth11.svg / .jpg
-
-[9/30] EPICA - Deuterium (δD) - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_depth_full_savgol11p2.svg / .jpg
-
-[10/30] EPICA - Deuterium (δD) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full.svg / .jpg
-
-[11/30] EPICA - Deuterium (δD) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_smooth11.svg / .jpg
-
-[12/30] EPICA - Deuterium (δD) - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dd_vs_age_ka_full_savgol11p2.svg / .jpg
-
-[13/30] EPICA - Dust concentration - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full.svg / .jpg
-
-[14/30] EPICA - Dust concentration - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_smooth11.svg / .jpg
-
-[15/30] EPICA - Dust concentration - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_depth_full_savgol11p2.svg / .jpg
-
-[16/30] EPICA - Dust concentration - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full.svg / .jpg
-
-[17/30] EPICA - Dust concentration - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_smooth11.svg / .jpg
-
-[18/30] EPICA - Dust concentration - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\dust_vs_age_ka_full_savgol11p2.svg / .jpg
-
-[19/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full.svg / .jpg
-
-[20/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_smooth11.svg / .jpg
-
-[21/30] EPICA - δ¹⁸O of O₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_depth_full_savgol11p2.svg / .jpg
-
-[22/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full.svg / .jpg
-
-[23/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_smooth11.svg / .jpg
-
-[24/30] EPICA - δ¹⁸O of O₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\d18o_vs_age_ka_full_savgol11p2.svg / .jpg
-
-[25/30] EPICA - δO₂/N₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full.svg / .jpg
-
-[26/30] EPICA - δO₂/N₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_smooth11.svg / .jpg
-
-[27/30] EPICA - δO₂/N₂ - Y: Depth [m]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_depth_full_savgol11p2.svg / .jpg
-
-[28/30] EPICA - δO₂/N₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full.svg / .jpg
-
-[29/30] EPICA - δO₂/N₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_smooth11.svg / .jpg
-
-[30/30] EPICA - δO₂/N₂ - Y: Age [ka]
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\do2n2_vs_age_ka_full_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Generating plates …
-────────────────────────────────────────────────────────────
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_unsmoothed.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_unsmoothed.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_smooth11.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_smooth11.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_columns_savgol11p2.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_rows_savgol11p2.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_boundary_depths.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_pipeline_outputs.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\plate_pipeline_outputs_five.svg / .jpg
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\EPICA\captions.yaml (39 entries)
-
-============================================================
-Done! 30 single figures plus the plates saved to 'C:\git\GeoScience-FAIRification-LOD\EPICA\plots/'.
-Report saved: C:\git\GeoScience-FAIRification-LOD\EPICA\report\report.txt
-============================================================
-  ✓ EPICA Dome C figures completed successfully
-
-  ⏱  5. EPICA Dome C (figures): 71.5s
-
-────────────────────────────────────────────────────────────────────────────────
-  6. EPICA Dome C (map)
-────────────────────────────────────────────────────────────────────────────────
-  Start: 14:21:28
-
-  ▶ Starting EPICA Dome C locator map ...
-    Path: C:\git\GeoScience-FAIRification-LOD\EPICA\plot_epica_map.py
-    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
-
-========================================================================
-  EPICA Dome C - map
-========================================================================
-  Antarctic coastline: 108 rings, 2399 vertices
-  EDC99 to DomeC: 1.31 km apart in the metadata
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\EPICA\plots\epica_dome_c_map.svg / .jpg
-
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\EPICA\captions.yaml (40 entries, 39 from an earlier step)
-  ✓ EPICA Dome C locator map completed successfully
-
-  ⏱  6. EPICA Dome C (map): 2.1s
-
-────────────────────────────────────────────────────────────────────────────────
-  7. SISAL (RDF)
-────────────────────────────────────────────────────────────────────────────────
-  Start: 14:21:30
-
-  ▶ Starting SISAL v3 RDF generation ...
-    Path: C:\git\GeoScience-FAIRification-LOD\SISAL\sisal_rdf.py
-    Args: --format nt --sites all
-    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
-
-========================================================================
-  SISAL cut to RDF
-========================================================================
-  Input:  C:\git\GeoScience-FAIRification-LOD\data\derived\sisal\tables
-  Format: nt (.nt) for the two large graphs, Turtle for the rest
-  Sites:  all 12 sites of the cut
-  12 sites, 102 speleothems, 61389 samples
-  8 superseded speleothems, 3625 of their samples
-  365 cave sites in the catalogue; 305 screened for archaeology, 37 positive, 60 not yet screened
-    … still running: step 5/13 isotope observations, 17s in this step, 30s total
-  61303 δ¹⁸O and 24752 δ¹³C observations (4688 and 3093 of them undated)
-  1841 dating points (2 of them observed growth, 45 measurements not used by any chronology)
-  37 hiatuses and 6 gaps, 138 model statements on them
-  4 hiatuses without a model statement (superseded Corchia records)
-    … still running: step 7/13 age assignments, 16s in this step, 60s total
-    … still running: step 7/13 age assignments, 46s in this step, 90s total
-  251779 age assignments over eight models
-    leading, lin_interp          34701
-    leading, original            21954
-    no leading age                4693
-    extrapolated past 1950         218
-    beyond its control points     8982
-    inside its control points   185851
-    no control span to test      56946
-
-  ✓ SISAL\rdf\sisal_ontology.ttl
-  ✓ SISAL\rdf\sisal_sites.ttl  (4,765 triples)
-  ✓ SISAL\rdf\sisal_site_annotations.ttl  (934 triples)
-    … still running: step 11/13 writing the core graph, 9s in this step, 120s total
-  ✓ SISAL\rdf\sisal_v3_core.nt  (2,192,259 triples)
-  ✓ SISAL\rdf\sisal_v3_chronologies.nt  (1,855,018 triples)
-  ✓ SISAL\rdf\sisal_v3_dating.ttl  (24,981 triples)
-  ✓ SISAL v3 RDF generation completed successfully
-
-  ⏱  7. SISAL (RDF): 160.1s
-
-────────────────────────────────────────────────────────────────────────────────
-  8. SISAL (figures)
-────────────────────────────────────────────────────────────────────────────────
-  Start: 14:24:10
-
-  ▶ Starting SISAL figures ...
-    Path: C:\git\GeoScience-FAIRification-LOD\SISAL\plot_sisal_from_csv.py
-    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
-============================================================
-SISAL Speleothem – Plot Generator
-============================================================
-
-────────────────────────────────────────────────────────────
-Loading: Jaraguá cave
-────────────────────────────────────────────────────────────
-  Loaded: Jaraguá cave (site_id 10)
-  Data points: 4358, entities: 6
-  Age: -0.1 – 27.9 ka BP
-
-  δ¹⁸O: 4358 measurements on 6 of 6 speleothems, 0 breaks
-    → 10_jaragua_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_unsmoothed.svg / .jpg
-      legend: upper left
-    → 10_jaragua_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_smooth11.svg / .jpg
-    → 10_jaragua_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 4358 measurements on 6 of 6 speleothems, 0 breaks
-    → 10_jaragua_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 10_jaragua_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_smooth11.svg / .jpg
-    → 10_jaragua_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Loading: Lapa sem fim cave
-────────────────────────────────────────────────────────────
-  Loaded: Lapa sem fim cave (site_id 24)
-  Data points: 3684, entities: 9
-  Age: 1.0 – 84.1 ka BP
-
-  δ¹⁸O: 3684 measurements on 9 of 9 speleothems, 4 breaks
-    → 24_lapasemfim_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 24_lapasemfim_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_smooth11.svg / .jpg
-    → 24_lapasemfim_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 1807 measurements on 4 of 9 speleothems, 0 breaks
-    → 24_lapasemfim_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_unsmoothed.svg / .jpg
-      legend: upper left
-    → 24_lapasemfim_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_smooth11.svg / .jpg
-    → 24_lapasemfim_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Loading: Dongge cave
-────────────────────────────────────────────────────────────
-  Loaded: Dongge cave (site_id 39)
-  Data points: 3294, entities: 7
-  Age: 0.1 – 224.8 ka BP
-
-  δ¹⁸O: 3294 measurements on 7 of 7 speleothems, 2 breaks
-    → 39_dongge_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_unsmoothed.svg / .jpg
-      legend: lower center
-    → 39_dongge_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_smooth11.svg / .jpg
-    → 39_dongge_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_savgol11p2.svg / .jpg
-
-  ⚠  No δ¹³C for Dongge cave – skipping.
-
-────────────────────────────────────────────────────────────
-Loading: Spannagel cave
-────────────────────────────────────────────────────────────
-  Loaded: Spannagel cave (site_id 58)
-  Data points: 7869, entities: 8
-  Age: 2.4 – 247.4 ka BP
-
-  δ¹⁸O: 7869 measurements on 8 of 8 speleothems, 5 breaks
-    → 58_spannagel_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_unsmoothed.svg / .jpg
-      legend: upper left
-    → 58_spannagel_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_smooth11.svg / .jpg
-    → 58_spannagel_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 2477 measurements on 2 of 8 speleothems, 5 breaks
-    → 58_spannagel_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 58_spannagel_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_smooth11.svg / .jpg
-    → 58_spannagel_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Loading: Heshang cave
-────────────────────────────────────────────────────────────
-  Loaded: Heshang cave (site_id 122)
-  Data points: 2086, entities: 2
-  Age: 0.1 – 9.5 ka BP
-
-  δ¹⁸O: 2086 measurements on 2 of 2 speleothems, 0 breaks
-    → 122_heshang_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_unsmoothed.svg / .jpg
-      legend: upper left
-    → 122_heshang_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_smooth11.svg / .jpg
-    → 122_heshang_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 2086 measurements on 2 of 2 speleothems, 0 breaks
-    → 122_heshang_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 122_heshang_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_smooth11.svg / .jpg
-    → 122_heshang_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Loading: Xiaobailong cave
-────────────────────────────────────────────────────────────
-  Loaded: Xiaobailong cave (site_id 127)
-  Data points: 1719, entities: 7
-  Age: 5.3 – 252.5 ka BP
-
-  δ¹⁸O: 1719 measurements on 7 of 7 speleothems, 4 breaks
-    → 127_xiaobailong_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 127_xiaobailong_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_smooth11.svg / .jpg
-    → 127_xiaobailong_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_savgol11p2.svg / .jpg
-
-  ⚠  No δ¹³C for Xiaobailong cave – skipping.
-
-────────────────────────────────────────────────────────────
-Loading: Sanbao cave
-────────────────────────────────────────────────────────────
-  Loaded: Sanbao cave (site_id 140)
-  Data points: 6085, entities: 18
-  Age: -0.0 – 464.8 ka BP
-
-  δ¹⁸O: 6085 measurements on 18 of 18 speleothems, 0 breaks
-    → 140_sanbao_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_unsmoothed.svg / .jpg
-      legend: outside
-    → 140_sanbao_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_smooth11.svg / .jpg
-    → 140_sanbao_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_savgol11p2.svg / .jpg
-
-  ⚠  No δ¹³C for Sanbao cave – skipping.
-
-────────────────────────────────────────────────────────────
-Loading: Botuverá cave
-────────────────────────────────────────────────────────────
-  Loaded: Botuverá cave (site_id 144)
-  Data points: 920, entities: 2
-  Age: -0.1 – 116.3 ka BP
-
-  δ¹⁸O: 920 measurements on 2 of 2 speleothems, 0 breaks
-    → 144_botuvera_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_unsmoothed.svg / .jpg
-      legend: upper left
-    → 144_botuvera_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_smooth11.svg / .jpg
-    → 144_botuvera_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 920 measurements on 2 of 2 speleothems, 0 breaks
-    → 144_botuvera_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 144_botuvera_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_smooth11.svg / .jpg
-    → 144_botuvera_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Loading: Antro del Corchia
-────────────────────────────────────────────────────────────
-  Loaded: Antro del Corchia (site_id 145)
-  Data points: 1345, entities: 4
-  Age: 2.5 – 140.1 ka BP
-
-  δ¹⁸O: 1345 measurements on 4 of 4 speleothems, 0 breaks
-    → 145_corchia_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_unsmoothed.svg / .jpg
-      legend: center left
-    → 145_corchia_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_smooth11.svg / .jpg
-    → 145_corchia_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 1345 measurements on 4 of 4 speleothems, 0 breaks
-    → 145_corchia_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 145_corchia_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_smooth11.svg / .jpg
-    → 145_corchia_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Loading: Piani Eterni karst system
-────────────────────────────────────────────────────────────
-  Loaded: Piani Eterni karst system (site_id 202)
-  Data points: 781, entities: 2
-  Age: 84.3 – 289.2 ka BP
-
-  δ¹⁸O: 781 measurements on 2 of 2 speleothems, 3 breaks
-    → 202_pianieterni_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_unsmoothed.svg / .jpg
-      legend: upper left
-    → 202_pianieterni_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_smooth11.svg / .jpg
-    → 202_pianieterni_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 781 measurements on 2 of 2 speleothems, 3 breaks
-    → 202_pianieterni_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 202_pianieterni_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_smooth11.svg / .jpg
-    → 202_pianieterni_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Loading: Buraca Gloriosa
-────────────────────────────────────────────────────────────
-  Loaded: Buraca Gloriosa (site_id 275)
-  Data points: 1178, entities: 5
-  Age: 1.3 – 220.7 ka BP
-
-  δ¹⁸O: 1178 measurements on 5 of 5 speleothems, 7 breaks
-    → 275_buracagloriosa_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 275_buracagloriosa_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.svg / .jpg
-    → 275_buracagloriosa_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 1178 measurements on 5 of 5 speleothems, 7 breaks
-    → 275_buracagloriosa_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.svg / .jpg
-      legend: upper left
-    → 275_buracagloriosa_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.svg / .jpg
-    → 275_buracagloriosa_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Loading: Huagapo cave
-────────────────────────────────────────────────────────────
-  Loaded: Huagapo cave (site_id 277)
-  Data points: 1343, entities: 2
-  Age: -0.1 – 7.1 ka BP
-
-  δ¹⁸O: 1343 measurements on 2 of 2 speleothems, 0 breaks
-    → 277_huagapo_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 277_huagapo_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_smooth11.svg / .jpg
-    → 277_huagapo_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_savgol11p2.svg / .jpg
-
-  δ¹³C: 1340 measurements on 2 of 2 speleothems, 0 breaks
-    → 277_huagapo_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_unsmoothed.svg / .jpg
-      legend: lower left
-    → 277_huagapo_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_smooth11.svg / .jpg
-    → 277_huagapo_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_savgol11p2.svg / .jpg
-
-────────────────────────────────────────────────────────────
-Generating plates …
-────────────────────────────────────────────────────────────
-
-  Europe: 4 sites, 19 speleothems
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_europe.svg / .jpg
-    → plate_coverage_europe
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_europe.svg / .jpg
-    → plate_cluster_europe
-
-  East Asian monsoon: 4 sites, 34 speleothems
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_east_asian_monsoon.svg / .jpg
-    → plate_coverage_east_asian_monsoon
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_east_asian_monsoon.svg / .jpg
-    → plate_cluster_east_asian_monsoon
-
-  South American monsoon: 4 sites, 19 speleothems
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_south_american_monsoon.svg / .jpg
-    → plate_coverage_south_american_monsoon
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_south_american_monsoon.svg / .jpg
-    → plate_cluster_south_american_monsoon
-
-============================================================
-Done! Plots saved to 'C:\git\GeoScience-FAIRification-LOD\SISAL\plots/'
-Total: 69 plots
-============================================================
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\SISAL\captions.yaml (69 entries)
-Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt
-  ✓ SISAL figures completed successfully
-
-  ⏱  8. SISAL (figures): 109.0s
-
-────────────────────────────────────────────────────────────────────────────────
-  9. SISAL (maps)
-────────────────────────────────────────────────────────────────────────────────
-  Start: 14:25:59
-
-  ▶ Starting SISAL cave site maps ...
-    Path: C:\git\GeoScience-FAIRification-LOD\SISAL\plot_sisal_maps.py
-    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
-
-========================================================================
-  SISAL cave sites - maps
-========================================================================
-  365 catalogue sites, 37 with an archaeological record
-  12 sites of the cut, in 3 climate systems
-
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_europe.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_east_asian_monsoon.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_south_american_monsoon.svg / .jpg
-
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\SISAL\captions.yaml (73 entries, 69 from an earlier step)
-  ✓ SISAL cave site maps completed successfully
-
-  ⏱  9. SISAL (maps): 4.1s
-
-────────────────────────────────────────────────────────────────────────────────
-  10. Campanian Ignimbrite (RDF)
-────────────────────────────────────────────────────────────────────────────────
-  Start: 14:26:03
+  Start: 10:11:13
 
   ▶ Starting CI findspot RDF generation ...
     Path: C:\git\GeoScience-FAIRification-LOD\CI\ci_pipeline.py
@@ -701,16 +109,14 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt
   ▶ writing
   ✓ CI\rdf\ci_findspots.ttl  (3,237 triples)
   ✓ CI\rdf\ci_site_annotations.ttl  (55 triples)
-
-  Duration: 0.3s
   ✓ CI findspot RDF generation completed successfully
 
-  ⏱  10. Campanian Ignimbrite (RDF): 0.7s
+  ⏱  4. Campanian Ignimbrite (RDF): 0.5s
 
 ────────────────────────────────────────────────────────────────────────────────
-  11. Campanian Ignimbrite (figures)
+  5. Campanian Ignimbrite (figures)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 14:26:04
+  Start: 10:11:14
 
   ▶ Starting CI findspot figures ...
     Path: C:\git\GeoScience-FAIRification-LOD\CI\plot_ci_findspots.py
@@ -723,19 +129,20 @@ Report saved: C:\git\GeoScience-FAIRification-LOD\SISAL\report\report.txt
   12 archaeological, 3 of them from the curated annotations
   source: Phlegraean Fields (14.1402, 40.8275)
 
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_map.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_campania.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\plots\ci_findspots_certainty.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\maps\ci_findspots_map.svg / .jpg (859×720 px, 100 dpi)
+    28 of 40 findspots labelled, 12 had no room
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\maps\ci_findspots_campania.svg / .jpg (685×869 px, 100 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\CI\maps\ci_findspots_certainty.svg / .jpg (1207×621 px, 100 dpi)
 
   ✓ Captions: C:\git\GeoScience-FAIRification-LOD\CI\captions.yaml (3 entries)
   ✓ CI findspot figures completed successfully
 
-  ⏱  11. Campanian Ignimbrite (figures): 3.4s
+  ⏱  5. Campanian Ignimbrite (figures): 4.6s
 
 ────────────────────────────────────────────────────────────────────────────────
-  12. Archaeological connection (HTML)
+  6. Archaeological connection (HTML)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 14:26:08
+  Start: 10:11:18
 
   ▶ Starting archaeo-connect: ci_findspots_html ...
     Path: C:\git\GeoScience-FAIRification-LOD\archaeo-connect\ci_findspots_html.py
@@ -763,12 +170,12 @@ To mark a findspot archaeological:  data/curated/ci_site_annotations.csv, or spa
 To update Wikidata/OSM:             relatedto column in the source table
   ✓ archaeo-connect: ci_findspots_html completed successfully
 
-  ⏱  12. Archaeological connection (HTML): 0.8s
+  ⏱  6. Archaeological connection (HTML): 0.6s
 
 ────────────────────────────────────────────────────────────────────────────────
-  13. Overview map (from the graph)
+  7. Overview map (from the graph)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 14:26:08
+  Start: 10:11:19
 
   ▶ Starting all sites, read from the RDF ...
     Path: C:\git\GeoScience-FAIRification-LOD\plot_overview_map.py
@@ -781,145 +188,34 @@ To update Wikidata/OSM:             relatedto column in the source table
   SISAL   365 sites  (SISAL/rdf/sisal_sites.ttl)
   CI       74 sites  (CI/rdf/ci_findspots.ttl)
   ·  ELSA: planned, no graph yet
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\plots\geo_lod_sites_map.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\maps\geo_lod_sites_map.svg / .jpg (1470×725 px, 100 dpi)
 
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\captions.yaml (1 entries)
-
-  Duration: 14.8s
+  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\maps\captions.yaml (1 entries)
   ✓ all sites, read from the RDF completed successfully
 
-  ⏱  13. Overview map (from the graph): 16.1s
-
-────────────────────────────────────────────────────────────────────────────────
-  14. RDF Bundle & Validation
-────────────────────────────────────────────────────────────────────────────────
-  Start: 14:26:24
-
-  ▶ Sammle TTL-Quellen ...
-  ℹ  sisal_v3_chronologies.nt übersprungen - nur im Release-Bundle. Mit --bundle-format release ist es dabei.
-    Ontologie-Dateien: 6
-      • ontology\analysis_core.ttl
-      • ontology\crm_bridging.ttl
-      • ontology\geo_lod_core.ttl
-      • ontology\strat.ttl
-      • ontology\trs.ttl
-      • ontology\vocab\mis.ttl
-    Instanz-Dateien:   9
-      • EPICA\rdf\epica_dome_c.ttl
-      • EPICA\rdf\epica_ontology.ttl
-      • SISAL\rdf\sisal_ontology.ttl
-      • SISAL\rdf\sisal_site_annotations.ttl
-      • SISAL\rdf\sisal_sites.ttl
-      • SISAL\rdf\sisal_v3_core.nt
-      • SISAL\rdf\sisal_v3_dating.ttl
-      • CI\rdf\ci_findspots.ttl
-      • CI\rdf\ci_site_annotations.ttl
-
-  ▶ Parse & merge ...
-    + analysis_core.ttl:       53 Triples
-    + crm_bridging.ttl:       27 Triples
-    + geo_lod_core.ttl:      357 Triples
-    + strat.ttl:      176 Triples
-    + trs.ttl:       50 Triples
-    + mis.ttl:   10,933 Triples
-    + epica_dome_c.ttl:  187,554 Triples
-    + epica_ontology.ttl:       81 Triples (78 new, 3 dup)
-    + sisal_ontology.ttl:      210 Triples (189 new, 21 dup)
-    + sisal_site_annotations.ttl:      934 Triples
-    + sisal_sites.ttl:    4,765 Triples
-    + sisal_v3_core.nt: 2,192,259 Triples (2,192,232 new, 27 dup)
-    + sisal_v3_dating.ttl:   24,981 Triples
-    + ci_findspots.ttl:    3,237 Triples
-    + ci_site_annotations.ttl:       55 Triples (49 new, 6 dup)
-
-  ▶ Serialisiere Bundle (2,425,615 Triples) ...
-  ✓ geo-lod-bundle.nt           332.6 MB   21.6s  (N-Triples - eine Zeile je Tripel, am schnellsten)
-
-  ▶ CIDOC-CRM Coverage-Check (strict CRM-family) ...
-    Instanz-Klassen geprüft: 60
-    ✓ mit CRM-Anker:         60
-    ✗ ohne CRM-Anker:        0
-
-  ▶ SHACL-Validierung ...
-    + lade Shapes: core_shapes.ttl
-    + lade Shapes: mis_shapes.ttl
-    Dauer: 298.1s
-    SHACL-Ergebnis: 0 Violation(s), 1 Warning(s)
-      Validation Report
-      Conforms: False
-      Results (1):
-      Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-      	Severity: sh:Warning
-      	Source Shape: [ sh:message Literal("CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).", lang=en) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path skos:closeMatch ; sh:severity sh:Warning ]
-      	Focus Node: ci:cisite_59
-      	Result Path: skos:closeMatch
-      	Message: CIArchaeologicalSite should have at least one skos:closeMatch to an external authority (Pleiades, Wikidata, etc.).
-
-    ⚠  Nur Warnings - Bundle gilt als gültig.
-
-  ▶ Sanity-Report ...
-    Triples:         2,425,615
-    Subjekte:        281,613
-    Distinkte Typen: 68
-    Distinkte Props: 147
-
-    Top-10 Klassen nach Instanzzahl:
-      62,242  http://www.w3.org/2006/time#TimePosition
-      61,389  http://w3id.org/geo-lod/SpeleothemSample
-      61,303  http://w3id.org/geo-lod/Delta18OSpeleothemObservation
-      56,655  http://w3id.org/geo-lod/AgeAssignment
-      24,752  http://w3id.org/geo-lod/Delta13CSpeleothemObservation
-       6,276  http://www.w3.org/2002/07/owl#NamedIndividual
-       4,904  http://w3id.org/geo-lod/MISMembershipAssignment
-       4,904  http://w3id.org/geo-lod/IceCoreObservation
-       1,841  http://w3id.org/geo-lod/strat/AgeControlPoint
-         869  http://w3id.org/geo-lod/MISAttributeAssignment
-
-    Top-10 Properties nach Vorkommen:
-      288,658  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-      260,571  http://w3id.org/geo-lod/ageKaBP
-      139,838  http://w3id.org/geo-lod/ageChronology
-      94,022  http://www.w3.org/ns/prov#wasDerivedFrom
-      90,959  http://www.w3.org/ns/sosa/observedProperty
-      90,959  http://www.w3.org/ns/sosa/hasFeatureOfInterest
-      90,959  http://www.w3.org/ns/sosa/hasSimpleResult
-      90,959  http://w3id.org/geo-lod/hasObservation
-      90,959  http://w3id.org/geo-lod/measurementType
-      90,959  http://w3id.org/geo-lod/measuredValue
-
-    CRM-Coverage:   ✓
-    SHACL:          ✓
-
-  ⏱  14. RDF Bundle & Validation: 925.3s
+  ⏱  7. Overview map (from the graph): 18.5s
 
 ════════════════════════════════════════════════════════════════════════════════
                                     Summary                                     
 ════════════════════════════════════════════════════════════════════════════════
 
-  EPICA:         ✓ Success
-  SISAL:         ✓ Success
+  EPICA:         – Not requested
+  SISAL:         – Not requested
   CI:            ✓ Success
   Archaeo HTML:  ✓ Success
-  Bundle:        ✓ Success
+  Bundle:        – Not requested
 
   Duration per step:
-    0. Clean generated outputs                  0.3s    0.0%
+    0. Clean generated outputs                  0.1s    0.2%
     1. Preparation                              0.0s    0.0%
-    2. Regenerate canonical ontology            0.0s    0.0%
-    3. Regenerate controlled vocabularies       0.0s    0.0%
-    4. EPICA Dome C (RDF)                      20.3s    1.5%
-    5. EPICA Dome C (figures)                  71.5s    5.4%
-    6. EPICA Dome C (map)                       2.1s    0.2%
-    7. SISAL (RDF)                            160.1s   12.2%
-    8. SISAL (figures)                        109.0s    8.3%
-    9. SISAL (maps)                             4.1s    0.3%
-    10. Campanian Ignimbrite (RDF)              0.7s    0.1%
-    11. Campanian Ignimbrite (figures)          3.4s    0.3%
-    12. Archaeological connection (HTML)        0.8s    0.1%
-    13. Overview map (from the graph)          16.1s    1.2%
-    14. RDF Bundle & Validation               925.3s   70.4%
+    2. Regenerate canonical ontology            0.0s    0.1%
+    3. Regenerate controlled vocabularies       0.0s    0.2%
+    4. Campanian Ignimbrite (RDF)               0.5s    2.1%
+    5. Campanian Ignimbrite (figures)           4.6s   19.0%
+    6. Archaeological connection (HTML)         0.6s    2.3%
+    7. Overview map (from the graph)           18.5s   76.2%
 
-  Total duration: 1313.6 seconds
+  Total duration: 24.4 seconds
   Log saved to: C:\git\GeoScience-FAIRification-LOD\pipeline_report.txt
 
   ℹ  3 file(s) scheduled for removal - details: python clean.py

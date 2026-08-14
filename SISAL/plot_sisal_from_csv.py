@@ -93,6 +93,10 @@ REPORT_DIR = os.path.join(SCRIPT_DIR, "report")
 # Shared plot settings
 # ──────────────────────────────────────────────
 FIGURE_SIZE = (10, 20)
+#: Screen dpi of the figure while it is being laid out. It is not the
+#: resolution of the JPG - that comes from geo_lod_figures, which reads
+#: it from the environment so that main.py --dpi can reach every
+#: drawing script.
 DPI = 100
 LINE_WIDTH = 1.0
 LINE_WIDTH_SMOOTH = 1.6
@@ -431,7 +435,7 @@ def create_plot(
     # Over geo_lod_figures, not plt.savefig: matplotlib otherwise opens the
     # target in text mode and Python writes CRLF on Windows, while
     # .gitattributes stores LF.
-    gf.save_figure(fig, output_filename, dpi=DPI)
+    gf.save_figure(fig, output_filename)
     plt.close(fig)
     return legend_loc
 

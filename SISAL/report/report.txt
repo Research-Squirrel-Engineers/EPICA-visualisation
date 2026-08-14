@@ -11,21 +11,21 @@ Loading: Jaraguá cave
 
   δ¹⁸O: 4358 measurements on 6 of 6 speleothems, 0 breaks
     → 10_jaragua_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_unsmoothed.svg / .jpg (3007×5859 px, 344 dpi)
       legend: upper left
     → 10_jaragua_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_smooth11.svg / .jpg (3007×5860 px, 344 dpi)
     → 10_jaragua_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d18o_age_savgol11p2.svg / .jpg (3007×5860 px, 344 dpi)
 
   δ¹³C: 4358 measurements on 6 of 6 speleothems, 0 breaks
     → 10_jaragua_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_unsmoothed.svg / .jpg (3007×5859 px, 344 dpi)
       legend: lower left
     → 10_jaragua_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_smooth11.svg / .jpg (3007×5860 px, 344 dpi)
     → 10_jaragua_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\10_jaragua_d13c_age_savgol11p2.svg / .jpg (3007×5860 px, 344 dpi)
 
 ────────────────────────────────────────────────────────────
 Loading: Lapa sem fim cave
@@ -36,21 +36,21 @@ Loading: Lapa sem fim cave
 
   δ¹⁸O: 3684 measurements on 9 of 9 speleothems, 4 breaks
     → 24_lapasemfim_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_unsmoothed.svg / .jpg (3007×5853 px, 344 dpi)
       legend: lower left
     → 24_lapasemfim_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_smooth11.svg / .jpg (3007×5855 px, 344 dpi)
     → 24_lapasemfim_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d18o_age_savgol11p2.svg / .jpg (3007×5855 px, 344 dpi)
 
   δ¹³C: 1807 measurements on 4 of 9 speleothems, 0 breaks
     → 24_lapasemfim_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_unsmoothed.svg / .jpg (3001×6109 px, 359 dpi)
       legend: upper left
     → 24_lapasemfim_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_smooth11.svg / .jpg (3001×6110 px, 359 dpi)
     → 24_lapasemfim_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\24_lapasemfim_d13c_age_savgol11p2.svg / .jpg (3001×6110 px, 359 dpi)
 
 ────────────────────────────────────────────────────────────
 Loading: Dongge cave
@@ -61,12 +61,12 @@ Loading: Dongge cave
 
   δ¹⁸O: 3294 measurements on 7 of 7 speleothems, 2 breaks
     → 39_dongge_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_unsmoothed.svg / .jpg (3003×5717 px, 336 dpi)
       legend: lower center
     → 39_dongge_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_smooth11.svg / .jpg (3003×5719 px, 336 dpi)
     → 39_dongge_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\39_dongge_d18o_age_savgol11p2.svg / .jpg (3003×5719 px, 336 dpi)
 
   ⚠  No δ¹³C for Dongge cave – skipping.
 
@@ -79,21 +79,21 @@ Loading: Spannagel cave
 
   δ¹⁸O: 7869 measurements on 8 of 8 speleothems, 5 breaks
     → 58_spannagel_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_unsmoothed.svg / .jpg (3003×5717 px, 336 dpi)
       legend: upper left
     → 58_spannagel_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_smooth11.svg / .jpg (3003×5719 px, 336 dpi)
     → 58_spannagel_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d18o_age_savgol11p2.svg / .jpg (3003×5719 px, 336 dpi)
 
   δ¹³C: 2477 measurements on 2 of 8 speleothems, 5 breaks
     → 58_spannagel_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_unsmoothed.svg / .jpg (3003×5717 px, 336 dpi)
       legend: lower left
     → 58_spannagel_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_smooth11.svg / .jpg (3003×5719 px, 336 dpi)
     → 58_spannagel_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\58_spannagel_d13c_age_savgol11p2.svg / .jpg (3003×5719 px, 336 dpi)
 
 ────────────────────────────────────────────────────────────
 Loading: Heshang cave
@@ -104,21 +104,21 @@ Loading: Heshang cave
 
   δ¹⁸O: 2086 measurements on 2 of 2 speleothems, 0 breaks
     → 122_heshang_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_unsmoothed.svg / .jpg (3001×6109 px, 359 dpi)
       legend: upper left
     → 122_heshang_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_smooth11.svg / .jpg (3001×6110 px, 359 dpi)
     → 122_heshang_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d18o_age_savgol11p2.svg / .jpg (3001×6110 px, 359 dpi)
 
   δ¹³C: 2086 measurements on 2 of 2 speleothems, 0 breaks
     → 122_heshang_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_unsmoothed.svg / .jpg (3001×6109 px, 359 dpi)
       legend: lower left
     → 122_heshang_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_smooth11.svg / .jpg (3001×6110 px, 359 dpi)
     → 122_heshang_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\122_heshang_d13c_age_savgol11p2.svg / .jpg (3001×6110 px, 359 dpi)
 
 ────────────────────────────────────────────────────────────
 Loading: Xiaobailong cave
@@ -129,12 +129,12 @@ Loading: Xiaobailong cave
 
   δ¹⁸O: 1719 measurements on 7 of 7 speleothems, 4 breaks
     → 127_xiaobailong_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_unsmoothed.svg / .jpg (3003×5717 px, 336 dpi)
       legend: lower left
     → 127_xiaobailong_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_smooth11.svg / .jpg (3003×5719 px, 336 dpi)
     → 127_xiaobailong_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\127_xiaobailong_d18o_age_savgol11p2.svg / .jpg (3003×5719 px, 336 dpi)
 
   ⚠  No δ¹³C for Xiaobailong cave – skipping.
 
@@ -147,12 +147,12 @@ Loading: Sanbao cave
 
   δ¹⁸O: 6085 measurements on 18 of 18 speleothems, 0 breaks
     → 140_sanbao_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_unsmoothed.svg / .jpg (3002×6032 px, 335 dpi)
       legend: outside
     → 140_sanbao_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_smooth11.svg / .jpg (3002×6032 px, 335 dpi)
     → 140_sanbao_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\140_sanbao_d18o_age_savgol11p2.svg / .jpg (3002×6032 px, 335 dpi)
 
   ⚠  No δ¹³C for Sanbao cave – skipping.
 
@@ -165,21 +165,21 @@ Loading: Botuverá cave
 
   δ¹⁸O: 920 measurements on 2 of 2 speleothems, 0 breaks
     → 144_botuvera_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_unsmoothed.svg / .jpg (3002×5717 px, 336 dpi)
       legend: upper left
     → 144_botuvera_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_smooth11.svg / .jpg (3002×5719 px, 336 dpi)
     → 144_botuvera_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d18o_age_savgol11p2.svg / .jpg (3002×5719 px, 336 dpi)
 
   δ¹³C: 920 measurements on 2 of 2 speleothems, 0 breaks
     → 144_botuvera_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_unsmoothed.svg / .jpg (3002×5717 px, 336 dpi)
       legend: lower left
     → 144_botuvera_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_smooth11.svg / .jpg (3002×5719 px, 336 dpi)
     → 144_botuvera_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\144_botuvera_d13c_age_savgol11p2.svg / .jpg (3002×5719 px, 336 dpi)
 
 ────────────────────────────────────────────────────────────
 Loading: Antro del Corchia
@@ -190,21 +190,21 @@ Loading: Antro del Corchia
 
   δ¹⁸O: 1345 measurements on 4 of 4 speleothems, 0 breaks
     → 145_corchia_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_unsmoothed.svg / .jpg (3006×5717 px, 336 dpi)
       legend: center left
     → 145_corchia_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_smooth11.svg / .jpg (3006×5719 px, 336 dpi)
     → 145_corchia_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d18o_age_savgol11p2.svg / .jpg (3006×5719 px, 336 dpi)
 
   δ¹³C: 1345 measurements on 4 of 4 speleothems, 0 breaks
     → 145_corchia_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_unsmoothed.svg / .jpg (3002×5717 px, 336 dpi)
       legend: lower left
     → 145_corchia_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_smooth11.svg / .jpg (3002×5719 px, 336 dpi)
     → 145_corchia_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\145_corchia_d13c_age_savgol11p2.svg / .jpg (3002×5719 px, 336 dpi)
 
 ────────────────────────────────────────────────────────────
 Loading: Piani Eterni karst system
@@ -215,21 +215,21 @@ Loading: Piani Eterni karst system
 
   δ¹⁸O: 781 measurements on 2 of 2 speleothems, 3 breaks
     → 202_pianieterni_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_unsmoothed.svg / .jpg (3006×5717 px, 336 dpi)
       legend: upper left
     → 202_pianieterni_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_smooth11.svg / .jpg (3006×5719 px, 336 dpi)
     → 202_pianieterni_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d18o_age_savgol11p2.svg / .jpg (3006×5719 px, 336 dpi)
 
   δ¹³C: 781 measurements on 2 of 2 speleothems, 3 breaks
     → 202_pianieterni_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_unsmoothed.svg / .jpg (3003×5717 px, 336 dpi)
       legend: lower left
     → 202_pianieterni_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_smooth11.svg / .jpg (3003×5719 px, 336 dpi)
     → 202_pianieterni_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\202_pianieterni_d13c_age_savgol11p2.svg / .jpg (3003×5719 px, 336 dpi)
 
 ────────────────────────────────────────────────────────────
 Loading: Buraca Gloriosa
@@ -240,21 +240,21 @@ Loading: Buraca Gloriosa
 
   δ¹⁸O: 1178 measurements on 5 of 5 speleothems, 7 breaks
     → 275_buracagloriosa_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_unsmoothed.svg / .jpg (3003×5717 px, 336 dpi)
       legend: lower left
     → 275_buracagloriosa_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_smooth11.svg / .jpg (3003×5719 px, 336 dpi)
     → 275_buracagloriosa_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d18o_age_savgol11p2.svg / .jpg (3003×5719 px, 336 dpi)
 
   δ¹³C: 1178 measurements on 5 of 5 speleothems, 7 breaks
     → 275_buracagloriosa_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_unsmoothed.svg / .jpg (3003×5717 px, 336 dpi)
       legend: upper left
     → 275_buracagloriosa_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_smooth11.svg / .jpg (3003×5719 px, 336 dpi)
     → 275_buracagloriosa_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\275_buracagloriosa_d13c_age_savgol11p2.svg / .jpg (3003×5719 px, 336 dpi)
 
 ────────────────────────────────────────────────────────────
 Loading: Huagapo cave
@@ -265,42 +265,42 @@ Loading: Huagapo cave
 
   δ¹⁸O: 1343 measurements on 2 of 2 speleothems, 0 breaks
     → 277_huagapo_d18o_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_unsmoothed.svg / .jpg (3003×5904 px, 347 dpi)
       legend: lower left
     → 277_huagapo_d18o_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_smooth11.svg / .jpg (3003×5906 px, 347 dpi)
     → 277_huagapo_d18o_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d18o_age_savgol11p2.svg / .jpg (3003×5906 px, 347 dpi)
 
   δ¹³C: 1340 measurements on 2 of 2 speleothems, 0 breaks
     → 277_huagapo_d13c_age_unsmoothed
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_unsmoothed.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_unsmoothed.svg / .jpg (3004×5973 px, 351 dpi)
       legend: lower left
     → 277_huagapo_d13c_age_smooth11
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_smooth11.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_smooth11.svg / .jpg (3004×5974 px, 351 dpi)
     → 277_huagapo_d13c_age_savgol11p2
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_savgol11p2.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\277_huagapo_d13c_age_savgol11p2.svg / .jpg (3004×5974 px, 351 dpi)
 
 ────────────────────────────────────────────────────────────
 Generating plates …
 ────────────────────────────────────────────────────────────
 
   Europe: 4 sites, 19 speleothems
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_europe.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_europe.svg / .jpg (5296×3002 px, 369 dpi)
     → plate_coverage_europe
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_europe.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_europe.svg / .jpg (4955×4298 px, 300 dpi)
     → plate_cluster_europe
 
   East Asian monsoon: 4 sites, 34 speleothems
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_east_asian_monsoon.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_east_asian_monsoon.svg / .jpg (4306×3791 px, 300 dpi)
     → plate_coverage_east_asian_monsoon
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_east_asian_monsoon.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_east_asian_monsoon.svg / .jpg (4955×4298 px, 300 dpi)
     → plate_cluster_east_asian_monsoon
 
   South American monsoon: 4 sites, 19 speleothems
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_south_american_monsoon.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_coverage_south_american_monsoon.svg / .jpg (5296×3002 px, 369 dpi)
     → plate_coverage_south_american_monsoon
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_south_american_monsoon.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\plate_cluster_south_american_monsoon.svg / .jpg (4955×4298 px, 300 dpi)
     → plate_cluster_south_american_monsoon
 
 ============================================================

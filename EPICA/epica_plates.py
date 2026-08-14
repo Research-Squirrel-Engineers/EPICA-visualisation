@@ -65,6 +65,10 @@ LINE_COLOR = "black"
 LINE_WIDTH = 0.9
 LINE_COLOR_FADED = "#aaaaaa"
 GRID_COLOR = "#cccccc"
+#: Screen dpi of the figure while it is being laid out. It is not the
+#: resolution of the JPG - that comes from geo_lod_figures, which reads
+#: it from the environment so that main.py --dpi can reach every
+#: drawing script.
 DPI = 100
 
 MIS_COLOR_WARM = "#fddbc7"
@@ -238,7 +242,7 @@ def draw_bands(ax, stages, covered, horizontal: bool):
 
 def save(fig, name: str) -> None:
     # Über epica_style, damit das SVG auch auf Windows mit LF herauskommt.
-    st.save_figure(fig, os.path.join(OUTPUT_DIR, name), dpi=DPI)
+    st.save_figure(fig, os.path.join(OUTPUT_DIR, name))
     plt.close(fig)
 
 

@@ -44,6 +44,7 @@ project/
 ├── CI/                           ← Campanian Ignimbrite findspots
 │   ├── ci_pipeline.py            ← findspots to RDF
 │   ├── plot_ci_findspots.py      ← maps and certainty plate
+│   ├── maps/                     ← findspot maps
 │   ├── captions.yaml
 │   ├── rdf/                      ← ci_findspots.ttl, ci_site_annotations.ttl
 │   ├── plots/
@@ -216,7 +217,9 @@ where prose and data have drifted apart.
 - `SISAL/rdf/sisal_all_data.ttl` — Combined file (**152,169 triples total**)
 
 
-**Maps:** every strand carries one. `EPICA/plots/epica_dome_c_map` (Antarctica, polar stereographic), `SISAL/plots/sisal_sites_map*` (world and one per climate system), `CI/plots/ci_findspots_map` and `ci_findspots_campania`, and `plots/geo_lod_sites_map`, which is read from the RDF rather than from the input tables. Land polygons: Natural Earth 1:50m, public domain, in `data/raw/basemap/`.
+**Maps** live in `maps/` beside the `plots/` of each strand: `EPICA/maps/epica_dome_c_map` (Antarctica, polar stereographic), `SISAL/maps/sisal_sites_map*` (world and one per climate system), `CI/maps/ci_findspots_map`, `ci_findspots_campania` and `ci_findspots_certainty`, and `maps/geo_lod_sites_map` at the root, which is read from the RDF rather than from the input tables. Land polygons: Natural Earth 1:50m, public domain, in `data/raw/basemap/`.
+
+Every figure is written twice: an SVG, which has no resolution, and a JPG whose quality follows `main.py --dpi` — `draft` (100 dpi) by default, `print` (300 dpi and at least 3000 px on the shorter side) for anything that goes to a printer. A release run (`--bundle-format release`) raises draft to print on its own.
 
 **CI (Campanian Ignimbrite):**
 - `CI/rdf/ci_findspots.ttl` — Findspot data with GeoSPARQL geometries and PROV-O provenance

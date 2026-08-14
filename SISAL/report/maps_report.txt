@@ -5,9 +5,9 @@
   365 catalogue sites, 37 with an archaeological record
   12 sites of the cut, in 3 climate systems
 
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_europe.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_east_asian_monsoon.svg / .jpg
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\plots\sisal_sites_map_south_american_monsoon.svg / .jpg
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\maps\sisal_sites_map.svg / .jpg (7276×3000 px, 495 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\maps\sisal_sites_map_europe.svg / .jpg (3311×3001 px, 366 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\maps\sisal_sites_map_east_asian_monsoon.svg / .jpg (3005×3411 px, 416 dpi)
+  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\SISAL\maps\sisal_sites_map_south_american_monsoon.svg / .jpg (4109×3008 px, 384 dpi)
 
   ✓ Captions: C:\git\GeoScience-FAIRification-LOD\SISAL\captions.yaml (73 entries, 69 from an earlier step)
