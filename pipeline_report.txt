@@ -3,15 +3,15 @@
                                 geo-lod pipeline                                
 ════════════════════════════════════════════════════════════════════════════════
 
-  Timestamp: 2026-08-14 10:11:13
+  Timestamp: 2026-08-14 10:30:36
   Directory: C:\git\GeoScience-FAIRification-LOD
 
 
 ────────────────────────────────────────────────────────────────────────────────
   0. Clean generated outputs
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 10:11:13
-  Groups: vocab, cache, ci, archaeo, overview
+  Start: 10:30:36
+  Groups: vocab, cache, ci
   ✓ ontology/geo_lod_core.ttl             1 gone       27.2 KB
   ✓ ontology/vocab/mis.ttl                1 gone      564.4 KB
   ✓ ontology/trs.ttl                      1 gone        5.9 KB
@@ -22,17 +22,15 @@
   ✓ CI/report                             2 gone        1.5 KB
   ✓ CI/maps                               6 gone      489.8 KB
   ✓ CI/captions.yaml                      1 gone        4.2 KB
-  ✓ archaeo-connect/CI_findspots_CAA.html    1 gone       39.1 KB
-  ✓ maps                                  4 gone      398.3 KB
 
-  Removed 23 item(s), 1.9 MB freed.
+  Removed 18 item(s), 1.5 MB freed.
 
-  ⏱  0. Clean generated outputs: 0.1s
+  ⏱  0. Clean generated outputs: 0.0s
 
 ────────────────────────────────────────────────────────────────────────────────
   1. Preparation
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 10:11:13
+  Start: 10:30:36
 
   Directory structure:
   ✓ EPICA directory found: EPICA/
@@ -52,12 +50,15 @@
   ✓ overview map script found: plot_overview_map.py
   ✓ archaeo-connect: ci_findspots_html.py found: ci_findspots_html.py
 
-  ⏱  1. Preparation: 0.0s
+  Run reference:
+  ✓ README-RUN.md covers all 18 entry points and 20 flags
+
+  ⏱  1. Preparation: 0.1s
 
 ────────────────────────────────────────────────────────────────────────────────
   2. Regenerate canonical ontology
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 10:11:13
+  Start: 10:30:36
 
   ▶ Regeneriere kanonische Ontologie-Dateien aus geo_lod_utils.py ...
   ✓ geo_lod_core.ttl geschrieben (27.2 KB)
@@ -67,7 +68,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   3. Regenerate controlled vocabularies
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 10:11:13
+  Start: 10:30:36
 
   ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...
   ✓ ontology\vocab\mis.ttl: 228 stages, 87 substages, 792 assignments (564.4 KB)
@@ -80,7 +81,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   4. Campanian Ignimbrite (RDF)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 10:11:13
+  Start: 10:30:36
 
   ▶ Starting CI findspot RDF generation ...
     Path: C:\git\GeoScience-FAIRification-LOD\CI\ci_pipeline.py
@@ -116,7 +117,7 @@
 ────────────────────────────────────────────────────────────────────────────────
   5. Campanian Ignimbrite (figures)
 ────────────────────────────────────────────────────────────────────────────────
-  Start: 10:11:14
+  Start: 10:30:36
 
   ▶ Starting CI findspot figures ...
     Path: C:\git\GeoScience-FAIRification-LOD\CI\plot_ci_findspots.py
@@ -137,63 +138,7 @@
   ✓ Captions: C:\git\GeoScience-FAIRification-LOD\CI\captions.yaml (3 entries)
   ✓ CI findspot figures completed successfully
 
-  ⏱  5. Campanian Ignimbrite (figures): 4.6s
-
-────────────────────────────────────────────────────────────────────────────────
-  6. Archaeological connection (HTML)
-────────────────────────────────────────────────────────────────────────────────
-  Start: 10:11:18
-
-  ▶ Starting archaeo-connect: ci_findspots_html ...
-    Path: C:\git\GeoScience-FAIRification-LOD\archaeo-connect\ci_findspots_html.py
-    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
-============================================================
-CI Findspots --> HTML
-============================================================
-
--> Reading C:\git\GeoScience-FAIRification-LOD\data\raw\ci\cifindspots_part_full.csv
-  Sites loaded:        74
-  Archaeological:      12
-  Other findspots:     62
-  High certainty:      14
-  Wikidata QID:        43/74
-  OSM present:         31/74
-
--> Building HTML ...
-  OK  Written: C:\git\GeoScience-FAIRification-LOD\archaeo-connect\CI_findspots_CAA.html  (40,015 chars)
-
-============================================================
-SUCCESS
-============================================================
-
-To mark a findspot archaeological:  data/curated/ci_site_annotations.csv, or spatialtype in the source table
-To update Wikidata/OSM:             relatedto column in the source table
-  ✓ archaeo-connect: ci_findspots_html completed successfully
-
-  ⏱  6. Archaeological connection (HTML): 0.6s
-
-────────────────────────────────────────────────────────────────────────────────
-  7. Overview map (from the graph)
-────────────────────────────────────────────────────────────────────────────────
-  Start: 10:11:19
-
-  ▶ Starting all sites, read from the RDF ...
-    Path: C:\git\GeoScience-FAIRification-LOD\plot_overview_map.py
-    PYTHONPATH: C:\git\GeoScience-FAIRification-LOD\ontology
-
-========================================================================
-  All palaeoclimate sites - overview map from the graph
-========================================================================
-  EPICA     3 sites  (EPICA/rdf/epica_dome_c.ttl)
-  SISAL   365 sites  (SISAL/rdf/sisal_sites.ttl)
-  CI       74 sites  (CI/rdf/ci_findspots.ttl)
-  ·  ELSA: planned, no graph yet
-  ✓ Saved: C:\git\GeoScience-FAIRification-LOD\maps\geo_lod_sites_map.svg / .jpg (1470×725 px, 100 dpi)
-
-  ✓ Captions: C:\git\GeoScience-FAIRification-LOD\maps\captions.yaml (1 entries)
-  ✓ all sites, read from the RDF completed successfully
-
-  ⏱  7. Overview map (from the graph): 18.5s
+  ⏱  5. Campanian Ignimbrite (figures): 5.6s
 
 ════════════════════════════════════════════════════════════════════════════════
                                     Summary                                     
@@ -202,20 +147,18 @@ To update Wikidata/OSM:             relatedto column in the source table
   EPICA:         – Not requested
   SISAL:         – Not requested
   CI:            ✓ Success
-  Archaeo HTML:  ✓ Success
+  Archaeo HTML:  – Not requested
   Bundle:        – Not requested
 
   Duration per step:
-    0. Clean generated outputs                  0.1s    0.2%
-    1. Preparation                              0.0s    0.0%
-    2. Regenerate canonical ontology            0.0s    0.1%
-    3. Regenerate controlled vocabularies       0.0s    0.2%
-    4. Campanian Ignimbrite (RDF)               0.5s    2.1%
-    5. Campanian Ignimbrite (figures)           4.6s   19.0%
-    6. Archaeological connection (HTML)         0.6s    2.3%
-    7. Overview map (from the graph)           18.5s   76.2%
+    0. Clean generated outputs                  0.0s    0.6%
+    1. Preparation                              0.1s    0.9%
+    2. Regenerate canonical ontology            0.0s    0.2%
+    3. Regenerate controlled vocabularies       0.0s    0.5%
+    4. Campanian Ignimbrite (RDF)               0.5s    7.5%
+    5. Campanian Ignimbrite (figures)           5.6s   90.3%
 
-  Total duration: 24.4 seconds
+  Total duration: 6.3 seconds
   Log saved to: C:\git\GeoScience-FAIRification-LOD\pipeline_report.txt
 
   ℹ  3 file(s) scheduled for removal - details: python clean.py

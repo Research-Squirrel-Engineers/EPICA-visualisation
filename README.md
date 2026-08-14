@@ -15,7 +15,10 @@ Every run is byte-reproducible: no output carries a timestamp, and each generate
 ```
 project/
 ├── main.py                       ← MAIN SCRIPT (run everything)
+├── README-RUN.md                 ← every script and flag, and what it writes
+├── plot_overview_map.py          ← all sites, read from the graph
 ├── pipeline_report.txt           ← Execution log
+├── maps/                         ← the cross-strand overview map
 │
 ├── EPICA/                        ← EPICA Dome C (ice core), five proxies
 │   ├── epica_data.py             ← one loader for figures and RDF, plus provenance
@@ -34,7 +37,8 @@ project/
 │
 ├── SISAL/                        ← SISAL (speleothems)
 │   ├── plot_sisal_from_csv.py
-│   ├── plots/                    ← 24 plots × 2 formats
+│   ├── plots/                    ← profiles per speleothem, cluster plates
+│   ├── maps/                     ← world map and one per climate system
 │   ├── rdf/
 │   │   ├── sisal_ontology.ttl
 │   │   ├── sisal_sites.ttl       ← all 365 caves, positions only
@@ -83,64 +87,40 @@ any file whether it is evidence or output.
 
 ## 🚀 Usage
 
-### Run everything (recommended)
-
 ```bash
-python main.py
+python main.py                          # everything, development settings
+python main.py --sisal-sites all        # all twelve SISAL sites
+python main.py --bundle-format release  # the release: all formats, print rasters
+python clean.py                         # what was generated, what is left over
 ```
 
-This executes, in order:
+**[README-RUN.md](README-RUN.md) is the full reference** — every script, every
+flag, what each one writes, and the checks worth running. What follows here is
+only the shape of a run.
 
-1. Preparation — check the directory layout and the sub-scripts
-2. Regenerate the canonical ontology from `geo_lod_utils.py`
-3. Regenerate the controlled vocabularies and the temporal reference systems
-4. EPICA Dome C — RDF for five proxy records
-5. EPICA Dome C — 30 single figures, 7 plates, 2 collages, captions
-6. SISAL — RDF and 24 figures for four caves, plus 305 site records
-7. Campanian Ignimbrite — findspot RDF
-8. Bundle everything into `dist/`, then validate: CIDOC-CRM coverage and SHACL
+`main.py` executes the strands in order and logs everything to
+`pipeline_report.txt`. The RDF step of a strand always runs before its figures:
+a fault in the data then surfaces before anything is drawn. Step numbers come
+from a counter and follow the run, so a full run counts to 14 and a
+`--ci-only` to 8.
 
-The RDF step runs before the figures on purpose: a fault in the data then
-surfaces before half an hour of plotting.
+Three defaults make a development run fast, and a release run overrides all
+three at once:
 
-**Duration:** ~3-4 minutes
+| | development | release |
+|---|---|---|
+| SISAL sites | five (`dev`) | all twelve |
+| large SISAL graphs | N-Triples | Turtle |
+| JPG resolution | 100 dpi | 300 dpi, min. 3000 px |
+| bundle | N-Triples | nt, Turtle, JSON-LD, RDF/XML |
 
-### Bundle output formats
+`--bundle-format release` sets the lot and says so whenever it overrides
+something. A full run takes about fifteen minutes, two thirds of it in the
+SHACL validation of the bundle; `--ci-only --archaeo-only --no-bundle` is done
+in seconds.
 
-Turtle is the default: compact, readable, and byte-stable across runs. Other
-formats are produced on demand:
-
-```bash
-python main.py --bundle-format nt            # fastest, for tight iteration
-python main.py --bundle-format release       # nt, turtle, jsonld, xml
-```
-
-Serialising Turtle costs about 13 seconds more per run than N-Triples, which
-is a fair price for a versioned bundle that always matches the code. Formats
-not rewritten in a run are listed at the end, so a stale JSON-LD is noticed
-before publication rather than after. `dist/geo-lod-bundle.nt` is git-ignored:
-unlike Turtle it is not byte-stable, because rdflib assigns fresh blank-node
-labels on every parse and N-Triples writes them out verbatim.
-
-### Clean outputs before running
-
-```bash
-python main.py --clean
-```
-
-Removes all generated files (plots, RDF, Mermaid, reports, Python cache) before execution.
-
-### EPICA only
-
-```bash
-python main.py --epica-only
-```
-
-### SISAL only
-
-```bash
-python main.py --sisal-only
-```
+Strand switches combine: `--ci-only --archaeo-only` runs the two that belong
+together and leaves EPICA and SISAL alone.
 
 ## 📊 Output
 

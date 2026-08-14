@@ -23,6 +23,7 @@ SISAL_SCRIPT = SCRIPT_DIR / "SISAL" / "plot_sisal_from_csv.py"
 CI_RDF_SCRIPT  = SCRIPT_DIR / "CI" / "ci_pipeline.py"
 CI_PLOT_SCRIPT = SCRIPT_DIR / "CI" / "plot_ci_findspots.py"
 ARCHAEO_SCRIPTS = [SCRIPT_DIR / "archaeo-connect" / "ci_findspots_html.py"]
+DOCS_CHECK_SCRIPT = SCRIPT_DIR / "check_docs.py"
 EPICA_MAP_SCRIPT = SCRIPT_DIR / "EPICA" / "plot_epica_map.py"
 SISAL_MAP_SCRIPT = SCRIPT_DIR / "SISAL" / "plot_sisal_maps.py"
 OVERVIEW_SCRIPT = SCRIPT_DIR / "plot_overview_map.py"
@@ -583,6 +584,19 @@ def main():
         check_file_exists(script, f"archaeo-connect: {script.name}")
         for script in ARCHAEO_SCRIPTS
     )
+
+    # Documentation drift, reported here and nowhere else. In the preparation
+    # step because it costs nothing and belongs with the other "is this
+    # repository in the state it claims to be" checks - and as a warning,
+    # because a documentation check that stops a run is one people switch off.
+    if DOCS_CHECK_SCRIPT.exists():
+        print("\n  Run reference:")
+        try:
+            sys.path.insert(0, str(SCRIPT_DIR))
+            import check_docs
+            check_docs.check()
+        except Exception as error:
+            print(f"  ⚠  check_docs konnte nicht laufen: {error}")
     end_section()
 
     overview_ok = True
