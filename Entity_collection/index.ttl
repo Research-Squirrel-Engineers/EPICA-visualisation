@@ -7,10 +7,7 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Entity Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Dataset>,
-        <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Generation_input_sisal_rdf_py>,
-        <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Generation_input_sites_csv>,
-        <http://w3id.org/geo-lod/ci/ci_findspots_dataset>,
+    rdfs:member <http://w3id.org/geo-lod/ci/ci_findspots_dataset>,
         <http://w3id.org/geo-lod/ci/ci_findspots_generation_input_ci_pipeline_py>,
         <http://w3id.org/geo-lod/ci/ci_findspots_generation_input_cifindspots_part_full_csv>,
         <http://w3id.org/geo-lod/ci/cisite_1>,

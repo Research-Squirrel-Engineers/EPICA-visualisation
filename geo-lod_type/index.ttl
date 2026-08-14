@@ -9,6 +9,5 @@
     rdfs:label "Property Partition: type"@en ;
     void:property rdf:type ;
     void:triples 710,
-        1107,
         21739 .
 

@@ -9,6 +9,5 @@
     rdfs:label "Property Partition: wasDerivedFrom"@en ;
     void:property prov:wasDerivedFrom ;
     void:triples 74,
-        365,
         5058 .
 

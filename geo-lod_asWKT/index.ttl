@@ -9,6 +9,5 @@
     rdfs:label "Property Partition: asWKT"@en ;
     void:property geo:asWKT ;
     void:triples 2,
-        74,
-        365 .
+        74 .
 

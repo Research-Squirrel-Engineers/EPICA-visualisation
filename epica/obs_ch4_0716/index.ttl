@@ -1,5 +1,5 @@
-@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix ns3: <http://w3id.org/geo-lod/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -13,7 +13,7 @@
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Methane (CH₄) observation 0716 (623.4 ka BP, 3039.3 m)"@en ;
-    ns2:unit <http://qudt.org/vocab/unit/PPB> ;
+    ns1:unit <http://qudt.org/vocab/unit/PPB> ;
     void:inDataset ns3:geo-lod ;
     ns3:ageChronology <http://w3id.org/geo-lod/trs/EDC2-gas> ;
     ns3:ageKaBP 623.3580 ;
@@ -27,7 +27,7 @@
     ns3:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
     ns3:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
     ns3:standardDeviation 10.00 ;
-    ns1:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;
+    ns2:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;
     prov:wasDerivedFrom <http://w3id.org/geo-lod/epica/source_ch4> ;
     sosa:hasFeatureOfInterest <http://w3id.org/geo-lod/epica/core_edc> ;
     sosa:hasSimpleResult 386.30000 ;

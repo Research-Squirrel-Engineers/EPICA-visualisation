@@ -9,6 +9,5 @@
     rdfs:label "Property Partition: hasGeometry"@en ;
     void:property geo:hasGeometry ;
     void:triples 3,
-        74,
-        365 .
+        74 .
 

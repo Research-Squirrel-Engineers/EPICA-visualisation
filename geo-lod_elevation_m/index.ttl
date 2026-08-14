@@ -7,6 +7,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: elevation_m"@en ;
     void:property <http://w3id.org/geo-lod/elevation_m> ;
-    void:triples 2,
-        365 .
+    void:triples 2 .
 
