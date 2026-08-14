@@ -7,7 +7,8 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Activity Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/ci/ci_findspots_generation>,
+    rdfs:member <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Generation>,
+        <http://w3id.org/geo-lod/ci/ci_findspots_generation>,
         <http://w3id.org/geo-lod/ci/cisite_101_activity>,
         <http://w3id.org/geo-lod/ci/cisite_101_pyscript>,
         <http://w3id.org/geo-lod/ci/cisite_102_activity>,
